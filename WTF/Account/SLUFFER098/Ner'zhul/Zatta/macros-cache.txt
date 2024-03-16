@@ -1,0 +1,36 @@
+VER 3 0100000000000005 "Chain Heal" "INV_Misc_QuestionMark"
+#showtooltip 
+/use [@mouseover,help,nodead][help,nodead][@player]Chain Heal
+END
+VER 3 010000000000000A "Earth Shield" "INV_MISC_QUESTIONMARK"
+#showtooltip 
+/use [@mouseover,help,nodead][help,nodead][@player]Earth Shield
+END
+VER 3 0100000000000006 "Healing Surge" "INV_Misc_QuestionMark"
+#showtooltip 
+/use [@mouseover,help,nodead][help,nodead][@player]Healing Surge
+END
+VER 3 0100000000000004 "Healing Wave" "INV_Misc_QuestionMark"
+#showtooltip 
+/use [@mouseover,help,nodead][help,nodead][@player]Healing Wave
+END
+VER 3 0100000000000008 "Ice/Ascend" "INV_Misc_QuestionMark"
+#showtooltip [talent:7/1]Ascendance;[talent:7/3]Icefury;
+/cast [talent:7/1]Ascendance;
+/cast [talent:7/3]Icefury;
+END
+VER 3 010000000000000B "Lava Burst" "INV_MISC_QUESTIONMARK"
+/stopcasting
+/cast Lava Burst
+END
+VER 3 0100000000000007 "Purify Spirit" "INV_Misc_QuestionMark"
+#showtooltip 
+/use [@mouseover,help,nodead][help,nodead][@player]Purify Spirit
+END
+VER 3 0100000000000009 "PVP Lust" "INV_MISC_QUESTIONMARK"
+/cast [@Focus][@player] Bloodlust
+END
+VER 3 0100000000000003 "Riptide" "INV_Misc_QuestionMark"
+#showtooltip 
+/use [@mouseover,help,nodead][help,nodead][@player]Riptide
+END

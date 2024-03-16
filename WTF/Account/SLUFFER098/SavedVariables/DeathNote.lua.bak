@@ -1,0 +1,55 @@
+
+DeathNoteDB = {
+	["profileKeys"] = {
+		["Zatta - Ner'zhul"] = "Zatta - Ner'zhul",
+		["Xenoth - Ner'zhul"] = "Xenoth - Ner'zhul",
+		["Zenndi - Ner'zhul"] = "Zenndi - Ner'zhul",
+		["Yushien - Ner'zhul"] = "Yushien - Ner'zhul",
+		["Xamuul - Ner'zhul"] = "Xamuul - Ner'zhul",
+		["Zakalnagarn - Ner'zhul"] = "Zakalnagarn - Ner'zhul",
+		["Xavaat - Ner'zhul"] = "Xavaat - Ner'zhul",
+		["Shantyclause - Ner'zhul"] = "Shantyclause - Ner'zhul",
+		["Faelaena - Ner'zhul"] = "Faelaena - Ner'zhul",
+		["Xambank - Ner'zhul"] = "Xambank - Ner'zhul",
+		["Bogfimi - Ner'zhul"] = "Bogfimi - Ner'zhul",
+		["Nokzakan - Ner'zhul"] = "Nokzakan - Ner'zhul",
+		["Zaldrysa - Ner'zhul"] = "Zaldrysa - Ner'zhul",
+		["Erthaesia - Ner'zhul"] = "Erthaesia - Ner'zhul",
+	},
+	["profiles"] = {
+		["Zatta - Ner'zhul"] = {
+		},
+		["Xenoth - Ner'zhul"] = {
+			["searchbox_text"] = "",
+		},
+		["Zenndi - Ner'zhul"] = {
+		},
+		["Yushien - Ner'zhul"] = {
+			["searchbox_text"] = "",
+		},
+		["Xamuul - Ner'zhul"] = {
+			["searchbox_text"] = "",
+		},
+		["Zakalnagarn - Ner'zhul"] = {
+		},
+		["Xavaat - Ner'zhul"] = {
+			["searchbox_text"] = "",
+		},
+		["Shantyclause - Ner'zhul"] = {
+		},
+		["Faelaena - Ner'zhul"] = {
+		},
+		["Xambank - Ner'zhul"] = {
+		},
+		["Bogfimi - Ner'zhul"] = {
+		},
+		["Nokzakan - Ner'zhul"] = {
+			["searchbox_text"] = "",
+		},
+		["Zaldrysa - Ner'zhul"] = {
+		},
+		["Erthaesia - Ner'zhul"] = {
+			["searchbox_text"] = "",
+		},
+	},
+}

@@ -1,0 +1,41 @@
+VER 3 000000000000000D "APR_MACRO" "INV_MISC_QUESTIONMARK"
+/script print('no button yet')
+END
+VER 3 000000000000000C "Heal_Template" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [@mouseover,help,nodead][help,nodead][@player]SPELL
+END
+VER 3 0000000000000012 "Health Stone/Pot" "INV_Misc_QuestionMark"
+#showtooltip
+/use Healthstone
+END
+VER 3 0000000000000013 "Honey WQ" "134400"
+/target Honey Plum
+/click ExtraActionButton1
+END
+VER 3 0000000000000011 "Mod" "134400"
+#showtooltip
+/cast [nomod]; [mod:ctrl]; [mod:alt];
+END
+VER 3 000000000000000F "Node Template" "134400"
+#showtooltip [known:]<>;[known:]<>
+/cast [known:]<>;[known:]<>
+END
+VER 3 000000000000000E "Otto" "134400"
+#showtooltip Otto
+/use Aquatic Shades
+/use Otto
+END
+VER 3 0000000000000005 "Trinket 1" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [@mouseover,help,nodead][help,nodead][@player] 13
+END
+VER 3 0000000000000006 "Trinket 2" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [@mouseover,help,nodead][help,nodead][@player] 14
+END
+VER 3 0000000000000010 "Water" "134400"
+#showtooltip item:194684
+/use Conjured Mana Bun
+/use Azure Leywine
+END

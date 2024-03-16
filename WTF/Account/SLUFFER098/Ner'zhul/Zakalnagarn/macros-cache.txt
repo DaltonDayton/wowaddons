@@ -1,0 +1,6 @@
+VER 3 0100000000000002 "Ice Block" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/stopcasting
+/cancelaura Ice Block
+/cast Ice Block
+END

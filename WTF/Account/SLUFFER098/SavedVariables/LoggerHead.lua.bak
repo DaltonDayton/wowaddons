@@ -1,0 +1,72 @@
+
+LoggerHeadDB = {
+	["profileKeys"] = {
+		["Xavaat - Ner'zhul"] = "Default",
+		["Xambank - Ner'zhul"] = "Default",
+		["Shantyclause - Ner'zhul"] = "Default",
+		["Faelaena - Ner'zhul"] = "Default",
+		["Xenoth - Ner'zhul"] = "Default",
+		["Nokzakan - Ner'zhul"] = "Default",
+		["Xamuul - Ner'zhul"] = "Default",
+		["Erthaesia - Ner'zhul"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["log"] = {
+				["party"] = {
+					["Shrine of the Storm"] = {
+						false, -- [1]
+					},
+					["Halls of Infusion"] = {
+						[2] = true,
+					},
+					["The Underrot"] = {
+						false, -- [1]
+						[8] = true,
+						[23] = true,
+					},
+					["The Vortex Pinnacle"] = {
+						[23] = true,
+						[8] = true,
+					},
+					["Wailing Caverns"] = {
+						false, -- [1]
+					},
+					["Atal'Dazar"] = {
+						false, -- [1]
+					},
+					["Ragefire Chasm"] = {
+						false, -- [1]
+					},
+					["Ruby Life Pools"] = {
+						[2] = true,
+					},
+					["Neltharus"] = {
+						[2] = true,
+					},
+					["Tol Dagor"] = {
+						false, -- [1]
+					},
+				},
+				["raid"] = {
+					["Ulduar"] = {
+						[14] = false,
+					},
+					["Icecrown Citadel"] = {
+						[6] = false,
+					},
+					["The Nighthold"] = {
+						[16] = false,
+					},
+					["The Emerald Nightmare"] = {
+						[16] = false,
+					},
+					["Aberrus, the Shadowed Crucible"] = {
+						[17] = true,
+					},
+				},
+			},
+			["version"] = 3,
+		},
+	},
+}

@@ -1,0 +1,15 @@
+## Interface: 100200
+## Title: BetterWardrobe_SourceData (4.20)
+## Version: 4.20
+## Author: SLOKnightfall
+## Notes: 
+## LoadOnDemand: 1
+## DefaultState: enabled
+
+## IconTexture: Interface\AddOns\BetterWardrobe\Images\DerectoryIcon
+
+#Data files
+Data\ColorData.lua
+
+Data\AppearanceData.lua
+Data\SourceData.lua

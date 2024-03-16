@@ -1,0 +1,10 @@
+## Interface: 100205
+## X-Min-Interface: 100205
+
+## Title: Azeroth Pilot Reloaded - [|cffeda55fShadowlands|r]
+## Notes: Provides Shadowlands implementation for Azeroth Pilot Reloaded.
+## Author: Rycia, Neogeekmo, Pahonix
+## IconTexture: Interface\AddOns\APR-Core\assets\APR_logo
+
+## RequiredDeps: APR-Core
+Shadowlands.lua

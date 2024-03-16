@@ -1,0 +1,17 @@
+## Interface: 100205
+## X-Min-Interface: 100205
+
+## Title: Azeroth Pilot Reloaded
+## Notes: Continuation, optimization, and rewrite of Azeroth Auto Pilot.
+## Author: Neogeekmo, Rycia, Pahonix (legacy: zyrrael, Deathmessinger)
+## IconTexture: Interface\AddOns\APR-Core\assets\APR_logo
+## Version: v3.1.9
+
+## SavedVariables: APRSettings
+
+## X-License: All Rights Reserved: You are free to fork and modify on GitHub, please ask us about anything else.
+## X-Github: https://github.com/Azeroth-Pilot-Reloaded/azeroth-pilot-reloaded
+## X-Discord: https://discord.gg/YgcdybKdWX
+## X-Curse-Project-ID: 618667
+## X-WoWI-ID: 26457
+## X-Wago-ID: XKq9xXKy

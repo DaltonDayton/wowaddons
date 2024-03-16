@@ -1,0 +1,90 @@
+
+Details_StreamerDB = {
+	["characters"] = {
+		["Zatta - Ner'zhul"] = "Xavaat - Ner'zhul",
+		["Zenndi - Ner'zhul"] = "Xavaat - Ner'zhul",
+		["Xenoth - Ner'zhul"] = "Xavaat - Ner'zhul",
+		["Yushien - Ner'zhul"] = "Xavaat - Ner'zhul",
+		["Xamuul - Ner'zhul"] = "Xavaat - Ner'zhul",
+		["Zakalnagarn - Ner'zhul"] = "Xavaat - Ner'zhul",
+		["Xavaat - Ner'zhul"] = "Xavaat - Ner'zhul",
+		["Zaldrysa - Ner'zhul"] = "Xavaat - Ner'zhul",
+		["Faelaena - Ner'zhul"] = "Xavaat - Ner'zhul",
+		["Bogfimi - Ner'zhul"] = "Xavaat - Ner'zhul",
+		["Xambank - Ner'zhul"] = "Xavaat - Ner'zhul",
+		["Nokzakan - Ner'zhul"] = "Xavaat - Ner'zhul",
+		["Shantyclause - Ner'zhul"] = "Xavaat - Ner'zhul",
+		["Erthaesia - Ner'zhul"] = "Xavaat - Ner'zhul",
+	},
+	["profiles"] = {
+		["Xavaat - Ner'zhul"] = {
+			["use_square_mode"] = false,
+			["is_first_run"] = false,
+			["arrow_color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["scale"] = 1,
+			["main_frame_size"] = {
+				299.9999694824219, -- [1]
+				500.0000610351563, -- [2]
+			},
+			["minimap"] = {
+				["minimapPos"] = 160,
+				["radius"] = 160,
+				["hide"] = false,
+			},
+			["row_height"] = 20,
+			["arrow_anchor_x"] = 0,
+			["font_color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["row_texture"] = "Details Serenity",
+			["square_grow_direction"] = "right",
+			["point"] = "CENTER",
+			["main_frame_strata"] = "LOW",
+			["square_amount"] = 5,
+			["enabled"] = false,
+			["arrow_size"] = 10,
+			["per_second"] = {
+				["enabled"] = false,
+				["point"] = "CENTER",
+				["scale"] = 1,
+				["font_shadow"] = true,
+				["y"] = -0.000213623046875,
+				["x"] = -0.00048828125,
+				["size"] = 32,
+				["update_speed"] = 0.05,
+				["attribute_type"] = 1,
+			},
+			["row_spacement"] = 21,
+			["main_frame_color"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.2, -- [4]
+			},
+			["author"] = "Terciob",
+			["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
+			["y"] = 1.52587890625e-05,
+			["font_size"] = 10,
+			["x"] = -0.000244140625,
+			["font_face"] = "Friz Quadrata TT",
+			["square_size"] = 32,
+			["use_spark"] = true,
+			["row_color"] = {
+				0.1, -- [1]
+				0.1, -- [2]
+				0.1, -- [3]
+				0.4, -- [4]
+			},
+			["main_frame_locked"] = false,
+			["arrow_anchor_y"] = 0,
+		},
+	},
+}
