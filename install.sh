@@ -14,8 +14,8 @@ interface_dir="$wow_retail_path/Interface"
 wtf_dir="$wow_retail_path/WTF"
 
 # Creating symlinks for Interface and WTF directories
-ln -sfn $(pwd)/Interface "$interface_dir"
-ln -sfn $(pwd)/WTF "$wtf_dir"
+ln -sfn $(pwd)/Interface "$wow_retail_path"
+ln -sfn $(pwd)/WTF "$wow_retail_path"
 
 echo "Symlinks for Interface and WTF directories have been created."
 

@@ -1,3 +1,0 @@
-DBM-Core: disabled
-DBM-StatusBarTimers: disabled
-OmniCD: disabled
