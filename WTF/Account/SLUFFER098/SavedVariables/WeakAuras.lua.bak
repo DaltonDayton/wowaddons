@@ -4,7 +4,7 @@ WeakAurasSaved = {
 },
 ["displays"] = {
 },
-["login_squelch_time"] = 10,
+["historyCutoff"] = 730,
 ["lastArchiveClear"] = 1722213290,
 ["minimap"] = {
 ["hide"] = false,
@@ -14,7 +14,7 @@ WeakAurasSaved = {
 ["migrationCutoff"] = 730,
 ["registered"] = {
 },
-["historyCutoff"] = 730,
 ["features"] = {
 },
+["login_squelch_time"] = 10,
 }
