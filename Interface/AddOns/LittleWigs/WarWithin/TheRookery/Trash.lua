@@ -16,7 +16,8 @@ mod:RegisterEnableMob(
 	214421, -- Corrupted Thunderer
 	219066, -- Inflicted Civilian
 	212793, -- Void Ascendant
-	212739 -- Radiating Voidstone
+	212739, -- Radiating Voidstone
+	207202 -- Void Fragment
 )
 
 --------------------------------------------------------------------------------
@@ -35,6 +36,7 @@ if L then
 	L.inflicted_civilian = "Inflicted Civilian"
 	L.void_ascendant = "Void Ascendant"
 	L.radiating_voidstone = "Radiating Voidstone"
+	L.void_fragment = "Void Fragment"
 end
 
 --------------------------------------------------------------------------------
@@ -48,11 +50,12 @@ function mod:GetOptions()
 		450628, -- Entropy Shield
 		-- Cursed Stormrider
 		427323, -- Charged Bombardment
-		-- TODO Localized Storm?
+		427404, -- Localized Storm
 		-- Cursed Rooktender
 		427260, -- Enrage Rook
 		-- Unruly Stormrook
 		430013, -- Thunderstrike
+		427616, -- Energized Barrage
 		-- Corrupted Rookguard
 		423979, -- Implosion
 		-- Corrupted Oracle
@@ -66,6 +69,8 @@ function mod:GetOptions()
 		432959, -- Void Volley
 		-- Radiating Voidstone
 		432781, -- Embrace the Void
+		-- Void Fragment
+		430288, -- Crushing Darkness
 	}, {
 		[426893] = L.quartermaster_koratite,
 		[427323] = L.cursed_stormrider,
@@ -77,6 +82,7 @@ function mod:GetOptions()
 		[443854] = L.inflicted_civilian,
 		[432959] = L.void_ascendant,
 		[432781] = L.radiating_voidstone,
+		[430288] = L.void_fragment,
 	}
 end
 
@@ -88,12 +94,14 @@ function mod:OnBossEnable()
 
 	-- Cursed Stormrider
 	self:Log("SPELL_CAST_START", "ChargedBombardment", 427323)
+	self:Log("SPELL_CAST_START", "LocalizedStorm", 427404)
 
 	-- Cursed Rooktender
 	self:Log("SPELL_CAST_START", "EnrageRook", 427260)
 
 	-- Unruly Stormrook
 	self:Log("SPELL_CAST_START", "Thunderstrike", 430013)
+	self:Log("SPELL_CAST_START", "EnergizedBarrage", 427616)
 
 	-- Corrupted Rookguard
 	self:Log("SPELL_CAST_START", "Implosion", 423979)
@@ -114,6 +122,9 @@ function mod:OnBossEnable()
 	-- Radiating Voidstone
 	self:Log("SPELL_CAST_START", "EmbraceTheVoid", 432781)
 	self:Log("SPELL_AURA_REMOVED", "EmbraceTheVoidRemoved", 432781)
+
+	-- Void Fragment
+	self:Log("SPELL_CAST_START", "CrushingDarkness", 430288)
 end
 
 --------------------------------------------------------------------------------
@@ -145,7 +156,7 @@ do
 		timer = self:ScheduleTimer("QuartermasterKoratiteDeath", 30)
 	end
 
-	function mod:QuartermasterKoratiteDeath(args)
+	function mod:QuartermasterKoratiteDeath()
 		if timer then
 			self:CancelTimer(timer)
 			timer = nil
@@ -158,8 +169,15 @@ end
 -- Cursed Stormrider
 
 function mod:ChargedBombardment(args)
-	self:Message(args.spellId, "yellow")
+	self:Message(args.spellId, "orange")
 	self:PlaySound(args.spellId, "alarm")
+	--self:Nameplate(args.spellId, 20.6, args.sourceGUID)
+end
+
+function mod:LocalizedStorm(args)
+	self:Message(args.spellId, "yellow")
+	self:PlaySound(args.spellId, "info")
+	--self:Nameplate(args.spellId, 27.9, args.sourceGUID)
 end
 
 -- Cursed Rooktender
@@ -167,13 +185,35 @@ end
 function mod:EnrageRook(args)
 	self:Message(args.spellId, "red", CL.casting:format(args.spellName))
 	self:PlaySound(args.spellId, "alert")
+	--self:Nameplate(args.spellId, 12.1, args.sourceGUID)
 end
 
 -- Unruly Stormrook
 
-function mod:Thunderstrike(args)
-	self:Message(args.spellId, "orange")
-	self:PlaySound(args.spellId, "alarm")
+do
+	local prev = 0
+	function mod:Thunderstrike(args)
+		local t = args.time
+		if t - prev > 2 then
+			prev = t
+			self:Message(args.spellId, "orange")
+			self:PlaySound(args.spellId, "alarm")
+		end
+		--self:Nameplate(args.spellId, 18.2, args.sourceGUID)
+	end
+end
+
+do
+	local prev = 0
+	function mod:EnergizedBarrage(args)
+		local t = args.time
+		if t - prev > 2 then
+			prev = t
+			self:Message(args.spellId, "purple")
+			self:PlaySound(args.spellId, "alarm")
+		end
+		--self:Nameplate(args.spellId, 23.0, args.sourceGUID)
+	end
 end
 
 -- Corrupted Rookguard
@@ -181,6 +221,7 @@ end
 function mod:Implosion(args)
 	self:Message(args.spellId, "orange")
 	self:PlaySound(args.spellId, "alarm")
+	--self:Nameplate(args.spellId, 17.0, args.sourceGUID)
 end
 
 -- Corrupted Oracle
@@ -188,6 +229,7 @@ end
 function mod:VoidShell(args)
 	self:Message(args.spellId, "red")
 	self:PlaySound(args.spellId, "alert")
+	--self:Nameplate(args.spellId, 21.8, args.sourceGUID)
 end
 
 function mod:SeepingCorruptionApplied(args)
@@ -200,6 +242,7 @@ end
 function mod:AttractingShadows(args)
 	self:Message(args.spellId, "yellow")
 	self:PlaySound(args.spellId, "info")
+	--self:Nameplate(args.spellId, 21.8, args.sourceGUID)
 end
 
 -- Inflicted Civilian
@@ -219,8 +262,12 @@ end
 -- Void Ascendant
 
 function mod:VoidVolley(args)
+	if self:Friendly(args.sourceFlags) then -- these NPCs can be mind-controlled by Priests
+		return
+	end
 	self:Message(args.spellId, "red", CL.casting:format(args.spellName))
 	self:PlaySound(args.spellId, "alert")
+	--self:Nameplate(args.spellId, 18.2, args.sourceGUID)
 end
 
 -- Radiating Voidstone
@@ -234,6 +281,7 @@ do
 			self:Message(args.spellId, "yellow")
 			self:PlaySound(args.spellId, "alert")
 		end
+		--self:Nameplate(args.spellId, 27.9, args.sourceGUID)
 	end
 end
 
@@ -245,6 +293,21 @@ do
 			prev = t
 			self:Message(args.spellId, "green", CL.removed:format(args.spellName))
 			self:PlaySound(args.spellId, "info")
+		end
+	end
+end
+
+-- Void Fragment
+
+do
+	local prev = 0
+	function mod:CrushingDarkness(args)
+		-- Void Fragments cast this if a nearby Void Ascendant casts Command Void-432638
+		local t = args.time
+		if t - prev > 2 then
+			prev = t
+			self:Message(args.spellId, "orange")
+			self:PlaySound(args.spellId, "alarm")
 		end
 	end
 end

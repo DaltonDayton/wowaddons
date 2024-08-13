@@ -12,7 +12,7 @@ local strfind = string.find
 -- Generate our version variables
 --
 
-local BIGWIGS_VERSION = 349
+local BIGWIGS_VERSION = 352
 local BIGWIGS_RELEASE_STRING, BIGWIGS_VERSION_STRING
 local versionQueryString, versionResponseString = "Q^%d^%s^%d^%s", "V^%d^%s^%d^%s"
 local customGuildName = false
@@ -32,13 +32,14 @@ do
 	public.isWrath = tbl.isWrath
 	public.isCata = tbl.isCata
 	public.dbmPrefix = "D5"
+	public.littlewigsVersionString = L.missingAddOnPopup:format("LittleWigs")
 
 	-- START: MAGIC PACKAGER VOODOO VERSION STUFF
 	local REPO = "REPO"
 	local ALPHA = "ALPHA"
 
 	local releaseType
-	local myGitHash = "fc8e3ff" -- The ZIP packager will replace this with the Git hash.
+	local myGitHash = "ced3a68" -- The ZIP packager will replace this with the Git hash.
 	local releaseString
 	--[=[@alpha@
 	-- The following code will only be present in alpha ZIPs.
@@ -642,10 +643,10 @@ local function Popup(msg, focus)
 	local frame = CreateFrame("Frame")
 	frame:SetFrameStrata("DIALOG")
 	frame:SetToplevel(true)
-	frame:SetSize(384, 128)
+	frame:SetSize(400, 150)
 	frame:SetPoint("CENTER", "UIParent", "CENTER")
 	local text = frame:CreateFontString(nil, "ARTWORK", "GameFontRedLarge")
-	text:SetSize(360, 0)
+	text:SetSize(380, 0)
 	text:SetJustifyH("CENTER")
 	text:SetJustifyV("TOP")
 	text:SetNonSpaceWrap(true)
@@ -771,6 +772,16 @@ do
 			if meta then
 				loadOnWorldBoss[#loadOnWorldBoss + 1] = i
 			end
+			local minVersion = GetAddOnMetadata(i, "X-BigWigs-Minimum")
+			if minVersion and GetAddOnDependencies(i) == "BigWigs" then -- Safety
+				local version = tonumber(minVersion)
+				if version and version > BIGWIGS_VERSION then
+					Popup(L.outOfDateContentPopup:format(name), true)
+					local msg = L.outOfDateContentRaidWarning:format(name, version, BIGWIGS_VERSION)
+					sysprint(msg)
+					RaidNotice_AddMessage(RaidWarningFrame, msg, {r=1,g=1,b=1}, 90)
+				end
+			end
 			meta = GetAddOnMetadata(i, "X-BigWigs-LoadOn-Slash")
 			if meta then
 				loadOnSlash[i] = {}
@@ -815,9 +826,22 @@ do
 			end
 		end
 
-		-- check if LittleWigs is installed from source
-		if name == "LittleWigs" and GetAddOnMetadata(i, "X-LittleWigs-Repo") then
-			public.usingLittleWigsRepo = true
+		-- check LittleWigs version
+		if name == "LittleWigs" then
+			if GetAddOnMetadata(i, "X-LittleWigs-Repo") then
+				public.usingLittleWigsRepo = true
+				public.littlewigsVersionString = L.littlewigsSourceCheckout
+			else
+				local version = GetAddOnMetadata(i, "Version")
+				if version then
+					local alpha = strfind(version, "-", nil, true)
+					if alpha then
+						public.littlewigsVersionString = L.littlewigsAlphaRelease:format(version)
+					else
+						public.littlewigsVersionString = L.littlewigsOfficialRelease:format(version)
+					end
+				end
+			end
 		end
 
 		if next(loadOnSlash) then
@@ -1005,48 +1029,52 @@ function mod:ADDON_LOADED(addon)
 	end
 	ldbi:Register("BigWigs", dataBroker, BigWigsIconDB)
 
-	-- XXX Classic DB Migration
-	-- Overwrite BigWigs3DB with BigWigsClassicDB
-	if type(BigWigsClassicDB) == "table" then
-		if not public.isRetail and next(BigWigsClassicDB) then
-			BigWigs3DB = BigWigsClassicDB
-		end
-		BigWigsClassicDB = nil
-	end
-	-- Merge BigWigsStatsClassicDB into BigWigsStatsDB
-	if type(BigWigsStatsClassicDB) == "table" then
-		if not BigWigsStatsDB then
-			BigWigsStatsDB = {}
-		end
-		local encounterToJournal = {
-			[655]=-655,[662]=-662,[784]=-784,[785]=-785,[786]=-786,[787]=-787,[788]=-788,[789]=-789,[790]=-790,[791]=-791,[792]=-792,[793]=-793, -- No EJ for Opera, Nightbane and all of ZG
-			[663]=1519,[664]=1520,[665]=1521,[666]=1522,[667]=1523,[668]=1524,[669]=1525,[670]=1526,[671]=1527,[672]=1528,[610]=1529,[611]=1530,[612]=1531,[613]=1532,[614]=1533,[615]=1534,[616]=1535,[617]=1536,[718]=1537,[719]=1538,[720]=1539,[721]=1540,[722]=1541,[723]=1542,[709]=1543,[711]=1544,[712]=1545,[714]=1546,[710]=1547,[713]=1548,[715]=1549,[716]=1550,[717]=1551,[1107]=1601,[1110]=1602,[1116]=1603,[1117]=1604,[1112]=1605,[1115]=1606,[1113]=1607,[1109]=1608,[1121]=1609,[1118]=1610,[1111]=1611,[1108]=1612,[1120]=1613,[1119]=1614,[1114]=1615,[1084]=1651,
-			[652]=1553,[653]=1554,[654]=1555,[656]=1557,[658]=1559,[657]=1560,[659]=1561,[661]=1563,[649]=1564,[650]=1565,[651]=1566,[623]=1567,[624]=1568,[625]=1569,[626]=1570,[627]=1571,[628]=1572,[730]=1573,[731]=1574,[732]=1575,[733]=1576,[618]=1577,[619]=1578,[620]=1579,[621]=1580,[622]=1581,[601]=1582,[602]=1583,[603]=1584,[604]=1585,[605]=1586,[606]=1587,[607]=1588,[608]=1589,[609]=1590,[724]=1591,[725]=1592,[726]=1593,[727]=1594,[728]=1595,[729]=1596,[1189]=186,[1190]=187,[1191]=188,[1192]=189,[1193]=190,[1194]=191,
-			[1126]=1597,[1127]=1598,[1128]=1599,[1129]=1600,[1090]=1616,[1094]=1617,[1088]=1618,[1087]=1619,[1086]=1621,[1089]=1622,[1085]=1623,[1101]=1624,[1100]=1625,[1099]=1626,[1096]=1628,[1097]=1629,[1104]=1630,[1102]=1631,[1095]=1632,[1103]=1633,[1098]=1634,[1105]=1635,[1106]=1636,[1132]=1637,[1136]=1638,[1139]=1639,[1142]=1640,[1140]=1641,[1137]=1642,[1131]=1643,[1135]=1644,[1141]=1645,[1133]=1646,[1138]=1647,[1134]=1648,[1143]=1649,[1130]=1650,[1150]=1652,
+	-- Updates for BigWigsStatsDB, 11.0.0
+	if type(BigWigsStatsDB) == "table" then
+		local knownStats = {
+			["story"]=true, ["timewalk"]=true, ["LFR"]=true, ["normal"]=true, ["heroic"]=true, ["mythic"]=true,
+			["10N"]=true, ["25N"]=true, ["10H"]=true, ["25H"]=true,
+			["SOD"]=true, ["level1"]=true, ["level2"]=true, ["level3"]=true, ["hardcore"]=true,
+			["10"]=true,["25"]=true,["10h"]=true,["25h"]=true,["flex"]=true,["lfr"]=true,
+			["N10"]=true, ["N25"]=true,["H10"]=true,["H25"]=true,
 		}
-		local sDB = BigWigsStatsDB -- BigWigsStatsDB[instanceId][journalId][diff].[best|kills|wipes]
-		for instanceId, encounters in next, BigWigsStatsClassicDB do
-			if not sDB[instanceId] then sDB[instanceId] = {} end
-			for engageId, difficulties in next, encounters do
-				local olddb = difficulties.raid -- should be the only possible entry
-				local id = encounterToJournal[engageId] -- need to convert engageId -> journalId
-				if olddb and id then
-					if not sDB[instanceId][id] then sDB[instanceId][id] = { normal = {} } end
-					if not sDB[instanceId][id].normal then sDB[instanceId][id].normal = {} end
-					local newdb = sDB[instanceId][id].normal
-					if olddb.best and (not newdb.best or olddb.best < newdb.best) then
-						newdb.best = olddb.best
-					end
-					if olddb.kills then
-						newdb.kills = (newdb.kills or 0) + olddb.kills
-					end
-					if olddb.wipes then
-						newdb.wipes = (newdb.wipes or 0) + olddb.wipes
+		local thingsToModify = {}
+		local lookup = {["10N"]="N10", ["25N"]="N25", ["10H"]="H10", ["25H"]="H25"}
+		-- BigWigsStatsDB[instanceId][journalId][diff].[best|kills|wipes|fkWipes|fkDuration|fkDate|bestDate]
+		for instanceId, encounters in next, BigWigsStatsDB do
+			for journalId, difficulties in next, encounters do
+				for diff, statEntry in next, difficulties do
+					if diff == "normal" and (instanceId == 2789 or instanceId == 2791 or instanceId == 109 or instanceId == 90 or instanceId == 48) then
+						-- Kazzak, Azuregos, Sunken Temple, Gnomeregan, Blackfathom Deeps
+						if not thingsToModify[instanceId] then thingsToModify[instanceId] = {} end
+						if not thingsToModify[instanceId][journalId] then thingsToModify[instanceId][journalId] = {} end
+						thingsToModify[instanceId][journalId][diff] = true
+					elseif lookup[diff] then
+						if not thingsToModify[instanceId] then thingsToModify[instanceId] = {} end
+						if not thingsToModify[instanceId][journalId] then thingsToModify[instanceId][journalId] = {} end
+						thingsToModify[instanceId][journalId][diff] = true
+					elseif not knownStats[diff] then
+						sysprint("Unknown stat: ".. tostring(diff))
+						geterrorhandler()("BigWigs: Unknown stat: ".. tostring(diff))
 					end
 				end
 			end
 		end
-		BigWigsStatsClassicDB = nil
+		for instanceId, encounters in next, thingsToModify do
+			for journalId, difficulties in next, encounters do
+				for diff, statEntry in next, difficulties do
+					if diff == "normal" and (instanceId == 2789 or instanceId == 2791 or instanceId == 109 or instanceId == 90 or instanceId == 48) then
+						-- Kazzak, Azuregos, Sunken Temple, Gnomeregan, Blackfathom Deeps
+						BigWigsStatsDB[instanceId][journalId].SOD = BigWigsStatsDB[instanceId][journalId][diff]
+						BigWigsStatsDB[instanceId][journalId][diff] = nil
+					elseif lookup[diff] then
+						BigWigsStatsDB[instanceId][journalId][lookup[diff]] = BigWigsStatsDB[instanceId][journalId][diff]
+						BigWigsStatsDB[instanceId][journalId][diff] = nil
+					end
+				end
+			end
+		end
+		-- Add old stats to new stats? [10,25,10h,25h,flex,lfr]
 	end
 
 	if BigWigs3DB then
@@ -1086,13 +1114,6 @@ function mod:ADDON_LOADED(addon)
 		C_CVar.SetCVar("Sound_MaxCacheSizeInBytes", "67108864") -- Set the cache to the "Small (64MB)" setting as a minimum
 	end
 
-	if not BigWigsBarsReset then
-		BigWigsBarsReset = true
-		if BigWigs3DB then
-			sysprint(L.tempMessage)
-			Popup("BigWigs: ".. L.tempMessage, true)
-		end
-	end
 	--bwFrame:UnregisterEvent("ADDON_LOADED")
 	--self.ADDON_LOADED = nil
 end
@@ -1109,17 +1130,13 @@ function mod:GLOBAL_MOUSE_UP(button)
 	end
 end
 
-function mod:START_PLAYER_COUNTDOWN(initiatedBy, timeSeconds, totalTime)
+function mod:START_PLAYER_COUNTDOWN(...)
 	loadAndEnableCore()
-	if BigWigs and BigWigs.GetPlugin then -- XXX Clean this up
-		BigWigs:GetPlugin("Pull"):START_PLAYER_COUNTDOWN(nil, initiatedBy, timeSeconds, totalTime)
-	end
+	public:SendMessage("Blizz_StartCountdown", ...)
 end
-function mod:CANCEL_PLAYER_COUNTDOWN(initiatedBy)
+function mod:CANCEL_PLAYER_COUNTDOWN(...)
 	loadAndEnableCore()
-	if BigWigs and BigWigs.GetPlugin then -- XXX Clean this up
-		BigWigs:GetPlugin("Pull"):CANCEL_PLAYER_COUNTDOWN(nil, initiatedBy)
-	end
+	public:SendMessage("Blizz_StopCountdown", ...)
 end
 
 -- We can't do our addon loading in ADDON_LOADED as the target addons may be registering that
@@ -1308,17 +1325,15 @@ do
 	if not public.usingBigWigsRepo and not guildDisableContentWarnings then -- We're not using BigWigs Git, but required functional addons are missing? Show a warning
 		for k in next, reqFuncAddons do -- List of required addons (core/plugins/options)
 			if not foundReqAddons[k] then -- A required functional addon is missing
-				local msg = L.missingAddOn:format(k)
-				delayedMessages[#delayedMessages+1] = msg
-				Popup(msg, true)
+				delayedMessages[#delayedMessages+1] = L.missingAddOnRaidWarning:format(k)
+				Popup(L.missingAddOnPopup:format(k), true)
 			end
 		end
 	end
 
 	if printMissingExpansionAddon and public.isClassic then
-		local msg = L.missingAddOn:format(public.currentExpansion.name)
-		delayedMessages[#delayedMessages+1] = msg
-		Popup(msg, true)
+		delayedMessages[#delayedMessages+1] = L.missingAddOnRaidWarning:format(public.currentExpansion.name)
+		Popup(L.missingAddOnPopup:format(public.currentExpansion.name), true)
 	else
 		printMissingExpansionAddon = false
 	end
@@ -1357,7 +1372,7 @@ do
 						sysprint(delayedMessages[i])
 					end
 					if printMissingExpansionAddon then
-						RaidNotice_AddMessage(RaidWarningFrame, L.missingAddOn:format(public.currentExpansion.name), {r=1,g=1,b=1}, 120)
+						RaidNotice_AddMessage(RaidWarningFrame, L.missingAddOnRaidWarning:format(public.currentExpansion.name), {r=1,g=1,b=1}, 120)
 					end
 					delayedMessages = nil
 				end)
@@ -1440,12 +1455,12 @@ end
 --
 
 do
-	local DBMdotRevision = "20240727022631" -- The changing version of the local client, changes with every new zip using the project-date-integer packager replacement.
-	local DBMdotDisplayVersion = "11.0.1" -- "N.N.N" for a release and "N.N.N alpha" for the alpha duration.
-	local DBMdotReleaseRevision = "20240726000000" -- Hardcoded time, manually changed every release, they use it to track the highest release version, a new DBM release is the only time it will change.
+	local DBMdotRevision = "20240728191115" -- The changing version of the local client, changes with every new zip using the project-date-integer packager replacement.
+	local DBMdotDisplayVersion = "11.0.2" -- "N.N.N" for a release and "N.N.N alpha" for the alpha duration.
+	local DBMdotReleaseRevision = "20240728000000" -- Hardcoded time, manually changed every release, they use it to track the highest release version, a new DBM release is the only time it will change.
 	local protocol = 3
 	local versionPrefix = "V"
-	local PForceDisable = public.isVanilla and 13 or public.isWrath and 13 or 12
+	local PForceDisable = 14
 
 	local timer = nil
 	local function sendDBMMsg()
@@ -1723,10 +1738,10 @@ do
 			end
 			if public:GetAddOnState(zoneAddon) == "MISSING" then
 				warnedThisZone[id] = true
-				local msg = L.missingAddOn:format(zoneAddon)
+				Popup(L.missingAddOnPopup:format(zoneAddon))
+				local msg = L.missingAddOnRaidWarning:format(zoneAddon)
 				sysprint(msg)
-				Popup(msg)
-				RaidNotice_AddMessage(RaidWarningFrame, msg, {r=1,g=1,b=1}, 15)
+				RaidNotice_AddMessage(RaidWarningFrame, msg, {r=1,g=1,b=1}, 20)
 			end
 		end
 	end

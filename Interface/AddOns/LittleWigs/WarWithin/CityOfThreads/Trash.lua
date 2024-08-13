@@ -7,7 +7,7 @@ local mod, CL = BigWigs:NewBoss("City of Threads Trash", 2669)
 if not mod then return end
 mod.displayName = CL.trash
 mod:RegisterEnableMob(
-	223254, -- Queen Ansurek (gossip NPC)
+	223254, -- Queen Ansurek / The Vizier (gossip NPC)
 	220196, -- Herald of Ansurek
 	220195, -- Sureki Silkbinder
 	220197, -- Royal Swarmguard
@@ -47,16 +47,18 @@ if L then
 	L.xephitik_defeated_trigger = "Enough!"
 	L.fangs_of_the_queen_warmup_trigger = "The Transformatory was once the home of our sacred evolution."
 	L.izo_warmup_trigger = "Enough! You've earned a place in my collection. Let me usher you in."
+	L.custom_on_autotalk = CL.autotalk
+	L.custom_on_autotalk_desc = "|cFFFF0000Requires Rogue, Priest, or 25 skill in Khaz Algar Engineering.|r Automatically select the NPC dialog option that grants you the 'Stolen Power' aura.\n\n|T135888:16|tStolen Power\n{448305}"
+	L.custom_on_autotalk_icon = mod:GetMenuIcon("SAY")
 end
 
 --------------------------------------------------------------------------------
 -- Initialization
 --
 
-local autotalk = mod:AddAutoTalkOption(true)
 function mod:GetOptions()
 	return {
-		autotalk,
+		"custom_on_autotalk",
 		-- Herald of Ansurek
 		{443437, "SAY"}, -- Shadows of Doubt
 		-- Sureki Silkbinder
@@ -66,6 +68,7 @@ function mod:GetOptions()
 		-- Xeph'itik
 		450784, -- Perfume Toss
 		451423, -- Gossamer Barrage
+		441795, -- Pheromone Veil
 		-- Pale Priest
 		448047, -- Web Wrap
 		-- Eye of the Queen
@@ -107,6 +110,7 @@ function mod:OnBossEnable()
 	self:RegisterEvent("GOSSIP_SHOW")
 
 	-- Herald of Ansurek
+	--self:Log("SPELL_CAST_SUCCESS", "ShadowsOfDoubt", 443436)
 	self:Log("SPELL_AURA_APPLIED", "ShadowsOfDoubtApplied", 443437)
 
 	-- Sureki Silkbinder
@@ -119,6 +123,7 @@ function mod:OnBossEnable()
 	self:Log("SPELL_CAST_START", "PerfumeToss", 450784)
 	self:Log("SPELL_CAST_START", "GossamerBarrage", 451423)
 	self:Log("SPELL_CAST_SUCCESS", "PheromoneVeil", 441795)
+	self:Log("SPELL_AURA_APPLIED", "PheromoneVeilApplied", 441795)
 
 	-- Pale Priest
 	self:Log("SPELL_AURA_APPLIED", "WebWrap", 448047)
@@ -175,21 +180,32 @@ end
 function mod:CHAT_MSG_MONSTER_YELL(_, msg)
 	if msg == L.xephitik_defeated_trigger then
 		-- clean up bars a bit early
-		self:PheromoneVeil()
+		self:XephitikDefeated()
 	end
 end
 
 -- Autotalk
 
 function mod:GOSSIP_SHOW()
-	if self:GetOption(autotalk) and self:GetGossipID(122352) then
-		-- 122352:<Tinker with the device and steal some of its power.> [Requires Rogue, Priest, or at least 25 skill in Khaz Algar Engineering.]
-		-- gives a temporary damage buff to the group
-		self:SelectGossipID(122352)
+	if self:GetOption("custom_on_autotalk")then
+		if self:GetGossipID(122351) then -- Rogue
+			-- 122351:<Sabotage the device and steal some of its power.>\r\n[Requires Rogue, Priest, or at least 25 skill in Khaz Algar Engineering.]|r
+			self:SelectGossipID(122351)
+		elseif self:GetGossipID(122352) then -- Engineering
+			-- 122352:<Tinker with the device and steal some of its power.>\r\n[Requires Rogue, Priest, or at least 25 skill in Khaz Algar Engineering.]|r
+			self:SelectGossipID(122352)
+		elseif self:GetGossipID(122353) then -- Priest
+			-- 122353:<Manipulate the device with shadow magic and steal some of its power.>\r\n[Requires Rogue, Priest, or at least 25 skill in Khaz Algar Engineering.]|r
+			self:SelectGossipID(122353)
+		end
 	end
 end
 
 -- Herald of Ansurek
+
+--function mod:ShadowsOfDoubt()
+	--self:Nameplate(443437, 13.9, args.sourceGUID)
+--end
 
 function mod:ShadowsOfDoubtApplied(args)
 	self:TargetMessage(args.spellId, "yellow", args.destName)
@@ -202,8 +218,12 @@ end
 -- Sureki Silkbinder
 
 function mod:SilkBinding(args)
+	if self:Friendly(args.sourceFlags) then -- these NPCs can be mind-controlled by Priests
+		return
+	end
 	self:Message(args.spellId, "red", CL.casting:format(args.spellName))
 	self:PlaySound(args.spellId, "alert")
+	--self:Nameplate(args.spellId, 21.8, args.sourceGUID) -- recast if stunned, needs SUCCESS/INTERRUPT
 end
 
 -- Royal Swarmguard
@@ -211,6 +231,7 @@ end
 function mod:Earthshatter(args)
 	self:Message(args.spellId, "orange")
 	self:PlaySound(args.spellId, "alarm")
+	--self:Nameplate(args.spellId, 15.5, args.sourceGUID)
 end
 
 -- Xeph'itik
@@ -225,7 +246,7 @@ do
 		self:Message(args.spellId, "orange")
 		self:PlaySound(args.spellId, "alarm")
 		self:CDBar(args.spellId, 15.8)
-		timer = self:ScheduleTimer("PheromoneVeil", 30)
+		timer = self:ScheduleTimer("XephitikDefeated", 30)
 	end
 
 	function mod:GossamerBarrage(args)
@@ -235,10 +256,22 @@ do
 		self:Message(args.spellId, "red")
 		self:PlaySound(args.spellId, "long")
 		self:CDBar(args.spellId, 23.1)
-		timer = self:ScheduleTimer("PheromoneVeil", 30)
+		timer = self:ScheduleTimer("XephitikDefeated", 30)
 	end
 
 	function mod:PheromoneVeil()
+		-- backup in case xephitik_defeated_trigger isn't translated
+		self:XephitikDefeated()
+	end
+
+	function mod:PheromoneVeilApplied(args)
+		if self:Me(args.destGUID) then
+			self:Message(args.spellId, "green", CL.you:format(args.spellName))
+			self:PlaySound(args.spellId, "info")
+		end
+	end
+
+	function mod:XephitikDefeated()
 		if timer then
 			self:CancelTimer(timer)
 			timer = nil
@@ -268,6 +301,7 @@ end
 function mod:NullSlam(args)
 	self:Message(args.spellId, "orange")
 	self:PlaySound(args.spellId, "alarm")
+	--self:Nameplate(args.spellId, 26.7, args.sourceGUID)
 end
 
 -- Covert Webmender
@@ -275,6 +309,7 @@ end
 function mod:MendingWeb(args)
 	self:Message(args.spellId, "red", CL.casting:format(args.spellName))
 	self:PlaySound(args.spellId, "alert")
+	--self:Nameplate(args.spellId, 20.6, args.sourceGUID) -- recast if stunned, needs SUCCESS/INTERRUPT
 end
 
 -- Royal Venomshell
@@ -282,6 +317,7 @@ end
 function mod:VenomousSpray(args)
 	self:Message(args.spellId, "yellow")
 	self:PlaySound(args.spellId, "long")
+	--self:Nameplate(args.spellId, 24.2, args.sourceGUID)
 end
 
 -- Unstable Test Subject
@@ -289,13 +325,18 @@ end
 function mod:DarkBarrage(args)
 	self:Message(args.spellId, "orange")
 	self:PlaySound(args.spellId, "long")
+	--self:Nameplate(args.spellId, 27.9, args.sourceGUID)
 end
 
 -- Sureki Unnaturaler
 
 function mod:VoidWave(args)
+	if self:Friendly(args.sourceFlags) then -- these NPCs can be mind-controlled by Priests
+		return
+	end
 	self:Message(args.spellId, "red", CL.casting:format(args.spellName))
 	self:PlaySound(args.spellId, "alert")
+	--self:Nameplate(args.spellId, 16.4, args.sourceGUID) -- recast if stunned, needs SUCCESS/INTERRUPT
 end
 
 -- Elder Shadeweaver
@@ -303,6 +344,7 @@ end
 function mod:UmbralWeave(args)
 	self:Message(args.spellId, "yellow")
 	self:PlaySound(args.spellId, "alert")
+	--self:Nameplate(args.spellId, 23.1, args.sourceGUID)
 end
 
 -- Hulking Warshell
@@ -310,6 +352,7 @@ end
 function mod:TremorSlam(args)
 	self:Message(args.spellId, "orange")
 	self:PlaySound(args.spellId, "alarm")
+	--self:Nameplate(args.spellId, 23.0, args.sourceGUID)
 end
 
 -- Congealed Droplet

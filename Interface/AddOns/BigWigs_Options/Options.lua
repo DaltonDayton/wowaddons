@@ -508,8 +508,8 @@ local function advancedToggles(dbKey, module, check)
 		--
 	end
 
-	if bit.band(dbv, C.NAMEPLATEBAR) == C.NAMEPLATEBAR and hasOptionFlag(dbKey, module, "NAMEPLATEBAR") then
-		advOpts[#advOpts+1] = getSlaveToggle(L.NAMEPLATEBAR, L.NAMEPLATEBAR_desc, dbKey, module, C.NAMEPLATEBAR, check, 0.3, module:GetMenuIcon("NAMEPLATEBAR"))
+	if bit.band(dbv, C.NAMEPLATE) == C.NAMEPLATE and hasOptionFlag(dbKey, module, "NAMEPLATE") then
+		advOpts[#advOpts+1] = getSlaveToggle(L.NAMEPLATE, L.NAMEPLATE_desc, dbKey, module, C.NAMEPLATE, check, 0.3, module:GetMenuIcon("NAMEPLATE"))
 	end
 
 	-- Flash & Pulse
@@ -785,7 +785,7 @@ local function getDefaultToggleOption(scrollFrame, dropdown, module, bossOption)
 	local showFlags = {
 		"TANK_HEALER", "TANK", "HEALER", "DISPEL",
 		"EMPHASIZE", "ME_ONLY", "ME_ONLY_EMPHASIZE", "COUNTDOWN", "CASTBAR_COUNTDOWN", "FLASH", "ICON", "SAY", "SAY_COUNTDOWN",
-		"PROXIMITY", "INFOBOX", "ALTPOWER", "NAMEPLATEBAR", "PRIVATE",
+		"PROXIMITY", "INFOBOX", "ALTPOWER", "NAMEPLATE", "PRIVATE",
 	}
 	for i = 1, #showFlags do
 		local key = showFlags[i]
@@ -1095,7 +1095,7 @@ local function populateToggleOptions(widget, module)
 	if not journalId and module:GetAllowWin() and module:GetEncounterID() then
 		journalId =  -(module:GetEncounterID()) -- Fallback to show stats for modules with no journal ID, but set to allow win
 	end
-	if journalId and id and id > 0 and BigWigs:GetPlugin("Statistics").db.profile.enabled and sDB and sDB[id] and sDB[id][journalId] then
+	if journalId and id and id > 0 and sDB and sDB[id] and sDB[id][journalId] then
 		sDB = sDB[id][journalId]
 
 		if next(sDB) then -- Create statistics table
@@ -1111,28 +1111,28 @@ local function populateToggleOptions(widget, module)
 			statGroup:AddChild(emptyFirstColumnLabel)
 
 			local defeatColumnLabel = AceGUI:Create("InteractiveLabel")
-			defeatColumnLabel:SetWidth(100)
+			defeatColumnLabel:SetWidth(83)
 			defeatColumnLabel:SetText(L.defeat)
 			defeatColumnLabel:SetCallback("OnEnter", statsDefeatLabelOnEnter)
 			defeatColumnLabel:SetCallback("OnLeave", bwTooltip_Hide)
 			statGroup:AddChild(defeatColumnLabel)
 
 			local victoryColumnLabel = AceGUI:Create("InteractiveLabel")
-			victoryColumnLabel:SetWidth(100)
+			victoryColumnLabel:SetWidth(83)
 			victoryColumnLabel:SetText(L.victory)
 			victoryColumnLabel:SetCallback("OnEnter", statsVictoryLabelOnEnter)
 			victoryColumnLabel:SetCallback("OnLeave", bwTooltip_Hide)
 			statGroup:AddChild(victoryColumnLabel)
 
 			local fastestColumnLabel = AceGUI:Create("InteractiveLabel")
-			fastestColumnLabel:SetWidth(110)
+			fastestColumnLabel:SetWidth(130)
 			fastestColumnLabel:SetText(L.fastest)
 			fastestColumnLabel:SetCallback("OnEnter", statsFastestLabelOnEnter)
 			fastestColumnLabel:SetCallback("OnLeave", bwTooltip_Hide)
 			statGroup:AddChild(fastestColumnLabel)
 
 			local firstColumnLabel = AceGUI:Create("InteractiveLabel")
-			firstColumnLabel:SetWidth(110)
+			firstColumnLabel:SetWidth(140)
 			firstColumnLabel:SetText(L.first)
 			firstColumnLabel:SetCallback("OnEnter", statsFirstLabelOnEnter)
 			firstColumnLabel:SetCallback("OnLeave", bwTooltip_Hide)
@@ -1141,7 +1141,7 @@ local function populateToggleOptions(widget, module)
 			-- Headers
 			local displayOrder = {
 				"story", "timewalk", "LFR", "normal", "heroic", "mythic",
-				"10N", "25N", "10H", "25H",
+				"N10", "N25", "H10", "H25",
 				"SOD", "level1", "level2", "level3", "hardcore",
 			}
 			for diff, tbl in next, sDB do -- Unknown Stats
@@ -1159,17 +1159,17 @@ local function populateToggleOptions(widget, module)
 					statGroup:AddChild(difficultyText)
 
 					local defeatsLabel = AceGUI:Create("Label")
-					defeatsLabel:SetWidth(100)
+					defeatsLabel:SetWidth(83)
 					defeatsLabel:SetText(tbl.wipes or (not tbl.kills and "-" or "0"))
 					statGroup:AddChild(defeatsLabel)
 
 					local victoriesLabel = AceGUI:Create("Label")
-					victoriesLabel:SetWidth(100)
+					victoriesLabel:SetWidth(83)
 					victoriesLabel:SetText(tbl.kills or "-")
 					statGroup:AddChild(victoriesLabel)
 
 					local fastestVictoryLabel = AceGUI:Create("Label")
-					fastestVictoryLabel:SetWidth(110)
+					fastestVictoryLabel:SetWidth(130)
 					local value = tbl.best and SecondsToTime(tbl.best)
 					local bestDate = tbl.bestDate
 					if not value then
@@ -1182,7 +1182,7 @@ local function populateToggleOptions(widget, module)
 					statGroup:AddChild(fastestVictoryLabel)
 
 					local firstKillDataLabel = AceGUI:Create("Label")
-					firstKillDataLabel:SetWidth(110)
+					firstKillDataLabel:SetWidth(140)
 					if not tbl.fkDate then
 						firstKillDataLabel:SetText("-")
 					else
@@ -1203,17 +1203,17 @@ local function populateToggleOptions(widget, module)
 					statGroup:AddChild(difficultyText)
 
 					local defeatsLabel = AceGUI:Create("Label")
-					defeatsLabel:SetWidth(100)
+					defeatsLabel:SetWidth(83)
 					defeatsLabel:SetText(tbl.wipes or (not tbl.kills and "-" or "0"))
 					statGroup:AddChild(defeatsLabel)
 
 					local victoriesLabel = AceGUI:Create("Label")
-					victoriesLabel:SetWidth(100)
+					victoriesLabel:SetWidth(83)
 					victoriesLabel:SetText(tbl.kills or "-")
 					statGroup:AddChild(victoriesLabel)
 
 					local fastestVictoryLabel = AceGUI:Create("Label")
-					fastestVictoryLabel:SetWidth(110)
+					fastestVictoryLabel:SetWidth(130)
 					local value = tbl.best and SecondsToTime(tbl.best)
 					local bestDate = tbl.bestDate
 					if not value then
@@ -1226,7 +1226,7 @@ local function populateToggleOptions(widget, module)
 					statGroup:AddChild(fastestVictoryLabel)
 
 					local firstKillDataLabel = AceGUI:Create("Label")
-					firstKillDataLabel:SetWidth(110)
+					firstKillDataLabel:SetWidth(140)
 					if not tbl.fkDate then
 						firstKillDataLabel:SetText("-")
 					else
@@ -1406,7 +1406,6 @@ do
 	end
 
 	local statusTable = {}
-	local playerName = nil
 	local GetBestMapForUnit = loader.GetBestMapForUnit
 	local GetMapInfo = loader.GetMapInfo
 
@@ -1419,7 +1418,7 @@ do
 			onZoneShow(widget, tonumber(zoneId))
 		elseif bigwigsContent and not loader.currentExpansion.bigWigsBundled[value] then -- Any BigWigs content except bundled expansion headers
 			local addonState = loader:GetAddOnState(bigwigsContent)
-			local string = addonState == "MISSING" and L.missingAddOn or addonState == "DISABLED" and L.disabledAddOn
+			local string = addonState == "MISSING" and L.missingAddOnPopup or addonState == "DISABLED" and L.disabledAddOn
 			if string then
 				local container = AceGUI:Create("SimpleGroup")
 				container:SetFullWidth(true)
@@ -1448,7 +1447,7 @@ do
 				value = "LittleWigs"
 			end
 			local addonState = loader:GetAddOnState(value)
-			local string = addonState == "MISSING" and L.missingAddOn or addonState == "DISABLED" and L.disabledAddOn
+			local string = addonState == "MISSING" and L.missingAddOnPopup or addonState == "DISABLED" and L.disabledAddOn
 			if not loader.usingLittleWigsRepo and string then
 				local container = AceGUI:Create("SimpleGroup")
 				container:SetFullWidth(true)
@@ -1495,6 +1494,8 @@ do
 		widget:ReleaseChildren()
 
 		if value == "options" then
+			configFrame:SetTitle("BigWigs")
+			configFrame:SetStatusText(" "..loader:GetReleaseString())
 			-- Embed the AceConfig options in our AceGUI frame
 			local container = AceGUI:Create("SimpleGroup")
 			container.type = "BigWigsOptions" -- We want ACD to create a ScrollFrame, so we change the type to bypass it's group control check
@@ -1512,6 +1513,8 @@ do
 			local addonNameToHeader = {}
 			local defaultHeader
 			if value == "bigwigs" then
+				configFrame:SetTitle("BigWigs")
+				configFrame:SetStatusText(" "..loader:GetReleaseString())
 				defaultHeader = loader.currentExpansion.name
 				for i = 1, #expansionHeader do
 					local value = "BigWigs_" .. expansionHeader[i]
@@ -1523,6 +1526,8 @@ do
 					addonNameToHeader[value] = i
 				end
 			elseif value == "littlewigs" then
+				configFrame:SetTitle("LittleWigs")
+				configFrame:SetStatusText(" "..loader.littlewigsVersionString)
 				defaultHeader = loader.currentExpansion.littlewigsDefault
 				-- add an entry for each expansion
 				for i = 1, #expansionHeader do
@@ -1645,7 +1650,6 @@ do
 	end
 
 	function options:OpenConfig()
-		playerName = UnitName("player")
 		spellDescriptionUpdater:RegisterEvent("SPELL_TEXT_UPDATE")
 
 		local bw = AceGUI:Create("Frame")
@@ -1725,6 +1729,48 @@ function options:ConfigTableChange(_, appName)
 end
 
 do
+	local popup = CreateFrame("Frame", nil, UIParent)
+	popup:Hide()
+	popup:SetPoint("CENTER", UIParent, "CENTER")
+	popup:SetSize(320, 72)
+	popup:EnableMouse(true) -- Do not allow click-through on the frame
+	popup:SetFrameStrata("TOOLTIP")
+	popup:SetFrameLevel(110) -- Lots of room to draw under it
+	popup:SetFixedFrameStrata(true)
+	popup:SetFixedFrameLevel(true)
+
+	local border = CreateFrame("Frame", nil, popup, "DialogBorderOpaqueTemplate")
+	border:SetAllPoints(popup)
+
+	local textFrame = popup:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
+	textFrame:SetSize(290, 0)
+	textFrame:SetPoint("TOP", 0, -16)
+
+	local function newButton(newText)
+		local button = CreateFrame("Button", nil, popup)
+		button:SetSize(128, 21)
+		button:SetNormalFontObject(GameFontNormal)
+		button:SetHighlightFontObject(GameFontHighlight)
+		button:SetNormalTexture(130763) -- "Interface\\Buttons\\UI-DialogBox-Button-Up"
+		button:GetNormalTexture():SetTexCoord(0.0, 1.0, 0.0, 0.71875)
+		button:SetPushedTexture(130761) -- "Interface\\Buttons\\UI-DialogBox-Button-Down"
+		button:GetPushedTexture():SetTexCoord(0.0, 1.0, 0.0, 0.71875)
+		button:SetHighlightTexture(130762) -- "Interface\\Buttons\\UI-DialogBox-Button-Highlight"
+		button:GetHighlightTexture():SetTexCoord(0.0, 1.0, 0.0, 0.71875)
+		button:SetText(newText)
+		return button
+	end
+
+	local acceptButton = newButton(ACCEPT)
+	acceptButton:SetPoint("BOTTOMRIGHT", popup, "BOTTOM", -6, 16)
+	local cancelButton = newButton(CANCEL)
+	cancelButton:SetPoint("LEFT", acceptButton, "RIGHT", 13, 0)
+	popup:SetScript("OnKeyDown", function(_, key)
+		if key == "ESCAPE" then
+			cancelButton:Click()
+		end
+	end)
+
 	local _, addonTable = ...
 	-- DO NOT USE THIS DIRECTLY. This code may not be loaded
 	-- Use BigWigsAPI:ImportProfileString(addonName, profileString)
@@ -1734,12 +1780,11 @@ do
 		if optionalCustomProfileName and (type(optionalCustomProfileName) ~= "string" or #optionalCustomProfileName < 3) then error("Invalid custom profile name for the string you want to import.") end
 		if optionalCallbackFunction and type(optionalCallbackFunction) ~= "function" then error("Invalid custom callback function for the string you want to import.") end
 		-- All AceConfigDialog code, go there for original
-		local frame = acd.popup
-		frame:Show()
+		popup:Show()
 		local profileName = BigWigs.db:GetCurrentProfile()
 		if not optionalCustomProfileName or profileName == optionalCustomProfileName then
 			optionalCustomProfileName = nil
-			frame.text:SetText(L.confirm_import_addon:format(addonName, profileName))
+			textFrame:SetText(L.confirm_import_addon:format(addonName, profileName))
 		else
 			local profiles = BigWigs.db:GetProfiles()
 			local found = false
@@ -1751,22 +1796,21 @@ do
 				end
 			end
 			if found then
-				frame.text:SetText(L.confirm_import_addon_edit_profile:format(addonName, optionalCustomProfileName))
+				textFrame:SetText(L.confirm_import_addon_edit_profile:format(addonName, optionalCustomProfileName))
 			else
-				frame.text:SetText(L.confirm_import_addon_new_profile:format(addonName, optionalCustomProfileName))
+				textFrame:SetText(L.confirm_import_addon_new_profile:format(addonName, optionalCustomProfileName))
 			end
 		end
-		local height = 61 + frame.text:GetHeight()
-		frame:SetHeight(height)
+		local height = 61 + textFrame:GetHeight()
+		popup:SetHeight(height)
 
-		frame.accept:ClearAllPoints()
-		frame.accept:SetPoint("BOTTOMRIGHT", frame, "BOTTOM", -6, 16)
-		frame.cancel:Show()
+		acceptButton:ClearAllPoints()
+		acceptButton:SetPoint("BOTTOMRIGHT", popup, "BOTTOM", -6, 16)
 
-		frame.accept:SetScript("OnClick", function(self)
-			frame:Hide()
-			self:SetScript("OnClick", nil)
-			frame.cancel:SetScript("OnClick", nil)
+		acceptButton:SetScript("OnClick", function()
+			popup:Hide()
+			acceptButton:SetScript("OnClick", nil)
+			cancelButton:SetScript("OnClick", nil)
 			if optionalCustomProfileName then
 				BigWigs.db:SetProfile(optionalCustomProfileName)
 			end
@@ -1775,10 +1819,10 @@ do
 				optionalCallbackFunction(true)
 			end
 		end)
-		frame.cancel:SetScript("OnClick", function(self)
-			frame:Hide()
-			self:SetScript("OnClick", nil)
-			frame.accept:SetScript("OnClick", nil)
+		cancelButton:SetScript("OnClick", function()
+			popup:Hide()
+			cancelButton:SetScript("OnClick", nil)
+			acceptButton:SetScript("OnClick", nil)
 			if optionalCallbackFunction then
 				optionalCallbackFunction(false)
 			end

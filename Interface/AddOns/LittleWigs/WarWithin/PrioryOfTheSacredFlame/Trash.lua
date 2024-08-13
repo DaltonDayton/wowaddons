@@ -18,6 +18,7 @@ mod:RegisterEnableMob(
 	206697, -- Devout Priest
 	206698, -- Fanatical Mage
 	206710, -- Lightspawn
+	221760, -- Risen Mage
 	217658 -- Sir Braunpyke
 )
 
@@ -39,20 +40,23 @@ if L then
 	L.devout_priest = "Devout Priest"
 	L.fanatical_mage = "Fanatical Mage"
 	L.lightspawn = "Lightspawn"
+	L.risen_mage = "Risen Mage"
 	L.sir_braunpyke = "Sir Braunpyke"
 
 	L.baron_braunpyke_warmup_trigger = "They've served their purpose. Baron, demonstrate your worth."
+	L.custom_on_autotalk = CL.autotalk
+	L.custom_on_autotalk_desc = "|cFFFF0000Requires Priest or Paladin.|r Automatically select the NPC dialog option that grants you the 'Blessing of the Sacred Flame' aura."
+	L.custom_on_autotalk_icon = mod:GetMenuIcon("SAY")
 end
 
 --------------------------------------------------------------------------------
 -- Initialization
 --
 
-local autotalk = mod:AddAutoTalkOption(true) -- TODO buff locale?
 function mod:GetOptions()
 	return {
 		-- Sacred Flame
-		autotalk,
+		"custom_on_autotalk",
 		435088, -- Blessing of the Sacred Flame
 		-- Guard Captain Suleyman
 		{448485, "TANK_HEALER"}, -- Shield Slam
@@ -84,8 +88,10 @@ function mod:GetOptions()
 		427484, -- Flamestrike
 		-- Lightspawn
 		427601, -- Burst of Light
+		-- Risen Mage
+		444743, -- Fireball Volley
 	}, {
-		[autotalk] = L.sacred_flame,
+		["custom_on_autotalk"] = L.sacred_flame,
 		[448485] = L.guard_captain_suleyman,
 		[427897] = L.forge_master_damian,
 		[429091] = L.high_priest_aemya,
@@ -97,6 +103,7 @@ function mod:GetOptions()
 		[427356] = L.devout_priest,
 		[427484] = L.fanatical_mage,
 		[427601] = L.lightspawn,
+		[444743] = L.risen_mage,
 	}
 end
 
@@ -155,6 +162,9 @@ function mod:OnBossEnable()
 
 	-- Lightspawn
 	self:Log("SPELL_CAST_START", "BurstOfLight", 427601)
+
+	-- Risen Mage
+	self:Log("SPELL_CAST_START", "FireballVolley", 444743)
 end
 
 --------------------------------------------------------------------------------
@@ -174,14 +184,17 @@ function mod:CHAT_MSG_MONSTER_SAY(_, msg)
 	end
 end
 
--- Sacred Flame Autotalk
+-- Sacred Flame
 
 function mod:GOSSIP_SHOW()
-	if self:GetOption(autotalk) then
-		if self:GetGossipID(120716) then
-			-- Paladins and Priests can talk to the Sacred Flame to buff the whole party with
-			-- Blessing of the Sacred Flame, which causes your attacks to deal bonus damage.
-			-- 120716:Harness the power of the Eternal Flame.
+	if self:GetOption("custom_on_autotalk") then
+		-- Priests and Paladins can talk to the Sacred Flame to buff the whole party with
+		-- Blessing of the Sacred Flame, which causes your attacks to deal bonus damage.
+		if self:GetGossipID(120715) then -- Priest
+			-- 120715:Harness the power of the Sacred Flame.
+			self:SelectGossipID(120715)
+		elseif self:GetGossipID(120716) then -- Paladin
+			-- 120716:Harness the power of the Sacred Flame.
 			self:SelectGossipID(120716)
 		end
 	end
@@ -219,7 +232,7 @@ do
 		timer = self:ScheduleTimer("GuardCaptainSuleymanDeath", 30)
 	end
 
-	function mod:GuardCaptainSuleymanDeath(args)
+	function mod:GuardCaptainSuleymanDeath()
 		if timer then
 			self:CancelTimer(timer)
 			timer = nil
@@ -254,7 +267,7 @@ do
 		timer = self:ScheduleTimer("ForgeMasterDamianDeath", 30)
 	end
 
-	function mod:ForgeMasterDamianDeath(args)
+	function mod:ForgeMasterDamianDeath()
 		if timer then
 			self:CancelTimer(timer)
 			timer = nil
@@ -294,7 +307,7 @@ do
 		timer = self:ScheduleTimer("HighPriestAemyaDeath", 30)
 	end
 
-	function mod:HighPriestAemyaDeath(args)
+	function mod:HighPriestAemyaDeath()
 		if timer then
 			self:CancelTimer(timer)
 			timer = nil
@@ -330,7 +343,7 @@ do
 		timer = self:ScheduleTimer("SergeantShaynemailDeath", 30)
 	end
 
-	function mod:SergeantShaynemailDeath(args)
+	function mod:SergeantShaynemailDeath()
 		if timer then
 			self:CancelTimer(timer)
 			timer = nil
@@ -375,7 +388,7 @@ do
 		timer = self:ScheduleTimer("ElaenaEmberlanzDeath", 30)
 	end
 
-	function mod:ElaenaEmberlanzDeath(args)
+	function mod:ElaenaEmberlanzDeath()
 		if timer then
 			self:CancelTimer(timer)
 			timer = nil
@@ -418,7 +431,7 @@ do
 		timer = self:ScheduleTimer("TaenerDuelmalDeath", 30)
 	end
 
-	function mod:TaenerDuelmalDeath(args)
+	function mod:TaenerDuelmalDeath()
 		if timer then
 			self:CancelTimer(timer)
 			timer = nil
@@ -489,4 +502,18 @@ end
 function mod:BurstOfLight(args)
 	self:Message(args.spellId, "yellow")
 	self:PlaySound(args.spellId, "long")
+end
+
+-- Risen Mage
+
+do
+	local prev = 0
+	function mod:FireballVolley(args)
+		local t = args.time
+		if t - prev > 1.5 then
+			prev = t
+			self:Message(args.spellId, "red", CL.casting:format(args.spellName))
+			self:PlaySound(args.spellId, "alert")
+		end
+	end
 end

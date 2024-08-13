@@ -145,4 +145,3 @@ BigWigsIconDB = {
 }
 BigWigsStatsDB = {
 }
-BigWigsBarsReset = true

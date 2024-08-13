@@ -25,9 +25,9 @@ L.TOPLEFT = "Сверху слева"
 L.BOTTOMRIGHT = "Снизу справа"
 L.BOTTOMLEFT = "Снизу слева"
 L.CENTER = "По центру"
---L.customAnchorPoint = "Advanced: Custom anchor point"
---L.sourcePoint = "Source Point"
---L.destinationPoint = "Destination Point"
+L.customAnchorPoint = "Дополнительно: Пользовательские якоря"
+L.sourcePoint = "Начальная точка"
+L.destinationPoint = "Конечная точка"
 
 -----------------------------------------------------------------------
 -- AltPower.lua
@@ -399,7 +399,7 @@ L.Long = "Долгий"
 L.Warning = "Предупреждение"
 L.onyou = "Заклинание, бафф или дебафф на тебе"
 L.underyou = "Тебе нужно выйти из заклинания под ногами"
---L.privateaura = "Whenever a 'Private Aura' is on you"
+L.privateaura = "Когда на вас 'Приватная Аура'"
 
 L.sound = "Звук"
 
@@ -411,24 +411,20 @@ L.resetAllCustomSound = "Если вы используете свои звук�
 -- Statistics.lua
 --
 
-L.bossDefeatDurationPrint = "'%s' терпит поражение спустя %s"
-L.bossWipeDurationPrint = "'%s' побеждает спустя %s"
-L.newBestTime = "Рекордное убийство!"
 L.bossStatistics = "Статистика боссов"
-L.bossStatsDescription = "Запись статистики боссов, включает в себя количество побед, поражений, общее время сражений или самое быстрое убийство. Эта статистика видна для каждого босса в окне настроек, либо спрятана, если нет записей."
-L.enableStats = "Включить Статистику"
-L.chatMessages = "Сообщения в чат"
-L.printBestTimeOption = "Уведомление о лучшем убийстве"
-L.printDefeatOption = "Время победы"
-L.printWipeOption = "Время поражения"
-L.countDefeats = "Количество побед"
-L.countWipes = "Количество поражений"
-L.recordBestTime = "Запоминать лучшее убийство"
+L.bossStatsDescription = "Recording of various boss-related statistics such as the amount of times you were victorious, the amount of times you were defeated, date of first victory, and the fastest victory. Эта статистика видна для каждого босса в окне настроек, либо спрятана, если нет записей."
 L.createTimeBar = "Отображать полосу 'Лучшее время'"
 L.bestTimeBar = "Лучшее время"
-L.printHealthOption = "Здоровье босса"
 L.healthPrint = "Здоровье: %s."
 L.healthFormat = "%s (%.1f%%)"
+L.chatMessages = "Сообщения в чат"
+L.newFastestVictoryOption = "Новая самая быстрая победа"
+L.victoryOption = "Вы победили"
+L.defeatOption = "Вы проиграли"
+L.bossHealthOption = "Здоровье босса"
+L.bossVictoryPrint = "Вы победили '%s' спустя %s." -- You were victorious against 'BOSS_NAME' after COMBAT_DURATION.
+L.bossDefeatPrint = "Вы проиграли '%s' спустя %s." -- You were defeated by 'BOSS_NAME' after COMBAT_DURATION.
+L.newFastestVictoryPrint = "Новая самая быстрая победа: (-%s)" -- New fastest victory: (-COMBAT_DURATION)
 
 -----------------------------------------------------------------------
 -- Victory.lua

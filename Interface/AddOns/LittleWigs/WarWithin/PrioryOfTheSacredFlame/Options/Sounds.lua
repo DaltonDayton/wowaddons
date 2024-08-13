@@ -16,7 +16,7 @@ BigWigs:AddSounds("Baron Braunpyke", {
 BigWigs:AddSounds("Prioress Murrpray", {
 	[423588] = {"info","long"},
 	[423664] = "info",
-	[444546] = "alarm",
+	[444546] = {"alarm","warning"},
 	[444608] = "info",
 	[451605] = "alert",
 })
@@ -39,6 +39,7 @@ BigWigs:AddSounds("Priory of the Sacred Flame Trash", {
 	[428150] = "alert",
 	[429091] = "info",
 	[435088] = "info",
+	[444743] = "alert",
 	[448485] = "alarm",
 	[448492] = "alert",
 	[448515] = "alert",

@@ -1,8 +1,6 @@
 local L = BigWigsAPI:NewLocale("BigWigs", "frFR")
 if not L then return end
 
-L.tempMessage = "Les positions de votre bar ont été réinitialisées, mais vous pouvez maintenant Importer et Exporter des profils."
-
 -- Core.lua
 L.berserk = "Berserk"
 L.berserk_desc = "Prévient quand le boss devient fou furieux."
@@ -28,6 +26,9 @@ L.okay = "OK"
 L.officialRelease = "Vous utilisez une version FINALISÉE de BigWigs %s (%s)."
 L.alphaRelease = "Vous utilisez une version ALPHA de BigWigs %s (%s)."
 L.sourceCheckout = "Vous utilisez une version du dépôt de BigWigs %s."
+L.littlewigsOfficialRelease = "Vous utilisez une version FINALISÉE de LittleWigs (%s)."
+L.littlewigsAlphaRelease = "Vous utilisez une version ALPHA de LittleWigs (%s)."
+L.littlewigsSourceCheckout = "Vous utilisez une version du dépôt de LittleWigs."
 L.guildRelease = "Vous utilisez la version %d de BigWigs spécialement conçue pour votre guilde, basée sur la version %d de l'addon officiel."
 L.getNewRelease = "Votre BigWigs est ancien (/bwv), mais vous pouvez facilement le mettre à jour en utilisant le client CurseForge. Vous pouvez également le mettre à jour à partir de curseforge.com ou wowinterface.com."
 L.warnTwoReleases = "Votre BigWigs est obsolète de 2 versions ! Votre version risque de contenir des bugs, des fonctionnalités manquantes, voire même des délais totalement incorrects. Il est recommandé de faire la mise à jour."
@@ -44,10 +45,13 @@ L.dbmUsers = "Utilisateurs de DBM :"
 L.noBossMod = "Pas de boss mod :"
 L.offline = "Hors ligne"
 
-L.missingAddOn = "L'addon |cFF436EEE%s|r est manquant !"
+L.missingAddOnPopup = "L'addon |cFF436EEE%s|r est manquant !"
+L.missingAddOnRaidWarning = "L'addon |cFF436EEE%s|r est manquant ! Aucun timers ne sera affiché dans cette zone !"
 L.disabledAddOn = "L'addon |cFF436EEE%s|r est désactivé, les délais ne seront pas affichés."
 L.removeAddOn = "Veuillez enlever '|cFF436EEE%s|r' étant donné qu'il a été remplacé par '|cFF436EEE%s|r'."
 L.alternativeName = "%s (|cFF436EEE%s|r)"
+L.outOfDateContentPopup = "ATTENTION !\nVous avez mis à jour |cFF436EEE%s|r mais vous avez également besoin de mettre à jour l'addon principal |cFF436EEEBigWigs|r.\nIgnorer cela empêchera le fonctionnement de certaines fonctionnalités."
+L.outOfDateContentRaidWarning = "|cFF436EEE%s|r a besoin de la version %d de l'addon principal |cFF436EEEBigWigs|r afin de fonctionner correctement, mais vous êtes en version %d."
 
 L.expansionNames = {
 	"Classic", -- Classic
@@ -77,7 +81,7 @@ L.spell_under_you = "BigWigs : sort en dessous de vous"
 
 -- Options.lua
 L.options = "Options"
-L.optionsKey = "ID : %s" -- The ID that messages/bars/options use
+L.optionsKey = "ID : %s" -- The ID that messages/bars/options use
 L.raidBosses = "Boss de raid"
 L.dungeonBosses = "Boss de donjon"
 L.introduction = "Bienvenue sur BigWigs, votre compagnon des rencontres de boss. Attachez votre ceinture, gavez-vous de cacahouètes et profitez du voyage. Il ne fera pas de mal à vos enfants, mais vous aidera à préparer cette nouvelle rencontre de boss pour votre groupe de raid."
@@ -156,8 +160,8 @@ L.SAY_COUNTDOWN = "Dire le compte à rebours"
 L.SAY_COUNTDOWN_desc = "Les bulles de discussion sont faciles à repérer. BigWigs utilisera plusieurs messages en compte à rebours pour avertir les personnes proches qu'une technique vous affectant est sur le point de disparaitre."
 L.ME_ONLY_EMPHASIZE = "Mise en évidence (sur moi)"
 L.ME_ONLY_EMPHASIZE_desc = "L'activation de cette option mettra en évidence tous les messages associés à cette technique UNIQUEMENT si vous en êtes la cible, les rendant plus grands et plus visibles."
-L.NAMEPLATEBAR = "Barres d'info"
-L.NAMEPLATEBAR_desc = "Des barres sont parfois attachées aux barres d'info des unités quand plus d'un monste incantent le même sort. Si cette capacité est accompagnée d'une barre d'info que vous voulez cacher, désactivez cette option."
+L.NAMEPLATE = "Barres de nom"
+L.NAMEPLATE_desc = "Si activé, les fonctionnalités telles que les icônes et le text relatif à cette technique spéciale s'affichera sur vos barres de noms. Cela permet de voir plus facilement quel PNJ est en train de lancer une capacité lorsqu'il y a plusieurs PNJs qui la lancent."
 L.PRIVATE = "Aura personnelle"
 L.PRIVATE_desc = "Les auras personnelles ne peuvent pas être suivies, cependant le son \"sur vous\" (Avertissement) peut être activé dans l'onglet Son."
 
@@ -219,14 +223,14 @@ L.imported_countdown_color = "Couleur du compte à rebours"
 
 -- Statistics
 L.statistics = "Statistiques"
---L.defeat = "Defeat"
---L.defeat_desc = "The total amount of times you've been defeated by this boss encounter."
---L.victory = "Victory"
---L.victory_desc = "The total amount of times you were victorious against this boss encounter."
---L.fastest = "Fastest"
---L.fastest_desc = "The fastest victory and the date it occured on (Year/Month/Day)"
---L.first = "First"
---L.first_desc = "The first time you were victorious against this boss encounter, formatted as:\n[Amount of defeats prior to first victory] - [Combat duration] - [Year/Month/Day of victory]"
+L.defeat = "Défaite"
+L.defeat_desc = "Le montant total de fois où vous avez été vaincu par le boss."
+L.victory = "Victoire"
+L.victory_desc = "Le montant total de fois où vous avez été victorieux face au boss."
+L.fastest = "Le plus rapide"
+L.fastest_desc = "La victoire la plus rapide, et la date à laquelle cela est arrivé (Année/Mois/Jour)"
+L.first = "Premier"
+L.first_desc = "La première fois où vous avez été victorieux contre ce boss, formaté comme ceci :\n[Nombre de défaites avant la première victoire] - [Durée du combat] - [Année/Mois/Jour de la victoire]"
 -- Difficulty levels for statistics display on bosses
 L.unknown = "Inconnu"
 L.LFR = "RdR"
@@ -237,11 +241,11 @@ L.timewalk = "Marcheur du temps"
 L.story = "Histoire"
 L.mplus = "Mythique+ %d"
 L.SOD = "Saison de la Découverte"
---L.hardcore = "Hardcore"
+L.hardcore = "Hardcore"
 L.level1 = "Niveau 1"
 L.level2 = "Niveau 2"
 L.level3 = "Niveau 3"
---L["10N"] = "Normal 10"
---L["25N"] = "Normal 25"
---L["10H"] = "Heroic 10"
---L["25H"] = "Heroic 25"
+L.N10 = "10 joueurs"
+L.N25 = "25 joueurs"
+L.H10 = "Héroïque 10"
+L.H25 = "Héroïque 25"

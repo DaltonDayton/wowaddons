@@ -23,6 +23,7 @@ local GetCurrentRegion = GetCurrentRegion
 local GetServerTime = GetServerTime
 local PlaySoundFile = PlaySoundFile
 
+local C_DateAndTime_GetSecondsUntilWeeklyReset = C_DateAndTime.GetSecondsUntilWeeklyReset
 local C_Map_GetBestMapForUnit = C_Map.GetBestMapForUnit
 local C_Map_GetMapInfo = C_Map.GetMapInfo
 local C_Map_GetPlayerMapPosition = C_Map.GetPlayerMapPosition
@@ -30,7 +31,10 @@ local C_QuestLog_IsQuestFlaggedCompleted = C_QuestLog.IsQuestFlaggedCompleted
 local C_Timer_NewTicker = C_Timer.NewTicker
 local C_NamePlate_GetNamePlates = C_NamePlate.GetNamePlates
 
+local LeftButtonIcon = "|TInterface\\TUTORIALFRAME\\UI-TUTORIAL-FRAME:13:11:0:-1:512:512:12:66:230:307|t"
+
 local eventList = {
+    "RadiantEchoes",
     "CommunityFeast",
     "SiegeOnDragonbaneKeep",
     "ResearchersUnderFire",
@@ -60,6 +64,20 @@ local env = {
         -- Waking Shores
         [4203] = 1,
         [4317] = 2
+    },
+    radiantEchoesInterval = (function()
+        -- compare to TW region reset time (T_T always the last resion)
+        local isBeforeIntervalChange = GetServerTime() < 1723676384
+        -- 432000 = 5 days, US player if already reset, the interval should be updated to 30 minutes
+        if C_DateAndTime_GetSecondsUntilWeeklyReset() > 5 * 24 * 60 * 60 then
+            isBeforeIntervalChange = false
+        end
+        return isBeforeIntervalChange and 60 * 60 or 30 * 60
+    end)(),
+    radiantEchoesZoneRotation = {
+        C_Map_GetMapInfo(32),
+        C_Map_GetMapInfo(70),
+        C_Map_GetMapInfo(115)
     }
 }
 
@@ -87,6 +105,10 @@ local colorPlatte = {
     running = {
         {r = 0.06667, g = 0.60000, b = 0.55686, a = 1},
         {r = 0.21961, g = 0.93725, b = 0.49020, a = 1}
+    },
+    radiantEchoes = {
+        {r = 0.26275, g = 0.79608, b = 1.00000, a = 1},
+        {r = 1.00000, g = 0.96078, b = 0.86275, a = 1}
     }
 }
 
@@ -125,6 +147,17 @@ local function getGradientText(text, colorTable)
     )
 end
 
+local function worldMapIDSetter(idOrFunc)
+    return function(...)
+        if not _G.WorldMapFrame or not _G.WorldMapFrame:IsShown() or not _G.WorldMapFrame.SetMapID then
+            return
+        end
+
+        local id = type(idOrFunc) == "function" and idOrFunc(...) or idOrFunc
+        _G.WorldMapFrame:SetMapID(id)
+    end
+end
+
 local functionFactory = {
     loopTimer = {
         init = function(self)
@@ -143,6 +176,15 @@ local functionFactory = {
             self.statusBar.spark:SetBlendMode("ADD")
             self.statusBar.spark:SetPoint("CENTER", self.statusBar:GetStatusBarTexture(), "RIGHT", 0, 0)
             self.statusBar.spark:SetSize(4, 26)
+
+            self:SetScript(
+                "OnMouseDown",
+                function()
+                    if self.args.onClick then
+                        self.args:onClick()
+                    end
+                end
+            )
         end,
         setup = function(self)
             self.icon:SetTexture(self.args.icon)
@@ -173,6 +215,11 @@ local functionFactory = {
             dateUpdater = function(self)
                 local completed = 0
                 if (self.args.questIDs) and (type(self.args.questIDs) == "table") then
+                    -- lower than 0 means all quests need to be completed
+                    if self.args.checkAllCompleted then
+                        completed = 1 - #self.args.questIDs
+                    end
+
                     for _, questID in pairs(self.args.questIDs) do
                         if C_QuestLog_IsQuestFlaggedCompleted(questID) then
                             completed = completed + 1
@@ -203,13 +250,15 @@ local functionFactory = {
                     self.statusBar:SetMinMaxValues(0, self.args.duration)
                     self.statusBar:SetValue(self.timeOver)
                     local tex = self.statusBar:GetStatusBarTexture()
-                    tex:SetGradient(
-                        "HORIZONTAL",
-                        C.CreateColorFromTable(colorPlatte.running[1]),
-                        C.CreateColorFromTable(colorPlatte.running[2])
-                    )
+                    local platte = self.args.runningBarColor or colorPlatte.running
+                    tex:SetGradient("HORIZONTAL", C.CreateColorFromTable(platte[1]), C.CreateColorFromTable(platte[2]))
+                    if self.args.runningTextUpdater then
+                        self.runningTip:SetText(self.args:runningTextUpdater())
+                    end
                     self.runningTip:Show()
-                    E:Flash(self.runningTip, 1, true)
+                    if self.args.flash then
+                        E:Flash(self.runningTip, 1, true)
+                    end
                 else
                     -- normal tracking timer
                     self.timerText:SetText(secondToTime(self.timeLeft))
@@ -227,7 +276,9 @@ local functionFactory = {
                         )
                     end
 
-                    E:StopFlash(self.runningTip)
+                    if self.args.flash then
+                        E:StopFlash(self.runningTip)
+                    end
                     self.runningTip:Hide()
                 end
             end,
@@ -281,7 +332,21 @@ local functionFactory = {
                 _G.GameTooltip:SetText(F.GetIconString(self.args.icon, 16, 16) .. " " .. self.args.eventName, 1, 1, 1)
 
                 _G.GameTooltip:AddLine(" ")
-                _G.GameTooltip:AddDoubleLine(L["Location"], self.args.location, 1, 1, 1)
+
+                -- Location, Current Location, Next Location
+                for _, locationContext in ipairs(
+                    {
+                        {L["Location"], self.args.location},
+                        {L["Current Location"], self.args.currentLocation},
+                        {L["Next Location"], self.args.nextLocation}
+                    }
+                ) do
+                    local left, right = unpack(locationContext)
+                    if right then
+                        right = type(right) == "function" and right(self.args) or right
+                        _G.GameTooltip:AddDoubleLine(left, right, 1, 1, 1)
+                    end
+                end
 
                 _G.GameTooltip:AddLine(" ")
                 _G.GameTooltip:AddDoubleLine(L["Interval"], secondToTime(self.args.interval), 1, 1, 1)
@@ -327,6 +392,11 @@ local functionFactory = {
                             1
                         )
                     end
+                end
+
+                if self.args.onClickHelpText then
+                    _G.GameTooltip:AddLine(" ")
+                    _G.GameTooltip:AddLine(LeftButtonIcon .. " " .. self.args.onClickHelpText, 1, 1, 1)
                 end
 
                 _G.GameTooltip:Show()
@@ -635,6 +705,11 @@ local functionFactory = {
                     _G.GameTooltip:AddDoubleLine(L["Bonus Net"], C.StringByTemplate(L["Not Set"], "danger"))
                 end
 
+                if self.args.onClickHelpText then
+                    _G.GameTooltip:AddLine(" ")
+                    _G.GameTooltip:AddLine(LeftButtonIcon .. " " .. self.args.onClickHelpText, 1, 1, 1)
+                end
+
                 _G.GameTooltip:Show()
             end,
             onLeave = function(self)
@@ -645,6 +720,66 @@ local functionFactory = {
 }
 
 local eventData = {
+    RadiantEchoes = {
+        dbKey = "radiantEchoes",
+        args = {
+            icon = 3015740,
+            type = "loopTimer",
+            checkAllCompleted = true,
+            questIDs = {82676, 82689, 78938},
+            -- hasWeeklyReward = true,
+            duration = env.radiantEchoesInterval, -- always on
+            interval = env.radiantEchoesInterval,
+            barColor = colorPlatte.blue,
+            flash = false,
+            runningBarColor = colorPlatte.radiantEchoes,
+            eventName = L["Radiant Echoes"],
+            currentMapIndex = function(args) -- only exist for this event
+                return floor((GetServerTime() - args.startTimestamp) / args.interval) % 3 + 1
+            end,
+            currentLocation = function(args)
+                return env.radiantEchoesZoneRotation[args:currentMapIndex()].name
+            end,
+            nextLocation = function(args)
+                return env.radiantEchoesZoneRotation[args:currentMapIndex() % 3 + 1].name
+            end,
+            label = L["Echoes"],
+            runningText = L["In Progress"],
+            runningTextUpdater = function(args)
+                return env.radiantEchoesZoneRotation[args:currentMapIndex()].name
+            end,
+            filter = function(args)
+                if args.stopAlertIfPlayerNotEnteredDragonlands and not C_QuestLog_IsQuestFlaggedCompleted(67700) then
+                    return false
+                end
+                return true
+            end,
+            startTimestamp = (function()
+                local timestampTable = {
+                    [1] = 1723269640, -- NA
+                    [2] = 1723266040, -- KR
+                    [3] = 1723262440, -- EU
+                    [4] = 1723266040, -- TW
+                    [5] = 1723266040, -- CN
+                    [72] = 1675767600
+                }
+
+                local region = GetCurrentRegion()
+                -- TW is not a real region, so we need to check the client language if player in KR
+                if region == 2 and W.Locale ~= "koKR" then
+                    region = 4
+                end
+
+                return timestampTable[region]
+            end)(),
+            onClick = worldMapIDSetter(
+                function(args)
+                    return env.radiantEchoesZoneRotation[args:currentMapIndex()].mapID
+                end
+            ),
+            onClickHelpText = L["Click to show location"]
+        }
+    },
     CommunityFeast = {
         dbKey = "communityFeast",
         args = {
@@ -655,6 +790,7 @@ local eventData = {
             duration = 16 * 60,
             interval = 1.5 * 60 * 60,
             barColor = colorPlatte.blue,
+            flash = true,
             eventName = L["Community Feast"],
             location = C_Map_GetMapInfo(2024).name,
             label = L["Feast"],
@@ -681,7 +817,9 @@ local eventData = {
                 end
 
                 return timestampTable[region]
-            end)()
+            end)(),
+            onClick = worldMapIDSetter(2024),
+            onClickHelpText = L["Click to show location"]
         }
     },
     SiegeOnDragonbaneKeep = {
@@ -697,6 +835,7 @@ local eventData = {
             label = L["Dragonbane Keep"],
             location = C_Map_GetMapInfo(2022).name,
             barColor = colorPlatte.red,
+            flash = true,
             runningText = L["In Progress"],
             filter = function(args)
                 if args.stopAlertIfPlayerNotEnteredDragonlands and not C_QuestLog_IsQuestFlaggedCompleted(67700) then
@@ -720,7 +859,9 @@ local eventData = {
                 end
 
                 return timestampTable[region]
-            end)()
+            end)(),
+            onClick = worldMapIDSetter(2022),
+            onClickHelpText = L["Click to show location"]
         }
     },
     ResearchersUnderFire = {
@@ -737,6 +878,7 @@ local eventData = {
             label = L["Researchers"],
             location = C_Map_GetMapInfo(2133).name,
             barColor = colorPlatte.green,
+            flash = true,
             runningText = L["In Progress"],
             filter = function(args)
                 if args.stopAlertIfPlayerNotEnteredDragonlands and not C_QuestLog_IsQuestFlaggedCompleted(67700) then
@@ -750,7 +892,7 @@ local eventData = {
                     [2] = 1702240245, -- KR
                     [3] = 1683804640, -- EU
                     [4] = 1670704240, -- TW
-                    [5] = 1670702460, -- CN
+                    [5] = 1670704240, -- CN
                     [72] = 1670702460 -- TR
                 }
                 local region = GetCurrentRegion()
@@ -760,7 +902,9 @@ local eventData = {
                 end
 
                 return timestampTable[region]
-            end)()
+            end)(),
+            onClick = worldMapIDSetter(2133),
+            onClickHelpText = L["Click to show location"]
         }
     },
     TimeRiftThaldraszus = {
@@ -776,6 +920,7 @@ local eventData = {
             label = L["Time Rift"],
             location = C_Map_GetMapInfo(2025).name,
             barColor = colorPlatte.bronze,
+            flash = true,
             runningText = L["In Progress"],
             filter = function(args)
                 if args.stopAlertIfPlayerNotEnteredDragonlands and not C_QuestLog_IsQuestFlaggedCompleted(67700) then
@@ -799,7 +944,9 @@ local eventData = {
                 end
 
                 return timestampTable[region]
-            end)()
+            end)(),
+            onClick = worldMapIDSetter(2025),
+            onClickHelpText = L["Click to show location"]
         }
     },
     SuperBloom = {
@@ -815,6 +962,7 @@ local eventData = {
             label = L["Superbloom"],
             location = C_Map_GetMapInfo(2200).name,
             barColor = colorPlatte.green,
+            flash = true,
             runningText = L["In Progress"],
             filter = function(args)
                 if args.stopAlertIfPlayerNotEnteredDragonlands and not C_QuestLog_IsQuestFlaggedCompleted(67700) then
@@ -838,7 +986,9 @@ local eventData = {
                 end
 
                 return timestampTable[region]
-            end)()
+            end)(),
+            onClick = worldMapIDSetter(2200),
+            onClickHelpText = L["Click to show location"]
         }
     },
     BigDig = {
@@ -854,6 +1004,7 @@ local eventData = {
             label = L["Big Dig"],
             location = C_Map_GetMapInfo(2024).name,
             barColor = colorPlatte.purple,
+            flash = true,
             runningText = L["In Progress"],
             filter = function(args)
                 if args.stopAlertIfPlayerNotEnteredDragonlands and not C_QuestLog_IsQuestFlaggedCompleted(67700) then
@@ -878,7 +1029,9 @@ local eventData = {
                 end
 
                 return timestampTable[region]
-            end)()
+            end)(),
+            onClick = worldMapIDSetter(2024),
+            onClickHelpText = L["Click to show location"]
         }
     },
     IskaaranFishingNet = {
@@ -890,6 +1043,7 @@ local eventData = {
                 return C_QuestLog_IsQuestFlaggedCompleted(70871)
             end,
             barColor = colorPlatte.purple,
+            flash = true,
             eventName = L["Iskaaran Fishing Net"],
             label = L["Fishing Net"],
             events = {
@@ -971,7 +1125,9 @@ local eventData = {
                         end
                     end
                 }
-            }
+            },
+            onClick = worldMapIDSetter(2024),
+            onClickHelpText = L["Click to show location"]
         }
     }
 }
@@ -1249,13 +1405,9 @@ function ET:Initialize()
         self:RegisterEvent(event, "HandlerEvent")
     end
 
-    hooksecurefunc(
-        _G.WorldMapFrame,
-        "Show",
-        function()
-            ET:UpdateTrackers()
-        end
-    )
+    EventRegistry:RegisterCallback("WorldMapOnShow", self.UpdateTrackers, self)
+    EventRegistry:RegisterCallback("WorldMapMinimized", E.Delay, E, 0.1, self.UpdateTrackers, self)
+    EventRegistry:RegisterCallback("WorldMapMaximized", E.Delay, E, 0.1, self.UpdateTrackers, self)
 end
 
 function ET:ProfileUpdate()

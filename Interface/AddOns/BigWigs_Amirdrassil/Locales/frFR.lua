@@ -84,7 +84,6 @@ if L then
 	L.flare_bomb = "Bombe éclairante"
 	L.too_close_to_edge = "Trop proche du bord"
 	L.taking_damage_from_edge = "Prends des dégats du bord"
-	L.flying_available = "Vous pouvez maintenant voler"
 
 	L.fly_time = "Temps en vol"
 	L.fly_time_desc = "Affiche un message qui indique combien de temps vous avez pris pour voler d'une plateforme à une autre."
@@ -116,6 +115,6 @@ if L then
 
 	L.flame_orb = "Orbes enflammées"
 	L.shadow_orb = "Orbes d'ombre"
-	--L.orb_message_flame = "You are Flame"
-	--L.orb_message_shadow = "You are Shadow"
+	L.orb_message_flame = "Vous êtes Flamme"
+	L.orb_message_shadow = "Vous êtes Ombre"
 end

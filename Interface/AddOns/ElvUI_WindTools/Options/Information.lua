@@ -11,11 +11,6 @@ local tostring = tostring
 local type = type
 local unpack = unpack
 
-local discordURL = "https://discord.gg/JMz5Zsk"
-if E.global.general.locale == "zhCN" or E.global.general.locale == "zhTW" then
-    discordURL = "https://discord.gg/nA44TeZ"
-end
-
 local function blue(string)
     if type(string) ~= "string" then
         string = tostring(string)
@@ -42,7 +37,7 @@ options.help = {
             type = "execute",
             name = format("%s %s (%s)", F.GetIconString(W.Media.Icons.donateAiFaDian, 14), L["Donate"], L["AiFaDian"]),
             func = function()
-                E:StaticPopup_Show("WINDTOOLS_EDITBOX", nil, nil, "https://afdian.net/@fang2hou")
+                E:StaticPopup_Show("WINDTOOLS_EDITBOX", nil, nil, "https://afdian.com/a/fang2hou")
             end,
             width = 1.2
         },
@@ -124,7 +119,7 @@ options.help = {
                     name = L["Discord"],
                     image = W.Media.Icons.discord,
                     func = function()
-                        E:StaticPopup_Show("WINDTOOLS_EDITBOX", nil, nil, discordURL)
+                        E:StaticPopup_Show("WINDTOOLS_EDITBOX", nil, nil, "https://discord.gg/CMDsBmhvyW")
                     end,
                     width = 0.7
                 },
@@ -148,7 +143,7 @@ options.help = {
                             "WINDTOOLS_EDITBOX",
                             nil,
                             nil,
-                            "https://github.com/fang2hou/ElvUI_WindTools/issues"
+                            "https://github.com/wind-addons/ElvUI_WindTools/issues"
                         )
                     end,
                     width = 0.7

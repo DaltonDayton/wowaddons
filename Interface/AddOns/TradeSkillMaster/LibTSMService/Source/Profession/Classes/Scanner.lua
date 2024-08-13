@@ -743,7 +743,7 @@ function private.GetItemStringAndCraftName(craftString)
 		craftName = ItemInfo.GetName(itemString)
 	elseif strfind(resultItem, "enchant:") then
 		itemString = ""
-		craftName = TradeSkill.GetBasicInfo(indirectSpellId or spellId)
+		craftName = TradeSkill.GetBasicInfo(TradeSkill.IsClassicCrafting() and Scanner.GetClassicSpellId(spellId) or (indirectSpellId or spellId))
 	elseif strfind(resultItem, "item:") then
 		-- Result of craft is item
 		local level = CraftString.GetLevel(craftString)
@@ -880,6 +880,16 @@ function private.PopulateClassicSpellIdLookup()
 			local itemLink, _, quantity = TradeSkill.GetMatInfo(i, nil, j)
 			hash = Hash.Calculate(ItemString.Get(itemLink), hash)
 			hash = Hash.Calculate(quantity, hash)
+		end
+		if private.classicSpellIdLookup[hash] then
+			local itemString, craftName = private.GetItemStringAndCraftName(CraftString.Get(hash))
+			local spellId = Scanner.GetClassicSpellId(hash)
+			local itemLink, indirectSpellId = TradeSkill.GetResult(spellId)
+			Log.Err("Hash already exists %d, %d, %d, %s, %s, %s, %s", hash, spellId, TradeSkill.GetIcon(spellId), craftName, itemLink, tostring(indirectSpellId), itemString)
+			for j = 1, TradeSkill.GetNumMats(spellId) do
+				local link, _, quantity = TradeSkill.GetMatInfo(spellId, nil, j)
+				Log.Err("Material %d: %s, %s, %d", j, link, ItemString.Get(link), quantity)
+			end
 		end
 		assert(hash >= 0 and not private.classicSpellIdLookup[hash] and not private.classicSpellIdLookup[-i])
 		private.classicSpellIdLookup[hash] = i

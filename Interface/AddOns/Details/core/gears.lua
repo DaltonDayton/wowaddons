@@ -17,6 +17,8 @@ local CONST_INSPECT_ACHIEVEMENT_DISTANCE = 1 --Compare Achievements, 28 yards
 local CONST_SPELLBOOK_GENERAL_TABID = 1
 local CONST_SPELLBOOK_CLASSSPELLS_TABID = 2
 
+local GetItemInfo = C_Item and C_Item.GetItemInfo or GetItemInfo
+
 local storageDebug = false --remember to turn this to false!
 
 function Details:UpdateGears()
@@ -730,10 +732,9 @@ Details.background_tasks_loop = Details:ScheduleRepeatingTimer("DoBackgroundTask
 ------
 local hasGroupMemberInCombat = function()
 	--iterate over party or raid members and check if any one of them are in combat, if any are return true
-	if (not IsInRaid()) then
-		--summing the player as the party unitId cache do include the player unitId and the GetNumGroupMembers() doesn't count the player
-		local amountOfPartyMembers = GetNumGroupMembers() + 1
-		for i, unitId in ipairs(Details222.UnitIdCache.Party) do
+	if (IsInRaid()) then
+		local amountOfPartyMembers = GetNumGroupMembers()
+		for i, unitId in ipairs(Details222.UnitIdCache.Raid) do
 			if (i <= amountOfPartyMembers) then
 				if (UnitAffectingCombat(unitId)) then
 					return true
@@ -743,8 +744,8 @@ local hasGroupMemberInCombat = function()
 			end
 		end
 	else
-		local amountOfPartyMembers = GetNumGroupMembers()
-		for i, unitId in ipairs(Details222.UnitIdCache.Raid) do
+		local amountOfPartyMembers = GetNumGroupMembers() + 1
+		for i, unitId in ipairs(Details222.UnitIdCache.Party) do
 			if (i <= amountOfPartyMembers) then
 				if (UnitAffectingCombat(unitId)) then
 					return true
@@ -759,17 +760,27 @@ local hasGroupMemberInCombat = function()
 end
 
 local checkForGroupCombat_Ticker = function()
+	local instanceName, isntanceType = GetInstanceInfo()
+	if (isntanceType ~= "none") then
+		if (Details222.parser_frame:GetScript("OnEvent") ~= Details222.Parser.OnParserEvent) then
+			Details222.parser_frame:SetScript("OnEvent", Details222.Parser.OnParserEvent)
+		end
+		Details222.Parser.EventFrame.ticker:Cancel()
+		Details222.Parser.EventFrame.ticker = nil
+		return
+	end
+
 	if (hasGroupMemberInCombat()) then
 		Details222.parser_frame:SetScript("OnEvent", Details222.Parser.OnParserEvent)
 	else
-		Details222.parser_frame:SetScript("OnEvent", nil)
+		Details222.parser_frame:SetScript("OnEvent", Details222.Parser.OnParserEventOutOfCombat)
 		Details222.Parser.EventFrame.ticker:Cancel()
 		Details222.Parser.EventFrame.ticker = nil
 	end
 end
 
 --~parser
-local bConsiderGroupMembers = false
+local bConsiderGroupMembers = true
 Details222.Parser.Handler = {}
 Details222.Parser.EventFrame = CreateFrame("frame")
 Details222.Parser.EventFrame:RegisterEvent("PLAYER_ENTERING_WORLD")
@@ -777,18 +788,20 @@ Details222.Parser.EventFrame:RegisterEvent("ZONE_CHANGED_NEW_AREA")
 Details222.Parser.EventFrame:RegisterEvent("PLAYER_REGEN_ENABLED")
 Details222.Parser.EventFrame:RegisterEvent("PLAYER_REGEN_DISABLED")
 Details222.Parser.EventFrame:SetScript("OnEvent", function(self, event, ...)
-	local bIsOpenWorld = select(2, GetInstanceInfo()) == "none"
+	local instanceName, isntanceType = GetInstanceInfo()
 
-	if (not bIsOpenWorld) then
-		Details222.parser_frame:SetScript("OnEvent", Details222.Parser.OnParserEvent)
+	if (isntanceType ~= "none") then
+		if (Details222.parser_frame:GetScript("OnEvent") ~= Details222.Parser.OnParserEvent) then
+			Details222.parser_frame:SetScript("OnEvent", Details222.Parser.OnParserEvent)
+		end
 		return
 	end
 
 	if (event == "PLAYER_ENTERING_WORLD" or event == "ZONE_CHANGED_NEW_AREA") then
 		if (bConsiderGroupMembers) then
+			--check if any group member is in combat
 			if (hasGroupMemberInCombat()) then
 				Details222.parser_frame:SetScript("OnEvent", Details222.Parser.OnParserEvent)
-
 				--initiate a ticker to check if a unit in the group is still in combat
 				if (not Details222.Parser.EventFrame.ticker) then
 					Details222.Parser.EventFrame.ticker = C_Timer.NewTicker(1, checkForGroupCombat_Ticker)
@@ -797,7 +810,8 @@ Details222.Parser.EventFrame:SetScript("OnEvent", function(self, event, ...)
 				Details222.parser_frame:SetScript("OnEvent", Details222.Parser.OnParserEventOutOfCombat)
 			end
 		else
-			if (UnitAffectingCombat("player")) then
+			--player is alone
+			if (InCombatLockdown()) then
 				Details222.parser_frame:SetScript("OnEvent", Details222.Parser.OnParserEvent)
 			else
 				Details222.parser_frame:SetScript("OnEvent", Details222.Parser.OnParserEventOutOfCombat)
@@ -809,9 +823,9 @@ Details222.Parser.EventFrame:SetScript("OnEvent", function(self, event, ...)
 
 	elseif (event == "PLAYER_REGEN_ENABLED") then
 		if (bConsiderGroupMembers) then
+			--check if any group member is in combat
 			if (hasGroupMemberInCombat()) then
 				Details222.parser_frame:SetScript("OnEvent", Details222.Parser.OnParserEvent)
-
 				--initiate a ticker to check if a unit in the group is still in combat
 				if (not Details222.Parser.EventFrame.ticker) then
 					Details222.Parser.EventFrame.ticker = C_Timer.NewTicker(1, checkForGroupCombat_Ticker)
@@ -824,6 +838,15 @@ Details222.Parser.EventFrame:SetScript("OnEvent", function(self, event, ...)
 		end
 	end
 end)
+
+function Details222.Parser.GetState()
+	local parserEngine = Details222.parser_frame:GetScript("OnEvent")
+	if (parserEngine == Details222.Parser.OnParserEvent) then
+		return "STATE_REGULAR"
+	elseif (parserEngine == Details222.Parser.OnParserEventOutOfCombat) then
+		return "STATE_RESTRICTED"
+	end
+end
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -3304,59 +3327,75 @@ end
 
 --fill the passed table with spells from talents and spellbook, affect only the active spec
 function Details.FillTableWithPlayerSpells(completeListOfSpells)
-    local specId, specName, _, specIconTexture = GetSpecializationInfo(GetSpecialization())
-    local classNameLoc, className, classId = UnitClass("player")
+	local GetItemStats = C_Item.GetItemStats
+	local GetSpellInfo = GetSpellInfo or function(spellID)
+		if not spellID then return nil end
 
-	--get spells from talents
-	local configId = C_ClassTalents.GetActiveConfigID()
-	if (configId) then
-		local configInfo = C_Traits.GetConfigInfo(configId)
-		--get the spells from the SPEC from talents
-		for treeIndex, treeId in ipairs(configInfo.treeIDs) do
-			local treeNodes = C_Traits.GetTreeNodes(treeId)
-			for nodeIdIndex, treeNodeID in ipairs(treeNodes) do
-				local traitNodeInfo = C_Traits.GetNodeInfo(configId, treeNodeID)
-				if (traitNodeInfo) then
-					local entryIds = traitNodeInfo.entryIDs
-					for i = 1, #entryIds do
-						local entryId = entryIds[i] --number
-						local traitEntryInfo = C_Traits.GetEntryInfo(configId, entryId)
-						local borderTypes = Enum.TraitNodeEntryType
-						if (traitEntryInfo.type == borderTypes.SpendSquare) then
-							local definitionId = traitEntryInfo.definitionID
-							local traitDefinitionInfo = C_Traits.GetDefinitionInfo(definitionId)
-							local spellId = traitDefinitionInfo.overriddenSpellID or traitDefinitionInfo.spellID
-							local spellName, _, spellTexture = GetSpellInfo(spellId)
-							if (spellName) then
-								completeListOfSpells[spellId] = completeListOfSpells[spellId] or true
-							end
-						end
-					end
-				end
-			end
+		local spellInfo = C_Spell.GetSpellInfo(spellID)
+		if spellInfo then
+			return spellInfo.name, nil, spellInfo.iconID, spellInfo.castTime, spellInfo.minRange,
+					spellInfo.maxRange, spellInfo.spellID, spellInfo.originalIconID
+		end
+	end
+	local GetSpellTabInfo = GetSpellTabInfo or (function(tabLine)
+		if not tabLine then return nil end
+		local skillLine = C_SpellBook.GetSpellBookSkillLineInfo(tabLine)
+		if skillLine then
+			return skillLine.name, skillLine.iconID, skillLine.itemIndexOffset,
+			skillLine.numSpellBookItems, skillLine.isGuild, skillLine.specID
+		end
+	end)
+
+	local GetSpellBookItemInfo = C_SpellBook and C_SpellBook.GetSpellBookItemType or GetSpellBookItemInfo
+	local IsPassiveSpell = C_SpellBook and C_SpellBook.IsSpellBookItemPassive or IsPassiveSpell
+	local GetNumSpellTabs = C_SpellBook and C_SpellBook.GetNumSpellBookSkillLines or GetNumSpellTabs
+	local spellBookPlayerEnum = Enum.SpellBookSpellBank and Enum.SpellBookSpellBank.Player or "player"
+	local HasPetSpells = C_SpellBook and C_SpellBook.HasPetSpells or HasPetSpells
+	local GetOverrideSpell = C_Spell and  C_Spell.GetOverrideSpell or C_SpellBook.GetOverrideSpell
+	local GetSpellBookItemName = C_SpellBook and C_SpellBook.GetSpellBookItemName or GetSpellBookItemName 
+	local spellBookPetEnum = Enum.SpellBookSpellBank and Enum.SpellBookSpellBank.Pet or "pet"
+
+	local GetSpellCharges = GetSpellCharges or function(spellId)
+		local chargesInfo = C_Spell.GetSpellCharges(spellId)
+		if (chargesInfo) then
+			return chargesInfo.currentCharges, chargesInfo.maxCharges, chargesInfo.cooldownStartTime, chargesInfo.cooldownDuration, chargesInfo.chargeModRate
 		end
 	end
 
+    local specId, specName, _, specIconTexture = GetSpecializationInfo(GetSpecialization())
+    local locPlayerRace, playerRace, playerRaceId = UnitRace("player")
+    local generalIndex = Enum.SpellBookSkillLineIndex and Enum.SpellBookSkillLineIndex.General or CONST_SPELLBOOK_GENERAL_TABID
+    local tabName, tabTexture, offset, numSpells, isGuild, offspecId = GetSpellTabInfo(generalIndex) --CONST_SPELLBOOK_GENERAL_TABID
+
+    if (not offset) then
+        return completeListOfSpells
+    end
+
+    offset = offset + 1
+
 	--get spells from the Spec spellbook
-    for i = 1, GetNumSpellTabs() do
+    for i = 1, GetNumSpellTabs() do --called "lines" in new v11 api
         local tabName, tabTexture, offset, numSpells, isGuild, offspecId = GetSpellTabInfo(i)
-        if (tabTexture == specIconTexture) then
+		--print(tabName)
+        --if (tabTexture == specIconTexture) then
             offset = offset + 1
             local tabEnd = offset + numSpells
             for entryOffset = offset, tabEnd - 1 do
-                local spellType, spellId = GetSpellBookItemInfo(entryOffset, "player")
+                local spellType, spellId = GetSpellBookItemInfo(entryOffset, spellBookPlayerEnum)
                 if (spellId) then
-                    if (spellType == "SPELL") then
-                        spellId = C_SpellBook.GetOverrideSpell(spellId)
+					--print(GetSpellInfo(spellId))
+                    if (spellType == "SPELL" or spellType == 1) then
+                        --print(tabName, tabTexture == specIconTexture, offset, tabEnd,spellType, spellId)
+                        spellId = GetOverrideSpell(spellId)
                         local spellName = GetSpellInfo(spellId)
-                        local isPassive = IsPassiveSpell(entryOffset, "player")
-                        if (spellName and not isPassive) then
-                            completeListOfSpells[spellId] = completeListOfSpells[spellId] or true
+                        local bIsPassive = IsPassiveSpell(entryOffset, spellBookPlayerEnum)
+                        if (spellName and not bIsPassive) then
+                            completeListOfSpells[spellId] = true
                         end
                     end
                 end
             end
-        end
+        --end
     end
 
     --get class shared spells from the spell book
@@ -3364,18 +3403,42 @@ function Details.FillTableWithPlayerSpells(completeListOfSpells)
     offset = offset + 1
     local tabEnd = offset + numSpells
     for entryOffset = offset, tabEnd - 1 do
-        local spellType, spellId = GetSpellBookItemInfo(entryOffset, "player")
+        local spellType, spellId = GetSpellBookItemInfo(entryOffset, spellBookPlayerEnum)
         if (spellId) then
-            if (spellType == "SPELL") then
-                spellId = C_SpellBook.GetOverrideSpell(spellId)
+            if (spellType == "SPELL" or spellType == 1) then
+                spellId = GetOverrideSpell(spellId)
                 local spellName = GetSpellInfo(spellId)
-                local isPassive = IsPassiveSpell(entryOffset, "player")
-                if (spellName and not isPassive) then
-                    completeListOfSpells[spellId] = completeListOfSpells[spellId] or true
+                local bIsPassive = IsPassiveSpell(entryOffset, spellBookPlayerEnum)
+
+                if (spellName and not bIsPassive) then
+                    completeListOfSpells[spellId] = true
                 end
             end
         end
     end
+
+    local getNumPetSpells = function()
+        --'HasPetSpells' contradicts the name and return the amount of pet spells available instead of a boolean
+        return HasPetSpells()
+    end
+
+    --get pet spells from the pet spellbook
+    local numPetSpells = getNumPetSpells()
+    if (numPetSpells) then
+        for i = 1, numPetSpells do
+            local spellName, _, unmaskedSpellId = GetSpellBookItemName(i, spellBookPetEnum)
+            if (unmaskedSpellId) then
+                unmaskedSpellId = GetOverrideSpell(unmaskedSpellId)
+                local bIsPassive = IsPassiveSpell(i, spellBookPetEnum)
+                if (spellName and not bIsPassive) then
+                    completeListOfSpells[unmaskedSpellId] = true
+                end
+            end
+        end
+    end
+
+    --dumpt(completeListOfSpells)
+    return completeListOfSpells
 end
 
 function Details.SavePlayTimeOnClass()

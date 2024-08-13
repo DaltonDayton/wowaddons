@@ -1,6 +1,7 @@
-## v4.14.3 Changes
+## v4.14.8 Changes
 
-* Fixed error with quantity input in advanced shopping search
-* [Classic] Fixed error on some locales when scanning tooltips
+* [All] Fixed error when buying auctions from a Shopping scan in some situations
+* [All] Various other bug fixes
+* [Classic] Various tooltip fixes
 
 [Known Issues](https://support.tradeskillmaster.com/en_US/known_issues)

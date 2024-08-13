@@ -1061,7 +1061,7 @@ local bigDig = {
 }
 
 -- Profession Items
--- https://github.com/fang2hou/ElvUI_WindTools/issues/298
+-- https://github.com/wind-addons/ElvUI_WindTools/issues/298
 -- Thanks Tednik@GitHub
 local professionItems = {
     192131, -- 沃卓肯武器鍊
@@ -1361,7 +1361,8 @@ local function UpdateQuestItemList()
 end
 
 local forceUsableItems = {
-    [193634] = true -- 茂發種子
+    [193634] = true, -- 茂發種子
+    [206448] = true, --『夢境裂斧』菲拉雷斯
 }
 
 local equipmentList = {}
@@ -1976,10 +1977,9 @@ function EB:UpdateBar(id)
     end
 
     if not bar.register then
-        RegisterStateDriver(bar, "visibility", "[petbattle]hide;show")
+        RegisterStateDriver(bar, "visibility", barDB.visibility)
         bar.register = true
     end
-    bar:Show()
 
     -- Toggle shadow
     if barDB.backdrop then

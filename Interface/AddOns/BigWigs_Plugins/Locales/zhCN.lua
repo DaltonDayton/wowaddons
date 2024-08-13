@@ -411,24 +411,20 @@ L.resetAllCustomSound = "如果设置全部首领战斗自定义的声音，此�
 -- Statistics.lua
 --
 
-L.bossDefeatDurationPrint = "“%s”已被击杀，用时%s。"
-L.bossWipeDurationPrint = "“%s”战斗团灭，用时%s。"
-L.newBestTime = "新的最快击杀！"
 L.bossStatistics = "首领统计"
-L.bossStatsDescription = "首领战斗相关的统计数据，如首领被击杀数量、团灭次数、战斗持续时间和最快的首领击杀记录。可以在配置屏幕上查看每个首领的统计数据，没有首领记录的统计数据会被隐藏。"
-L.enableStats = "启用统计"
-L.chatMessages = "聊天信息"
-L.printBestTimeOption = "最快击杀提醒"
-L.printDefeatOption = "击杀时间"
-L.printWipeOption = "团灭时间"
-L.countDefeats = "击杀次数"
-L.countWipes = "团灭次数"
-L.recordBestTime = "记忆最快击杀"
-L.createTimeBar = "显示“最快击杀”计时条"
+L.bossStatsDescription = "记录与 BOSS 有关的各种统计数据，如获胜次数、被击败次数、首次获胜日期和最快获胜时间。可以在配置屏幕上查看每个首领的统计数据，没有首领记录的统计数据会被隐藏。"
+L.createTimeBar = "显示“最快获胜”计时条"
 L.bestTimeBar = "最快时间"
-L.printHealthOption = "首领血量"
 L.healthPrint = "血量：%s。"
 L.healthFormat = "%s （%.1f%%）"
+L.chatMessages = "聊天信息"
+L.newFastestVictoryOption = "新的最快获胜"
+L.victoryOption = "你取得了胜利"
+L.defeatOption = "你被击败了"
+L.bossHealthOption = "首领血量"
+L.bossVictoryPrint = "你战胜了 “%s”，用时 %s 。" -- You were victorious against 'BOSS_NAME' after COMBAT_DURATION.
+L.bossDefeatPrint = "你被 “%s” 击败了，用时 %s 。" -- You were defeated by 'BOSS_NAME' after COMBAT_DURATION.
+L.newFastestVictoryPrint = "新的最快获胜：（-%s）" -- New fastest victory: (-COMBAT_DURATION)
 
 -----------------------------------------------------------------------
 -- Victory.lua

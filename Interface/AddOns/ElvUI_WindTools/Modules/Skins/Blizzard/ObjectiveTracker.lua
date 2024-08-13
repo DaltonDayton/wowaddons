@@ -5,6 +5,7 @@ local _G = _G
 local hooksecurefunc = hooksecurefunc
 local pairs = pairs
 
+local CreateFrame = CreateFrame
 local InCombatLockdown = InCombatLockdown
 
 local trackers = {
@@ -51,13 +52,7 @@ end
 
 function S:ReskinObjectiveTrackerBlock(_, block)
     for _, button in pairs {block.ItemButton, block.itemButton} do
-        if button then
-            if button.backdrop then
-                self:CreateBackdropShadow(button)
-            else
-                self:CreateShadow(button)
-            end
-        end
+        self:CreateShadow(button)
     end
 
     self:ReskinObjectiveTrackerBlockRightEdgeButton(_, block)
@@ -106,6 +101,8 @@ function S:Blizzard_ObjectiveTracker()
     if not self:CheckDB("objectiveTracker") then
         return
     end
+
+    self.questItemButtons = {}
 
     local MainHeader = _G.ObjectiveTrackerFrame.Header
     self:ReskinOjectiveTrackerHeader(MainHeader)

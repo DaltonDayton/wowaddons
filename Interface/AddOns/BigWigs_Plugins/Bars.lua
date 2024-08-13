@@ -334,6 +334,11 @@ do
 
 	local lastNamePlateBar = 0
 	local testCount = 0
+	local testIcons = {
+		"Interface\\AddOns\\BigWigs\\Media\\Icons\\minimap_legacy.tga",
+		"Interface\\AddOns\\BigWigs\\Media\\Icons\\minimap_raid.tga",
+		"Interface\\AddOns\\BigWigs\\Media\\Icons\\minimap_party.tga",
+	}
 	plugin.pluginOptions = {
 		type = "group",
 		name = "|TInterface\\AddOns\\BigWigs\\Media\\Icons\\Menus\\Bars:20|t ".. L.bars,
@@ -379,7 +384,7 @@ do
 				desc = L.testBarsBtn_desc,
 				func = function()
 					testCount = testCount + 1
-					plugin:SendMessage("BigWigs_StartBar", plugin, nil, BigWigsAPI:GetLocale("BigWigs: Common").count:format(L.test, testCount), random(11, 30), "Interface\\AddOns\\BigWigs\\Media\\Icons\\minimap_raid.tga")
+					plugin:SendMessage("BigWigs_StartBar", plugin, nil, BigWigsAPI:GetLocale("BigWigs: Common").count:format(L.test, testCount), random(11, 30), testIcons[(testCount%3)+1])
 					if BigWigsLoader.isRetail then
 						local guid = plugin:UnitGUID("target")
 						if guid and UnitCanAttack("player", "target") then
@@ -1807,10 +1812,15 @@ do
 		if isApprox then
 			bar:SetPauseWhenDone(true)
 		end
-		bar:Start(maxTime)
 		if db.emphasize and time < db.emphasizeTime then
+			if db.emphasizeRestart and maxTime and maxTime > db.emphasizeTime then
+				bar:Start(db.emphasizeTime)
+			else
+				bar:Start(maxTime)
+			end
 			self:EmphasizeBar(bar, true)
 		else
+			bar:Start(maxTime)
 			currentBarStyler.ApplyStyle(bar)
 			if db.emphasize then
 				bar:SetTimeCallback(moveBar, db.emphasizeTime)

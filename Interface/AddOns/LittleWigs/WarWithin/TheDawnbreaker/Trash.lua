@@ -7,6 +7,7 @@ local mod, CL = BigWigs:NewBoss("The Dawnbreaker Trash", 2662)
 if not mod then return end
 mod.displayName = CL.trash
 mod:RegisterEnableMob(
+	223660, -- Arathi Lamplighter
 	213892, -- Nightfall Shadowmage
 	214761, -- Nightfall Ritualist
 	214762, -- Nightfall Commander
@@ -27,6 +28,7 @@ mod:RegisterEnableMob(
 
 local L = mod:GetLocale()
 if L then
+	L.arathi_lamplighter = "Arathi Lamplighter"
 	L.nightfall_shadowmage = "Nightfall Shadowmage"
 	L.nightfall_ritualist = "Nightfall Ritualist"
 	L.nightfall_commander = "Nightfall Commander"
@@ -39,6 +41,8 @@ if L then
 	L.nightfall_tactician = "Nightfall Tactician"
 	L.manifested_shadow = "Manifested Shadow"
 	L.nightfall_dark_architect = "Nightfall Dark Architect"
+
+	L.flying_available = "You can fly now"
 end
 
 --------------------------------------------------------------------------------
@@ -47,6 +51,8 @@ end
 
 function mod:GetOptions()
 	return {
+		-- Arathi Lamplighter
+		449042, -- Radiant Light
 		-- Nightfall Shadowmage
 		{431309, "DISPEL"}, -- Ensnaring Shadows
 		-- Nightfall Ritualist
@@ -75,6 +81,7 @@ function mod:GetOptions()
 		431349, -- Tormenting Eruption
 		446615, -- Usher Reinforcements
 	}, {
+		[449042] = L.arathi_lamplighter,
 		[431309] = L.nightfall_shadowmage,
 		[431304] = L.nightfall_ritualist,
 		[450756] = L.nightfall_commander,
@@ -87,10 +94,15 @@ function mod:GetOptions()
 		[431494] = L.nightfall_tactician,
 		[432565] = L.manifested_shadow,
 		[431349] = L.nightfall_dark_architect,
+	}, {
+		[449042] = L.flying_available, -- Radiant Light (You can fly now)
 	}
 end
 
 function mod:OnBossEnable()
+	-- Arathi Lamplighter
+	self:RegisterEvent("CHAT_MSG_RAID_BOSS_WHISPER") -- Radiant Light
+
 	-- Nightfall Shadowmage
 	self:Log("SPELL_CAST_START", "EnsnaringShadows", 431309)
 	self:Log("SPELL_AURA_APPLIED", "EnsnaringShadowsApplied", 431309)
@@ -134,15 +146,26 @@ function mod:OnBossEnable()
 	self:Log("SPELL_CAST_START", "TormentingEruption", 431349)
 	self:Log("SPELL_CAST_START", "UsherReinforcements", 446615)
 	self:Death("NightfallDarkArchitectDeath", 213885)
-
-	-- TODO show alert the first time the dungeon allows you to dragonride?
-	-- [CLEU] SPELL_AURA_APPLIED#Player-4184-005AB15D#<playername>#Player-4184-005AB15D#<playername>#449042#Radiant Light#DEBUFF
-	-- [CLEU] SPELL_AURA_APPLIED#Player-4184-005AB15D#<playername>#Player-4184-005AB15D#<playername>#400666#Dragonriding#BUFF
 end
 
 --------------------------------------------------------------------------------
 -- Event Handlers
 --
+
+-- Arathi Lamplighter
+
+do
+	local prev = 0
+	function mod:CHAT_MSG_RAID_BOSS_WHISPER(_, msg)
+		local t = GetTime()
+		if t - prev > 10 and msg:find("449042", nil, true) then -- Radiant Light
+			prev = t
+			-- [CHAT_MSG_RAID_BOSS_WHISPER] |TInterface\\ICONS\\INV_Ability_HolyFire_Nova.BLP:20|t You have gained |cFFFF0000|Hspell:449042|h[Radiant Light]|h|r. |TInterface\\ICONS\\Ability_DragonRiding_DragonRiding01.BLP:20|t Take flight!
+			self:Message(449042, "green", L.flying_available, "Ability_DragonRiding_DragonRiding01")
+			self:PlaySound(449042, "info")
+		end
+	end
+end
 
 -- Nightfall Shadowmage
 
@@ -193,8 +216,9 @@ end
 -- Arathi Bomb
 
 function mod:PlantArathiBomb(args)
-	self:Message(args.spellId, "green", CL.other:format(args.sourceName, args.spellName))
+	self:Message(args.spellId, "green", CL.other:format(self:ColorName(args.sourceName), args.spellName))
 	self:PlaySound(args.spellId, "info")
+	self:Bar(args.spellId, 15, CL.explosion)
 end
 
 -- Ascendant Vis'coxria
@@ -212,7 +236,7 @@ do
 		timer = self:ScheduleTimer("AscendantViscoxriaDeath", 30)
 	end
 
-	function mod:AscendantViscoxriaDeath(args)
+	function mod:AscendantViscoxriaDeath()
 		if timer then
 			self:CancelTimer(timer)
 			timer = nil
@@ -236,7 +260,7 @@ do
 		timer = self:ScheduleTimer("DeathscreamerIkentakDeath", 30)
 	end
 
-	function mod:DeathscreamerIkentakDeath(args)
+	function mod:DeathscreamerIkentakDeath()
 		if timer then
 			self:CancelTimer(timer)
 			timer = nil
@@ -260,7 +284,7 @@ do
 		timer = self:ScheduleTimer("IxkretenTheUnbreakableDeath", 30)
 	end
 
-	function mod:IxkretenTheUnbreakableDeath(args)
+	function mod:IxkretenTheUnbreakableDeath()
 		if timer then
 			self:CancelTimer(timer)
 			timer = nil
@@ -334,7 +358,7 @@ do
 		timer = self:ScheduleTimer("NightfallDarkArchitectDeath", 30)
 	end
 
-	function mod:NightfallDarkArchitectDeath(args)
+	function mod:NightfallDarkArchitectDeath()
 		if timer then
 			self:CancelTimer(timer)
 			timer = nil

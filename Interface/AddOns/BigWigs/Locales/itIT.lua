@@ -1,8 +1,6 @@
 local L = BigWigsAPI:NewLocale("BigWigs", "itIT")
 if not L then return end
 
---L.tempMessage = "Your bar positions have reset, but you can now Import/Export profiles."
-
 -- Core.lua
 L.berserk = "Infuriato"
 L.berserk_desc = "Visualizza un timer e un avviso quando il boss si infurierà."
@@ -28,6 +26,9 @@ L.okay = "OK"
 L.officialRelease = "Stai usando una versione ufficiale di BigWigs %s (%s)"
 L.alphaRelease = "Stai usando una VERSIONE ALPHA di BigWigs %s (%s)"
 L.sourceCheckout = "Stai usando una versione di BigWigs %s presa direttamente dal repository."
+L.littlewigsOfficialRelease = "Stai usando una versione ufficiale di LittleWigs (%s)"
+L.littlewigsAlphaRelease = "Stai usando una VERSIONE ALPHA di LittleWigs (%s)"
+L.littlewigsSourceCheckout = "Stai usando una versione di LittleWigs presa direttamente dal repository."
 L.guildRelease = "Stai utilizzando la versione %d di BigWigs creata per la tua Gilda, basata sulla versione %d dell'addon ufficiale."
 L.getNewRelease = "BigWigs non è aggiornato (/bwv) ma puoi farlo semplicemente usando CurseForge Client. In alternativa puoi aggiornarlo manualmente da curseforge.com o wowinterface.com."
 L.warnTwoReleases = "BigWigs è indietro di due versioni! La tua versione può avere dei bug, funzioni mancanti, o timer sbagliati. Ti consigliamo di aggiornare."
@@ -44,10 +45,13 @@ L.dbmUsers = "Utilizzatori DBM:"
 L.noBossMod = "Nessun Boss mod:"
 L.offline = "Disconnesso"
 
-L.missingAddOn = "L'addon |cFF436EEE%s|r è mancante!"
+L.missingAddOnPopup = "L'addon |cFF436EEE%s|r è mancante!"
+--L.missingAddOnRaidWarning = "L'addon |cFF436EEE%s|r è mancante! No timers will be displayed in this zone!"
 L.disabledAddOn = "L'addon |cFF436EEE%s|r è disattivato, i timer non saranno mostrati."
 L.removeAddOn = "Per favore rimuovi '|cFF436EEE%s|r' perché è stato rimpiazzato da '|cFF436EEE%s|r'."
 L.alternativeName = "%s (|cFF436EEE%s|r)"
+--L.outOfDateContentPopup = "WARNING!\nYou updated |cFF436EEE%s|r but you also need to update the main |cFF436EEEBigWigs|r addon.\nIgnoring this will result in broken functionality."
+--L.outOfDateContentRaidWarning = "|cFF436EEE%s|r requires version %d of the main |cFF436EEEBigWigs|r addon to function correctly, but you're on version %d."
 
 L.expansionNames = {
 	"Classiche", -- Classic
@@ -156,8 +160,8 @@ L.SAY_COUNTDOWN = "Dici il conto alla rovescia"
 L.SAY_COUNTDOWN_desc = "I fumetti delle chat sono facili da vedere. BigWigs scriverà messaggi multipli per mostrare il conto alla rovescia ai tuoi alleati vicini."
 L.ME_ONLY_EMPHASIZE = "Enfatizza (solo per me)"
 L.ME_ONLY_EMPHASIZE_desc = "Se attivo enfatizzerà tutti i messaggi associati a questa abilità SOLO se lanciati su di te, rendendoli più grandi e più visibili."
-L.NAMEPLATEBAR = "Barre dei nomi"
-L.NAMEPLATEBAR_desc = "Le barre sono mostrate vicino alle barre dei nomi se più di un nemico lancia la stessa abilità. Se questa abilità è associata ad una barra dei nomi che vuoi nascondere, disattiva questa opzione."
+--L.NAMEPLATE = "Nameplates"
+--L.NAMEPLATE_desc = "If enabled, features such as icons and text related to this specific ability will show on your nameplates. This makes it easier to see which specific NPC is casting an ability when there are multiple NPCs that cast it."
 L.PRIVATE = "Auree privata"
 L.PRIVATE_desc = "Le auree private non possono essere tracciare normalmente, ma il suono ''su di te'' può essere impostato nella tabella dei suoni."
 
@@ -241,7 +245,7 @@ L.mythic = "Mitica"
 --L.level1 = "Level 1"
 --L.level2 = "Level 2"
 --L.level3 = "Level 3"
---L["10N"] = "Normal 10"
---L["25N"] = "Normal 25"
---L["10H"] = "Heroic 10"
---L["25H"] = "Heroic 25"
+--L.N10 = "Normal 10"
+--L.N25 = "Normal 25"
+--L.H10 = "Heroic 10"
+--L.H25 = "Heroic 25"

@@ -4,7 +4,7 @@ local LL = W:NewModule("LFGList", "AceHook-3.0", "AceEvent-3.0")
 local LSM = E.Libs.LSM
 local LFGPI = W.Utilities.LFGPlayerInfo
 local C = W.Utilities.Color
-local openRaidLib = LibStub("LibOpenRaid-1.0", true)
+local openRaidLib = E.Libs.OpenRaid
 
 local _G = _G
 local floor = floor
@@ -465,7 +465,7 @@ function LL:UpdatePartyKeystoneFrame()
     for i = 1, 5 do
         local unitID = i == 1 and "player" or "party" .. i - 1
         local data = openRaidLib.GetKeystoneInfo(unitID)
-        local mapID = data and data.mythicPlusMapID
+        local mapID = data and data.challengeMapID
         if mapID and mythicKeystoneDungeons[mapID] and mythicKeystoneDungeons[mapID].name then
             local level = data.level
             local playerClass = UnitClassBase(unitID)

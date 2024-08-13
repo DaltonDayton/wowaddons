@@ -1,8 +1,6 @@
 local L = BigWigsAPI:NewLocale("BigWigs", "deDE")
 if not L then return end
 
-L.tempMessage = "Die Leistenpositionen wurden zurückgesetzt, aber es können jetzt Profile importiert/exportiert werden."
-
 -- Core.lua
 L.berserk = "Berserker"
 L.berserk_desc = "Warnt, wenn der Boss zum Berserker wird."
@@ -28,6 +26,9 @@ L.okay = "OK"
 L.officialRelease = "Bei dir läuft ein offizieller Release von BigWigs %s (%s)."
 L.alphaRelease = "Bei dir läuft ein ALPHA RELEASE von BigWigs %s (%s)."
 L.sourceCheckout = "Bei dir läuft ein Source Code Checkout von BigWigs %s direkt aus dem Repository."
+L.littlewigsOfficialRelease = "Bei dir läuft ein offizieller Release von LittleWigs (%s)."
+L.littlewigsAlphaRelease = "Bei dir läuft ein ALPHA RELEASE von LittleWigs (%s)."
+L.littlewigsSourceCheckout = "Bei dir läuft ein Source Code Checkout von LittleWigs direkt aus dem Repository."
 L.guildRelease = "Du nutzt Version %d von BigWigs für Deine Gilde, basierend auf Version %d des offiziellen Addons."
 L.getNewRelease = "Dein BigWigs ist veraltet (/bwv), aber Du kannst es mit Hilfe des CurseForge Clients einfach aktualisieren. Alternativ kannst Du es auch von curseforge.com oder wowinterface.com herunterladen und manuell aktualisieren."
 L.warnTwoReleases = "Dein BigWigs ist 2 Versionen älter als die neueste Version! Deine Version könnte Fehler, fehlende Funktionen oder völlig falsche Timer beinhalten. Es wird dringend empfohlen, BigWigs zu aktualisieren."
@@ -44,10 +45,13 @@ L.dbmUsers = "DBM-Nutzer:"
 L.noBossMod = "Kein Bossmod:"
 L.offline = "Offline"
 
-L.missingAddOn = "Das |cFF436EEE%s|r Addon fehlt!"
+L.missingAddOnPopup = "Das |cFF436EEE%s|r Addon fehlt!"
+L.missingAddOnRaidWarning = "Das |cFF436EEE%s|r Addon fehlt! In dieser Zone werden keine Timer angezeigt!"
 L.disabledAddOn = "Du hast das Addon |cFF436EEE%s|r deaktiviert, Timer werden nicht angezeigt."
 L.removeAddOn = "Bitte entferne '|cFF436EEE%s|r', da es durch '|cFF436EEE%s|r' ersetzt wurde."
 L.alternativeName = "%s (|cFF436EEE%s|r)"
+L.outOfDateContentPopup = "WARNUNG!\nDu hast |cFF436EEE%s|r aktualisiert, aber Du musst auch das Haupt |cFF436EEEBigWigs|r Addon aktualisieren.\nAndernfalls wird die Funktionalität eingeschränkt sein."
+L.outOfDateContentRaidWarning = "|cFF436EEE%s|r benötigt Version %d des Haupt |cFF436EEEBigWigs|r Addons zur korrekten Funktion, allerdings hast Du Version %d."
 
 L.expansionNames = {
 	"Classic", -- Classic
@@ -156,8 +160,8 @@ L.SAY_COUNTDOWN = "Sprechblasen-Countdown"
 L.SAY_COUNTDOWN_desc = "Sprechblasen sind gut sichtbar. BigWigs nutzt oftmals Sprechblasen zum Herunterzählen, um Spieler in der Nähe vor auslaufenden Fähigkeiten zu warnen."
 L.ME_ONLY_EMPHASIZE = "Hervorheben (nur auf mir)"
 L.ME_ONLY_EMPHASIZE_desc = "Die Aktivierung dieser Option hebt Nachrichten zu dieser Fähigkeit NUR DANN hervor, wenn diese auf Dich angewandt wurden. Dadurch werden diese größer und sichtbarer dargestellt."
-L.NAMEPLATEBAR = "Leisten an Namensplaketten"
-L.NAMEPLATEBAR_desc = "Manchmal werden Leisten an Namensplaketten angezeigt wenn mehr als ein Gegner den gleichen Zauber wirkt. Wenn diese Fähigkeit von einer Leiste an der Namensplakette begleitet wird, die ausgeblendet werden soll, deaktiviere diese Option."
+L.NAMEPLATE = "Namensplaketten"
+L.NAMEPLATE_desc = "Wenn aktiviert, werden Funktionen wie Symbole und Text zu dieser spezifischen Fähigkeit an den Namensplaketten dargestellt. Dies macht es einfacher zu erkennen, welcher NPC eine Fähigkeit wirkt, wenn mehrere NPCs diese wirken."
 L.PRIVATE = "Private Aura"
 L.PRIVATE_desc = "Private Auren können normalerweise nicht verfolgt werden, aber der \"auf Dir\" Sound (Warnung) kann im Sound Register gesetzt werden."
 
@@ -241,7 +245,7 @@ L.hardcore = "Hardcore"
 L.level1 = "Stufe 1"
 L.level2 = "Stufe 2"
 L.level3 = "Stufe 3"
-L["10N"] = "Normal 10"
-L["25N"] = "Normal 25"
-L["10H"] = "Heroisch 10"
-L["25H"] = "Heroisch 25"
+L.N10 = "Normal 10"
+L.N25 = "Normal 25"
+L.H10 = "Heroisch 10"
+L.H25 = "Heroisch 25"
