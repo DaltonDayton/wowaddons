@@ -4,22 +4,20 @@
 --    All Rights Reserved - Detailed license information included with addon.     --
 -- ------------------------------------------------------------------------------ --
 
-local TSM = select(2, ...) ---@type TSM
--- only create the TSMDEV table if we're in a dev or test environment
-if not TSM.IsDev() and not TSM.IsTest() then
-	return
-end
-TSMDEV = {} ---@class TSMDEV
+local LibTSMDev = select(2, ...).LibTSMDev
+local StateInspect = LibTSMDev:Init("StateInspect")
+local SlashCommands = LibTSMDev:Include("Service.SlashCommands")
+local State = LibTSMDev:From("LibTSMUtil"):Include("Reactive.Type.State")
 
 
 
 -- ============================================================================
--- Global TSMDEV Functions
+-- Module Loading
 -- ============================================================================
 
-function TSMDEV.Dump(value)
-	-- TODO: Implement something for test environments
-	assert(not TSM.IsTest())
-	C_AddOns.LoadAddOn("Blizzard_DebugTools")
-	DevTools_Dump(value)
-end
+StateInspect:OnModuleLoad(function()
+	SlashCommands.RegisterDebug("state", function()
+		C_AddOns.LoadAddOn("Blizzard_DebugTools")
+		DisplayTableInspectorWindow(State.GetDebugData())
+	end)
+end)

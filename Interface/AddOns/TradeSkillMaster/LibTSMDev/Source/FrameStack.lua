@@ -4,17 +4,15 @@
 --    All Rights Reserved - Detailed license information included with addon.     --
 -- ------------------------------------------------------------------------------ --
 
---- FrameStack Functions
--- @module FrameStack
-
-local TSM = select(2, ...) ---@type TSM
-local FrameStack = TSM.UI:NewPackage("FrameStack")
-local Math = TSM.LibTSMUtil:Include("Lua.Math")
-local Theme = TSM.LibTSMService:Include("UI.Theme")
-local Table = TSM.LibTSMUtil:Include("Lua.Table")
-local Vararg = TSM.LibTSMUtil:Include("Lua.Vararg")
-local ScriptWrapper = TSM.LibTSMWoW:Include("API.ScriptWrapper")
-local UIElements = TSM.LibTSMUI:Include("Util.UIElements")
+local LibTSMDev = select(2, ...).LibTSMDev
+local FrameStack = LibTSMDev:Init("FrameStack")
+local SlashCommands = LibTSMDev:From("LibTSMApp"):Include("Service.SlashCommands")
+local UIElements = LibTSMDev:From("LibTSMUI"):Include("Util.UIElements")
+local ScriptWrapper = LibTSMDev:From("LibTSMWoW"):Include("API.ScriptWrapper")
+local Theme = LibTSMDev:From("LibTSMService"):Include("UI.Theme")
+local Math = LibTSMDev:From("LibTSMUtil"):Include("Lua.Math")
+local Table = LibTSMDev:From("LibTSMUtil"):Include("Lua.Table")
+local Vararg = LibTSMDev:From("LibTSMUtil"):Include("Lua.Vararg")
 local private = {
 	tooltip = nil,
 }
@@ -94,10 +92,20 @@ local IGNORED_FRAMES = {
 
 
 -- ============================================================================
--- Module Functions
+-- Module Loading
 -- ============================================================================
 
-function FrameStack.Toggle()
+FrameStack:OnModuleLoad(function()
+	SlashCommands.RegisterDebug("fstack", private.Toggle)
+end)
+
+
+
+-- ============================================================================
+-- Private Helper Functions
+-- ============================================================================
+
+function private.Toggle()
 	if not private.tooltip then
 		private.tooltip = CreateFrame("GameTooltip", "TSMFrameStackTooltip", UIParent, "GameTooltipTemplate")
 		private.tooltip.highlightFrame = CreateFrame("Frame", nil, nil, BackdropTemplateMixin and "BackdropTemplate" or nil)
@@ -122,17 +130,11 @@ function FrameStack.Toggle()
 	end
 end
 
-
-
--- ============================================================================
--- Private Helper Functions
--- ============================================================================
-
 function private.OnUpdate(self)
-	if self.lastUpdate + 0.05 >= GetTime() then
+	if self.lastUpdate + 0.05 >= LibTSMDev.GetTime() then
 		return
 	end
-	self.lastUpdate = GetTime()
+	self.lastUpdate = LibTSMDev.GetTime()
 
 	local numFrames = 0
 	for _, strata in ipairs(STRATA_ORDER) do

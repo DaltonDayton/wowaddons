@@ -4,13 +4,15 @@
 --    All Rights Reserved - Detailed license information included with addon.     --
 -- ------------------------------------------------------------------------------ --
 
-local TSM = select(2, ...) ---@type TSM
-local CustomPrice = TSM.Init("Service.CustomPrice") ---@class Service.CustomPrice: Module
-local L = TSM.Locale.GetTable()
-local CustomStringFormat = TSM.LibTSMUI:Include("Util.CustomStringFormat")
-local ChatMessage = TSM.LibTSMService:Include("UI.ChatMessage")
-local CustomString = TSM.LibTSMTypes:Include("CustomString")
-local TempTable = TSM.LibTSMUtil:Include("BaseType.TempTable")
+local LibTSMApp = select(2, ...).LibTSMApp
+local L = LibTSMApp.Locale.GetTable()
+local CustomPrice = LibTSMApp:Init("Service.CustomPrice")
+local AddonSettings = LibTSMApp:Include("Service.AddonSettings")
+local CustomStringFormat = LibTSMApp:From("LibTSMUI"):Include("Util.CustomStringFormat")
+local ClientInfo = LibTSMApp:From("LibTSMWoW"):Include("Util.ClientInfo")
+local ChatMessage = LibTSMApp:From("LibTSMService"):Include("UI.ChatMessage")
+local CustomString = LibTSMApp:From("LibTSMTypes"):Include("CustomString")
+local TempTable = LibTSMApp:From("LibTSMUtil"):Include("BaseType.TempTable")
 local private = {
 	settings = nil,
 	lastLoopError = nil,
@@ -39,32 +41,31 @@ local ERR_STR_LOOKUP = {
 
 CustomPrice:OnModuleLoad(function()
 	CustomString.SetLoopHandler(private.LoopHandler)
-	CustomString.SetFrameTimeFunc(GetTime)
-end)
-
-CustomPrice:OnSettingsLoad(function(db)
-	private.settings = db:NewView()
-		:AddKey("global", "userData", "customPriceSources")
-		:AddKey("global", "userData", "customPriceSourceFormat")
-	local removedKeys = TempTable.Acquire()
-	CustomString.LoadCustomSources(private.settings.customPriceSources, removedKeys)
-	for _, key in ipairs(removedKeys) do
-		ChatMessage.PrintfUser(L["Removed custom price source (%s) which has an invalid name."], key)
-	end
-	TempTable.Release(removedKeys)
-
-	-- Clean up the custom price source formats
-	for name in pairs(private.settings.customPriceSourceFormat) do
-		if not private.settings.customPriceSources[name] then
-			private.settings.customPriceSourceFormat[name] = nil
+	CustomString.SetFrameTimeFunc(ClientInfo.GetFrameNumber)
+	AddonSettings.RegisterOnLoad("Service.CustomPrice", function(db)
+		private.settings = db:NewView()
+			:AddKey("global", "userData", "customPriceSources")
+			:AddKey("global", "userData", "customPriceSourceFormat")
+		local removedKeys = TempTable.Acquire()
+		CustomString.LoadCustomSources(private.settings.customPriceSources, removedKeys)
+		for _, key in ipairs(removedKeys) do
+			ChatMessage.PrintfUser(L["Removed custom price source (%s) which has an invalid name."], key)
 		end
-	end
-	for name in pairs(private.settings.customPriceSources) do
-		private.settings.customPriceSourceFormat[name] = private.settings.customPriceSourceFormat[name] or "gold"
-	end
+		TempTable.Release(removedKeys)
 
-	-- Configure the format code
-	CustomStringFormat.Configure(private.settings.customPriceSourceFormat)
+		-- Clean up the custom price source formats
+		for name in pairs(private.settings.customPriceSourceFormat) do
+			if not private.settings.customPriceSources[name] then
+				private.settings.customPriceSourceFormat[name] = nil
+			end
+		end
+		for name in pairs(private.settings.customPriceSources) do
+			private.settings.customPriceSourceFormat[name] = private.settings.customPriceSourceFormat[name] or "gold"
+		end
+
+		-- Configure the format code
+		CustomStringFormat.Configure(private.settings.customPriceSourceFormat)
+	end)
 end)
 
 
@@ -76,7 +77,7 @@ end)
 ---Validate a custom price name.
 ---@param name string The custom price name
 ---@return boolean result
----@return string? error
+---@return string? errStr
 function CustomPrice.ValidateCustomSourceName(name)
 	local isValid, errType, errTokenStr = CustomString.ValidateCustomSourceName(name)
 	if isValid then
@@ -89,8 +90,8 @@ end
 ---Validate a custom price string.
 ---@param str string The custom price string
 ---@param badPriceSources? table A table of price sources (as keys) which aren't allowed to be used
----@return boolean @Whether or not the custom price string is valid
----@return string? @The error message if the custom price string was invalid
+---@return boolean result
+---@return string? errStr
 function CustomPrice.Validate(text, badPriceSources)
 	local isValid, errType, errTokenStr = CustomString.Validate(text)
 	if not isValid then
@@ -128,8 +129,8 @@ end
 -- ============================================================================
 
 function private.LoopHandler(str)
-	if (private.lastLoopError or 0) + 1 < time() then
-		private.lastLoopError = time()
+	if (private.lastLoopError or 0) + 1 < LibTSMApp.GetTime() then
+		private.lastLoopError = LibTSMApp.GetTime()
 		ChatMessage.PrintUser(L["Loop detected in the following custom price:"].." "..ChatMessage.ColorUserAccentText(str))
 	end
 end

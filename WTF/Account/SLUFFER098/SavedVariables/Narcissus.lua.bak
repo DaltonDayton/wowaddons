@@ -52,24 +52,18 @@ NarcissusDB = {
 ["TranslateName"] = false,
 ["TalentTreeUseClassBackground"] = false,
 ["installTime"] = 1723331793,
-["Version"] = 10000,
+["EnableDoubleTap"] = true,
 ["AutoPlayAnimation"] = false,
 ["AFKScreen"] = true,
-["SoloQueueLFRDetails"] = true,
+["Version"] = 10000,
 ["AKFScreenDelay"] = false,
-["FontHeightItemName"] = 10,
-["EnableDoubleTap"] = true,
-["IndependentMinimapButton"] = false,
-["AnchorToMinimap"] = true,
+["ConduitTooltip"] = false,
+["SoloQueueLFRDetails"] = true,
+["HideTextsWithUI"] = false,
+["GlobalScale"] = 0.8,
 ["TalentTreeForEquipmentManager"] = true,
-["Tutorials"] = {
-["ExitConfirmation"] = true,
-["Movement"] = true,
-["SpellVisualBrowser"] = true,
-["NPCBrowserEntance"] = true,
-["WeaponBrowser"] = true,
-["NPCBrowser"] = true,
-},
+["SpeedyScreenshotAlert"] = true,
+["UseEntranceVisual"] = true,
 ["PerksProgramDB"] = {
 ["MonthNames"] = {
 {
@@ -83,33 +77,39 @@ NarcissusDB = {
 ["CurrentMonthData"] = {
 },
 },
-["NamePlateNameOffset"] = 0,
-["OnlyShowOwnedUpgradeItem"] = true,
-["TooltipTheme"] = "Bright",
+["UseEscapeButton"] = true,
+["TalentTreeAnchor"] = 1,
 ["GemManager"] = true,
 ["ModelPanelScale"] = 1,
-["AutoDisplayQuestItem"] = true,
-["CameraOrbit"] = true,
+["TooltipTheme"] = "Bright",
+["TalentTreeForPaperDoll"] = false,
 ["AutoFilterGem"] = false,
 ["TalentTreeForInspection"] = true,
-["TalentTreeForPaperDoll"] = false,
-["TalentTreeAnchor"] = 1,
-["UseEscapeButton"] = true,
-["UseEntranceVisual"] = true,
-["SpeedyScreenshotAlert"] = true,
-["GlobalScale"] = 0.8,
-["HideTextsWithUI"] = false,
+["CameraOrbit"] = true,
+["AutoDisplayQuestItem"] = true,
+["OnlyShowOwnedUpgradeItem"] = true,
+["NamePlateNameOffset"] = 0,
+["Tutorials"] = {
+["ExitConfirmation"] = true,
+["Movement"] = true,
+["SpellVisualBrowser"] = true,
+["NPCBrowserEntance"] = true,
+["NPCBrowser"] = true,
+["WeaponBrowser"] = true,
+},
+["AnchorToMinimap"] = true,
+["IndependentMinimapButton"] = false,
 ["SearchSuggestEnable"] = false,
-["ConduitTooltip"] = false,
+["FontHeightItemName"] = 10,
 ["DressingRoomUseTargetModel"] = true,
 }
 NarciAchievementOptions = {
 ["UseAsDefault"] = false,
-["IncompleteFirst"] = true,
+["ShowRedMark"] = false,
 ["Scale"] = 1,
 ["ReplaceToast"] = true,
 ["Theme"] = 1,
-["ShowRedMark"] = false,
+["IncompleteFirst"] = true,
 }
 NarciStatisticsDB = {
 ["InstalledDate"] = 1723331811,
@@ -117,6 +117,7 @@ NarciStatisticsDB = {
 },
 ["TimeSpentInNarcissus"] = 1004,
 ["AddOnActionForbidden"] = {
+["timeLastError"] = 1723401071,
 ["addons"] = {
 ["ElvUI"] = {
 ["errorTime"] = {
@@ -126,7 +127,6 @@ NarciStatisticsDB = {
 ["timeLastError"] = 1723401071,
 },
 },
-["timeLastError"] = 1723401071,
 },
 }
 NarciTurntableOptions = nil
@@ -136,7 +136,7 @@ NarciCharacterProfiles = {
 ["name"] = "Xamuul",
 ["birth"] = 1723331811,
 ["serverID"] = "1168",
-["lastVisit"] = 1723401756,
+["lastVisit"] = 1723515111,
 ["outfits"] = {
 {
 ["s"] = "36724,36727,45116,36655,20511,0,41771,36642,66904,36701,36666,12036:0:1898,67870",

@@ -25,7 +25,7 @@ local RegisterStateDriver = RegisterStateDriver
 local UnregisterStateDriver = UnregisterStateDriver
 
 local C_AddOns_IsAddOnLoaded = C_AddOns.IsAddOnLoaded
-local C_Spell_GetSpellInfo = C_Spell.GetSpellInfo
+local C_Spell_GetSpellTexture = C_Spell.GetSpellTexture
 
 -- 忽略列表
 local IgnoreList = {
@@ -83,6 +83,27 @@ local acceptedFrames = {
 
 local moveButtons = {}
 
+function MB:OnButtonSetShown(button, shown)
+    local btnName = button:GetName()
+    local found = false
+
+    for i, moveButtonName in pairs(moveButtons) do
+        if btnName == moveButtonName then
+            if shown then
+                return -- already in the list
+            end
+            tremove(moveButtons, i)
+            break
+        end
+    end
+
+    if shown then
+        tinsert(moveButtons, btnName)
+    end
+
+    self:UpdateLayout()
+end
+
 function MB:HandleLibDBIconButton(button, name)
     if not strsub(name, 1, strlen("LibDBIcon")) == "LibDBIcon" then
         return true
@@ -96,14 +117,7 @@ function MB:HandleLibDBIconButton(button, name)
         button,
         "Hide",
         function()
-            for i, moveButtonName in pairs(moveButtons) do
-                if name == moveButtonName then
-                    tremove(moveButtons, i)
-                    break
-                end
-            end
-
-            self:UpdateLayout()
+            self:OnButtonSetShown(button, false)
         end
     )
 
@@ -111,16 +125,11 @@ function MB:HandleLibDBIconButton(button, name)
         button,
         "Show",
         function()
-            for _, moveButtonName in pairs(moveButtons) do
-                if name == moveButtonName then
-                    return
-                end
-            end
-
-            tinsert(moveButtons, name)
-            self:UpdateLayout()
+            self:OnButtonSetShown(button, true)
         end
     )
+
+    self:SecureHook(button, "SetShown", "OnButtonSetShown")
 
     return button:IsShown()
 end
@@ -311,7 +320,7 @@ function MB:SkinButton(frame)
     if name == "DBMMinimapButton" then
         frame:SetNormalTexture("Interface\\Icons\\INV_Helmet_87")
     elseif name == "SmartBuff_MiniMapButton" then
-        frame:SetNormalTexture(select(3, C_Spell_GetSpellInfo(12051)))
+        frame:SetNormalTexture(C_Spell_GetSpellTexture(12051))
     elseif name == "ExpansionLandingPageMinimapButton" then
         if self.db.garrison then
             if not frame.isWindMinimapButton then

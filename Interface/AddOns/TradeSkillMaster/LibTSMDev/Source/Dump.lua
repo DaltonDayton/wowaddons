@@ -4,9 +4,9 @@
 --    All Rights Reserved - Detailed license information included with addon.     --
 -- ------------------------------------------------------------------------------ --
 
-local TSM = select(2, ...) ---@type TSM
-local StateInspect = TSM.UI:NewPackage("StateInspect")
-local State = TSM.LibTSMUtil:Include("Reactive.Type.State")
+if not TSMDEV then
+	return
+end
 
 
 
@@ -14,7 +14,7 @@ local State = TSM.LibTSMUtil:Include("Reactive.Type.State")
 -- Module Functions
 -- ============================================================================
 
-function StateInspect.Open()
+function TSMDEV.Dump(value)
 	C_AddOns.LoadAddOn("Blizzard_DebugTools")
-	DisplayTableInspectorWindow(State.GetDebugData())
+	DevTools_Dump(value)
 end

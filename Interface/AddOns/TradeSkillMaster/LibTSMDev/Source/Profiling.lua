@@ -4,13 +4,13 @@
 --    All Rights Reserved - Detailed license information included with addon.     --
 -- ------------------------------------------------------------------------------ --
 
-local TSM = select(2, ...) ---@type TSM
 if not TSMDEV then
 	return
 end
+local LibTSMDev = select(2, ...).LibTSMDev
 local Profiling = {}
 TSMDEV.Profiling = Profiling
-local Math = TSM.LibTSMUtil:Include("Lua.Math")
+local Math = LibTSMDev:From("LibTSMUtil"):Include("Lua.Math")
 local private = {
 	startTime = nil,
 	nodes = {},

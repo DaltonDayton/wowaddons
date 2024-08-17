@@ -4,13 +4,15 @@
 --    All Rights Reserved - Detailed license information included with addon.     --
 -- ------------------------------------------------------------------------------ --
 
-local TSM = select(2, ...) ---@type TSM
-local StoryBoard = TSM.UI:NewPackage("StoryBoard") ---@type AddonPackage
-local ClientInfo = TSM.LibTSMWoW:Include("Util.ClientInfo")
-local Reactive = TSM.LibTSMUtil:Include("Reactive")
-local Profession = TSM.LibTSMService:Include("Profession")
-local UIElements = TSM.LibTSMUI:Include("Util.UIElements")
-local UIManager = TSM.LibTSMUtil:IncludeClassType("UIManager")
+local LibTSMDev = select(2, ...).LibTSMDev
+local StoryBoard = LibTSMDev:Init("StoryBoard")
+local AddonSettings = LibTSMDev:From("LibTSMApp"):Include("Service.AddonSettings")
+local SlashCommands = LibTSMDev:From("LibTSMApp"):Include("Service.SlashCommands")
+local UIElements = LibTSMDev:From("LibTSMUI"):Include("Util.UIElements")
+local ClientInfo = LibTSMDev:From("LibTSMWoW"):Include("Util.ClientInfo")
+local Profession = LibTSMDev:From("LibTSMService"):Include("Profession")
+local Reactive = LibTSMDev:From("LibTSMUtil"):Include("Reactive")
+local UIManager = LibTSMDev:From("LibTSMUtil"):IncludeClassType("UIManager")
 local private = {
 	manager = nil,
 	settings = nil,
@@ -26,26 +28,23 @@ local ITEM_LIST = ClientInfo.IsRetail() and {"i:2770", "i:2771", "i:2772", "i:38
 
 
 -- ============================================================================
--- Module Functions
+-- Module Loading
 -- ============================================================================
 
-function StoryBoard.OnInitialize(settingsDB)
-	private.settings = settingsDB:NewView()
-		:AddKey("global", "storyBoardUIContext", "frame")
-end
+StoryBoard:OnModuleLoad(function()
+	AddonSettings.RegisterOnLoad("StoryBoard", function(db)
+		local state = STATE_SCHEMA:CreateState()
+		private.manager = UIManager.Create("STORY_BOARD", state, private.ActionHandler)
 
-function StoryBoard.OnEnable()
-	local state = STATE_SCHEMA:CreateState()
-	private.manager = UIManager.Create("STORY_BOARD", state, private.ActionHandler)
-end
+		private.settings = db:NewView()
+			:AddKey("global", "storyBoardUIContext", "frame")
+		SlashCommands.RegisterDebug("sb", private.manager:CallbackToProcessAction("ACTION_TOGGLE"))
+	end)
+end)
 
-function StoryBoard.OnDisable()
+StoryBoard:OnModuleUnload(function()
 	private.manager:ProcessAction("ACTION_ON_DISABLE")
-end
-
-function StoryBoard.Toggle()
-	private.manager:ProcessAction("ACTION_TOGGLE")
-end
+end)
 
 
 
@@ -91,7 +90,7 @@ function private.CreateMainFrame(state)
 		:SetSettingsContext(private.settings, "frame")
 		:SetMinResize(MIN_FRAME_SIZE.width, MIN_FRAME_SIZE.height)
 		:SetStrata("HIGH")
-		:SetTitle("TSM Storyboard")
+		:SetTitle("TSM Story Board")
 		:SetScript("OnHide", private.FrameOnHide)
 		:SetContentFrame(UIElements.New("DividedContainer", "container")
 			:SetContextTable(private.dividedContainerContext, DEFAULT_DIVIDED_CONTAINER_CONTEXT)

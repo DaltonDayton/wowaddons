@@ -11,12 +11,12 @@ VWQL = {
 ["SortPrio"] = {
 },
 ["Xamuul-Ner'zhul"] = {
-["VERSION"] = 111,
+["Filter"] = 63,
 ["FilterType"] = {
 },
 ["Quests"] = {
 },
-["Filter"] = 63,
+["VERSION"] = 111,
 },
 ["HideLegion"] = true,
 }

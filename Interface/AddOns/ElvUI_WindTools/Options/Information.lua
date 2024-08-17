@@ -239,6 +239,16 @@ options.help = {
                     order = 13,
                     type = "description",
                     name = "mattiagraziani-it"
+                },
+                ["ylt"] = {
+                    order = 14,
+                    type = "description",
+                    name = format(
+                        "%s: %s | %s",
+                        "ylt",
+                        E.InfoColor .. "Joe" .. "|r",
+                        F.CreateClassColorString("Shaype @ " .. "Draenor" .. " (EU)", "DRUID")
+                    )
                 }
             }
         },

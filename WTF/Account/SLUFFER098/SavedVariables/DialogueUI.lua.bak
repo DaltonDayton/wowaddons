@@ -26,15 +26,15 @@ DialogueUI_DB = {
 ["Tutorial_OpenSettings"] = true,
 ["TTSAutoPlay"] = false,
 ["PrimaryControlKey"] = 1,
-["installTime"] = 1723280000,
-["SimplifyCurrencyReward"] = false,
+["QuestItemDisplayHideSeen"] = false,
+["TTSAutoStop"] = true,
 ["ScrollDownThenAcceptQuest"] = true,
 ["ForceGossip"] = true,
 ["TooltipShowItemComparison"] = true,
 ["NameplateDialogEnabled"] = false,
 ["ShowNPCNameOnPage"] = false,
-["TTSAutoStop"] = true,
-["QuestItemDisplayHideSeen"] = false,
+["SimplifyCurrencyReward"] = false,
+["installTime"] = 1723280000,
 }
 DialogueUI_Saves = {
 ["QuestItems"] = {
@@ -42,9 +42,9 @@ DialogueUI_Saves = {
 [202163] = true,
 [202395] = true,
 [200506] = true,
-[200677] = true,
-[206598] = true,
-[210050] = true,
 [206353] = true,
+[206598] = true,
+[200677] = true,
+[210050] = true,
 },
 }

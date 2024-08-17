@@ -4,12 +4,13 @@
 --    All Rights Reserved - Detailed license information included with addon.     --
 -- ------------------------------------------------------------------------------ --
 
-local TSM = select(2, ...) ---@type TSM
-local ErrorManager = TSM.Init("Service.ErrorManager")
-local ErrorHandler = TSM.LibTSMService:Include("Debug.ErrorHandler")
-local ErrorFrame = TSM.LibTSMUI:IncludeClassType("ErrorFrame")
+local LibTSMApp = select(2, ...).LibTSMApp
+local ErrorConfig = LibTSMApp:Init("Config.ErrorConfig")
+local SlashCommands = LibTSMApp:Include("Service.SlashCommands")
+local ErrorHandler = LibTSMApp:From("LibTSMService"):Include("Debug.ErrorHandler")
+local ErrorFrame = LibTSMApp:From("LibTSMUI"):IncludeClassType("ErrorFrame")
 local private = {
-	errorFrame = nil
+	errorFrame = nil,
 }
 
 
@@ -18,8 +19,9 @@ local private = {
 -- Module Functions
 -- ============================================================================
 
-ErrorManager:OnModuleLoad(function()
+ErrorConfig:OnModuleLoad(function()
 	ErrorHandler.ConfigureUI(private.ShowUI, private.HideUI)
+	SlashCommands.RegisterDebug("error", ErrorHandler.ShowManual)
 end)
 
 

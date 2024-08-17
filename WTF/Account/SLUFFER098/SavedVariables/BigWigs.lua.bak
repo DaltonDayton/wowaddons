@@ -3,7 +3,7 @@ BigWigs3DB = {
 ["namespaces"] = {
 ["BigWigs_Plugins_AltPower"] = {
 },
-["BigWigs_Plugins_Wipe"] = {
+["BigWigs_Plugins_Raid Icons"] = {
 },
 ["BigWigs_Plugins_Colors"] = {
 ["profiles"] = {
@@ -29,7 +29,7 @@ BigWigs3DB = {
 },
 },
 },
-["BigWigs_Plugins_Raid Icons"] = {
+["BigWigs_Plugins_Wipe"] = {
 },
 ["LibDualSpec-1.0"] = {
 },
@@ -51,9 +51,9 @@ BigWigs3DB = {
 ["normalHeight"] = 26,
 ["alignText"] = "RIGHT",
 ["fontSize"] = 16,
-["spacing"] = 5,
+["fontName"] = "- M 700",
 ["visibleBarLimitEmph"] = 4,
-["emphasizeTime"] = 10,
+["texture"] = "- Tx Left",
 ["expPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -61,8 +61,8 @@ nil,
 130,
 "ElvUF_Target",
 },
-["texture"] = "- Tx Left",
-["fontName"] = "- M 700",
+["emphasizeTime"] = 10,
+["spacing"] = 5,
 ["normalPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -75,9 +75,15 @@ nil,
 },
 ["BigWigs_Plugins_Victory"] = {
 },
-["BigWigs_Plugins_InfoBox"] = {
+["BigWigs_Plugins_BossBlock"] = {
 },
 ["BigWigs_Plugins_Sounds"] = {
+},
+["BigWigs_Plugins_Proximity"] = {
+},
+["BigWigs_Plugins_AutoReply"] = {
+},
+["BigWigs_Plugins_Statistics"] = {
 },
 ["BigWigs_Plugins_Messages"] = {
 ["profiles"] = {
@@ -104,13 +110,7 @@ nil,
 },
 },
 },
-["BigWigs_Plugins_Statistics"] = {
-},
-["BigWigs_Plugins_AutoReply"] = {
-},
-["BigWigs_Plugins_Proximity"] = {
-},
-["BigWigs_Plugins_BossBlock"] = {
+["BigWigs_Plugins_InfoBox"] = {
 },
 ["BigWigs_Plugins_Pull"] = {
 },

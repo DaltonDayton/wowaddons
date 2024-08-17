@@ -5,8 +5,8 @@
 -- ------------------------------------------------------------------------------ --
 
 local LibTSMApp = select(2, ...).LibTSMApp
-local AddonSettings = LibTSMApp:Init("Lib.AddonSettings")
 local L = LibTSMApp.Locale.GetTable()
+local AddonSettings = LibTSMApp:Init("Service.AddonSettings")
 local SessionInfo = LibTSMApp:From("LibTSMWoW"):Include("Util.SessionInfo")
 local StaticPopupDialog = LibTSMApp:From("LibTSMWoW"):IncludeClassType("StaticPopupDialog")
 local Settings = LibTSMApp:From("LibTSMTypes"):Include("Settings")

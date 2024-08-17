@@ -4,10 +4,11 @@
 --    All Rights Reserved - Detailed license information included with addon.     --
 -- ------------------------------------------------------------------------------ --
 
-local TSM = select(2, ...) ---@type TSM
-local DBViewer = TSM.UI:NewPackage("DBViewer")
-local Database = TSM.LibTSMUtil:Include("Database")
-local UIElements = TSM.LibTSMUI:Include("Util.UIElements")
+local LibTSMDev = select(2, ...).LibTSMDev
+local DBViewer = LibTSMDev:Init("DBViewer")
+local SlashCommands = LibTSMDev:Include("Service.SlashCommands")
+local UIElements = LibTSMDev:From("LibTSMUI"):Include("Util.UIElements")
+local Database = LibTSMDev:From("LibTSMUtil"):Include("Database")
 local private = {
 	frame = nil,
 	frameContext = {},
@@ -32,15 +33,25 @@ local DEFAULT_DIVIDED_CONTAINER_CONTEXT = {
 
 
 -- ============================================================================
--- Module Functions
+-- Module Loading
 -- ============================================================================
 
-function DBViewer.OnDisable()
+DBViewer:OnModuleLoad(function()
+	SlashCommands.RegisterDebug("db", DBViewer.Toggle)
+end)
+
+DBViewer:OnModuleUnload(function()
 	-- Hide the frame
 	if private.frame then
 		DBViewer.Toggle()
 	end
-end
+end)
+
+
+
+-- ============================================================================
+-- Module Functions
+-- ============================================================================
 
 function DBViewer.Toggle()
 	if not private.frame then

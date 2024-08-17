@@ -4,16 +4,17 @@
 --    All Rights Reserved - Detailed license information included with addon.     --
 -- ------------------------------------------------------------------------------ --
 
-local TSM = select(2, ...) ---@type TSM
-local AltTracking = TSM.Init("Service.AltTracking") ---@class Service.AltTracking: Module
-local Database = TSM.LibTSMUtil:Include("Database")
-local TempTable = TSM.LibTSMUtil:Include("BaseType.TempTable")
-local ItemString = TSM.LibTSMTypes:Include("Item.ItemString")
-local Vararg = TSM.LibTSMUtil:Include("Lua.Vararg")
-local SessionInfo = TSM.LibTSMWoW:Include("Util.SessionInfo")
-local Table = TSM.LibTSMUtil:Include("Lua.Table")
-local Sync = TSM.LibTSMService:Include("Sync")
-local PlayerInfo = TSM.Include("Service.PlayerInfo")
+local LibTSMApp = select(2, ...).LibTSMApp
+local AltTracking = LibTSMApp:Init("Service.AltTracking")
+local AddonSettings = LibTSMApp:Include("Service.AddonSettings")
+local PlayerInfo = LibTSMApp:Include("Service.PlayerInfo")
+local ItemString = LibTSMApp:From("LibTSMTypes"):Include("Item.ItemString")
+local SessionInfo = LibTSMApp:From("LibTSMWoW"):Include("Util.SessionInfo")
+local Sync = LibTSMApp:From("LibTSMService"):Include("Sync")
+local TempTable = LibTSMApp:From("LibTSMUtil"):Include("BaseType.TempTable")
+local Database = LibTSMApp:From("LibTSMUtil"):Include("Database")
+local Table = LibTSMApp:From("LibTSMUtil"):Include("Lua.Table")
+local Vararg = LibTSMApp:From("LibTSMUtil"):Include("Lua.Vararg")
 local private = {
 	settings = nil,
 	quantityDB = nil,
@@ -36,18 +37,7 @@ local MIRROR_SETTING_KEYS = {
 -- Module Loading
 -- ============================================================================
 
-AltTracking:OnSettingsLoad(function(db)
-	private.settings = db:NewView()
-		:AddKey("factionrealm", "internalData", "pendingMail")
-		:AddKey("factionrealm", "internalData", "guildVaults")
-		:AddKey("factionrealm", "coreOptions", "ignoreGuilds")
-		:AddKey("sync", "internalData", "bagQuantity")
-		:AddKey("sync", "internalData", "bankQuantity")
-		:AddKey("sync", "internalData", "reagentBankQuantity")
-		:AddKey("sync", "internalData", "auctionQuantity")
-		:AddKey("sync", "internalData", "mailQuantity")
-		:AddKey("global", "coreOptions", "regionWide")
-
+AltTracking:OnModuleLoad(function()
 	private.quantityDB = Database.NewSchema("INVENTORY_ALT_QUANTITY")
 		:AddUniqueStringField("levelItemString")
 		:AddNumberField("total")
@@ -59,11 +49,24 @@ AltTracking:OnSettingsLoad(function(db)
 	private.baseItemQuantityQuery = private.quantityDB:NewQuery()
 		:Equal("baseItemString", Database.BoundQueryParam())
 
-	private.UpdateDB()
-	Sync.RegisterMirrorCallback(function(settingKey)
-		if MIRROR_SETTING_KEYS[settingKey] then
-			private.UpdateDB()
-		end
+	AddonSettings.RegisterOnLoad("Service.AltTracking", function(db)
+		private.settings = db:NewView()
+			:AddKey("factionrealm", "internalData", "pendingMail")
+			:AddKey("factionrealm", "internalData", "guildVaults")
+			:AddKey("factionrealm", "coreOptions", "ignoreGuilds")
+			:AddKey("sync", "internalData", "bagQuantity")
+			:AddKey("sync", "internalData", "bankQuantity")
+			:AddKey("sync", "internalData", "reagentBankQuantity")
+			:AddKey("sync", "internalData", "auctionQuantity")
+			:AddKey("sync", "internalData", "mailQuantity")
+			:AddKey("global", "coreOptions", "regionWide")
+
+		private.UpdateDB()
+		Sync.RegisterMirrorCallback(function(settingKey)
+			if MIRROR_SETTING_KEYS[settingKey] then
+				private.UpdateDB()
+			end
+		end)
 	end)
 end)
 

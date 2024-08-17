@@ -4,20 +4,23 @@
 --    All Rights Reserved - Detailed license information included with addon.     --
 -- ------------------------------------------------------------------------------ --
 
-local TSM = select(2, ...) ---@type TSM
-local AppHelper = TSM:NewPackage("AppHelper") ---@type AddonPackage
-local ClientInfo = TSM.LibTSMWoW:Include("Util.ClientInfo")
-local L = TSM.Locale.GetTable()
-local RealmData = TSM.LibTSMData:Include("Realm")
-local StaticPopupDialog = TSM.LibTSMWoW:IncludeClassType("StaticPopupDialog")
-local Addon = TSM.LibTSMWoW:Include("API.Addon")
-local SessionInfo = TSM.LibTSMWoW:Include("Util.SessionInfo")
-local Log = TSM.LibTSMUtil:Include("Util.Log")
-local Hash = TSM.LibTSMUtil:Include("Util.Hash")
-local Analytics = TSM.LibTSMUtil:Include("Util.Analytics")
-local Auction = TSM.LibTSMService:Include("Auction")
-local AuctionHouseWrapper = TSM.LibTSMWoW:Include("API.AuctionHouseWrapper")
-local ErrorHandler = TSM.LibTSMService:Include("Debug.ErrorHandler")
+local LibTSMApp = select(2, ...).LibTSMApp
+local L = LibTSMApp.Locale.GetTable()
+local AppHelper = LibTSMApp:Init("Service.AppHelper")
+local AddonSettings = LibTSMApp:Include("Service.AddonSettings")
+local Addon = LibTSMApp:From("LibTSMWoW"):Include("API.Addon")
+local AuctionHouseWrapper = LibTSMApp:From("LibTSMWoW"):Include("API.AuctionHouseWrapper")
+local StaticPopupDialog = LibTSMApp:From("LibTSMWoW"):IncludeClassType("StaticPopupDialog")
+local ClientInfo = LibTSMApp:From("LibTSMWoW"):Include("Util.ClientInfo")
+local Lifecycle = LibTSMApp:From("LibTSMWoW"):Include("Util.Lifecycle")
+local SessionInfo = LibTSMApp:From("LibTSMWoW"):Include("Util.SessionInfo")
+local Auction = LibTSMApp:From("LibTSMService"):Include("Auction")
+local ErrorHandler = LibTSMApp:From("LibTSMService"):Include("Debug.ErrorHandler")
+local RealmData = LibTSMApp:From("LibTSMData"):Include("Realm")
+local Log = LibTSMApp:From("LibTSMUtil"):Include("Util.Log")
+local Hash = LibTSMApp:From("LibTSMUtil"):Include("Util.Hash")
+local Analytics = LibTSMApp:From("LibTSMUtil"):Include("Util.Analytics")
+local Table = LibTSMApp:From("LibTSMUtil"):Include("Lua.Table")
 local LibRealmInfo = LibStub("LibRealmInfo")
 local private = {
 	settings = nil,
@@ -124,70 +127,133 @@ end
 
 
 -- ============================================================================
+-- Module Loading
+-- ============================================================================
+
+AppHelper:OnModuleLoad(function()
+	AddonSettings.RegisterOnLoad("Service.AppHelper", function(settingsDB)
+		private.settings = settingsDB:NewView()
+			:AddKey("global", "internalData", "appMessageId")
+			:AddKey("global", "internalData", "lastCharacter")
+			:AddKey("realm", "coreOptions", "auctionDBAltRealm")
+		-- Set the last character we logged into for display in the app
+		private.settings.lastCharacter = SessionInfo.GetCharacterName().." - "..SessionInfo.GetRealmName()
+
+		local cVar = SessionInfo.GetRegion()
+		local region = nil
+		if ClientInfo.IsRetail() then
+			region = LibRealmInfo:GetCurrentRegion()
+		else
+			local currentRealmName = private.SanitizedRealmName(SessionInfo.GetRealmName())
+			local realmInfo = RealmData.Classic[currentRealmName]
+			region = realmInfo and realmInfo.region
+		end
+		region = region or (cVar ~= "public-test" and cVar) or "PTR"
+		if ClientInfo.IsRetail() then
+			private.addonRegion = region
+			private.appDataRegion = region
+		elseif ClientInfo.IsVanillaClassic() and SessionInfo.IsHardcore() then
+			private.addonRegion = region.."-HC"
+			private.appDataRegion = "HC-"..region
+		elseif ClientInfo.IsVanillaClassic() and SessionInfo.IsSeasonOfDiscovery() then
+			private.addonRegion = region.."-SoD"
+			private.appDataRegion = "SoD-"..region
+		elseif ClientInfo.IsVanillaClassic() then
+			private.addonRegion = region.."-Classic"
+			private.appDataRegion = "Classic-"..region
+		elseif ClientInfo.IsCataClassic() then
+			private.addonRegion = region.."-BCC"
+			private.appDataRegion = "BCC-"..region
+		else
+			error("Invalid game version")
+		end
+		AuctionHouseWrapper.SetAnalyticsRegionRealm(private.addonRegion.."-"..private.SanitizedRealmName(SessionInfo.GetRealmName()))
+		Lifecycle.RegisterCallback(private.HandleLogin, Lifecycle.EVENT.LOGIN)
+	end)
+end)
+
+AppHelper:OnModuleUnload(function()
+	local startTime = LibTSMApp.GetTime()
+	private.SaveAppData()
+	local timeTaken = LibTSMApp.GetTime() - startTime
+	if timeTaken > LOGOUT_TIME_WARNING_THRESHOLD then
+		Log.Warn("private.SaveAppData took %0.5fs", timeTaken)
+	end
+end, true)
+
+
+
+-- ============================================================================
 -- Module Functions
 -- ============================================================================
 
-function AppHelper.OnInitialize(settingsDB)
-	private.settings = settingsDB:NewView()
-		:AddKey("global", "internalData", "appMessageId")
-		:AddKey("global", "internalData", "lastCharacter")
-		:AddKey("realm", "coreOptions", "auctionDBAltRealm")
-	-- Set the last character we logged into for display in the app
-	private.settings.lastCharacter = UnitName("player").." - "..GetRealmName()
-
-	local cVar = GetCVar("Portal")
-	local region = nil
-	if ClientInfo.IsRetail() then
-		region = LibRealmInfo:GetCurrentRegion()
-	else
-		local currentRealmName = private.SanitizedRealmName(SessionInfo.GetRealmName())
-		local realmInfo = RealmData.Classic[currentRealmName]
-		region = realmInfo and realmInfo.region
-	end
-	region = region or (cVar ~= "public-test" and cVar) or "PTR"
-	if ClientInfo.IsRetail() then
-		private.addonRegion = region
-		private.appDataRegion = region
-	elseif ClientInfo.IsVanillaClassic() then
-		if C_Seasons.HasActiveSeason() and C_Seasons.GetActiveSeason() == Enum.SeasonID.Hardcore then
-			private.addonRegion = region.."-HC"
-			private.appDataRegion = "HC-"..region
-		elseif C_Seasons.HasActiveSeason() and C_Seasons.GetActiveSeason() == 2 then -- Boo Blizzard
-			private.addonRegion = region.."-SoD"
-			private.appDataRegion = "SoD-"..region
-		else
-			private.addonRegion = region.."-Classic"
-			private.appDataRegion = "Classic-"..region
-		end
-	elseif ClientInfo.IsCataClassic() then
-		private.addonRegion = region.."-BCC"
-		private.appDataRegion = "BCC-"..region
-	else
-		error("Invalid game version")
-	end
-	AuctionHouseWrapper.SetAnalyticsRegionRealm(private.addonRegion.."-"..private.SanitizedRealmName(SessionInfo.GetRealmName()))
+---Gets the last sync time.
+---@return number?
+function AppHelper.GetLastSync()
+	return private.appInfo and private.appInfo.lastSync or 0
 end
 
-function AppHelper.OnEnable()
-	TSM_APPHELPER_LOAD_DATA = nil
+---Gets the news data.
+---@return table?
+function AppHelper.GetNews()
+	return private.appInfo and private.appInfo.news or nil
+end
+
+---Gets the current region.
+---@return string
+function AppHelper.GetRegion()
+	return private.addonRegion
+end
+
+---Gets the AuctionDB data.
+---@return table realm
+---@return table region
+---@return table commodity
+---@return table altRealm
+function AppHelper.GetAuctionDBData()
+	return private.auctionDBData.realm, private.auctionDBData.region, private.auctionDBData.commodity, private.auctionDBData.altRealm
+end
+
+---Gets the shopping data.
+---@return string?
+function AppHelper.GetShoppingData()
+	return private.shoppingData
+end
+
+---Iterates over the alt realm names.
+---@return fun(): string @Iterator with fields: `realm`
+function AppHelper.AltRealmIterator()
+	return Table.KeyIterator(private.altRealms)
+end
+
+
+
+-- ============================================================================
+-- Private Helper Functions
+-- ============================================================================
+
+function private.HandleLogin()
+	TSM_APPHELPER_LOAD_DATA = function(tag)
+		Log.Err("Got late app data: %s", tag)
+	end
 
 	if not Addon.IsInstalled("TradeSkillMaster_AppHelper") then
-		return
+		return true
 	elseif not Addon.IsEnabled("TradeSkillMaster_AppHelper") then
 		-- TSM_AppHelper is disabled
 		StaticPopupDialog.New()
 			:SetText(L["The TradeSkillMaster_AppHelper addon is installed, but not enabled. TSM has enabled it and requires a reload."])
 			:SetAcceptButtonText(L["Reload"])
 			:SetScript("OnAccept", function()
-				C_AddOns.EnableAddOn("TradeSkillMaster_AppHelper")
+				Addon.Enable("TradeSkillMaster_AppHelper")
 				ReloadUI()
 			end)
 			:Show()
-		return
+		return true
 	elseif not private.appInfo or not private.appInfo.lastSync then
 		-- The app hasn't run yet or isn't pointing at the right WoW directory
 		StaticPopupDialog.ShowWithOk(L["TSM is missing important information from the TSM Desktop Application. Please ensure the TSM Desktop Application is running and is properly configured."])
-		return
+		return true
 	end
 
 	if private.appInfo.message.msg and private.appInfo.message.id > private.settings.appMessageId then
@@ -196,51 +262,12 @@ function AppHelper.OnEnable()
 		StaticPopupDialog.ShowWithOk(private.appInfo.message.msg)
 	end
 
-	if time() - private.appInfo.lastSync > 60 * 60 then
+	if LibTSMApp.GetTime() - private.appInfo.lastSync > 60 * 60 then
 		-- The app hasn't been running for over an hour
 		StaticPopupDialog.ShowWithOk(L["TSM is missing important information from the TSM Desktop Application. Please ensure the TSM Desktop Application is running and is properly configured."])
 	end
+	return true
 end
-
-function AppHelper.OnDisableLate()
-	-- Erroring here would cause the profile to be reset, so use pcall
-	local startTime = GetTimePreciseSec()
-	private.SaveAppData()
-	local timeTaken = GetTimePreciseSec() - startTime
-	if timeTaken > LOGOUT_TIME_WARNING_THRESHOLD then
-		Log.Warn("private.SaveAppData took %0.5fs", timeTaken)
-	end
-end
-
-function AppHelper.GetLastSync()
-	return private.appInfo and private.appInfo.lastSync or nil
-end
-
-function AppHelper.GetNews()
-	return private.appInfo and private.appInfo.news or nil
-end
-
-function AppHelper.GetRegion()
-	return private.addonRegion
-end
-
-function AppHelper.GetAuctionDBData()
-	return private.auctionDBData.realm, private.auctionDBData.region, private.auctionDBData.commodity, private.auctionDBData.altRealm
-end
-
-function AppHelper.GetShoppingData()
-	return private.shoppingData
-end
-
-function AppHelper.GetAltRealms()
-	return private.altRealms
-end
-
-
-
--- ============================================================================
--- Private Helper Functions
--- ============================================================================
 
 function private.StoreAuctionDBData(tbl, tag, data, label)
 	if tbl[tag] then
@@ -284,7 +311,7 @@ function private.SaveAppData()
 end
 
 function private.SaveBlackMarket(appDB)
-	local realmName = GetRealmName()
+	local realmName = SessionInfo.GetRealmName()
 	appDB.blackMarket = appDB.blackMarket or {}
 	local blackMarketData, blackMarketTime = Auction.GetBlackMarketScanData()
 	if blackMarketData then
@@ -301,7 +328,7 @@ function private.SaveAnalytics(appDB)
 	appDB.analytics.updateTime = Analytics.GetLastEventTime() or appDB.analytics.updateTime
 
 	-- Remove entries which are too old
-	local minTime = time() - MAX_ANALYTICS_AGE
+	local minTime = LibTSMApp.GetTime() - MAX_ANALYTICS_AGE
 	for i = #appDB.analytics.data, 1, -1 do
 		if Analytics.GetEntryTime(appDB.analytics.data[i]) < minTime then
 			tremove(appDB.analytics.data, i)

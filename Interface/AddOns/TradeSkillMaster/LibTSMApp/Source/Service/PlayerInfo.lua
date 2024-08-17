@@ -4,13 +4,16 @@
 --    All Rights Reserved - Detailed license information included with addon.     --
 -- ------------------------------------------------------------------------------ --
 
-local TSM = select(2, ...) ---@type TSM
-local PlayerInfo = TSM.Init("Service.PlayerInfo") ---@class Service.PlayerInfo: Module
-local String = TSM.LibTSMUtil:Include("Lua.String")
-local TempTable = TSM.LibTSMUtil:Include("BaseType.TempTable")
-local Table = TSM.LibTSMUtil:Include("Lua.Table")
-local SessionInfo = TSM.LibTSMWoW:Include("Util.SessionInfo")
-local Guild = TSM.LibTSMService:Include("Guild")
+local LibTSMApp = select(2, ...).LibTSMApp
+local PlayerInfo = LibTSMApp:Init("Service.PlayerInfo")
+local AddonSettings = LibTSMApp:Include("Service.AddonSettings")
+local CharacterInfo = LibTSMApp:From("LibTSMWoW"):Include("Util.CharacterInfo")
+local ClientInfo = LibTSMApp:From("LibTSMWoW"):Include("Util.ClientInfo")
+local SessionInfo = LibTSMApp:From("LibTSMWoW"):Include("Util.SessionInfo")
+local Guild = LibTSMApp:From("LibTSMService"):Include("Guild")
+local TempTable = LibTSMApp:From("LibTSMUtil"):Include("BaseType.TempTable")
+local String = LibTSMApp:From("LibTSMUtil"):Include("Lua.String")
+local Table = LibTSMApp:From("LibTSMUtil"):Include("Lua.Table")
 local private = {
 	settingsDB = nil,
 	settings = nil,
@@ -31,15 +34,17 @@ local PLAYER_REALM_LOWER = PLAYER_LOWER.." - "..REALM_LOWER
 -- Module Loading
 -- ============================================================================
 
-PlayerInfo:OnSettingsLoad(function(db)
-	private.settingsDB = db
-	private.settings = db:NewView()
-		:AddKey("factionrealm", "internalData", "guildVaults")
-		:AddKey("factionrealm", "coreOptions", "ignoreGuilds")
-		:AddKey("factionrealm", "internalData", "characterGuilds")
-		:AddKey("sync", "internalData", "classKey")
-		:AddKey("global", "coreOptions", "regionWide")
+PlayerInfo:OnModuleLoad(function()
 	Guild.RegisterNameCallback(private.HandleGuildNameChange)
+	AddonSettings.RegisterOnLoad("Service.PlayerInfo", function(db)
+		private.settingsDB = db
+		private.settings = db:NewView()
+			:AddKey("factionrealm", "internalData", "guildVaults")
+			:AddKey("factionrealm", "coreOptions", "ignoreGuilds")
+			:AddKey("factionrealm", "internalData", "characterGuilds")
+			:AddKey("sync", "internalData", "classKey")
+			:AddKey("global", "coreOptions", "regionWide")
+	end)
 end)
 
 
@@ -49,13 +54,13 @@ end)
 -- ============================================================================
 
 ---Return all connected realm alt characters as a table.
----@return table
+---@return string[]
 function PlayerInfo.GetConnectedAlts()
 	wipe(private.connectedAlts)
 	for _, factionrealm in private.settingsDB:AccessibleRealmIterator("factionrealm", not private.settings.regionWide) do
 		for _, character in private.settingsDB:AccessibleCharacterIterator(nil, factionrealm) do
 			local realm = gsub(strmatch(factionrealm, "^[^%-]+ %- (.+)$"), "%-", "")
-			character = Ambiguate(gsub(character.."-"..realm, " ", ""), "none")
+			character = CharacterInfo.Ambiguate(gsub(character.."-"..realm, " ", ""), "none")
 			if character ~= SessionInfo.GetCharacterName() then
 				tinsert(private.connectedAlts, character)
 			end
@@ -67,7 +72,7 @@ end
 
 ---Iterate over all characters which are accessible.
 ---@param currentAccountOnly boolean If true, will only include the current account
----@return fun():number, string, string @An iterator with the following fields: `index, character, factionrealm`
+---@return fun(): number, string, string @An iterator with the following fields: `index`, `character`, `factionrealm`
 function PlayerInfo.CharacterIterator(currentAccountOnly)
 	local result = TempTable.Acquire()
 	for _, _, character, factionrealm in private.settings:AccessibleValueIterator("classKey") do
@@ -80,7 +85,7 @@ end
 
 ---Iterate over all the guilds which are accessible.
 ---@param includeIgnored boolean Include ignored guilds
----@return fun():number, string, string @An iterator with the following fields: `index, guildName, factionrealm`
+---@return fun(): number, string, string @An iterator with the following fields: `index`, `guildName`, `factionrealm`
 function PlayerInfo.GuildIterator(includeIgnored)
 	local result = TempTable.Acquire()
 	for _, guildVaults, factionrealm in private.settings:AccessibleValueIterator("guildVaults") do
@@ -96,7 +101,7 @@ end
 
 ---Get the player's guild.
 ---@param player string The name of the player
----@return string? @The name of the player's guilde or nil if it's not in one
+---@return string?
 function PlayerInfo.GetPlayerGuild(character, factionrealm)
 	return private.settings:GetForScopeKey("characterGuilds", factionrealm)[character]
 end
@@ -109,9 +114,9 @@ end
 ---@return boolean
 function PlayerInfo.IsPlayer(target, includeAlts, includeOtherFaction, includeOtherAccounts)
 	local cacheKey = strjoin("%", target, includeAlts and "1" or "0", includeOtherFaction and "1" or "0", includeOtherAccounts and "1" or "0")
-	if private.isPlayerCache.lastUpdate ~= GetTime() then
+	if private.isPlayerCache.lastUpdate ~= ClientInfo.GetFrameNumber() then
 		wipe(private.isPlayerCache)
-		private.isPlayerCache.lastUpdate = GetTime()
+		private.isPlayerCache.lastUpdate = ClientInfo.GetFrameNumber()
 	end
 	if private.isPlayerCache[cacheKey] == nil then
 		private.isPlayerCache[cacheKey] = private.IsPlayerHelper(target, includeAlts, includeOtherFaction, includeOtherAccounts)
@@ -123,9 +128,9 @@ end
 ---@param ownerStr string The auction owner string
 ---@return boolean
 function PlayerInfo.AuctionOwnerIsPlayer(ownerStr)
-	if private.auctionIsPlayerCache.lastUpdate - GetTime() > 60 then
+	if private.auctionIsPlayerCache.lastUpdate - LibTSMApp.GetTime() > 60 then
 		wipe(private.auctionIsPlayerCache)
-		private.auctionIsPlayerCache.lastUpdate = GetTime()
+		private.auctionIsPlayerCache.lastUpdate = LibTSMApp.GetTime()
 	end
 	if private.auctionIsPlayerCache[ownerStr] == nil then
 		private.auctionIsPlayerCache[ownerStr] = false
