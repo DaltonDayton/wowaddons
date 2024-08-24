@@ -1,0 +1,46 @@
+
+WarpDepleteDB = {
+["global"] = {
+["mdtAlertShown"] = true,
+},
+["profileKeys"] = {
+["Xavaat - Ner'zhul"] = "ToxiUI",
+["Faelaena - Ner'zhul"] = "ToxiUI",
+["Xamuul - Ner'zhul"] = "ToxiUI",
+["Xambank - Ner'zhul"] = "Default",
+},
+["profiles"] = {
+["Default"] = {
+},
+["ToxiUI"] = {
+["objectivesFontSize"] = 16,
+["bar2Font"] = "- ToxiUI",
+["deathsColor"] = "ffff0064",
+["barPadding"] = 4,
+["frameX"] = -5,
+["completedObjectivesColor"] = "ff00ff9e",
+["timerFont"] = "- M 900",
+["bar3Font"] = "- ToxiUI",
+["bar1Texture"] = "- Tx Left",
+["bar3TextureColor"] = "ff00e5f6",
+["objectivesFont"] = "- ToxiUI",
+["keyDetailsColor"] = "ff61c2ff",
+["keyDetailsFont"] = "- ToxiUI",
+["alignBossClear"] = "end",
+["deathsFont"] = "- ToxiUI",
+["forcesTexture"] = "- Tx Left",
+["forcesOverlayTexture"] = "- Tx Left",
+["timingsImprovedTimeColor"] = "ff00e5f6",
+["bar3Texture"] = "- Tx Left",
+["bar1Font"] = "- ToxiUI",
+["bar2TextureColor"] = "ff00e5f6",
+["keyColor"] = "ffffb35f",
+["forcesTextureColor"] = "ffbc9f23",
+["bar2Texture"] = "- Tx Left",
+["bar1TextureColor"] = "ff00e5f6",
+["frameY"] = 288,
+["forcesFont"] = "- ToxiUI",
+["keyFont"] = "- M 900",
+},
+},
+}

@@ -1,7 +1,10 @@
 
 Details_StreamerDB = {
 ["characters"] = {
+["Xavaat - Ner'zhul"] = "Xamuul - Ner'zhul",
+["Faelaena - Ner'zhul"] = "Xamuul - Ner'zhul",
 ["Xamuul - Ner'zhul"] = "Xamuul - Ner'zhul",
+["Xambank - Ner'zhul"] = "Xamuul - Ner'zhul",
 },
 ["profiles"] = {
 ["Xamuul - Ner'zhul"] = {
@@ -58,8 +61,8 @@ Details_StreamerDB = {
 ["point"] = "CENTER",
 ["scale"] = 1,
 ["font_shadow"] = true,
-["y"] = -0.000244140625,
-["x"] = -0.00048828125,
+["y"] = -0.00018310546875,
+["x"] = -0.00042724609375,
 ["size"] = 32,
 ["update_speed"] = 0.05,
 ["attribute_type"] = 1,

@@ -25,3 +25,4 @@ BigWigs_Plugins: enabled
 WeakAurasCompanion: enabled
 WeakAurasArchive: enabled
 Blizzard_CombatText: enabled
+LittleWigs: enabled

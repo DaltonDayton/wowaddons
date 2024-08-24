@@ -6,4 +6,12 @@ NarcissusDB_PC = {
 },
 }
 NarciStatisticsDB_PC = {
+["Barbershop"] = {
+["Locations"] = {
+[2339] = {
+["visit"] = 1,
+["time"] = 16,
+},
+},
+},
 }
