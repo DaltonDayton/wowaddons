@@ -15,7 +15,6 @@ local GetBuybackItemLink = GetBuybackItemLink
 local GetCurrentGuildBankTab = GetCurrentGuildBankTab
 local GetGuildBankItemInfo = GetGuildBankItemInfo
 local GetGuildBankItemLink = GetGuildBankItemLink
-local GetItemInfo = GetItemInfo
 local GetMerchantItemInfo = GetMerchantItemInfo
 local GetMerchantItemLink = GetMerchantItemLink
 local GetMerchantNumItems = GetMerchantNumItems
@@ -24,6 +23,7 @@ local SetItemButtonDesaturated = SetItemButtonDesaturated
 local SetItemButtonTextureVertexColor = SetItemButtonTextureVertexColor
 
 local C_AddOns_IsAddOnLoaded = C_AddOns.IsAddOnLoaded
+local C_Item_GetItemInfo = C_Item.GetItemInfo
 local C_PetJournal_GetNumCollectedInfo = C_PetJournal.GetNumCollectedInfo
 local C_TooltipInfo_GetGuildBankItem = C_TooltipInfo.GetGuildBankItem
 local C_TooltipInfo_GetHyperlink = C_TooltipInfo.GetHyperlink
@@ -40,7 +40,7 @@ local knowables = {
 	[Enum.ItemClass.Consumable] = true,
 	[Enum.ItemClass.Recipe] = true,
 	[Enum.ItemClass.Miscellaneous] = true,
-	[Enum.ItemClass.ItemEnhancement] = true
+	[Enum.ItemClass.ItemEnhancement] = true,
 }
 local knowns = {}
 
@@ -65,7 +65,7 @@ local function IsAlreadyKnown(link, index)
 	if linkType == "battlepet" then
 		return isPetCollected(linkID)
 	elseif linkType == "item" then
-		local name, _, _, level, _, _, _, _, _, _, _, itemClassID = GetItemInfo(link)
+		local name, _, _, level, _, _, _, _, _, _, _, itemClassID = C_Item_GetItemInfo(link)
 		if not name then
 			return
 		end
@@ -122,7 +122,7 @@ function AK:Merchant()
 				else
 					local r, g, b = self.db.color.r, self.db.color.g, self.db.color.b
 					if numAvailable == 0 then
-						r, g, b = r * .5, g * .5, b * .5
+						r, g, b = r * 0.5, g * 0.5, b * 0.5
 					end
 					SetItemButtonTextureVertexColor(itemButton, 0.9 * r, 0.9 * g, 0.9 * b)
 				end

@@ -1,7 +1,9 @@
 # LittleWigs
 
-## [v11.0.12](https://github.com/BigWigsMods/LittleWigs/tree/v11.0.12) (2024-08-16)
-[Full Changelog](https://github.com/BigWigsMods/LittleWigs/compare/v11.0.11...v11.0.12) [Previous Releases](https://github.com/BigWigsMods/LittleWigs/releases)
+## [v11.0.17](https://github.com/BigWigsMods/LittleWigs/tree/v11.0.17) (2024-08-24)
+[Full Changelog](https://github.com/BigWigsMods/LittleWigs/compare/v11.0.16...v11.0.17) [Previous Releases](https://github.com/BigWigsMods/LittleWigs/releases)
 
-- Classic/DemonFallCanyon/DiathorusTheSeeker: Broken ENCOUNTER event is now fixed  
-- Cataclysm/ZulGurub/Venoxis: Broken ENCOUNTER event is now fixed  
+- Update deDE (#1132)  
+- Bump min version for retail  
+- Use `:GetWidgetInfo()` where appropriate  
+- Update deDE (#1131)  

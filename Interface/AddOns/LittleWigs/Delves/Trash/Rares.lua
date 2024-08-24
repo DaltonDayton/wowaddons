@@ -1,4 +1,3 @@
-if not BigWigsLoader.isBeta then return end
 --------------------------------------------------------------------------------
 -- Module Declaration
 --
@@ -109,7 +108,7 @@ function mod:OnBossEnable()
 	-- Reno Jackson
 	self:Log("SPELL_CAST_START", "SkullCracker", 398749)
 	self:Log("SPELL_CAST_START", "SpikeTraps", 400335)
-	self:Log("SPELL_CREATE", "SupplyBag", 447392) -- Reno Jackson defeated
+	self:Log("SPELL_CAST_SUCCESS", "SupplyBag", 447392) -- Reno Jackson defeated
 
 	-- Sir Finley Mrgglton (pulls with Reno Jackson)
 	self:Log("SPELL_CAST_START", "Consecration", 461741)
@@ -152,7 +151,9 @@ end
 -- Autotalk
 
 function mod:GOSSIP_SHOW()
-	if self:GetOption(autotalk) then
+	local info = self:GetWidgetInfo("delve", 6183)
+	local level = info and tonumber(info.tierText)
+	if (not level or level > 3) and self:GetOption(autotalk) then
 		if self:GetGossipID(123520) then -- Reno Jackson, start combat
 			-- 123520:Let's fight!
 			self:SelectGossipID(123520)
