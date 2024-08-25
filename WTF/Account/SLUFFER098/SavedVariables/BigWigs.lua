@@ -72,13 +72,11 @@ nil,
 ["barStyle"] = "ElvUI",
 ["growup"] = true,
 ["fontSizeEmph"] = 16,
-["normalHeight"] = 26,
-["alignText"] = "RIGHT",
-["spacing"] = 5,
-["fontSize"] = 16,
-["visibleBarLimitEmph"] = 4,
 ["fontName"] = "- M 700",
+["alignText"] = "RIGHT",
+["normalHeight"] = 26,
 ["texture"] = "- Tx Left",
+["visibleBarLimitEmph"] = 4,
 ["expPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -87,6 +85,8 @@ nil,
 "ElvUF_Target",
 },
 ["emphasizeTime"] = 10,
+["spacing"] = 5,
+["fontSize"] = 16,
 ["normalPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -99,9 +99,11 @@ nil,
 },
 ["BigWigs_Plugins_Nameplates"] = {
 },
-["BigWigs_Plugins_AutoReply"] = {
+["BigWigs_Plugins_Raid Icons"] = {
 },
 ["LibDualSpec-1.0"] = {
+},
+["BigWigs_Plugins_Proximity"] = {
 },
 ["BigWigs_Plugins_Messages"] = {
 ["profiles"] = {
@@ -128,18 +130,17 @@ nil,
 },
 },
 },
-["BigWigs_Plugins_Raid Icons"] = {
-},
-["BigWigs_Plugins_Proximity"] = {
-},
 ["BigWigs_Plugins_Pull"] = {
+},
+["BigWigs_Plugins_AutoReply"] = {
 },
 },
 ["profileKeys"] = {
 ["Xavaat - Ner'zhul"] = "ToxiUI",
 ["Xambank - Ner'zhul"] = "ToxiUI",
-["Xamuul - Ner'zhul"] = "ToxiUI",
 ["Faelaena - Ner'zhul"] = "ToxiUI",
+["Xamuul - Ner'zhul"] = "ToxiUI",
+["Yushien - Ner'zhul"] = "ToxiUI",
 },
 ["profiles"] = {
 ["Default"] = {
