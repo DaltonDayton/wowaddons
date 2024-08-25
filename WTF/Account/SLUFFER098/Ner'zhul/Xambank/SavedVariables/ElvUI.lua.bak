@@ -2,8 +2,8 @@
 ElvCharacterDB = {
 ["ConvertKeybindings"] = true,
 ["ChatEditHistory"] = {
-"/tsm",
 "/reload",
+"/tsm",
 },
 ["ChatHistoryLog"] = {
 {

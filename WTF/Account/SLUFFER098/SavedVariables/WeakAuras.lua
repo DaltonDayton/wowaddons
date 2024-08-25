@@ -4,7 +4,7 @@ WeakAurasSaved = {
 },
 ["editor_tab_spaces"] = 4,
 ["login_squelch_time"] = 10,
-["lastUpgrade"] = 1722213308,
+["editor_font_size"] = 12,
 ["lastArchiveClear"] = 1722213290,
 ["minimap"] = {
 ["hide"] = false,
@@ -13,9 +13,6 @@ WeakAurasSaved = {
 ["dbVersion"] = 75,
 ["migrationCutoff"] = 730,
 ["registered"] = {
-},
-["editor_font_size"] = 12,
-["features"] = {
 },
 ["displays"] = {
 ["Angelic Bulwark"] = {
@@ -162,26 +159,24 @@ WeakAurasSaved = {
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Maintenance - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Maintenance - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -195,9 +190,6 @@ WeakAurasSaved = {
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "V(cOlXE)3Th",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -218,6 +210,9 @@ WeakAurasSaved = {
 ["easeType"] = "none",
 },
 },
+["uid"] = "V(cOlXE)3Th",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -286,11 +281,13 @@ WeakAurasSaved = {
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Skull Bash"] = {
@@ -442,7 +439,6 @@ WeakAurasSaved = {
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 106839,
 ["size"] = {
 ["multi"] = {
@@ -452,36 +448,17 @@ WeakAurasSaved = {
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -534,12 +511,24 @@ WeakAurasSaved = {
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -558,10 +547,10 @@ WeakAurasSaved = {
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "oQ4pIIVjh9O",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -660,7 +649,14 @@ WeakAurasSaved = {
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Dark Archangel (PvP Talent)"] = {
 ["iconSource"] = -1,
@@ -864,11 +860,11 @@ WeakAurasSaved = {
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["parent"] = "Utilities - LWA - Priest",
 ["progressSource"] = {
 -1,
 "",
 },
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -1142,7 +1138,7 @@ WeakAurasSaved = {
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["parent"] = "Utilities - LWA - Priest",
 },
 ["Health Bar - LWA - Druid"] = {
 ["overlays"] = {
@@ -1205,7 +1201,6 @@ WeakAurasSaved = {
 [3] = true,
 },
 },
-["use_combat"] = true,
 ["class_and_spec"] = {
 ["single"] = 64,
 ["multi"] = {
@@ -1403,9 +1398,9 @@ WeakAurasSaved = {
 ["adjustedMin"] = "",
 ["actions"] = {
 ["start"] = {
+["do_message"] = false,
 ["custom"] = "",
 ["do_custom"] = false,
-["do_message"] = false,
 },
 ["finish"] = {
 },
@@ -1549,7 +1544,6 @@ WeakAurasSaved = {
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 1079,
 ["size"] = {
 ["multi"] = {
@@ -1559,7 +1553,19 @@ WeakAurasSaved = {
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = true,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Dynamic Effects - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["type"] = "preset",
@@ -1582,25 +1588,6 @@ WeakAurasSaved = {
 ["preset"] = "shrink",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -1613,14 +1600,21 @@ WeakAurasSaved = {
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Dynamic Effects - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "zzdxpJH3MFZ",
 ["inverse"] = false,
-["preferToUpdate"] = true,
+["cooldownEdge"] = true,
 ["conditions"] = {
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Voidwraith (Discipline)"] = {
 ["iconSource"] = 0,
@@ -1636,39 +1630,39 @@ WeakAurasSaved = {
 ["triggers"] = {
 {
 ["trigger"] = {
-["use_unit"] = true,
+["unit"] = "player",
 ["use_track"] = true,
 ["spellId"] = "49206",
 ["auranames"] = {
 },
-["subeventPrefix"] = "SPELL",
+["names"] = {
+},
 ["ownOnly"] = true,
 ["genericShowOn"] = "showOnCooldown",
-["unit"] = "player",
+["use_unit"] = true,
 ["use_genericShowOn"] = true,
-["custom"] = "function(event, arg1)\n    if event == \"PLAYER_TOTEM_UPDATE\" and arg1 then\n        local haveTotem, name, startTime, duration, icon = GetTotemInfo(arg1)\n        if haveTotem and icon == aura_env.texture then\n            aura_env.haveTotem, aura_env.name, aura_env.startTime, aura_env.duration, aura_env.icon = haveTotem, name, startTime, duration, icon\n            aura_env.index = arg1\n            return true\n        elseif aura_env.index == arg1 then\n            aura_env.index = 0\n            aura_env.startTime, aura_env.duration = nil, nil\n        end\n    end\nend",
 ["spellIds"] = {
 },
+["events"] = "PLAYER_TOTEM_UPDATE",
 ["use_spellId"] = true,
 ["customDuration"] = "function()\n    if aura_env.startTime then\n        return aura_env.duration, aura_env.startTime + aura_env.duration\n    end\nend",
 ["duration"] = "35",
 ["use_absorbMode"] = true,
 ["spellName"] = 0,
-["unevent"] = "auto",
-["type"] = "custom",
-["custom_type"] = "status",
 ["subeventSuffix"] = "_CAST_SUCCESS",
+["type"] = "custom",
+["unevent"] = "auto",
+["custom_type"] = "status",
 ["debuffType"] = "HELPFUL",
 ["useName"] = true,
 ["event"] = "Cooldown Progress (Spell)",
 ["totemName"] = "27829",
 ["realSpellName"] = 0,
 ["use_spellName"] = true,
-["events"] = "PLAYER_TOTEM_UPDATE",
+["custom"] = "function(event, arg1)\n    if event == \"PLAYER_TOTEM_UPDATE\" and arg1 then\n        local haveTotem, name, startTime, duration, icon = GetTotemInfo(arg1)\n        if haveTotem and icon == aura_env.texture then\n            aura_env.haveTotem, aura_env.name, aura_env.startTime, aura_env.duration, aura_env.icon = haveTotem, name, startTime, duration, icon\n            aura_env.index = arg1\n            return true\n        elseif aura_env.index == arg1 then\n            aura_env.index = 0\n            aura_env.startTime, aura_env.duration = nil, nil\n        end\n    end\nend",
 ["use_sourceUnit"] = true,
 ["check"] = "event",
-["names"] = {
-},
+["subeventPrefix"] = "SPELL",
 ["sourceUnit"] = "player",
 ["use_totemName"] = true,
 },
@@ -1821,11 +1815,11 @@ WeakAurasSaved = {
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["parent"] = "Core - LWA - Priest",
 ["progressSource"] = {
 -1,
 "",
 },
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -1995,7 +1989,7 @@ WeakAurasSaved = {
 },
 ["displayIcon"] = "615099",
 ["cooldown"] = true,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["parent"] = "Core - LWA - Priest",
 },
 ["Energy Bar - LWA - Druid"] = {
 ["overlays"] = {
@@ -2037,14 +2031,15 @@ WeakAurasSaved = {
 ["sparkOffsetY"] = 0,
 ["gradientOrientation"] = "HORIZONTAL",
 ["load"] = {
-["itemtypeequipped"] = {
-},
 ["use_petbattle"] = false,
 ["use_never"] = false,
 ["talent"] = {
 ["multi"] = {
 },
 },
+["itemtypeequipped"] = {
+},
+["use_class_and_spec"] = true,
 ["class_and_spec"] = {
 ["single"] = 103,
 ["multi"] = {
@@ -2054,18 +2049,18 @@ WeakAurasSaved = {
 [105] = true,
 },
 },
-["use_class_and_spec"] = true,
 ["class"] = {
 ["single"] = "MONK",
 ["multi"] = {
 },
 },
-["use_spellknown"] = true,
 ["use_class"] = true,
 ["role"] = {
 ["multi"] = {
 },
 },
+["use_spellknown"] = true,
+["use_spec"] = false,
 ["spec"] = {
 ["single"] = 3,
 ["multi"] = {
@@ -2073,9 +2068,7 @@ true,
 [3] = true,
 },
 },
-["use_spec"] = false,
 ["zoneIds"] = "",
-["use_combat"] = true,
 ["spellknown"] = 768,
 ["size"] = {
 ["multi"] = {
@@ -2302,9 +2295,9 @@ true,
 ["icon"] = false,
 ["actions"] = {
 ["start"] = {
+["do_message"] = false,
 ["custom"] = "",
 ["do_custom"] = false,
-["do_message"] = false,
 },
 ["finish"] = {
 },
@@ -2538,7 +2531,29 @@ true,
 ["anchorFrameFrame"] = "WeakAuras:General Options - LWA - Priest",
 ["hybridPosition"] = "hybridFirst",
 ["limit"] = 5,
+["borderSize"] = 2,
+["config"] = {
+},
+["xOffset"] = -6.103515625e-05,
+["anchorFrameParent"] = false,
 ["gridType"] = "RD",
+["uid"] = "QF43Uob3R8J",
+["rotation"] = 0,
+["semver"] = "11.0.4",
+["sort"] = "none",
+["id"] = "Dynamic Effects - LWA - Priest",
+["gridWidth"] = 5,
+["frameStrata"] = 1,
+["anchorFrameType"] = "SELECTFRAME",
+["borderEdge"] = "Square Full White",
+["radius"] = 200,
+["rowSpace"] = 1,
+["stepAngle"] = 15,
+["conditions"] = {
+},
+["information"] = {
+["forceEvents"] = true,
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -2559,28 +2574,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["xOffset"] = -6.103515625e-05,
-["uid"] = "QF43Uob3R8J",
-["rotation"] = 0,
-["semver"] = "11.0.4",
-["sort"] = "none",
-["id"] = "Dynamic Effects - LWA - Priest",
-["gridWidth"] = 5,
-["frameStrata"] = 1,
-["anchorFrameType"] = "SELECTFRAME",
-["borderEdge"] = "Square Full White",
-["radius"] = 200,
-["rowSpace"] = 1,
-["stepAngle"] = 15,
-["conditions"] = {
-},
-["information"] = {
-["forceEvents"] = true,
-},
-["borderSize"] = 2,
 },
 ["Mindbender (Discipline)"] = {
 ["iconSource"] = 0,
@@ -2596,39 +2589,39 @@ true,
 ["triggers"] = {
 {
 ["trigger"] = {
-["use_unit"] = true,
+["unit"] = "player",
 ["use_track"] = true,
 ["spellId"] = "49206",
 ["auranames"] = {
 },
-["subeventPrefix"] = "SPELL",
+["names"] = {
+},
 ["ownOnly"] = true,
 ["genericShowOn"] = "showOnCooldown",
-["unit"] = "player",
+["use_unit"] = true,
 ["use_genericShowOn"] = true,
-["custom"] = "function(event, arg1)\n    if event == \"PLAYER_TOTEM_UPDATE\" and arg1 then\n        local haveTotem, name, startTime, duration, icon = GetTotemInfo(arg1)\n        if haveTotem and icon == aura_env.texture then\n            aura_env.haveTotem, aura_env.name, aura_env.startTime, aura_env.duration, aura_env.icon = haveTotem, name, startTime, duration, icon\n            aura_env.index = arg1\n            return true\n        elseif aura_env.index == arg1 then\n            aura_env.index = 0\n            aura_env.startTime, aura_env.duration = nil, nil\n        end\n    end\nend",
 ["spellIds"] = {
 },
+["events"] = "PLAYER_TOTEM_UPDATE",
 ["use_spellId"] = true,
 ["customDuration"] = "function()\n    if aura_env.startTime then\n        return aura_env.duration, aura_env.startTime + aura_env.duration\n    end\nend",
 ["duration"] = "35",
 ["use_absorbMode"] = true,
 ["spellName"] = 0,
-["unevent"] = "auto",
-["type"] = "custom",
-["custom_type"] = "status",
 ["subeventSuffix"] = "_CAST_SUCCESS",
+["type"] = "custom",
+["unevent"] = "auto",
+["custom_type"] = "status",
 ["debuffType"] = "HELPFUL",
 ["useName"] = true,
 ["event"] = "Cooldown Progress (Spell)",
 ["totemName"] = "27829",
 ["realSpellName"] = 0,
 ["use_spellName"] = true,
-["events"] = "PLAYER_TOTEM_UPDATE",
+["custom"] = "function(event, arg1)\n    if event == \"PLAYER_TOTEM_UPDATE\" and arg1 then\n        local haveTotem, name, startTime, duration, icon = GetTotemInfo(arg1)\n        if haveTotem and icon == aura_env.texture then\n            aura_env.haveTotem, aura_env.name, aura_env.startTime, aura_env.duration, aura_env.icon = haveTotem, name, startTime, duration, icon\n            aura_env.index = arg1\n            return true\n        elseif aura_env.index == arg1 then\n            aura_env.index = 0\n            aura_env.startTime, aura_env.duration = nil, nil\n        end\n    end\nend",
 ["use_sourceUnit"] = true,
 ["check"] = "event",
-["names"] = {
-},
+["subeventPrefix"] = "SPELL",
 ["sourceUnit"] = "player",
 ["use_totemName"] = true,
 },
@@ -2781,11 +2774,11 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["parent"] = "Core - LWA - Priest",
 ["progressSource"] = {
 -1,
 "",
 },
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -2955,7 +2948,7 @@ true,
 },
 ["displayIcon"] = 136214,
 ["cooldown"] = true,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["parent"] = "Core - LWA - Priest",
 },
 ["Owlkin Frenzy"] = {
 ["iconSource"] = -1,
@@ -3137,7 +3130,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 24858,
 ["size"] = {
 ["multi"] = {
@@ -3146,9 +3138,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -3215,7 +3207,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Holy Word: Chastise"] = {
 ["iconSource"] = -1,
@@ -3381,26 +3373,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -3414,9 +3404,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "IDADMoeiuai",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -3437,6 +3424,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "IDADMoeiuai",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -3594,11 +3584,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Reforrestation"] = {
@@ -3777,7 +3769,6 @@ true,
 ["multi"] = {
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 392356,
 ["size"] = {
 ["multi"] = {
@@ -3786,9 +3777,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -3825,7 +3816,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Surge of Light (Shadow)"] = {
 ["iconSource"] = -1,
@@ -3953,21 +3944,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -4036,7 +4020,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Premonition (Discipline)"] = {
 ["iconSource"] = -1,
@@ -4214,21 +4205,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -4369,7 +4353,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Swiftmend (Balance, Feral & Guardian)"] = {
 ["iconSource"] = -1,
@@ -4519,7 +4510,6 @@ true,
 [102] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 18562,
 ["size"] = {
 ["multi"] = {
@@ -4529,36 +4519,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -4611,14 +4582,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
-["custom"] = "aura_env.region.extraZoom = 0.2",
-["do_custom"] = true,
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -4637,10 +4618,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "UYqyTsZ(Tn9",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -4739,7 +4720,16 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+["custom"] = "aura_env.region.extraZoom = 0.2",
+["do_custom"] = true,
+},
+},
 },
 ["Rhapsody"] = {
 ["iconSource"] = -1,
@@ -4908,21 +4898,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -4975,7 +4958,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Symbol of Hope"] = {
 ["iconSource"] = -1,
@@ -5154,17 +5144,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Utilities - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -5217,13 +5209,9 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 ["utility"] = {
@@ -5241,9 +5229,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "A1a0UxQvdqB",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -5264,6 +5249,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "A1a0UxQvdqB",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -5381,11 +5369,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Premonition of Solace (Holy)"] = {
@@ -5519,21 +5509,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -5602,7 +5585,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Holy Word: Sanctify 1"] = {
 ["sparkWidth"] = 10,
@@ -5715,11 +5705,11 @@ true,
 ["stacks"] = "1",
 ["names"] = {
 },
-["trackcharge"] = "1",
+["useName"] = true,
 ["use_trackcharge"] = true,
 ["debuffType"] = "HELPFUL",
 ["charges_operator"] = ">",
-["type"] = "spell",
+["charges"] = "1",
 ["power"] = "1",
 ["unevent"] = "auto",
 ["track"] = "auto",
@@ -5730,8 +5720,8 @@ true,
 ["use_spellName"] = true,
 ["spellIds"] = {
 },
-["charges"] = "1",
-["useName"] = true,
+["type"] = "spell",
+["trackcharge"] = "1",
 ["unit"] = "player",
 ["duration"] = "1",
 ["use_genericShowOn"] = true,
@@ -6088,7 +6078,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 102401,
 ["size"] = {
 ["multi"] = {
@@ -6098,36 +6087,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -6180,12 +6150,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -6204,10 +6186,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "F52(Orus7d0",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -6328,7 +6310,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Utilities - LWA - Priest"] = {
 ["arcLength"] = 360,
@@ -6482,7 +6471,29 @@ true,
 ["anchorFrameFrame"] = "WeakAuras:General Options - LWA - Priest",
 ["hybridPosition"] = "hybridFirst",
 ["limit"] = 5,
+["borderSize"] = 2,
+["config"] = {
+},
+["xOffset"] = -6.103515625e-05,
+["anchorFrameParent"] = false,
 ["gridType"] = "RD",
+["uid"] = "KlcHi6M6HLA",
+["rotation"] = 0,
+["semver"] = "11.0.4",
+["sort"] = "none",
+["id"] = "Utilities - LWA - Priest",
+["gridWidth"] = 5,
+["frameStrata"] = 1,
+["anchorFrameType"] = "SELECTFRAME",
+["borderEdge"] = "Square Full White",
+["radius"] = 200,
+["rowSpace"] = 1,
+["stepAngle"] = 15,
+["conditions"] = {
+},
+["information"] = {
+["forceEvents"] = true,
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -6503,28 +6514,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["xOffset"] = -6.103515625e-05,
-["uid"] = "KlcHi6M6HLA",
-["rotation"] = 0,
-["semver"] = "11.0.4",
-["sort"] = "none",
-["id"] = "Utilities - LWA - Priest",
-["gridWidth"] = 5,
-["frameStrata"] = 1,
-["anchorFrameType"] = "SELECTFRAME",
-["borderEdge"] = "Square Full White",
-["radius"] = 200,
-["rowSpace"] = 1,
-["stepAngle"] = 15,
-["conditions"] = {
-},
-["information"] = {
-["forceEvents"] = true,
-},
-["borderSize"] = 2,
 },
 ["Lightwell"] = {
 ["iconSource"] = -1,
@@ -6715,21 +6704,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -6884,7 +6866,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Survival Instincts (Feral)"] = {
 ["iconSource"] = -1,
@@ -7056,7 +7045,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 61336,
 ["size"] = {
 ["multi"] = {
@@ -7066,36 +7054,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -7148,12 +7117,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -7172,10 +7153,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "1z3nYdgY4Vz",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -7293,7 +7274,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Force of Nature"] = {
 ["iconSource"] = -1,
@@ -7457,7 +7445,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 205636,
 ["size"] = {
 ["multi"] = {
@@ -7467,7 +7454,6 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["keepAspectRatio"] = true,
 ["actions"] = {
 ["start"] = {
 },
@@ -7476,6 +7462,7 @@ true,
 ["init"] = {
 },
 },
+["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -7579,7 +7566,7 @@ true,
 ["adjustedMax"] = "",
 ["displayIcon"] = 132129,
 ["cooldown"] = true,
-["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
+["keepAspectRatio"] = true,
 },
 ["Faerie Swarm (PvP Talent)"] = {
 ["iconSource"] = -1,
@@ -7751,7 +7738,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 209749,
 ["size"] = {
 ["multi"] = {
@@ -7761,36 +7747,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -7843,12 +7810,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -7867,10 +7846,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "oPz)jl(pULs",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -8020,7 +7999,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Void Eruption"] = {
 ["iconSource"] = -1,
@@ -8176,7 +8162,7 @@ true,
 0,
 1,
 },
-["text_text_format_3.p_time_mod_rate"] = true,
+["text_anchorYOffset"] = -4,
 ["text_anchorPoint"] = "OUTER_TOP",
 ["type"] = "subtext",
 ["text_fontType"] = "OUTLINE",
@@ -8187,8 +8173,8 @@ true,
 1,
 },
 ["text_font"] = "Friz Quadrata TT",
-["text_anchorYOffset"] = -4,
 ["text_shadowYOffset"] = 0,
+["text_text_format_3.p_time_mod_rate"] = true,
 ["text_text_format_3.p_time_dynamic_threshold"] = 5,
 ["text_wordWrap"] = "WordWrap",
 ["text_visible"] = true,
@@ -8242,21 +8228,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -8436,7 +8415,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Power Infusion (Shadow)"] = {
 ["iconSource"] = -1,
@@ -8591,26 +8577,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -8624,9 +8608,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "JNFSb74)QM2",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -8647,6 +8628,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "JNFSb74)QM2",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -8719,11 +8703,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Starsurge"] = {
@@ -8886,7 +8872,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 78674,
 ["size"] = {
 ["multi"] = {
@@ -8896,7 +8881,6 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["keepAspectRatio"] = true,
 ["actions"] = {
 ["start"] = {
 },
@@ -8907,6 +8891,7 @@ true,
 ["do_custom"] = true,
 },
 },
+["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -9080,7 +9065,7 @@ true,
 ["adjustedMax"] = "",
 ["displayIcon"] = 135730,
 ["cooldown"] = true,
-["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
+["keepAspectRatio"] = true,
 },
 ["Psyfiend (PvP Talent)"] = {
 ["iconSource"] = 0,
@@ -9251,11 +9236,11 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["parent"] = "Core - LWA - Priest",
 ["progressSource"] = {
 -1,
 "",
 },
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -9423,7 +9408,7 @@ true,
 },
 ["displayIcon"] = 537021,
 ["cooldown"] = true,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["parent"] = "Core - LWA - Priest",
 },
 ["Mind Devourer"] = {
 ["iconSource"] = -1,
@@ -9551,21 +9536,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -9634,7 +9612,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Wrath & Starfire - LWA - Druid"] = {
 ["arcLength"] = 360,
@@ -9650,10 +9635,10 @@ true,
 ["wagoID"] = "ryBp05DHX",
 ["xOffset"] = 0,
 ["preferToUpdate"] = true,
-["alpha"] = 1,
+["frameStrata"] = 4,
 ["yOffset"] = 0,
 ["anchorPoint"] = "CENTER",
-["animate"] = false,
+["stepAngle"] = 15,
 ["sharedFrameLevel"] = true,
 ["fullCircle"] = true,
 ["rowSpace"] = 1,
@@ -9686,13 +9671,11 @@ true,
 },
 ["columnSpace"] = 1,
 ["internalVersion"] = 75,
-["parent"] = "Resources - LWA - Druid",
+["selfPoint"] = "TOP",
 ["useLimit"] = false,
 ["align"] = "LEFT",
 ["growOn"] = "show",
-["space"] = 2,
 ["radius"] = 200,
-["rotation"] = 0,
 ["sortHybridTable"] = {
 ["Wrath 2"] = false,
 ["Starfire 2"] = false,
@@ -9701,6 +9684,8 @@ true,
 ["Wrath 1"] = false,
 ["Lunar Eclipse"] = false,
 },
+["rotation"] = 0,
+["parent"] = "Resources - LWA - Druid",
 ["version"] = 105,
 ["subRegions"] = {
 },
@@ -9743,19 +9728,19 @@ true,
 ["centerType"] = "LR",
 ["border"] = false,
 ["borderEdge"] = "Square Full White",
-["stepAngle"] = 15,
+["regionType"] = "dynamicgroup",
 ["borderSize"] = 2,
-["sort"] = "none",
 ["limit"] = 6,
-["frameStrata"] = 4,
+["animate"] = false,
+["gridWidth"] = 5,
 ["constantFactor"] = "RADIUS",
 ["borderInset"] = 1,
 ["borderOffset"] = 4,
 ["semver"] = "11.0.8",
 ["tocversion"] = 110000,
 ["id"] = "Wrath & Starfire - LWA - Druid",
-["regionType"] = "dynamicgroup",
-["gridWidth"] = 5,
+["sort"] = "none",
+["alpha"] = 1,
 ["anchorFrameType"] = "SCREEN",
 ["gridType"] = "RD",
 ["config"] = {
@@ -9787,7 +9772,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["selfPoint"] = "TOP",
+["space"] = 2,
 },
 ["Halo (Holy)"] = {
 ["iconSource"] = -1,
@@ -9922,26 +9907,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -9955,9 +9938,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "WOjWfL3zvcI",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -9978,6 +9958,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "WOjWfL3zvcI",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -10055,11 +10038,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Halo (Shadow)"] = {
@@ -10195,26 +10180,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -10228,9 +10211,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "l1r)yKWtL0Q",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -10251,6 +10231,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "l1r)yKWtL0Q",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -10328,11 +10311,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Shadow Word: Death (Discipline)"] = {
@@ -10483,26 +10468,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -10516,9 +10499,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "mYpriadzKOZ",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -10539,6 +10519,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "mYpriadzKOZ",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -10666,11 +10649,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Combot Point 2 - Druid"] = {
@@ -10726,14 +10711,15 @@ true,
 ["sparkOffsetY"] = 0,
 ["gradientOrientation"] = "HORIZONTAL",
 ["load"] = {
-["itemtypeequipped"] = {
-},
 ["use_petbattle"] = false,
 ["use_never"] = false,
 ["talent"] = {
 ["multi"] = {
 },
 },
+["itemtypeequipped"] = {
+},
+["use_class_and_spec"] = true,
 ["class_and_spec"] = {
 ["single"] = 103,
 ["multi"] = {
@@ -10743,19 +10729,19 @@ true,
 [105] = true,
 },
 },
-["use_class_and_spec"] = true,
 ["class"] = {
 ["single"] = "MONK",
 ["multi"] = {
 ["EVOKER"] = true,
 },
 },
-["use_spellknown"] = true,
 ["use_class"] = true,
 ["role"] = {
 ["multi"] = {
 },
 },
+["use_spellknown"] = true,
+["use_spec"] = true,
 ["spec"] = {
 ["single"] = 3,
 ["multi"] = {
@@ -10764,9 +10750,7 @@ true,
 true,
 },
 },
-["use_spec"] = true,
 ["zoneIds"] = "",
-["use_combat"] = true,
 ["spellknown"] = 768,
 ["size"] = {
 ["multi"] = {
@@ -11352,7 +11336,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 102693,
 ["size"] = {
 ["multi"] = {
@@ -11361,9 +11344,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -11525,7 +11508,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Overflowing Power (Optional)"] = {
 ["iconSource"] = -1,
@@ -11707,7 +11690,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 106951,
 ["size"] = {
 ["multi"] = {
@@ -11716,9 +11698,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -11772,7 +11754,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Dark Ascension"] = {
 ["iconSource"] = -1,
@@ -11927,21 +11909,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -12061,7 +12036,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Darkness from Light (S1 - 4-Pieces)"] = {
 ["iconSource"] = -1,
@@ -12230,21 +12212,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -12297,7 +12272,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Dream of Cenarius"] = {
 ["iconSource"] = 0,
@@ -12461,7 +12443,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 372119,
 ["size"] = {
 ["multi"] = {
@@ -12470,9 +12451,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -12556,7 +12537,7 @@ true,
 },
 ["displayIcon"] = 136085,
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Dream Burst"] = {
 ["iconSource"] = -1,
@@ -12717,25 +12698,24 @@ true,
 },
 },
 ["use_class_and_spec"] = true,
+["use_class"] = true,
+["use_spellknown"] = false,
 ["spec"] = {
 ["multi"] = {
 },
 },
-["use_class"] = true,
-["use_spellknown"] = false,
-["use_herotalent"] = false,
 ["herotalent"] = {
 ["multi"] = {
 ["117195"] = true,
 },
 },
+["use_herotalent"] = false,
 ["class"] = {
 ["single"] = "MAGE",
 ["multi"] = {
 ["MAGE"] = true,
 },
 },
-["use_combat"] = true,
 ["class_and_spec"] = {
 ["single"] = 102,
 ["multi"] = {
@@ -12752,9 +12732,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -12808,7 +12788,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Emerald Slumber (PvP Talent)"] = {
 ["iconSource"] = -1,
@@ -12980,7 +12960,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 329042,
 ["size"] = {
 ["multi"] = {
@@ -12990,36 +12969,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -13072,12 +13032,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -13096,10 +13068,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "Mwa83HlTcOk",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -13217,7 +13189,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Rake (Guardian)"] = {
 ["iconSource"] = -1,
@@ -13336,7 +13315,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 1822,
 ["size"] = {
 ["multi"] = {
@@ -13346,7 +13324,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = true,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Dynamic Effects - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["type"] = "preset",
@@ -13369,25 +13359,6 @@ true,
 ["preset"] = "shrink",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -13400,14 +13371,21 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Dynamic Effects - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "ptgOTEcvf50",
 ["inverse"] = false,
-["preferToUpdate"] = true,
+["cooldownEdge"] = true,
 ["conditions"] = {
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Holy Word: Salvation"] = {
 ["iconSource"] = -1,
@@ -13538,26 +13516,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -13571,9 +13547,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "yLKajaCfHBy",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -13594,6 +13567,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "yLKajaCfHBy",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -13671,11 +13647,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Premonition of Insight (Disicipline)"] = {
@@ -13846,21 +13824,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -13930,7 +13901,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Convoke the Spirits (Guardian)"] = {
 ["iconSource"] = -1,
@@ -14055,14 +14033,14 @@ true,
 },
 },
 ["use_class_and_spec"] = true,
+["use_class"] = true,
+["use_spellknown"] = true,
 ["class"] = {
 ["single"] = "MAGE",
 ["multi"] = {
 ["MAGE"] = true,
 },
 },
-["use_class"] = true,
-["use_spellknown"] = true,
 ["class_and_spec"] = {
 ["single"] = 104,
 ["multi"] = {
@@ -14072,12 +14050,11 @@ true,
 [105] = true,
 },
 },
-["use_exact_spellknown"] = true,
 ["spec"] = {
 ["multi"] = {
 },
 },
-["use_combat"] = true,
+["use_exact_spellknown"] = true,
 ["spellknown"] = 391528,
 ["size"] = {
 ["multi"] = {
@@ -14087,7 +14064,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -14108,25 +14097,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -14139,10 +14109,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Core - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "2OkZoyk9x6F",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -14215,7 +14185,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Bloodtalons"] = {
 ["iconSource"] = -1,
@@ -14395,7 +14372,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 319439,
 ["size"] = {
 ["multi"] = {
@@ -14404,9 +14380,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -14477,7 +14453,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Moonkin Form"] = {
 ["iconSource"] = -1,
@@ -14655,7 +14631,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 24858,
 ["size"] = {
 ["multi"] = {
@@ -14665,36 +14640,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = true,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Maintenance - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -14757,12 +14713,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -14782,10 +14750,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Maintenance - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "UdMVzUGaaT7",
 ["inverse"] = false,
-["preferToUpdate"] = true,
+["cooldownEdge"] = true,
 ["conditions"] = {
 {
 ["check"] = {
@@ -14818,7 +14786,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Dominate Mind"] = {
 ["iconSource"] = -1,
@@ -14997,17 +14972,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Utilities - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -15060,13 +15037,9 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 ["utility"] = {
@@ -15084,9 +15057,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "pnkoEx7aVfv",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -15107,6 +15077,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "pnkoEx7aVfv",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -15256,11 +15229,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Sunfire Bar"] = {
@@ -15291,23 +15266,32 @@ true,
 ["sparkOffsetY"] = 0,
 ["gradientOrientation"] = "HORIZONTAL",
 ["load"] = {
-["use_petbattle"] = false,
-["use_never"] = false,
-["not_spellknown"] = 1822,
-["use_class"] = true,
-["use_spec"] = true,
 ["size"] = {
 ["multi"] = {
 },
 },
-["class_and_spec"] = {
-["single"] = 105,
-},
+["use_petbattle"] = false,
+["use_never"] = false,
 ["talent"] = {
 ["multi"] = {
 [100572] = true,
 },
 },
+["class_and_spec"] = {
+["single"] = 105,
+},
+["not_spellknown"] = 1822,
+["class"] = {
+["single"] = "HUNTER",
+["multi"] = {
+["EVOKER"] = true,
+},
+},
+["use_spellknown"] = false,
+["use_class"] = true,
+["use_not_spellknown"] = true,
+["use_class_and_spec"] = true,
+["use_spec"] = true,
 ["spec"] = {
 ["single"] = 3,
 ["multi"] = {
@@ -15315,17 +15299,7 @@ true,
 [3] = true,
 },
 },
-["use_spellknown"] = false,
-["use_not_spellknown"] = true,
-["use_class_and_spec"] = true,
 ["use_exact_spellknown"] = true,
-["class"] = {
-["single"] = "HUNTER",
-["multi"] = {
-["EVOKER"] = true,
-},
-},
-["use_combat"] = true,
 ["spellknown"] = 264332,
 ["zoneIds"] = "",
 },
@@ -15376,11 +15350,11 @@ true,
 ["matchesShowOn"] = "showAlways",
 ["use_unit"] = true,
 ["unit"] = "target",
-["trackcharge"] = "2",
+["charges"] = "2",
 ["use_powertype"] = true,
 ["debuffType"] = "HARMFUL",
 ["charges_operator"] = "==",
-["useName"] = true,
+["type"] = "aura2",
 ["unevent"] = "auto",
 ["power"] = "1",
 ["names"] = {
@@ -15392,9 +15366,9 @@ true,
 ["use_spellName"] = true,
 ["spellIds"] = {
 },
-["type"] = "aura2",
+["useName"] = true,
 ["use_trackcharge"] = true,
-["charges"] = "2",
+["trackcharge"] = "2",
 ["powertype"] = 19,
 ["duration"] = "1",
 },
@@ -15765,21 +15739,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -15849,7 +15816,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Lunar Eclipse"] = {
 ["sparkWidth"] = 10,
@@ -15890,14 +15864,20 @@ true,
 ["multi"] = {
 },
 },
-["zoneIds"] = "",
 ["use_class_and_spec"] = true,
+["zoneIds"] = "",
 ["class_and_spec"] = {
 ["single"] = 102,
 },
-["use_exact_spellknown"] = false,
 ["use_class"] = true,
 ["use_spellknown"] = true,
+["class"] = {
+["single"] = "HUNTER",
+["multi"] = {
+["EVOKER"] = true,
+},
+},
+["use_spec"] = true,
 ["spec"] = {
 ["single"] = 2,
 ["multi"] = {
@@ -15905,14 +15885,7 @@ true,
 [3] = true,
 },
 },
-["use_spec"] = true,
-["class"] = {
-["single"] = "HUNTER",
-["multi"] = {
-["EVOKER"] = true,
-},
-},
-["use_combat"] = true,
+["use_exact_spellknown"] = false,
 ["spellknown"] = 79577,
 ["size"] = {
 ["multi"] = {
@@ -16333,11 +16306,11 @@ true,
 1,
 },
 ["text_font"] = "Friz Quadrata TT",
-["text_fontType"] = "OUTLINE",
-["text_shadowYOffset"] = 0,
 ["text_visible"] = true,
-["text_wordWrap"] = "WordWrap",
+["text_shadowYOffset"] = 0,
 ["text_text_format_3.s_format"] = "none",
+["text_wordWrap"] = "WordWrap",
+["text_fontType"] = "OUTLINE",
 ["text_anchorPoint"] = "OUTER_TOP",
 ["text_text_format_2.s_format"] = "none",
 ["text_text_format_p_time_format"] = 0,
@@ -16392,21 +16365,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -16647,7 +16613,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Guardian Spirit"] = {
 ["iconSource"] = -1,
@@ -16803,26 +16776,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -16836,9 +16807,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "XBO5czMCw8q",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -16859,6 +16827,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "XBO5czMCw8q",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -16966,11 +16937,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Ironbark"] = {
@@ -17115,7 +17088,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 102342,
 ["size"] = {
 ["multi"] = {
@@ -17125,7 +17097,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -17146,25 +17130,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -17177,10 +17142,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Core - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "ZgXqcfoQaXs",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -17253,7 +17218,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Cenarion Ward"] = {
 ["iconSource"] = -1,
@@ -17400,7 +17372,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 102351,
 ["size"] = {
 ["multi"] = {
@@ -17410,7 +17381,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -17431,25 +17414,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -17462,10 +17426,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Core - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "FmBKCt4xpBn",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -17573,7 +17537,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Shadowfiend (Discipline)"] = {
 ["iconSource"] = 0,
@@ -17589,39 +17560,39 @@ true,
 ["triggers"] = {
 {
 ["trigger"] = {
-["use_unit"] = true,
+["unit"] = "player",
 ["use_track"] = true,
 ["spellId"] = "49206",
 ["auranames"] = {
 },
-["subeventPrefix"] = "SPELL",
+["names"] = {
+},
 ["ownOnly"] = true,
 ["genericShowOn"] = "showOnCooldown",
-["unit"] = "player",
+["use_unit"] = true,
 ["use_genericShowOn"] = true,
-["custom"] = "function(event, arg1)\n    if event == \"PLAYER_TOTEM_UPDATE\" and arg1 then\n        local haveTotem, name, startTime, duration, icon = GetTotemInfo(arg1)\n        if haveTotem and icon == aura_env.texture then\n            aura_env.haveTotem, aura_env.name, aura_env.startTime, aura_env.duration, aura_env.icon = haveTotem, name, startTime, duration, icon\n            aura_env.index = arg1\n            return true\n        elseif aura_env.index == arg1 then\n            aura_env.index = 0\n            aura_env.startTime, aura_env.duration = nil, nil\n        end\n    end\nend",
 ["spellIds"] = {
 },
+["events"] = "PLAYER_TOTEM_UPDATE",
 ["use_spellId"] = true,
 ["customDuration"] = "function()\n    if aura_env.startTime then\n        return aura_env.duration, aura_env.startTime + aura_env.duration\n    end\nend",
 ["duration"] = "35",
 ["use_absorbMode"] = true,
 ["spellName"] = 0,
-["unevent"] = "auto",
-["type"] = "custom",
-["custom_type"] = "status",
 ["subeventSuffix"] = "_CAST_SUCCESS",
+["type"] = "custom",
+["unevent"] = "auto",
+["custom_type"] = "status",
 ["debuffType"] = "HELPFUL",
 ["useName"] = true,
 ["event"] = "Cooldown Progress (Spell)",
 ["totemName"] = "27829",
 ["realSpellName"] = 0,
 ["use_spellName"] = true,
-["events"] = "PLAYER_TOTEM_UPDATE",
+["custom"] = "function(event, arg1)\n    if event == \"PLAYER_TOTEM_UPDATE\" and arg1 then\n        local haveTotem, name, startTime, duration, icon = GetTotemInfo(arg1)\n        if haveTotem and icon == aura_env.texture then\n            aura_env.haveTotem, aura_env.name, aura_env.startTime, aura_env.duration, aura_env.icon = haveTotem, name, startTime, duration, icon\n            aura_env.index = arg1\n            return true\n        elseif aura_env.index == arg1 then\n            aura_env.index = 0\n            aura_env.startTime, aura_env.duration = nil, nil\n        end\n    end\nend",
 ["use_sourceUnit"] = true,
 ["check"] = "event",
-["names"] = {
-},
+["subeventPrefix"] = "SPELL",
 ["sourceUnit"] = "player",
 ["use_totemName"] = true,
 },
@@ -17780,11 +17751,11 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["parent"] = "Core - LWA - Priest",
 ["progressSource"] = {
 -1,
 "",
 },
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -17954,7 +17925,7 @@ true,
 },
 ["displayIcon"] = 136199,
 ["cooldown"] = true,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["parent"] = "Core - LWA - Priest",
 },
 ["Moonfire (Guardian)"] = {
 ["iconSource"] = -1,
@@ -18108,7 +18079,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 203964,
 ["size"] = {
 ["multi"] = {
@@ -18118,7 +18088,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = true,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -18139,25 +18121,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -18170,10 +18133,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Core - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "p0DniecoBM7",
 ["inverse"] = false,
-["preferToUpdate"] = true,
+["cooldownEdge"] = true,
 ["conditions"] = {
 {
 ["check"] = {
@@ -18318,7 +18281,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Ravage (Feral)"] = {
 ["iconSource"] = -1,
@@ -18445,25 +18415,24 @@ true,
 },
 },
 ["use_class_and_spec"] = true,
+["use_class"] = true,
+["use_spellknown"] = false,
 ["spec"] = {
 ["multi"] = {
 },
 },
-["use_class"] = true,
-["use_spellknown"] = false,
-["use_herotalent"] = false,
 ["herotalent"] = {
 ["multi"] = {
 ["117206"] = true,
 },
 },
+["use_herotalent"] = false,
 ["class"] = {
 ["single"] = "MAGE",
 ["multi"] = {
 ["MAGE"] = true,
 },
 },
-["use_combat"] = true,
 ["class_and_spec"] = {
 ["single"] = 103,
 ["multi"] = {
@@ -18480,9 +18449,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -18536,7 +18505,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Greater Heal (PvP Talent)"] = {
 ["iconSource"] = -1,
@@ -18665,26 +18634,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -18698,9 +18665,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "Rki1HIvUfbj",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -18721,6 +18685,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "Rki1HIvUfbj",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -18798,11 +18765,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Moonfire Bar"] = {
@@ -18833,22 +18802,31 @@ true,
 ["sparkOffsetY"] = 0,
 ["gradientOrientation"] = "HORIZONTAL",
 ["load"] = {
+["size"] = {
+["multi"] = {
+},
+},
 ["use_petbattle"] = false,
 ["use_never"] = false,
-["not_spellknown"] = 1822,
-["use_class"] = true,
-["use_spec"] = true,
-["size"] = {
+["talent"] = {
 ["multi"] = {
 },
 },
 ["class_and_spec"] = {
 ["single"] = 105,
 },
-["talent"] = {
+["not_spellknown"] = 1822,
+["class"] = {
+["single"] = "HUNTER",
 ["multi"] = {
+["EVOKER"] = true,
 },
 },
+["use_spellknown"] = false,
+["use_class"] = true,
+["use_not_spellknown"] = true,
+["use_class_and_spec"] = true,
+["use_spec"] = true,
 ["spec"] = {
 ["single"] = 3,
 ["multi"] = {
@@ -18856,17 +18834,7 @@ true,
 [3] = true,
 },
 },
-["use_spellknown"] = false,
-["use_not_spellknown"] = true,
-["use_class_and_spec"] = true,
 ["use_exact_spellknown"] = true,
-["class"] = {
-["single"] = "HUNTER",
-["multi"] = {
-["EVOKER"] = true,
-},
-},
-["use_combat"] = true,
 ["spellknown"] = 259495,
 ["zoneIds"] = "",
 },
@@ -18917,11 +18885,11 @@ true,
 ["matchesShowOn"] = "showAlways",
 ["use_unit"] = true,
 ["unit"] = "target",
-["trackcharge"] = "2",
+["charges"] = "2",
 ["use_powertype"] = true,
 ["debuffType"] = "HARMFUL",
 ["charges_operator"] = "==",
-["useName"] = true,
+["type"] = "aura2",
 ["unevent"] = "auto",
 ["power"] = "1",
 ["names"] = {
@@ -18933,9 +18901,9 @@ true,
 ["use_spellName"] = true,
 ["spellIds"] = {
 },
-["type"] = "aura2",
+["useName"] = true,
 ["use_trackcharge"] = true,
-["charges"] = "2",
+["trackcharge"] = "2",
 ["powertype"] = 19,
 ["duration"] = "1",
 },
@@ -19307,21 +19275,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -19391,7 +19352,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Mangle"] = {
 ["iconSource"] = -1,
@@ -19596,9 +19564,9 @@ true,
 ["MAGE"] = true,
 },
 },
-["use_class_and_spec"] = true,
 ["use_class"] = true,
 ["use_spellknown"] = true,
+["use_class_and_spec"] = true,
 ["class_and_spec"] = {
 ["single"] = 104,
 ["multi"] = {
@@ -19614,7 +19582,6 @@ true,
 ["multi"] = {
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 33917,
 ["size"] = {
 ["multi"] = {
@@ -19623,9 +19590,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -19783,7 +19750,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Nature's Grace"] = {
 ["iconSource"] = -1,
@@ -19965,7 +19932,6 @@ true,
 ["multi"] = {
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 450347,
 ["size"] = {
 ["multi"] = {
@@ -19974,9 +19940,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -20026,7 +19992,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Barkskin (Guardian)"] = {
 ["iconSource"] = -1,
@@ -20166,7 +20132,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spec"] = {
 ["multi"] = {
 },
@@ -20179,7 +20144,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -20200,25 +20177,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -20231,10 +20189,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Core - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "f8PseE49Fc1",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -20307,7 +20265,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Holy Ward (PvP Talent)"] = {
 ["iconSource"] = -1,
@@ -20511,11 +20476,11 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["parent"] = "Utilities - LWA - Priest",
 ["progressSource"] = {
 -1,
 "",
 },
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -20789,7 +20754,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["parent"] = "Utilities - LWA - Priest",
 },
 ["Starfire"] = {
 ["iconSource"] = 0,
@@ -20974,14 +20939,14 @@ true,
 },
 },
 ["use_class_and_spec"] = true,
+["use_class"] = true,
+["use_spellknown"] = true,
 ["class"] = {
 ["single"] = "MAGE",
 ["multi"] = {
 ["MAGE"] = true,
 },
 },
-["use_class"] = true,
-["use_spellknown"] = true,
 ["class_and_spec"] = {
 ["single"] = 102,
 ["multi"] = {
@@ -20991,12 +20956,11 @@ true,
 [105] = true,
 },
 },
-["use_exact_spellknown"] = false,
 ["spec"] = {
 ["multi"] = {
 },
 },
-["use_combat"] = true,
+["use_exact_spellknown"] = false,
 ["spellknown"] = 194153,
 ["size"] = {
 ["multi"] = {
@@ -21005,9 +20969,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -21138,7 +21102,7 @@ true,
 },
 ["displayIcon"] = 135753,
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Shadow Covenant (Optional)"] = {
 ["iconSource"] = -1,
@@ -21266,21 +21230,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -21349,7 +21306,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Remove Corruption"] = {
 ["iconSource"] = -1,
@@ -21499,7 +21463,6 @@ true,
 [102] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 2782,
 ["size"] = {
 ["multi"] = {
@@ -21509,36 +21472,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -21591,12 +21535,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -21615,10 +21571,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "aPdXI4u2reX",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -21695,7 +21651,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Divine Word"] = {
 ["iconSource"] = -1,
@@ -21888,26 +21851,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -21921,9 +21882,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "fqgoTKr4e(K",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -21944,6 +21902,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "fqgoTKr4e(K",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -22032,11 +21993,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Rage Bar - LWA - Druid"] = {
@@ -22079,14 +22042,15 @@ true,
 ["sparkOffsetY"] = 0,
 ["gradientOrientation"] = "HORIZONTAL",
 ["load"] = {
-["itemtypeequipped"] = {
-},
 ["use_petbattle"] = false,
 ["use_never"] = false,
 ["talent"] = {
 ["multi"] = {
 },
 },
+["itemtypeequipped"] = {
+},
+["use_class_and_spec"] = true,
 ["class_and_spec"] = {
 ["single"] = 104,
 ["multi"] = {
@@ -22095,18 +22059,18 @@ true,
 [105] = true,
 },
 },
-["use_class_and_spec"] = true,
 ["class"] = {
 ["single"] = "MONK",
 ["multi"] = {
 },
 },
-["use_spellknown"] = true,
 ["use_class"] = true,
 ["role"] = {
 ["multi"] = {
 },
 },
+["use_spellknown"] = true,
+["use_spec"] = false,
 ["spec"] = {
 ["single"] = 3,
 ["multi"] = {
@@ -22114,9 +22078,7 @@ true,
 [3] = true,
 },
 },
-["use_spec"] = false,
 ["zoneIds"] = "",
-["use_combat"] = true,
 ["spellknown"] = 5487,
 ["size"] = {
 ["multi"] = {
@@ -22328,9 +22290,9 @@ true,
 ["icon"] = false,
 ["actions"] = {
 ["start"] = {
+["do_message"] = false,
 ["custom"] = "",
 ["do_custom"] = false,
-["do_message"] = false,
 },
 ["finish"] = {
 },
@@ -22502,7 +22464,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 274837,
 ["size"] = {
 ["multi"] = {
@@ -22512,7 +22473,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -22533,25 +22506,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -22564,10 +22518,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Core - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "hl(2XWa6(f5",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -22697,7 +22651,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Insanity Bar - LWA - Priest"] = {
 ["sparkWidth"] = 10,
@@ -22940,8 +22901,8 @@ true,
 ["text_selfPoint"] = "RIGHT",
 ["text_automaticWidth"] = "Auto",
 ["text_fixedWidth"] = 64,
+["anchorYOffset"] = 0,
 ["text_text_format_c_format"] = "none",
-["text_text_format_p_time_legacy_floor"] = true,
 ["text_justify"] = "CENTER",
 ["rotateText"] = "NONE",
 ["text_text_format_p_time_precision"] = 1,
@@ -22963,7 +22924,7 @@ true,
 ["text_visible"] = false,
 ["text_anchorPoint"] = "INNER_RIGHT",
 ["text_text_format_changeText_format"] = "none",
-["anchorYOffset"] = 0,
+["text_text_format_p_time_legacy_floor"] = true,
 ["text_fontSize"] = 14,
 ["anchorXOffset"] = 0,
 ["text_text_format_prediction_format"] = "none",
@@ -23021,9 +22982,9 @@ true,
 ["inverse"] = false,
 ["actions"] = {
 ["start"] = {
+["do_message"] = false,
 ["do_custom"] = false,
 ["custom"] = "",
-["do_message"] = false,
 },
 ["finish"] = {
 },
@@ -23210,17 +23171,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Utilities - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -23273,13 +23236,9 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 ["utility"] = {
@@ -23297,9 +23256,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "KL6JyFbth8W",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -23320,6 +23276,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "KL6JyFbth8W",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -23408,11 +23367,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Power Word: Fortitude"] = {
@@ -23626,17 +23587,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Maintenance - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Maintenance - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -23699,15 +23662,9 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-["custom"] = "aura_env.region.extraZoom = 0.15",
-["do_custom"] = true,
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 ["maintenance"] = {
@@ -23726,9 +23683,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = ")sOwmMtK22m",
-["inverse"] = false,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -23749,6 +23703,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = ")sOwmMtK22m",
+["inverse"] = false,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -23781,11 +23738,15 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+["custom"] = "aura_env.region.extraZoom = 0.15",
+["do_custom"] = true,
+},
 },
 },
 ["Wild Attunement (PvP Talent)"] = {
@@ -23967,7 +23928,6 @@ true,
 },
 },
 ["use_never"] = false,
-["use_combat"] = true,
 ["use_class_and_spec"] = true,
 ["size"] = {
 ["multi"] = {
@@ -23976,9 +23936,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -24045,7 +24005,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Idol of Yogg-Saron (Optional)"] = {
 ["iconSource"] = -1,
@@ -24210,21 +24170,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -24294,7 +24247,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Premonition of Insight (Holy)"] = {
 ["iconSource"] = -1,
@@ -24464,21 +24424,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -24548,7 +24501,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Premonition of Solace (Disicipline)"] = {
 ["iconSource"] = -1,
@@ -24681,21 +24641,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -24764,7 +24717,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Berserk (Guardian)"] = {
 ["iconSource"] = -1,
@@ -24909,7 +24869,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 50334,
 ["size"] = {
 ["multi"] = {
@@ -24919,7 +24878,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -24940,25 +24911,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -24971,10 +24923,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Core - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "JdmyBaG2Lz0",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -25047,7 +24999,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Holy Word: Serenity 1"] = {
 ["sparkWidth"] = 10,
@@ -25160,11 +25119,11 @@ true,
 ["stacks"] = "2",
 ["names"] = {
 },
-["trackcharge"] = "1",
+["useName"] = true,
 ["use_trackcharge"] = true,
 ["debuffType"] = "HELPFUL",
 ["charges_operator"] = "==",
-["type"] = "spell",
+["charges"] = "2",
 ["power"] = "1",
 ["unevent"] = "auto",
 ["track"] = "auto",
@@ -25175,8 +25134,8 @@ true,
 ["use_spellName"] = true,
 ["spellIds"] = {
 },
-["charges"] = "2",
-["useName"] = true,
+["type"] = "spell",
+["trackcharge"] = "1",
 ["unit"] = "player",
 ["duration"] = "1",
 ["use_genericShowOn"] = true,
@@ -25503,7 +25462,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 203651,
 ["size"] = {
 ["multi"] = {
@@ -25513,7 +25471,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -25534,25 +25504,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -25565,10 +25516,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Core - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "5m43colFL8P",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -25646,7 +25597,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Mass Dispel"] = {
 ["iconSource"] = -1,
@@ -25804,17 +25762,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Utilities - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -25867,13 +25827,9 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 ["utility"] = {
@@ -25891,9 +25847,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "vLApyO6knVx",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -25914,6 +25867,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "vLApyO6knVx",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -26034,11 +25990,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Invigorate"] = {
@@ -26161,7 +26119,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 392160,
 ["size"] = {
 ["multi"] = {
@@ -26171,7 +26128,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -26192,25 +26161,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -26223,10 +26173,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Core - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "wESiDTKWKSX",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -26304,7 +26254,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Shadow Word: Pain (Holy)"] = {
 ["iconSource"] = -1,
@@ -26430,26 +26387,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Dynamic Effects - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Dynamic Effects - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -26463,9 +26418,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "y2vJCKPBRyS",
-["inverse"] = false,
 ["animation"] = {
 ["start"] = {
 ["type"] = "preset",
@@ -26488,14 +26440,19 @@ true,
 ["preset"] = "shrink",
 },
 },
+["uid"] = "y2vJCKPBRyS",
+["inverse"] = false,
+["preferToUpdate"] = false,
 ["conditions"] = {
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Halo Archon (Holy)"] = {
@@ -26655,26 +26612,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -26688,9 +26643,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "Km4KAuB8mop",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -26711,6 +26663,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "Km4KAuB8mop",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -26818,11 +26773,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Shadowfiend (Shadow)"] = {
@@ -26839,39 +26796,39 @@ true,
 ["triggers"] = {
 {
 ["trigger"] = {
-["use_unit"] = true,
+["unit"] = "player",
 ["use_track"] = true,
 ["spellId"] = "49206",
 ["auranames"] = {
 },
-["subeventPrefix"] = "SPELL",
+["names"] = {
+},
 ["ownOnly"] = true,
 ["genericShowOn"] = "showOnCooldown",
-["unit"] = "player",
+["use_unit"] = true,
 ["use_genericShowOn"] = true,
-["custom"] = "function(event, arg1)\n    if event == \"PLAYER_TOTEM_UPDATE\" and arg1 then\n        local haveTotem, name, startTime, duration, icon = GetTotemInfo(arg1)\n        if haveTotem and icon == aura_env.texture then\n            aura_env.haveTotem, aura_env.name, aura_env.startTime, aura_env.duration, aura_env.icon = haveTotem, name, startTime, duration, icon\n            aura_env.index = arg1\n            return true\n        elseif aura_env.index == arg1 then\n            aura_env.index = 0\n            aura_env.startTime, aura_env.duration = nil, nil\n        end\n    end\nend",
 ["spellIds"] = {
 },
+["events"] = "PLAYER_TOTEM_UPDATE",
 ["use_spellId"] = true,
 ["customDuration"] = "function()\n    if aura_env.startTime then\n        return aura_env.duration, aura_env.startTime + aura_env.duration\n    end\nend",
 ["duration"] = "35",
 ["use_absorbMode"] = true,
 ["spellName"] = 0,
-["unevent"] = "auto",
-["type"] = "custom",
-["custom_type"] = "status",
 ["subeventSuffix"] = "_CAST_SUCCESS",
+["type"] = "custom",
+["unevent"] = "auto",
+["custom_type"] = "status",
 ["debuffType"] = "HELPFUL",
 ["useName"] = true,
 ["event"] = "Cooldown Progress (Spell)",
 ["totemName"] = "27829",
 ["realSpellName"] = 0,
 ["use_spellName"] = true,
-["events"] = "PLAYER_TOTEM_UPDATE",
+["custom"] = "function(event, arg1)\n    if event == \"PLAYER_TOTEM_UPDATE\" and arg1 then\n        local haveTotem, name, startTime, duration, icon = GetTotemInfo(arg1)\n        if haveTotem and icon == aura_env.texture then\n            aura_env.haveTotem, aura_env.name, aura_env.startTime, aura_env.duration, aura_env.icon = haveTotem, name, startTime, duration, icon\n            aura_env.index = arg1\n            return true\n        elseif aura_env.index == arg1 then\n            aura_env.index = 0\n            aura_env.startTime, aura_env.duration = nil, nil\n        end\n    end\nend",
 ["use_sourceUnit"] = true,
 ["check"] = "event",
-["names"] = {
-},
+["subeventPrefix"] = "SPELL",
 ["sourceUnit"] = "player",
 ["use_totemName"] = true,
 },
@@ -27020,11 +26977,11 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["parent"] = "Core - LWA - Priest",
 ["progressSource"] = {
 -1,
 "",
 },
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -27194,7 +27151,7 @@ true,
 },
 ["displayIcon"] = 136199,
 ["cooldown"] = true,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["parent"] = "Core - LWA - Priest",
 },
 ["Rake"] = {
 ["iconSource"] = -1,
@@ -27460,7 +27417,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spec"] = {
 ["multi"] = {
 },
@@ -27657,7 +27613,7 @@ true,
 -1,
 "",
 },
-["parent"] = "Core - LWA - Druid",
+["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
 ["uid"] = "UC(DURzFNVU",
@@ -27676,13 +27632,9 @@ true,
 ["semver"] = "11.0.8",
 ["tocversion"] = 110000,
 ["id"] = "Rake",
-["xOffset"] = 0,
+["parent"] = "Core - LWA - Druid",
 ["useCooldownModRate"] = true,
 ["anchorFrameType"] = "SCREEN",
-["adjustedMax"] = "",
-["config"] = {
-},
-["inverse"] = false,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -27703,12 +27655,16 @@ true,
 ["easeType"] = "none",
 },
 },
+["config"] = {
+},
+["inverse"] = false,
+["xOffset"] = 0,
 ["displayIcon"] = "",
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
+["adjustedMax"] = "",
 },
 ["Rip"] = {
 ["iconSource"] = -1,
@@ -27948,7 +27904,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spec"] = {
 ["multi"] = {
 },
@@ -28145,7 +28100,7 @@ true,
 -1,
 "",
 },
-["parent"] = "Core - LWA - Druid",
+["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
 ["uid"] = "vnCg)FY7cSH",
@@ -28164,13 +28119,9 @@ true,
 ["semver"] = "11.0.8",
 ["tocversion"] = 110000,
 ["id"] = "Rip",
-["xOffset"] = 0,
+["parent"] = "Core - LWA - Druid",
 ["useCooldownModRate"] = true,
 ["anchorFrameType"] = "SCREEN",
-["adjustedMax"] = "",
-["config"] = {
-},
-["inverse"] = false,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -28191,12 +28142,16 @@ true,
 ["easeType"] = "none",
 },
 },
+["config"] = {
+},
+["inverse"] = false,
+["xOffset"] = 0,
 ["displayIcon"] = "",
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
+["adjustedMax"] = "",
 },
 ["Core - LWA - Priest"] = {
 ["arcLength"] = 360,
@@ -28326,11 +28281,11 @@ true,
 ["Halo (Shadow)"] = false,
 ["Power Word: Barrier"] = false,
 ["Devouring Plague"] = false,
-["Mind Blast (Shadow)"] = false,
+["Ultimate Penitence"] = false,
 ["Voidwraith (Discipline)"] = false,
 ["Holy Word: Serenity"] = false,
 ["Divine Star (Discipline)"] = false,
-["Ultimate Penitence"] = false,
+["Mindbender (Shadow)"] = false,
 ["Mindgames (Shadow - PvP Talent)"] = false,
 ["Power Infusion (Discipline)"] = false,
 ["Mindbender (Discipline)"] = false,
@@ -28377,7 +28332,7 @@ true,
 ["Psyfiend (PvP Talent)"] = false,
 ["Premonition (Holy)"] = false,
 ["Vampiric Touch"] = false,
-["Mindbender (Shadow)"] = false,
+["Mind Blast (Shadow)"] = false,
 ["Shadowfiend (Discipline)"] = false,
 },
 ["fullCircle"] = true,
@@ -28612,26 +28567,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -28645,9 +28598,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "YM18lTXCG)n",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -28668,6 +28618,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "YM18lTXCG)n",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -28775,11 +28728,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Wrath 1"] = {
@@ -28822,14 +28777,20 @@ true,
 [235587] = true,
 },
 },
-["zoneIds"] = "",
 ["use_class_and_spec"] = true,
+["zoneIds"] = "",
 ["class_and_spec"] = {
 ["single"] = 102,
 },
-["use_exact_spellknown"] = false,
 ["use_class"] = true,
 ["use_spellknown"] = true,
+["class"] = {
+["single"] = "HUNTER",
+["multi"] = {
+["EVOKER"] = true,
+},
+},
+["use_spec"] = true,
 ["spec"] = {
 ["single"] = 2,
 ["multi"] = {
@@ -28837,14 +28798,7 @@ true,
 [3] = true,
 },
 },
-["use_spec"] = true,
-["class"] = {
-["single"] = "HUNTER",
-["multi"] = {
-["EVOKER"] = true,
-},
-},
-["use_combat"] = true,
+["use_exact_spellknown"] = false,
 ["spellknown"] = 79577,
 ["size"] = {
 ["multi"] = {
@@ -28889,20 +28843,21 @@ true,
 ["duration"] = "1",
 ["useStacks"] = true,
 ["use_rune"] = true,
-["use_unit"] = true,
+["names"] = {
+},
 ["use_absorbMode"] = true,
 ["genericShowOn"] = "showAlways",
-["unit"] = "player",
+["use_unit"] = true,
 ["powertype"] = 19,
 ["stacks"] = "2",
 ["use_charges"] = false,
-["type"] = "spell",
+["useName"] = true,
 ["use_trackcharge"] = false,
-["trackcharge"] = "1",
+["charges"] = "2",
 ["use_powertype"] = true,
 ["debuffType"] = "HELPFUL",
 ["charges_operator"] = "==",
-["charges"] = "2",
+["trackcharge"] = "1",
 ["unevent"] = "auto",
 ["power"] = "1",
 ["use_spellCount"] = false,
@@ -28913,10 +28868,9 @@ true,
 ["use_spellName"] = true,
 ["spellIds"] = {
 },
-["useName"] = true,
+["type"] = "spell",
 ["subeventPrefix"] = "SPELL",
-["names"] = {
-},
+["unit"] = "player",
 ["spellCount_operator"] = "==",
 ["matchesShowOn"] = "showOnActive",
 },
@@ -29219,9 +29173,9 @@ true,
 ["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
 ["actions"] = {
 ["start"] = {
+["do_message"] = false,
 ["custom"] = "",
 ["do_custom"] = false,
-["do_message"] = false,
 },
 ["finish"] = {
 },
@@ -29269,7 +29223,6 @@ true,
 [3] = true,
 },
 },
-["use_combat"] = true,
 ["class_and_spec"] = {
 ["single"] = 105,
 ["multi"] = {
@@ -29308,13 +29261,13 @@ true,
 {
 ["trigger"] = {
 ["type"] = "unit",
-["use_unit"] = true,
-["unevent"] = "auto",
 ["subeventPrefix"] = "SPELL",
-["duration"] = "1",
-["use_showCost"] = true,
+["unevent"] = "auto",
 ["names"] = {
 },
+["duration"] = "1",
+["use_showCost"] = true,
+["use_unit"] = true,
 ["subeventSuffix"] = "_CAST_START",
 ["powertype"] = 0,
 ["spellIds"] = {
@@ -29489,13 +29442,13 @@ true,
 ["wagoID"] = "ryBp05DHX",
 ["xOffset"] = 0,
 ["preferToUpdate"] = true,
-["gridWidth"] = 5,
+["frameStrata"] = 3,
 ["yOffset"] = 0,
 ["sortHybridTable"] = {
 ["Sunfire Bar"] = false,
 ["Moonfire Bar"] = false,
 },
-["animate"] = false,
+["stepAngle"] = 15,
 ["sharedFrameLevel"] = true,
 ["borderColor"] = {
 0,
@@ -29533,6 +29486,10 @@ true,
 },
 ["columnSpace"] = 1,
 ["internalVersion"] = 75,
+["anchorPoint"] = "CENTER",
+["useLimit"] = false,
+["align"] = "LEFT",
+["growOn"] = "show",
 ["animation"] = {
 ["start"] = {
 ["type"] = "none",
@@ -29553,13 +29510,9 @@ true,
 ["easeType"] = "none",
 },
 },
-["selfPoint"] = "TOP",
-["align"] = "LEFT",
-["growOn"] = "show",
-["radius"] = 200,
-["useLimit"] = false,
-["rotation"] = 0,
 ["gridType"] = "RD",
+["rotation"] = 0,
+["selfPoint"] = "TOP",
 ["version"] = 105,
 ["subRegions"] = {
 },
@@ -29599,19 +29552,19 @@ true,
 ["centerType"] = "LR",
 ["border"] = false,
 ["borderEdge"] = "Square Full White",
-["stepAngle"] = 15,
+["regionType"] = "dynamicgroup",
 ["borderSize"] = 2,
-["limit"] = 6,
 ["sort"] = "none",
-["frameStrata"] = 3,
+["animate"] = false,
+["alpha"] = 1,
 ["constantFactor"] = "RADIUS",
 ["space"] = 2,
 ["borderOffset"] = 4,
 ["semver"] = "11.0.8",
 ["tocversion"] = 110002,
 ["id"] = "Moonfire & Sunfire (Restoration) - LWA - Druid",
-["regionType"] = "dynamicgroup",
-["alpha"] = 1,
+["limit"] = 6,
+["gridWidth"] = 5,
 ["anchorFrameType"] = "SCREEN",
 ["borderInset"] = 1,
 ["uid"] = "ytiAoAlm4i3",
@@ -29622,7 +29575,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["anchorPoint"] = "CENTER",
+["radius"] = 200,
 },
 ["Left Side - LWA - Druid"] = {
 ["arcLength"] = 360,
@@ -29889,7 +29842,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 1079,
 ["size"] = {
 ["multi"] = {
@@ -29899,7 +29851,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = true,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Dynamic Effects - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["type"] = "preset",
@@ -29922,25 +29886,6 @@ true,
 ["preset"] = "shrink",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -29953,14 +29898,21 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Dynamic Effects - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "XtT0H8cGUlh",
 ["inverse"] = false,
-["preferToUpdate"] = true,
+["cooldownEdge"] = true,
 ["conditions"] = {
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Thrash (Guardian)"] = {
 ["iconSource"] = 0,
@@ -30172,14 +30124,14 @@ true,
 },
 },
 ["use_class_and_spec"] = true,
+["use_class"] = true,
+["use_spellknown"] = true,
 ["class"] = {
 ["single"] = "MAGE",
 ["multi"] = {
 ["MAGE"] = true,
 },
 },
-["use_class"] = true,
-["use_spellknown"] = true,
 ["class_and_spec"] = {
 ["single"] = 104,
 ["multi"] = {
@@ -30189,12 +30141,11 @@ true,
 [105] = true,
 },
 },
-["use_exact_spellknown"] = false,
 ["spec"] = {
 ["multi"] = {
 },
 },
-["use_combat"] = true,
+["use_exact_spellknown"] = false,
 ["spellknown"] = 106832,
 ["size"] = {
 ["multi"] = {
@@ -30203,9 +30154,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -30364,7 +30315,7 @@ true,
 },
 ["displayIcon"] = 451161,
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Solar Beam"] = {
 ["iconSource"] = -1,
@@ -30556,7 +30507,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 78675,
 ["size"] = {
 ["multi"] = {
@@ -30566,7 +30516,6 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["keepAspectRatio"] = true,
 ["actions"] = {
 ["start"] = {
 },
@@ -30575,6 +30524,7 @@ true,
 ["init"] = {
 },
 },
+["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -30809,7 +30759,7 @@ true,
 ["adjustedMax"] = "",
 ["displayIcon"] = 252188,
 ["cooldown"] = true,
-["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
+["keepAspectRatio"] = true,
 },
 ["Stellar Amplification"] = {
 ["iconSource"] = -1,
@@ -30954,7 +30904,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 450212,
 ["size"] = {
 ["multi"] = {
@@ -30963,9 +30912,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -31018,7 +30967,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Stampeding Roar"] = {
 ["iconSource"] = -1,
@@ -31190,7 +31139,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 106898,
 ["size"] = {
 ["multi"] = {
@@ -31200,36 +31148,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -31282,12 +31211,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -31306,10 +31247,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "BANE7xsfMbl",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -31427,7 +31368,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Ironfur Bar - LWA - Druid"] = {
 ["overlays"] = {
@@ -31482,14 +31430,20 @@ true,
 ["multi"] = {
 },
 },
-["zoneIds"] = "",
 ["use_class_and_spec"] = true,
+["zoneIds"] = "",
 ["class_and_spec"] = {
 ["single"] = 104,
 },
-["use_exact_spellknown"] = false,
 ["use_class"] = true,
 ["use_spellknown"] = true,
+["class"] = {
+["single"] = "WARRIOR",
+["multi"] = {
+["EVOKER"] = true,
+},
+},
+["use_spec"] = true,
 ["spec"] = {
 ["single"] = 2,
 ["multi"] = {
@@ -31497,14 +31451,7 @@ true,
 [3] = true,
 },
 },
-["use_spec"] = true,
-["class"] = {
-["single"] = "WARRIOR",
-["multi"] = {
-["EVOKER"] = true,
-},
-},
-["use_combat"] = true,
+["use_exact_spellknown"] = false,
 ["spellknown"] = 192081,
 ["size"] = {
 ["multi"] = {
@@ -31541,13 +31488,13 @@ true,
 ["unit"] = "player",
 ["names"] = {
 },
+["events"] = "CLEU:SPELL_AURA_APPLIED:SPELL_AURA_APPLIED_DOSE",
 ["custom"] = "function(allstates, _, _, _, _, sourceGUID, _, _, _, _, _, _, _, spellID)    \n    if sourceGUID == WeakAuras.myGUID and spellID == 192081 then\n        local auraData = C_UnitAuras.GetPlayerAuraBySpellID(192081)\n        \n        if auraData then\n            local expirationTime = auraData.expirationTime\n            local duration = auraData.duration\n            local applicationTime = expirationTime - duration\n            \n            allstates[applicationTime] = {\n                show = true,\n                changed = true,\n                progressType = \"timed\",\n                duration = duration,\n                expirationTime = expirationTime,\n                autoHide = true\n            }\n            \n            return true\n        end\n    end\nend",
-["spellIds"] = {
-},
 ["custom_type"] = "stateupdate",
 ["check"] = "event",
 ["subeventPrefix"] = "SPELL",
-["events"] = "CLEU:SPELL_AURA_APPLIED:SPELL_AURA_APPLIED_DOSE",
+["spellIds"] = {
+},
 ["debuffType"] = "HELPFUL",
 },
 ["untrigger"] = {
@@ -32040,7 +31987,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 99,
 ["size"] = {
 ["multi"] = {
@@ -32050,36 +31996,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -32132,12 +32059,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -32156,10 +32095,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "NO6KeuWrgPX",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -32277,7 +32216,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Divine Image (Optional)"] = {
 ["iconSource"] = -1,
@@ -32442,21 +32388,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -32540,7 +32479,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Energy Bar (Off-Spec) - LWA - Druid"] = {
 ["overlays"] = {
@@ -32582,14 +32528,15 @@ true,
 ["sparkOffsetY"] = 0,
 ["gradientOrientation"] = "HORIZONTAL",
 ["load"] = {
-["itemtypeequipped"] = {
-},
 ["use_petbattle"] = false,
 ["use_never"] = false,
 ["talent"] = {
 ["multi"] = {
 },
 },
+["itemtypeequipped"] = {
+},
+["use_class_and_spec"] = false,
 ["class_and_spec"] = {
 ["multi"] = {
 [104] = true,
@@ -32597,18 +32544,18 @@ true,
 [105] = true,
 },
 },
-["use_class_and_spec"] = false,
 ["class"] = {
 ["single"] = "MONK",
 ["multi"] = {
 },
 },
-["use_spellknown"] = false,
 ["use_class"] = true,
 ["role"] = {
 ["multi"] = {
 },
 },
+["use_spellknown"] = false,
+["use_spec"] = false,
 ["spec"] = {
 ["single"] = 3,
 ["multi"] = {
@@ -32616,9 +32563,7 @@ true,
 [3] = true,
 },
 },
-["use_spec"] = false,
 ["zoneIds"] = "",
-["use_combat"] = true,
 ["spellknown"] = 1822,
 ["size"] = {
 ["multi"] = {
@@ -32843,9 +32788,9 @@ true,
 ["icon"] = false,
 ["actions"] = {
 ["start"] = {
+["do_message"] = false,
 ["custom"] = "",
 ["do_custom"] = false,
-["do_message"] = false,
 },
 ["finish"] = {
 },
@@ -32914,14 +32859,20 @@ true,
 ["multi"] = {
 },
 },
-["zoneIds"] = "",
 ["use_class_and_spec"] = true,
+["zoneIds"] = "",
 ["class_and_spec"] = {
 ["single"] = 102,
 },
-["use_exact_spellknown"] = false,
 ["use_class"] = true,
 ["use_spellknown"] = true,
+["class"] = {
+["single"] = "HUNTER",
+["multi"] = {
+["EVOKER"] = true,
+},
+},
+["use_spec"] = true,
 ["spec"] = {
 ["single"] = 2,
 ["multi"] = {
@@ -32929,14 +32880,7 @@ true,
 [3] = true,
 },
 },
-["use_spec"] = true,
-["class"] = {
-["single"] = "HUNTER",
-["multi"] = {
-["EVOKER"] = true,
-},
-},
-["use_combat"] = true,
+["use_exact_spellknown"] = false,
 ["spellknown"] = 79577,
 ["size"] = {
 ["multi"] = {
@@ -32981,20 +32925,21 @@ true,
 ["duration"] = "1",
 ["useStacks"] = true,
 ["use_rune"] = true,
-["use_unit"] = true,
+["names"] = {
+},
 ["use_absorbMode"] = true,
 ["genericShowOn"] = "showAlways",
-["unit"] = "player",
+["use_unit"] = true,
 ["powertype"] = 19,
 ["stacks"] = "2",
 ["use_charges"] = false,
-["type"] = "spell",
+["useName"] = true,
 ["use_trackcharge"] = false,
-["trackcharge"] = "2",
+["charges"] = "2",
 ["use_powertype"] = true,
 ["debuffType"] = "HELPFUL",
 ["charges_operator"] = "==",
-["charges"] = "2",
+["trackcharge"] = "2",
 ["unevent"] = "auto",
 ["power"] = "1",
 ["use_spellCount"] = false,
@@ -33005,10 +32950,9 @@ true,
 ["use_spellName"] = true,
 ["spellIds"] = {
 },
-["useName"] = true,
+["type"] = "spell",
 ["subeventPrefix"] = "SPELL",
-["names"] = {
-},
+["unit"] = "player",
 ["spellCount_operator"] = "==",
 ["matchesShowOn"] = "showOnActive",
 },
@@ -33495,7 +33439,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 18562,
 ["size"] = {
 ["multi"] = {
@@ -33504,9 +33447,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -33704,7 +33647,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Answered Prayers"] = {
 ["iconSource"] = -1,
@@ -33895,21 +33838,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -33979,7 +33915,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Combot Point 1 - Druid"] = {
 ["overlays"] = {
@@ -34016,14 +33959,15 @@ true,
 ["sparkOffsetY"] = 0,
 ["gradientOrientation"] = "HORIZONTAL",
 ["load"] = {
-["itemtypeequipped"] = {
-},
 ["use_petbattle"] = false,
 ["use_never"] = false,
 ["talent"] = {
 ["multi"] = {
 },
 },
+["itemtypeequipped"] = {
+},
+["use_class_and_spec"] = true,
 ["class_and_spec"] = {
 ["single"] = 103,
 ["multi"] = {
@@ -34033,19 +33977,19 @@ true,
 [105] = true,
 },
 },
-["use_class_and_spec"] = true,
 ["class"] = {
 ["single"] = "MONK",
 ["multi"] = {
 ["EVOKER"] = true,
 },
 },
-["use_spellknown"] = true,
 ["use_class"] = true,
 ["role"] = {
 ["multi"] = {
 },
 },
+["use_spellknown"] = true,
+["use_spec"] = true,
 ["spec"] = {
 ["single"] = 3,
 ["multi"] = {
@@ -34054,9 +33998,7 @@ true,
 true,
 },
 },
-["use_spec"] = true,
 ["zoneIds"] = "",
-["use_combat"] = true,
 ["spellknown"] = 768,
 ["size"] = {
 ["multi"] = {
@@ -34643,7 +34585,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 106832,
 ["size"] = {
 ["multi"] = {
@@ -34652,9 +34593,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -34691,7 +34632,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Echoing Void"] = {
 ["iconSource"] = -1,
@@ -34856,21 +34797,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -34940,7 +34874,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Rebirth"] = {
 ["iconSource"] = -1,
@@ -35155,7 +35096,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 20484,
 ["size"] = {
 ["multi"] = {
@@ -35164,9 +35104,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -35403,7 +35343,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Ironfur"] = {
 ["iconSource"] = -1,
@@ -35609,7 +35549,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 192081,
 ["size"] = {
 ["multi"] = {
@@ -35618,9 +35557,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -35758,7 +35697,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Prowl"] = {
 ["iconSource"] = -1,
@@ -35906,7 +35845,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 5215,
 ["size"] = {
 ["multi"] = {
@@ -35916,7 +35854,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Maintenance - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -35937,25 +35887,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -35968,10 +35899,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Maintenance - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "EOg6FdKsjmG",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -36044,7 +35975,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Tranquility"] = {
 ["iconSource"] = -1,
@@ -36215,7 +36153,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 740,
 ["size"] = {
 ["multi"] = {
@@ -36225,7 +36162,6 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["keepAspectRatio"] = true,
 ["actions"] = {
 ["start"] = {
 },
@@ -36236,6 +36172,7 @@ true,
 ["do_custom"] = true,
 },
 },
+["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -36374,7 +36311,7 @@ true,
 ["adjustedMax"] = "",
 ["displayIcon"] = 136107,
 ["cooldown"] = true,
-["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
+["keepAspectRatio"] = true,
 },
 ["Bloodseeker Vines (Feral)"] = {
 ["iconSource"] = -1,
@@ -36538,25 +36475,24 @@ true,
 },
 },
 ["use_class_and_spec"] = true,
+["use_class"] = true,
+["use_spellknown"] = false,
 ["spec"] = {
 ["multi"] = {
 },
 },
-["use_class"] = true,
-["use_spellknown"] = false,
-["use_herotalent"] = false,
 ["herotalent"] = {
 ["multi"] = {
 ["117226"] = true,
 },
 },
+["use_herotalent"] = false,
 ["class"] = {
 ["single"] = "MAGE",
 ["multi"] = {
 ["MAGE"] = true,
 },
 },
-["use_combat"] = true,
 ["class_and_spec"] = {
 ["single"] = 103,
 ["multi"] = {
@@ -36573,9 +36509,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -36643,7 +36579,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Celestial Alignment"] = {
 ["iconSource"] = -1,
@@ -36806,15 +36742,15 @@ true,
 },
 },
 ["use_class_and_spec"] = true,
+["use_talent"] = false,
+["use_class"] = true,
+["use_spellknown"] = true,
 ["class"] = {
 ["single"] = "MAGE",
 ["multi"] = {
 ["MAGE"] = true,
 },
 },
-["use_talent"] = false,
-["use_class"] = true,
-["use_spellknown"] = true,
 ["class_and_spec"] = {
 ["single"] = 102,
 ["multi"] = {
@@ -36824,12 +36760,11 @@ true,
 [105] = true,
 },
 },
-["use_exact_spellknown"] = false,
 ["spec"] = {
 ["multi"] = {
 },
 },
-["use_combat"] = true,
+["use_exact_spellknown"] = false,
 ["spellknown"] = 194223,
 ["size"] = {
 ["multi"] = {
@@ -36839,7 +36774,6 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["keepAspectRatio"] = true,
 ["actions"] = {
 ["start"] = {
 },
@@ -36848,6 +36782,7 @@ true,
 ["init"] = {
 },
 },
+["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -36962,7 +36897,7 @@ true,
 ["adjustedMax"] = "",
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
+["keepAspectRatio"] = true,
 },
 ["Luxthos - Priest"] = {
 ["controlledChildren"] = {
@@ -37072,8 +37007,7 @@ true,
 ["regionType"] = "group",
 ["borderSize"] = 2,
 ["anchorFrameParent"] = false,
-["config"] = {
-},
+["uid"] = "739QF28TVZV",
 ["borderOffset"] = 4,
 ["semver"] = "11.0.4",
 ["tocversion"] = 110000,
@@ -37083,8 +37017,9 @@ true,
 ["anchorFrameType"] = "SCREEN",
 ["authorOptions"] = {
 },
+["config"] = {
+},
 ["borderInset"] = 1,
-["uid"] = "739QF28TVZV",
 ["frameStrata"] = 2,
 ["conditions"] = {
 },
@@ -37360,7 +37295,6 @@ true,
 ["multi"] = {
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 106832,
 ["size"] = {
 ["multi"] = {
@@ -37532,7 +37466,7 @@ true,
 -1,
 "",
 },
-["parent"] = "Core - LWA - Druid",
+["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
 ["uid"] = "n(0JuQBu)h1",
@@ -37551,13 +37485,9 @@ true,
 ["semver"] = "11.0.8",
 ["tocversion"] = 110000,
 ["id"] = "Thrash (Feral)",
-["xOffset"] = 0,
+["parent"] = "Core - LWA - Druid",
 ["useCooldownModRate"] = true,
 ["anchorFrameType"] = "SCREEN",
-["adjustedMax"] = "",
-["config"] = {
-},
-["inverse"] = false,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -37578,12 +37508,16 @@ true,
 ["easeType"] = "none",
 },
 },
+["config"] = {
+},
+["inverse"] = false,
+["xOffset"] = 0,
 ["displayIcon"] = "",
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
+["adjustedMax"] = "",
 },
 ["Mindgames (Holy - PvP Talent)"] = {
 ["iconSource"] = -1,
@@ -37736,26 +37670,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -37769,9 +37701,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "wcAKCrjFEqo",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -37792,6 +37721,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "wcAKCrjFEqo",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -37921,11 +37853,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Mana Bar (Optional - Off-Spec) - LWA - Druid"] = {
@@ -37946,9 +37880,9 @@ true,
 ["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
 ["actions"] = {
 ["start"] = {
+["do_message"] = false,
 ["custom"] = "",
 ["do_custom"] = false,
-["do_message"] = false,
 },
 ["finish"] = {
 },
@@ -38001,7 +37935,6 @@ true,
 ["WARLOCK"] = true,
 },
 },
-["use_combat"] = true,
 ["spec"] = {
 ["single"] = 3,
 ["multi"] = {
@@ -38373,17 +38306,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Utilities - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -38436,13 +38371,9 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 ["utility"] = {
@@ -38460,9 +38391,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "WGelHw4qcYM",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -38483,6 +38411,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "WGelHw4qcYM",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -38600,11 +38531,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Precognition (Balance & Restoration - PvP Talent)"] = {
@@ -38734,12 +38667,14 @@ true,
 ["MAGE"] = true,
 },
 },
+["use_class"] = true,
+["use_spellknown"] = true,
 ["spec"] = {
 ["multi"] = {
 },
 },
-["use_class"] = true,
-["use_spellknown"] = true,
+["pvptalent"] = {
+},
 ["class_and_spec"] = {
 ["single"] = 64,
 ["multi"] = {
@@ -38747,10 +38682,7 @@ true,
 [105] = true,
 },
 },
-["pvptalent"] = {
-},
 ["use_class_and_spec"] = false,
-["use_combat"] = true,
 ["spellknown"] = 377360,
 ["size"] = {
 ["multi"] = {
@@ -38759,9 +38691,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -38814,7 +38746,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Berserk (Feral)"] = {
 ["iconSource"] = -1,
@@ -38964,7 +38896,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 106951,
 ["size"] = {
 ["multi"] = {
@@ -38974,7 +38905,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -38995,25 +38938,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -39026,10 +38950,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Core - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "65MfCaRSxpi",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -39102,7 +39026,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Renewal"] = {
 ["iconSource"] = -1,
@@ -39253,7 +39184,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 108238,
 ["size"] = {
 ["multi"] = {
@@ -39263,36 +39193,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -39345,12 +39256,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -39369,10 +39292,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "kKX7Kidocdz",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -39449,7 +39372,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Barkskin (Balance, Feral & Restoration)"] = {
 ["iconSource"] = -1,
@@ -39620,7 +39550,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 22812,
 ["size"] = {
 ["multi"] = {
@@ -39630,36 +39559,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -39712,12 +39622,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -39736,10 +39658,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "dPgxYlnaftx",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -39857,7 +39779,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Mighty Bash"] = {
 ["iconSource"] = -1,
@@ -40029,7 +39958,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 5211,
 ["size"] = {
 ["multi"] = {
@@ -40039,36 +39967,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -40121,12 +40030,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -40145,10 +40066,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "vMsgIv0YZS2",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -40298,7 +40219,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Combo Points (Off-Spec) - LWA - Druid"] = {
 ["arcLength"] = 360,
@@ -40313,10 +40241,10 @@ true,
 ["wagoID"] = "ryBp05DHX",
 ["xOffset"] = 0,
 ["preferToUpdate"] = true,
-["alpha"] = 1,
+["frameStrata"] = 1,
 ["yOffset"] = 0,
 ["anchorPoint"] = "CENTER",
-["animate"] = false,
+["stepAngle"] = 15,
 ["sharedFrameLevel"] = true,
 ["fullCircle"] = true,
 ["rowSpace"] = 1,
@@ -40349,13 +40277,11 @@ true,
 },
 ["columnSpace"] = 1,
 ["internalVersion"] = 75,
-["parent"] = "Resources - LWA - Druid",
+["selfPoint"] = "TOP",
 ["useLimit"] = false,
 ["align"] = "LEFT",
 ["growOn"] = "show",
-["space"] = 2,
 ["radius"] = 200,
-["rotation"] = 0,
 ["sortHybridTable"] = {
 ["Combot Point 1 (Off-Spec) - Druid"] = false,
 ["Combot Point 5 (Off-Spec) - Druid"] = false,
@@ -40363,6 +40289,8 @@ true,
 ["Combot Point 3 (Off-Spec) - Druid"] = false,
 ["Combot Point 2 (Off-Spec) - Druid"] = false,
 },
+["rotation"] = 0,
+["parent"] = "Resources - LWA - Druid",
 ["version"] = 105,
 ["subRegions"] = {
 },
@@ -40405,19 +40333,19 @@ true,
 ["centerType"] = "LR",
 ["border"] = false,
 ["borderEdge"] = "Square Full White",
-["stepAngle"] = 15,
+["regionType"] = "dynamicgroup",
 ["borderSize"] = 2,
-["sort"] = "none",
 ["limit"] = 6,
-["frameStrata"] = 1,
+["animate"] = false,
+["gridWidth"] = 5,
 ["constantFactor"] = "RADIUS",
 ["borderInset"] = 1,
 ["borderOffset"] = 4,
 ["semver"] = "11.0.8",
 ["tocversion"] = 110000,
 ["id"] = "Combo Points (Off-Spec) - LWA - Druid",
-["regionType"] = "dynamicgroup",
-["gridWidth"] = 5,
+["sort"] = "none",
+["alpha"] = 1,
 ["anchorFrameType"] = "SCREEN",
 ["gridType"] = "RD",
 ["config"] = {
@@ -40449,7 +40377,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["selfPoint"] = "TOP",
+["space"] = 2,
 },
 ["Dash"] = {
 ["iconSource"] = -1,
@@ -40622,7 +40550,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 1850,
 ["size"] = {
 ["multi"] = {
@@ -40632,36 +40559,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -40714,12 +40622,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -40738,10 +40658,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = ")kizAEysL9F",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -40859,7 +40779,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Incarnation: Tree of Life"] = {
 ["iconSource"] = -1,
@@ -40982,14 +40909,14 @@ true,
 },
 },
 ["use_class_and_spec"] = true,
+["use_class"] = true,
+["use_spellknown"] = true,
 ["class"] = {
 ["single"] = "MAGE",
 ["multi"] = {
 ["MAGE"] = true,
 },
 },
-["use_class"] = true,
-["use_spellknown"] = true,
 ["class_and_spec"] = {
 ["single"] = 105,
 ["multi"] = {
@@ -40999,12 +40926,11 @@ true,
 [105] = true,
 },
 },
-["use_exact_spellknown"] = true,
 ["spec"] = {
 ["multi"] = {
 },
 },
-["use_combat"] = true,
+["use_exact_spellknown"] = true,
 ["spellknown"] = 33891,
 ["size"] = {
 ["multi"] = {
@@ -41014,7 +40940,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -41035,25 +40973,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -41066,10 +40985,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Core - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "GstKuUrDQl7",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -41142,7 +41061,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Adaptive Swarm (Feral)"] = {
 ["iconSource"] = -1,
@@ -41267,14 +41193,14 @@ true,
 },
 },
 ["use_class_and_spec"] = true,
+["use_class"] = true,
+["use_spellknown"] = true,
 ["class"] = {
 ["single"] = "MAGE",
 ["multi"] = {
 ["MAGE"] = true,
 },
 },
-["use_class"] = true,
-["use_spellknown"] = true,
 ["class_and_spec"] = {
 ["single"] = 103,
 ["multi"] = {
@@ -41284,12 +41210,11 @@ true,
 [105] = true,
 },
 },
-["use_exact_spellknown"] = true,
 ["spec"] = {
 ["multi"] = {
 },
 },
-["use_combat"] = true,
+["use_exact_spellknown"] = true,
 ["spellknown"] = 391888,
 ["size"] = {
 ["multi"] = {
@@ -41299,7 +41224,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -41320,25 +41257,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -41351,10 +41269,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Core - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "2f3zmwr9rp3",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -41484,7 +41402,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Dark Evangelism (Optional)"] = {
 ["iconSource"] = -1,
@@ -41649,21 +41574,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -41716,7 +41634,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Mark of the Wild"] = {
 ["iconSource"] = -1,
@@ -41922,7 +41847,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 1126,
 ["size"] = {
 ["multi"] = {
@@ -41932,36 +41856,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = true,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Maintenance - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -42024,12 +41929,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -42049,10 +41966,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Maintenance - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "SG0uvMlfCqO",
 ["inverse"] = false,
-["preferToUpdate"] = true,
+["cooldownEdge"] = true,
 ["conditions"] = {
 {
 ["check"] = {
@@ -42085,7 +42002,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Holy Word: Serenity 2"] = {
 ["sparkWidth"] = 10,
@@ -42199,11 +42123,11 @@ true,
 ["stacks"] = "2",
 ["names"] = {
 },
-["trackcharge"] = "2",
+["useName"] = true,
 ["use_trackcharge"] = true,
 ["debuffType"] = "HELPFUL",
 ["charges_operator"] = "==",
-["type"] = "spell",
+["charges"] = "2",
 ["power"] = "1",
 ["unevent"] = "auto",
 ["track"] = "auto",
@@ -42214,8 +42138,8 @@ true,
 ["use_spellName"] = true,
 ["spellIds"] = {
 },
-["charges"] = "2",
-["useName"] = true,
+["type"] = "spell",
+["trackcharge"] = "2",
 ["unit"] = "player",
 ["duration"] = "1",
 ["use_genericShowOn"] = true,
@@ -42573,7 +42497,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 88423,
 ["size"] = {
 ["multi"] = {
@@ -42583,36 +42506,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -42665,12 +42569,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -42689,10 +42605,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "m3mtTA70ktQ",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -42769,7 +42685,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Holy Word: Serenity"] = {
 ["iconSource"] = -1,
@@ -42953,21 +42876,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -43163,7 +43079,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Parting Skies (Optional)"] = {
 ["iconSource"] = -1,
@@ -43308,7 +43231,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 394094,
 ["size"] = {
 ["multi"] = {
@@ -43317,9 +43239,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -43372,7 +43294,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Convoke the Spirits (Balance)"] = {
 ["iconSource"] = -1,
@@ -43497,14 +43419,14 @@ true,
 },
 },
 ["use_class_and_spec"] = true,
+["use_class"] = true,
+["use_spellknown"] = true,
 ["class"] = {
 ["single"] = "MAGE",
 ["multi"] = {
 ["MAGE"] = true,
 },
 },
-["use_class"] = true,
-["use_spellknown"] = true,
 ["class_and_spec"] = {
 ["single"] = 102,
 ["multi"] = {
@@ -43514,12 +43436,11 @@ true,
 [105] = true,
 },
 },
-["use_exact_spellknown"] = true,
 ["spec"] = {
 ["multi"] = {
 },
 },
-["use_combat"] = true,
+["use_exact_spellknown"] = true,
 ["spellknown"] = 391528,
 ["size"] = {
 ["multi"] = {
@@ -43529,7 +43450,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -43550,25 +43483,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -43581,10 +43495,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Core - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "8q5MgG)2E4N",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -43657,7 +43571,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["New Moon"] = {
 ["iconSource"] = -1,
@@ -43841,7 +43762,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 274281,
 ["size"] = {
 ["multi"] = {
@@ -43850,9 +43770,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -43983,7 +43903,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Bristling Fur"] = {
 ["iconSource"] = -1,
@@ -44127,7 +44047,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 155835,
 ["size"] = {
 ["multi"] = {
@@ -44137,7 +44056,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -44158,25 +44089,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -44189,10 +44101,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Core - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "8j6B2JKvvBK",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -44265,7 +44177,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Twist of Fate (Optional - Shadow)"] = {
 ["iconSource"] = -1,
@@ -44393,21 +44312,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -44476,7 +44388,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Mindgames (Shadow - PvP Talent)"] = {
 ["iconSource"] = -1,
@@ -44629,26 +44548,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -44662,9 +44579,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "dc9BXDHEaAa",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -44685,6 +44599,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "dc9BXDHEaAa",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -44814,11 +44731,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Resources - LWA - Druid"] = {
@@ -45089,21 +45008,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -45173,7 +45085,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Rage of the Sleeper"] = {
 ["iconSource"] = -1,
@@ -45317,7 +45236,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 200851,
 ["size"] = {
 ["multi"] = {
@@ -45327,7 +45245,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -45348,25 +45278,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -45379,10 +45290,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Core - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "MoRia5Yasoj",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -45455,7 +45366,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Mana Bar (Discipline & Holy) - LWA - Priest"] = {
 ["sparkWidth"] = 10,
@@ -45546,13 +45464,13 @@ true,
 {
 ["trigger"] = {
 ["type"] = "unit",
-["use_unit"] = true,
-["unevent"] = "auto",
 ["subeventPrefix"] = "SPELL",
-["duration"] = "1",
-["use_showCost"] = true,
+["unevent"] = "auto",
 ["names"] = {
 },
+["duration"] = "1",
+["use_showCost"] = true,
+["use_unit"] = true,
 ["subeventSuffix"] = "_CAST_START",
 ["powertype"] = 0,
 ["spellIds"] = {
@@ -45707,9 +45625,9 @@ true,
 ["sparkHidden"] = "NEVER",
 ["actions"] = {
 ["start"] = {
+["do_message"] = false,
 ["do_custom"] = false,
 ["custom"] = "",
-["do_message"] = false,
 },
 ["finish"] = {
 },
@@ -45950,7 +45868,6 @@ true,
 ["multi"] = {
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 400533,
 ["size"] = {
 ["multi"] = {
@@ -45959,9 +45876,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -46024,7 +45941,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Solar Eclipse"] = {
 ["sparkWidth"] = 10,
@@ -46066,14 +45983,20 @@ true,
 [235587] = true,
 },
 },
-["zoneIds"] = "",
 ["use_class_and_spec"] = true,
+["zoneIds"] = "",
 ["class_and_spec"] = {
 ["single"] = 102,
 },
-["use_exact_spellknown"] = false,
 ["use_class"] = true,
 ["use_spellknown"] = true,
+["class"] = {
+["single"] = "HUNTER",
+["multi"] = {
+["EVOKER"] = true,
+},
+},
+["use_spec"] = true,
 ["spec"] = {
 ["single"] = 2,
 ["multi"] = {
@@ -46081,14 +46004,7 @@ true,
 [3] = true,
 },
 },
-["use_spec"] = true,
-["class"] = {
-["single"] = "HUNTER",
-["multi"] = {
-["EVOKER"] = true,
-},
-},
-["use_combat"] = true,
+["use_exact_spellknown"] = false,
 ["spellknown"] = 79577,
 ["size"] = {
 ["multi"] = {
@@ -46376,14 +46292,14 @@ true,
 ["event"] = "GTFO",
 ["unit"] = "player",
 ["debuffType"] = "HELPFUL",
+["events"] = "OPTIONS",
 ["spellIds"] = {
 },
-["custom"] = "function ()\n    WeakAuras.ScanEvents(\"LWA_OPTIONS\")\nend",
 ["custom_type"] = "event",
 ["names"] = {
 },
 ["subeventPrefix"] = "SPELL",
-["events"] = "OPTIONS",
+["custom"] = "function ()\n    WeakAuras.ScanEvents(\"LWA_OPTIONS\")\nend",
 ["custom_hide"] = "custom",
 },
 ["untrigger"] = {
@@ -46465,6 +46381,242 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
+["desc"] = "Made by Luxthos - twitch.tv/luxthos",
+["color"] = {
+0,
+0,
+0,
+0,
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["conditions"] = {
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["selfPoint"] = "TOP",
+["preferToUpdate"] = false,
+["uid"] = "hBaMeXhPGLt",
+["xOffset"] = 4.7504901885986e-05,
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["cooldownTextDisabled"] = false,
+["zoom"] = 0,
+["semver"] = "11.0.4",
+["tocversion"] = 110000,
+["id"] = "Class Options - LWA - Priest",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 1.0000950098038,
+["keepAspectRatio"] = false,
+["config"] = {
+["resources"] = {
+["holy_word_serenity"] = {
+["color2"] = {
+0.019607843831182,
+0.73725491762161,
+0.82745105028152,
+1,
+},
+["cooldown_color2"] = {
+1,
+1,
+1,
+0.40000003576279,
+},
+["cooldown_color1"] = {
+1,
+1,
+1,
+0.30000001192093,
+},
+["height"] = 10,
+["gradient"] = 1,
+["cooldown_gradient"] = 1,
+["color1"] = {
+0.53725492954254,
+0.98823535442352,
+1,
+1,
+},
+},
+["mana_bar_shadow"] = {
+["color2"] = {
+0.23137254901961,
+0.63137254901961,
+1,
+1,
+},
+["high_gradient"] = 1,
+["gradient"] = 1,
+["height"] = 5,
+["high_color1"] = {
+1,
+1,
+1,
+0.30000001192093,
+},
+["high_color2"] = {
+1,
+1,
+1,
+0.40000003576279,
+},
+["color1"] = {
+0.03921568627451,
+0.45098039215686,
+0.82745098039216,
+1,
+},
+},
+["holy_word_radiance"] = {
+["color2"] = {
+1,
+0.85882359743118,
+0.45490199327469,
+1,
+},
+["cooldown_color2"] = {
+1,
+1,
+1,
+0.40000003576279,
+},
+["cooldown_color1"] = {
+1,
+1,
+1,
+0.30000001192093,
+},
+["height"] = 10,
+["gradient"] = 1,
+["cooldown_gradient"] = 1,
+["color1"] = {
+0.91372555494308,
+0.6235294342041,
+0.1803921610117,
+1,
+},
+},
+["insanity_bar"] = {
+["height"] = 20,
+["gradient"] = 1,
+["color2"] = {
+0.85882359743118,
+0.46666669845581,
+1,
+1,
+},
+["color1"] = {
+0.50196081399918,
+0.16078431904316,
+0.8117647767067,
+1,
+},
+},
+["mind_blast"] = {
+["cooldown_color2"] = {
+0.92941182851791,
+0.92941182851791,
+0.92941182851791,
+0.5,
+},
+["insight_color2"] = {
+1,
+1,
+1,
+1,
+},
+["insight_gradient"] = 1,
+["color1"] = {
+0.94901967048645,
+0.55686277151108,
+0.25098040699959,
+1,
+},
+["color2"] = {
+1,
+0.88235300779343,
+0.61960786581039,
+1,
+},
+["cooldown_color1"] = {
+0.69803923368454,
+0.69803923368454,
+0.69803923368454,
+0.5,
+},
+["insight_color1"] = {
+1,
+1,
+1,
+1,
+},
+["height"] = 10,
+["gradient"] = 1,
+["cooldown_gradient"] = 1,
+},
+["mana_bar"] = {
+["color2"] = {
+0.23137254901961,
+0.63137254901961,
+1,
+1,
+},
+["height"] = 5,
+["format"] = 5,
+["gradient"] = 1,
+["color1"] = {
+0.03921568627451,
+0.45098039215686,
+0.82745098039216,
+1,
+},
+},
+["holy_word_sanctify"] = {
+["color2"] = {
+1,
+0.85882359743118,
+0.45490199327469,
+1,
+},
+["cooldown_color2"] = {
+1,
+1,
+1,
+0.40000003576279,
+},
+["cooldown_color1"] = {
+1,
+1,
+1,
+0.30000001192093,
+},
+["height"] = 10,
+["gradient"] = 1,
+["cooldown_gradient"] = 1,
+["color1"] = {
+0.91372555494308,
+0.6235294342041,
+0.1803921610117,
+1,
+},
+},
+},
+},
+["inverse"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+["custom"] = "aura_env.CLASS = aura_env.id:gsub(\"Class Options %- LWA %- \", \"\")\n\nLWA = LWA or {}\nLWA[aura_env.CLASS] = LWA[aura_env.CLASS] or { UpdateBar = function() end }\n\nlocal LWA = LWA[aura_env.CLASS]\n\nLWA.configs = LWA.configs or {}\nLWA.configs[\"class\"] = aura_env.config\n\n",
+["do_custom"] = true,
+},
+},
+["displayIcon"] = 134520,
+["cooldown"] = false,
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -47454,242 +47606,6 @@ true,
 ["size"] = 10,
 },
 },
-["desc"] = "Made by Luxthos - twitch.tv/luxthos",
-["information"] = {
-["forceEvents"] = true,
-},
-["conditions"] = {
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["selfPoint"] = "TOP",
-["preferToUpdate"] = false,
-["uid"] = "hBaMeXhPGLt",
-["xOffset"] = 4.7504901885986e-05,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["cooldownTextDisabled"] = false,
-["zoom"] = 0,
-["semver"] = "11.0.4",
-["tocversion"] = 110000,
-["id"] = "Class Options - LWA - Priest",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 1.0000950098038,
-["keepAspectRatio"] = false,
-["config"] = {
-["resources"] = {
-["holy_word_serenity"] = {
-["color2"] = {
-0.019607843831182,
-0.73725491762161,
-0.82745105028152,
-1,
-},
-["cooldown_color2"] = {
-1,
-1,
-1,
-0.40000003576279,
-},
-["cooldown_color1"] = {
-1,
-1,
-1,
-0.30000001192093,
-},
-["height"] = 10,
-["gradient"] = 1,
-["cooldown_gradient"] = 1,
-["color1"] = {
-0.53725492954254,
-0.98823535442352,
-1,
-1,
-},
-},
-["mana_bar_shadow"] = {
-["color2"] = {
-0.23137254901961,
-0.63137254901961,
-1,
-1,
-},
-["high_gradient"] = 1,
-["gradient"] = 1,
-["height"] = 5,
-["high_color1"] = {
-1,
-1,
-1,
-0.30000001192093,
-},
-["high_color2"] = {
-1,
-1,
-1,
-0.40000003576279,
-},
-["color1"] = {
-0.03921568627451,
-0.45098039215686,
-0.82745098039216,
-1,
-},
-},
-["holy_word_radiance"] = {
-["color2"] = {
-1,
-0.85882359743118,
-0.45490199327469,
-1,
-},
-["cooldown_color2"] = {
-1,
-1,
-1,
-0.40000003576279,
-},
-["cooldown_color1"] = {
-1,
-1,
-1,
-0.30000001192093,
-},
-["height"] = 10,
-["gradient"] = 1,
-["cooldown_gradient"] = 1,
-["color1"] = {
-0.91372555494308,
-0.6235294342041,
-0.1803921610117,
-1,
-},
-},
-["insanity_bar"] = {
-["height"] = 20,
-["gradient"] = 1,
-["color2"] = {
-0.85882359743118,
-0.46666669845581,
-1,
-1,
-},
-["color1"] = {
-0.50196081399918,
-0.16078431904316,
-0.8117647767067,
-1,
-},
-},
-["mind_blast"] = {
-["cooldown_color2"] = {
-0.92941182851791,
-0.92941182851791,
-0.92941182851791,
-0.5,
-},
-["insight_color2"] = {
-1,
-1,
-1,
-1,
-},
-["insight_gradient"] = 1,
-["color1"] = {
-0.94901967048645,
-0.55686277151108,
-0.25098040699959,
-1,
-},
-["color2"] = {
-1,
-0.88235300779343,
-0.61960786581039,
-1,
-},
-["cooldown_color1"] = {
-0.69803923368454,
-0.69803923368454,
-0.69803923368454,
-0.5,
-},
-["insight_color1"] = {
-1,
-1,
-1,
-1,
-},
-["height"] = 10,
-["gradient"] = 1,
-["cooldown_gradient"] = 1,
-},
-["mana_bar"] = {
-["color2"] = {
-0.23137254901961,
-0.63137254901961,
-1,
-1,
-},
-["height"] = 5,
-["format"] = 5,
-["gradient"] = 1,
-["color1"] = {
-0.03921568627451,
-0.45098039215686,
-0.82745098039216,
-1,
-},
-},
-["holy_word_sanctify"] = {
-["color2"] = {
-1,
-0.85882359743118,
-0.45490199327469,
-1,
-},
-["cooldown_color2"] = {
-1,
-1,
-1,
-0.40000003576279,
-},
-["cooldown_color1"] = {
-1,
-1,
-1,
-0.30000001192093,
-},
-["height"] = 10,
-["gradient"] = 1,
-["cooldown_gradient"] = 1,
-["color1"] = {
-0.91372555494308,
-0.6235294342041,
-0.1803921610117,
-1,
-},
-},
-},
-},
-["inverse"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-["custom"] = "aura_env.CLASS = aura_env.id:gsub(\"Class Options %- LWA %- \", \"\")\n\nLWA = LWA or {}\nLWA[aura_env.CLASS] = LWA[aura_env.CLASS] or { UpdateBar = function() end }\n\nlocal LWA = LWA[aura_env.CLASS]\n\nLWA.configs = LWA.configs or {}\nLWA.configs[\"class\"] = aura_env.config\n\n",
-["do_custom"] = true,
-},
-},
-["displayIcon"] = 134520,
-["cooldown"] = false,
-["color"] = {
-0,
-0,
-0,
-0,
-},
 },
 ["Wildshape Mastery (Guardian)"] = {
 ["iconSource"] = -1,
@@ -47817,25 +47733,24 @@ true,
 },
 },
 ["use_class_and_spec"] = true,
+["use_class"] = true,
+["use_spellknown"] = false,
 ["spec"] = {
 ["multi"] = {
 },
 },
-["use_class"] = true,
-["use_spellknown"] = false,
-["use_herotalent"] = false,
 ["herotalent"] = {
 ["multi"] = {
 ["117207"] = true,
 },
 },
+["use_herotalent"] = false,
 ["class"] = {
 ["single"] = "MAGE",
 ["multi"] = {
 ["MAGE"] = true,
 },
 },
-["use_combat"] = true,
 ["class_and_spec"] = {
 ["single"] = 104,
 ["multi"] = {
@@ -47852,9 +47767,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -47908,7 +47823,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Shadowform"] = {
 ["iconSource"] = -1,
@@ -48299,14 +48214,15 @@ true,
 ["sparkOffsetY"] = 0,
 ["gradientOrientation"] = "HORIZONTAL",
 ["load"] = {
-["itemtypeequipped"] = {
-},
 ["use_petbattle"] = false,
 ["use_never"] = false,
 ["talent"] = {
 ["multi"] = {
 },
 },
+["itemtypeequipped"] = {
+},
+["use_class_and_spec"] = true,
 ["class_and_spec"] = {
 ["single"] = 103,
 ["multi"] = {
@@ -48316,19 +48232,19 @@ true,
 [105] = true,
 },
 },
-["use_class_and_spec"] = true,
 ["class"] = {
 ["single"] = "MONK",
 ["multi"] = {
 ["EVOKER"] = true,
 },
 },
-["use_spellknown"] = true,
 ["use_class"] = true,
 ["role"] = {
 ["multi"] = {
 },
 },
+["use_spellknown"] = true,
+["use_spec"] = true,
 ["spec"] = {
 ["single"] = 3,
 ["multi"] = {
@@ -48337,9 +48253,7 @@ true,
 true,
 },
 },
-["use_spec"] = true,
 ["zoneIds"] = "",
-["use_combat"] = true,
 ["spellknown"] = 768,
 ["size"] = {
 ["multi"] = {
@@ -48801,26 +48715,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -48834,9 +48746,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "pCG2)r80zWQ",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -48857,6 +48766,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "pCG2)r80zWQ",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -48934,11 +48846,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Shadow Word: Pain (Discipline)"] = {
@@ -49066,26 +48980,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Dynamic Effects - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Dynamic Effects - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -49099,9 +49011,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "TeSu8C2r90H",
-["inverse"] = false,
 ["animation"] = {
 ["start"] = {
 ["type"] = "preset",
@@ -49124,14 +49033,19 @@ true,
 ["preset"] = "shrink",
 },
 },
+["uid"] = "TeSu8C2r90H",
+["inverse"] = false,
+["preferToUpdate"] = false,
 ["conditions"] = {
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Overrun (PvP Talent)"] = {
@@ -49304,7 +49218,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 202246,
 ["size"] = {
 ["multi"] = {
@@ -49314,36 +49227,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -49396,12 +49290,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -49420,10 +49326,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "qS0lFHnD74y",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -49576,7 +49482,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Spirit of Redemption"] = {
 ["iconSource"] = -1,
@@ -49704,21 +49617,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -49785,7 +49691,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Pulverize"] = {
 ["iconSource"] = -1,
@@ -49929,7 +49842,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 80313,
 ["size"] = {
 ["multi"] = {
@@ -49939,7 +49851,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -49960,25 +49884,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -49991,10 +49896,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Core - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "jsm5gDj2ZH8",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -50116,7 +50021,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Maim"] = {
 ["iconSource"] = -1,
@@ -50288,7 +50200,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 22570,
 ["size"] = {
 ["multi"] = {
@@ -50298,36 +50209,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -50380,12 +50272,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -50404,10 +50308,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "nL6a(iejF(B",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -50589,7 +50493,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Lightweaver"] = {
 ["iconSource"] = -1,
@@ -50754,21 +50665,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -50838,7 +50742,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Utilities - LWA - Druid"] = {
 ["arcLength"] = 360,
@@ -50941,18 +50852,18 @@ true,
 ["Heart of the Wild"] = false,
 ["Growl"] = false,
 ["Nature's Cure"] = false,
-["Remove Corruption"] = false,
+["Maim"] = false,
 ["Wild Charge"] = false,
 ["Frenzied Regeneration (Balance, Feral & Restoration)"] = false,
 ["Demoralizing Roar (PvP Talent)"] = false,
 ["Survival Instincts (Feral)"] = false,
-["Maim"] = false,
+["Soothe"] = false,
 ["Nature's Vigil"] = false,
 ["Wild Growth (Balance, Feral & Guardian)"] = false,
 ["Faerie Swarm (PvP Talent)"] = false,
 ["Thorns (PvP Talent)"] = false,
 ["Dash"] = false,
-["Soothe"] = false,
+["Remove Corruption"] = false,
 ["Rebirth"] = false,
 ["Renewal"] = false,
 ["Typhoon"] = false,
@@ -51003,6 +50914,12 @@ true,
 ["anchorFrameFrame"] = "WeakAuras:General Options - LWA - Druid",
 ["hybridPosition"] = "hybridFirst",
 ["limit"] = 5,
+["config"] = {
+},
+["authorOptions"] = {
+},
+["borderSize"] = 2,
+["anchorFrameParent"] = false,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -51023,11 +50940,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["gridType"] = "RD",
-["authorOptions"] = {
-},
-["anchorFrameParent"] = false,
-["borderSize"] = 2,
 ["uid"] = "rlWlpgFmuW3",
 ["space"] = 2,
 ["semver"] = "11.0.8",
@@ -51045,8 +50957,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["config"] = {
-},
+["gridType"] = "RD",
 },
 ["Ursoc's Fury - LWA - Druid"] = {
 ["overlays"] = {
@@ -51119,17 +51030,16 @@ true,
 ["multi"] = {
 },
 },
-["use_class_and_spec"] = true,
 ["use_class"] = true,
 ["use_spellknown"] = true,
+["use_class_and_spec"] = true,
+["use_spec"] = true,
 ["spec"] = {
 ["single"] = 1,
 ["multi"] = {
 },
 },
-["use_spec"] = true,
 ["use_exact_spellknown"] = false,
-["use_combat"] = true,
 ["spellknown"] = 377210,
 ["size"] = {
 ["multi"] = {
@@ -51171,14 +51081,14 @@ true,
 ["unit"] = "player",
 ["customDuration"] = "-- Duration Info\nfunction()\n    return (UnitGetTotalAbsorbs(\"player\") / UnitHealthMax(\"player\")) * 100, 100, true\nend",
 ["custom_type"] = "status",
-["events"] = "UNIT_ABSORB_AMOUNT_CHANGED:player",
+["custom"] = "-- trigger\nfunction()\n    return true\nend",
 ["names"] = {
 },
 ["check"] = "event",
 ["subeventPrefix"] = "SPELL",
-["custom"] = "-- trigger\nfunction()\n    return true\nend",
 ["spellIds"] = {
 },
+["events"] = "UNIT_ABSORB_AMOUNT_CHANGED:player",
 },
 ["untrigger"] = {
 },
@@ -51503,21 +51413,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -51570,7 +51473,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Cast Bar - LWA - Druid"] = {
 ["overlays"] = {
@@ -51645,7 +51555,6 @@ true,
 },
 },
 ["use_class_and_spec"] = false,
-["zoneIds"] = "",
 ["use_class"] = true,
 ["role"] = {
 ["single"] = "DAMAGER",
@@ -51653,6 +51562,7 @@ true,
 ["DAMAGER"] = true,
 },
 },
+["zoneIds"] = "",
 ["use_never"] = true,
 ["class"] = {
 ["single"] = "MAGE",
@@ -51664,7 +51574,6 @@ true,
 ["multi"] = {
 },
 },
-["use_combat"] = true,
 ["race"] = {
 },
 ["size"] = {
@@ -52435,7 +52344,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 384667,
 ["size"] = {
 ["multi"] = {
@@ -52444,9 +52352,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -52499,7 +52407,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Left Side - LWA - Priest"] = {
 ["arcLength"] = 360,
@@ -52905,26 +52813,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -52938,9 +52844,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "gwA0bFEo7Ss",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -52961,6 +52864,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "gwA0bFEo7Ss",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -53038,11 +52944,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Insanity"] = {
@@ -53209,21 +53117,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -53306,7 +53207,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Thoughtsteal (PvP Talent)"] = {
 ["iconSource"] = -1,
@@ -53507,11 +53415,11 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["parent"] = "Utilities - LWA - Priest",
 ["progressSource"] = {
 -1,
 "",
 },
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -53785,7 +53693,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["parent"] = "Utilities - LWA - Priest",
 },
 ["Abundance"] = {
 ["iconSource"] = -1,
@@ -53963,7 +53871,6 @@ true,
 ["multi"] = {
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 207383,
 ["size"] = {
 ["multi"] = {
@@ -53972,9 +53879,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -54011,7 +53918,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Survival Instincts (Guardian)"] = {
 ["iconSource"] = -1,
@@ -54217,7 +54124,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 61336,
 ["size"] = {
 ["multi"] = {
@@ -54226,9 +54132,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -54399,7 +54305,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Starfire 1"] = {
 ["sparkWidth"] = 10,
@@ -54434,7 +54340,6 @@ true,
 ["sparkOffsetY"] = 0,
 ["gradientOrientation"] = "HORIZONTAL",
 ["load"] = {
-["zoneIds"] = "",
 ["use_petbattle"] = false,
 ["use_never"] = false,
 ["talent"] = {
@@ -54442,6 +54347,7 @@ true,
 [235587] = true,
 },
 },
+["zoneIds"] = "",
 ["spec"] = {
 ["single"] = 2,
 ["multi"] = {
@@ -54450,25 +54356,24 @@ true,
 },
 },
 ["use_class_and_spec"] = true,
-["use_exact_spellknown"] = false,
+["class_and_spec"] = {
+["single"] = 102,
+},
+["use_class"] = true,
+["use_spellknown"] = true,
 ["class"] = {
 ["single"] = "HUNTER",
 ["multi"] = {
 ["EVOKER"] = true,
 },
 },
-["use_class"] = true,
-["use_spellknown"] = true,
-["use_spec"] = true,
 ["herotalent"] = {
 ["multi"] = {
 ["117770"] = false,
 },
 },
-["class_and_spec"] = {
-["single"] = 102,
-},
-["use_combat"] = true,
+["use_spec"] = true,
+["use_exact_spellknown"] = false,
 ["spellknown"] = 79577,
 ["size"] = {
 ["multi"] = {
@@ -54513,20 +54418,21 @@ true,
 ["duration"] = "1",
 ["useStacks"] = true,
 ["use_rune"] = true,
-["use_unit"] = true,
+["names"] = {
+},
 ["use_absorbMode"] = true,
 ["genericShowOn"] = "showAlways",
-["unit"] = "player",
+["use_unit"] = true,
 ["powertype"] = 19,
 ["stacks"] = "1",
 ["use_charges"] = false,
-["type"] = "spell",
+["useName"] = true,
 ["use_trackcharge"] = false,
-["trackcharge"] = "1",
+["charges"] = "1",
 ["use_powertype"] = true,
 ["debuffType"] = "HELPFUL",
 ["charges_operator"] = ">",
-["charges"] = "1",
+["trackcharge"] = "1",
 ["unevent"] = "auto",
 ["power"] = "1",
 ["use_spellCount"] = false,
@@ -54537,10 +54443,9 @@ true,
 ["use_spellName"] = true,
 ["spellIds"] = {
 },
-["useName"] = true,
+["type"] = "spell",
 ["subeventPrefix"] = "SPELL",
-["names"] = {
-},
+["unit"] = "player",
 ["spellCount_operator"] = "==",
 ["matchesShowOn"] = "showOnActive",
 },
@@ -54875,14 +54780,14 @@ true,
 ["event"] = "GTFO",
 ["unit"] = "player",
 ["debuffType"] = "HELPFUL",
+["events"] = "OPTIONS LWA_OPTIONS LWA_INIT LWA_UPDATE_RESOURCES LWA_UPDATE_BAR PLAYER_ENTERING_WORLD PLAYER_SPECIALIZATION_CHANGED PLAYER_TALENT_UPDATE PLAYER_PVP_TALENT_UPDATE PLAYER_LEVEL_UP UNIT_PET:player UNIT_ENTERED_VEHICLE:player UNIT_EXITED_VEHICLE:player UNIT_HEALTH:pet CINEMATIC_STOP STOP_MOVIE CLIENT_SCENE_CLOSED TRAIT_CONFIG_CREATED TRAIT_CONFIG_UPDATED TRAIT_TREE_CHANGED PLAYER_LOSES_VEHICLE_DATA:player PLAYER_CONTROL_GAINED UPDATE_SHAPESHIFT_FORM LWA_UPDATE_SHAPESHIFT_FORM",
 ["custom"] = "function(event, ...)\n    local arg1, arg2 = ...\n    \n    if \"OPTIONS\" == event or \"LWA_OPTIONS\" == event or (\"LWA_INIT\" == event and arg1) then\n        aura_env.ThrottledInit()\n        \n    elseif \"LWA_INIT\" == event then\n        aura_env.Init()\n        \n    elseif (\"PLAYER_ENTERING_WORLD\" == event and (arg1 or arg2)) or \"PLAYER_SPECIALIZATION_CHANGED\" == event or \"TRAIT_CONFIG_UPDATED\" == event then\n        aura_env.ThrottledInit()\n        \n        C_Timer.After(1, function()\n                WeakAuras.ScanEvents(\"LWA_INIT\", true)\n        end)\n    elseif \"LWA_UPDATE_BAR\" == event and arg1 then\n        aura_env.UpdateBar(...)\n        \n    elseif \"LWA_UPDATE_RESOURCES\" == event then\n        aura_env.UpdateResources()\n        \n    elseif \"UPDATE_SHAPESHIFT_FORM\" == event then\n        local formId = GetShapeshiftFormID()\n        \n        if aura_env.lastFormId ~= formId then\n            aura_env.lastFormId = formId\n            \n            WeakAuras.ScanEvents(\"LWA_UPDATE_SHAPESHIFT_FORM\")\n            \n            C_Timer.After(0.2, function()\n                    WeakAuras.ScanEvents(\"LWA_UPDATE_RESOURCES\")\n            end)\n        end\n    else\n        C_Timer.After(0.1, function()\n                WeakAuras.ScanEvents(\"LWA_UPDATE_RESOURCES\")\n        end)\n    end\n    \n    return true\nend",
-["spellIds"] = {
-},
 ["custom_type"] = "event",
 ["names"] = {
 },
 ["subeventPrefix"] = "SPELL",
-["events"] = "OPTIONS LWA_OPTIONS LWA_INIT LWA_UPDATE_RESOURCES LWA_UPDATE_BAR PLAYER_ENTERING_WORLD PLAYER_SPECIALIZATION_CHANGED PLAYER_TALENT_UPDATE PLAYER_PVP_TALENT_UPDATE PLAYER_LEVEL_UP UNIT_PET:player UNIT_ENTERED_VEHICLE:player UNIT_EXITED_VEHICLE:player UNIT_HEALTH:pet CINEMATIC_STOP STOP_MOVIE CLIENT_SCENE_CLOSED TRAIT_CONFIG_CREATED TRAIT_CONFIG_UPDATED TRAIT_TREE_CHANGED PLAYER_LOSES_VEHICLE_DATA:player PLAYER_CONTROL_GAINED UPDATE_SHAPESHIFT_FORM LWA_UPDATE_SHAPESHIFT_FORM",
+["spellIds"] = {
+},
 ["custom_hide"] = "custom",
 },
 ["untrigger"] = {
@@ -54895,14 +54800,14 @@ true,
 ["event"] = "GTFO",
 ["unit"] = "player",
 ["debuffType"] = "HELPFUL",
+["events"] = "PLAYER_ENTERING_WORLD PLAYER_REGEN_ENABLED PLAYER_REGEN_DISABLED PLAYER_TARGET_CHANGED PLAYER_ALIVE PLAYER_DEAD PLAYER_UNGHOST BARBER_SHOP_OPEN BARBER_SHOP_CLOSE OPTIONS PLAYER_MOUNT_DISPLAY_CHANGED UPDATE_BONUS_ACTIONBAR LWA_UPDATE_SHAPESHIFT_FORM STATUS LWA_INIT LWA_ALPHA",
 ["custom"] = "function(event, ...)\n    if not aura_env.parentFrame then\n        aura_env.parentFrame = WeakAuras.GetRegion(aura_env.parent)\n    end\n    \n    local frame = aura_env.parentFrame\n    \n    if frame then\n        local cfg = aura_env.config.alpha\n        local alpha = cfg.global\n        \n        if \"STATUS\" == event or WeakAuras.IsOptionsOpen() then\n            frame:SetAlpha(1)\n            \n        elseif \"BARBER_SHOP_OPEN\" == event then\n            frame:SetAlpha(0)\n            \n        elseif \"LWA_ALPHA\" == event then\n            local class = UnitClassBase(\"player\")\n            local isMounted = IsMounted() or (\"DRUID\" == class and tContains({3, 4, 27, 29}, GetShapeshiftFormID()))\n            local isSkyriding = WeakAuras.IsRetail() and isMounted and select(2, C_PlayerInfo.GetGlidingInfo())\n            \n            if not UnitAffectingCombat(\"player\") then\n                alpha = min(alpha, cfg.ooc)\n            end\n\n            if (isSkyriding or (isMounted and (not cfg.skyriding_only or (HasBonusActionBar() and (11 == GetBonusBarIndex() or (\"EVOKER\" == class and 7 == GetBonusBarIndex()))))))\n            then\n                alpha = min(alpha, cfg.mounted)\n            else\n                if UnitExists(\"target\") then\n                    local isEnemy = UnitCanAttack(\"player\", \"target\") or UnitIsEnemy(\"player\", \"target\")\n                    \n                    if (not isEnemy and cfg.ignore_friendly) or (isEnemy and cfg.ignore_enemy) then\n                        alpha = cfg.global\n                    end\n                end\n            end\n            \n            frame:SetAlpha(alpha / 100)\n        else\n            C_Timer.After(0.05, function()\n                    WeakAuras.ScanEvents(\"LWA_ALPHA\")\n            end)\n        end\n        \n        return true\n    end\nend",
-["spellIds"] = {
-},
 ["custom_type"] = "event",
 ["names"] = {
 },
 ["subeventPrefix"] = "SPELL",
-["events"] = "PLAYER_ENTERING_WORLD PLAYER_REGEN_ENABLED PLAYER_REGEN_DISABLED PLAYER_TARGET_CHANGED PLAYER_ALIVE PLAYER_DEAD PLAYER_UNGHOST BARBER_SHOP_OPEN BARBER_SHOP_CLOSE OPTIONS PLAYER_MOUNT_DISPLAY_CHANGED UPDATE_BONUS_ACTIONBAR LWA_UPDATE_SHAPESHIFT_FORM STATUS LWA_INIT LWA_ALPHA",
+["spellIds"] = {
+},
 ["custom_hide"] = "custom",
 },
 ["untrigger"] = {
@@ -54973,10 +54878,6 @@ true,
 ["height"] = 100,
 ["load"] = {
 ["use_class"] = true,
-["spec"] = {
-["multi"] = {
-},
-},
 ["class_and_spec"] = {
 ["multi"] = {
 [103] = true,
@@ -54989,14 +54890,17 @@ true,
 ["multi"] = {
 },
 },
+["use_class_and_spec"] = false,
 ["class"] = {
 ["single"] = "WARLOCK",
 ["multi"] = {
 ["WARLOCK"] = true,
 },
 },
-["use_combat"] = true,
-["use_class_and_spec"] = false,
+["spec"] = {
+["multi"] = {
+},
+},
 ["size"] = {
 ["multi"] = {
 },
@@ -55006,7 +54910,6 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["desaturate"] = false,
 ["actions"] = {
 ["start"] = {
 },
@@ -55016,6 +54919,12 @@ true,
 ["custom"] = "local this = aura_env\nlocal suffix = this.id:gsub(\"General Options %- LWA %- \", \"\")\nlocal CLASS = suffix:gsub(\"[%s%d]+$\", \"\")\nthis.CLASS = CLASS\n\nlocal CLASS_GROUP = WeakAuras.GetData(this.id).parent\nlocal DYNAMIC_EFFECTS_GROUP = \"Dynamic Effects - LWA - \" .. suffix\nlocal CORE_GROUP = \"Core - LWA - \" .. suffix\nlocal LEFT_SIDE_GROUP = \"Left Side - LWA - \" .. suffix\nlocal RIGHT_SIDE_GROUP = \"Right Side - LWA - \" .. suffix\nlocal UTILITIES_GROUP = \"Utilities - LWA - \" .. suffix\nlocal MAINTENANCE_GROUP = \"Maintenance - LWA - \" .. suffix\nlocal RESOURCES_GROUP = \"Resources - LWA - \" .. suffix\nlocal CAST_BAR = \"Cast Bar - LWA - \" .. suffix\n\nlocal NB_CORE = 8\nlocal CORE_WIDTH = 405\nlocal CORE_HEIGHT = 48\nlocal RESOURCES_HEIGHT = 0\n\nLWA = LWA or {}\nLWA[CLASS] = LWA[CLASS] or {}\n\nlocal LWA = LWA[CLASS]\n\nlocal config = nil\nLWA.configs = LWA.configs or {}\nLWA.configs[\"general\"] = this.config\n\nthis.resources = nil\nthis.parentFrame = nil\n\n\nlocal WeakAuras, C_Timer, time, min, max, floor, ceil, fmod, Round, pairs, ipairs, type, unpack, tinsert, FormatLargeNumber, DECIMAL_SEPARATOR = WeakAuras, C_Timer, time, min, max, floor, ceil, math.fmod, Round, pairs, ipairs, type, unpack, tinsert, FormatLargeNumber, DECIMAL_SEPARATOR\n\n\nif WeakAuras.IsImporting() then\n    local function CheckImport()\n        if WeakAuras.IsImporting() or not this.isImporting then return end\n\n        this.isImporting:Cancel()\n        this.isImporting = false\n\n        C_Timer.After(1, function()\n                WeakAuras.ScanEvents(\"LWA_INIT\", true)\n        end)\n    end\n\n    this.isImporting = C_Timer.NewTicker(0.5, CheckImport)\nelse\n    this.isImporting = false\nend\n\nlocal function tclone(t1)\n    local t = {}\n\n    if t1 then\n        for k, v in pairs(t1) do\n            if \"table\" == type(v) then\n                v = tclone(v)\n            end\n\n            if \"string\" == type(k) then\n                t[k] = v\n            else\n                tinsert(t, v)\n            end\n        end\n    end\n\n    return t\nend\n\nlocal function tmerge(...)\n    local ts = {...}\n    local t = tclone(ts[1])\n    local t2\n\n    for i = 2, #ts do\n        t2 = ts[i] or {}\n\n        for k, v in pairs(t2) do\n            if \"table\" == type(v) then\n                v = tclone(v)\n\n                if t[k] and #t[k] == 0 then\n                    t[k] = tmerge(t[k], v)\n                else\n                    t[k] = v\n                end\n            else\n                t[k] = v\n            end\n        end\n    end\n\n    return t\nend\n\nlocal function SetRegionSize(r, w, h)\n    r:SetRegionWidth(w)\n    r:SetRegionHeight(h)\nend\n\nlocal function CalcSpacing(spacing)\n    local s, bs, bo, s2 = spacing, config.style.border_size, config.style.border_offset\n\n    if bs > 0 then\n        s2 = max(bs, bo)\n    else\n        s2 = 0\n    end\n\n    if s > 0 then\n        s = s + (s2 * 2)\n    else\n        s = s2\n    end\n\n    return s\nend\n\nlocal function UpdateAnchorFrame(skipCore)\n    if this.isImporting then return end\n\n    local config = LWA.GetConfig()\n    local h1 = config.core.height\n    local s1 = CalcSpacing(config.core.spacing)\n    local m1 = config.core.margin\n    local h, y = max(1, CORE_HEIGHT + RESOURCES_HEIGHT + s1 + m1), 0\n\n    if 1 == h % 2 then\n        h = h + 1\n    end\n\n    SetRegionSize(this.region, CORE_WIDTH, h)\n\n    if config.core.resources_position == 1 then -- Above\n        y = y + RESOURCES_HEIGHT + s1 + m1\n    end\n\n    if config.core.overflow_position == 1 then -- Above\n        y = y + max(CORE_HEIGHT, h1) - h1\n    end\n\n    this.region:SetOffset(0, y)\n\n    local function RepositionGroups()\n        local configs = { config.core, config.utility, config.maintenance }\n\n        for i, g in ipairs({ CORE_GROUP, UTILITIES_GROUP, MAINTENANCE_GROUP }) do\n            if not (skipCore and CORE_GROUP == g) then\n                g = WeakAuras.GetRegion(g)\n\n                if g then\n                    g:PositionChildren()\n\n                    if 0 == #g.sortedChildren then\n                        g:SetHeight(configs[i].height)\n                        g.currentHeight = configs[i].height\n                    end\n                end\n            end\n        end\n    end\n\n    if skipCore then\n        C_Timer.After(0.05, RepositionGroups)\n    else\n        RepositionGroups()\n    end\nend\n\nfunction LWA.GetConfig(grp, force)\n    local default = {\n        style = {\n            border_offset = 1,\n            border_size = 1,\n            border_icons = true,\n            border_resources = true,\n            border_color = { [1] = 0, [2] = 0, [3] = 0, [4] = 1 },\n            zoom = 30,\n        },\n        core = {\n            nb_min = 5,\n            nb_max = 8,\n            width = 48,\n            height = 48,\n            spacing = 3,\n            width2 = 48,\n            height2 = 48,\n            spacing2 = 3,\n            margin = 0,\n            overflow_position = 2, -- Below\n            resources_position = 2, -- Below\n        },\n        utility = {\n            width = 38,\n            height = 38,\n            spacing = 3,\n            margin = 10,\n            nb_max = 10,\n            limit_icons = false,\n            behavior = 2, -- Always Show\n        },\n        top = {\n            width = 38,\n            height = 38,\n            spacing = 3,\n            margin = 10,\n        },\n        side = {\n            width = 38,\n            height = 38,\n            spacing = 3,\n            margin = 3,\n            grow_direction = 1,\n            nb = 60,\n        },\n        maintenance = {\n            width = 36,\n            height = 36,\n            spacing = 0,\n            margin = 10,\n            nb_max = 10,\n            limit_icons = false,\n        },\n        alpha = {\n            global = 100,\n            ooc = 100,\n            mounted = 0,\n            skyriding_only = false,\n            ignore_enemy = true,\n            ignore_friendly = true,\n        },\n        resources = {\n            health_bar = {\n                format = 1\n            },\n            mana_bar = {\n                format = 1\n            }\n        },\n    }\n\n    if force or not config or WeakAuras.IsOptionsOpen() then\n        config = tmerge(\n            default,\n            LWA.configs[\"general\"],\n            LWA.configs[\"class\"] or {}\n        )\n    end\n\n    if grp then\n        return config[grp] or {}\n    end\n\n    return config\nend\n\nlocal function UpdateBorder(region, apply)\n    if region and #region.subRegions > 0 then\n        local config, size, offset, r, g, b, a = LWA.GetConfig(), 0, 0\n\n        if apply then\n            size = config.style.border_size\n            offset = config.style.border_offset\n            r, g, b, a = unpack(config.style.border_color)\n        end\n\n        for _, border in ipairs(region.subRegions) do\n            if \"subborder\" == border.type then\n                border:SetVisible(size > 0)\n\n                if size > 0 then\n                    region:AnchorSubRegion(border, \"area\", region.regionType == \"aurabar\" and \"bar\", nil, offset, offset)\n\n                    local bd = border:GetBackdrop()\n                    bd.edgeSize = size\n                    border:SetBackdrop(bd)\n                    border:SetBorderColor(r, g, b, a)\n                end\n            end\n        end\n    end\nend\n\nlocal function UpdateIcon(region, width, height, selfPoint)\n    if not region then return end\n\n    local config = LWA.GetConfig()\n    local zoom = config.style.zoom / 100\n\n    region:SetAnchor(selfPoint, region.relativeTo, region.relativePoint)\n\n    if region.SetZoom then\n        region:SetZoom(min(1, zoom + (region.extraZoom or 0)))\n    end\n\n    SetRegionSize(region, width, height)\n\n    UpdateBorder(region, config.style.border_icons)\nend\n\nlocal function UpdateResource(region, index, nb)\n    if not region then return end\n\n    local config = LWA.GetConfig()\n\n    index = max(1, index or 1)\n    nb = max(1, nb or 1)\n\n    local w, h = CORE_WIDTH, 20\n\n    if nb > 1 then\n        local s = CalcSpacing(config.core.spacing)\n\n        w = (w + s) / nb - s\n    end\n\n    local cg = region.configGroup\n\n    if cg and config.resources[cg] then\n        h = config.resources[cg].height or 20\n    end\n\n    local lastW, lastH = region.width, region.height\n\n    SetRegionSize(region, w, h)\n    UpdateBorder(region, config.style.border_resources)\n\n    if lastW ~= w or lastH ~= h then\n        region.bar:Update()\n    end\n\n    this.UpdateBar({ region = region }, index, nb)\n\n    if region.bar.spark then\n        region.bar.spark:SetHeight(max(15, Round(h * 2)))\n    end\nend\n\nlocal throttledInitHandler, throttledInitLastRun = nil, 0\n\nfunction this.ThrottledInit()\n    if throttledInitHandler or this.isImporting then return end\n\n    local currentTime, delay = time(), 0.25\n\n    if throttledInitLastRun > currentTime - 0.5 then\n        delay = max(0.25, currentTime - throttledInitLastRun)\n    end\n\n    throttledInitHandler = C_Timer.NewTimer(delay, function()\n            WeakAuras.ScanEvents(\"LWA_INIT\")\n    end)\nend\n\nfunction this.Init()\n    if this.isImporting then return end\n\n    throttledInitLastRun = time()\n\n    local config = LWA.GetConfig(nil, true)\n    local isOptionsOpen = WeakAuras.IsOptionsOpen()\n    local zoom = config.style.zoom / 100\n\n    if throttledInitHandler then\n        throttledInitHandler:Cancel()\n        throttledInitHandler = nil\n    end\n\n    if not this.parentFrame then\n        this.parentFrame = WeakAuras.GetRegion(CLASS_GROUP)\n    end\n\n    if this.parentFrame and not this.parentFrame.SetRealScale then\n        this.parentFrame.SetRealScale = this.parentFrame.SetScale\n\n        this.parentFrame.SetScale = function(self, scale)\n            this.parentFrame:SetRealScale(scale)\n            local castBar = WeakAuras.GetRegion(CAST_BAR)\n\n            if castBar then\n                castBar:SetScale(scale)\n            end\n        end\n    end\n\n    if isOptionsOpen then\n        NB_CORE = config.core.nb_max\n    else\n        NB_CORE = max(4, config.core.nb_min, min(NB_CORE, config.core.nb_max))\n\n        local castBar = WeakAuras.GetRegion(CAST_BAR)\n\n        if castBar then\n            castBar:SetParent(UIParent)\n\n            if this.parentFrame then\n                castBar:SetScale(this.parentFrame:GetScale())\n            end\n        end\n    end\n\n    local spacing = CalcSpacing(config.core.spacing)\n\n    CORE_WIDTH = NB_CORE * (config.core.width + spacing) - spacing\n\n    local grpRegion = WeakAuras.GetRegion(CORE_GROUP)\n\n    if grpRegion then\n        grpRegion:PositionChildren()\n\n        if not isOptionsOpen then\n            NB_CORE = max(4, config.core.nb_min, min(#grpRegion.sortedChildren, config.core.nb_max))\n\n            CORE_WIDTH = NB_CORE * (config.core.width + spacing) - spacing\n        end\n\n        this.region:SetRegionWidth(CORE_WIDTH)\n    end\n\n    this.UpdateResources()\n\n    for _, g in ipairs({ DYNAMIC_EFFECTS_GROUP, LEFT_SIDE_GROUP, RIGHT_SIDE_GROUP }) do\n        g = WeakAuras.GetRegion(g)\n\n        if g then\n            g:PositionChildren()\n        end\n    end\nend\n\nhooksecurefunc(\"SetUIVisibility\", function(isVisible)\n        if isVisible and this and this.ThrottledInit then\n            this.ThrottledInit()\n        end\nend)\n\nfunction this.UpdateResources()\n    if this.isImporting then return end\n\n    local grpRegion = WeakAuras.GetRegion(RESOURCES_GROUP)\n\n    if not this.resources then\n        local grpData = WeakAuras.GetData(RESOURCES_GROUP)\n\n        this.resources = grpData and grpData.controlledChildren\n    end\n\n    if grpRegion and this.resources and #this.resources > 0 then\n        local config = LWA.GetConfig()\n\n        local totalHeight, nb = 0, 0\n        local h1 = config.core.height\n        local s1 = CalcSpacing(config.core.spacing)\n        local m1 = config.core.margin\n        local y = 0\n\n        if config.core.resources_position == 2 then -- Below\n            y = max(CORE_HEIGHT, h1) + s1 + m1\n        end\n\n        grpRegion:SetOffset(0, -y)\n\n        local isOptionsOpen = WeakAuras.IsOptionsOpen()\n        local resRegion, isVisible, regionType\n        local w, h, cg = 0, 0\n\n        y = 0\n\n        for _, resId in ipairs(this.resources) do\n            resRegion = WeakAuras.GetRegion(resId)\n\n            if resRegion then\n                isVisible = isOptionsOpen\n                regionType = resRegion.regionType\n                h = 0\n\n                if \"aurabar\" == regionType then\n                    isVisible = isVisible or resRegion:IsVisible()\n                    UpdateResource(resRegion)\n\n                    h = resRegion.height\n\n                elseif \"dynamicgroup\" == regionType then\n                    local nbChild = 0\n                    local childRegions = {}\n\n                    for _, region in pairs(resRegion.controlledChildren) do\n                        if region and region[\"\"] then\n                            nbChild = nbChild + 1\n\n                            childRegions[region[\"\"].regionData.dataIndex] = region[\"\"].regionData.region\n\n                            isVisible = isVisible or region[\"\"].regionData.region:IsVisible()\n                        end\n                    end\n\n                    resRegion.childYOffset = -y\n                    h = 0\n\n                    for i, region in ipairs(childRegions) do\n                        UpdateResource(region, i, nbChild)\n\n                        h = max(h, region.height)\n\n                        region:SetYOffset(-y)\n                    end\n\n                    if h <= 0 then\n                        h = 20\n                    end\n                end\n\n                if isVisible then\n                    nb = nb + 1\n\n                    if \"dynamicgroup\" == regionType then\n                        resRegion:PositionChildren()\n                    else\n                        resRegion:SetOffset(0, -y)\n                    end\n\n                    totalHeight = totalHeight + h\n                    y = y + h + s1\n                end\n            end\n        end\n\n        RESOURCES_HEIGHT = totalHeight + max(nb - 1, 0) * CalcSpacing(config.core.spacing)\n    end\n\n    UpdateAnchorFrame()\nend\n\nfunction this.UpdateBar(aura, i, nb)\n    local config = LWA.GetConfig(\"resources\")\n    local e = aura or aura_env\n    local region = e and e.region\n    local cg = region and region.configGroup\n\n    if not (region and region:IsVisible() and cg and config[cg]) then return end\n\n    local cs = region.colorState or \"\"\n\n    if cs ~= \"\" then\n        cs = cs .. \"_\"\n    end\n\n    cg = config[cg]\n\n    local c1, c2 = cg[cs .. \"color1\"], cg[cs .. \"color2\"]\n\n    if c1 and c2 then\n        nb = max(1, min(region.indexMax or 99, nb or 1))\n        i = min(nb, max(1, region.index or i or 1)) - (region.indexOffset or 0)\n\n        local bar = region.bar\n\n        if cg[cs .. \"gradient\"] and cg[cs .. \"gradient\"] < 3 then\n            if nb > 1 and 1 == cg[cs .. \"gradient\"] then\n                local function MixRGB(c1, c2, pos)\n                    pos = 1 - (pos or 0.5)\n\n                    return {\n                        (c1[1] * pos) + (c2[1] * (1 - pos)),\n                        (c1[2] * pos) + (c2[2] * (1 - pos)),\n                        (c1[3] * pos) + (c2[3] * (1 - pos)),\n                        (c1[4] * pos) + (c2[4] * (1 - pos))\n                    }\n                end\n\n                local cc1, cc2 = c1, c2\n\n                if i > 1 then\n                    c1 = MixRGB(cc1, cc2, (i - 1) / nb)\n                end\n\n                c2 = MixRGB(cc1, cc2, i / nb)\n            end\n\n            local orientation = \"HORIZONTAL\"\n\n            if 2 == cg[cs .. \"gradient\"] then\n                orientation = \"VERTICAL\"\n\n                local tmp = c1\n                c1 = c2\n                c2 = tmp\n            end\n\n            region:SetGradientEnabled(true)\n            region:SetGradientOrientation(orientation)\n            region:Color(unpack(c1))\n            region:SetBarColor2(unpack(c2))\n        else\n            region:SetGradientEnabled(false)\n            region:Color(unpack(c1))\n        end\n\n        if region.ot then\n            region.ot:SetColorTexture(unpack(c2))\n        end\n    end\nend\n\nfunction LWA.GrowCore(newPositions, activeRegions)\n    local nb = #activeRegions\n\n    if nb <= 0 then return end\n\n    local config = LWA.GetConfig()\n\n    local w1 = config.core.width\n    local h1 = config.core.height\n    local s1 = CalcSpacing(config.core.spacing)\n    local w2 = config.core.width2\n    local h2 = config.core.height2\n    local s2 = CalcSpacing(config.core.spacing2)\n    local m1 = config.core.margin\n\n    local maxCore = min(nb, config.core.nb_max)\n    local maxOverflow = nb - maxCore\n    local x, y\n    local xOffset = ((maxCore - 1) * (w1 + s1) / 2)\n    local yOffset = h1\n    local nbPerRow = floor((CORE_WIDTH + s2) / (w2 + s2)) or 1\n    local coreHeight = h1 + (ceil(maxOverflow / nbPerRow) * (h2 + s2))\n    local oldWidth, oldHeight = CORE_WIDTH, CORE_HEIGHT\n\n    if maxOverflow > 0 then\n        coreHeight = coreHeight + max(s1, s2) - s2\n    end\n\n    CORE_HEIGHT = coreHeight\n\n    if not WeakAuras.IsOptionsOpen() then\n        NB_CORE = max(4, config.core.nb_min, maxCore)\n\n        CORE_WIDTH = NB_CORE * (w1 + s1) - s1\n    end\n\n    UpdateAnchorFrame(true)\n\n    if oldWidth ~= CORE_WIDTH or oldHeight ~= CORE_HEIGHT then\n        this.UpdateResources()\n    end\n\n    if config.core.resources_position == 1 then  -- Above\n        yOffset = h1 + RESOURCES_HEIGHT + s1 + m1\n    end\n\n    if config.core.overflow_position == 1 then  -- Above\n        yOffset = yOffset + coreHeight - h1\n    end\n\n    for i, regionData in ipairs(activeRegions) do\n        x = (i - 1) * (w1 + s1) - xOffset\n        y = -yOffset\n\n        UpdateIcon(regionData.region, w1, h1, \"BOTTOM\")\n\n        newPositions[i] = { x, y }\n\n        if i == maxCore then break end\n    end\n\n    if maxOverflow > 0 then\n        local i2, m, anchor, yMult\n\n        xOffset = ((maxCore - 1) * (w2 + s2) / 2)\n        yOffset = h1\n\n        if config.core.overflow_position == 1 then -- Above\n            yOffset = yOffset - h2 + max(s1, s2) - s2 - coreHeight\n            yMult = 1\n            anchor = \"BOTTOM\"\n\n            if config.core.resources_position == 1 then  -- Above\n                yOffset = yOffset - RESOURCES_HEIGHT - s1 - m1\n            end\n        else\n            if config.core.resources_position == 1 then  -- Above\n                yOffset = yOffset + RESOURCES_HEIGHT + s1 + m1\n            end\n\n            yOffset = yOffset - h2\n            yMult = -1\n            anchor = \"TOP\"\n        end\n\n        for i, regionData in ipairs(activeRegions) do\n            if i > maxCore then\n                i2 = i - maxCore\n                m = (i2 % nbPerRow)\n\n                if m == 1 then\n                    xOffset = (min(nb - i, nbPerRow - 1)) * (w2 + s2) / 2\n                    yOffset = yOffset + h2 + s2\n                end\n\n                if m == 0 then\n                    m = nbPerRow\n                end\n\n                x = (m - 1) * (w2 + s2) - xOffset\n                y = yOffset * yMult\n\n                UpdateIcon(regionData.region, w2, h2, anchor)\n\n                newPositions[i] = { x, y }\n            end\n        end\n    end\nend\n\nfunction LWA.GrowDynamicEffects(newPositions, activeRegions)\n    local nb = #activeRegions\n\n    if nb <= 0 then return end\n\n    local config = LWA.GetConfig()\n\n    local maxCore = min(nb, NB_CORE)\n\n    local w1 = config.core.width\n    local s1 = CalcSpacing(config.core.spacing)\n\n    local w2 = config.top.width\n    local h2 = config.top.height\n    local s2 = CalcSpacing(config.top.spacing)\n\n    local xOffset = (maxCore - 1) * (w1 + s1) / 2\n    local yOffset = config.top.margin + max(s1, s2) - s2 - h2\n    local x, y, m\n\n    local nbPerRow = floor((CORE_WIDTH + s2) / (w2 + s2)) or 1\n\n    for i, regionData in ipairs(activeRegions) do\n        m = (i % nbPerRow)\n\n        if m == 1 then\n            xOffset = (min(nb - i, nbPerRow - 1)) * (w2 + s2) / 2\n            yOffset = yOffset + h2 + s2\n        end\n\n        if m == 0 then\n            m = nbPerRow\n        end\n\n        x = (m - 1) * (w2 + s2) - xOffset\n        y = yOffset\n\n        UpdateIcon(regionData.region, w2, h2, \"BOTTOM\")\n\n        newPositions[i] = { x, y }\n    end\nend\n\nfunction LWA.GrowSide(newPositions, activeRegions, xMult)\n    local nb = #activeRegions\n\n    if nb <= 0 then return end\n\n    local config = LWA.GetConfig()\n\n    local w = config.side.width\n    local h = config.side.height\n    local s2 = CalcSpacing(config.side.spacing)\n    local s1 = CalcSpacing(config.core.spacing)\n    local h1 = config.core.height\n    local m1 = config.core.margin\n\n    local baseX, baseY = config.side.margin + max(s1, s2), 0\n    local xOffset, yOffset, yMult = 0, 0, 1\n    local nbPerRC, m = min(config.side.nb, nb)\n    local grow = config.side.grow_direction\n    local anchor\n\n    if config.core.resources_position == 2 and config.core.overflow_position == 2 then -- Below\n        if grow == 2 or grow == 4 then -- Upward\n            baseY = baseY - config.top.margin\n        end\n    else\n        if config.core.resources_position == 1 then -- Above\n            baseY = baseY + RESOURCES_HEIGHT + s1 + m1\n        end\n\n        if config.core.overflow_position == 1 then -- Above\n            baseY = baseY + max(CORE_HEIGHT, h1) - h1\n        end\n    end\n\n    xMult = xMult or 1\n\n    if xMult < 0 then\n        anchor = \"TOPRIGHT\"\n    else\n        anchor = \"TOPLEFT\"\n    end\n\n    if grow == 3 or grow == 4 then -- Horizontal\n        if grow == 4 then -- Upward\n            yOffset = -baseY\n            yMult = -1\n        else\n            yOffset = baseY - h - s2\n        end\n\n        for i, regionData in ipairs(activeRegions) do\n            m = (i % nbPerRC)\n\n            if m == 1 or (nbPerRC == 1 and i == 1) then\n                xOffset = baseX\n                yOffset = yOffset + h + s2\n            end\n\n            UpdateIcon(regionData.region, w, h, anchor)\n\n            newPositions[i] = { xOffset * xMult, -yOffset * yMult }\n\n            xOffset = xOffset + w + s2\n        end\n    else\n        xOffset = baseX - w - s2\n\n        if grow == 2 then -- Upward\n            baseY = -baseY + h + s2\n            yOffset = baseY\n            yMult = -1\n        else\n            yOffset = -h - s2\n        end\n\n        for i, regionData in ipairs(activeRegions) do\n            m = (i % nbPerRC)\n\n            if m == 1 or (nbPerRC == 1 and i == 1) then\n                xOffset = xOffset + w + s2\n                yOffset = baseY\n            end\n\n            UpdateIcon(regionData.region, w, h, anchor)\n\n            newPositions[i] = { xOffset * xMult, -yOffset * yMult }\n\n            yOffset = yOffset + h + s2\n        end\n    end\nend\n\nfunction LWA.GrowUtilities(newPositions, activeRegions)\n    local nb = #activeRegions\n\n    if nb <= 0 then return end\n\n    local config = LWA.GetConfig()\n\n    local w1 = config.core.width\n    local s1 = CalcSpacing(config.core.spacing)\n\n    local w2 = config.utility.width\n    local h2 = config.utility.height\n    local s2 = CalcSpacing(config.utility.spacing)\n\n    local maxCore, nbPerRow\n\n    if config.utility.limit_icons then\n        nbPerRow = config.utility.nb_max\n        maxCore = min(nb, nbPerRow)\n    else\n        maxCore = min(nb, NB_CORE)\n        nbPerRow = floor((CORE_WIDTH + s2) / (w2 + s2)) or 1\n    end\n\n    local xOffset = (maxCore - 1) * (w2 + s2) / 2\n    local yOffset = config.utility.margin + max(s1, s2) - s2 - h2\n    local x, y, m\n\n    for i, regionData in ipairs(activeRegions) do\n        m = (i % nbPerRow)\n\n        if m == 1 then\n            xOffset = (min(nb - i, nbPerRow - 1)) * (w2 + s2) / 2\n            yOffset = yOffset + h2 + s2\n        end\n\n        if m == 0 then\n            m = nbPerRow\n        end\n\n        x = (m - 1) * (w2 + s2) - xOffset\n        y = -yOffset\n\n        UpdateIcon(regionData.region, w2, h2, \"TOP\")\n\n        newPositions[i] = { x, y }\n    end\nend\n\nfunction LWA.GrowMaintenance(newPositions, activeRegions)\n    local nb = #activeRegions\n\n    if nb <= 0 then return end\n\n    local config = LWA.GetConfig()\n\n    local w1 = config.core.width\n    local s1 = CalcSpacing(config.core.spacing)\n\n    local w2 = config.maintenance.width\n    local h2 = config.maintenance.height\n    local s2 = CalcSpacing(config.maintenance.spacing)\n\n    local maxCore, nbPerRow\n\n    if config.maintenance.limit_icons then\n        nbPerRow = config.maintenance.nb_max\n        maxCore = min(nb, nbPerRow)\n    else\n        maxCore = min(nb, NB_CORE)\n        nbPerRow = floor((CORE_WIDTH + s2) / (w2 + s2)) or 1\n    end\n\n    local xOffset = (maxCore - 1) * (w2 + s2) / 2\n    local yOffset = config.maintenance.margin + config.utility.margin + max(CalcSpacing(config.utility.spacing), s2) - s2 - h2\n    local x, y, m\n\n    for i, regionData in ipairs(activeRegions) do\n        m = (i % nbPerRow)\n\n        if m == 1 then\n            xOffset = (min(nb - i, nbPerRow - 1)) * (w2 + s2) / 2\n            yOffset = yOffset + h2 + s2\n        end\n\n        if m == 0 then\n            m = nbPerRow\n        end\n\n        x = (m - 1) * (w2 + s2) - xOffset\n        y = -yOffset\n\n        UpdateIcon(regionData.region, w2, h2, \"TOP\")\n\n        newPositions[i] = { x, y }\n    end\nend\n\nfunction LWA.GrowDynamicResource(newPositions, activeRegions)\n    local nb = #activeRegions\n\n    if nb <= 0 then return end\n\n    local config = LWA.GetConfig()\n\n    local s = CalcSpacing(config.core.spacing)\n    local w = (CORE_WIDTH + s) / nb\n    local xOffset, x = (CORE_WIDTH - w + s) / 2\n    local childYOffset = aura_env.region.childYOffset or 0\n\n    for i, regionData in ipairs(activeRegions) do\n        x = (i - 1) * w - xOffset\n\n        if not this.isImporting then\n            UpdateResource(regionData.region, i, nb)\n            regionData.region:SetYOffset(childYOffset)\n        end\n\n        newPositions[i] = { x, 0 }\n    end\nend\n\nlocal function round(num, decimals)\n    local mult = 10^(decimals or 0)\n\n    return Round((num or 0) * mult) / mult\nend\n\nlocal barFormats = {\n    \"value\",\n    \"kvalue\",\n    \"value (percent%)\",\n    \"kvalue (percent%)\",\n    \"percent%\",\n}\n\nfunction LWA.UpdateBarText(value, percent, format)\n    local text = barFormats[format] or \"value\"\n    value = value or 0\n    percent = percent or 0\n\n    text = text:gsub(\"percent\", round(percent, 0))\n\n    if 2 == format or 4 == format then\n        local rem = fmod(value, 1000) or 0\n\n        if rem >= 950 or value >= 1000000 then\n            rem = 0\n        end\n\n        text = text:gsub(\"kvalue\", FormatLargeNumber(Round((value - rem) / 1000)) .. \".\" .. Round(rem / 100) .. \" K\"):gsub(\"%.0 K\", \" K\"):gsub(\"%.\", DECIMAL_SEPERATOR)\n    else\n        text = text:gsub(\"value\", value)\n    end\n\n    return text\nend\n",
 ["do_custom"] = true,
 },
+},
+["color"] = {
+0,
+0,
+0,
+0,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -56451,12 +56360,7 @@ true,
 ["adjustedMax"] = "",
 ["displayIcon"] = 134520,
 ["cooldown"] = false,
-["color"] = {
-0,
-0,
-0,
-0,
-},
+["desaturate"] = false,
 },
 ["Ray of Hope (PvP Talent)"] = {
 ["iconSource"] = -1,
@@ -56611,26 +56515,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -56644,9 +56546,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "n8GTQDgkEEN",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -56667,6 +56566,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "n8GTQDgkEEN",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -56774,11 +56676,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Lunar Beam"] = {
@@ -56924,7 +56828,6 @@ true,
 ["multi"] = {
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 204066,
 ["size"] = {
 ["multi"] = {
@@ -56934,7 +56837,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -56955,25 +56870,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -56986,10 +56882,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Core - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "dy8whjFMCN)",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -57062,7 +56958,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Celestial Alignment (Orbital Strike)"] = {
 ["iconSource"] = -1,
@@ -57226,15 +57129,15 @@ true,
 },
 },
 ["use_class_and_spec"] = true,
+["use_talent"] = false,
+["use_class"] = true,
+["use_spellknown"] = true,
 ["class"] = {
 ["single"] = "MAGE",
 ["multi"] = {
 ["MAGE"] = true,
 },
 },
-["use_talent"] = false,
-["use_class"] = true,
-["use_spellknown"] = true,
 ["class_and_spec"] = {
 ["single"] = 102,
 ["multi"] = {
@@ -57244,12 +57147,11 @@ true,
 [105] = true,
 },
 },
-["use_exact_spellknown"] = false,
 ["spec"] = {
 ["multi"] = {
 },
 },
-["use_combat"] = true,
+["use_exact_spellknown"] = false,
 ["spellknown"] = 194223,
 ["size"] = {
 ["multi"] = {
@@ -57259,7 +57161,6 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["keepAspectRatio"] = true,
 ["actions"] = {
 ["start"] = {
 },
@@ -57268,6 +57169,7 @@ true,
 ["init"] = {
 },
 },
+["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -57382,7 +57284,7 @@ true,
 ["adjustedMax"] = "",
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
+["keepAspectRatio"] = true,
 },
 ["Mass Entanglement"] = {
 ["iconSource"] = -1,
@@ -57554,7 +57456,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 102359,
 ["size"] = {
 ["multi"] = {
@@ -57564,36 +57465,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -57646,12 +57528,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -57670,10 +57564,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "5jp67dDIyc6",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -57823,7 +57717,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Flourish"] = {
 ["iconSource"] = -1,
@@ -57967,7 +57868,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 197721,
 ["size"] = {
 ["multi"] = {
@@ -57977,7 +57877,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -57998,25 +57910,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -58029,10 +57922,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Core - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "WixntDhF3ik",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -58105,7 +57998,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Mind Blast 2"] = {
 ["sparkWidth"] = 10,
@@ -58218,11 +58118,11 @@ true,
 ["stacks"] = "2",
 ["names"] = {
 },
-["trackcharge"] = "2",
+["useName"] = true,
 ["use_trackcharge"] = true,
 ["debuffType"] = "HELPFUL",
 ["charges_operator"] = "==",
-["type"] = "spell",
+["charges"] = "2",
 ["power"] = "1",
 ["unevent"] = "auto",
 ["track"] = "auto",
@@ -58233,8 +58133,8 @@ true,
 ["use_spellName"] = true,
 ["spellIds"] = {
 },
-["charges"] = "2",
-["useName"] = true,
+["type"] = "spell",
+["trackcharge"] = "2",
 ["unit"] = "player",
 ["duration"] = "1",
 ["use_genericShowOn"] = true,
@@ -58594,7 +58494,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 93402,
 ["size"] = {
 ["multi"] = {
@@ -58604,7 +58503,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = true,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -58625,25 +58536,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -58656,10 +58548,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Core - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "VRKawSEjN1B",
 ["inverse"] = false,
-["preferToUpdate"] = true,
+["cooldownEdge"] = true,
 ["conditions"] = {
 {
 ["check"] = {
@@ -58759,7 +58651,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Combot Point 3 - Druid"] = {
 ["overlays"] = {
@@ -58814,14 +58713,15 @@ true,
 ["sparkOffsetY"] = 0,
 ["gradientOrientation"] = "HORIZONTAL",
 ["load"] = {
-["itemtypeequipped"] = {
-},
 ["use_petbattle"] = false,
 ["use_never"] = false,
 ["talent"] = {
 ["multi"] = {
 },
 },
+["itemtypeequipped"] = {
+},
+["use_class_and_spec"] = true,
 ["class_and_spec"] = {
 ["single"] = 103,
 ["multi"] = {
@@ -58831,19 +58731,19 @@ true,
 [105] = true,
 },
 },
-["use_class_and_spec"] = true,
 ["class"] = {
 ["single"] = "MONK",
 ["multi"] = {
 ["EVOKER"] = true,
 },
 },
-["use_spellknown"] = true,
 ["use_class"] = true,
 ["role"] = {
 ["multi"] = {
 },
 },
+["use_spellknown"] = true,
+["use_spec"] = true,
 ["spec"] = {
 ["single"] = 3,
 ["multi"] = {
@@ -58852,9 +58752,7 @@ true,
 true,
 },
 },
-["use_spec"] = true,
 ["zoneIds"] = "",
-["use_combat"] = true,
 ["spellknown"] = 768,
 ["size"] = {
 ["multi"] = {
@@ -59369,11 +59267,11 @@ true,
 ["stacks"] = "1",
 ["names"] = {
 },
-["trackcharge"] = "1",
+["useName"] = true,
 ["use_trackcharge"] = true,
 ["debuffType"] = "HELPFUL",
 ["charges_operator"] = ">",
-["type"] = "spell",
+["charges"] = "1",
 ["power"] = "1",
 ["unevent"] = "auto",
 ["track"] = "auto",
@@ -59384,8 +59282,8 @@ true,
 ["use_spellName"] = true,
 ["spellIds"] = {
 },
-["charges"] = "1",
-["useName"] = true,
+["type"] = "spell",
+["trackcharge"] = "1",
 ["unit"] = "player",
 ["duration"] = "1",
 ["use_genericShowOn"] = true,
@@ -59803,25 +59701,24 @@ true,
 },
 },
 ["use_class_and_spec"] = true,
+["use_class"] = true,
+["use_spellknown"] = false,
 ["spec"] = {
 ["multi"] = {
 },
 },
-["use_class"] = true,
-["use_spellknown"] = false,
-["use_herotalent"] = false,
 ["herotalent"] = {
 ["multi"] = {
 ["117209"] = true,
 },
 },
+["use_herotalent"] = false,
 ["class"] = {
 ["single"] = "MAGE",
 ["multi"] = {
 ["MAGE"] = true,
 },
 },
-["use_combat"] = true,
 ["class_and_spec"] = {
 ["single"] = 103,
 ["multi"] = {
@@ -59838,9 +59735,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -59908,7 +59805,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Maul"] = {
 ["iconSource"] = 0,
@@ -60095,11 +59992,11 @@ true,
 1,
 },
 ["text_font"] = "Friz Quadrata TT",
-["text_text_format_3.s_format"] = "none",
-["text_shadowYOffset"] = 0,
 ["text_fontType"] = "OUTLINE",
-["text_wordWrap"] = "WordWrap",
+["text_shadowYOffset"] = 0,
 ["text_visible"] = true,
+["text_wordWrap"] = "WordWrap",
+["text_text_format_3.s_format"] = "none",
 ["text_anchorPoint"] = "OUTER_TOP",
 ["text_text_format_2.s_format"] = "none",
 ["text_text_format_p_time_precision"] = 1,
@@ -60122,14 +60019,9 @@ true,
 ["MAGE"] = true,
 },
 },
-["spec"] = {
-["multi"] = {
-},
-},
 ["use_class"] = true,
 ["use_spellknown"] = true,
-["class_and_spec"] = {
-["single"] = 104,
+["spec"] = {
 ["multi"] = {
 },
 },
@@ -60137,8 +60029,12 @@ true,
 ["multi"] = {
 },
 },
+["class_and_spec"] = {
+["single"] = 104,
+["multi"] = {
+},
+},
 ["use_class_and_spec"] = true,
-["use_combat"] = true,
 ["spellknown"] = 6807,
 ["size"] = {
 ["multi"] = {
@@ -60147,9 +60043,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -60330,7 +60226,7 @@ true,
 },
 ["displayIcon"] = 132136,
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Shadowfiend (Holy)"] = {
 ["iconSource"] = 0,
@@ -60346,39 +60242,39 @@ true,
 ["triggers"] = {
 {
 ["trigger"] = {
-["use_unit"] = true,
+["unit"] = "player",
 ["use_track"] = true,
 ["spellId"] = "49206",
 ["auranames"] = {
 },
-["subeventPrefix"] = "SPELL",
+["names"] = {
+},
 ["ownOnly"] = true,
 ["genericShowOn"] = "showOnCooldown",
-["unit"] = "player",
+["use_unit"] = true,
 ["use_genericShowOn"] = true,
-["custom"] = "function(event, arg1)\n    if event == \"PLAYER_TOTEM_UPDATE\" and arg1 then\n        local haveTotem, name, startTime, duration, icon = GetTotemInfo(arg1)\n        if haveTotem and icon == aura_env.texture then\n            aura_env.haveTotem, aura_env.name, aura_env.startTime, aura_env.duration, aura_env.icon = haveTotem, name, startTime, duration, icon\n            aura_env.index = arg1\n            return true\n        elseif aura_env.index == arg1 then\n            aura_env.index = 0\n            aura_env.startTime, aura_env.duration = nil, nil\n        end\n    end\nend",
 ["spellIds"] = {
 },
+["events"] = "PLAYER_TOTEM_UPDATE",
 ["use_spellId"] = true,
 ["customDuration"] = "function()\n    if aura_env.startTime then\n        return aura_env.duration, aura_env.startTime + aura_env.duration\n    end\nend",
 ["duration"] = "35",
 ["use_absorbMode"] = true,
 ["spellName"] = 0,
-["unevent"] = "auto",
-["type"] = "custom",
-["custom_type"] = "status",
 ["subeventSuffix"] = "_CAST_SUCCESS",
+["type"] = "custom",
+["unevent"] = "auto",
+["custom_type"] = "status",
 ["debuffType"] = "HELPFUL",
 ["useName"] = true,
 ["event"] = "Cooldown Progress (Spell)",
 ["totemName"] = "27829",
 ["realSpellName"] = 0,
 ["use_spellName"] = true,
-["events"] = "PLAYER_TOTEM_UPDATE",
+["custom"] = "function(event, arg1)\n    if event == \"PLAYER_TOTEM_UPDATE\" and arg1 then\n        local haveTotem, name, startTime, duration, icon = GetTotemInfo(arg1)\n        if haveTotem and icon == aura_env.texture then\n            aura_env.haveTotem, aura_env.name, aura_env.startTime, aura_env.duration, aura_env.icon = haveTotem, name, startTime, duration, icon\n            aura_env.index = arg1\n            return true\n        elseif aura_env.index == arg1 then\n            aura_env.index = 0\n            aura_env.startTime, aura_env.duration = nil, nil\n        end\n    end\nend",
 ["use_sourceUnit"] = true,
 ["check"] = "event",
-["names"] = {
-},
+["subeventPrefix"] = "SPELL",
 ["sourceUnit"] = "player",
 ["use_totemName"] = true,
 },
@@ -60557,11 +60453,11 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["parent"] = "Utilities - LWA - Priest",
 ["progressSource"] = {
 -1,
 "",
 },
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -60837,7 +60733,7 @@ true,
 },
 ["displayIcon"] = 136199,
 ["cooldown"] = true,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["parent"] = "Utilities - LWA - Priest",
 },
 ["Mind Blast (Discipline)"] = {
 ["iconSource"] = -1,
@@ -61029,21 +60925,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -61263,7 +61152,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Restitution"] = {
 ["iconSource"] = -1,
@@ -61383,26 +61279,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Maintenance - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Maintenance - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -61416,9 +61310,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "5FmEOJR7hmD",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -61439,6 +61330,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "5FmEOJR7hmD",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -61472,11 +61366,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Desperate Prayer"] = {
@@ -61656,17 +61552,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Utilities - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -61719,13 +61617,9 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 ["utility"] = {
@@ -61743,9 +61637,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "xETWwJEFojL",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -61766,6 +61657,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "xETWwJEFojL",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -61883,11 +61777,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Wild Growth (Balance, Feral & Guardian)"] = {
@@ -62038,7 +61934,6 @@ true,
 [102] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 48438,
 ["size"] = {
 ["multi"] = {
@@ -62048,36 +61943,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -62130,12 +62006,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -62154,10 +62042,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "nqX9v)6djt5",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -62256,7 +62144,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Ursine Vigor (Feral)"] = {
 ["iconSource"] = -1,
@@ -62387,22 +62282,21 @@ true,
 ["use_talent"] = false,
 ["use_class"] = true,
 ["use_spellknown"] = false,
+["herotalent"] = {
+["multi"] = {
+["117206"] = false,
+},
+},
 ["class"] = {
 ["single"] = "MAGE",
 ["multi"] = {
 ["MAGE"] = true,
 },
 },
-["herotalent"] = {
-["multi"] = {
-["117206"] = false,
-},
-},
 ["spec"] = {
 ["multi"] = {
 },
 },
-["use_combat"] = true,
 ["class_and_spec"] = {
 ["single"] = 103,
 ["multi"] = {
@@ -62419,9 +62313,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -62475,7 +62369,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Mind Blast (Shadow) - LWA - Priest"] = {
 ["grow"] = "CUSTOM",
@@ -62487,13 +62381,13 @@ true,
 ["wagoID"] = "BJu2WDqBX",
 ["xOffset"] = 0,
 ["preferToUpdate"] = false,
-["alpha"] = 1,
+["gridWidth"] = 5,
 ["yOffset"] = 0,
 ["sortHybridTable"] = {
 ["Mind Blast 1"] = false,
 ["Mind Blast 2"] = false,
 },
-["limit"] = 6,
+["source"] = "import",
 ["sharedFrameLevel"] = true,
 ["borderColor"] = {
 0,
@@ -62531,7 +62425,13 @@ true,
 },
 ["columnSpace"] = 1,
 ["internalVersion"] = 75,
-["useLimit"] = false,
+["gridType"] = "RD",
+["selfPoint"] = "TOP",
+["align"] = "LEFT",
+["growOn"] = "show",
+["anchorPoint"] = "CENTER",
+["radius"] = 200,
+["rotation"] = 0,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -62552,12 +62452,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["align"] = "LEFT",
-["growOn"] = "show",
-["selfPoint"] = "TOP",
-["anchorPoint"] = "CENTER",
-["rotation"] = 0,
-["radius"] = 200,
 ["version"] = 68,
 ["subRegions"] = {
 },
@@ -62589,25 +62483,25 @@ true,
 0.5,
 },
 ["borderInset"] = 1,
-["source"] = "import",
+["animate"] = false,
 ["customGrow"] = "function(newPositions, activeRegions)\n    local LWA = LWA and LWA[\"Priest\"] or {}\n    \n    if LWA and LWA.GrowDynamicResource then\n        LWA.GrowDynamicResource(newPositions, activeRegions)\n    end\nend",
 ["scale"] = 1,
 ["centerType"] = "LR",
 ["border"] = false,
 ["borderEdge"] = "Square Full White",
-["stepAngle"] = 15,
+["regionType"] = "dynamicgroup",
 ["borderSize"] = 2,
 ["sort"] = "none",
-["regionType"] = "dynamicgroup",
-["gridWidth"] = 5,
+["limit"] = 6,
+["frameStrata"] = 1,
 ["constantFactor"] = "RADIUS",
 ["space"] = 2,
 ["borderOffset"] = 4,
 ["semver"] = "11.0.4",
 ["tocversion"] = 110000,
 ["id"] = "Mind Blast (Shadow) - LWA - Priest",
-["animate"] = false,
-["frameStrata"] = 1,
+["stepAngle"] = 15,
+["alpha"] = 1,
 ["anchorFrameType"] = "SCREEN",
 ["fullCircle"] = true,
 ["config"] = {
@@ -62620,7 +62514,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["gridType"] = "RD",
+["useLimit"] = false,
 },
 ["Maintenance - LWA - Priest"] = {
 ["arcLength"] = 360,
@@ -62956,7 +62850,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 394048,
 ["size"] = {
 ["multi"] = {
@@ -62965,9 +62858,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -63021,7 +62914,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Luxthos - Druid"] = {
 ["controlledChildren"] = {
@@ -63131,8 +63024,7 @@ true,
 ["regionType"] = "group",
 ["borderSize"] = 2,
 ["anchorFrameParent"] = false,
-["config"] = {
-},
+["uid"] = "hqLoNTfeIoF",
 ["borderOffset"] = 4,
 ["semver"] = "11.0.8",
 ["tocversion"] = 110000,
@@ -63142,8 +63034,9 @@ true,
 ["anchorFrameType"] = "SCREEN",
 ["authorOptions"] = {
 },
+["config"] = {
+},
 ["borderInset"] = 1,
-["uid"] = "hqLoNTfeIoF",
 ["frameStrata"] = 2,
 ["conditions"] = {
 },
@@ -63308,17 +63201,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Utilities - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -63371,13 +63266,9 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 ["utility"] = {
@@ -63395,9 +63286,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "64NDBDFLj6l",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -63418,6 +63306,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "64NDBDFLj6l",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -63506,11 +63397,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Starfall"] = {
@@ -63741,7 +63634,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 191034,
 ["size"] = {
 ["multi"] = {
@@ -63750,9 +63642,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -63931,7 +63823,7 @@ true,
 },
 ["displayIcon"] = 236168,
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Power Word: Shield"] = {
 ["iconSource"] = -1,
@@ -64119,21 +64011,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -64258,7 +64143,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Holy Words - LWA - Priest"] = {
 ["arcLength"] = 360,
@@ -64272,7 +64164,7 @@ true,
 ["wagoID"] = "BJu2WDqBX",
 ["xOffset"] = 0,
 ["preferToUpdate"] = false,
-["frameStrata"] = 1,
+["alpha"] = 1,
 ["yOffset"] = 0,
 ["sortHybridTable"] = {
 ["Holy Word: Serenity 1"] = false,
@@ -64280,7 +64172,7 @@ true,
 ["Holy Word: Sanctify 1"] = false,
 ["Holy Word: Sanctify 2"] = false,
 },
-["limit"] = 6,
+["source"] = "import",
 ["sharedFrameLevel"] = true,
 ["fullCircle"] = true,
 ["rowSpace"] = 1,
@@ -64313,13 +64205,7 @@ true,
 },
 ["columnSpace"] = 1,
 ["radius"] = 200,
-["space"] = 2,
-["useLimit"] = false,
-["align"] = "LEFT",
-["growOn"] = "show",
-["grow"] = "CUSTOM",
-["internalVersion"] = 75,
-["rotation"] = 0,
+["gridType"] = "RD",
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -64340,6 +64226,12 @@ true,
 ["easeType"] = "none",
 },
 },
+["align"] = "LEFT",
+["growOn"] = "show",
+["internalVersion"] = 75,
+["useLimit"] = false,
+["rotation"] = 0,
+["space"] = 2,
 ["version"] = 68,
 ["subRegions"] = {
 },
@@ -64373,25 +64265,25 @@ true,
 },
 ["config"] = {
 },
-["source"] = "import",
+["animate"] = false,
 ["customGrow"] = "function(newPositions, activeRegions)\n    local LWA = LWA and LWA[\"Priest\"] or {}\n    \n    if LWA and LWA.GrowDynamicResource then\n        LWA.GrowDynamicResource(newPositions, activeRegions)\n    end\nend",
 ["scale"] = 1,
 ["centerType"] = "LR",
 ["border"] = false,
 ["borderEdge"] = "Square Full White",
-["stepAngle"] = 15,
+["regionType"] = "dynamicgroup",
 ["borderSize"] = 2,
 ["sort"] = "none",
-["regionType"] = "dynamicgroup",
-["alpha"] = 1,
+["limit"] = 6,
+["gridWidth"] = 5,
 ["constantFactor"] = "RADIUS",
 ["stagger"] = 0,
 ["borderOffset"] = 4,
 ["semver"] = "11.0.4",
 ["tocversion"] = 110000,
 ["id"] = "Holy Words - LWA - Priest",
-["animate"] = false,
-["gridWidth"] = 5,
+["stepAngle"] = 15,
+["frameStrata"] = 1,
 ["anchorFrameType"] = "SCREEN",
 ["borderColor"] = {
 0,
@@ -64407,7 +64299,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["gridType"] = "RD",
+["grow"] = "CUSTOM",
 },
 ["Surge of Light (Holy)"] = {
 ["iconSource"] = -1,
@@ -64572,21 +64464,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -64669,7 +64554,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Power Word: Radiance"] = {
 ["iconSource"] = -1,
@@ -64853,21 +64745,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -65052,7 +64937,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Innervate"] = {
 ["iconSource"] = -1,
@@ -65224,7 +65116,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 29166,
 ["size"] = {
 ["multi"] = {
@@ -65234,36 +65125,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -65316,12 +65188,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -65340,10 +65224,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "6CF4mYRvxCC",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -65461,7 +65345,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Silence"] = {
 ["iconSource"] = -1,
@@ -65640,17 +65531,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Utilities - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -65703,13 +65596,9 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 ["utility"] = {
@@ -65727,9 +65616,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "RjbIeD7vyma",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -65750,6 +65636,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "RjbIeD7vyma",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -65899,11 +65788,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Purify"] = {
@@ -66101,21 +65992,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -66337,7 +66221,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Prayer of Mending (Shadow)"] = {
 ["iconSource"] = -1,
@@ -66580,21 +66471,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -66854,7 +66738,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Twilight Equilibrium"] = {
 ["iconSource"] = -1,
@@ -66983,21 +66874,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -67049,7 +66933,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["General Options - LWA - Priest"] = {
 ["iconSource"] = 0,
@@ -67070,14 +66961,14 @@ true,
 ["event"] = "GTFO",
 ["unit"] = "player",
 ["debuffType"] = "HELPFUL",
+["events"] = "OPTIONS LWA_OPTIONS LWA_INIT LWA_UPDATE_RESOURCES LWA_UPDATE_BAR PLAYER_ENTERING_WORLD PLAYER_SPECIALIZATION_CHANGED PLAYER_TALENT_UPDATE PLAYER_PVP_TALENT_UPDATE PLAYER_LEVEL_UP UNIT_PET:player UNIT_ENTERED_VEHICLE:player UNIT_EXITED_VEHICLE:player UNIT_HEALTH:pet CINEMATIC_STOP STOP_MOVIE CLIENT_SCENE_CLOSED TRAIT_CONFIG_CREATED TRAIT_CONFIG_UPDATED TRAIT_TREE_CHANGED PLAYER_LOSES_VEHICLE_DATA:player PLAYER_CONTROL_GAINED UPDATE_SHAPESHIFT_FORM LWA_UPDATE_SHAPESHIFT_FORM",
 ["spellIds"] = {
 },
-["custom"] = "function(event, ...)\n    local arg1, arg2 = ...\n    \n    if \"OPTIONS\" == event or \"LWA_OPTIONS\" == event or (\"LWA_INIT\" == event and arg1) then\n        aura_env.ThrottledInit()\n        \n    elseif \"LWA_INIT\" == event then\n        aura_env.Init()\n        \n    elseif (\"PLAYER_ENTERING_WORLD\" == event and (arg1 or arg2)) or \"PLAYER_SPECIALIZATION_CHANGED\" == event or \"TRAIT_CONFIG_UPDATED\" == event then\n        aura_env.ThrottledInit()\n        \n        C_Timer.After(1, function()\n                WeakAuras.ScanEvents(\"LWA_INIT\", true)\n        end)\n    elseif \"LWA_UPDATE_BAR\" == event and arg1 then\n        aura_env.UpdateBar(...)\n        \n    elseif \"LWA_UPDATE_RESOURCES\" == event then\n        aura_env.UpdateResources()\n        \n    elseif \"UPDATE_SHAPESHIFT_FORM\" == event then\n        local formId = GetShapeshiftFormID()\n        \n        if aura_env.lastFormId ~= formId then\n            aura_env.lastFormId = formId\n            \n            WeakAuras.ScanEvents(\"LWA_UPDATE_SHAPESHIFT_FORM\")\n            \n            C_Timer.After(0.2, function()\n                    WeakAuras.ScanEvents(\"LWA_UPDATE_RESOURCES\")\n            end)\n        end\n    else\n        C_Timer.After(0.1, function()\n                WeakAuras.ScanEvents(\"LWA_UPDATE_RESOURCES\")\n        end)\n    end\n    \n    return true\nend",
 ["custom_type"] = "event",
 ["names"] = {
 },
 ["subeventPrefix"] = "SPELL",
-["events"] = "OPTIONS LWA_OPTIONS LWA_INIT LWA_UPDATE_RESOURCES LWA_UPDATE_BAR PLAYER_ENTERING_WORLD PLAYER_SPECIALIZATION_CHANGED PLAYER_TALENT_UPDATE PLAYER_PVP_TALENT_UPDATE PLAYER_LEVEL_UP UNIT_PET:player UNIT_ENTERED_VEHICLE:player UNIT_EXITED_VEHICLE:player UNIT_HEALTH:pet CINEMATIC_STOP STOP_MOVIE CLIENT_SCENE_CLOSED TRAIT_CONFIG_CREATED TRAIT_CONFIG_UPDATED TRAIT_TREE_CHANGED PLAYER_LOSES_VEHICLE_DATA:player PLAYER_CONTROL_GAINED UPDATE_SHAPESHIFT_FORM LWA_UPDATE_SHAPESHIFT_FORM",
+["custom"] = "function(event, ...)\n    local arg1, arg2 = ...\n    \n    if \"OPTIONS\" == event or \"LWA_OPTIONS\" == event or (\"LWA_INIT\" == event and arg1) then\n        aura_env.ThrottledInit()\n        \n    elseif \"LWA_INIT\" == event then\n        aura_env.Init()\n        \n    elseif (\"PLAYER_ENTERING_WORLD\" == event and (arg1 or arg2)) or \"PLAYER_SPECIALIZATION_CHANGED\" == event or \"TRAIT_CONFIG_UPDATED\" == event then\n        aura_env.ThrottledInit()\n        \n        C_Timer.After(1, function()\n                WeakAuras.ScanEvents(\"LWA_INIT\", true)\n        end)\n    elseif \"LWA_UPDATE_BAR\" == event and arg1 then\n        aura_env.UpdateBar(...)\n        \n    elseif \"LWA_UPDATE_RESOURCES\" == event then\n        aura_env.UpdateResources()\n        \n    elseif \"UPDATE_SHAPESHIFT_FORM\" == event then\n        local formId = GetShapeshiftFormID()\n        \n        if aura_env.lastFormId ~= formId then\n            aura_env.lastFormId = formId\n            \n            WeakAuras.ScanEvents(\"LWA_UPDATE_SHAPESHIFT_FORM\")\n            \n            C_Timer.After(0.2, function()\n                    WeakAuras.ScanEvents(\"LWA_UPDATE_RESOURCES\")\n            end)\n        end\n    else\n        C_Timer.After(0.1, function()\n                WeakAuras.ScanEvents(\"LWA_UPDATE_RESOURCES\")\n        end)\n    end\n    \n    return true\nend",
 ["custom_hide"] = "custom",
 },
 ["untrigger"] = {
@@ -67090,14 +66981,14 @@ true,
 ["event"] = "GTFO",
 ["unit"] = "player",
 ["debuffType"] = "HELPFUL",
+["events"] = "PLAYER_ENTERING_WORLD PLAYER_REGEN_ENABLED PLAYER_REGEN_DISABLED PLAYER_TARGET_CHANGED PLAYER_ALIVE PLAYER_DEAD PLAYER_UNGHOST BARBER_SHOP_OPEN BARBER_SHOP_CLOSE OPTIONS PLAYER_MOUNT_DISPLAY_CHANGED UPDATE_BONUS_ACTIONBAR LWA_UPDATE_SHAPESHIFT_FORM STATUS LWA_INIT LWA_ALPHA",
 ["spellIds"] = {
 },
-["custom"] = "function(event, ...)\n    if not aura_env.parentFrame then\n        aura_env.parentFrame = WeakAuras.GetRegion(aura_env.parent)\n    end\n    \n    local frame = aura_env.parentFrame\n    \n    if frame then\n        local cfg = aura_env.config.alpha\n        local alpha = cfg.global\n        \n        if \"STATUS\" == event or WeakAuras.IsOptionsOpen() then\n            frame:SetAlpha(1)\n            \n        elseif \"BARBER_SHOP_OPEN\" == event then\n            frame:SetAlpha(0)\n            \n        elseif \"LWA_ALPHA\" == event then\n            local class = UnitClassBase(\"player\")\n            local isMounted = IsMounted() or (\"DRUID\" == class and tContains({3, 4, 27, 29}, GetShapeshiftFormID()))\n            local isSkyriding = WeakAuras.IsRetail() and isMounted and select(2, C_PlayerInfo.GetGlidingInfo())\n            \n            if (isSkyriding or (isMounted and (not cfg.skyriding_only or (HasBonusActionBar() and (11 == GetBonusBarIndex() or (\"EVOKER\" == class and 7 == GetBonusBarIndex()))))))\n            then\n                alpha = min(alpha, cfg.mounted)\n            else\n                if not UnitAffectingCombat(\"player\") then\n                    alpha = min(alpha, cfg.ooc)\n                end\n                \n                if UnitExists(\"target\") then\n                    local isEnemy = UnitCanAttack(\"player\", \"target\") or UnitIsEnemy(\"player\", \"target\")\n                    \n                    if (not isEnemy and cfg.ignore_friendly) or (isEnemy and cfg.ignore_enemy) then\n                        alpha = cfg.global\n                    end\n                end\n            end\n            \n            frame:SetAlpha(alpha / 100)\n        else\n            C_Timer.After(0.05, function()\n                    WeakAuras.ScanEvents(\"LWA_ALPHA\")\n            end)\n        end\n        \n        return true\n    end\nend",
 ["custom_type"] = "event",
 ["names"] = {
 },
 ["subeventPrefix"] = "SPELL",
-["events"] = "PLAYER_ENTERING_WORLD PLAYER_REGEN_ENABLED PLAYER_REGEN_DISABLED PLAYER_TARGET_CHANGED PLAYER_ALIVE PLAYER_DEAD PLAYER_UNGHOST BARBER_SHOP_OPEN BARBER_SHOP_CLOSE OPTIONS PLAYER_MOUNT_DISPLAY_CHANGED UPDATE_BONUS_ACTIONBAR LWA_UPDATE_SHAPESHIFT_FORM STATUS LWA_INIT LWA_ALPHA",
+["custom"] = "function(event, ...)\n    if not aura_env.parentFrame then\n        aura_env.parentFrame = WeakAuras.GetRegion(aura_env.parent)\n    end\n    \n    local frame = aura_env.parentFrame\n    \n    if frame then\n        local cfg = aura_env.config.alpha\n        local alpha = cfg.global\n        \n        if \"STATUS\" == event or WeakAuras.IsOptionsOpen() then\n            frame:SetAlpha(1)\n            \n        elseif \"BARBER_SHOP_OPEN\" == event then\n            frame:SetAlpha(0)\n            \n        elseif \"LWA_ALPHA\" == event then\n            local class = UnitClassBase(\"player\")\n            local isMounted = IsMounted() or (\"DRUID\" == class and tContains({3, 4, 27, 29}, GetShapeshiftFormID()))\n            local isSkyriding = WeakAuras.IsRetail() and isMounted and select(2, C_PlayerInfo.GetGlidingInfo())\n            \n            if (isSkyriding or (isMounted and (not cfg.skyriding_only or (HasBonusActionBar() and (11 == GetBonusBarIndex() or (\"EVOKER\" == class and 7 == GetBonusBarIndex()))))))\n            then\n                alpha = min(alpha, cfg.mounted)\n            else\n                if not UnitAffectingCombat(\"player\") then\n                    alpha = min(alpha, cfg.ooc)\n                end\n                \n                if UnitExists(\"target\") then\n                    local isEnemy = UnitCanAttack(\"player\", \"target\") or UnitIsEnemy(\"player\", \"target\")\n                    \n                    if (not isEnemy and cfg.ignore_friendly) or (isEnemy and cfg.ignore_enemy) then\n                        alpha = cfg.global\n                    end\n                end\n            end\n            \n            frame:SetAlpha(alpha / 100)\n        else\n            C_Timer.After(0.05, function()\n                    WeakAuras.ScanEvents(\"LWA_ALPHA\")\n            end)\n        end\n        \n        return true\n    end\nend",
 ["custom_hide"] = "custom",
 },
 ["untrigger"] = {
@@ -67199,6 +67090,174 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
+["desc"] = "Made by Luxthos - twitch.tv/luxthos",
+["color"] = {
+0,
+0,
+0,
+0,
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["conditions"] = {
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["selfPoint"] = "TOP",
+["preferToUpdate"] = false,
+["uid"] = "Mpao90qbhsw",
+["xOffset"] = 0,
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["cooldownTextDisabled"] = false,
+["zoom"] = 0,
+["semver"] = "11.0.4",
+["tocversion"] = 110000,
+["id"] = "General Options - LWA - Priest",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 405,
+["keepAspectRatio"] = false,
+["config"] = {
+["top"] = {
+["height"] = 32,
+["spacing"] = 0,
+["margin"] = 10,
+["width"] = 38,
+},
+["maintenance"] = {
+["margin"] = 10,
+["spacing"] = 0,
+["height"] = 32,
+["limit_icons"] = false,
+["nb_max"] = 10,
+["width"] = 38,
+},
+["style"] = {
+["zoom"] = 30,
+["border_icons"] = true,
+["border_color"] = {
+0,
+0,
+0,
+1,
+},
+["border_resources"] = true,
+["border_offset"] = 1,
+["border_size"] = 1,
+},
+["core"] = {
+["resources_position"] = 2,
+["width"] = 48,
+["nb_min"] = 5,
+["nb_max"] = 8,
+["spacing2"] = 0,
+["height"] = 40,
+["spacing"] = 0,
+["width2"] = 44,
+["overflow_position"] = 1,
+["margin"] = 0,
+["height2"] = 36,
+},
+["side"] = {
+["grow_direction"] = 1,
+["spacing"] = 0,
+["height"] = 32,
+["margin"] = 3,
+["nb"] = 3,
+["width"] = 38,
+},
+["resources"] = {
+["cast_bar"] = {
+["emp_gradient"] = 1,
+["emp_color1"] = {
+1,
+1,
+1,
+0.90000000596046,
+},
+["emp_color2"] = {
+1,
+1,
+1,
+1,
+},
+["unint_color1"] = {
+0.52549019607843,
+0.52549019607843,
+0.52549019607843,
+0.90000000596046,
+},
+["color1"] = {
+0.52941176470588,
+0.090196078431373,
+0.090196078431373,
+1,
+},
+["color2"] = {
+0.77647058823529,
+0.1843137254902,
+0.1843137254902,
+1,
+},
+["unint_gradient"] = 1,
+["height"] = 20,
+["unint_color2"] = {
+0.70980392156863,
+0.70980392156863,
+0.70980392156863,
+1,
+},
+["gradient"] = 1,
+},
+["health_bar"] = {
+["color2"] = {
+0.58431375026703,
+0.85098046064377,
+0.30588236451149,
+1,
+},
+["height"] = 20,
+["format"] = 5,
+["gradient"] = 1,
+["color1"] = {
+0.24313727021217,
+0.58431375026703,
+0.10980392992496,
+1,
+},
+},
+},
+["alpha"] = {
+["skyriding_only"] = false,
+["ignore_enemy"] = true,
+["global"] = 100,
+["ooc"] = 100,
+["mounted"] = 100,
+["ignore_friendly"] = true,
+},
+["utility"] = {
+["margin"] = 10,
+["spacing"] = 0,
+["height"] = 32,
+["limit_icons"] = false,
+["nb_max"] = 10,
+["width"] = 38,
+},
+},
+["inverse"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+["custom"] = "local this = aura_env\nlocal suffix = this.id:gsub(\"General Options %- LWA %- \", \"\")\nlocal CLASS = suffix:gsub(\"[%s%d]+$\", \"\")\nthis.CLASS = CLASS\n\nlocal CLASS_GROUP = WeakAuras.GetData(this.id).parent\nlocal DYNAMIC_EFFECTS_GROUP = \"Dynamic Effects - LWA - \" .. suffix\nlocal CORE_GROUP = \"Core - LWA - \" .. suffix\nlocal LEFT_SIDE_GROUP = \"Left Side - LWA - \" .. suffix\nlocal RIGHT_SIDE_GROUP = \"Right Side - LWA - \" .. suffix\nlocal UTILITIES_GROUP = \"Utilities - LWA - \" .. suffix\nlocal MAINTENANCE_GROUP = \"Maintenance - LWA - \" .. suffix\nlocal RESOURCES_GROUP = \"Resources - LWA - \" .. suffix\nlocal CAST_BAR = \"Cast Bar - LWA - \" .. suffix\n\nlocal NB_CORE = 8\nlocal CORE_WIDTH = 405\nlocal CORE_HEIGHT = 48\nlocal RESOURCES_HEIGHT = 0\n\nLWA = LWA or {}\nLWA[CLASS] = LWA[CLASS] or {}\n\nlocal LWA = LWA[CLASS]\n\nlocal config = nil\nLWA.configs = LWA.configs or {}\nLWA.configs[\"general\"] = this.config\n\nthis.resources = nil\nthis.parentFrame = nil\n\n\nlocal WeakAuras, C_Timer, time, min, max, floor, ceil, fmod, Round, pairs, ipairs, type, unpack, tinsert, FormatLargeNumber, DECIMAL_SEPARATOR = WeakAuras, C_Timer, time, min, max, floor, ceil, math.fmod, Round, pairs, ipairs, type, unpack, tinsert, FormatLargeNumber, DECIMAL_SEPARATOR\n\n\nif WeakAuras.IsImporting() then\n    local function CheckImport()\n        if WeakAuras.IsImporting() or not this.isImporting then return end\n\n        this.isImporting:Cancel()\n        this.isImporting = false\n\n        C_Timer.After(1, function()\n                WeakAuras.ScanEvents(\"LWA_INIT\", true)\n        end)\n    end\n\n    this.isImporting = C_Timer.NewTicker(0.5, CheckImport)\nelse\n    this.isImporting = false\nend\n\nlocal function tclone(t1)\n    local t = {}\n\n    if t1 then\n        for k, v in pairs(t1) do\n            if \"table\" == type(v) then\n                v = tclone(v)\n            end\n\n            if \"string\" == type(k) then\n                t[k] = v\n            else\n                tinsert(t, v)\n            end\n        end\n    end\n\n    return t\nend\n\nlocal function tmerge(...)\n    local ts = {...}\n    local t = tclone(ts[1])\n    local t2\n\n    for i = 2, #ts do\n        t2 = ts[i] or {}\n\n        for k, v in pairs(t2) do\n            if \"table\" == type(v) then\n                v = tclone(v)\n\n                if t[k] and #t[k] == 0 then\n                    t[k] = tmerge(t[k], v)\n                else\n                    t[k] = v\n                end\n            else\n                t[k] = v\n            end\n        end\n    end\n\n    return t\nend\n\nlocal function SetRegionSize(r, w, h)\n    r:SetRegionWidth(w)\n    r:SetRegionHeight(h)\nend\n\nlocal function CalcSpacing(spacing)\n    local s, bs, bo, s2 = spacing, config.style.border_size, config.style.border_offset\n\n    if bs > 0 then\n        s2 = max(bs, bo)\n    else\n        s2 = 0\n    end\n\n    if s > 0 then\n        s = s + (s2 * 2)\n    else\n        s = s2\n    end\n\n    return s\nend\n\nlocal function UpdateAnchorFrame(skipCore)\n    if this.isImporting then return end\n\n    local config = LWA.GetConfig()\n    local h1 = config.core.height\n    local s1 = CalcSpacing(config.core.spacing)\n    local m1 = config.core.margin\n    local h, y = max(1, CORE_HEIGHT + RESOURCES_HEIGHT + s1 + m1), 0\n\n    if 1 == h % 2 then\n        h = h + 1\n    end\n\n    SetRegionSize(this.region, CORE_WIDTH, h)\n\n    if config.core.resources_position == 1 then -- Above\n        y = y + RESOURCES_HEIGHT + s1 + m1\n    end\n\n    if config.core.overflow_position == 1 then -- Above\n        y = y + max(CORE_HEIGHT, h1) - h1\n    end\n\n    this.region:SetOffset(0, y)\n\n    local function RepositionGroups()\n        local configs = { config.core, config.utility, config.maintenance }\n\n        for i, g in ipairs({ CORE_GROUP, UTILITIES_GROUP, MAINTENANCE_GROUP }) do\n            if not (skipCore and CORE_GROUP == g) then\n                g = WeakAuras.GetRegion(g)\n\n                if g then\n                    g:PositionChildren()\n\n                    if 0 == #g.sortedChildren then\n                        g:SetHeight(configs[i].height)\n                        g.currentHeight = configs[i].height\n                    end\n                end\n            end\n        end\n    end\n\n    if skipCore then\n        C_Timer.After(0.05, RepositionGroups)\n    else\n        RepositionGroups()\n    end\nend\n\nfunction LWA.GetConfig(grp, force)\n    local default = {\n        style = {\n            border_offset = 1,\n            border_size = 1,\n            border_icons = true,\n            border_resources = true,\n            border_color = { [1] = 0, [2] = 0, [3] = 0, [4] = 1 },\n            zoom = 30,\n        },\n        core = {\n            nb_min = 5,\n            nb_max = 8,\n            width = 48,\n            height = 48,\n            spacing = 3,\n            width2 = 48,\n            height2 = 48,\n            spacing2 = 3,\n            margin = 0,\n            overflow_position = 2, -- Below\n            resources_position = 2, -- Below\n        },\n        utility = {\n            width = 38,\n            height = 38,\n            spacing = 3,\n            margin = 10,\n            nb_max = 10,\n            limit_icons = false,\n            behavior = 2, -- Always Show\n        },\n        top = {\n            width = 38,\n            height = 38,\n            spacing = 3,\n            margin = 10,\n        },\n        side = {\n            width = 38,\n            height = 38,\n            spacing = 3,\n            margin = 3,\n            grow_direction = 1,\n            nb = 60,\n        },\n        maintenance = {\n            width = 36,\n            height = 36,\n            spacing = 0,\n            margin = 10,\n            nb_max = 10,\n            limit_icons = false,\n        },\n        alpha = {\n            global = 100,\n            ooc = 100,\n            mounted = 0,\n            skyriding_only = false,\n            ignore_enemy = true,\n            ignore_friendly = true,\n        },\n        resources = {\n            health_bar = {\n                format = 1\n            },\n            mana_bar = {\n                format = 1\n            }\n        },\n    }\n\n    if force or not config or WeakAuras.IsOptionsOpen() then\n        config = tmerge(\n            default,\n            LWA.configs[\"general\"],\n            LWA.configs[\"class\"] or {}\n        )\n    end\n\n    if grp then\n        return config[grp] or {}\n    end\n\n    return config\nend\n\nlocal function UpdateBorder(region, apply)\n    if region and #region.subRegions > 0 then\n        local config, size, offset, r, g, b, a = LWA.GetConfig(), 0, 0\n\n        if apply then\n            size = config.style.border_size\n            offset = config.style.border_offset\n            r, g, b, a = unpack(config.style.border_color)\n        end\n\n        for _, border in ipairs(region.subRegions) do\n            if \"subborder\" == border.type then\n                border:SetVisible(size > 0)\n\n                if size > 0 then\n                    region:AnchorSubRegion(border, \"area\", region.regionType == \"aurabar\" and \"bar\", nil, offset, offset)\n\n                    local bd = border:GetBackdrop()\n                    bd.edgeSize = size\n                    border:SetBackdrop(bd)\n                    border:SetBorderColor(r, g, b, a)\n                end\n            end\n        end\n    end\nend\n\nlocal function UpdateIcon(region, width, height, selfPoint)\n    if not region then return end\n\n    local config = LWA.GetConfig()\n    local zoom = config.style.zoom / 100\n\n    region:SetAnchor(selfPoint, region.relativeTo, region.relativePoint)\n\n    if region.SetZoom then\n        region:SetZoom(min(1, zoom + (region.extraZoom or 0)))\n    end\n\n    SetRegionSize(region, width, height)\n\n    UpdateBorder(region, config.style.border_icons)\nend\n\nlocal function UpdateResource(region, index, nb)\n    if not region then return end\n\n    local config = LWA.GetConfig()\n\n    index = max(1, index or 1)\n    nb = max(1, nb or 1)\n\n    local w, h = CORE_WIDTH, 20\n\n    if nb > 1 then\n        local s = CalcSpacing(config.core.spacing)\n\n        w = (w + s) / nb - s\n    end\n\n    local cg = region.configGroup\n\n    if cg and config.resources[cg] then\n        h = config.resources[cg].height or 20\n    end\n\n    local lastW, lastH = region.width, region.height\n\n    SetRegionSize(region, w, h)\n    UpdateBorder(region, config.style.border_resources)\n\n    if lastW ~= w or lastH ~= h then\n        region.bar:Update()\n    end\n\n    this.UpdateBar({ region = region }, index, nb)\n\n    if region.bar.spark then\n        region.bar.spark:SetHeight(max(15, Round(h * 2)))\n    end\nend\n\nlocal throttledInitHandler, throttledInitLastRun = nil, 0\n\nfunction this.ThrottledInit()\n    if throttledInitHandler or this.isImporting then return end\n\n    local currentTime, delay = time(), 0.25\n\n    if throttledInitLastRun > currentTime - 0.5 then\n        delay = max(0.25, currentTime - throttledInitLastRun)\n    end\n\n    throttledInitHandler = C_Timer.NewTimer(delay, function()\n            WeakAuras.ScanEvents(\"LWA_INIT\")\n    end)\nend\n\nfunction this.Init()\n    if this.isImporting then return end\n\n    throttledInitLastRun = time()\n\n    local config = LWA.GetConfig(nil, true)\n    local isOptionsOpen = WeakAuras.IsOptionsOpen()\n    local zoom = config.style.zoom / 100\n\n    if throttledInitHandler then\n        throttledInitHandler:Cancel()\n        throttledInitHandler = nil\n    end\n\n    if not this.parentFrame then\n        this.parentFrame = WeakAuras.GetRegion(CLASS_GROUP)\n    end\n\n    if this.parentFrame and not this.parentFrame.SetRealScale then\n        this.parentFrame.SetRealScale = this.parentFrame.SetScale\n\n        this.parentFrame.SetScale = function(self, scale)\n            this.parentFrame:SetRealScale(scale)\n            local castBar = WeakAuras.GetRegion(CAST_BAR)\n\n            if castBar then\n                castBar:SetScale(scale)\n            end\n        end\n    end\n\n    if isOptionsOpen then\n        NB_CORE = config.core.nb_max\n    else\n        NB_CORE = max(4, config.core.nb_min, min(NB_CORE, config.core.nb_max))\n\n        local castBar = WeakAuras.GetRegion(CAST_BAR)\n\n        if castBar then\n            castBar:SetParent(UIParent)\n\n            if this.parentFrame then\n                castBar:SetScale(this.parentFrame:GetScale())\n            end\n        end\n    end\n\n    local spacing = CalcSpacing(config.core.spacing)\n\n    CORE_WIDTH = NB_CORE * (config.core.width + spacing) - spacing\n\n    local grpRegion = WeakAuras.GetRegion(CORE_GROUP)\n\n    if grpRegion then\n        grpRegion:PositionChildren()\n\n        if not isOptionsOpen then\n            NB_CORE = max(4, config.core.nb_min, min(#grpRegion.sortedChildren, config.core.nb_max))\n\n            CORE_WIDTH = NB_CORE * (config.core.width + spacing) - spacing\n        end\n\n        this.region:SetRegionWidth(CORE_WIDTH)\n    end\n\n    this.UpdateResources()\n\n    for _, g in ipairs({ DYNAMIC_EFFECTS_GROUP, LEFT_SIDE_GROUP, RIGHT_SIDE_GROUP }) do\n        g = WeakAuras.GetRegion(g)\n\n        if g then\n            g:PositionChildren()\n        end\n    end\nend\n\nhooksecurefunc(\"SetUIVisibility\", function(isVisible)\n        if isVisible and this and this.ThrottledInit then\n            this.ThrottledInit()\n        end\nend)\n\nfunction this.UpdateResources()\n    if this.isImporting then return end\n\n    local grpRegion = WeakAuras.GetRegion(RESOURCES_GROUP)\n\n    if not this.resources then\n        local grpData = WeakAuras.GetData(RESOURCES_GROUP)\n\n        this.resources = grpData and grpData.controlledChildren\n    end\n\n    if grpRegion and this.resources and #this.resources > 0 then\n        local config = LWA.GetConfig()\n\n        local totalHeight, nb = 0, 0\n        local h1 = config.core.height\n        local s1 = CalcSpacing(config.core.spacing)\n        local m1 = config.core.margin\n        local y = 0\n\n        if config.core.resources_position == 2 then -- Below\n            y = max(CORE_HEIGHT, h1) + s1 + m1\n        end\n\n        grpRegion:SetOffset(0, -y)\n\n        local isOptionsOpen = WeakAuras.IsOptionsOpen()\n        local resRegion, isVisible, regionType\n        local w, h, cg = 0, 0\n\n        y = 0\n\n        for _, resId in ipairs(this.resources) do\n            resRegion = WeakAuras.GetRegion(resId)\n\n            if resRegion then\n                isVisible = isOptionsOpen\n                regionType = resRegion.regionType\n                h = 0\n\n                if \"aurabar\" == regionType then\n                    isVisible = isVisible or resRegion:IsVisible()\n                    UpdateResource(resRegion)\n\n                    h = resRegion.height\n\n                elseif \"dynamicgroup\" == regionType then\n                    local nbChild = 0\n                    local childRegions = {}\n\n                    for _, region in pairs(resRegion.controlledChildren) do\n                        if region and region[\"\"] then\n                            nbChild = nbChild + 1\n\n                            childRegions[region[\"\"].regionData.dataIndex] = region[\"\"].regionData.region\n\n                            isVisible = isVisible or region[\"\"].regionData.region:IsVisible()\n                        end\n                    end\n\n                    resRegion.childYOffset = -y\n                    h = 0\n\n                    for i, region in ipairs(childRegions) do\n                        UpdateResource(region, i, nbChild)\n\n                        h = max(h, region.height)\n\n                        region:SetYOffset(-y)\n                    end\n\n                    if h <= 0 then\n                        h = 20\n                    end\n                end\n\n                if isVisible then\n                    nb = nb + 1\n\n                    if \"dynamicgroup\" == regionType then\n                        resRegion:PositionChildren()\n                    else\n                        resRegion:SetOffset(0, -y)\n                    end\n\n                    totalHeight = totalHeight + h\n                    y = y + h + s1\n                end\n            end\n        end\n\n        RESOURCES_HEIGHT = totalHeight + max(nb - 1, 0) * CalcSpacing(config.core.spacing)\n    end\n\n    UpdateAnchorFrame()\nend\n\nfunction this.UpdateBar(aura, i, nb)\n    local config = LWA.GetConfig(\"resources\")\n    local e = aura or aura_env\n    local region = e and e.region\n    local cg = region and region.configGroup\n\n    if not (region and region:IsVisible() and cg and config[cg]) then return end\n\n    local cs = region.colorState or \"\"\n\n    if cs ~= \"\" then\n        cs = cs .. \"_\"\n    end\n\n    cg = config[cg]\n\n    local c1, c2 = cg[cs .. \"color1\"], cg[cs .. \"color2\"]\n\n    if c1 and c2 then\n        nb = max(1, min(region.indexMax or 99, nb or 1))\n        i = min(nb, max(1, region.index or i or 1)) - (region.indexOffset or 0)\n\n        local bar = region.bar\n\n        if cg[cs .. \"gradient\"] and cg[cs .. \"gradient\"] < 3 then\n            if nb > 1 and 1 == cg[cs .. \"gradient\"] then\n                local function MixRGB(c1, c2, pos)\n                    pos = 1 - (pos or 0.5)\n\n                    return {\n                        (c1[1] * pos) + (c2[1] * (1 - pos)),\n                        (c1[2] * pos) + (c2[2] * (1 - pos)),\n                        (c1[3] * pos) + (c2[3] * (1 - pos)),\n                        (c1[4] * pos) + (c2[4] * (1 - pos))\n                    }\n                end\n\n                local cc1, cc2 = c1, c2\n\n                if i > 1 then\n                    c1 = MixRGB(cc1, cc2, (i - 1) / nb)\n                end\n\n                c2 = MixRGB(cc1, cc2, i / nb)\n            end\n\n            local orientation = \"HORIZONTAL\"\n\n            if 2 == cg[cs .. \"gradient\"] then\n                orientation = \"VERTICAL\"\n\n                local tmp = c1\n                c1 = c2\n                c2 = tmp\n            end\n\n            region:SetGradientEnabled(true)\n            region:SetGradientOrientation(orientation)\n            region:Color(unpack(c1))\n            region:SetBarColor2(unpack(c2))\n        else\n            region:SetGradientEnabled(false)\n            region:Color(unpack(c1))\n        end\n\n        if region.ot then\n            region.ot:SetColorTexture(unpack(c2))\n        end\n    end\nend\n\nfunction LWA.GrowCore(newPositions, activeRegions)\n    local nb = #activeRegions\n\n    if nb <= 0 then return end\n\n    local config = LWA.GetConfig()\n\n    local w1 = config.core.width\n    local h1 = config.core.height\n    local s1 = CalcSpacing(config.core.spacing)\n    local w2 = config.core.width2\n    local h2 = config.core.height2\n    local s2 = CalcSpacing(config.core.spacing2)\n    local m1 = config.core.margin\n\n    local maxCore = min(nb, config.core.nb_max)\n    local maxOverflow = nb - maxCore\n    local x, y\n    local xOffset = ((maxCore - 1) * (w1 + s1) / 2)\n    local yOffset = h1\n    local nbPerRow = floor((CORE_WIDTH + s2) / (w2 + s2)) or 1\n    local coreHeight = h1 + (ceil(maxOverflow / nbPerRow) * (h2 + s2))\n    local oldWidth, oldHeight = CORE_WIDTH, CORE_HEIGHT\n\n    if maxOverflow > 0 then\n        coreHeight = coreHeight + max(s1, s2) - s2\n    end\n\n    CORE_HEIGHT = coreHeight\n\n    if not WeakAuras.IsOptionsOpen() then\n        NB_CORE = max(4, config.core.nb_min, maxCore)\n\n        CORE_WIDTH = NB_CORE * (w1 + s1) - s1\n    end\n\n    UpdateAnchorFrame(true)\n\n    if oldWidth ~= CORE_WIDTH or oldHeight ~= CORE_HEIGHT then\n        this.UpdateResources()\n    end\n\n    if config.core.resources_position == 1 then  -- Above\n        yOffset = h1 + RESOURCES_HEIGHT + s1 + m1\n    end\n\n    if config.core.overflow_position == 1 then  -- Above\n        yOffset = yOffset + coreHeight - h1\n    end\n\n    for i, regionData in ipairs(activeRegions) do\n        x = (i - 1) * (w1 + s1) - xOffset\n        y = -yOffset\n\n        UpdateIcon(regionData.region, w1, h1, \"BOTTOM\")\n\n        newPositions[i] = { x, y }\n\n        if i == maxCore then break end\n    end\n\n    if maxOverflow > 0 then\n        local i2, m, anchor, yMult\n\n        xOffset = ((maxCore - 1) * (w2 + s2) / 2)\n        yOffset = h1\n\n        if config.core.overflow_position == 1 then -- Above\n            yOffset = yOffset - h2 + max(s1, s2) - s2 - coreHeight\n            yMult = 1\n            anchor = \"BOTTOM\"\n\n            if config.core.resources_position == 1 then  -- Above\n                yOffset = yOffset - RESOURCES_HEIGHT - s1 - m1\n            end\n        else\n            if config.core.resources_position == 1 then  -- Above\n                yOffset = yOffset + RESOURCES_HEIGHT + s1 + m1\n            end\n\n            yOffset = yOffset - h2\n            yMult = -1\n            anchor = \"TOP\"\n        end\n\n        for i, regionData in ipairs(activeRegions) do\n            if i > maxCore then\n                i2 = i - maxCore\n                m = (i2 % nbPerRow)\n\n                if m == 1 then\n                    xOffset = (min(nb - i, nbPerRow - 1)) * (w2 + s2) / 2\n                    yOffset = yOffset + h2 + s2\n                end\n\n                if m == 0 then\n                    m = nbPerRow\n                end\n\n                x = (m - 1) * (w2 + s2) - xOffset\n                y = yOffset * yMult\n\n                UpdateIcon(regionData.region, w2, h2, anchor)\n\n                newPositions[i] = { x, y }\n            end\n        end\n    end\nend\n\nfunction LWA.GrowDynamicEffects(newPositions, activeRegions)\n    local nb = #activeRegions\n\n    if nb <= 0 then return end\n\n    local config = LWA.GetConfig()\n\n    local maxCore = min(nb, NB_CORE)\n\n    local w1 = config.core.width\n    local s1 = CalcSpacing(config.core.spacing)\n\n    local w2 = config.top.width\n    local h2 = config.top.height\n    local s2 = CalcSpacing(config.top.spacing)\n\n    local xOffset = (maxCore - 1) * (w1 + s1) / 2\n    local yOffset = config.top.margin + max(s1, s2) - s2 - h2\n    local x, y, m\n\n    local nbPerRow = floor((CORE_WIDTH + s2) / (w2 + s2)) or 1\n\n    for i, regionData in ipairs(activeRegions) do\n        m = (i % nbPerRow)\n\n        if m == 1 then\n            xOffset = (min(nb - i, nbPerRow - 1)) * (w2 + s2) / 2\n            yOffset = yOffset + h2 + s2\n        end\n\n        if m == 0 then\n            m = nbPerRow\n        end\n\n        x = (m - 1) * (w2 + s2) - xOffset\n        y = yOffset\n\n        UpdateIcon(regionData.region, w2, h2, \"BOTTOM\")\n\n        newPositions[i] = { x, y }\n    end\nend\n\nfunction LWA.GrowSide(newPositions, activeRegions, xMult)\n    local nb = #activeRegions\n\n    if nb <= 0 then return end\n\n    local config = LWA.GetConfig()\n\n    local w = config.side.width\n    local h = config.side.height\n    local s2 = CalcSpacing(config.side.spacing)\n    local s1 = CalcSpacing(config.core.spacing)\n    local h1 = config.core.height\n    local m1 = config.core.margin\n\n    local baseX, baseY = config.side.margin + max(s1, s2), 0\n    local xOffset, yOffset, yMult = 0, 0, 1\n    local nbPerRC, m = min(config.side.nb, nb)\n    local grow = config.side.grow_direction\n    local anchor\n\n    if config.core.resources_position == 2 and config.core.overflow_position == 2 then -- Below\n        if grow == 2 or grow == 4 then -- Upward\n            baseY = baseY - config.top.margin\n        end\n    else\n        if config.core.resources_position == 1 then -- Above\n            baseY = baseY + RESOURCES_HEIGHT + s1 + m1\n        end\n\n        if config.core.overflow_position == 1 then -- Above\n            baseY = baseY + max(CORE_HEIGHT, h1) - h1\n        end\n    end\n\n    xMult = xMult or 1\n\n    if xMult < 0 then\n        anchor = \"TOPRIGHT\"\n    else\n        anchor = \"TOPLEFT\"\n    end\n\n    if grow == 3 or grow == 4 then -- Horizontal\n        if grow == 4 then -- Upward\n            yOffset = -baseY\n            yMult = -1\n        else\n            yOffset = baseY - h - s2\n        end\n\n        for i, regionData in ipairs(activeRegions) do\n            m = (i % nbPerRC)\n\n            if m == 1 or (nbPerRC == 1 and i == 1) then\n                xOffset = baseX\n                yOffset = yOffset + h + s2\n            end\n\n            UpdateIcon(regionData.region, w, h, anchor)\n\n            newPositions[i] = { xOffset * xMult, -yOffset * yMult }\n\n            xOffset = xOffset + w + s2\n        end\n    else\n        xOffset = baseX - w - s2\n\n        if grow == 2 then -- Upward\n            baseY = -baseY + h + s2\n            yOffset = baseY\n            yMult = -1\n        else\n            yOffset = -h - s2\n        end\n\n        for i, regionData in ipairs(activeRegions) do\n            m = (i % nbPerRC)\n\n            if m == 1 or (nbPerRC == 1 and i == 1) then\n                xOffset = xOffset + w + s2\n                yOffset = baseY\n            end\n\n            UpdateIcon(regionData.region, w, h, anchor)\n\n            newPositions[i] = { xOffset * xMult, -yOffset * yMult }\n\n            yOffset = yOffset + h + s2\n        end\n    end\nend\n\nfunction LWA.GrowUtilities(newPositions, activeRegions)\n    local nb = #activeRegions\n\n    if nb <= 0 then return end\n\n    local config = LWA.GetConfig()\n\n    local w1 = config.core.width\n    local s1 = CalcSpacing(config.core.spacing)\n\n    local w2 = config.utility.width\n    local h2 = config.utility.height\n    local s2 = CalcSpacing(config.utility.spacing)\n\n    local maxCore, nbPerRow\n\n    if config.utility.limit_icons then\n        nbPerRow = config.utility.nb_max\n        maxCore = min(nb, nbPerRow)\n    else\n        maxCore = min(nb, NB_CORE)\n        nbPerRow = floor((CORE_WIDTH + s2) / (w2 + s2)) or 1\n    end\n\n    local xOffset = (maxCore - 1) * (w2 + s2) / 2\n    local yOffset = config.utility.margin + max(s1, s2) - s2 - h2\n    local x, y, m\n\n    for i, regionData in ipairs(activeRegions) do\n        m = (i % nbPerRow)\n\n        if m == 1 then\n            xOffset = (min(nb - i, nbPerRow - 1)) * (w2 + s2) / 2\n            yOffset = yOffset + h2 + s2\n        end\n\n        if m == 0 then\n            m = nbPerRow\n        end\n\n        x = (m - 1) * (w2 + s2) - xOffset\n        y = -yOffset\n\n        UpdateIcon(regionData.region, w2, h2, \"TOP\")\n\n        newPositions[i] = { x, y }\n    end\nend\n\nfunction LWA.GrowMaintenance(newPositions, activeRegions)\n    local nb = #activeRegions\n\n    if nb <= 0 then return end\n\n    local config = LWA.GetConfig()\n\n    local w1 = config.core.width\n    local s1 = CalcSpacing(config.core.spacing)\n\n    local w2 = config.maintenance.width\n    local h2 = config.maintenance.height\n    local s2 = CalcSpacing(config.maintenance.spacing)\n\n    local maxCore, nbPerRow\n\n    if config.maintenance.limit_icons then\n        nbPerRow = config.maintenance.nb_max\n        maxCore = min(nb, nbPerRow)\n    else\n        maxCore = min(nb, NB_CORE)\n        nbPerRow = floor((CORE_WIDTH + s2) / (w2 + s2)) or 1\n    end\n\n    local xOffset = (maxCore - 1) * (w2 + s2) / 2\n    local yOffset = config.maintenance.margin + config.utility.margin + max(CalcSpacing(config.utility.spacing), s2) - s2 - h2\n    local x, y, m\n\n    for i, regionData in ipairs(activeRegions) do\n        m = (i % nbPerRow)\n\n        if m == 1 then\n            xOffset = (min(nb - i, nbPerRow - 1)) * (w2 + s2) / 2\n            yOffset = yOffset + h2 + s2\n        end\n\n        if m == 0 then\n            m = nbPerRow\n        end\n\n        x = (m - 1) * (w2 + s2) - xOffset\n        y = -yOffset\n\n        UpdateIcon(regionData.region, w2, h2, \"TOP\")\n\n        newPositions[i] = { x, y }\n    end\nend\n\nfunction LWA.GrowDynamicResource(newPositions, activeRegions)\n    local nb = #activeRegions\n\n    if nb <= 0 then return end\n\n    local config = LWA.GetConfig()\n\n    local s = CalcSpacing(config.core.spacing)\n    local w = (CORE_WIDTH + s) / nb\n    local xOffset, x = (CORE_WIDTH - w + s) / 2\n    local childYOffset = aura_env.region.childYOffset or 0\n\n    for i, regionData in ipairs(activeRegions) do\n        x = (i - 1) * w - xOffset\n\n        if not this.isImporting then\n            UpdateResource(regionData.region, i, nb)\n            regionData.region:SetYOffset(childYOffset)\n        end\n\n        newPositions[i] = { x, 0 }\n    end\nend\n\nlocal function round(num, decimals)\n    local mult = 10^(decimals or 0)\n\n    return Round((num or 0) * mult) / mult\nend\n\nlocal barFormats = {\n    \"value\",\n    \"kvalue\",\n    \"value (percent%)\",\n    \"kvalue (percent%)\",\n    \"percent%\",\n}\n\nfunction LWA.UpdateBarText(value, percent, format)\n    local text = barFormats[format] or \"value\"\n    value = value or 0\n    percent = percent or 0\n\n    text = text:gsub(\"percent\", round(percent, 0))\n\n    if 2 == format or 4 == format then\n        local rem = fmod(value, 1000) or 0\n\n        if rem >= 950 or value >= 1000000 then\n            rem = 0\n        end\n\n        text = text:gsub(\"kvalue\", FormatLargeNumber(Round((value - rem) / 1000)) .. \".\" .. Round(rem / 100) .. \" K\"):gsub(\"%.0 K\", \" K\"):gsub(\"%.\", DECIMAL_SEPERATOR)\n    else\n        text = text:gsub(\"value\", value)\n    end\n\n    return text\nend\n",
+["do_custom"] = true,
+},
+},
+["displayIcon"] = 134520,
+["cooldown"] = false,
 ["authorOptions"] = {
 {
 ["useName"] = true,
@@ -68482,174 +68541,6 @@ true,
 ["width"] = 2,
 },
 },
-["desc"] = "Made by Luxthos - twitch.tv/luxthos",
-["information"] = {
-["forceEvents"] = true,
-},
-["conditions"] = {
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["selfPoint"] = "TOP",
-["preferToUpdate"] = false,
-["uid"] = "Mpao90qbhsw",
-["xOffset"] = 0,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["cooldownTextDisabled"] = false,
-["zoom"] = 0,
-["semver"] = "11.0.4",
-["tocversion"] = 110000,
-["id"] = "General Options - LWA - Priest",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 405,
-["keepAspectRatio"] = false,
-["config"] = {
-["top"] = {
-["height"] = 32,
-["spacing"] = 0,
-["margin"] = 10,
-["width"] = 38,
-},
-["maintenance"] = {
-["margin"] = 10,
-["spacing"] = 0,
-["height"] = 32,
-["limit_icons"] = false,
-["nb_max"] = 10,
-["width"] = 38,
-},
-["style"] = {
-["zoom"] = 30,
-["border_icons"] = true,
-["border_color"] = {
-0,
-0,
-0,
-1,
-},
-["border_resources"] = true,
-["border_offset"] = 1,
-["border_size"] = 1,
-},
-["core"] = {
-["resources_position"] = 2,
-["width"] = 48,
-["nb_min"] = 5,
-["nb_max"] = 8,
-["spacing2"] = 0,
-["height"] = 40,
-["spacing"] = 0,
-["width2"] = 44,
-["overflow_position"] = 1,
-["margin"] = 0,
-["height2"] = 36,
-},
-["side"] = {
-["grow_direction"] = 1,
-["spacing"] = 0,
-["height"] = 32,
-["margin"] = 3,
-["nb"] = 3,
-["width"] = 38,
-},
-["resources"] = {
-["cast_bar"] = {
-["emp_gradient"] = 1,
-["emp_color1"] = {
-1,
-1,
-1,
-0.90000000596046,
-},
-["emp_color2"] = {
-1,
-1,
-1,
-1,
-},
-["unint_color1"] = {
-0.52549019607843,
-0.52549019607843,
-0.52549019607843,
-0.90000000596046,
-},
-["color1"] = {
-0.52941176470588,
-0.090196078431373,
-0.090196078431373,
-1,
-},
-["color2"] = {
-0.77647058823529,
-0.1843137254902,
-0.1843137254902,
-1,
-},
-["unint_gradient"] = 1,
-["height"] = 20,
-["unint_color2"] = {
-0.70980392156863,
-0.70980392156863,
-0.70980392156863,
-1,
-},
-["gradient"] = 1,
-},
-["health_bar"] = {
-["color2"] = {
-0.58431375026703,
-0.85098046064377,
-0.30588236451149,
-1,
-},
-["height"] = 20,
-["format"] = 5,
-["gradient"] = 1,
-["color1"] = {
-0.24313727021217,
-0.58431375026703,
-0.10980392992496,
-1,
-},
-},
-},
-["alpha"] = {
-["skyriding_only"] = false,
-["ignore_enemy"] = true,
-["global"] = 100,
-["ooc"] = 100,
-["mounted"] = 100,
-["ignore_friendly"] = true,
-},
-["utility"] = {
-["margin"] = 10,
-["spacing"] = 0,
-["height"] = 32,
-["limit_icons"] = false,
-["nb_max"] = 10,
-["width"] = 38,
-},
-},
-["inverse"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-["custom"] = "local this = aura_env\nlocal suffix = this.id:gsub(\"General Options %- LWA %- \", \"\")\nlocal CLASS = suffix:gsub(\"[%s%d]+$\", \"\")\nthis.CLASS = CLASS\n\nlocal CLASS_GROUP = WeakAuras.GetData(this.id).parent\nlocal DYNAMIC_EFFECTS_GROUP = \"Dynamic Effects - LWA - \" .. suffix\nlocal CORE_GROUP = \"Core - LWA - \" .. suffix\nlocal LEFT_SIDE_GROUP = \"Left Side - LWA - \" .. suffix\nlocal RIGHT_SIDE_GROUP = \"Right Side - LWA - \" .. suffix\nlocal UTILITIES_GROUP = \"Utilities - LWA - \" .. suffix\nlocal MAINTENANCE_GROUP = \"Maintenance - LWA - \" .. suffix\nlocal RESOURCES_GROUP = \"Resources - LWA - \" .. suffix\nlocal CAST_BAR = \"Cast Bar - LWA - \" .. suffix\n\nlocal NB_CORE = 8\nlocal CORE_WIDTH = 405\nlocal CORE_HEIGHT = 48\nlocal RESOURCES_HEIGHT = 0\n\nLWA = LWA or {}\nLWA[CLASS] = LWA[CLASS] or {}\n\nlocal LWA = LWA[CLASS]\n\nlocal config = nil\nLWA.configs = LWA.configs or {}\nLWA.configs[\"general\"] = this.config\n\nthis.resources = nil\nthis.parentFrame = nil\n\n\nlocal WeakAuras, C_Timer, time, min, max, floor, ceil, fmod, Round, pairs, ipairs, type, unpack, tinsert, FormatLargeNumber, DECIMAL_SEPARATOR = WeakAuras, C_Timer, time, min, max, floor, ceil, math.fmod, Round, pairs, ipairs, type, unpack, tinsert, FormatLargeNumber, DECIMAL_SEPARATOR\n\n\nif WeakAuras.IsImporting() then\n    local function CheckImport()\n        if WeakAuras.IsImporting() or not this.isImporting then return end\n\n        this.isImporting:Cancel()\n        this.isImporting = false\n\n        C_Timer.After(1, function()\n                WeakAuras.ScanEvents(\"LWA_INIT\", true)\n        end)\n    end\n\n    this.isImporting = C_Timer.NewTicker(0.5, CheckImport)\nelse\n    this.isImporting = false\nend\n\nlocal function tclone(t1)\n    local t = {}\n\n    if t1 then\n        for k, v in pairs(t1) do\n            if \"table\" == type(v) then\n                v = tclone(v)\n            end\n\n            if \"string\" == type(k) then\n                t[k] = v\n            else\n                tinsert(t, v)\n            end\n        end\n    end\n\n    return t\nend\n\nlocal function tmerge(...)\n    local ts = {...}\n    local t = tclone(ts[1])\n    local t2\n\n    for i = 2, #ts do\n        t2 = ts[i] or {}\n\n        for k, v in pairs(t2) do\n            if \"table\" == type(v) then\n                v = tclone(v)\n\n                if t[k] and #t[k] == 0 then\n                    t[k] = tmerge(t[k], v)\n                else\n                    t[k] = v\n                end\n            else\n                t[k] = v\n            end\n        end\n    end\n\n    return t\nend\n\nlocal function SetRegionSize(r, w, h)\n    r:SetRegionWidth(w)\n    r:SetRegionHeight(h)\nend\n\nlocal function CalcSpacing(spacing)\n    local s, bs, bo, s2 = spacing, config.style.border_size, config.style.border_offset\n\n    if bs > 0 then\n        s2 = max(bs, bo)\n    else\n        s2 = 0\n    end\n\n    if s > 0 then\n        s = s + (s2 * 2)\n    else\n        s = s2\n    end\n\n    return s\nend\n\nlocal function UpdateAnchorFrame(skipCore)\n    if this.isImporting then return end\n\n    local config = LWA.GetConfig()\n    local h1 = config.core.height\n    local s1 = CalcSpacing(config.core.spacing)\n    local m1 = config.core.margin\n    local h, y = max(1, CORE_HEIGHT + RESOURCES_HEIGHT + s1 + m1), 0\n\n    if 1 == h % 2 then\n        h = h + 1\n    end\n\n    SetRegionSize(this.region, CORE_WIDTH, h)\n\n    if config.core.resources_position == 1 then -- Above\n        y = y + RESOURCES_HEIGHT + s1 + m1\n    end\n\n    if config.core.overflow_position == 1 then -- Above\n        y = y + max(CORE_HEIGHT, h1) - h1\n    end\n\n    this.region:SetOffset(0, y)\n\n    local function RepositionGroups()\n        local configs = { config.core, config.utility, config.maintenance }\n\n        for i, g in ipairs({ CORE_GROUP, UTILITIES_GROUP, MAINTENANCE_GROUP }) do\n            if not (skipCore and CORE_GROUP == g) then\n                g = WeakAuras.GetRegion(g)\n\n                if g then\n                    g:PositionChildren()\n\n                    if 0 == #g.sortedChildren then\n                        g:SetHeight(configs[i].height)\n                        g.currentHeight = configs[i].height\n                    end\n                end\n            end\n        end\n    end\n\n    if skipCore then\n        C_Timer.After(0.05, RepositionGroups)\n    else\n        RepositionGroups()\n    end\nend\n\nfunction LWA.GetConfig(grp, force)\n    local default = {\n        style = {\n            border_offset = 1,\n            border_size = 1,\n            border_icons = true,\n            border_resources = true,\n            border_color = { [1] = 0, [2] = 0, [3] = 0, [4] = 1 },\n            zoom = 30,\n        },\n        core = {\n            nb_min = 5,\n            nb_max = 8,\n            width = 48,\n            height = 48,\n            spacing = 3,\n            width2 = 48,\n            height2 = 48,\n            spacing2 = 3,\n            margin = 0,\n            overflow_position = 2, -- Below\n            resources_position = 2, -- Below\n        },\n        utility = {\n            width = 38,\n            height = 38,\n            spacing = 3,\n            margin = 10,\n            nb_max = 10,\n            limit_icons = false,\n            behavior = 2, -- Always Show\n        },\n        top = {\n            width = 38,\n            height = 38,\n            spacing = 3,\n            margin = 10,\n        },\n        side = {\n            width = 38,\n            height = 38,\n            spacing = 3,\n            margin = 3,\n            grow_direction = 1,\n            nb = 60,\n        },\n        maintenance = {\n            width = 36,\n            height = 36,\n            spacing = 0,\n            margin = 10,\n            nb_max = 10,\n            limit_icons = false,\n        },\n        alpha = {\n            global = 100,\n            ooc = 100,\n            mounted = 0,\n            skyriding_only = false,\n            ignore_enemy = true,\n            ignore_friendly = true,\n        },\n        resources = {\n            health_bar = {\n                format = 1\n            },\n            mana_bar = {\n                format = 1\n            }\n        },\n    }\n\n    if force or not config or WeakAuras.IsOptionsOpen() then\n        config = tmerge(\n            default,\n            LWA.configs[\"general\"],\n            LWA.configs[\"class\"] or {}\n        )\n    end\n\n    if grp then\n        return config[grp] or {}\n    end\n\n    return config\nend\n\nlocal function UpdateBorder(region, apply)\n    if region and #region.subRegions > 0 then\n        local config, size, offset, r, g, b, a = LWA.GetConfig(), 0, 0\n\n        if apply then\n            size = config.style.border_size\n            offset = config.style.border_offset\n            r, g, b, a = unpack(config.style.border_color)\n        end\n\n        for _, border in ipairs(region.subRegions) do\n            if \"subborder\" == border.type then\n                border:SetVisible(size > 0)\n\n                if size > 0 then\n                    region:AnchorSubRegion(border, \"area\", region.regionType == \"aurabar\" and \"bar\", nil, offset, offset)\n\n                    local bd = border:GetBackdrop()\n                    bd.edgeSize = size\n                    border:SetBackdrop(bd)\n                    border:SetBorderColor(r, g, b, a)\n                end\n            end\n        end\n    end\nend\n\nlocal function UpdateIcon(region, width, height, selfPoint)\n    if not region then return end\n\n    local config = LWA.GetConfig()\n    local zoom = config.style.zoom / 100\n\n    region:SetAnchor(selfPoint, region.relativeTo, region.relativePoint)\n\n    if region.SetZoom then\n        region:SetZoom(min(1, zoom + (region.extraZoom or 0)))\n    end\n\n    SetRegionSize(region, width, height)\n\n    UpdateBorder(region, config.style.border_icons)\nend\n\nlocal function UpdateResource(region, index, nb)\n    if not region then return end\n\n    local config = LWA.GetConfig()\n\n    index = max(1, index or 1)\n    nb = max(1, nb or 1)\n\n    local w, h = CORE_WIDTH, 20\n\n    if nb > 1 then\n        local s = CalcSpacing(config.core.spacing)\n\n        w = (w + s) / nb - s\n    end\n\n    local cg = region.configGroup\n\n    if cg and config.resources[cg] then\n        h = config.resources[cg].height or 20\n    end\n\n    local lastW, lastH = region.width, region.height\n\n    SetRegionSize(region, w, h)\n    UpdateBorder(region, config.style.border_resources)\n\n    if lastW ~= w or lastH ~= h then\n        region.bar:Update()\n    end\n\n    this.UpdateBar({ region = region }, index, nb)\n\n    if region.bar.spark then\n        region.bar.spark:SetHeight(max(15, Round(h * 2)))\n    end\nend\n\nlocal throttledInitHandler, throttledInitLastRun = nil, 0\n\nfunction this.ThrottledInit()\n    if throttledInitHandler or this.isImporting then return end\n\n    local currentTime, delay = time(), 0.25\n\n    if throttledInitLastRun > currentTime - 0.5 then\n        delay = max(0.25, currentTime - throttledInitLastRun)\n    end\n\n    throttledInitHandler = C_Timer.NewTimer(delay, function()\n            WeakAuras.ScanEvents(\"LWA_INIT\")\n    end)\nend\n\nfunction this.Init()\n    if this.isImporting then return end\n\n    throttledInitLastRun = time()\n\n    local config = LWA.GetConfig(nil, true)\n    local isOptionsOpen = WeakAuras.IsOptionsOpen()\n    local zoom = config.style.zoom / 100\n\n    if throttledInitHandler then\n        throttledInitHandler:Cancel()\n        throttledInitHandler = nil\n    end\n\n    if not this.parentFrame then\n        this.parentFrame = WeakAuras.GetRegion(CLASS_GROUP)\n    end\n\n    if this.parentFrame and not this.parentFrame.SetRealScale then\n        this.parentFrame.SetRealScale = this.parentFrame.SetScale\n\n        this.parentFrame.SetScale = function(self, scale)\n            this.parentFrame:SetRealScale(scale)\n            local castBar = WeakAuras.GetRegion(CAST_BAR)\n\n            if castBar then\n                castBar:SetScale(scale)\n            end\n        end\n    end\n\n    if isOptionsOpen then\n        NB_CORE = config.core.nb_max\n    else\n        NB_CORE = max(4, config.core.nb_min, min(NB_CORE, config.core.nb_max))\n\n        local castBar = WeakAuras.GetRegion(CAST_BAR)\n\n        if castBar then\n            castBar:SetParent(UIParent)\n\n            if this.parentFrame then\n                castBar:SetScale(this.parentFrame:GetScale())\n            end\n        end\n    end\n\n    local spacing = CalcSpacing(config.core.spacing)\n\n    CORE_WIDTH = NB_CORE * (config.core.width + spacing) - spacing\n\n    local grpRegion = WeakAuras.GetRegion(CORE_GROUP)\n\n    if grpRegion then\n        grpRegion:PositionChildren()\n\n        if not isOptionsOpen then\n            NB_CORE = max(4, config.core.nb_min, min(#grpRegion.sortedChildren, config.core.nb_max))\n\n            CORE_WIDTH = NB_CORE * (config.core.width + spacing) - spacing\n        end\n\n        this.region:SetRegionWidth(CORE_WIDTH)\n    end\n\n    this.UpdateResources()\n\n    for _, g in ipairs({ DYNAMIC_EFFECTS_GROUP, LEFT_SIDE_GROUP, RIGHT_SIDE_GROUP }) do\n        g = WeakAuras.GetRegion(g)\n\n        if g then\n            g:PositionChildren()\n        end\n    end\nend\n\nhooksecurefunc(\"SetUIVisibility\", function(isVisible)\n        if isVisible and this and this.ThrottledInit then\n            this.ThrottledInit()\n        end\nend)\n\nfunction this.UpdateResources()\n    if this.isImporting then return end\n\n    local grpRegion = WeakAuras.GetRegion(RESOURCES_GROUP)\n\n    if not this.resources then\n        local grpData = WeakAuras.GetData(RESOURCES_GROUP)\n\n        this.resources = grpData and grpData.controlledChildren\n    end\n\n    if grpRegion and this.resources and #this.resources > 0 then\n        local config = LWA.GetConfig()\n\n        local totalHeight, nb = 0, 0\n        local h1 = config.core.height\n        local s1 = CalcSpacing(config.core.spacing)\n        local m1 = config.core.margin\n        local y = 0\n\n        if config.core.resources_position == 2 then -- Below\n            y = max(CORE_HEIGHT, h1) + s1 + m1\n        end\n\n        grpRegion:SetOffset(0, -y)\n\n        local isOptionsOpen = WeakAuras.IsOptionsOpen()\n        local resRegion, isVisible, regionType\n        local w, h, cg = 0, 0\n\n        y = 0\n\n        for _, resId in ipairs(this.resources) do\n            resRegion = WeakAuras.GetRegion(resId)\n\n            if resRegion then\n                isVisible = isOptionsOpen\n                regionType = resRegion.regionType\n                h = 0\n\n                if \"aurabar\" == regionType then\n                    isVisible = isVisible or resRegion:IsVisible()\n                    UpdateResource(resRegion)\n\n                    h = resRegion.height\n\n                elseif \"dynamicgroup\" == regionType then\n                    local nbChild = 0\n                    local childRegions = {}\n\n                    for _, region in pairs(resRegion.controlledChildren) do\n                        if region and region[\"\"] then\n                            nbChild = nbChild + 1\n\n                            childRegions[region[\"\"].regionData.dataIndex] = region[\"\"].regionData.region\n\n                            isVisible = isVisible or region[\"\"].regionData.region:IsVisible()\n                        end\n                    end\n\n                    resRegion.childYOffset = -y\n                    h = 0\n\n                    for i, region in ipairs(childRegions) do\n                        UpdateResource(region, i, nbChild)\n\n                        h = max(h, region.height)\n\n                        region:SetYOffset(-y)\n                    end\n\n                    if h <= 0 then\n                        h = 20\n                    end\n                end\n\n                if isVisible then\n                    nb = nb + 1\n\n                    if \"dynamicgroup\" == regionType then\n                        resRegion:PositionChildren()\n                    else\n                        resRegion:SetOffset(0, -y)\n                    end\n\n                    totalHeight = totalHeight + h\n                    y = y + h + s1\n                end\n            end\n        end\n\n        RESOURCES_HEIGHT = totalHeight + max(nb - 1, 0) * CalcSpacing(config.core.spacing)\n    end\n\n    UpdateAnchorFrame()\nend\n\nfunction this.UpdateBar(aura, i, nb)\n    local config = LWA.GetConfig(\"resources\")\n    local e = aura or aura_env\n    local region = e and e.region\n    local cg = region and region.configGroup\n\n    if not (region and region:IsVisible() and cg and config[cg]) then return end\n\n    local cs = region.colorState or \"\"\n\n    if cs ~= \"\" then\n        cs = cs .. \"_\"\n    end\n\n    cg = config[cg]\n\n    local c1, c2 = cg[cs .. \"color1\"], cg[cs .. \"color2\"]\n\n    if c1 and c2 then\n        nb = max(1, min(region.indexMax or 99, nb or 1))\n        i = min(nb, max(1, region.index or i or 1)) - (region.indexOffset or 0)\n\n        local bar = region.bar\n\n        if cg[cs .. \"gradient\"] and cg[cs .. \"gradient\"] < 3 then\n            if nb > 1 and 1 == cg[cs .. \"gradient\"] then\n                local function MixRGB(c1, c2, pos)\n                    pos = 1 - (pos or 0.5)\n\n                    return {\n                        (c1[1] * pos) + (c2[1] * (1 - pos)),\n                        (c1[2] * pos) + (c2[2] * (1 - pos)),\n                        (c1[3] * pos) + (c2[3] * (1 - pos)),\n                        (c1[4] * pos) + (c2[4] * (1 - pos))\n                    }\n                end\n\n                local cc1, cc2 = c1, c2\n\n                if i > 1 then\n                    c1 = MixRGB(cc1, cc2, (i - 1) / nb)\n                end\n\n                c2 = MixRGB(cc1, cc2, i / nb)\n            end\n\n            local orientation = \"HORIZONTAL\"\n\n            if 2 == cg[cs .. \"gradient\"] then\n                orientation = \"VERTICAL\"\n\n                local tmp = c1\n                c1 = c2\n                c2 = tmp\n            end\n\n            region:SetGradientEnabled(true)\n            region:SetGradientOrientation(orientation)\n            region:Color(unpack(c1))\n            region:SetBarColor2(unpack(c2))\n        else\n            region:SetGradientEnabled(false)\n            region:Color(unpack(c1))\n        end\n\n        if region.ot then\n            region.ot:SetColorTexture(unpack(c2))\n        end\n    end\nend\n\nfunction LWA.GrowCore(newPositions, activeRegions)\n    local nb = #activeRegions\n\n    if nb <= 0 then return end\n\n    local config = LWA.GetConfig()\n\n    local w1 = config.core.width\n    local h1 = config.core.height\n    local s1 = CalcSpacing(config.core.spacing)\n    local w2 = config.core.width2\n    local h2 = config.core.height2\n    local s2 = CalcSpacing(config.core.spacing2)\n    local m1 = config.core.margin\n\n    local maxCore = min(nb, config.core.nb_max)\n    local maxOverflow = nb - maxCore\n    local x, y\n    local xOffset = ((maxCore - 1) * (w1 + s1) / 2)\n    local yOffset = h1\n    local nbPerRow = floor((CORE_WIDTH + s2) / (w2 + s2)) or 1\n    local coreHeight = h1 + (ceil(maxOverflow / nbPerRow) * (h2 + s2))\n    local oldWidth, oldHeight = CORE_WIDTH, CORE_HEIGHT\n\n    if maxOverflow > 0 then\n        coreHeight = coreHeight + max(s1, s2) - s2\n    end\n\n    CORE_HEIGHT = coreHeight\n\n    if not WeakAuras.IsOptionsOpen() then\n        NB_CORE = max(4, config.core.nb_min, maxCore)\n\n        CORE_WIDTH = NB_CORE * (w1 + s1) - s1\n    end\n\n    UpdateAnchorFrame(true)\n\n    if oldWidth ~= CORE_WIDTH or oldHeight ~= CORE_HEIGHT then\n        this.UpdateResources()\n    end\n\n    if config.core.resources_position == 1 then  -- Above\n        yOffset = h1 + RESOURCES_HEIGHT + s1 + m1\n    end\n\n    if config.core.overflow_position == 1 then  -- Above\n        yOffset = yOffset + coreHeight - h1\n    end\n\n    for i, regionData in ipairs(activeRegions) do\n        x = (i - 1) * (w1 + s1) - xOffset\n        y = -yOffset\n\n        UpdateIcon(regionData.region, w1, h1, \"BOTTOM\")\n\n        newPositions[i] = { x, y }\n\n        if i == maxCore then break end\n    end\n\n    if maxOverflow > 0 then\n        local i2, m, anchor, yMult\n\n        xOffset = ((maxCore - 1) * (w2 + s2) / 2)\n        yOffset = h1\n\n        if config.core.overflow_position == 1 then -- Above\n            yOffset = yOffset - h2 + max(s1, s2) - s2 - coreHeight\n            yMult = 1\n            anchor = \"BOTTOM\"\n\n            if config.core.resources_position == 1 then  -- Above\n                yOffset = yOffset - RESOURCES_HEIGHT - s1 - m1\n            end\n        else\n            if config.core.resources_position == 1 then  -- Above\n                yOffset = yOffset + RESOURCES_HEIGHT + s1 + m1\n            end\n\n            yOffset = yOffset - h2\n            yMult = -1\n            anchor = \"TOP\"\n        end\n\n        for i, regionData in ipairs(activeRegions) do\n            if i > maxCore then\n                i2 = i - maxCore\n                m = (i2 % nbPerRow)\n\n                if m == 1 then\n                    xOffset = (min(nb - i, nbPerRow - 1)) * (w2 + s2) / 2\n                    yOffset = yOffset + h2 + s2\n                end\n\n                if m == 0 then\n                    m = nbPerRow\n                end\n\n                x = (m - 1) * (w2 + s2) - xOffset\n                y = yOffset * yMult\n\n                UpdateIcon(regionData.region, w2, h2, anchor)\n\n                newPositions[i] = { x, y }\n            end\n        end\n    end\nend\n\nfunction LWA.GrowDynamicEffects(newPositions, activeRegions)\n    local nb = #activeRegions\n\n    if nb <= 0 then return end\n\n    local config = LWA.GetConfig()\n\n    local maxCore = min(nb, NB_CORE)\n\n    local w1 = config.core.width\n    local s1 = CalcSpacing(config.core.spacing)\n\n    local w2 = config.top.width\n    local h2 = config.top.height\n    local s2 = CalcSpacing(config.top.spacing)\n\n    local xOffset = (maxCore - 1) * (w1 + s1) / 2\n    local yOffset = config.top.margin + max(s1, s2) - s2 - h2\n    local x, y, m\n\n    local nbPerRow = floor((CORE_WIDTH + s2) / (w2 + s2)) or 1\n\n    for i, regionData in ipairs(activeRegions) do\n        m = (i % nbPerRow)\n\n        if m == 1 then\n            xOffset = (min(nb - i, nbPerRow - 1)) * (w2 + s2) / 2\n            yOffset = yOffset + h2 + s2\n        end\n\n        if m == 0 then\n            m = nbPerRow\n        end\n\n        x = (m - 1) * (w2 + s2) - xOffset\n        y = yOffset\n\n        UpdateIcon(regionData.region, w2, h2, \"BOTTOM\")\n\n        newPositions[i] = { x, y }\n    end\nend\n\nfunction LWA.GrowSide(newPositions, activeRegions, xMult)\n    local nb = #activeRegions\n\n    if nb <= 0 then return end\n\n    local config = LWA.GetConfig()\n\n    local w = config.side.width\n    local h = config.side.height\n    local s2 = CalcSpacing(config.side.spacing)\n    local s1 = CalcSpacing(config.core.spacing)\n    local h1 = config.core.height\n    local m1 = config.core.margin\n\n    local baseX, baseY = config.side.margin + max(s1, s2), 0\n    local xOffset, yOffset, yMult = 0, 0, 1\n    local nbPerRC, m = min(config.side.nb, nb)\n    local grow = config.side.grow_direction\n    local anchor\n\n    if config.core.resources_position == 2 and config.core.overflow_position == 2 then -- Below\n        if grow == 2 or grow == 4 then -- Upward\n            baseY = baseY - config.top.margin\n        end\n    else\n        if config.core.resources_position == 1 then -- Above\n            baseY = baseY + RESOURCES_HEIGHT + s1 + m1\n        end\n\n        if config.core.overflow_position == 1 then -- Above\n            baseY = baseY + max(CORE_HEIGHT, h1) - h1\n        end\n    end\n\n    xMult = xMult or 1\n\n    if xMult < 0 then\n        anchor = \"TOPRIGHT\"\n    else\n        anchor = \"TOPLEFT\"\n    end\n\n    if grow == 3 or grow == 4 then -- Horizontal\n        if grow == 4 then -- Upward\n            yOffset = -baseY\n            yMult = -1\n        else\n            yOffset = baseY - h - s2\n        end\n\n        for i, regionData in ipairs(activeRegions) do\n            m = (i % nbPerRC)\n\n            if m == 1 or (nbPerRC == 1 and i == 1) then\n                xOffset = baseX\n                yOffset = yOffset + h + s2\n            end\n\n            UpdateIcon(regionData.region, w, h, anchor)\n\n            newPositions[i] = { xOffset * xMult, -yOffset * yMult }\n\n            xOffset = xOffset + w + s2\n        end\n    else\n        xOffset = baseX - w - s2\n\n        if grow == 2 then -- Upward\n            baseY = -baseY + h + s2\n            yOffset = baseY\n            yMult = -1\n        else\n            yOffset = -h - s2\n        end\n\n        for i, regionData in ipairs(activeRegions) do\n            m = (i % nbPerRC)\n\n            if m == 1 or (nbPerRC == 1 and i == 1) then\n                xOffset = xOffset + w + s2\n                yOffset = baseY\n            end\n\n            UpdateIcon(regionData.region, w, h, anchor)\n\n            newPositions[i] = { xOffset * xMult, -yOffset * yMult }\n\n            yOffset = yOffset + h + s2\n        end\n    end\nend\n\nfunction LWA.GrowUtilities(newPositions, activeRegions)\n    local nb = #activeRegions\n\n    if nb <= 0 then return end\n\n    local config = LWA.GetConfig()\n\n    local w1 = config.core.width\n    local s1 = CalcSpacing(config.core.spacing)\n\n    local w2 = config.utility.width\n    local h2 = config.utility.height\n    local s2 = CalcSpacing(config.utility.spacing)\n\n    local maxCore, nbPerRow\n\n    if config.utility.limit_icons then\n        nbPerRow = config.utility.nb_max\n        maxCore = min(nb, nbPerRow)\n    else\n        maxCore = min(nb, NB_CORE)\n        nbPerRow = floor((CORE_WIDTH + s2) / (w2 + s2)) or 1\n    end\n\n    local xOffset = (maxCore - 1) * (w2 + s2) / 2\n    local yOffset = config.utility.margin + max(s1, s2) - s2 - h2\n    local x, y, m\n\n    for i, regionData in ipairs(activeRegions) do\n        m = (i % nbPerRow)\n\n        if m == 1 then\n            xOffset = (min(nb - i, nbPerRow - 1)) * (w2 + s2) / 2\n            yOffset = yOffset + h2 + s2\n        end\n\n        if m == 0 then\n            m = nbPerRow\n        end\n\n        x = (m - 1) * (w2 + s2) - xOffset\n        y = -yOffset\n\n        UpdateIcon(regionData.region, w2, h2, \"TOP\")\n\n        newPositions[i] = { x, y }\n    end\nend\n\nfunction LWA.GrowMaintenance(newPositions, activeRegions)\n    local nb = #activeRegions\n\n    if nb <= 0 then return end\n\n    local config = LWA.GetConfig()\n\n    local w1 = config.core.width\n    local s1 = CalcSpacing(config.core.spacing)\n\n    local w2 = config.maintenance.width\n    local h2 = config.maintenance.height\n    local s2 = CalcSpacing(config.maintenance.spacing)\n\n    local maxCore, nbPerRow\n\n    if config.maintenance.limit_icons then\n        nbPerRow = config.maintenance.nb_max\n        maxCore = min(nb, nbPerRow)\n    else\n        maxCore = min(nb, NB_CORE)\n        nbPerRow = floor((CORE_WIDTH + s2) / (w2 + s2)) or 1\n    end\n\n    local xOffset = (maxCore - 1) * (w2 + s2) / 2\n    local yOffset = config.maintenance.margin + config.utility.margin + max(CalcSpacing(config.utility.spacing), s2) - s2 - h2\n    local x, y, m\n\n    for i, regionData in ipairs(activeRegions) do\n        m = (i % nbPerRow)\n\n        if m == 1 then\n            xOffset = (min(nb - i, nbPerRow - 1)) * (w2 + s2) / 2\n            yOffset = yOffset + h2 + s2\n        end\n\n        if m == 0 then\n            m = nbPerRow\n        end\n\n        x = (m - 1) * (w2 + s2) - xOffset\n        y = -yOffset\n\n        UpdateIcon(regionData.region, w2, h2, \"TOP\")\n\n        newPositions[i] = { x, y }\n    end\nend\n\nfunction LWA.GrowDynamicResource(newPositions, activeRegions)\n    local nb = #activeRegions\n\n    if nb <= 0 then return end\n\n    local config = LWA.GetConfig()\n\n    local s = CalcSpacing(config.core.spacing)\n    local w = (CORE_WIDTH + s) / nb\n    local xOffset, x = (CORE_WIDTH - w + s) / 2\n    local childYOffset = aura_env.region.childYOffset or 0\n\n    for i, regionData in ipairs(activeRegions) do\n        x = (i - 1) * w - xOffset\n\n        if not this.isImporting then\n            UpdateResource(regionData.region, i, nb)\n            regionData.region:SetYOffset(childYOffset)\n        end\n\n        newPositions[i] = { x, 0 }\n    end\nend\n\nlocal function round(num, decimals)\n    local mult = 10^(decimals or 0)\n\n    return Round((num or 0) * mult) / mult\nend\n\nlocal barFormats = {\n    \"value\",\n    \"kvalue\",\n    \"value (percent%)\",\n    \"kvalue (percent%)\",\n    \"percent%\",\n}\n\nfunction LWA.UpdateBarText(value, percent, format)\n    local text = barFormats[format] or \"value\"\n    value = value or 0\n    percent = percent or 0\n\n    text = text:gsub(\"percent\", round(percent, 0))\n\n    if 2 == format or 4 == format then\n        local rem = fmod(value, 1000) or 0\n\n        if rem >= 950 or value >= 1000000 then\n            rem = 0\n        end\n\n        text = text:gsub(\"kvalue\", FormatLargeNumber(Round((value - rem) / 1000)) .. \".\" .. Round(rem / 100) .. \" K\"):gsub(\"%.0 K\", \" K\"):gsub(\"%.\", DECIMAL_SEPERATOR)\n    else\n        text = text:gsub(\"value\", value)\n    end\n\n    return text\nend\n",
-["do_custom"] = true,
-},
-},
-["displayIcon"] = 134520,
-["cooldown"] = false,
-["color"] = {
-0,
-0,
-0,
-0,
-},
 },
 ["Stellar Flare"] = {
 ["iconSource"] = -1,
@@ -68782,7 +68673,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 202347,
 ["size"] = {
 ["multi"] = {
@@ -68792,7 +68682,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = true,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -68813,25 +68715,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -68844,10 +68727,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Core - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "yoUgYJuz)tG",
 ["inverse"] = false,
-["preferToUpdate"] = true,
+["cooldownEdge"] = true,
 ["conditions"] = {
 {
 ["check"] = {
@@ -68947,7 +68830,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Void Tendrils"] = {
 ["iconSource"] = -1,
@@ -69126,17 +69016,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Utilities - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -69189,13 +69081,9 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 ["utility"] = {
@@ -69213,9 +69101,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "2BoiEjQKtnB",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -69236,6 +69121,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "2BoiEjQKtnB",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -69353,11 +69241,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Heart of the Wild"] = {
@@ -69530,7 +69420,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 319454,
 ["size"] = {
 ["multi"] = {
@@ -69540,36 +69429,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -69622,12 +69492,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -69646,10 +69528,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "Gf2c9nRgpmO",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -69767,7 +69649,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Archangel (PvP Talent)"] = {
 ["iconSource"] = -1,
@@ -69968,11 +69857,11 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["parent"] = "Utilities - LWA - Priest",
 ["progressSource"] = {
 -1,
 "",
 },
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -70246,7 +70135,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["parent"] = "Utilities - LWA - Priest",
 },
 ["Ursol's Vortex"] = {
 ["iconSource"] = -1,
@@ -70438,7 +70327,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 102793,
 ["size"] = {
 ["multi"] = {
@@ -70448,7 +70336,6 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["keepAspectRatio"] = true,
 ["actions"] = {
 ["start"] = {
 },
@@ -70457,6 +70344,7 @@ true,
 ["init"] = {
 },
 },
+["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -70659,7 +70547,7 @@ true,
 ["adjustedMax"] = "",
 ["displayIcon"] = 571588,
 ["cooldown"] = true,
-["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
+["keepAspectRatio"] = true,
 },
 ["Psychic Scream"] = {
 ["iconSource"] = -1,
@@ -70838,17 +70726,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Utilities - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -70901,13 +70791,9 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 ["utility"] = {
@@ -70925,9 +70811,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "iYbISKYE5Oh",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -70948,6 +70831,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "iYbISKYE5Oh",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -71065,11 +70951,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Twist of Fate (Optional - Holy)"] = {
@@ -71198,21 +71086,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -71264,7 +71145,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Premonition of Piety (Holy)"] = {
 ["iconSource"] = -1,
@@ -71397,21 +71285,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -71480,7 +71361,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Mindbender (Shadow)"] = {
 ["iconSource"] = 0,
@@ -71496,39 +71384,39 @@ true,
 ["triggers"] = {
 {
 ["trigger"] = {
-["use_unit"] = true,
+["unit"] = "player",
 ["use_track"] = true,
 ["spellId"] = "49206",
 ["auranames"] = {
 },
-["subeventPrefix"] = "SPELL",
+["names"] = {
+},
 ["ownOnly"] = true,
 ["genericShowOn"] = "showOnCooldown",
-["unit"] = "player",
+["use_unit"] = true,
 ["use_genericShowOn"] = true,
-["custom"] = "function(event, arg1)\n    if event == \"PLAYER_TOTEM_UPDATE\" and arg1 then\n        local haveTotem, name, startTime, duration, icon = GetTotemInfo(arg1)\n        if haveTotem and icon == aura_env.texture then\n            aura_env.haveTotem, aura_env.name, aura_env.startTime, aura_env.duration, aura_env.icon = haveTotem, name, startTime, duration, icon\n            aura_env.index = arg1\n            return true\n        elseif aura_env.index == arg1 then\n            aura_env.index = 0\n            aura_env.startTime, aura_env.duration = nil, nil\n        end\n    end\nend",
 ["spellIds"] = {
 },
+["events"] = "PLAYER_TOTEM_UPDATE",
 ["use_spellId"] = true,
 ["customDuration"] = "function()\n    if aura_env.startTime then\n        return aura_env.duration, aura_env.startTime + aura_env.duration\n    end\nend",
 ["duration"] = "35",
 ["use_absorbMode"] = true,
 ["spellName"] = 0,
-["unevent"] = "auto",
-["type"] = "custom",
-["custom_type"] = "status",
 ["subeventSuffix"] = "_CAST_SUCCESS",
+["type"] = "custom",
+["unevent"] = "auto",
+["custom_type"] = "status",
 ["debuffType"] = "HELPFUL",
 ["useName"] = true,
 ["event"] = "Cooldown Progress (Spell)",
 ["totemName"] = "27829",
 ["realSpellName"] = 0,
 ["use_spellName"] = true,
-["events"] = "PLAYER_TOTEM_UPDATE",
+["custom"] = "function(event, arg1)\n    if event == \"PLAYER_TOTEM_UPDATE\" and arg1 then\n        local haveTotem, name, startTime, duration, icon = GetTotemInfo(arg1)\n        if haveTotem and icon == aura_env.texture then\n            aura_env.haveTotem, aura_env.name, aura_env.startTime, aura_env.duration, aura_env.icon = haveTotem, name, startTime, duration, icon\n            aura_env.index = arg1\n            return true\n        elseif aura_env.index == arg1 then\n            aura_env.index = 0\n            aura_env.startTime, aura_env.duration = nil, nil\n        end\n    end\nend",
 ["use_sourceUnit"] = true,
 ["check"] = "event",
-["names"] = {
-},
+["subeventPrefix"] = "SPELL",
 ["sourceUnit"] = "player",
 ["use_totemName"] = true,
 },
@@ -71681,11 +71569,11 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["parent"] = "Core - LWA - Priest",
 ["progressSource"] = {
 -1,
 "",
 },
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -71855,7 +71743,7 @@ true,
 },
 ["displayIcon"] = 136214,
 ["cooldown"] = true,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["parent"] = "Core - LWA - Priest",
 },
 ["Frenzied Regeneration (Balance, Feral & Restoration)"] = {
 ["iconSource"] = -1,
@@ -72026,7 +71914,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 22842,
 ["size"] = {
 ["multi"] = {
@@ -72036,36 +71923,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -72118,12 +71986,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -72142,10 +72022,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "9CZ52s2rvxX",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -72295,7 +72175,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Warrior of Elune"] = {
 ["iconSource"] = -1,
@@ -72502,7 +72389,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 202425,
 ["size"] = {
 ["multi"] = {
@@ -72511,9 +72397,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -72619,7 +72505,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Sunfire (Restoration)"] = {
 ["iconSource"] = -1,
@@ -72742,7 +72628,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 93402,
 ["size"] = {
 ["multi"] = {
@@ -72752,7 +72637,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = true,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Dynamic Effects - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["type"] = "preset",
@@ -72775,25 +72672,6 @@ true,
 ["preset"] = "shrink",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -72806,14 +72684,21 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Dynamic Effects - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "kCawuyOZH6x",
 ["inverse"] = false,
-["preferToUpdate"] = true,
+["cooldownEdge"] = true,
 ["conditions"] = {
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Shadow Crash"] = {
 ["iconSource"] = -1,
@@ -72943,26 +72828,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -72976,9 +72859,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "gWjYQznsvlC",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -72999,6 +72879,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "gWjYQznsvlC",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -73061,11 +72944,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Nature's Vigil"] = {
@@ -73238,7 +73123,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 124974,
 ["size"] = {
 ["multi"] = {
@@ -73248,36 +73132,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -73330,12 +73195,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -73354,10 +73231,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "GRwDmsN5AJw",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -73475,7 +73352,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Resonant Words"] = {
 ["iconSource"] = -1,
@@ -73603,21 +73487,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -73686,7 +73563,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Wildshape Mastery (Feral)"] = {
 ["iconSource"] = -1,
@@ -73814,25 +73698,24 @@ true,
 },
 },
 ["use_class_and_spec"] = true,
+["use_class"] = true,
+["use_spellknown"] = false,
 ["spec"] = {
 ["multi"] = {
 },
 },
-["use_class"] = true,
-["use_spellknown"] = false,
-["use_herotalent"] = false,
 ["herotalent"] = {
 ["multi"] = {
 ["117207"] = true,
 },
 },
+["use_herotalent"] = false,
 ["class"] = {
 ["single"] = "MAGE",
 ["multi"] = {
 ["MAGE"] = true,
 },
 },
-["use_combat"] = true,
 ["class_and_spec"] = {
 ["single"] = 103,
 ["multi"] = {
@@ -73849,9 +73732,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -73905,7 +73788,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Prayer Circle"] = {
 ["iconSource"] = -1,
@@ -74033,21 +73916,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -74116,7 +73992,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Tiger's Fury"] = {
 ["iconSource"] = -1,
@@ -74339,7 +74222,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 5217,
 ["size"] = {
 ["multi"] = {
@@ -74348,9 +74230,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -74480,7 +74362,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Devouring Plague"] = {
 ["iconSource"] = -1,
@@ -74708,21 +74590,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -74960,7 +74835,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Divine Hymn"] = {
 ["iconSource"] = -1,
@@ -75111,26 +74993,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -75144,9 +75024,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "9mldNNX9rer",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -75167,6 +75044,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "9mldNNX9rer",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -75274,11 +75154,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Astral Power Bar - LWA - Druid"] = {
@@ -75305,9 +75187,9 @@ true,
 ["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
 ["actions"] = {
 ["start"] = {
+["do_message"] = false,
 ["custom"] = "",
 ["do_custom"] = false,
-["do_message"] = false,
 },
 ["finish"] = {
 },
@@ -75350,10 +75232,9 @@ true,
 },
 ["use_class"] = true,
 ["zoneIds"] = "",
-["use_never"] = false,
 ["use_spec"] = true,
+["use_never"] = false,
 ["use_class_and_spec"] = true,
-["use_combat"] = true,
 ["spec"] = {
 ["single"] = 1,
 ["multi"] = {
@@ -75578,8 +75459,8 @@ true,
 {
 ["text_text_format_p_time_precision"] = 1,
 ["text_text"] = "%prediction",
+["text_text_format_p_time_mod_rate"] = true,
 ["text_text_format_p_format"] = "timed",
-["text_text_format_prediction_format"] = "none",
 ["text_text_format_p_time_dynamic_threshold"] = 60,
 ["text_selfPoint"] = "LEFT",
 ["text_automaticWidth"] = "Auto",
@@ -75615,7 +75496,7 @@ true,
 ["text_text_format_p_time_legacy_floor"] = true,
 ["text_fontSize"] = 14,
 ["anchorXOffset"] = 0,
-["text_text_format_p_time_mod_rate"] = true,
+["text_text_format_prediction_format"] = "none",
 },
 {
 ["text_text_format_p_time_precision"] = 1,
@@ -75627,8 +75508,8 @@ true,
 ["text_selfPoint"] = "LEFT",
 ["text_automaticWidth"] = "Auto",
 ["text_fixedWidth"] = 64,
+["anchorYOffset"] = 0,
 ["text_text_format_c_format"] = "none",
-["text_text_format_p_time_legacy_floor"] = true,
 ["text_justify"] = "CENTER",
 ["rotateText"] = "NONE",
 ["text_text_format_p_format"] = "timed",
@@ -75650,7 +75531,7 @@ true,
 ["text_visible"] = false,
 ["text_anchorPoint"] = "INNER_LEFT",
 ["text_text_format_changeText_format"] = "none",
-["anchorYOffset"] = 0,
+["text_text_format_p_time_legacy_floor"] = true,
 ["text_fontSize"] = 14,
 ["anchorXOffset"] = 0,
 ["text_shadowColor"] = {
@@ -76091,7 +75972,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 354654,
 ["size"] = {
 ["multi"] = {
@@ -76101,7 +75981,6 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["keepAspectRatio"] = true,
 ["actions"] = {
 ["start"] = {
 },
@@ -76110,6 +75989,7 @@ true,
 ["init"] = {
 },
 },
+["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -76312,7 +76192,7 @@ true,
 ["adjustedMax"] = "",
 ["displayIcon"] = 4067364,
 ["cooldown"] = true,
-["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
+["keepAspectRatio"] = true,
 },
 ["Thrash Debuff (Optional - Guardian)"] = {
 ["iconSource"] = -1,
@@ -76494,7 +76374,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 77758,
 ["size"] = {
 ["multi"] = {
@@ -76503,9 +76382,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -76542,7 +76421,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Power Word: Barrier"] = {
 ["iconSource"] = -1,
@@ -76711,26 +76590,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -76744,9 +76621,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "JL2WGWIECB5",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -76767,6 +76641,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "JL2WGWIECB5",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -76883,11 +76760,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Divine Star (Holy)"] = {
@@ -77019,26 +76898,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -77052,9 +76929,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "7oMTm59fIZI",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -77075,6 +76949,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "7oMTm59fIZI",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -77152,11 +77029,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Psychic Horror"] = {
@@ -77336,17 +77215,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Utilities - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -77399,13 +77280,9 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 ["utility"] = {
@@ -77423,9 +77300,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "qF7ZQMyv7n5",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -77446,6 +77320,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "qF7ZQMyv7n5",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -77595,11 +77472,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Regrowth (Clearcasting)"] = {
@@ -77843,7 +77722,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 113043,
 ["size"] = {
 ["multi"] = {
@@ -77852,9 +77730,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -78057,7 +77935,7 @@ true,
 },
 ["displayIcon"] = 136085,
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Combot Point 4 - Druid"] = {
 ["overlays"] = {
@@ -78112,14 +77990,15 @@ true,
 ["sparkOffsetY"] = 0,
 ["gradientOrientation"] = "HORIZONTAL",
 ["load"] = {
-["itemtypeequipped"] = {
-},
 ["use_petbattle"] = false,
 ["use_never"] = false,
 ["talent"] = {
 ["multi"] = {
 },
 },
+["itemtypeequipped"] = {
+},
+["use_class_and_spec"] = true,
 ["class_and_spec"] = {
 ["single"] = 103,
 ["multi"] = {
@@ -78129,19 +78008,19 @@ true,
 [105] = true,
 },
 },
-["use_class_and_spec"] = true,
 ["class"] = {
 ["single"] = "MONK",
 ["multi"] = {
 ["EVOKER"] = true,
 },
 },
-["use_spellknown"] = true,
 ["use_class"] = true,
 ["role"] = {
 ["multi"] = {
 },
 },
+["use_spellknown"] = true,
+["use_spec"] = true,
 ["spec"] = {
 ["single"] = 3,
 ["multi"] = {
@@ -78150,9 +78029,7 @@ true,
 true,
 },
 },
-["use_spec"] = true,
 ["zoneIds"] = "",
-["use_combat"] = true,
 ["spellknown"] = 768,
 ["size"] = {
 ["multi"] = {
@@ -78612,25 +78489,24 @@ true,
 },
 },
 ["use_class_and_spec"] = true,
+["use_class"] = true,
+["use_spellknown"] = false,
 ["spec"] = {
 ["multi"] = {
 },
 },
-["use_class"] = true,
-["use_spellknown"] = false,
-["use_herotalent"] = false,
 ["herotalent"] = {
 ["multi"] = {
 ["117196"] = true,
 },
 },
+["use_herotalent"] = false,
 ["class"] = {
 ["single"] = "MAGE",
 ["multi"] = {
 ["MAGE"] = true,
 },
 },
-["use_combat"] = true,
 ["class_and_spec"] = {
 ["single"] = 105,
 ["multi"] = {
@@ -78647,9 +78523,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = true,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -78716,7 +78592,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Premonition of Piety (Disicipline)"] = {
 ["iconSource"] = -1,
@@ -78849,21 +78725,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -78932,7 +78801,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Shadow Word: Pain (Shadow)"] = {
 ["iconSource"] = -1,
@@ -79150,21 +79026,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -79359,7 +79228,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Omen of Clarity (Feral)"] = {
 ["iconSource"] = -1,
@@ -79541,7 +79417,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 16864,
 ["size"] = {
 ["multi"] = {
@@ -79550,9 +79425,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -79620,7 +79495,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Convoke the Spirits (Restoration)"] = {
 ["iconSource"] = -1,
@@ -79745,14 +79620,14 @@ true,
 },
 },
 ["use_class_and_spec"] = true,
+["use_class"] = true,
+["use_spellknown"] = true,
 ["class"] = {
 ["single"] = "MAGE",
 ["multi"] = {
 ["MAGE"] = true,
 },
 },
-["use_class"] = true,
-["use_spellknown"] = true,
 ["class_and_spec"] = {
 ["single"] = 105,
 ["multi"] = {
@@ -79762,12 +79637,11 @@ true,
 [105] = true,
 },
 },
-["use_exact_spellknown"] = true,
 ["spec"] = {
 ["multi"] = {
 },
 },
-["use_combat"] = true,
+["use_exact_spellknown"] = true,
 ["spellknown"] = 391528,
 ["size"] = {
 ["multi"] = {
@@ -79777,7 +79651,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -79798,25 +79684,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -79829,10 +79696,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Core - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "oeeB8QfRJuy",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -79905,7 +79772,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Wild Mushroom"] = {
 ["iconSource"] = 0,
@@ -80112,7 +79986,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 88747,
 ["size"] = {
 ["multi"] = {
@@ -80121,9 +79994,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -80291,7 +80164,7 @@ true,
 },
 ["displayIcon"] = 464341,
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Orbit Breaker "] = {
 ["iconSource"] = 0,
@@ -80317,10 +80190,10 @@ true,
 ["debuffType"] = "HELPFUL",
 ["event"] = "Health",
 ["unit"] = "player",
-["events"] = "CLEU:SPELL_ENERGIZE:SPELL_CAST_SUCCESS:SPELL_DAMAGE UNIT_SPELLCAST_CHANNEL_START:player UNIT_SPELLCAST_CHANNEL_STOP:player UAPB_OB_DELAY PLAYER_ENTERING_WORLD WA_DELAYED_PLAYER_ENTERING_WORLD",
-["custom"] = "function(s, event, ...)\n    \n    if not s[\"\"] then\n        \n        s[\"\"] = {\n            show = true,\n            changed = false,            \n            stacks = aura_env.saved.stacks or 0, -- shooting stars count\n            firstRun = true, -- aura_env.saved.firstRun  or true, -- we need to track our first run, as opening the UI/reload will reset stacks and may be invalid\n            text = aura_env.firstRunTextPrefix,\n            cast = false, -- was full moon hardcast\n            energized = 0, -- full moon energized count\n            convoke = false, \n            \n            total = aura_env.procCount,\n            value = aura_env.saved.stacks or 0, -- shooting stars count\n            progressType = \"static\"\n        }\n        \n        return true \n    end\n    \n    if event == \"PLAYER_ENTERING_WORLD\" or event == \"WA_DELAYED_PLAYER_ENTERING_WORLD\" then\n        \n        local login, _ = ...\n        \n        if login then \n            s[\"\"] = aura_env.handleLogin(s[\"\"])\n            return true\n        end\n        \n    elseif event == \"UNIT_SPELLCAST_CHANNEL_START\" then\n        local _,_,spellId = ...        \n        aura_env.handleSpellChannelStart(s[\"\"], spellId)\n        \n    elseif event == \"UNIT_SPELLCAST_CHANNEL_STOP\" then\n        local _,_,spellId = ...\n        aura_env.handleSpellChannelStop(s[\"\"], spellId)\n        \n    elseif event == \"COMBAT_LOG_EVENT_UNFILTERED\" then\n        \n        local _,subevent,_,sourceGUID,_,_,_,_,_,_,_,spellID = ...\n        \n        if sourceGUID == UnitGUID(\"player\") then\n            \n            if subevent == \"SPELL_DAMAGE\" and \n            (spellID == aura_env.spellIds.shootingStars or \n            spellID == aura_env.spellIds.crashingStar) then\n                s[\"\"] = aura_env.handleSpellDamage(s[\"\"])\n                \n            elseif subevent == \"SPELL_ENERGIZE\" and spellID == aura_env.spellIds.fullMoon then\n                s[\"\"] = aura_env.handleEnergized(s[\"\"])\n                \n            elseif subevent == \"SPELL_CAST_SUCCESS\" and spellID == aura_env.spellIds.fullMoon then\n                s[\"\"] = aura_env.handleSpellCastSuccess(s[\"\"])     \n            end\n            \n            return true\n        end\n        \n    elseif event == \"UAPB_OB_DELAY\" and ... == aura_env.id then\n        s[\"\"] = aura_env.handleDelay(s[\"\"])\n        return true\n    end\n    \nend",
 ["spellIds"] = {
 },
+["events"] = "CLEU:SPELL_ENERGIZE:SPELL_CAST_SUCCESS:SPELL_DAMAGE UNIT_SPELLCAST_CHANNEL_START:player UNIT_SPELLCAST_CHANNEL_STOP:player UAPB_OB_DELAY PLAYER_ENTERING_WORLD WA_DELAYED_PLAYER_ENTERING_WORLD",
+["custom"] = "function(s, event, ...)\n    \n    if not s[\"\"] then\n        \n        s[\"\"] = {\n            show = true,\n            changed = false,            \n            stacks = aura_env.saved.stacks or 0, -- shooting stars count\n            firstRun = true, -- aura_env.saved.firstRun  or true, -- we need to track our first run, as opening the UI/reload will reset stacks and may be invalid\n            text = aura_env.firstRunTextPrefix,\n            cast = false, -- was full moon hardcast\n            energized = 0, -- full moon energized count\n            convoke = false, \n            \n            total = aura_env.procCount,\n            value = aura_env.saved.stacks or 0, -- shooting stars count\n            progressType = \"static\"\n        }\n        \n        return true \n    end\n    \n    if event == \"PLAYER_ENTERING_WORLD\" or event == \"WA_DELAYED_PLAYER_ENTERING_WORLD\" then\n        \n        local login, _ = ...\n        \n        if login then \n            s[\"\"] = aura_env.handleLogin(s[\"\"])\n            return true\n        end\n        \n    elseif event == \"UNIT_SPELLCAST_CHANNEL_START\" then\n        local _,_,spellId = ...        \n        aura_env.handleSpellChannelStart(s[\"\"], spellId)\n        \n    elseif event == \"UNIT_SPELLCAST_CHANNEL_STOP\" then\n        local _,_,spellId = ...\n        aura_env.handleSpellChannelStop(s[\"\"], spellId)\n        \n    elseif event == \"COMBAT_LOG_EVENT_UNFILTERED\" then\n        \n        local _,subevent,_,sourceGUID,_,_,_,_,_,_,_,spellID = ...\n        \n        if sourceGUID == UnitGUID(\"player\") then\n            \n            if subevent == \"SPELL_DAMAGE\" and \n            (spellID == aura_env.spellIds.shootingStars or \n            spellID == aura_env.spellIds.crashingStar) then\n                s[\"\"] = aura_env.handleSpellDamage(s[\"\"])\n                \n            elseif subevent == \"SPELL_ENERGIZE\" and spellID == aura_env.spellIds.fullMoon then\n                s[\"\"] = aura_env.handleEnergized(s[\"\"])\n                \n            elseif subevent == \"SPELL_CAST_SUCCESS\" and spellID == aura_env.spellIds.fullMoon then\n                s[\"\"] = aura_env.handleSpellCastSuccess(s[\"\"])     \n            end\n            \n            return true\n        end\n        \n    elseif event == \"UAPB_OB_DELAY\" and ... == aura_env.id then\n        s[\"\"] = aura_env.handleDelay(s[\"\"])\n        return true\n    end\n    \nend",
 ["names"] = {
 },
 ["check"] = "event",
@@ -80484,7 +80357,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 383197,
 ["size"] = {
 ["multi"] = {
@@ -80507,7 +80379,7 @@ true,
 ["information"] = {
 ["ignoreOptionsEventErrors"] = true,
 ["forceEvents"] = true,
-["saved"] = "Jr1AkTmlQ4scQ08siPIljXKZUygb8d",
+["saved"] = "Jr1sQ4ssm5SlMXMslZIkUKGknVea8d",
 },
 ["conditions"] = {
 {
@@ -80538,7 +80410,7 @@ true,
 },
 },
 ["cooldownEdge"] = true,
-["keepAspectRatio"] = true,
+["xOffset"] = 0,
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
 ["uid"] = "DL1Z5HVYqSI",
@@ -80552,18 +80424,18 @@ true,
 ["auto"] = true,
 ["tocversion"] = 110000,
 ["id"] = "Orbit Breaker ",
-["adjustedMax"] = "",
+["keepAspectRatio"] = true,
 ["useCooldownModRate"] = true,
 ["anchorFrameType"] = "SCREEN",
-["authorOptions"] = {
-},
+["selfPoint"] = "CENTER",
 ["config"] = {
 },
 ["inverse"] = false,
-["selfPoint"] = "CENTER",
+["adjustedMax"] = "",
 ["displayIcon"] = 1392544,
 ["cooldown"] = false,
-["xOffset"] = 0,
+["authorOptions"] = {
+},
 },
 ["Halo Archon (Shadow)"] = {
 ["iconSource"] = -1,
@@ -80722,26 +80594,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -80755,9 +80625,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "SnYUttm26U2",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -80778,6 +80645,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "SnYUttm26U2",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -80885,11 +80755,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Shadow Word: Death (Holy)"] = {
@@ -81040,26 +80912,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Dynamic Effects - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Dynamic Effects - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -81073,9 +80943,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "NBwANpKYcQl",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["type"] = "preset",
@@ -81098,6 +80965,9 @@ true,
 ["preset"] = "shrink",
 },
 },
+["uid"] = "NBwANpKYcQl",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -81225,11 +81095,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Power Word: Life (Holy)"] = {
@@ -81359,26 +81231,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -81392,9 +81262,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "QGMOZdyQqpB",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -81415,6 +81282,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "QGMOZdyQqpB",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -81492,11 +81362,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Right Side - LWA - Druid"] = {
@@ -81832,21 +81704,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -82047,7 +81912,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Apex Predator's Craving"] = {
 ["iconSource"] = 0,
@@ -82192,7 +82064,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 391881,
 ["size"] = {
 ["multi"] = {
@@ -82201,9 +82072,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -82256,7 +82127,7 @@ true,
 },
 ["displayIcon"] = 132127,
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Voidform"] = {
 ["iconSource"] = -1,
@@ -82384,21 +82255,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -82467,7 +82331,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Guardian of Elune"] = {
 ["iconSource"] = -1,
@@ -82612,7 +82483,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 155578,
 ["size"] = {
 ["multi"] = {
@@ -82621,9 +82491,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -82676,7 +82546,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Mind Melt"] = {
 ["iconSource"] = -1,
@@ -82841,21 +82711,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -82926,7 +82789,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Moonfire (Balance)"] = {
 ["iconSource"] = -1,
@@ -83059,7 +82929,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 8921,
 ["size"] = {
 ["multi"] = {
@@ -83069,7 +82938,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = true,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -83090,25 +82971,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -83121,10 +82983,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Core - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "Xff0DT4zxkL",
 ["inverse"] = false,
-["preferToUpdate"] = true,
+["cooldownEdge"] = true,
 ["conditions"] = {
 {
 ["check"] = {
@@ -83224,7 +83086,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Effloresence"] = {
 ["iconSource"] = 0,
@@ -83244,8 +83113,8 @@ true,
 ["auranames"] = {
 "145205",
 },
+["ownOnly"] = true,
 ["use_totemName"] = true,
-["use_genericShowOn"] = true,
 ["genericShowOn"] = "showOnCooldown",
 ["subeventPrefix"] = "SPELL",
 ["use_track"] = true,
@@ -83258,10 +83127,10 @@ true,
 ["use_spellId"] = true,
 ["type"] = "aura2",
 ["spellName"] = 0,
-["custom_type"] = "status",
-["useName"] = true,
 ["subeventSuffix"] = "_CAST_SUCCESS",
+["useName"] = true,
 ["unevent"] = "auto",
+["custom_type"] = "status",
 ["unit"] = "player",
 ["duration"] = "35",
 ["event"] = "Cooldown Progress (Spell)",
@@ -83273,7 +83142,7 @@ true,
 ["check"] = "event",
 ["use_unit"] = true,
 ["sourceUnit"] = "player",
-["ownOnly"] = true,
+["use_genericShowOn"] = true,
 },
 ["untrigger"] = {
 },
@@ -83386,30 +83255,29 @@ true,
 ["multi"] = {
 },
 },
+["use_class_and_spec"] = true,
 ["itemtypeequipped"] = {
 },
-["use_class_and_spec"] = true,
 ["spec"] = {
 ["single"] = 2,
 ["multi"] = {
 },
-},
-["class_and_spec"] = {
-["single"] = 105,
 },
 ["use_class"] = true,
 ["role"] = {
 ["multi"] = {
 },
 },
-["use_spellknown"] = true,
+["class_and_spec"] = {
+["single"] = 105,
+},
 ["use_spec"] = true,
+["use_spellknown"] = true,
 ["class"] = {
 ["single"] = "MONK",
 ["multi"] = {
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 145205,
 ["size"] = {
 ["multi"] = {
@@ -83419,17 +83287,13 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-["custom"] = "",
-["do_custom"] = false,
-},
-},
 ["cooldownEdge"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -83563,11 +83427,15 @@ true,
 ["keepAspectRatio"] = true,
 ["displayIcon"] = 134222,
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+["custom"] = "",
+["do_custom"] = false,
+},
 },
 },
 ["Moonfire (Restoration)"] = {
@@ -83648,7 +83516,7 @@ true,
 },
 },
 ["desc"] = "Code by KnewOne",
-["alpha"] = 1,
+["preferToUpdate"] = true,
 ["version"] = 105,
 ["subRegions"] = {
 {
@@ -83690,7 +83558,7 @@ true,
 },
 },
 ["height"] = 48,
-["selfPoint"] = "CENTER",
+["icon"] = true,
 ["load"] = {
 ["use_petbattle"] = false,
 ["use_never"] = false,
@@ -83721,28 +83589,33 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 8921,
 ["size"] = {
 ["multi"] = {
 },
 },
 },
-["desaturate"] = false,
+["authorOptions"] = {
+},
 ["useAdjustededMax"] = false,
 ["cooldown"] = true,
 ["source"] = "import",
 ["conditions"] = {
 },
+["selfPoint"] = "CENTER",
 ["keepAspectRatio"] = true,
-["xOffset"] = 0,
 ["uid"] = "Feev5s4yEOs",
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["customText"] = "",
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["anchorFrameType"] = "SCREEN",
-["useCooldownModRate"] = true,
-["icon"] = true,
+["alpha"] = 1,
+["customText"] = "",
 ["anchorFrameParent"] = false,
 ["cooldownTextDisabled"] = false,
 ["semver"] = "11.0.8",
@@ -83750,34 +83623,46 @@ true,
 ["auto"] = true,
 ["tocversion"] = 110000,
 ["id"] = "Moonfire (Restoration)",
-["authorOptions"] = {
-},
 ["frameStrata"] = 1,
+["useCooldownModRate"] = true,
 ["width"] = 48,
-["preferToUpdate"] = true,
+["xOffset"] = 0,
 ["config"] = {
 },
 ["inverse"] = false,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
 ["displayIcon"] = "",
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
+["desaturate"] = false,
 },
-["Combot Point 1 (Off-Spec) - Druid"] = {
+["Combot Point 4 (Off-Spec) - Druid"] = {
 ["overlays"] = {
 {
 0,
 0,
 0,
-0.40000003576279,
+0,
+},
+{
+0,
+0,
+0,
+0,
+},
+{
+0,
+0,
+0,
+0,
+},
+{
+0,
+0,
+0,
+0,
 },
 },
 ["iconSource"] = -1,
@@ -83806,14 +83691,15 @@ true,
 ["sparkOffsetY"] = 0,
 ["gradientOrientation"] = "HORIZONTAL",
 ["load"] = {
-["itemtypeequipped"] = {
-},
 ["use_petbattle"] = false,
 ["use_never"] = false,
 ["talent"] = {
 ["multi"] = {
 },
 },
+["itemtypeequipped"] = {
+},
+["use_class_and_spec"] = false,
 ["class_and_spec"] = {
 ["single"] = 102,
 ["multi"] = {
@@ -83822,19 +83708,19 @@ true,
 [105] = true,
 },
 },
-["use_class_and_spec"] = false,
 ["class"] = {
 ["single"] = "MONK",
 ["multi"] = {
 ["EVOKER"] = true,
 },
 },
-["use_spellknown"] = false,
 ["use_class"] = true,
 ["role"] = {
 ["multi"] = {
 },
 },
+["use_spellknown"] = false,
+["use_spec"] = true,
 ["spec"] = {
 ["single"] = 3,
 ["multi"] = {
@@ -83843,9 +83729,7 @@ true,
 true,
 },
 },
-["use_spec"] = true,
 ["zoneIds"] = "",
-["use_combat"] = true,
 ["spellknown"] = 1822,
 ["size"] = {
 ["multi"] = {
@@ -83878,28 +83762,28 @@ true,
 ["trigger"] = {
 ["auranames"] = {
 },
-["matchesShowOn"] = "showAlways",
+["ownOnly"] = true,
 ["use_showCost"] = false,
-["names"] = {
-},
+["subeventPrefix"] = "SPELL",
 ["powertype"] = 4,
 ["use_powertype"] = true,
 ["debuffType"] = "HELPFUL",
 ["useName"] = true,
 ["use_absorbHealMode"] = true,
 ["subeventSuffix"] = "_CAST_START",
-["event"] = "Power",
 ["use_requirePowerType"] = false,
+["event"] = "Power",
 ["use_percentpower"] = false,
-["subeventPrefix"] = "SPELL",
+["unit"] = "player",
 ["use_showChargedComboPoints"] = false,
 ["spellIds"] = {
 },
 ["type"] = "unit",
-["ownOnly"] = true,
 ["use_absorbMode"] = true,
-["unit"] = "player",
 ["use_unit"] = true,
+["names"] = {
+},
+["matchesShowOn"] = "showAlways",
 },
 ["untrigger"] = {
 },
@@ -84075,7 +83959,6 @@ true,
 ["zoom"] = 0,
 ["actions"] = {
 ["start"] = {
-["do_custom"] = false,
 },
 ["finish"] = {
 },
@@ -84085,16 +83968,19 @@ true,
 },
 },
 ["icon_side"] = "RIGHT",
-["uid"] = "xWhMk7iU5kW",
+["uid"] = "4lJG4zGisMx",
 ["sparkWidth"] = 10,
 ["sparkHeight"] = 30,
-["adjustedMax"] = "1",
+["adjustedMax"] = "4",
 ["overlaysTexture"] = {
+"Solid",
+"Solid",
+"Solid",
 "Solid",
 },
 ["anchorFrameType"] = "SCREEN",
 ["semver"] = "11.0.8",
-["id"] = "Combot Point 1 (Off-Spec) - Druid",
+["id"] = "Combot Point 4 (Off-Spec) - Druid",
 ["sparkHidden"] = "NEVER",
 ["backgroundColor"] = {
 0,
@@ -84104,7 +83990,7 @@ true,
 },
 ["frameStrata"] = 1,
 ["width"] = 65,
-["adjustedMin"] = "0",
+["adjustedMin"] = "3",
 ["anchorFrameParent"] = false,
 ["inverse"] = false,
 ["config"] = {
@@ -84127,7 +84013,7 @@ true,
 ["variable"] = "power",
 },
 {
-["trigger"] = 2,
+["trigger"] = 3,
 ["variable"] = "show",
 ["value"] = 0,
 },
@@ -84144,7 +84030,7 @@ true,
 ["variable"] = "power",
 },
 {
-["trigger"] = 2,
+["trigger"] = 3,
 ["variable"] = "show",
 ["value"] = 1,
 },
@@ -84155,6 +84041,7 @@ true,
 ["variable"] = "percentpower",
 ["trigger"] = 1,
 },
+["linked"] = false,
 ["changes"] = {
 {
 ["value"] = {
@@ -84180,7 +84067,7 @@ true,
 ["variable"] = "power",
 },
 {
-["trigger"] = 2,
+["trigger"] = 3,
 ["variable"] = "show",
 ["value"] = 0,
 },
@@ -84197,7 +84084,7 @@ true,
 ["variable"] = "power",
 },
 {
-["trigger"] = 2,
+["trigger"] = 3,
 ["variable"] = "show",
 ["value"] = 1,
 },
@@ -84438,7 +84325,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 48438,
 ["size"] = {
 ["multi"] = {
@@ -84447,9 +84333,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -84560,9 +84446,9 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
-["Combot Point 3 (Off-Spec) - Druid"] = {
+["Combot Point 2 (Off-Spec) - Druid"] = {
 ["overlays"] = {
 {
 0,
@@ -84615,14 +84501,15 @@ true,
 ["sparkOffsetY"] = 0,
 ["gradientOrientation"] = "HORIZONTAL",
 ["load"] = {
-["itemtypeequipped"] = {
-},
 ["use_petbattle"] = false,
 ["use_never"] = false,
 ["talent"] = {
 ["multi"] = {
 },
 },
+["itemtypeequipped"] = {
+},
+["use_class_and_spec"] = false,
 ["class_and_spec"] = {
 ["single"] = 102,
 ["multi"] = {
@@ -84631,19 +84518,19 @@ true,
 [105] = true,
 },
 },
-["use_class_and_spec"] = false,
 ["class"] = {
 ["single"] = "MONK",
 ["multi"] = {
 ["EVOKER"] = true,
 },
 },
-["use_spellknown"] = false,
 ["use_class"] = true,
 ["role"] = {
 ["multi"] = {
 },
 },
+["use_spellknown"] = false,
+["use_spec"] = true,
 ["spec"] = {
 ["single"] = 3,
 ["multi"] = {
@@ -84652,9 +84539,7 @@ true,
 true,
 },
 },
-["use_spec"] = true,
 ["zoneIds"] = "",
-["use_combat"] = true,
 ["spellknown"] = 1822,
 ["size"] = {
 ["multi"] = {
@@ -84893,10 +84778,10 @@ true,
 },
 },
 ["icon_side"] = "RIGHT",
-["uid"] = "af58tIkLSHP",
+["uid"] = "iB4HdCDCdV8",
 ["sparkWidth"] = 10,
 ["sparkHeight"] = 30,
-["adjustedMax"] = "3",
+["adjustedMax"] = "2",
 ["overlaysTexture"] = {
 "Solid",
 "Solid",
@@ -84905,7 +84790,7 @@ true,
 },
 ["anchorFrameType"] = "SCREEN",
 ["semver"] = "11.0.8",
-["id"] = "Combot Point 3 (Off-Spec) - Druid",
+["id"] = "Combot Point 2 (Off-Spec) - Druid",
 ["sparkHidden"] = "NEVER",
 ["backgroundColor"] = {
 0,
@@ -84915,7 +84800,7 @@ true,
 },
 ["frameStrata"] = 1,
 ["width"] = 65,
-["adjustedMin"] = "2",
+["adjustedMin"] = "1",
 ["anchorFrameParent"] = false,
 ["inverse"] = false,
 ["config"] = {
@@ -85181,26 +85066,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -85214,9 +85097,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "kQ9ybxpbr5b",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -85237,6 +85117,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "kQ9ybxpbr5b",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -85314,11 +85197,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Holy Word: Sanctify 2"] = {
@@ -85433,11 +85318,11 @@ true,
 ["stacks"] = "1",
 ["names"] = {
 },
-["trackcharge"] = "2",
+["useName"] = true,
 ["use_trackcharge"] = true,
 ["debuffType"] = "HELPFUL",
 ["charges_operator"] = ">",
-["type"] = "spell",
+["charges"] = "1",
 ["power"] = "1",
 ["unevent"] = "auto",
 ["track"] = "auto",
@@ -85448,8 +85333,8 @@ true,
 ["use_spellName"] = true,
 ["spellIds"] = {
 },
-["charges"] = "1",
-["useName"] = true,
+["type"] = "spell",
+["trackcharge"] = "2",
 ["unit"] = "player",
 ["duration"] = "1",
 ["use_genericShowOn"] = true,
@@ -85874,21 +85759,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -86148,7 +86026,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Shadow Word: Death (Shadow)"] = {
 ["iconSource"] = -1,
@@ -86319,26 +86204,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -86352,9 +86235,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "k(RsnWKiJIi",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -86375,6 +86255,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "k(RsnWKiJIi",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -86529,11 +86412,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Power Word: Shield (Holy & Shadow)"] = {
@@ -86758,21 +86643,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -87023,7 +86901,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Wrath"] = {
 ["iconSource"] = 0,
@@ -87229,7 +87114,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 190984,
 ["size"] = {
 ["multi"] = {
@@ -87238,9 +87122,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -87371,6481 +87255,9 @@ true,
 },
 ["displayIcon"] = 535045,
 ["cooldown"] = true,
-["preferToUpdate"] = true,
-},
-["Nature's Swiftness (Druid)"] = {
-["iconSource"] = -1,
-["wagoID"] = "ryBp05DHX",
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["adjustedMax"] = "",
-["adjustedMin"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["cooldownSwipe"] = true,
-["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
-["icon"] = true,
-["triggers"] = {
-{
-["trigger"] = {
-["type"] = "aura2",
-["auranames"] = {
-"132158",
-},
-["ownOnly"] = true,
-["event"] = "Health",
-["unit"] = "player",
-["spellIds"] = {
-},
-["names"] = {
-},
-["subeventSuffix"] = "_CAST_START",
-["subeventPrefix"] = "SPELL",
-["useName"] = true,
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["track"] = "auto",
-["use_genericShowOn"] = true,
-["genericShowOn"] = "showAlways",
-["use_unit"] = true,
-["use_showgcd"] = true,
-["debuffType"] = "HELPFUL",
-["type"] = "spell",
-["use_absorbHealMode"] = true,
-["subeventSuffix"] = "_CAST_START",
-["event"] = "Cooldown Progress (Spell)",
-["subeventPrefix"] = "SPELL",
-["realSpellName"] = "Nature's Swiftness",
-["use_spellName"] = true,
-["spellIds"] = {
-},
-["names"] = {
-},
-["use_absorbMode"] = true,
-["unit"] = "player",
-["use_track"] = true,
-["spellName"] = 132158,
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "any",
-["customTriggerLogic"] = "",
-["activeTriggerMode"] = -10,
-},
-["internalVersion"] = 75,
-["keepAspectRatio"] = true,
 ["selfPoint"] = "CENTER",
-["desaturate"] = false,
-["version"] = 105,
-["subRegions"] = {
-{
-["type"] = "subbackground",
 },
-{
-["border_offset"] = 0,
-["type"] = "subborder",
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["border_size"] = 2,
-},
-{
-["glowFrequency"] = 0.25,
-["type"] = "subglow",
-["useGlowColor"] = false,
-["glowType"] = "Proc",
-["glowThickness"] = 1,
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["glowDuration"] = 1,
-["glowXOffset"] = 0,
-["glowScale"] = 1,
-["glow"] = false,
-["glowLength"] = 10,
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-},
-["height"] = 48,
-["load"] = {
-["use_petbattle"] = false,
-["use_never"] = false,
-["talent"] = {
-["multi"] = {
-},
-},
-["use_class_and_spec"] = true,
-["use_class"] = true,
-["use_spellknown"] = true,
-["spec"] = {
-["multi"] = {
-},
-},
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["MAGE"] = true,
-},
-},
-["class_and_spec"] = {
-["single"] = 105,
-["multi"] = {
-[103] = true,
-[104] = true,
-[102] = true,
-[105] = true,
-},
-},
-["use_combat"] = true,
-["spellknown"] = 132158,
-["size"] = {
-["multi"] = {
-},
-},
-},
-["useAdjustededMax"] = false,
-["source"] = "import",
-["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.0.8",
-["tocversion"] = 110000,
-["id"] = "Nature's Swiftness (Druid)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
-["parent"] = "Core - LWA - Druid",
-["uid"] = "A2tqHaNKW3h",
-["inverse"] = true,
-["preferToUpdate"] = true,
-["conditions"] = {
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 0,
-},
-["changes"] = {
-{
-["value"] = false,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Proc",
-["property"] = "sub.3.glowType",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -1,
-["variable"] = "incombat",
-["value"] = 0,
-},
-["changes"] = {
-{
-["property"] = "sub.3.glow",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 1,
-["variable"] = "show",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Pixel",
-["property"] = "sub.3.glowType",
-},
-{
-["property"] = "desaturate",
-},
-{
-["property"] = "inverse",
-},
-{
-["value"] = true,
-["property"] = "cooldownEdge",
-},
-{
-["property"] = "color",
-},
-},
-},
-},
-["cooldown"] = true,
-["xOffset"] = 0,
-},
-["Premonition (Holy)"] = {
-["iconSource"] = -1,
-["wagoID"] = "BJu2WDqBX",
-["parent"] = "Core - LWA - Priest",
-["adjustedMax"] = "",
-["adjustedMin"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["cooldownSwipe"] = true,
-["cooldownEdge"] = false,
-["icon"] = true,
-["triggers"] = {
-{
-["trigger"] = {
-["track"] = "auto",
-["use_genericShowOn"] = true,
-["genericShowOn"] = "showAlways",
-["use_unit"] = true,
-["use_showgcd"] = true,
-["debuffType"] = "HELPFUL",
-["type"] = "spell",
-["use_absorbHealMode"] = true,
-["subeventSuffix"] = "_CAST_START",
-["subeventPrefix"] = "SPELL",
-["use_exact_spellName"] = true,
-["event"] = "Cooldown Progress (Spell)",
-["use_ignoreoverride"] = false,
-["realSpellName"] = "Pain Suppression",
-["use_spellName"] = true,
-["spellIds"] = {
-},
-["names"] = {
-},
-["spellName"] = 428924,
-["use_absorbMode"] = true,
-["use_track"] = true,
-["unit"] = "player",
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "any",
-["customTriggerLogic"] = "",
-["activeTriggerMode"] = -10,
-},
-["internalVersion"] = 75,
-["progressSource"] = {
--1,
-"",
-},
-["selfPoint"] = "CENTER",
-["desaturate"] = false,
-["version"] = 68,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["border_size"] = 2,
-["type"] = "subborder",
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["border_offset"] = 0,
-},
-{
-["glowFrequency"] = 0.25,
-["type"] = "subglow",
-["glowDuration"] = 1,
-["glowType"] = "Proc",
-["glowThickness"] = 1,
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["useGlowColor"] = false,
-["glowXOffset"] = 0,
-["glowScale"] = 1,
-["glow"] = false,
-["glowLength"] = 10,
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-{
-["text_shadowXOffset"] = 0,
-["text_text_format_s_format"] = "none",
-["text_text"] = "%s",
-["text_text_format_p_format"] = "timed",
-["text_selfPoint"] = "CENTER",
-["text_automaticWidth"] = "Auto",
-["text_fixedWidth"] = 64,
-["anchorYOffset"] = 0,
-["text_justify"] = "CENTER",
-["rotateText"] = "NONE",
-["text_text_format_p_time_format"] = 0,
-["type"] = "subtext",
-["text_text_format_p_time_dynamic_threshold"] = 60,
-["text_color"] = {
-1,
-0.88627450980392,
-0.76862745098039,
-1,
-},
-["text_font"] = "Friz Quadrata TT",
-["text_anchorYOffset"] = -4,
-["text_shadowYOffset"] = 0,
-["text_shadowColor"] = {
-0,
-0,
-0,
-1,
-},
-["text_wordWrap"] = "WordWrap",
-["text_visible"] = true,
-["text_anchorPoint"] = "OUTER_TOP",
-["text_text_format_2.s_format"] = "none",
-["text_fontType"] = "OUTLINE",
-["text_fontSize"] = 18,
-["anchorXOffset"] = 0,
-["text_text_format_p_time_precision"] = 1,
-},
-},
-["height"] = 48,
-["load"] = {
-["use_petbattle"] = false,
-["class_and_spec"] = {
-["single"] = 257,
-["multi"] = {
-[257] = true,
-[258] = true,
-[256] = true,
-},
-},
-["talent"] = {
-["multi"] = {
-},
-},
-["use_class_and_spec"] = true,
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["MAGE"] = true,
-},
-},
-["use_class"] = true,
-["role"] = {
-["multi"] = {
-},
-},
-["use_never"] = false,
-["herotalent"] = {
-["multi"] = {
-["117286"] = true,
-},
-},
-["use_herotalent"] = false,
-["use_spellknown"] = false,
-["spec"] = {
-["multi"] = {
-},
-},
-["size"] = {
-["multi"] = {
-},
-},
-},
-["alpha"] = 1,
-["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["information"] = {
-["forceEvents"] = true,
-["ignoreOptionsEventErrors"] = true,
-},
-["conditions"] = {
-{
-["check"] = {
-["trigger"] = 1,
-["variable"] = "onCooldown",
-["value"] = 0,
-},
-["changes"] = {
-{
-["value"] = false,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Proc",
-["property"] = "sub.3.glowType",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -1,
-["variable"] = "incombat",
-["value"] = 0,
-},
-["changes"] = {
-{
-["property"] = "sub.3.glow",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -2,
-["op"] = "==",
-["variable"] = "AND",
-["checks"] = {
-{
-["trigger"] = 1,
-["variable"] = "onCooldown",
-["value"] = 1,
-},
-{
-["trigger"] = 1,
-["op"] = ">",
-["value"] = "0",
-["variable"] = "charges",
-},
-},
-},
-["changes"] = {
-{
-["property"] = "cooldownSwipe",
-},
-{
-["value"] = true,
-["property"] = "cooldownEdge",
-},
-},
-},
-{
-["check"] = {
-["op"] = "==",
-["checks"] = {
-{
-["trigger"] = 1,
-["op"] = "==",
-["value"] = "0",
-["variable"] = "charges",
-},
-{
-["value"] = "0",
-["op"] = "==",
-["variable"] = "charges",
-},
-{
-["value"] = "0",
-["op"] = "==",
-["variable"] = "charges",
-},
-},
-["value"] = "0",
-["variable"] = "charges",
-["trigger"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-},
-["authorOptions"] = {
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["xOffset"] = 0,
-["uid"] = "pj02oZCKVep",
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["anchorFrameType"] = "SCREEN",
-["anchorFrameParent"] = false,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.0.4",
-["zoom"] = 0.3,
-["auto"] = true,
-["tocversion"] = 110000,
-["id"] = "Premonition (Holy)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
-["keepAspectRatio"] = true,
-["config"] = {
-},
-["inverse"] = true,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["displayIcon"] = "",
-["cooldown"] = true,
-["preferToUpdate"] = false,
-},
-["Bloodseeker Vines (Restoration)"] = {
-["iconSource"] = -1,
-["wagoID"] = "ryBp05DHX",
-["xOffset"] = 0,
-["adjustedMax"] = "",
-["adjustedMin"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["cooldownSwipe"] = true,
-["cooldownEdge"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["triggers"] = {
-{
-["trigger"] = {
-["type"] = "aura2",
-["auranames"] = {
-},
-["useExactSpellId"] = true,
-["unit"] = "target",
-["ownOnly"] = true,
-["event"] = "Health",
-["names"] = {
-},
-["unitExists"] = false,
-["subeventSuffix"] = "_CAST_START",
-["spellIds"] = {
-},
-["subeventPrefix"] = "SPELL",
-["auraspellids"] = {
-"439531",
-},
-["useName"] = false,
-["matchesShowOn"] = "showOnActive",
-["debuffType"] = "HARMFUL",
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "any",
-["activeTriggerMode"] = -10,
-},
-["internalVersion"] = 75,
-["progressSource"] = {
--1,
-"",
-},
-["animation"] = {
-["start"] = {
-["type"] = "preset",
-["easeType"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["preset"] = "shrink",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["type"] = "preset",
-["easeType"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["preset"] = "shrink",
-},
-},
-["desaturate"] = false,
-["version"] = 105,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["border_offset"] = 0,
-["type"] = "subborder",
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["border_size"] = 2,
-},
-{
-["glowFrequency"] = 0.25,
-["type"] = "subglow",
-["useGlowColor"] = false,
-["glowType"] = "Proc",
-["glowThickness"] = 1,
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["glowDuration"] = 1,
-["glowXOffset"] = 0,
-["glowScale"] = 1,
-["glow"] = false,
-["glowLength"] = 10,
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-{
-["text_text_format_p_time_format"] = 0,
-["text_text_format_s_format"] = "none",
-["text_text"] = "%s",
-["text_text_format_p_format"] = "timed",
-["text_selfPoint"] = "CENTER",
-["text_automaticWidth"] = "Auto",
-["text_fixedWidth"] = 64,
-["anchorYOffset"] = 0,
-["text_justify"] = "CENTER",
-["rotateText"] = "NONE",
-["type"] = "subtext",
-["text_anchorYOffset"] = -4,
-["text_color"] = {
-1,
-0.88627450980392,
-0.76862745098039,
-1,
-},
-["text_font"] = "Friz Quadrata TT",
-["text_text_format_p_time_dynamic_threshold"] = 60,
-["text_shadowYOffset"] = 0,
-["text_shadowColor"] = {
-0,
-0,
-0,
-1,
-},
-["text_wordWrap"] = "WordWrap",
-["text_visible"] = false,
-["text_anchorPoint"] = "OUTER_TOP",
-["text_text_format_p_time_precision"] = 1,
-["text_fontType"] = "OUTLINE",
-["text_fontSize"] = 16,
-["anchorXOffset"] = 0,
-["text_shadowXOffset"] = 0,
-},
-},
-["height"] = 48,
-["load"] = {
-["use_petbattle"] = false,
-["use_never"] = false,
-["talent"] = {
-["multi"] = {
-},
-},
-["use_class_and_spec"] = true,
-["spec"] = {
-["multi"] = {
-},
-},
-["use_class"] = true,
-["use_spellknown"] = false,
-["use_herotalent"] = false,
-["herotalent"] = {
-["multi"] = {
-["117226"] = true,
-},
-},
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["MAGE"] = true,
-},
-},
-["use_combat"] = true,
-["class_and_spec"] = {
-["single"] = 105,
-["multi"] = {
-[103] = true,
-[104] = true,
-[102] = true,
-[105] = true,
-},
-},
-["size"] = {
-["multi"] = {
-},
-},
-},
-["alpha"] = 1,
-["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
-["icon"] = true,
-["information"] = {
-["forceEvents"] = true,
-["ignoreOptionsEventErrors"] = true,
-},
-["conditions"] = {
-{
-["check"] = {
-["trigger"] = 1,
-["variable"] = "show",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Pixel",
-["property"] = "sub.3.glowType",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 1,
-["op"] = ">",
-["value"] = "1",
-["variable"] = "stacks",
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "sub.4.text_visible",
-},
-},
-},
-},
-["authorOptions"] = {
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["parent"] = "Dynamic Effects - LWA - Druid",
-["uid"] = "yhvtK)jLKF8",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
-["anchorFrameType"] = "SCREEN",
-["anchorFrameParent"] = false,
-["zoom"] = 0.3,
-["semver"] = "11.0.8",
-["cooldownTextDisabled"] = false,
-["auto"] = true,
-["tocversion"] = 110000,
-["id"] = "Bloodseeker Vines (Restoration)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
-["keepAspectRatio"] = true,
-["config"] = {
-},
-["inverse"] = false,
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["displayIcon"] = "",
-["cooldown"] = true,
-["preferToUpdate"] = true,
-},
-["Feline Potential"] = {
-["iconSource"] = -1,
-["wagoID"] = "ryBp05DHX",
-["xOffset"] = 0,
-["adjustedMax"] = "",
-["adjustedMin"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["cooldownSwipe"] = true,
-["cooldownEdge"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["triggers"] = {
-{
-["trigger"] = {
-["type"] = "aura2",
-["auranames"] = {
-},
-["useExactSpellId"] = true,
-["unit"] = "player",
-["ownOnly"] = true,
-["event"] = "Health",
-["names"] = {
-},
-["unitExists"] = true,
-["subeventSuffix"] = "_CAST_START",
-["spellIds"] = {
-},
-["subeventPrefix"] = "SPELL",
-["auraspellids"] = {
-"441702",
-},
-["useName"] = false,
-["matchesShowOn"] = "showOnActive",
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["type"] = "aura2",
-["auranames"] = {
-},
-["useExactSpellId"] = true,
-["unit"] = "player",
-["ownOnly"] = true,
-["event"] = "Health",
-["names"] = {
-},
-["unitExists"] = true,
-["subeventSuffix"] = "_CAST_START",
-["spellIds"] = {
-},
-["subeventPrefix"] = "SPELL",
-["auraspellids"] = {
-"441701",
-},
-["useName"] = false,
-["matchesShowOn"] = "showOnActive",
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "any",
-["activeTriggerMode"] = -10,
-},
-["internalVersion"] = 75,
-["progressSource"] = {
--1,
-"",
-},
-["animation"] = {
-["start"] = {
-["type"] = "preset",
-["easeType"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["preset"] = "shrink",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["type"] = "preset",
-["easeType"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["preset"] = "shrink",
-},
-},
-["desaturate"] = false,
-["version"] = 105,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["border_offset"] = 0,
-["type"] = "subborder",
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["border_size"] = 2,
-},
-{
-["glowFrequency"] = 0.25,
-["type"] = "subglow",
-["useGlowColor"] = false,
-["glowType"] = "Proc",
-["glowThickness"] = 1,
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["glowDuration"] = 1,
-["glowXOffset"] = 0,
-["glowScale"] = 1,
-["glow"] = false,
-["glowLength"] = 10,
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-{
-["text_text_format_p_time_format"] = 0,
-["text_text_format_s_format"] = "none",
-["text_text"] = "%s",
-["text_text_format_p_format"] = "timed",
-["text_selfPoint"] = "CENTER",
-["text_automaticWidth"] = "Auto",
-["text_fixedWidth"] = 64,
-["anchorYOffset"] = 0,
-["text_justify"] = "CENTER",
-["rotateText"] = "NONE",
-["type"] = "subtext",
-["text_anchorYOffset"] = -4,
-["text_color"] = {
-1,
-0.88627450980392,
-0.76862745098039,
-1,
-},
-["text_font"] = "Friz Quadrata TT",
-["text_text_format_p_time_dynamic_threshold"] = 60,
-["text_shadowYOffset"] = 0,
-["text_shadowColor"] = {
-0,
-0,
-0,
-1,
-},
-["text_wordWrap"] = "WordWrap",
-["text_visible"] = false,
-["text_anchorPoint"] = "OUTER_TOP",
-["text_text_format_p_time_precision"] = 1,
-["text_fontType"] = "OUTLINE",
-["text_fontSize"] = 16,
-["anchorXOffset"] = 0,
-["text_shadowXOffset"] = 0,
-},
-},
-["height"] = 48,
-["load"] = {
-["use_petbattle"] = false,
-["use_never"] = false,
-["talent"] = {
-["multi"] = {
-},
-},
-["use_class_and_spec"] = true,
-["spec"] = {
-["multi"] = {
-},
-},
-["use_class"] = true,
-["use_spellknown"] = false,
-["use_herotalent"] = false,
-["herotalent"] = {
-["multi"] = {
-["117209"] = true,
-},
-},
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["MAGE"] = true,
-},
-},
-["use_combat"] = true,
-["class_and_spec"] = {
-["single"] = 104,
-["multi"] = {
-[103] = true,
-[104] = true,
-[102] = true,
-[105] = true,
-},
-},
-["size"] = {
-["multi"] = {
-},
-},
-},
-["alpha"] = 1,
-["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
-["icon"] = true,
-["information"] = {
-["forceEvents"] = true,
-["ignoreOptionsEventErrors"] = true,
-},
-["conditions"] = {
-{
-["check"] = {
-["trigger"] = 2,
-["op"] = ">",
-["value"] = "1",
-["variable"] = "stacks",
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "sub.4.text_visible",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 1,
-["variable"] = "show",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Proc",
-["property"] = "sub.3.glowType",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 2,
-["op"] = "==",
-["value"] = "6",
-["variable"] = "stacks",
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Pixel",
-["property"] = "sub.3.glowType",
-},
-},
-},
-},
-["authorOptions"] = {
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["parent"] = "Dynamic Effects - LWA - Druid",
-["uid"] = "H7uRXPc9XMF",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
-["anchorFrameType"] = "SCREEN",
-["anchorFrameParent"] = false,
-["zoom"] = 0.3,
-["semver"] = "11.0.8",
-["cooldownTextDisabled"] = false,
-["auto"] = true,
-["tocversion"] = 110000,
-["id"] = "Feline Potential",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
-["keepAspectRatio"] = true,
-["config"] = {
-},
-["inverse"] = false,
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["displayIcon"] = "",
-["cooldown"] = true,
-["preferToUpdate"] = true,
-},
-["Mana Bar (Optional - Shadow) - LWA - Priest"] = {
-["sparkWidth"] = 10,
-["iconSource"] = -1,
-["xOffset"] = 0,
-["adjustedMax"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["sparkRotation"] = 0,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["icon"] = false,
-["icon_color"] = {
-1,
-1,
-1,
-1,
-},
-["enableGradient"] = false,
-["selfPoint"] = "TOP",
-["barColor"] = {
-0.03921568627451,
-0.45098039215686,
-0.82745098039216,
-1,
-},
-["desaturate"] = false,
-["sparkOffsetY"] = 0,
-["gradientOrientation"] = "HORIZONTAL",
-["load"] = {
-["use_petbattle"] = false,
-["class_and_spec"] = {
-["single"] = 258,
-["multi"] = {
-[63] = true,
-[64] = true,
-},
-},
-["talent"] = {
-["multi"] = {
-},
-},
-["use_class_and_spec"] = true,
-["use_class"] = true,
-["role"] = {
-["multi"] = {
-},
-},
-["zoneIds"] = "",
-["use_never"] = true,
-["spec"] = {
-["single"] = 3,
-["multi"] = {
-[3] = true,
-},
-},
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["WARLOCK"] = true,
-},
-},
-["size"] = {
-["multi"] = {
-},
-},
-},
-["smoothProgress"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "aurabar",
-["overlayclip"] = true,
-["texture"] = "Solid",
-["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-["auto"] = true,
-["tocversion"] = 110000,
-["alpha"] = 1,
-["sparkColor"] = {
-1,
-1,
-1,
-1,
-},
-["sparkOffsetX"] = 0,
-["wagoID"] = "BJu2WDqBX",
-["parent"] = "Resources - LWA - Priest",
-["adjustedMin"] = "",
-["sparkRotationMode"] = "AUTO",
-["triggers"] = {
-{
-["trigger"] = {
-["type"] = "unit",
-["use_unit"] = true,
-["unevent"] = "auto",
-["subeventPrefix"] = "SPELL",
-["duration"] = "1",
-["use_showCost"] = true,
-["names"] = {
-},
-["subeventSuffix"] = "_CAST_START",
-["powertype"] = 0,
-["spellIds"] = {
-},
-["event"] = "Power",
-["unit"] = "player",
-["use_absorbMode"] = true,
-["use_powertype"] = true,
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "any",
-["activeTriggerMode"] = 1,
-},
-["internalVersion"] = 75,
-["progressSource"] = {
--1,
-"",
-},
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["isPrimaryResource"] = true,
-["version"] = 68,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["type"] = "subforeground",
-},
-{
-["border_size"] = 2,
-["border_anchor"] = "bar",
-["type"] = "subborder",
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["border_offset"] = 0,
-},
-{
-["tick_rotation"] = 0,
-["tick_xOffset"] = 0,
-["tick_desaturate"] = false,
-["use_texture"] = false,
-["tick_placement_mode"] = "AtPercent",
-["tick_texture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-["tick_length"] = 30,
-["progressSources"] = {
-{
--2,
-"",
-},
-},
-["type"] = "subtick",
-["tick_placements"] = {
-"70",
-},
-["automatic_length"] = true,
-["tick_thickness"] = 2,
-["tick_color"] = {
-1,
-1,
-1,
-1,
-},
-["tick_yOffset"] = 0,
-["tick_blend_mode"] = "ADD",
-["tick_mirror"] = false,
-["tick_visible"] = false,
-},
-},
-["height"] = 20,
-["textureSource"] = "LSM",
-["sparkBlendMode"] = "ADD",
-["useAdjustededMax"] = false,
-["source"] = "import",
-["uid"] = "CLzOwhMlwcv",
-["barColor2"] = {
-1,
-1,
-0,
-1,
-},
-["authorOptions"] = {
-},
-["spark"] = false,
-["icon_side"] = "RIGHT",
-["config"] = {
-},
-["overlays"] = {
-{
-0,
-0,
-0,
-0.40000003576279,
-},
-},
-["sparkHeight"] = 30,
-["zoom"] = 0,
-["overlaysTexture"] = {
-"Solid",
-},
-["backgroundColor"] = {
-0,
-0,
-0,
-0.30000001192093,
-},
-["semver"] = "11.0.4",
-["width"] = 405,
-["id"] = "Mana Bar (Optional - Shadow) - LWA - Priest",
-["actions"] = {
-["start"] = {
-["do_custom"] = false,
-["custom"] = "",
-["do_message"] = false,
-},
-["finish"] = {
-},
-["init"] = {
-["custom"] = "aura_env.region.configGroup = \"mana_bar_shadow\"",
-["do_custom"] = true,
-},
-},
-["frameStrata"] = 1,
-["anchorFrameType"] = "SCREEN",
-["sparkHidden"] = "NEVER",
-["customText"] = "",
-["inverse"] = false,
-["configGroup"] = "mana_bar",
-["orientation"] = "HORIZONTAL",
-["conditions"] = {
-{
-["check"] = {
-["trigger"] = 1,
-["op"] = ">=",
-["value"] = "85",
-["variable"] = "percentpower",
-},
-["changes"] = {
-{
-["value"] = {
-["custom"] = "aura_env.region.colorState = \"high\"\nWeakAuras.ScanEvents(\"LWA_UPDATE_BAR\", aura_env)",
-},
-["property"] = "customcode",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -1,
-["variable"] = "alwaystrue",
-},
-["linked"] = true,
-["changes"] = {
-{
-["value"] = {
-["custom"] = "aura_env.region.colorState = \"\"\nWeakAuras.ScanEvents(\"LWA_UPDATE_BAR\", aura_env)",
-},
-["property"] = "customcode",
-},
-},
-},
-},
-["information"] = {
-["forceEvents"] = true,
-["ignoreOptionsEventErrors"] = true,
-},
-["preferToUpdate"] = false,
-},
-["Purify Disease"] = {
-["iconSource"] = -1,
-["wagoID"] = "BJu2WDqBX",
-["xOffset"] = 0,
-["adjustedMax"] = "",
-["adjustedMin"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["cooldownSwipe"] = true,
-["cooldownEdge"] = false,
-["icon"] = true,
-["triggers"] = {
-{
-["trigger"] = {
-["track"] = "auto",
-["use_genericShowOn"] = true,
-["genericShowOn"] = "showAlways",
-["names"] = {
-},
-["use_showgcd"] = true,
-["debuffType"] = "HELPFUL",
-["type"] = "spell",
-["use_absorbHealMode"] = true,
-["subeventSuffix"] = "_CAST_START",
-["event"] = "Cooldown Progress (Spell)",
-["subeventPrefix"] = "SPELL",
-["realSpellName"] = "Purify Disease",
-["use_spellName"] = true,
-["spellIds"] = {
-},
-["use_unit"] = true,
-["use_absorbMode"] = true,
-["unit"] = "player",
-["use_track"] = true,
-["spellName"] = 213634,
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["track"] = "auto",
-["use_genericShowOn"] = true,
-["genericShowOn"] = "showOnCooldown",
-["names"] = {
-},
-["use_showgcd"] = true,
-["debuffType"] = "HELPFUL",
-["type"] = "spell",
-["use_absorbHealMode"] = true,
-["subeventSuffix"] = "_CAST_START",
-["event"] = "Cooldown Progress (Spell)",
-["subeventPrefix"] = "SPELL",
-["realSpellName"] = "Purify Disease",
-["use_spellName"] = true,
-["spellIds"] = {
-},
-["use_unit"] = true,
-["use_absorbMode"] = true,
-["unit"] = "player",
-["use_track"] = true,
-["spellName"] = 213634,
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "custom",
-["customTriggerLogic"] = "function(t)\n    if aura_env.config.utility.behavior == 1 then -- Show Only on Cooldown\n        return t[2]\n    else\n        return t[1] -- Default: Always Show\n    end\nend",
-["activeTriggerMode"] = -10,
-},
-["internalVersion"] = 75,
-["keepAspectRatio"] = true,
-["selfPoint"] = "CENTER",
-["desaturate"] = false,
-["version"] = 68,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["border_size"] = 2,
-["type"] = "subborder",
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["border_offset"] = 0,
-},
-{
-["glowFrequency"] = 0.25,
-["type"] = "subglow",
-["glowDuration"] = 1,
-["glowType"] = "Proc",
-["glowThickness"] = 1,
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["useGlowColor"] = false,
-["glowXOffset"] = 0,
-["glowScale"] = 1,
-["glow"] = false,
-["glowLength"] = 10,
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-},
-["height"] = 48,
-["load"] = {
-["use_petbattle"] = false,
-["class_and_spec"] = {
-["single"] = 258,
-["multi"] = {
-[257] = true,
-[258] = true,
-[256] = true,
-},
-},
-["talent"] = {
-["multi"] = {
-},
-},
-["use_class_and_spec"] = true,
-["use_class"] = true,
-["role"] = {
-["multi"] = {
-},
-},
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["MAGE"] = true,
-},
-},
-["use_never"] = false,
-["use_spellknown"] = true,
-["spec"] = {
-["multi"] = {
-},
-},
-["spellknown"] = 213634,
-["size"] = {
-["multi"] = {
-},
-},
-},
-["useAdjustededMax"] = false,
-["source"] = "import",
-["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
-},
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["parent"] = "Utilities - LWA - Priest",
-["authorOptions"] = {
-{
-["subOptions"] = {
-{
-["useName"] = true,
-["type"] = "header",
-["text"] = "Behavior",
-["noMerge"] = false,
-["width"] = 1,
-},
-{
-["type"] = "select",
-["default"] = 2,
-["values"] = {
-"Show on Cooldown",
-"Always Show",
-},
-["name"] = "Display Behavior",
-["useDesc"] = false,
-["key"] = "behavior",
-["width"] = 1,
-},
-{
-["softMin"] = 0,
-["type"] = "range",
-["bigStep"] = 1,
-["max"] = 100,
-["step"] = 1,
-["width"] = 1,
-["min"] = 0,
-["key"] = "alpha",
-["softMax"] = 100,
-["default"] = 30,
-["name"] = "Always Show Alpha",
-["useDesc"] = false,
-},
-},
-["hideReorder"] = true,
-["useDesc"] = false,
-["nameSource"] = 0,
-["name"] = "Utility Icons",
-["width"] = 1,
-["useCollapse"] = true,
-["noMerge"] = false,
-["collapse"] = true,
-["type"] = "group",
-["limitType"] = "none",
-["groupType"] = "simple",
-["key"] = "utility",
-["size"] = 10,
-},
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["config"] = {
-["utility"] = {
-["behavior"] = 2,
-["alpha"] = 30,
-},
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["zoom"] = 0.3,
-["semver"] = "11.0.4",
-["tocversion"] = 110000,
-["id"] = "Purify Disease",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "AnD9qDT9o3Q",
-["inverse"] = true,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["conditions"] = {
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 0,
-},
-["changes"] = {
-{
-["value"] = false,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Proc",
-["property"] = "sub.3.glowType",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -1,
-["variable"] = "incombat",
-["value"] = 0,
-},
-["changes"] = {
-{
-["property"] = "sub.3.glow",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "insufficientResources",
-["value"] = 1,
-["checks"] = {
-{
-["value"] = 1,
-["variable"] = "insufficientResources",
-},
-{
-["trigger"] = -1,
-["variable"] = "incombat",
-},
-},
-},
-["changes"] = {
-{
-["value"] = {
-0.47450983524323,
-0.5137255191803,
-1,
-1,
-},
-["property"] = "color",
-},
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 1,
-["variable"] = "onCooldown",
-["value"] = 0,
-["checks"] = {
-{
-["trigger"] = 1,
-["variable"] = "show",
-["value"] = 0,
-},
-{
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 0,
-},
-},
-},
-["linked"] = false,
-["changes"] = {
-{
-["value"] = {
-["custom"] = "aura_env.region:SetAlpha(aura_env.config.utility.alpha /100)",
-},
-["property"] = "customcode",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -1,
-["variable"] = "alwaystrue",
-},
-["linked"] = true,
-["changes"] = {
-{
-["value"] = {
-["custom"] = "aura_env.region:SetAlpha(1)",
-},
-["property"] = "customcode",
-},
-},
-},
-},
-["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
-},
-["Incarnation: Chosen of Elune (Orbital Strike)"] = {
-["iconSource"] = -1,
-["wagoID"] = "ryBp05DHX",
-["parent"] = "Core - LWA - Druid",
-["preferToUpdate"] = true,
-["adjustedMin"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["cooldownSwipe"] = true,
-["cooldownEdge"] = false,
-["icon"] = true,
-["triggers"] = {
-{
-["trigger"] = {
-["type"] = "aura2",
-["auranames"] = {
-"390414",
-"194223",
-},
-["ownOnly"] = true,
-["event"] = "Health",
-["unit"] = "player",
-["spellIds"] = {
-},
-["names"] = {
-},
-["subeventSuffix"] = "_CAST_START",
-["subeventPrefix"] = "SPELL",
-["useName"] = true,
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["track"] = "auto",
-["use_genericShowOn"] = true,
-["genericShowOn"] = "showAlways",
-["use_unit"] = true,
-["use_showgcd"] = true,
-["debuffType"] = "HELPFUL",
-["type"] = "spell",
-["use_absorbHealMode"] = true,
-["subeventSuffix"] = "_CAST_START",
-["unit"] = "player",
-["event"] = "Cooldown Progress (Spell)",
-["use_exact_spellName"] = false,
-["realSpellName"] = "Incarnation: Chosen of Elune",
-["use_spellName"] = true,
-["spellIds"] = {
-},
-["subeventPrefix"] = "SPELL",
-["names"] = {
-},
-["use_absorbMode"] = true,
-["use_track"] = true,
-["spellName"] = 390414,
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["type"] = "spell",
-["use_absorbHealMode"] = true,
-["spellName"] = 394013,
-["use_genericShowOn"] = true,
-["genericShowOn"] = "showOnCooldown",
-["unit"] = "player",
-["realSpellName"] = 0,
-["use_spellName"] = true,
-["use_absorbMode"] = true,
-["event"] = "Spell Known",
-["use_exact_spellName"] = true,
-["use_unit"] = true,
-["use_track"] = true,
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "any",
-["activeTriggerMode"] = -10,
-},
-["internalVersion"] = 75,
-["progressSource"] = {
--1,
-"",
-},
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["desaturate"] = false,
-["version"] = 105,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["border_offset"] = 0,
-["type"] = "subborder",
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["border_size"] = 2,
-},
-{
-["glowFrequency"] = 0.25,
-["type"] = "subglow",
-["useGlowColor"] = false,
-["glowType"] = "Proc",
-["glowThickness"] = 1,
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["glowDuration"] = 1,
-["glowXOffset"] = 0,
-["glowScale"] = 1,
-["glow"] = false,
-["glowLength"] = 10,
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-},
-["height"] = 48,
-["load"] = {
-["use_petbattle"] = false,
-["use_never"] = false,
-["talent"] = {
-["multi"] = {
-[109839] = true,
-[109855] = true,
-},
-},
-["use_class_and_spec"] = true,
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["MAGE"] = true,
-},
-},
-["use_talent"] = false,
-["use_class"] = true,
-["use_spellknown"] = true,
-["class_and_spec"] = {
-["single"] = 102,
-["multi"] = {
-[103] = true,
-[104] = true,
-[102] = true,
-[105] = true,
-},
-},
-["use_exact_spellknown"] = false,
-["spec"] = {
-["multi"] = {
-},
-},
-["use_combat"] = true,
-["spellknown"] = 390414,
-["size"] = {
-["multi"] = {
-},
-},
-},
-["useAdjustededMax"] = false,
-["anchorFrameType"] = "SCREEN",
-["source"] = "import",
-["keepAspectRatio"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["information"] = {
-["forceEvents"] = true,
-},
-["conditions"] = {
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 0,
-},
-["changes"] = {
-{
-["value"] = false,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Proc",
-["property"] = "sub.3.glowType",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -1,
-["variable"] = "incombat",
-["value"] = 0,
-},
-["changes"] = {
-{
-["property"] = "sub.3.glow",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 1,
-["checks"] = {
-{
-["value"] = 1,
-["variable"] = "onCooldown",
-},
-{
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 1,
-},
-},
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 1,
-["variable"] = "show",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Pixel",
-["property"] = "sub.3.glowType",
-},
-{
-["property"] = "desaturate",
-},
-{
-["property"] = "inverse",
-},
-{
-["value"] = true,
-["property"] = "cooldownEdge",
-},
-},
-},
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["xOffset"] = 0,
-["uid"] = "dIAC8nNaorT",
-["alpha"] = 1,
-["anchorFrameParent"] = false,
-["frameStrata"] = 1,
-["cooldownTextDisabled"] = false,
-["zoom"] = 0.3,
-["semver"] = "11.0.8",
-["tocversion"] = 110000,
-["id"] = "Incarnation: Chosen of Elune (Orbital Strike)",
-["selfPoint"] = "CENTER",
-["useCooldownModRate"] = true,
-["width"] = 48,
-["authorOptions"] = {
-},
-["config"] = {
-},
-["inverse"] = true,
-["adjustedMax"] = "",
-["displayIcon"] = "",
-["cooldown"] = true,
-["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
-},
-["Combo Points - LWA - Druid"] = {
-["arcLength"] = 360,
-["controlledChildren"] = {
-"Combot Point 1 - Druid",
-"Combot Point 2 - Druid",
-"Combot Point 3 - Druid",
-"Combot Point 4 - Druid",
-"Combot Point 5 - Druid",
-},
-["borderBackdrop"] = "Blizzard Tooltip",
-["wagoID"] = "ryBp05DHX",
-["xOffset"] = 0,
-["preferToUpdate"] = true,
-["alpha"] = 1,
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["animate"] = false,
-["sharedFrameLevel"] = true,
-["fullCircle"] = true,
-["rowSpace"] = 1,
-["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["triggers"] = {
-{
-["trigger"] = {
-["names"] = {
-},
-["type"] = "aura2",
-["spellIds"] = {
-},
-["subeventSuffix"] = "_CAST_START",
-["subeventPrefix"] = "SPELL",
-["debuffType"] = "HELPFUL",
-["event"] = "Health",
-["unit"] = "player",
-},
-["untrigger"] = {
-},
-},
-},
-["columnSpace"] = 1,
-["internalVersion"] = 75,
-["parent"] = "Resources - LWA - Druid",
-["useLimit"] = false,
-["align"] = "LEFT",
-["growOn"] = "show",
-["space"] = 2,
-["radius"] = 200,
-["rotation"] = 0,
-["sortHybridTable"] = {
-["Combot Point 4 - Druid"] = false,
-["Combot Point 3 - Druid"] = false,
-["Combot Point 2 - Druid"] = false,
-["Combot Point 5 - Druid"] = false,
-["Combot Point 1 - Druid"] = false,
-},
-["version"] = 105,
-["subRegions"] = {
-},
-["stagger"] = 0,
-["grow"] = "CUSTOM",
-["load"] = {
-["size"] = {
-["multi"] = {
-},
-},
-["spec"] = {
-["multi"] = {
-},
-},
-["class"] = {
-["multi"] = {
-},
-},
-["talent"] = {
-["multi"] = {
-},
-},
-},
-["uid"] = "6pmVKMV(T2k",
-["backdropColor"] = {
-1,
-1,
-1,
-0.5,
-},
-["borderColor"] = {
-0,
-0,
-0,
-1,
-},
-["source"] = "import",
-["customGrow"] = "function(newPositions, activeRegions)\n    local LWA = LWA and LWA[\"Druid\"] or {}\n    \n    if LWA and LWA.GrowDynamicResource then\n        LWA.GrowDynamicResource(newPositions, activeRegions)\n    end\nend",
-["scale"] = 1,
-["centerType"] = "LR",
-["border"] = false,
-["borderEdge"] = "Square Full White",
-["stepAngle"] = 15,
-["borderSize"] = 2,
-["sort"] = "none",
-["limit"] = 6,
-["frameStrata"] = 1,
-["constantFactor"] = "RADIUS",
-["borderInset"] = 1,
-["borderOffset"] = 4,
-["semver"] = "11.0.8",
-["tocversion"] = 110000,
-["id"] = "Combo Points - LWA - Druid",
-["regionType"] = "dynamicgroup",
-["gridWidth"] = 5,
-["anchorFrameType"] = "SCREEN",
-["gridType"] = "RD",
-["config"] = {
-},
-["authorOptions"] = {
-},
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["conditions"] = {
-},
-["information"] = {
-["forceEvents"] = true,
-},
-["selfPoint"] = "TOP",
-},
-["After the Wildfire "] = {
-["iconSource"] = -1,
-["wagoID"] = "ryBp05DHX",
-["xOffset"] = 0,
-["adjustedMax"] = "",
-["adjustedMin"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["cooldownSwipe"] = true,
-["cooldownEdge"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["triggers"] = {
-{
-["trigger"] = {
-["type"] = "aura2",
-["auranames"] = {
-"400734",
-},
-["subeventSuffix"] = "_CAST_START",
-["fetchTooltip"] = true,
-["event"] = "Health",
-["unit"] = "player",
-["unitExists"] = true,
-["ownOnly"] = true,
-["spellIds"] = {
-},
-["names"] = {
-},
-["subeventPrefix"] = "SPELL",
-["useName"] = true,
-["matchesShowOn"] = "showOnActive",
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "any",
-["activeTriggerMode"] = -10,
-},
-["internalVersion"] = 75,
-["progressSource"] = {
--1,
-"",
-},
-["animation"] = {
-["start"] = {
-["type"] = "preset",
-["easeType"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["preset"] = "shrink",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["type"] = "preset",
-["easeType"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["preset"] = "shrink",
-},
-},
-["desaturate"] = false,
-["version"] = 105,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["border_offset"] = 0,
-["type"] = "subborder",
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["border_size"] = 2,
-},
-{
-["glowFrequency"] = 0.25,
-["type"] = "subglow",
-["useGlowColor"] = false,
-["glowType"] = "Proc",
-["glowThickness"] = 1,
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["glowDuration"] = 1,
-["glowXOffset"] = 0,
-["glowScale"] = 1,
-["glow"] = false,
-["glowLength"] = 10,
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-{
-["text_shadowXOffset"] = 0,
-["text_text_format_s_format"] = "none",
-["text_text"] = "%1.tooltip1",
-["text_text_format_p_format"] = "timed",
-["text_selfPoint"] = "CENTER",
-["text_automaticWidth"] = "Auto",
-["text_fixedWidth"] = 64,
-["anchorYOffset"] = 0,
-["text_justify"] = "CENTER",
-["rotateText"] = "NONE",
-["text_text_format_p_time_format"] = 0,
-["type"] = "subtext",
-["text_text_format_p_time_dynamic_threshold"] = 60,
-["text_color"] = {
-1,
-0.88627450980392,
-0.76862745098039,
-1,
-},
-["text_font"] = "Friz Quadrata TT",
-["text_anchorYOffset"] = -4,
-["text_shadowYOffset"] = 0,
-["text_shadowColor"] = {
-0,
-0,
-0,
-1,
-},
-["text_wordWrap"] = "WordWrap",
-["text_fontType"] = "OUTLINE",
-["text_anchorPoint"] = "OUTER_TOP",
-["text_text_format_p_time_precision"] = 1,
-["text_visible"] = true,
-["text_fontSize"] = 16,
-["anchorXOffset"] = 0,
-["text_text_format_1.tooltip1_format"] = "none",
-},
-},
-["height"] = 48,
-["load"] = {
-["use_petbattle"] = false,
-["use_never"] = false,
-["talent"] = {
-["multi"] = {
-},
-},
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["MAGE"] = true,
-},
-},
-["use_class"] = true,
-["use_spellknown"] = true,
-["use_class_and_spec"] = true,
-["class_and_spec"] = {
-["single"] = 104,
-["multi"] = {
-[103] = true,
-[104] = true,
-[102] = true,
-[105] = true,
-},
-},
-["spec"] = {
-["multi"] = {
-},
-},
-["use_combat"] = true,
-["spellknown"] = 371905,
-["size"] = {
-["multi"] = {
-},
-},
-},
-["alpha"] = 1,
-["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
-["icon"] = true,
-["information"] = {
-["forceEvents"] = true,
-["ignoreOptionsEventErrors"] = true,
-},
-["conditions"] = {
-},
-["authorOptions"] = {
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["parent"] = "Dynamic Effects - LWA - Druid",
-["uid"] = "Zk1F5y9sqBW",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
-["anchorFrameType"] = "SCREEN",
-["anchorFrameParent"] = false,
-["zoom"] = 0.3,
-["semver"] = "11.0.8",
-["cooldownTextDisabled"] = false,
-["auto"] = true,
-["tocversion"] = 110000,
-["id"] = "After the Wildfire ",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
-["keepAspectRatio"] = true,
-["config"] = {
-},
-["inverse"] = false,
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["displayIcon"] = "",
-["cooldown"] = true,
-["preferToUpdate"] = true,
-},
-["Ursine Vigor (Guardian)"] = {
-["iconSource"] = -1,
-["wagoID"] = "ryBp05DHX",
-["xOffset"] = 0,
-["adjustedMax"] = "",
-["adjustedMin"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["cooldownSwipe"] = true,
-["cooldownEdge"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["triggers"] = {
-{
-["trigger"] = {
-["type"] = "aura2",
-["auranames"] = {
-},
-["useExactSpellId"] = true,
-["unit"] = "player",
-["ownOnly"] = true,
-["event"] = "Health",
-["names"] = {
-},
-["unitExists"] = false,
-["subeventSuffix"] = "_CAST_START",
-["spellIds"] = {
-},
-["subeventPrefix"] = "SPELL",
-["auraspellids"] = {
-"393903",
-},
-["useName"] = false,
-["matchesShowOn"] = "showOnActive",
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "any",
-["activeTriggerMode"] = -10,
-},
-["internalVersion"] = 75,
-["progressSource"] = {
--1,
-"",
-},
-["animation"] = {
-["start"] = {
-["type"] = "preset",
-["easeType"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["preset"] = "shrink",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["type"] = "preset",
-["easeType"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["preset"] = "shrink",
-},
-},
-["desaturate"] = false,
-["version"] = 105,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["border_offset"] = 0,
-["type"] = "subborder",
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["border_size"] = 2,
-},
-{
-["glowFrequency"] = 0.25,
-["type"] = "subglow",
-["useGlowColor"] = false,
-["glowType"] = "Proc",
-["glowThickness"] = 1,
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["glowDuration"] = 1,
-["glowXOffset"] = 0,
-["glowScale"] = 1,
-["glow"] = false,
-["glowLength"] = 10,
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-},
-["height"] = 48,
-["load"] = {
-["use_petbattle"] = false,
-["use_never"] = false,
-["talent"] = {
-["multi"] = {
-[103313] = true,
-},
-},
-["use_class_and_spec"] = true,
-["use_talent"] = false,
-["use_class"] = true,
-["use_spellknown"] = false,
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["MAGE"] = true,
-},
-},
-["herotalent"] = {
-["multi"] = {
-["117206"] = false,
-},
-},
-["spec"] = {
-["multi"] = {
-},
-},
-["use_combat"] = true,
-["class_and_spec"] = {
-["single"] = 104,
-["multi"] = {
-[103] = true,
-[104] = true,
-[102] = true,
-[105] = true,
-},
-},
-["size"] = {
-["multi"] = {
-},
-},
-},
-["alpha"] = 1,
-["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
-["icon"] = true,
-["information"] = {
-["forceEvents"] = true,
-["ignoreOptionsEventErrors"] = true,
-},
-["conditions"] = {
-{
-["check"] = {
-["trigger"] = 1,
-["variable"] = "show",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Pixel",
-["property"] = "sub.3.glowType",
-},
-},
-},
-},
-["authorOptions"] = {
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["parent"] = "Dynamic Effects - LWA - Druid",
-["uid"] = "VsXuhJTmSzn",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
-["anchorFrameType"] = "SCREEN",
-["anchorFrameParent"] = false,
-["zoom"] = 0.3,
-["semver"] = "11.0.8",
-["cooldownTextDisabled"] = false,
-["auto"] = true,
-["tocversion"] = 110000,
-["id"] = "Ursine Vigor (Guardian)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
-["keepAspectRatio"] = true,
-["config"] = {
-},
-["inverse"] = false,
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["displayIcon"] = "",
-["cooldown"] = true,
-["preferToUpdate"] = true,
-},
-["Vicious Cycle (Optional)"] = {
-["iconSource"] = -1,
-["wagoID"] = "ryBp05DHX",
-["xOffset"] = 0,
-["adjustedMax"] = "",
-["adjustedMin"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["cooldownSwipe"] = true,
-["cooldownEdge"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["triggers"] = {
-{
-["trigger"] = {
-["type"] = "aura2",
-["auranames"] = {
-},
-["useExactSpellId"] = true,
-["unit"] = "player",
-["ownOnly"] = true,
-["event"] = "Health",
-["names"] = {
-},
-["unitExists"] = true,
-["subeventSuffix"] = "_CAST_START",
-["spellIds"] = {
-},
-["subeventPrefix"] = "SPELL",
-["auraspellids"] = {
-"372015",
-"372019",
-},
-["useName"] = false,
-["matchesShowOn"] = "showOnActive",
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "any",
-["activeTriggerMode"] = -10,
-},
-["internalVersion"] = 75,
-["progressSource"] = {
--1,
-"",
-},
-["animation"] = {
-["start"] = {
-["type"] = "preset",
-["easeType"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["preset"] = "shrink",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["type"] = "preset",
-["easeType"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["preset"] = "shrink",
-},
-},
-["desaturate"] = false,
-["version"] = 105,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["border_offset"] = 0,
-["type"] = "subborder",
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["border_size"] = 2,
-},
-{
-["glowFrequency"] = 0.25,
-["type"] = "subglow",
-["useGlowColor"] = false,
-["glowType"] = "Proc",
-["glowThickness"] = 1,
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["glowDuration"] = 1,
-["glowXOffset"] = 0,
-["glowScale"] = 1,
-["glow"] = false,
-["glowLength"] = 10,
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-{
-["text_text_format_p_time_format"] = 0,
-["text_text_format_s_format"] = "none",
-["text_text"] = "%s",
-["text_text_format_p_format"] = "timed",
-["text_selfPoint"] = "CENTER",
-["text_automaticWidth"] = "Auto",
-["text_fixedWidth"] = 64,
-["anchorYOffset"] = 0,
-["text_justify"] = "CENTER",
-["rotateText"] = "NONE",
-["type"] = "subtext",
-["text_anchorYOffset"] = -4,
-["text_color"] = {
-1,
-0.88627450980392,
-0.76862745098039,
-1,
-},
-["text_font"] = "Friz Quadrata TT",
-["text_text_format_p_time_dynamic_threshold"] = 60,
-["text_shadowYOffset"] = 0,
-["text_shadowColor"] = {
-0,
-0,
-0,
-1,
-},
-["text_wordWrap"] = "WordWrap",
-["text_visible"] = true,
-["text_anchorPoint"] = "OUTER_TOP",
-["text_text_format_p_time_precision"] = 1,
-["text_fontType"] = "OUTLINE",
-["text_fontSize"] = 16,
-["anchorXOffset"] = 0,
-["text_shadowXOffset"] = 0,
-},
-},
-["height"] = 48,
-["load"] = {
-["use_petbattle"] = false,
-["use_never"] = true,
-["talent"] = {
-["multi"] = {
-},
-},
-["use_class_and_spec"] = true,
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["MAGE"] = true,
-},
-},
-["use_class"] = true,
-["use_spellknown"] = true,
-["use_not_spellknown"] = false,
-["class_and_spec"] = {
-["single"] = 104,
-["multi"] = {
-[103] = true,
-[104] = true,
-[102] = true,
-[105] = true,
-},
-},
-["spec"] = {
-["multi"] = {
-},
-},
-["use_combat"] = true,
-["spellknown"] = 371999,
-["size"] = {
-["multi"] = {
-},
-},
-},
-["alpha"] = 1,
-["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
-["icon"] = true,
-["information"] = {
-["forceEvents"] = true,
-["ignoreOptionsEventErrors"] = true,
-},
-["conditions"] = {
-{
-["check"] = {
-["trigger"] = 1,
-["op"] = "<",
-["value"] = "2",
-["variable"] = "stacks",
-},
-["changes"] = {
-{
-["property"] = "sub.4.text_visible",
-},
-},
-},
-},
-["authorOptions"] = {
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["parent"] = "Dynamic Effects - LWA - Druid",
-["uid"] = "D(iOUxfDOP(",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
-["anchorFrameType"] = "SCREEN",
-["anchorFrameParent"] = false,
-["zoom"] = 0.3,
-["semver"] = "11.0.8",
-["cooldownTextDisabled"] = false,
-["auto"] = true,
-["tocversion"] = 110000,
-["id"] = "Vicious Cycle (Optional)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
-["keepAspectRatio"] = true,
-["config"] = {
-},
-["inverse"] = false,
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["displayIcon"] = "",
-["cooldown"] = true,
-["preferToUpdate"] = true,
-},
-["Power Infusion (Holy)"] = {
-["iconSource"] = -1,
-["wagoID"] = "BJu2WDqBX",
-["xOffset"] = 0,
-["adjustedMax"] = "",
-["adjustedMin"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["cooldownSwipe"] = true,
-["cooldownEdge"] = false,
-["icon"] = true,
-["triggers"] = {
-{
-["trigger"] = {
-["useName"] = true,
-["useExactSpellId"] = false,
-["match_countOperator"] = ">",
-["names"] = {
-},
-["ownOnly"] = true,
-["event"] = "Health",
-["unit"] = "group",
-["subeventSuffix"] = "_CAST_START",
-["auranames"] = {
-"10060",
-},
-["spellIds"] = {
-},
-["subeventPrefix"] = "SPELL",
-["match_count"] = "0",
-["useMatch_count"] = true,
-["type"] = "aura2",
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["track"] = "auto",
-["use_genericShowOn"] = true,
-["genericShowOn"] = "showAlways",
-["names"] = {
-},
-["use_showgcd"] = true,
-["debuffType"] = "HELPFUL",
-["type"] = "spell",
-["use_absorbHealMode"] = true,
-["subeventSuffix"] = "_CAST_START",
-["event"] = "Cooldown Progress (Spell)",
-["subeventPrefix"] = "SPELL",
-["realSpellName"] = "Power Infusion",
-["use_spellName"] = true,
-["spellIds"] = {
-},
-["use_unit"] = true,
-["use_absorbMode"] = true,
-["unit"] = "player",
-["use_track"] = true,
-["spellName"] = 10060,
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "any",
-["customTriggerLogic"] = "",
-["activeTriggerMode"] = -10,
-},
-["internalVersion"] = 75,
-["keepAspectRatio"] = true,
-["selfPoint"] = "CENTER",
-["desaturate"] = false,
-["version"] = 68,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["border_size"] = 2,
-["type"] = "subborder",
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["border_offset"] = 0,
-},
-{
-["glowFrequency"] = 0.25,
-["type"] = "subglow",
-["glowDuration"] = 1,
-["glowType"] = "Proc",
-["glowThickness"] = 1,
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["useGlowColor"] = false,
-["glowXOffset"] = 0,
-["glowScale"] = 1,
-["glow"] = false,
-["glowLength"] = 10,
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-},
-["height"] = 48,
-["load"] = {
-["use_petbattle"] = false,
-["class_and_spec"] = {
-["single"] = 257,
-["multi"] = {
-[257] = true,
-[256] = true,
-},
-},
-["talent"] = {
-["multi"] = {
-},
-},
-["use_class_and_spec"] = true,
-["use_class"] = true,
-["role"] = {
-["multi"] = {
-},
-},
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["MAGE"] = true,
-},
-},
-["use_never"] = false,
-["use_spellknown"] = true,
-["spec"] = {
-["multi"] = {
-},
-},
-["spellknown"] = 10060,
-["size"] = {
-["multi"] = {
-},
-},
-},
-["useAdjustededMax"] = false,
-["source"] = "import",
-["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
-},
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["zoom"] = 0.3,
-["semver"] = "11.0.4",
-["tocversion"] = 110000,
-["id"] = "Power Infusion (Holy)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "DLY6WtxGQ0I",
-["inverse"] = true,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["conditions"] = {
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 0,
-},
-["changes"] = {
-{
-["value"] = false,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Proc",
-["property"] = "sub.3.glowType",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -1,
-["variable"] = "incombat",
-["value"] = 0,
-},
-["changes"] = {
-{
-["property"] = "sub.3.glow",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 1,
-["variable"] = "show",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Pixel",
-["property"] = "sub.3.glowType",
-},
-{
-["property"] = "desaturate",
-},
-{
-["property"] = "inverse",
-},
-{
-["value"] = true,
-["property"] = "cooldownEdge",
-},
-},
-},
-},
-["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
-},
-["Fade"] = {
-["iconSource"] = -1,
-["wagoID"] = "BJu2WDqBX",
-["xOffset"] = 0,
-["adjustedMax"] = "",
-["adjustedMin"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["cooldownSwipe"] = true,
-["cooldownEdge"] = false,
-["icon"] = true,
-["triggers"] = {
-{
-["trigger"] = {
-["type"] = "aura2",
-["auranames"] = {
-"586",
-},
-["ownOnly"] = true,
-["event"] = "Health",
-["unit"] = "player",
-["spellIds"] = {
-},
-["names"] = {
-},
-["subeventSuffix"] = "_CAST_START",
-["subeventPrefix"] = "SPELL",
-["useName"] = true,
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["track"] = "auto",
-["use_genericShowOn"] = true,
-["genericShowOn"] = "showAlways",
-["names"] = {
-},
-["use_showgcd"] = true,
-["debuffType"] = "HELPFUL",
-["type"] = "spell",
-["use_absorbHealMode"] = true,
-["subeventSuffix"] = "_CAST_START",
-["event"] = "Cooldown Progress (Spell)",
-["subeventPrefix"] = "SPELL",
-["realSpellName"] = "Fade",
-["use_spellName"] = true,
-["spellIds"] = {
-},
-["use_unit"] = true,
-["use_absorbMode"] = true,
-["unit"] = "player",
-["use_track"] = true,
-["spellName"] = 586,
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["track"] = "auto",
-["use_genericShowOn"] = true,
-["genericShowOn"] = "showOnCooldown",
-["names"] = {
-},
-["use_showgcd"] = true,
-["debuffType"] = "HELPFUL",
-["type"] = "spell",
-["use_absorbHealMode"] = true,
-["subeventSuffix"] = "_CAST_START",
-["event"] = "Cooldown Progress (Spell)",
-["subeventPrefix"] = "SPELL",
-["realSpellName"] = "Fade",
-["use_spellName"] = true,
-["spellIds"] = {
-},
-["use_unit"] = true,
-["use_absorbMode"] = true,
-["unit"] = "player",
-["use_track"] = true,
-["spellName"] = 586,
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "custom",
-["customTriggerLogic"] = "function(t)\n    if aura_env.config.utility.behavior == 1 then -- Show Only on Cooldown\n        return t[1] or t[3]\n    else\n        return t[2] -- Default: Always Show\n    end\nend\n\n",
-["activeTriggerMode"] = -10,
-},
-["internalVersion"] = 75,
-["keepAspectRatio"] = true,
-["selfPoint"] = "CENTER",
-["desaturate"] = false,
-["version"] = 68,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["border_size"] = 2,
-["type"] = "subborder",
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["border_offset"] = 0,
-},
-{
-["glowFrequency"] = 0.25,
-["type"] = "subglow",
-["glowDuration"] = 1,
-["glowType"] = "Proc",
-["glowThickness"] = 1,
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["useGlowColor"] = false,
-["glowXOffset"] = 0,
-["glowScale"] = 1,
-["glow"] = false,
-["glowLength"] = 10,
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-},
-["height"] = 48,
-["load"] = {
-["use_petbattle"] = false,
-["class_and_spec"] = {
-["single"] = 64,
-["multi"] = {
-[257] = true,
-[258] = true,
-[256] = true,
-},
-},
-["talent"] = {
-["multi"] = {
-},
-},
-["use_class_and_spec"] = false,
-["use_class"] = true,
-["role"] = {
-["multi"] = {
-},
-},
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["MAGE"] = true,
-},
-},
-["use_never"] = false,
-["use_spellknown"] = true,
-["spec"] = {
-["multi"] = {
-},
-},
-["spellknown"] = 586,
-["size"] = {
-["multi"] = {
-},
-},
-},
-["useAdjustededMax"] = false,
-["source"] = "import",
-["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
-},
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["parent"] = "Utilities - LWA - Priest",
-["authorOptions"] = {
-{
-["subOptions"] = {
-{
-["useName"] = true,
-["type"] = "header",
-["text"] = "Behavior",
-["noMerge"] = false,
-["width"] = 1,
-},
-{
-["type"] = "select",
-["default"] = 2,
-["values"] = {
-"Show on Cooldown",
-"Always Show",
-},
-["name"] = "Display Behavior",
-["useDesc"] = false,
-["key"] = "behavior",
-["width"] = 1,
-},
-{
-["softMin"] = 0,
-["type"] = "range",
-["bigStep"] = 1,
-["max"] = 100,
-["step"] = 1,
-["width"] = 1,
-["min"] = 0,
-["key"] = "alpha",
-["softMax"] = 100,
-["default"] = 30,
-["name"] = "Always Show Alpha",
-["useDesc"] = false,
-},
-},
-["hideReorder"] = true,
-["useDesc"] = false,
-["nameSource"] = 0,
-["name"] = "Utility Icons",
-["width"] = 1,
-["useCollapse"] = true,
-["noMerge"] = false,
-["collapse"] = true,
-["type"] = "group",
-["limitType"] = "none",
-["groupType"] = "simple",
-["key"] = "utility",
-["size"] = 10,
-},
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["config"] = {
-["utility"] = {
-["behavior"] = 2,
-["alpha"] = 30,
-},
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["zoom"] = 0.3,
-["semver"] = "11.0.4",
-["tocversion"] = 110000,
-["id"] = "Fade",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "a1z8cZuWa20",
-["inverse"] = true,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["conditions"] = {
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 0,
-},
-["changes"] = {
-{
-["value"] = false,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Proc",
-["property"] = "sub.3.glowType",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -1,
-["variable"] = "incombat",
-["value"] = 0,
-},
-["changes"] = {
-{
-["property"] = "sub.3.glow",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 1,
-["variable"] = "show",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Pixel",
-["property"] = "sub.3.glowType",
-},
-{
-["property"] = "desaturate",
-},
-{
-["property"] = "inverse",
-},
-{
-["value"] = true,
-["property"] = "cooldownEdge",
-},
-{
-["property"] = "color",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -2,
-["variable"] = "AND",
-["checks"] = {
-{
-["trigger"] = 1,
-["variable"] = "show",
-["value"] = 0,
-},
-{
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 0,
-},
-},
-},
-["linked"] = false,
-["changes"] = {
-{
-["value"] = {
-["custom"] = "aura_env.region:SetAlpha(aura_env.config.utility.alpha /100)",
-},
-["property"] = "customcode",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -1,
-["variable"] = "alwaystrue",
-},
-["linked"] = true,
-["changes"] = {
-{
-["value"] = {
-["custom"] = "aura_env.region:SetAlpha(1)",
-},
-["property"] = "customcode",
-},
-},
-},
-},
-["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
-},
-["Twist of Fate (Optional - Discipline)"] = {
-["iconSource"] = -1,
-["wagoID"] = "BJu2WDqBX",
-["parent"] = "Dynamic Effects - LWA - Priest",
-["adjustedMax"] = "",
-["adjustedMin"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["cooldownSwipe"] = true,
-["cooldownEdge"] = true,
-["icon"] = true,
-["triggers"] = {
-{
-["trigger"] = {
-["type"] = "aura2",
-["auranames"] = {
-"390978",
-},
-["matchesShowOn"] = "showOnActive",
-["event"] = "Health",
-["unit"] = "player",
-["unitExists"] = true,
-["ownOnly"] = true,
-["spellIds"] = {
-},
-["subeventSuffix"] = "_CAST_START",
-["subeventPrefix"] = "SPELL",
-["useName"] = true,
-["names"] = {
-},
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "any",
-["activeTriggerMode"] = -10,
-},
-["internalVersion"] = 75,
-["progressSource"] = {
--1,
-"",
-},
-["selfPoint"] = "CENTER",
-["desaturate"] = false,
-["version"] = 68,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["border_size"] = 2,
-["type"] = "subborder",
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["border_offset"] = 0,
-},
-{
-["glowFrequency"] = 0.25,
-["type"] = "subglow",
-["glowDuration"] = 1,
-["glowType"] = "Proc",
-["glowThickness"] = 1,
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["useGlowColor"] = false,
-["glowXOffset"] = 0,
-["glowScale"] = 1,
-["glow"] = false,
-["glowLength"] = 10,
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-},
-["height"] = 48,
-["load"] = {
-["use_petbattle"] = false,
-["class_and_spec"] = {
-["single"] = 256,
-["multi"] = {
-[257] = true,
-[258] = true,
-[256] = true,
-},
-},
-["talent"] = {
-["multi"] = {
-},
-},
-["use_class_and_spec"] = true,
-["use_class"] = true,
-["role"] = {
-["multi"] = {
-},
-},
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["MAGE"] = true,
-},
-},
-["use_never"] = true,
-["use_spellknown"] = true,
-["spec"] = {
-["multi"] = {
-},
-},
-["spellknown"] = 390972,
-["size"] = {
-["multi"] = {
-},
-},
-},
-["alpha"] = 1,
-["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["information"] = {
-["forceEvents"] = true,
-},
-["conditions"] = {
-},
-["authorOptions"] = {
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["xOffset"] = 0,
-["uid"] = "xgULnXhgN60",
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["anchorFrameType"] = "SCREEN",
-["anchorFrameParent"] = false,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.0.4",
-["zoom"] = 0.3,
-["auto"] = true,
-["tocversion"] = 110000,
-["id"] = "Twist of Fate (Optional - Discipline)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
-["keepAspectRatio"] = true,
-["config"] = {
-},
-["inverse"] = false,
-["animation"] = {
-["start"] = {
-["type"] = "preset",
-["easeType"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["preset"] = "shrink",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["type"] = "preset",
-["easeType"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["preset"] = "shrink",
-},
-},
-["displayIcon"] = "",
-["cooldown"] = true,
-["preferToUpdate"] = false,
-},
-["Rapture"] = {
-["iconSource"] = -1,
-["wagoID"] = "BJu2WDqBX",
-["parent"] = "Core - LWA - Priest",
-["adjustedMax"] = "",
-["adjustedMin"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["cooldownSwipe"] = true,
-["cooldownEdge"] = false,
-["icon"] = true,
-["triggers"] = {
-{
-["trigger"] = {
-["type"] = "aura2",
-["auranames"] = {
-"47536",
-},
-["ownOnly"] = true,
-["event"] = "Health",
-["unit"] = "player",
-["spellIds"] = {
-},
-["names"] = {
-},
-["subeventSuffix"] = "_CAST_START",
-["subeventPrefix"] = "SPELL",
-["useName"] = true,
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["track"] = "auto",
-["use_genericShowOn"] = true,
-["genericShowOn"] = "showAlways",
-["names"] = {
-},
-["use_showgcd"] = true,
-["debuffType"] = "HELPFUL",
-["type"] = "spell",
-["use_absorbHealMode"] = true,
-["subeventSuffix"] = "_CAST_START",
-["event"] = "Cooldown Progress (Spell)",
-["subeventPrefix"] = "SPELL",
-["realSpellName"] = "Rapture",
-["use_spellName"] = true,
-["spellIds"] = {
-},
-["use_unit"] = true,
-["use_absorbMode"] = true,
-["unit"] = "player",
-["use_track"] = true,
-["spellName"] = 47536,
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "any",
-["activeTriggerMode"] = -10,
-},
-["internalVersion"] = 75,
-["progressSource"] = {
--1,
-"",
-},
-["selfPoint"] = "CENTER",
-["desaturate"] = false,
-["version"] = 68,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["border_size"] = 2,
-["type"] = "subborder",
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["border_offset"] = 0,
-},
-{
-["glowFrequency"] = 0.25,
-["type"] = "subglow",
-["glowDuration"] = 1,
-["glowType"] = "Proc",
-["glowThickness"] = 1,
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["useGlowColor"] = false,
-["glowXOffset"] = 0,
-["glowScale"] = 1,
-["glow"] = false,
-["glowLength"] = 10,
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-{
-["text_shadowXOffset"] = 0,
-["text_text_format_s_format"] = "none",
-["text_text"] = "%s",
-["text_text_format_p_format"] = "timed",
-["text_selfPoint"] = "CENTER",
-["text_automaticWidth"] = "Auto",
-["text_fixedWidth"] = 64,
-["anchorYOffset"] = 0,
-["text_justify"] = "CENTER",
-["rotateText"] = "NONE",
-["text_text_format_p_time_format"] = 0,
-["type"] = "subtext",
-["text_text_format_p_time_dynamic_threshold"] = 60,
-["text_color"] = {
-1,
-0.88627450980392,
-0.76862745098039,
-1,
-},
-["text_font"] = "Friz Quadrata TT",
-["text_anchorYOffset"] = -4,
-["text_shadowYOffset"] = 0,
-["text_shadowColor"] = {
-0,
-0,
-0,
-1,
-},
-["text_wordWrap"] = "WordWrap",
-["text_visible"] = true,
-["text_anchorPoint"] = "OUTER_TOP",
-["text_text_format_2.s_format"] = "none",
-["text_fontType"] = "OUTLINE",
-["text_fontSize"] = 18,
-["anchorXOffset"] = 0,
-["text_text_format_p_time_precision"] = 1,
-},
-},
-["height"] = 48,
-["load"] = {
-["use_petbattle"] = false,
-["class_and_spec"] = {
-["single"] = 256,
-["multi"] = {
-[257] = true,
-[258] = true,
-[256] = true,
-},
-},
-["talent"] = {
-["multi"] = {
-},
-},
-["use_class_and_spec"] = true,
-["use_class"] = true,
-["role"] = {
-["multi"] = {
-},
-},
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["MAGE"] = true,
-},
-},
-["use_never"] = false,
-["use_spellknown"] = true,
-["spec"] = {
-["multi"] = {
-},
-},
-["spellknown"] = 47536,
-["size"] = {
-["multi"] = {
-},
-},
-},
-["alpha"] = 1,
-["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["information"] = {
-["forceEvents"] = true,
-["ignoreOptionsEventErrors"] = true,
-},
-["conditions"] = {
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 0,
-},
-["changes"] = {
-{
-["value"] = false,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Proc",
-["property"] = "sub.3.glowType",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -1,
-["variable"] = "incombat",
-["value"] = 0,
-},
-["changes"] = {
-{
-["property"] = "sub.3.glow",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "insufficientResources",
-["value"] = 1,
-["checks"] = {
-{
-["value"] = 1,
-["variable"] = "insufficientResources",
-},
-{
-["trigger"] = -1,
-["variable"] = "incombat",
-},
-},
-},
-["changes"] = {
-{
-["value"] = {
-0.47450983524323,
-0.5137255191803,
-1,
-1,
-},
-["property"] = "color",
-},
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 1,
-["variable"] = "show",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Pixel",
-["property"] = "sub.3.glowType",
-},
-{
-["property"] = "desaturate",
-},
-{
-["property"] = "inverse",
-},
-{
-["value"] = true,
-["property"] = "cooldownEdge",
-},
-{
-["property"] = "color",
-},
-},
-},
-},
-["authorOptions"] = {
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["xOffset"] = 0,
-["uid"] = "LZ6ee5aBayZ",
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["anchorFrameType"] = "SCREEN",
-["anchorFrameParent"] = false,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.0.4",
-["zoom"] = 0.3,
-["auto"] = true,
-["tocversion"] = 110000,
-["id"] = "Rapture",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
-["keepAspectRatio"] = true,
-["config"] = {
-},
-["inverse"] = true,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["displayIcon"] = "",
-["cooldown"] = true,
-["preferToUpdate"] = false,
-},
-["Fury of Elune"] = {
-["iconSource"] = 0,
-["wagoID"] = "ryBp05DHX",
-["parent"] = "Core - LWA - Druid",
-["preferToUpdate"] = true,
-["adjustedMin"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["cooldownSwipe"] = true,
-["cooldownEdge"] = false,
-["icon"] = true,
-["triggers"] = {
-{
-["trigger"] = {
-["type"] = "combatlog",
-["spellId"] = {
-"202770",
-},
-["subeventSuffix"] = "_CAST_SUCCESS",
-["duration"] = "8",
-["event"] = "Combat Log",
-["unit"] = "player",
-["ownOnly"] = true,
-["use_spellId"] = true,
-["spellIds"] = {
-},
-["use_sourceUnit"] = true,
-["subeventPrefix"] = "SPELL",
-["names"] = {
-},
-["sourceUnit"] = "player",
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["track"] = "auto",
-["use_genericShowOn"] = true,
-["genericShowOn"] = "showAlways",
-["use_unit"] = true,
-["use_showgcd"] = true,
-["debuffType"] = "HELPFUL",
-["type"] = "spell",
-["use_absorbHealMode"] = true,
-["subeventSuffix"] = "_CAST_START",
-["event"] = "Cooldown Progress (Spell)",
-["subeventPrefix"] = "SPELL",
-["realSpellName"] = "Fury of Elune",
-["use_spellName"] = true,
-["spellIds"] = {
-},
-["names"] = {
-},
-["use_absorbMode"] = true,
-["unit"] = "player",
-["use_track"] = true,
-["spellName"] = 202770,
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "any",
-["activeTriggerMode"] = -10,
-},
-["internalVersion"] = 75,
-["progressSource"] = {
--1,
-"",
-},
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["desaturate"] = false,
-["version"] = 105,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["border_offset"] = 0,
-["type"] = "subborder",
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["border_size"] = 2,
-},
-{
-["glowFrequency"] = 0.25,
-["type"] = "subglow",
-["useGlowColor"] = false,
-["glowType"] = "Proc",
-["glowThickness"] = 1,
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["glowDuration"] = 1,
-["glowXOffset"] = 0,
-["glowScale"] = 1,
-["glow"] = false,
-["glowLength"] = 10,
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-},
-["height"] = 48,
-["load"] = {
-["use_petbattle"] = false,
-["use_never"] = false,
-["talent"] = {
-["multi"] = {
-},
-},
-["use_class_and_spec"] = true,
-["use_class"] = true,
-["use_spellknown"] = true,
-["spec"] = {
-["multi"] = {
-},
-},
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["MAGE"] = true,
-},
-},
-["class_and_spec"] = {
-["single"] = 102,
-["multi"] = {
-[103] = true,
-[104] = true,
-[102] = true,
-[105] = true,
-},
-},
-["use_combat"] = true,
-["spellknown"] = 202770,
-["size"] = {
-["multi"] = {
-},
-},
-},
-["useAdjustededMax"] = false,
-["anchorFrameType"] = "SCREEN",
-["source"] = "import",
-["keepAspectRatio"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["information"] = {
-["forceEvents"] = true,
-},
-["conditions"] = {
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 0,
-},
-["changes"] = {
-{
-["value"] = false,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Proc",
-["property"] = "sub.3.glowType",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -1,
-["variable"] = "incombat",
-["value"] = 0,
-},
-["changes"] = {
-{
-["property"] = "sub.3.glow",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "spellInRange",
-["value"] = 0,
-},
-["changes"] = {
-{
-["value"] = {
-0.87450980392157,
-0.34117647058824,
-0.32941176470588,
-1,
-},
-["property"] = "color",
-},
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 1,
-["variable"] = "show",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Pixel",
-["property"] = "sub.3.glowType",
-},
-{
-["property"] = "desaturate",
-},
-{
-["property"] = "inverse",
-},
-{
-["value"] = true,
-["property"] = "cooldownEdge",
-},
-{
-["property"] = "color",
-},
-},
-},
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["xOffset"] = 0,
-["uid"] = "VGKSxWnER6V",
-["alpha"] = 1,
-["anchorFrameParent"] = false,
-["frameStrata"] = 1,
-["cooldownTextDisabled"] = false,
-["zoom"] = 0.3,
-["semver"] = "11.0.8",
-["tocversion"] = 110000,
-["id"] = "Fury of Elune",
-["selfPoint"] = "CENTER",
-["useCooldownModRate"] = true,
-["width"] = 48,
-["authorOptions"] = {
-},
-["config"] = {
-},
-["inverse"] = true,
-["adjustedMax"] = "",
-["displayIcon"] = 132123,
-["cooldown"] = true,
-["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
-},
-["Mindgames (Discipline - PvP Talent)"] = {
-["iconSource"] = -1,
-["wagoID"] = "BJu2WDqBX",
-["xOffset"] = 0,
-["adjustedMax"] = "",
-["adjustedMin"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["cooldownSwipe"] = true,
-["cooldownEdge"] = false,
-["icon"] = true,
-["triggers"] = {
-{
-["trigger"] = {
-["type"] = "aura2",
-["auranames"] = {
-"375901",
-},
-["ownOnly"] = true,
-["event"] = "Health",
-["unit"] = "target",
-["spellIds"] = {
-},
-["names"] = {
-},
-["subeventSuffix"] = "_CAST_START",
-["subeventPrefix"] = "SPELL",
-["useName"] = true,
-["debuffType"] = "HARMFUL",
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["track"] = "auto",
-["use_genericShowOn"] = true,
-["genericShowOn"] = "showAlways",
-["use_unit"] = true,
-["use_showgcd"] = true,
-["debuffType"] = "HELPFUL",
-["type"] = "spell",
-["use_absorbHealMode"] = true,
-["subeventSuffix"] = "_CAST_START",
-["subeventPrefix"] = "SPELL",
-["use_exact_spellName"] = true,
-["event"] = "Cooldown Progress (Spell)",
-["use_ignoreoverride"] = true,
-["realSpellName"] = 375901,
-["use_spellName"] = true,
-["spellIds"] = {
-},
-["names"] = {
-},
-["spellName"] = 375901,
-["use_absorbMode"] = true,
-["use_track"] = true,
-["unit"] = "player",
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "any",
-["activeTriggerMode"] = -10,
-},
-["internalVersion"] = 75,
-["keepAspectRatio"] = true,
-["selfPoint"] = "CENTER",
-["desaturate"] = false,
-["version"] = 68,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["border_size"] = 2,
-["type"] = "subborder",
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["border_offset"] = 0,
-},
-{
-["glowFrequency"] = 0.25,
-["type"] = "subglow",
-["glowDuration"] = 1,
-["glowType"] = "Proc",
-["glowThickness"] = 1,
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["useGlowColor"] = false,
-["glowXOffset"] = 0,
-["glowScale"] = 1,
-["glow"] = false,
-["glowLength"] = 10,
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-},
-["height"] = 48,
-["load"] = {
-["use_petbattle"] = false,
-["class_and_spec"] = {
-["single"] = 256,
-["multi"] = {
-[257] = true,
-[258] = true,
-},
-},
-["talent"] = {
-["multi"] = {
-},
-},
-["use_class_and_spec"] = true,
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["MAGE"] = true,
-},
-},
-["use_class"] = true,
-["role"] = {
-["multi"] = {
-},
-},
-["use_never"] = false,
-["spec"] = {
-["multi"] = {
-},
-},
-["use_spellknown"] = true,
-["use_exact_spellknown"] = true,
-["spellknown"] = 375901,
-["size"] = {
-["multi"] = {
-},
-},
-},
-["useAdjustededMax"] = false,
-["source"] = "import",
-["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
-},
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["zoom"] = 0.3,
-["semver"] = "11.0.4",
-["tocversion"] = 110000,
-["id"] = "Mindgames (Discipline - PvP Talent)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "OWwwkZQyUie",
-["inverse"] = true,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["conditions"] = {
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 0,
-},
-["changes"] = {
-{
-["value"] = false,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Proc",
-["property"] = "sub.3.glowType",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -1,
-["variable"] = "incombat",
-["value"] = 0,
-},
-["changes"] = {
-{
-["property"] = "sub.3.glow",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "insufficientResources",
-["value"] = 1,
-["checks"] = {
-{
-["value"] = 1,
-["variable"] = "insufficientResources",
-},
-{
-["trigger"] = -1,
-["variable"] = "incombat",
-},
-},
-},
-["changes"] = {
-{
-["value"] = {
-0.47450980392157,
-0.51372549019608,
-1,
-1,
-},
-["property"] = "color",
-},
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "spellInRange",
-["value"] = 0,
-},
-["changes"] = {
-{
-["value"] = {
-0.87450980392157,
-0.34117647058824,
-0.32941176470588,
-1,
-},
-["property"] = "color",
-},
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 1,
-["variable"] = "show",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Pixel",
-["property"] = "sub.3.glowType",
-},
-{
-["property"] = "desaturate",
-},
-{
-["property"] = "inverse",
-},
-{
-["value"] = true,
-["property"] = "cooldownEdge",
-},
-{
-["property"] = "color",
-},
-},
-},
-},
-["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
-},
-["Surge of Light (Discipline)"] = {
-["iconSource"] = -1,
-["wagoID"] = "BJu2WDqBX",
-["parent"] = "Dynamic Effects - LWA - Priest",
-["adjustedMax"] = "",
-["adjustedMin"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["cooldownSwipe"] = true,
-["cooldownEdge"] = true,
-["icon"] = true,
-["triggers"] = {
-{
-["trigger"] = {
-["type"] = "aura2",
-["auranames"] = {
-"114255",
-},
-["matchesShowOn"] = "showOnActive",
-["event"] = "Health",
-["unit"] = "player",
-["unitExists"] = true,
-["ownOnly"] = true,
-["spellIds"] = {
-},
-["subeventSuffix"] = "_CAST_START",
-["subeventPrefix"] = "SPELL",
-["useName"] = true,
-["names"] = {
-},
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "any",
-["activeTriggerMode"] = -10,
-},
-["internalVersion"] = 75,
-["progressSource"] = {
--1,
-"",
-},
-["selfPoint"] = "CENTER",
-["desaturate"] = false,
-["version"] = 68,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["border_size"] = 2,
-["type"] = "subborder",
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["border_offset"] = 0,
-},
-{
-["glowFrequency"] = 0.25,
-["type"] = "subglow",
-["glowDuration"] = 1,
-["glowType"] = "Proc",
-["glowThickness"] = 1,
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["useGlowColor"] = false,
-["glowXOffset"] = 0,
-["glowScale"] = 1,
-["glow"] = false,
-["glowLength"] = 10,
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-},
-["height"] = 48,
-["load"] = {
-["use_petbattle"] = false,
-["class_and_spec"] = {
-["single"] = 256,
-["multi"] = {
-[257] = true,
-[258] = true,
-[256] = true,
-},
-},
-["talent"] = {
-["multi"] = {
-},
-},
-["use_class_and_spec"] = true,
-["use_class"] = true,
-["role"] = {
-["multi"] = {
-},
-},
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["MAGE"] = true,
-},
-},
-["use_never"] = false,
-["use_spellknown"] = true,
-["spec"] = {
-["multi"] = {
-},
-},
-["spellknown"] = 109186,
-["size"] = {
-["multi"] = {
-},
-},
-},
-["alpha"] = 1,
-["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["information"] = {
-["forceEvents"] = true,
-},
-["conditions"] = {
-{
-["check"] = {
-["trigger"] = 1,
-["variable"] = "show",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Proc",
-["property"] = "sub.3.glowType",
-},
-},
-},
-},
-["authorOptions"] = {
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["xOffset"] = 0,
-["uid"] = "tlHfHGGa1YG",
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["anchorFrameType"] = "SCREEN",
-["anchorFrameParent"] = false,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.0.4",
-["zoom"] = 0.3,
-["auto"] = true,
-["tocversion"] = 110000,
-["id"] = "Surge of Light (Discipline)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
-["keepAspectRatio"] = true,
-["config"] = {
-},
-["inverse"] = false,
-["animation"] = {
-["start"] = {
-["type"] = "preset",
-["easeType"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["preset"] = "shrink",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["type"] = "preset",
-["easeType"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["preset"] = "shrink",
-},
-},
-["displayIcon"] = "",
-["cooldown"] = true,
-["preferToUpdate"] = false,
-},
-["Frenzied Regeneration (Guardian)"] = {
-["iconSource"] = -1,
-["wagoID"] = "ryBp05DHX",
-["xOffset"] = 0,
-["adjustedMax"] = "",
-["adjustedMin"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["cooldownSwipe"] = true,
-["cooldownEdge"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["triggers"] = {
-{
-["trigger"] = {
-["type"] = "aura2",
-["auranames"] = {
-"22842",
-},
-["ownOnly"] = true,
-["event"] = "Health",
-["unit"] = "player",
-["spellIds"] = {
-},
-["names"] = {
-},
-["subeventSuffix"] = "_CAST_START",
-["subeventPrefix"] = "SPELL",
-["useName"] = true,
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["track"] = "auto",
-["use_genericShowOn"] = true,
-["genericShowOn"] = "showAlways",
-["use_unit"] = true,
-["use_showgcd"] = true,
-["debuffType"] = "HELPFUL",
-["type"] = "spell",
-["use_absorbHealMode"] = true,
-["subeventSuffix"] = "_CAST_START",
-["event"] = "Cooldown Progress (Spell)",
-["subeventPrefix"] = "SPELL",
-["realSpellName"] = "Frenzied Regeneration",
-["use_spellName"] = true,
-["spellIds"] = {
-},
-["names"] = {
-},
-["use_absorbMode"] = true,
-["unit"] = "player",
-["use_track"] = true,
-["spellName"] = 22842,
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "any",
-["activeTriggerMode"] = -10,
-},
-["internalVersion"] = 75,
-["progressSource"] = {
--1,
-"",
-},
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["desaturate"] = false,
-["version"] = 105,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["border_offset"] = 0,
-["type"] = "subborder",
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["border_size"] = 2,
-},
-{
-["glowFrequency"] = 0.25,
-["type"] = "subglow",
-["useGlowColor"] = false,
-["glowType"] = "Proc",
-["glowThickness"] = 1,
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["glowDuration"] = 1,
-["glowXOffset"] = 0,
-["glowScale"] = 1,
-["glow"] = false,
-["glowLength"] = 10,
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-{
-["text_text_format_p_time_precision"] = 1,
-["text_text_format_s_format"] = "none",
-["text_text"] = "%2.s",
-["text_text_format_p_format"] = "timed",
-["text_selfPoint"] = "CENTER",
-["text_automaticWidth"] = "Auto",
-["text_fixedWidth"] = 64,
-["anchorYOffset"] = 0,
-["text_justify"] = "CENTER",
-["rotateText"] = "NONE",
-["text_text_format_p_time_format"] = 0,
-["type"] = "subtext",
-["text_text_format_p_time_dynamic_threshold"] = 60,
-["text_color"] = {
-1,
-0.88627450980392,
-0.76862745098039,
-1,
-},
-["text_font"] = "Friz Quadrata TT",
-["text_anchorYOffset"] = -4,
-["text_shadowYOffset"] = 0,
-["text_shadowColor"] = {
-0,
-0,
-0,
-1,
-},
-["text_wordWrap"] = "WordWrap",
-["text_fontType"] = "OUTLINE",
-["text_anchorPoint"] = "OUTER_TOP",
-["text_text_format_2.s_format"] = "none",
-["text_visible"] = true,
-["text_fontSize"] = 18,
-["anchorXOffset"] = 0,
-["text_shadowXOffset"] = 0,
-},
-},
-["height"] = 48,
-["load"] = {
-["use_petbattle"] = false,
-["use_never"] = false,
-["talent"] = {
-["multi"] = {
-},
-},
-["use_class_and_spec"] = true,
-["use_class"] = true,
-["use_spellknown"] = true,
-["spec"] = {
-["multi"] = {
-},
-},
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["MAGE"] = true,
-},
-},
-["class_and_spec"] = {
-["single"] = 104,
-["multi"] = {
-[103] = true,
-[104] = true,
-[102] = true,
-[105] = true,
-},
-},
-["use_combat"] = true,
-["spellknown"] = 22842,
-["size"] = {
-["multi"] = {
-},
-},
-},
-["alpha"] = 1,
-["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
-["icon"] = true,
-["information"] = {
-["forceEvents"] = true,
-["ignoreOptionsEventErrors"] = true,
-},
-["conditions"] = {
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 0,
-},
-["changes"] = {
-{
-["value"] = false,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Proc",
-["property"] = "sub.3.glowType",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -1,
-["variable"] = "incombat",
-["value"] = 0,
-},
-["changes"] = {
-{
-["property"] = "sub.3.glow",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -2,
-["op"] = "==",
-["variable"] = "AND",
-["checks"] = {
-{
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 1,
-},
-{
-["trigger"] = 2,
-["op"] = ">",
-["value"] = "0",
-["variable"] = "charges",
-},
-},
-},
-["changes"] = {
-{
-["property"] = "cooldownSwipe",
-},
-{
-["value"] = true,
-["property"] = "cooldownEdge",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 2,
-["op"] = "==",
-["value"] = "0",
-["variable"] = "charges",
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "insufficientResources",
-["value"] = 1,
-["checks"] = {
-{
-["value"] = 1,
-["variable"] = "insufficientResources",
-},
-{
-["trigger"] = -1,
-["variable"] = "incombat",
-},
-},
-},
-["changes"] = {
-{
-["value"] = {
-0.47450983524323,
-0.5137255191803,
-1,
-1,
-},
-["property"] = "color",
-},
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 1,
-["variable"] = "show",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Pixel",
-["property"] = "sub.3.glowType",
-},
-{
-["property"] = "desaturate",
-},
-{
-["property"] = "inverse",
-},
-{
-["value"] = true,
-["property"] = "cooldownEdge",
-},
-{
-["property"] = "color",
-},
-},
-},
-},
-["authorOptions"] = {
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["parent"] = "Core - LWA - Druid",
-["uid"] = "h0BnBIIndzX",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
-["anchorFrameType"] = "SCREEN",
-["anchorFrameParent"] = false,
-["zoom"] = 0.3,
-["semver"] = "11.0.8",
-["cooldownTextDisabled"] = false,
-["auto"] = true,
-["tocversion"] = 110000,
-["id"] = "Frenzied Regeneration (Guardian)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
-["keepAspectRatio"] = true,
-["config"] = {
-},
-["inverse"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["displayIcon"] = "",
-["cooldown"] = true,
-["preferToUpdate"] = true,
-},
-["Call of the Elder Druid"] = {
-["iconSource"] = -1,
-["wagoID"] = "ryBp05DHX",
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["adjustedMax"] = "",
-["adjustedMin"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["cooldownSwipe"] = true,
-["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
-["icon"] = true,
-["triggers"] = {
-{
-["trigger"] = {
-["type"] = "aura2",
-["auranames"] = {
-},
-["ownOnly"] = true,
-["event"] = "Health",
-["unit"] = "player",
-["subeventSuffix"] = "_CAST_START",
-["names"] = {
-},
-["spellIds"] = {
-},
-["subeventPrefix"] = "SPELL",
-["auraspellids"] = {
-"319454",
-},
-["useName"] = false,
-["useExactSpellId"] = true,
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["track"] = "auto",
-["auranames"] = {
-"426790",
-},
-["matchesShowOn"] = "showAlways",
-["genericShowOn"] = "showAlways",
-["unit"] = "player",
-["use_showgcd"] = true,
-["debuffType"] = "HARMFUL",
-["subeventPrefix"] = "SPELL",
-["type"] = "aura2",
-["use_absorbHealMode"] = true,
-["subeventSuffix"] = "_CAST_START",
-["use_absorbMode"] = true,
-["use_genericShowOn"] = true,
-["event"] = "Cooldown Progress (Spell)",
-["useName"] = true,
-["realSpellName"] = "Flourish",
-["use_spellName"] = true,
-["spellIds"] = {
-},
-["spellName"] = 426790,
-["ownOnly"] = true,
-["names"] = {
-},
-["use_track"] = true,
-["use_unit"] = true,
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "any",
-["activeTriggerMode"] = -10,
-},
-["internalVersion"] = 75,
-["keepAspectRatio"] = true,
-["selfPoint"] = "CENTER",
-["desaturate"] = false,
-["version"] = 105,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["border_offset"] = 0,
-["type"] = "subborder",
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["border_size"] = 2,
-},
-{
-["glowFrequency"] = 0.25,
-["type"] = "subglow",
-["useGlowColor"] = false,
-["glowType"] = "Proc",
-["glowThickness"] = 1,
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["glowDuration"] = 1,
-["glowXOffset"] = 0,
-["glowScale"] = 1,
-["glow"] = false,
-["glowLength"] = 10,
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-},
-["height"] = 48,
-["load"] = {
-["use_petbattle"] = false,
-["use_never"] = false,
-["talent"] = {
-["multi"] = {
-},
-},
-["use_class_and_spec"] = true,
-["use_class"] = true,
-["use_spellknown"] = true,
-["spec"] = {
-["multi"] = {
-},
-},
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["MAGE"] = true,
-},
-},
-["class_and_spec"] = {
-["single"] = 105,
-["multi"] = {
-[103] = true,
-[104] = true,
-[102] = true,
-[105] = true,
-},
-},
-["use_combat"] = true,
-["spellknown"] = 426784,
-["size"] = {
-["multi"] = {
-},
-},
-},
-["useAdjustededMax"] = false,
-["source"] = "import",
-["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.0.8",
-["tocversion"] = 110000,
-["id"] = "Call of the Elder Druid",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
-["parent"] = "Core - LWA - Druid",
-["uid"] = "OL5Bvlnh26w",
-["inverse"] = true,
-["preferToUpdate"] = true,
-["conditions"] = {
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 0,
-},
-["changes"] = {
-{
-["value"] = false,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Proc",
-["property"] = "sub.3.glowType",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -1,
-["variable"] = "incombat",
-["value"] = 0,
-},
-["changes"] = {
-{
-["property"] = "sub.3.glow",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "buffed",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 1,
-["variable"] = "show",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Pixel",
-["property"] = "sub.3.glowType",
-},
-{
-["property"] = "desaturate",
-},
-{
-["property"] = "inverse",
-},
-{
-["value"] = true,
-["property"] = "cooldownEdge",
-},
-},
-},
-},
-["cooldown"] = true,
-["xOffset"] = 0,
-},
-["Dynamic Effects - LWA - Druid"] = {
-["arcLength"] = 360,
-["controlledChildren"] = {
-"Wild Synthesis",
-"Abundance",
-"Reforrestation",
-"Starsuge (Restoration)",
-"Moonfire (Restoration)",
-"Sunfire (Restoration)",
-"Rake (Restoration)",
-"Rip (Restoration)",
-"Thrash (Restoration)",
-"Bloodseeker Vines (Restoration)",
-"Blooming Infusion",
-"Dream Surge (Restoration)",
-"Owlkin Frenzy",
-"Orbit Breaker ",
-"Starlord",
-"Nature's Grace",
-"Dream Burst",
-"Stellar Amplification",
-"Umbral Embrace (Optional)",
-"Parting Skies (Optional)",
-"Balance of All Things (Optional)",
-"Sudden Ambush",
-"Apex Predator's Craving",
-"Ravage (Feral)",
-"Bloodseeker Vines (Feral)",
-"Ursine Potential",
-"Ursine Vigor (Feral)",
-"Wildshape Mastery (Feral)",
-"Omen of Clarity (Feral)",
-"Predatory Swiftness",
-"Overflowing Power (Optional)",
-"Wild Attunement (PvP Talent)",
-"Dream of Cenarius",
-"Feline Potential",
-"Thrash Debuff (Optional - Guardian)",
-"Rake (Guardian)",
-"Rip (Guardian)",
-"After the Wildfire ",
-"Vicious Cycle (Optional)",
-"Ursine Vigor (Guardian)",
-"Wildshape Mastery (Guardian)",
-"Guardian of Elune",
-"Precognition (Balance & Restoration - PvP Talent)",
-},
-["xOffset"] = -6.103515625e-05,
-["preferToUpdate"] = true,
-["yOffset"] = 0,
-["anchorPoint"] = "TOP",
-["sharedFrameLevel"] = true,
-["borderColor"] = {
-0,
-0,
-0,
-1,
-},
-["rowSpace"] = 1,
-["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["selfPoint"] = "BOTTOM",
-["desc"] = "Made by Luxthos - twitch.tv/luxthos",
-["stagger"] = 0,
-["load"] = {
-["size"] = {
-["multi"] = {
-},
-},
-["spec"] = {
-["multi"] = {
-},
-},
-["class"] = {
-["multi"] = {
-},
-},
-["talent"] = {
-["multi"] = {
-},
-},
-},
-["animate"] = false,
-["customGrow"] = "function(newPositions, activeRegions)\n    local LWA = LWA and LWA[\"Druid\"] or {}\n    \n    if LWA and LWA.GrowDynamicEffects then\n        LWA.GrowDynamicEffects(newPositions, activeRegions)\n    end\nend",
-["scale"] = 1,
-["stepAngle"] = 15,
-["hybridSortMode"] = "descending",
-["constantFactor"] = "RADIUS",
-["borderOffset"] = 4,
-["tocversion"] = 110000,
-["alpha"] = 1,
-["borderInset"] = 1,
-["grow"] = "CUSTOM",
-["borderBackdrop"] = "Blizzard Tooltip",
-["wagoID"] = "ryBp05DHX",
-["parent"] = "Luxthos - Druid",
-["sortHybridTable"] = {
-["Stellar Amplification"] = false,
-["Ravage (Feral)"] = false,
-["Ursine Vigor (Guardian)"] = false,
-["Omen of Clarity (Feral)"] = false,
-["Sudden Ambush"] = false,
-["Rip (Guardian)"] = false,
-["Nature's Grace"] = false,
-["Parting Skies (Optional)"] = false,
-["Thrash (Restoration)"] = false,
-["Overflowing Power (Optional)"] = false,
-["Sunfire (Restoration)"] = false,
-["Owlkin Frenzy"] = false,
-["Abundance"] = false,
-["Reforrestation"] = false,
-["Blooming Infusion"] = false,
-["Umbral Embrace (Optional)"] = false,
-["Rake (Restoration)"] = false,
-["Orbit Breaker "] = false,
-["Bloodseeker Vines (Feral)"] = false,
-["Predatory Swiftness"] = false,
-["Moonfire (Restoration)"] = false,
-["Guardian of Elune"] = false,
-["Wildshape Mastery (Guardian)"] = false,
-["Bloodseeker Vines (Restoration)"] = false,
-["After the Wildfire (Optional)"] = false,
-["Starsuge (Restoration)"] = false,
-["Thrash Debuff (Optional - Guardian)"] = false,
-["Rake (Guardian)"] = false,
-["Feline Potential"] = false,
-["Ursine Vigor (Feral)"] = false,
-["Dream of Cenarius"] = false,
-["Precognition (Balance & Restoration - PvP Talent)"] = false,
-["Balance of All Things (Optional)"] = false,
-["Starlord"] = false,
-["Wild Attunement (PvP Talent)"] = false,
-["Dream Burst"] = false,
-["Wild Synthesis"] = false,
-["Ursine Potential"] = false,
-["Rip (Restoration)"] = false,
-["Wildshape Mastery (Feral)"] = false,
-["Dream Surge (Restoration)"] = false,
-["Vicious Cycle (Optional)"] = false,
-["Apex Predator's Craving"] = false,
-},
-["fullCircle"] = true,
-["triggers"] = {
-{
-["trigger"] = {
-["names"] = {
-},
-["type"] = "aura2",
-["spellIds"] = {
-},
-["subeventSuffix"] = "_CAST_START",
-["subeventPrefix"] = "SPELL",
-["debuffType"] = "HELPFUL",
-["event"] = "Health",
-["unit"] = "player",
-},
-["untrigger"] = {
-},
-},
-},
-["columnSpace"] = 1,
-["radius"] = 200,
-["useLimit"] = false,
-["align"] = "CENTER",
-["growOn"] = "show",
-["version"] = 105,
-["subRegions"] = {
-},
-["backdropColor"] = {
-1,
-1,
-1,
-0.5,
-},
-["source"] = "import",
-["centerType"] = "LR",
-["border"] = false,
-["anchorFrameFrame"] = "WeakAuras:General Options - LWA - Druid",
-["hybridPosition"] = "hybridFirst",
-["limit"] = 5,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["gridType"] = "RD",
-["authorOptions"] = {
-},
-["anchorFrameParent"] = false,
-["borderSize"] = 2,
-["uid"] = "iGDEwE2C3T(",
-["space"] = 2,
-["semver"] = "11.0.8",
-["internalVersion"] = 75,
-["id"] = "Dynamic Effects - LWA - Druid",
-["rotation"] = 0,
-["gridWidth"] = 5,
-["anchorFrameType"] = "SELECTFRAME",
-["frameStrata"] = 1,
-["sort"] = "none",
-["borderEdge"] = "Square Full White",
-["regionType"] = "dynamicgroup",
-["conditions"] = {
-},
-["information"] = {
-["forceEvents"] = true,
-},
-["config"] = {
-},
-},
-["Vampiric Touch"] = {
-["iconSource"] = -1,
-["wagoID"] = "BJu2WDqBX",
-["parent"] = "Core - LWA - Priest",
-["adjustedMax"] = "",
-["adjustedMin"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["cooldownSwipe"] = true,
-["cooldownEdge"] = true,
-["icon"] = true,
-["triggers"] = {
-{
-["trigger"] = {
-["type"] = "aura2",
-["auranames"] = {
-"34914",
-},
-["matchesShowOn"] = "showAlways",
-["event"] = "Health",
-["unit"] = "target",
-["unitExists"] = true,
-["ownOnly"] = true,
-["spellIds"] = {
-},
-["subeventSuffix"] = "_CAST_START",
-["subeventPrefix"] = "SPELL",
-["useName"] = true,
-["names"] = {
-},
-["debuffType"] = "HARMFUL",
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["unit"] = "player",
-["type"] = "unit",
-["use_absorbHealMode"] = true,
-["use_alwaystrue"] = true,
-["debuffType"] = "HELPFUL",
-["use_absorbMode"] = true,
-["event"] = "Conditions",
-["use_unit"] = true,
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["type"] = "aura2",
-["auranames"] = {
-"341282",
-},
-["debuffType"] = "HELPFUL",
-["useName"] = true,
-["unit"] = "player",
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["useName"] = true,
-["spellId"] = {
-"341282",
-},
-["auranames"] = {
-"341291",
-},
-["duration"] = "8",
-["event"] = "Combat Log",
-["unit"] = "player",
-["use_spellId"] = true,
-["type"] = "aura2",
-["use_sourceUnit"] = true,
-["subeventSuffix"] = "_AURA_APPLIED",
-["subeventPrefix"] = "SPELL",
-["sourceUnit"] = "player",
-["debuffType"] = "HARMFUL",
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "any",
-["activeTriggerMode"] = -10,
-},
-["internalVersion"] = 75,
-["progressSource"] = {
--1,
-"",
-},
-["selfPoint"] = "CENTER",
-["desaturate"] = false,
-["version"] = 68,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["border_size"] = 2,
-["type"] = "subborder",
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["border_offset"] = 0,
-},
-{
-["glowFrequency"] = 0.25,
-["type"] = "subglow",
-["glowDuration"] = 1,
-["glowType"] = "Proc",
-["glowThickness"] = 1,
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["useGlowColor"] = false,
-["glowXOffset"] = 0,
-["glowScale"] = 1,
-["glow"] = false,
-["glowLength"] = 10,
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-{
-["text_text_format_p_time_precision"] = 1,
-["text_text_format_s_format"] = "none",
-["text_text"] = "%4.p",
-["rotateText"] = "NONE",
-["text_text_format_p_time_dynamic_threshold"] = 60,
-["text_text_format_p_format"] = "timed",
-["text_fontSize"] = 18,
-["text_selfPoint"] = "CENTER",
-["text_automaticWidth"] = "Auto",
-["text_fixedWidth"] = 64,
-["text_text_format_4.p_time_mod_rate"] = true,
-["anchorYOffset"] = 0,
-["text_justify"] = "CENTER",
-["text_text_format_4.p_time_precision"] = 1,
-["text_shadowColor"] = {
-0,
-0,
-0,
-1,
-},
-["text_text_format_2.s_format"] = "none",
-["text_color"] = {
-1,
-0.76862752437592,
-0.42745101451874,
-1,
-},
-["type"] = "subtext",
-["text_visible"] = true,
-["text_text_format_4.p_time_format"] = 0,
-["text_font"] = "Friz Quadrata TT",
-["text_anchorYOffset"] = -4,
-["text_shadowYOffset"] = 0,
-["text_text_format_4.p_time_dynamic_threshold"] = 0,
-["text_wordWrap"] = "WordWrap",
-["text_fontType"] = "OUTLINE",
-["text_anchorPoint"] = "OUTER_TOP",
-["text_text_format_4.p_time_legacy_floor"] = false,
-["text_text_format_p_time_format"] = 0,
-["text_text_format_4.p_format"] = "timed",
-["anchorXOffset"] = 0,
-["text_shadowXOffset"] = 0,
-},
-},
-["height"] = 48,
-["load"] = {
-["use_petbattle"] = false,
-["class_and_spec"] = {
-["single"] = 258,
-["multi"] = {
-[257] = true,
-[258] = true,
-[256] = true,
-},
-},
-["talent"] = {
-["multi"] = {
-},
-},
-["use_class_and_spec"] = true,
-["use_class"] = true,
-["role"] = {
-["multi"] = {
-},
-},
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["MAGE"] = true,
-},
-},
-["use_never"] = false,
-["use_spellknown"] = true,
-["spec"] = {
-["multi"] = {
-},
-},
-["spellknown"] = 34914,
-["size"] = {
-["multi"] = {
-},
-},
-},
-["alpha"] = 1,
-["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["information"] = {
-["forceEvents"] = true,
-["ignoreOptionsEventErrors"] = true,
-},
-["conditions"] = {
-{
-["check"] = {
-["trigger"] = 1,
-["variable"] = "buffed",
-["value"] = 0,
-["checks"] = {
-{
-["trigger"] = -1,
-["variable"] = "incombat",
-["value"] = 1,
-},
-{
-["trigger"] = 1,
-["variable"] = "buffed",
-["value"] = 0,
-},
-},
-},
-["changes"] = {
-{
-["value"] = false,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Proc",
-["property"] = "sub.3.glowType",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -1,
-["variable"] = "incombat",
-["value"] = 0,
-},
-["changes"] = {
-{
-["property"] = "sub.3.glow",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 1,
-["variable"] = "buffed",
-["value"] = 0,
-["checks"] = {
-{
-["trigger"] = 1,
-["variable"] = "show",
-["value"] = 0,
-},
-{
-["value"] = "0",
-["op"] = "==",
-["variable"] = "matchCount",
-},
-},
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 3,
-["variable"] = "show",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Proc",
-["property"] = "sub.3.glowType",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 1,
-["op"] = "<=",
-["value"] = "7",
-["variable"] = "expirationTime",
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Proc",
-["property"] = "sub.3.glowType",
-},
-},
-},
-},
-["authorOptions"] = {
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["xOffset"] = 0,
-["uid"] = "evpguIAd2(X",
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["anchorFrameType"] = "SCREEN",
-["anchorFrameParent"] = false,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.0.4",
-["zoom"] = 0.3,
-["auto"] = true,
-["tocversion"] = 110000,
-["id"] = "Vampiric Touch",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
-["keepAspectRatio"] = true,
-["config"] = {
-},
-["inverse"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["displayIcon"] = "",
-["cooldown"] = true,
-["preferToUpdate"] = false,
-},
-["Combot Point 4 (Off-Spec) - Druid"] = {
+["Combot Point 3 (Off-Spec) - Druid"] = {
 ["overlays"] = {
 {
 0,
@@ -93898,14 +87310,15 @@ true,
 ["sparkOffsetY"] = 0,
 ["gradientOrientation"] = "HORIZONTAL",
 ["load"] = {
-["itemtypeequipped"] = {
-},
 ["use_petbattle"] = false,
 ["use_never"] = false,
 ["talent"] = {
 ["multi"] = {
 },
 },
+["itemtypeequipped"] = {
+},
+["use_class_and_spec"] = false,
 ["class_and_spec"] = {
 ["single"] = 102,
 ["multi"] = {
@@ -93914,19 +87327,19 @@ true,
 [105] = true,
 },
 },
-["use_class_and_spec"] = false,
 ["class"] = {
 ["single"] = "MONK",
 ["multi"] = {
 ["EVOKER"] = true,
 },
 },
-["use_spellknown"] = false,
 ["use_class"] = true,
 ["role"] = {
 ["multi"] = {
 },
 },
+["use_spellknown"] = false,
+["use_spec"] = true,
 ["spec"] = {
 ["single"] = 3,
 ["multi"] = {
@@ -93935,9 +87348,7 @@ true,
 true,
 },
 },
-["use_spec"] = true,
 ["zoneIds"] = "",
-["use_combat"] = true,
 ["spellknown"] = 1822,
 ["size"] = {
 ["multi"] = {
@@ -94176,10 +87587,10 @@ true,
 },
 },
 ["icon_side"] = "RIGHT",
-["uid"] = "4lJG4zGisMx",
+["uid"] = "af58tIkLSHP",
 ["sparkWidth"] = 10,
 ["sparkHeight"] = 30,
-["adjustedMax"] = "4",
+["adjustedMax"] = "3",
 ["overlaysTexture"] = {
 "Solid",
 "Solid",
@@ -94188,7 +87599,7 @@ true,
 },
 ["anchorFrameType"] = "SCREEN",
 ["semver"] = "11.0.8",
-["id"] = "Combot Point 4 (Off-Spec) - Druid",
+["id"] = "Combot Point 3 (Off-Spec) - Druid",
 ["sparkHidden"] = "NEVER",
 ["backgroundColor"] = {
 0,
@@ -94198,7 +87609,7 @@ true,
 },
 ["frameStrata"] = 1,
 ["width"] = 65,
-["adjustedMin"] = "3",
+["adjustedMin"] = "2",
 ["anchorFrameParent"] = false,
 ["inverse"] = false,
 ["config"] = {
@@ -94335,6 +87746,6183 @@ true,
 },
 ["configGroup"] = "combo_points",
 },
+["Premonition (Holy)"] = {
+["iconSource"] = -1,
+["wagoID"] = "BJu2WDqBX",
+["parent"] = "Core - LWA - Priest",
+["adjustedMax"] = "",
+["adjustedMin"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["cooldownSwipe"] = true,
+["cooldownEdge"] = false,
+["icon"] = true,
+["triggers"] = {
+{
+["trigger"] = {
+["track"] = "auto",
+["use_genericShowOn"] = true,
+["genericShowOn"] = "showAlways",
+["use_unit"] = true,
+["use_showgcd"] = true,
+["debuffType"] = "HELPFUL",
+["type"] = "spell",
+["use_absorbHealMode"] = true,
+["subeventSuffix"] = "_CAST_START",
+["subeventPrefix"] = "SPELL",
+["use_exact_spellName"] = true,
+["event"] = "Cooldown Progress (Spell)",
+["use_ignoreoverride"] = false,
+["realSpellName"] = "Pain Suppression",
+["use_spellName"] = true,
+["spellIds"] = {
+},
+["names"] = {
+},
+["spellName"] = 428924,
+["use_absorbMode"] = true,
+["use_track"] = true,
+["unit"] = "player",
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "any",
+["customTriggerLogic"] = "",
+["activeTriggerMode"] = -10,
+},
+["internalVersion"] = 75,
+["progressSource"] = {
+-1,
+"",
+},
+["selfPoint"] = "CENTER",
+["desaturate"] = false,
+["version"] = 68,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["border_size"] = 2,
+["type"] = "subborder",
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["border_offset"] = 0,
+},
+{
+["glowFrequency"] = 0.25,
+["type"] = "subglow",
+["glowDuration"] = 1,
+["glowType"] = "Proc",
+["glowThickness"] = 1,
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["useGlowColor"] = false,
+["glowXOffset"] = 0,
+["glowScale"] = 1,
+["glow"] = false,
+["glowLength"] = 10,
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+{
+["text_shadowXOffset"] = 0,
+["text_text_format_s_format"] = "none",
+["text_text"] = "%s",
+["text_text_format_p_format"] = "timed",
+["text_selfPoint"] = "CENTER",
+["text_automaticWidth"] = "Auto",
+["text_fixedWidth"] = 64,
+["anchorYOffset"] = 0,
+["text_justify"] = "CENTER",
+["rotateText"] = "NONE",
+["text_text_format_p_time_format"] = 0,
+["type"] = "subtext",
+["text_text_format_p_time_dynamic_threshold"] = 60,
+["text_color"] = {
+1,
+0.88627450980392,
+0.76862745098039,
+1,
+},
+["text_font"] = "Friz Quadrata TT",
+["text_anchorYOffset"] = -4,
+["text_shadowYOffset"] = 0,
+["text_shadowColor"] = {
+0,
+0,
+0,
+1,
+},
+["text_wordWrap"] = "WordWrap",
+["text_visible"] = true,
+["text_anchorPoint"] = "OUTER_TOP",
+["text_text_format_2.s_format"] = "none",
+["text_fontType"] = "OUTLINE",
+["text_fontSize"] = 18,
+["anchorXOffset"] = 0,
+["text_text_format_p_time_precision"] = 1,
+},
+},
+["height"] = 48,
+["load"] = {
+["use_petbattle"] = false,
+["class_and_spec"] = {
+["single"] = 257,
+["multi"] = {
+[257] = true,
+[258] = true,
+[256] = true,
+},
+},
+["talent"] = {
+["multi"] = {
+},
+},
+["use_class_and_spec"] = true,
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["MAGE"] = true,
+},
+},
+["use_class"] = true,
+["role"] = {
+["multi"] = {
+},
+},
+["use_never"] = false,
+["herotalent"] = {
+["multi"] = {
+["117286"] = true,
+},
+},
+["use_herotalent"] = false,
+["use_spellknown"] = false,
+["spec"] = {
+["multi"] = {
+},
+},
+["size"] = {
+["multi"] = {
+},
+},
+},
+["alpha"] = 1,
+["useAdjustededMax"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["source"] = "import",
+["preferToUpdate"] = false,
+["information"] = {
+["forceEvents"] = true,
+["ignoreOptionsEventErrors"] = true,
+},
+["conditions"] = {
+{
+["check"] = {
+["trigger"] = 1,
+["variable"] = "onCooldown",
+["value"] = 0,
+},
+["changes"] = {
+{
+["value"] = false,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Proc",
+["property"] = "sub.3.glowType",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -1,
+["variable"] = "incombat",
+["value"] = 0,
+},
+["changes"] = {
+{
+["property"] = "sub.3.glow",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -2,
+["op"] = "==",
+["variable"] = "AND",
+["checks"] = {
+{
+["trigger"] = 1,
+["variable"] = "onCooldown",
+["value"] = 1,
+},
+{
+["trigger"] = 1,
+["op"] = ">",
+["value"] = "0",
+["variable"] = "charges",
+},
+},
+},
+["changes"] = {
+{
+["property"] = "cooldownSwipe",
+},
+{
+["value"] = true,
+["property"] = "cooldownEdge",
+},
+},
+},
+{
+["check"] = {
+["op"] = "==",
+["checks"] = {
+{
+["trigger"] = 1,
+["op"] = "==",
+["value"] = "0",
+["variable"] = "charges",
+},
+{
+["value"] = "0",
+["op"] = "==",
+["variable"] = "charges",
+},
+{
+["value"] = "0",
+["op"] = "==",
+["variable"] = "charges",
+},
+},
+["value"] = "0",
+["variable"] = "charges",
+["trigger"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+},
+["authorOptions"] = {
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["xOffset"] = 0,
+["uid"] = "pj02oZCKVep",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["anchorFrameType"] = "SCREEN",
+["anchorFrameParent"] = false,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.0.4",
+["zoom"] = 0.3,
+["auto"] = true,
+["tocversion"] = 110000,
+["id"] = "Premonition (Holy)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["keepAspectRatio"] = true,
+["config"] = {
+},
+["inverse"] = true,
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
+["displayIcon"] = "",
+["cooldown"] = true,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
+},
+["Bloodseeker Vines (Restoration)"] = {
+["iconSource"] = -1,
+["wagoID"] = "ryBp05DHX",
+["xOffset"] = 0,
+["adjustedMax"] = "",
+["adjustedMin"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["cooldownSwipe"] = true,
+["cooldownEdge"] = true,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
+["triggers"] = {
+{
+["trigger"] = {
+["type"] = "aura2",
+["auranames"] = {
+},
+["useExactSpellId"] = true,
+["unit"] = "target",
+["ownOnly"] = true,
+["event"] = "Health",
+["names"] = {
+},
+["unitExists"] = false,
+["subeventSuffix"] = "_CAST_START",
+["spellIds"] = {
+},
+["subeventPrefix"] = "SPELL",
+["auraspellids"] = {
+"439531",
+},
+["useName"] = false,
+["matchesShowOn"] = "showOnActive",
+["debuffType"] = "HARMFUL",
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "any",
+["activeTriggerMode"] = -10,
+},
+["internalVersion"] = 75,
+["progressSource"] = {
+-1,
+"",
+},
+["animation"] = {
+["start"] = {
+["type"] = "preset",
+["easeType"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["preset"] = "shrink",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["type"] = "preset",
+["easeType"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["preset"] = "shrink",
+},
+},
+["desaturate"] = false,
+["version"] = 105,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["border_offset"] = 0,
+["type"] = "subborder",
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["border_size"] = 2,
+},
+{
+["glowFrequency"] = 0.25,
+["type"] = "subglow",
+["useGlowColor"] = false,
+["glowType"] = "Proc",
+["glowThickness"] = 1,
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["glowDuration"] = 1,
+["glowXOffset"] = 0,
+["glowScale"] = 1,
+["glow"] = false,
+["glowLength"] = 10,
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+{
+["text_text_format_p_time_format"] = 0,
+["text_text_format_s_format"] = "none",
+["text_text"] = "%s",
+["text_text_format_p_format"] = "timed",
+["text_selfPoint"] = "CENTER",
+["text_automaticWidth"] = "Auto",
+["text_fixedWidth"] = 64,
+["anchorYOffset"] = 0,
+["text_justify"] = "CENTER",
+["rotateText"] = "NONE",
+["type"] = "subtext",
+["text_anchorYOffset"] = -4,
+["text_color"] = {
+1,
+0.88627450980392,
+0.76862745098039,
+1,
+},
+["text_font"] = "Friz Quadrata TT",
+["text_text_format_p_time_dynamic_threshold"] = 60,
+["text_shadowYOffset"] = 0,
+["text_shadowColor"] = {
+0,
+0,
+0,
+1,
+},
+["text_wordWrap"] = "WordWrap",
+["text_visible"] = false,
+["text_anchorPoint"] = "OUTER_TOP",
+["text_text_format_p_time_precision"] = 1,
+["text_fontType"] = "OUTLINE",
+["text_fontSize"] = 16,
+["anchorXOffset"] = 0,
+["text_shadowXOffset"] = 0,
+},
+},
+["height"] = 48,
+["load"] = {
+["use_petbattle"] = false,
+["use_never"] = false,
+["talent"] = {
+["multi"] = {
+},
+},
+["use_class_and_spec"] = true,
+["use_class"] = true,
+["use_spellknown"] = false,
+["spec"] = {
+["multi"] = {
+},
+},
+["herotalent"] = {
+["multi"] = {
+["117226"] = true,
+},
+},
+["use_herotalent"] = false,
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["MAGE"] = true,
+},
+},
+["class_and_spec"] = {
+["single"] = 105,
+["multi"] = {
+[103] = true,
+[104] = true,
+[102] = true,
+[105] = true,
+},
+},
+["size"] = {
+["multi"] = {
+},
+},
+},
+["alpha"] = 1,
+["useAdjustededMax"] = false,
+["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
+["information"] = {
+["forceEvents"] = true,
+["ignoreOptionsEventErrors"] = true,
+},
+["conditions"] = {
+{
+["check"] = {
+["trigger"] = 1,
+["variable"] = "show",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Pixel",
+["property"] = "sub.3.glowType",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 1,
+["op"] = ">",
+["value"] = "1",
+["variable"] = "stacks",
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "sub.4.text_visible",
+},
+},
+},
+},
+["authorOptions"] = {
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Dynamic Effects - LWA - Druid",
+["uid"] = "yhvtK)jLKF8",
+["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
+["anchorFrameType"] = "SCREEN",
+["anchorFrameParent"] = false,
+["zoom"] = 0.3,
+["semver"] = "11.0.8",
+["cooldownTextDisabled"] = false,
+["auto"] = true,
+["tocversion"] = 110000,
+["id"] = "Bloodseeker Vines (Restoration)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["keepAspectRatio"] = true,
+["config"] = {
+},
+["inverse"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["displayIcon"] = "",
+["cooldown"] = true,
+["selfPoint"] = "CENTER",
+},
+["Feline Potential"] = {
+["iconSource"] = -1,
+["wagoID"] = "ryBp05DHX",
+["xOffset"] = 0,
+["adjustedMax"] = "",
+["adjustedMin"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["cooldownSwipe"] = true,
+["cooldownEdge"] = true,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
+["triggers"] = {
+{
+["trigger"] = {
+["type"] = "aura2",
+["auranames"] = {
+},
+["useExactSpellId"] = true,
+["unit"] = "player",
+["ownOnly"] = true,
+["event"] = "Health",
+["names"] = {
+},
+["unitExists"] = true,
+["subeventSuffix"] = "_CAST_START",
+["spellIds"] = {
+},
+["subeventPrefix"] = "SPELL",
+["auraspellids"] = {
+"441702",
+},
+["useName"] = false,
+["matchesShowOn"] = "showOnActive",
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["type"] = "aura2",
+["auranames"] = {
+},
+["useExactSpellId"] = true,
+["unit"] = "player",
+["ownOnly"] = true,
+["event"] = "Health",
+["names"] = {
+},
+["unitExists"] = true,
+["subeventSuffix"] = "_CAST_START",
+["spellIds"] = {
+},
+["subeventPrefix"] = "SPELL",
+["auraspellids"] = {
+"441701",
+},
+["useName"] = false,
+["matchesShowOn"] = "showOnActive",
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "any",
+["activeTriggerMode"] = -10,
+},
+["internalVersion"] = 75,
+["progressSource"] = {
+-1,
+"",
+},
+["animation"] = {
+["start"] = {
+["type"] = "preset",
+["easeType"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["preset"] = "shrink",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["type"] = "preset",
+["easeType"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["preset"] = "shrink",
+},
+},
+["desaturate"] = false,
+["version"] = 105,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["border_offset"] = 0,
+["type"] = "subborder",
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["border_size"] = 2,
+},
+{
+["glowFrequency"] = 0.25,
+["type"] = "subglow",
+["useGlowColor"] = false,
+["glowType"] = "Proc",
+["glowThickness"] = 1,
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["glowDuration"] = 1,
+["glowXOffset"] = 0,
+["glowScale"] = 1,
+["glow"] = false,
+["glowLength"] = 10,
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+{
+["text_text_format_p_time_format"] = 0,
+["text_text_format_s_format"] = "none",
+["text_text"] = "%s",
+["text_text_format_p_format"] = "timed",
+["text_selfPoint"] = "CENTER",
+["text_automaticWidth"] = "Auto",
+["text_fixedWidth"] = 64,
+["anchorYOffset"] = 0,
+["text_justify"] = "CENTER",
+["rotateText"] = "NONE",
+["type"] = "subtext",
+["text_anchorYOffset"] = -4,
+["text_color"] = {
+1,
+0.88627450980392,
+0.76862745098039,
+1,
+},
+["text_font"] = "Friz Quadrata TT",
+["text_text_format_p_time_dynamic_threshold"] = 60,
+["text_shadowYOffset"] = 0,
+["text_shadowColor"] = {
+0,
+0,
+0,
+1,
+},
+["text_wordWrap"] = "WordWrap",
+["text_visible"] = false,
+["text_anchorPoint"] = "OUTER_TOP",
+["text_text_format_p_time_precision"] = 1,
+["text_fontType"] = "OUTLINE",
+["text_fontSize"] = 16,
+["anchorXOffset"] = 0,
+["text_shadowXOffset"] = 0,
+},
+},
+["height"] = 48,
+["load"] = {
+["use_petbattle"] = false,
+["use_never"] = false,
+["talent"] = {
+["multi"] = {
+},
+},
+["use_class_and_spec"] = true,
+["use_class"] = true,
+["use_spellknown"] = false,
+["spec"] = {
+["multi"] = {
+},
+},
+["herotalent"] = {
+["multi"] = {
+["117209"] = true,
+},
+},
+["use_herotalent"] = false,
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["MAGE"] = true,
+},
+},
+["class_and_spec"] = {
+["single"] = 104,
+["multi"] = {
+[103] = true,
+[104] = true,
+[102] = true,
+[105] = true,
+},
+},
+["size"] = {
+["multi"] = {
+},
+},
+},
+["alpha"] = 1,
+["useAdjustededMax"] = false,
+["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
+["information"] = {
+["forceEvents"] = true,
+["ignoreOptionsEventErrors"] = true,
+},
+["conditions"] = {
+{
+["check"] = {
+["trigger"] = 2,
+["op"] = ">",
+["value"] = "1",
+["variable"] = "stacks",
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "sub.4.text_visible",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 1,
+["variable"] = "show",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Proc",
+["property"] = "sub.3.glowType",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 2,
+["op"] = "==",
+["value"] = "6",
+["variable"] = "stacks",
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Pixel",
+["property"] = "sub.3.glowType",
+},
+},
+},
+},
+["authorOptions"] = {
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Dynamic Effects - LWA - Druid",
+["uid"] = "H7uRXPc9XMF",
+["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
+["anchorFrameType"] = "SCREEN",
+["anchorFrameParent"] = false,
+["zoom"] = 0.3,
+["semver"] = "11.0.8",
+["cooldownTextDisabled"] = false,
+["auto"] = true,
+["tocversion"] = 110000,
+["id"] = "Feline Potential",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["keepAspectRatio"] = true,
+["config"] = {
+},
+["inverse"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["displayIcon"] = "",
+["cooldown"] = true,
+["selfPoint"] = "CENTER",
+},
+["Mana Bar (Optional - Shadow) - LWA - Priest"] = {
+["sparkWidth"] = 10,
+["iconSource"] = -1,
+["xOffset"] = 0,
+["adjustedMax"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["sparkRotation"] = 0,
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["icon"] = false,
+["icon_color"] = {
+1,
+1,
+1,
+1,
+},
+["enableGradient"] = false,
+["selfPoint"] = "TOP",
+["barColor"] = {
+0.03921568627451,
+0.45098039215686,
+0.82745098039216,
+1,
+},
+["desaturate"] = false,
+["sparkOffsetY"] = 0,
+["gradientOrientation"] = "HORIZONTAL",
+["load"] = {
+["use_petbattle"] = false,
+["class_and_spec"] = {
+["single"] = 258,
+["multi"] = {
+[63] = true,
+[64] = true,
+},
+},
+["talent"] = {
+["multi"] = {
+},
+},
+["use_class_and_spec"] = true,
+["use_class"] = true,
+["role"] = {
+["multi"] = {
+},
+},
+["zoneIds"] = "",
+["use_never"] = true,
+["spec"] = {
+["single"] = 3,
+["multi"] = {
+[3] = true,
+},
+},
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["WARLOCK"] = true,
+},
+},
+["size"] = {
+["multi"] = {
+},
+},
+},
+["smoothProgress"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "aurabar",
+["overlayclip"] = true,
+["texture"] = "Solid",
+["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+["auto"] = true,
+["tocversion"] = 110000,
+["alpha"] = 1,
+["sparkColor"] = {
+1,
+1,
+1,
+1,
+},
+["sparkOffsetX"] = 0,
+["wagoID"] = "BJu2WDqBX",
+["parent"] = "Resources - LWA - Priest",
+["adjustedMin"] = "",
+["sparkRotationMode"] = "AUTO",
+["triggers"] = {
+{
+["trigger"] = {
+["type"] = "unit",
+["subeventPrefix"] = "SPELL",
+["unevent"] = "auto",
+["names"] = {
+},
+["duration"] = "1",
+["use_showCost"] = true,
+["use_unit"] = true,
+["subeventSuffix"] = "_CAST_START",
+["powertype"] = 0,
+["spellIds"] = {
+},
+["event"] = "Power",
+["unit"] = "player",
+["use_absorbMode"] = true,
+["use_powertype"] = true,
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "any",
+["activeTriggerMode"] = 1,
+},
+["internalVersion"] = 75,
+["progressSource"] = {
+-1,
+"",
+},
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
+["isPrimaryResource"] = true,
+["version"] = 68,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["type"] = "subforeground",
+},
+{
+["border_size"] = 2,
+["border_anchor"] = "bar",
+["type"] = "subborder",
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["border_offset"] = 0,
+},
+{
+["tick_rotation"] = 0,
+["tick_xOffset"] = 0,
+["tick_desaturate"] = false,
+["use_texture"] = false,
+["tick_placement_mode"] = "AtPercent",
+["tick_texture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+["tick_length"] = 30,
+["progressSources"] = {
+{
+-2,
+"",
+},
+},
+["type"] = "subtick",
+["tick_placements"] = {
+"70",
+},
+["automatic_length"] = true,
+["tick_thickness"] = 2,
+["tick_color"] = {
+1,
+1,
+1,
+1,
+},
+["tick_yOffset"] = 0,
+["tick_blend_mode"] = "ADD",
+["tick_mirror"] = false,
+["tick_visible"] = false,
+},
+},
+["height"] = 20,
+["textureSource"] = "LSM",
+["sparkBlendMode"] = "ADD",
+["useAdjustededMax"] = false,
+["source"] = "import",
+["uid"] = "CLzOwhMlwcv",
+["barColor2"] = {
+1,
+1,
+0,
+1,
+},
+["authorOptions"] = {
+},
+["spark"] = false,
+["icon_side"] = "RIGHT",
+["config"] = {
+},
+["overlays"] = {
+{
+0,
+0,
+0,
+0.40000003576279,
+},
+},
+["sparkHeight"] = 30,
+["zoom"] = 0,
+["overlaysTexture"] = {
+"Solid",
+},
+["backgroundColor"] = {
+0,
+0,
+0,
+0.30000001192093,
+},
+["semver"] = "11.0.4",
+["width"] = 405,
+["id"] = "Mana Bar (Optional - Shadow) - LWA - Priest",
+["actions"] = {
+["start"] = {
+["do_message"] = false,
+["do_custom"] = false,
+["custom"] = "",
+},
+["finish"] = {
+},
+["init"] = {
+["custom"] = "aura_env.region.configGroup = \"mana_bar_shadow\"",
+["do_custom"] = true,
+},
+},
+["frameStrata"] = 1,
+["anchorFrameType"] = "SCREEN",
+["sparkHidden"] = "NEVER",
+["customText"] = "",
+["inverse"] = false,
+["configGroup"] = "mana_bar",
+["orientation"] = "HORIZONTAL",
+["conditions"] = {
+{
+["check"] = {
+["trigger"] = 1,
+["op"] = ">=",
+["value"] = "85",
+["variable"] = "percentpower",
+},
+["changes"] = {
+{
+["value"] = {
+["custom"] = "aura_env.region.colorState = \"high\"\nWeakAuras.ScanEvents(\"LWA_UPDATE_BAR\", aura_env)",
+},
+["property"] = "customcode",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -1,
+["variable"] = "alwaystrue",
+},
+["linked"] = true,
+["changes"] = {
+{
+["value"] = {
+["custom"] = "aura_env.region.colorState = \"\"\nWeakAuras.ScanEvents(\"LWA_UPDATE_BAR\", aura_env)",
+},
+["property"] = "customcode",
+},
+},
+},
+},
+["information"] = {
+["forceEvents"] = true,
+["ignoreOptionsEventErrors"] = true,
+},
+["preferToUpdate"] = false,
+},
+["Purify Disease"] = {
+["iconSource"] = -1,
+["wagoID"] = "BJu2WDqBX",
+["xOffset"] = 0,
+["adjustedMax"] = "",
+["adjustedMin"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["cooldownSwipe"] = true,
+["cooldownEdge"] = false,
+["icon"] = true,
+["triggers"] = {
+{
+["trigger"] = {
+["track"] = "auto",
+["use_genericShowOn"] = true,
+["genericShowOn"] = "showAlways",
+["names"] = {
+},
+["use_showgcd"] = true,
+["debuffType"] = "HELPFUL",
+["type"] = "spell",
+["use_absorbHealMode"] = true,
+["subeventSuffix"] = "_CAST_START",
+["event"] = "Cooldown Progress (Spell)",
+["subeventPrefix"] = "SPELL",
+["realSpellName"] = "Purify Disease",
+["use_spellName"] = true,
+["spellIds"] = {
+},
+["use_unit"] = true,
+["use_absorbMode"] = true,
+["unit"] = "player",
+["use_track"] = true,
+["spellName"] = 213634,
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["track"] = "auto",
+["use_genericShowOn"] = true,
+["genericShowOn"] = "showOnCooldown",
+["names"] = {
+},
+["use_showgcd"] = true,
+["debuffType"] = "HELPFUL",
+["type"] = "spell",
+["use_absorbHealMode"] = true,
+["subeventSuffix"] = "_CAST_START",
+["event"] = "Cooldown Progress (Spell)",
+["subeventPrefix"] = "SPELL",
+["realSpellName"] = "Purify Disease",
+["use_spellName"] = true,
+["spellIds"] = {
+},
+["use_unit"] = true,
+["use_absorbMode"] = true,
+["unit"] = "player",
+["use_track"] = true,
+["spellName"] = 213634,
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "custom",
+["customTriggerLogic"] = "function(t)\n    if aura_env.config.utility.behavior == 1 then -- Show Only on Cooldown\n        return t[2]\n    else\n        return t[1] -- Default: Always Show\n    end\nend",
+["activeTriggerMode"] = -10,
+},
+["internalVersion"] = 75,
+["keepAspectRatio"] = true,
+["selfPoint"] = "CENTER",
+["desaturate"] = false,
+["version"] = 68,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["border_size"] = 2,
+["type"] = "subborder",
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["border_offset"] = 0,
+},
+{
+["glowFrequency"] = 0.25,
+["type"] = "subglow",
+["glowDuration"] = 1,
+["glowType"] = "Proc",
+["glowThickness"] = 1,
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["useGlowColor"] = false,
+["glowXOffset"] = 0,
+["glowScale"] = 1,
+["glow"] = false,
+["glowLength"] = 10,
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+},
+["height"] = 48,
+["load"] = {
+["use_petbattle"] = false,
+["class_and_spec"] = {
+["single"] = 258,
+["multi"] = {
+[257] = true,
+[258] = true,
+[256] = true,
+},
+},
+["talent"] = {
+["multi"] = {
+},
+},
+["use_class_and_spec"] = true,
+["use_class"] = true,
+["role"] = {
+["multi"] = {
+},
+},
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["MAGE"] = true,
+},
+},
+["use_never"] = false,
+["use_spellknown"] = true,
+["spec"] = {
+["multi"] = {
+},
+},
+["spellknown"] = 213634,
+["size"] = {
+["multi"] = {
+},
+},
+},
+["useAdjustededMax"] = false,
+["source"] = "import",
+["cooldownTextDisabled"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Utilities - LWA - Priest",
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["authorOptions"] = {
+{
+["subOptions"] = {
+{
+["useName"] = true,
+["type"] = "header",
+["text"] = "Behavior",
+["noMerge"] = false,
+["width"] = 1,
+},
+{
+["type"] = "select",
+["default"] = 2,
+["values"] = {
+"Show on Cooldown",
+"Always Show",
+},
+["name"] = "Display Behavior",
+["useDesc"] = false,
+["key"] = "behavior",
+["width"] = 1,
+},
+{
+["softMin"] = 0,
+["type"] = "range",
+["bigStep"] = 1,
+["max"] = 100,
+["step"] = 1,
+["width"] = 1,
+["min"] = 0,
+["key"] = "alpha",
+["softMax"] = 100,
+["default"] = 30,
+["name"] = "Always Show Alpha",
+["useDesc"] = false,
+},
+},
+["hideReorder"] = true,
+["useDesc"] = false,
+["nameSource"] = 0,
+["name"] = "Utility Icons",
+["width"] = 1,
+["useCollapse"] = true,
+["noMerge"] = false,
+["collapse"] = true,
+["type"] = "group",
+["limitType"] = "none",
+["groupType"] = "simple",
+["key"] = "utility",
+["size"] = 10,
+},
+},
+["progressSource"] = {
+-1,
+"",
+},
+["config"] = {
+["utility"] = {
+["behavior"] = 2,
+["alpha"] = 30,
+},
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["zoom"] = 0.3,
+["semver"] = "11.0.4",
+["tocversion"] = 110000,
+["id"] = "Purify Disease",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
+["uid"] = "AnD9qDT9o3Q",
+["inverse"] = true,
+["preferToUpdate"] = false,
+["conditions"] = {
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 0,
+},
+["changes"] = {
+{
+["value"] = false,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Proc",
+["property"] = "sub.3.glowType",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -1,
+["variable"] = "incombat",
+["value"] = 0,
+},
+["changes"] = {
+{
+["property"] = "sub.3.glow",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "insufficientResources",
+["value"] = 1,
+["checks"] = {
+{
+["value"] = 1,
+["variable"] = "insufficientResources",
+},
+{
+["trigger"] = -1,
+["variable"] = "incombat",
+},
+},
+},
+["changes"] = {
+{
+["value"] = {
+0.47450983524323,
+0.5137255191803,
+1,
+1,
+},
+["property"] = "color",
+},
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 1,
+["variable"] = "onCooldown",
+["value"] = 0,
+["checks"] = {
+{
+["trigger"] = 1,
+["variable"] = "show",
+["value"] = 0,
+},
+{
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 0,
+},
+},
+},
+["linked"] = false,
+["changes"] = {
+{
+["value"] = {
+["custom"] = "aura_env.region:SetAlpha(aura_env.config.utility.alpha /100)",
+},
+["property"] = "customcode",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -1,
+["variable"] = "alwaystrue",
+},
+["linked"] = true,
+["changes"] = {
+{
+["value"] = {
+["custom"] = "aura_env.region:SetAlpha(1)",
+},
+["property"] = "customcode",
+},
+},
+},
+},
+["cooldown"] = true,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
+},
+["Incarnation: Chosen of Elune (Orbital Strike)"] = {
+["iconSource"] = -1,
+["wagoID"] = "ryBp05DHX",
+["parent"] = "Core - LWA - Druid",
+["preferToUpdate"] = true,
+["adjustedMin"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["cooldownSwipe"] = true,
+["cooldownEdge"] = false,
+["icon"] = true,
+["triggers"] = {
+{
+["trigger"] = {
+["type"] = "aura2",
+["auranames"] = {
+"390414",
+"194223",
+},
+["ownOnly"] = true,
+["event"] = "Health",
+["unit"] = "player",
+["spellIds"] = {
+},
+["names"] = {
+},
+["subeventSuffix"] = "_CAST_START",
+["subeventPrefix"] = "SPELL",
+["useName"] = true,
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["track"] = "auto",
+["use_genericShowOn"] = true,
+["genericShowOn"] = "showAlways",
+["use_unit"] = true,
+["use_showgcd"] = true,
+["debuffType"] = "HELPFUL",
+["type"] = "spell",
+["use_absorbHealMode"] = true,
+["subeventSuffix"] = "_CAST_START",
+["unit"] = "player",
+["event"] = "Cooldown Progress (Spell)",
+["use_exact_spellName"] = false,
+["realSpellName"] = "Incarnation: Chosen of Elune",
+["use_spellName"] = true,
+["spellIds"] = {
+},
+["subeventPrefix"] = "SPELL",
+["names"] = {
+},
+["use_absorbMode"] = true,
+["use_track"] = true,
+["spellName"] = 390414,
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["type"] = "spell",
+["use_absorbHealMode"] = true,
+["spellName"] = 394013,
+["use_genericShowOn"] = true,
+["genericShowOn"] = "showOnCooldown",
+["unit"] = "player",
+["realSpellName"] = 0,
+["use_spellName"] = true,
+["use_absorbMode"] = true,
+["event"] = "Spell Known",
+["use_exact_spellName"] = true,
+["use_unit"] = true,
+["use_track"] = true,
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "any",
+["activeTriggerMode"] = -10,
+},
+["internalVersion"] = 75,
+["progressSource"] = {
+-1,
+"",
+},
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
+["desaturate"] = false,
+["version"] = 105,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["border_offset"] = 0,
+["type"] = "subborder",
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["border_size"] = 2,
+},
+{
+["glowFrequency"] = 0.25,
+["type"] = "subglow",
+["useGlowColor"] = false,
+["glowType"] = "Proc",
+["glowThickness"] = 1,
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["glowDuration"] = 1,
+["glowXOffset"] = 0,
+["glowScale"] = 1,
+["glow"] = false,
+["glowLength"] = 10,
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+},
+["height"] = 48,
+["load"] = {
+["use_petbattle"] = false,
+["use_never"] = false,
+["talent"] = {
+["multi"] = {
+[109839] = true,
+[109855] = true,
+},
+},
+["use_class_and_spec"] = true,
+["use_talent"] = false,
+["use_class"] = true,
+["use_spellknown"] = true,
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["MAGE"] = true,
+},
+},
+["class_and_spec"] = {
+["single"] = 102,
+["multi"] = {
+[103] = true,
+[104] = true,
+[102] = true,
+[105] = true,
+},
+},
+["spec"] = {
+["multi"] = {
+},
+},
+["use_exact_spellknown"] = false,
+["spellknown"] = 390414,
+["size"] = {
+["multi"] = {
+},
+},
+},
+["useAdjustededMax"] = false,
+["anchorFrameType"] = "SCREEN",
+["source"] = "import",
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
+["information"] = {
+["forceEvents"] = true,
+},
+["conditions"] = {
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 0,
+},
+["changes"] = {
+{
+["value"] = false,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Proc",
+["property"] = "sub.3.glowType",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -1,
+["variable"] = "incombat",
+["value"] = 0,
+},
+["changes"] = {
+{
+["property"] = "sub.3.glow",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 1,
+["checks"] = {
+{
+["value"] = 1,
+["variable"] = "onCooldown",
+},
+{
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 1,
+},
+},
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 1,
+["variable"] = "show",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Pixel",
+["property"] = "sub.3.glowType",
+},
+{
+["property"] = "desaturate",
+},
+{
+["property"] = "inverse",
+},
+{
+["value"] = true,
+["property"] = "cooldownEdge",
+},
+},
+},
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["xOffset"] = 0,
+["uid"] = "dIAC8nNaorT",
+["alpha"] = 1,
+["anchorFrameParent"] = false,
+["frameStrata"] = 1,
+["cooldownTextDisabled"] = false,
+["zoom"] = 0.3,
+["semver"] = "11.0.8",
+["tocversion"] = 110000,
+["id"] = "Incarnation: Chosen of Elune (Orbital Strike)",
+["selfPoint"] = "CENTER",
+["useCooldownModRate"] = true,
+["width"] = 48,
+["authorOptions"] = {
+},
+["config"] = {
+},
+["inverse"] = true,
+["adjustedMax"] = "",
+["displayIcon"] = "",
+["cooldown"] = true,
+["keepAspectRatio"] = true,
+},
+["Combo Points - LWA - Druid"] = {
+["arcLength"] = 360,
+["controlledChildren"] = {
+"Combot Point 1 - Druid",
+"Combot Point 2 - Druid",
+"Combot Point 3 - Druid",
+"Combot Point 4 - Druid",
+"Combot Point 5 - Druid",
+},
+["borderBackdrop"] = "Blizzard Tooltip",
+["wagoID"] = "ryBp05DHX",
+["xOffset"] = 0,
+["preferToUpdate"] = true,
+["frameStrata"] = 1,
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["stepAngle"] = 15,
+["sharedFrameLevel"] = true,
+["fullCircle"] = true,
+["rowSpace"] = 1,
+["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
+["triggers"] = {
+{
+["trigger"] = {
+["names"] = {
+},
+["type"] = "aura2",
+["spellIds"] = {
+},
+["subeventSuffix"] = "_CAST_START",
+["subeventPrefix"] = "SPELL",
+["debuffType"] = "HELPFUL",
+["event"] = "Health",
+["unit"] = "player",
+},
+["untrigger"] = {
+},
+},
+},
+["columnSpace"] = 1,
+["internalVersion"] = 75,
+["selfPoint"] = "TOP",
+["useLimit"] = false,
+["align"] = "LEFT",
+["growOn"] = "show",
+["radius"] = 200,
+["sortHybridTable"] = {
+["Combot Point 4 - Druid"] = false,
+["Combot Point 3 - Druid"] = false,
+["Combot Point 2 - Druid"] = false,
+["Combot Point 5 - Druid"] = false,
+["Combot Point 1 - Druid"] = false,
+},
+["rotation"] = 0,
+["parent"] = "Resources - LWA - Druid",
+["version"] = 105,
+["subRegions"] = {
+},
+["stagger"] = 0,
+["grow"] = "CUSTOM",
+["load"] = {
+["size"] = {
+["multi"] = {
+},
+},
+["spec"] = {
+["multi"] = {
+},
+},
+["class"] = {
+["multi"] = {
+},
+},
+["talent"] = {
+["multi"] = {
+},
+},
+},
+["uid"] = "6pmVKMV(T2k",
+["backdropColor"] = {
+1,
+1,
+1,
+0.5,
+},
+["borderColor"] = {
+0,
+0,
+0,
+1,
+},
+["source"] = "import",
+["customGrow"] = "function(newPositions, activeRegions)\n    local LWA = LWA and LWA[\"Druid\"] or {}\n    \n    if LWA and LWA.GrowDynamicResource then\n        LWA.GrowDynamicResource(newPositions, activeRegions)\n    end\nend",
+["scale"] = 1,
+["centerType"] = "LR",
+["border"] = false,
+["borderEdge"] = "Square Full White",
+["regionType"] = "dynamicgroup",
+["borderSize"] = 2,
+["limit"] = 6,
+["animate"] = false,
+["gridWidth"] = 5,
+["constantFactor"] = "RADIUS",
+["borderInset"] = 1,
+["borderOffset"] = 4,
+["semver"] = "11.0.8",
+["tocversion"] = 110000,
+["id"] = "Combo Points - LWA - Druid",
+["sort"] = "none",
+["alpha"] = 1,
+["anchorFrameType"] = "SCREEN",
+["gridType"] = "RD",
+["config"] = {
+},
+["authorOptions"] = {
+},
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
+["conditions"] = {
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["space"] = 2,
+},
+["After the Wildfire "] = {
+["iconSource"] = -1,
+["wagoID"] = "ryBp05DHX",
+["xOffset"] = 0,
+["adjustedMax"] = "",
+["adjustedMin"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["cooldownSwipe"] = true,
+["cooldownEdge"] = true,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
+["triggers"] = {
+{
+["trigger"] = {
+["type"] = "aura2",
+["auranames"] = {
+"400734",
+},
+["subeventSuffix"] = "_CAST_START",
+["fetchTooltip"] = true,
+["event"] = "Health",
+["unit"] = "player",
+["unitExists"] = true,
+["ownOnly"] = true,
+["spellIds"] = {
+},
+["names"] = {
+},
+["subeventPrefix"] = "SPELL",
+["useName"] = true,
+["matchesShowOn"] = "showOnActive",
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "any",
+["activeTriggerMode"] = -10,
+},
+["internalVersion"] = 75,
+["progressSource"] = {
+-1,
+"",
+},
+["animation"] = {
+["start"] = {
+["type"] = "preset",
+["easeType"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["preset"] = "shrink",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["type"] = "preset",
+["easeType"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["preset"] = "shrink",
+},
+},
+["desaturate"] = false,
+["version"] = 105,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["border_offset"] = 0,
+["type"] = "subborder",
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["border_size"] = 2,
+},
+{
+["glowFrequency"] = 0.25,
+["type"] = "subglow",
+["useGlowColor"] = false,
+["glowType"] = "Proc",
+["glowThickness"] = 1,
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["glowDuration"] = 1,
+["glowXOffset"] = 0,
+["glowScale"] = 1,
+["glow"] = false,
+["glowLength"] = 10,
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+{
+["text_shadowXOffset"] = 0,
+["text_text_format_s_format"] = "none",
+["text_text"] = "%1.tooltip1",
+["text_text_format_p_format"] = "timed",
+["text_selfPoint"] = "CENTER",
+["text_automaticWidth"] = "Auto",
+["text_fixedWidth"] = 64,
+["anchorYOffset"] = 0,
+["text_justify"] = "CENTER",
+["rotateText"] = "NONE",
+["text_text_format_p_time_format"] = 0,
+["type"] = "subtext",
+["text_text_format_p_time_dynamic_threshold"] = 60,
+["text_color"] = {
+1,
+0.88627450980392,
+0.76862745098039,
+1,
+},
+["text_font"] = "Friz Quadrata TT",
+["text_anchorYOffset"] = -4,
+["text_shadowYOffset"] = 0,
+["text_shadowColor"] = {
+0,
+0,
+0,
+1,
+},
+["text_wordWrap"] = "WordWrap",
+["text_fontType"] = "OUTLINE",
+["text_anchorPoint"] = "OUTER_TOP",
+["text_text_format_p_time_precision"] = 1,
+["text_visible"] = true,
+["text_fontSize"] = 16,
+["anchorXOffset"] = 0,
+["text_text_format_1.tooltip1_format"] = "none",
+},
+},
+["height"] = 48,
+["load"] = {
+["use_petbattle"] = false,
+["use_never"] = false,
+["talent"] = {
+["multi"] = {
+},
+},
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["MAGE"] = true,
+},
+},
+["use_class"] = true,
+["use_spellknown"] = true,
+["use_class_and_spec"] = true,
+["class_and_spec"] = {
+["single"] = 104,
+["multi"] = {
+[103] = true,
+[104] = true,
+[102] = true,
+[105] = true,
+},
+},
+["spec"] = {
+["multi"] = {
+},
+},
+["spellknown"] = 371905,
+["size"] = {
+["multi"] = {
+},
+},
+},
+["alpha"] = 1,
+["useAdjustededMax"] = false,
+["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
+["information"] = {
+["forceEvents"] = true,
+["ignoreOptionsEventErrors"] = true,
+},
+["conditions"] = {
+},
+["authorOptions"] = {
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Dynamic Effects - LWA - Druid",
+["uid"] = "Zk1F5y9sqBW",
+["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
+["anchorFrameType"] = "SCREEN",
+["anchorFrameParent"] = false,
+["zoom"] = 0.3,
+["semver"] = "11.0.8",
+["cooldownTextDisabled"] = false,
+["auto"] = true,
+["tocversion"] = 110000,
+["id"] = "After the Wildfire ",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["keepAspectRatio"] = true,
+["config"] = {
+},
+["inverse"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["displayIcon"] = "",
+["cooldown"] = true,
+["selfPoint"] = "CENTER",
+},
+["Ursine Vigor (Guardian)"] = {
+["iconSource"] = -1,
+["wagoID"] = "ryBp05DHX",
+["xOffset"] = 0,
+["adjustedMax"] = "",
+["adjustedMin"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["cooldownSwipe"] = true,
+["cooldownEdge"] = true,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
+["triggers"] = {
+{
+["trigger"] = {
+["type"] = "aura2",
+["auranames"] = {
+},
+["useExactSpellId"] = true,
+["unit"] = "player",
+["ownOnly"] = true,
+["event"] = "Health",
+["names"] = {
+},
+["unitExists"] = false,
+["subeventSuffix"] = "_CAST_START",
+["spellIds"] = {
+},
+["subeventPrefix"] = "SPELL",
+["auraspellids"] = {
+"393903",
+},
+["useName"] = false,
+["matchesShowOn"] = "showOnActive",
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "any",
+["activeTriggerMode"] = -10,
+},
+["internalVersion"] = 75,
+["progressSource"] = {
+-1,
+"",
+},
+["animation"] = {
+["start"] = {
+["type"] = "preset",
+["easeType"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["preset"] = "shrink",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["type"] = "preset",
+["easeType"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["preset"] = "shrink",
+},
+},
+["desaturate"] = false,
+["version"] = 105,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["border_offset"] = 0,
+["type"] = "subborder",
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["border_size"] = 2,
+},
+{
+["glowFrequency"] = 0.25,
+["type"] = "subglow",
+["useGlowColor"] = false,
+["glowType"] = "Proc",
+["glowThickness"] = 1,
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["glowDuration"] = 1,
+["glowXOffset"] = 0,
+["glowScale"] = 1,
+["glow"] = false,
+["glowLength"] = 10,
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+},
+["height"] = 48,
+["load"] = {
+["use_petbattle"] = false,
+["use_never"] = false,
+["talent"] = {
+["multi"] = {
+[103313] = true,
+},
+},
+["use_class_and_spec"] = true,
+["use_talent"] = false,
+["use_class"] = true,
+["use_spellknown"] = false,
+["herotalent"] = {
+["multi"] = {
+["117206"] = false,
+},
+},
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["MAGE"] = true,
+},
+},
+["spec"] = {
+["multi"] = {
+},
+},
+["class_and_spec"] = {
+["single"] = 104,
+["multi"] = {
+[103] = true,
+[104] = true,
+[102] = true,
+[105] = true,
+},
+},
+["size"] = {
+["multi"] = {
+},
+},
+},
+["alpha"] = 1,
+["useAdjustededMax"] = false,
+["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
+["information"] = {
+["forceEvents"] = true,
+["ignoreOptionsEventErrors"] = true,
+},
+["conditions"] = {
+{
+["check"] = {
+["trigger"] = 1,
+["variable"] = "show",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Pixel",
+["property"] = "sub.3.glowType",
+},
+},
+},
+},
+["authorOptions"] = {
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Dynamic Effects - LWA - Druid",
+["uid"] = "VsXuhJTmSzn",
+["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
+["anchorFrameType"] = "SCREEN",
+["anchorFrameParent"] = false,
+["zoom"] = 0.3,
+["semver"] = "11.0.8",
+["cooldownTextDisabled"] = false,
+["auto"] = true,
+["tocversion"] = 110000,
+["id"] = "Ursine Vigor (Guardian)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["keepAspectRatio"] = true,
+["config"] = {
+},
+["inverse"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["displayIcon"] = "",
+["cooldown"] = true,
+["selfPoint"] = "CENTER",
+},
+["Vicious Cycle (Optional)"] = {
+["iconSource"] = -1,
+["wagoID"] = "ryBp05DHX",
+["xOffset"] = 0,
+["adjustedMax"] = "",
+["adjustedMin"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["cooldownSwipe"] = true,
+["cooldownEdge"] = true,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
+["triggers"] = {
+{
+["trigger"] = {
+["type"] = "aura2",
+["auranames"] = {
+},
+["useExactSpellId"] = true,
+["unit"] = "player",
+["ownOnly"] = true,
+["event"] = "Health",
+["names"] = {
+},
+["unitExists"] = true,
+["subeventSuffix"] = "_CAST_START",
+["spellIds"] = {
+},
+["subeventPrefix"] = "SPELL",
+["auraspellids"] = {
+"372015",
+"372019",
+},
+["useName"] = false,
+["matchesShowOn"] = "showOnActive",
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "any",
+["activeTriggerMode"] = -10,
+},
+["internalVersion"] = 75,
+["progressSource"] = {
+-1,
+"",
+},
+["animation"] = {
+["start"] = {
+["type"] = "preset",
+["easeType"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["preset"] = "shrink",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["type"] = "preset",
+["easeType"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["preset"] = "shrink",
+},
+},
+["desaturate"] = false,
+["version"] = 105,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["border_offset"] = 0,
+["type"] = "subborder",
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["border_size"] = 2,
+},
+{
+["glowFrequency"] = 0.25,
+["type"] = "subglow",
+["useGlowColor"] = false,
+["glowType"] = "Proc",
+["glowThickness"] = 1,
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["glowDuration"] = 1,
+["glowXOffset"] = 0,
+["glowScale"] = 1,
+["glow"] = false,
+["glowLength"] = 10,
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+{
+["text_text_format_p_time_format"] = 0,
+["text_text_format_s_format"] = "none",
+["text_text"] = "%s",
+["text_text_format_p_format"] = "timed",
+["text_selfPoint"] = "CENTER",
+["text_automaticWidth"] = "Auto",
+["text_fixedWidth"] = 64,
+["anchorYOffset"] = 0,
+["text_justify"] = "CENTER",
+["rotateText"] = "NONE",
+["type"] = "subtext",
+["text_anchorYOffset"] = -4,
+["text_color"] = {
+1,
+0.88627450980392,
+0.76862745098039,
+1,
+},
+["text_font"] = "Friz Quadrata TT",
+["text_text_format_p_time_dynamic_threshold"] = 60,
+["text_shadowYOffset"] = 0,
+["text_shadowColor"] = {
+0,
+0,
+0,
+1,
+},
+["text_wordWrap"] = "WordWrap",
+["text_visible"] = true,
+["text_anchorPoint"] = "OUTER_TOP",
+["text_text_format_p_time_precision"] = 1,
+["text_fontType"] = "OUTLINE",
+["text_fontSize"] = 16,
+["anchorXOffset"] = 0,
+["text_shadowXOffset"] = 0,
+},
+},
+["height"] = 48,
+["load"] = {
+["use_petbattle"] = false,
+["use_never"] = true,
+["talent"] = {
+["multi"] = {
+},
+},
+["use_class_and_spec"] = true,
+["use_class"] = true,
+["use_spellknown"] = true,
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["MAGE"] = true,
+},
+},
+["use_not_spellknown"] = false,
+["class_and_spec"] = {
+["single"] = 104,
+["multi"] = {
+[103] = true,
+[104] = true,
+[102] = true,
+[105] = true,
+},
+},
+["spec"] = {
+["multi"] = {
+},
+},
+["spellknown"] = 371999,
+["size"] = {
+["multi"] = {
+},
+},
+},
+["alpha"] = 1,
+["useAdjustededMax"] = false,
+["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
+["information"] = {
+["forceEvents"] = true,
+["ignoreOptionsEventErrors"] = true,
+},
+["conditions"] = {
+{
+["check"] = {
+["trigger"] = 1,
+["op"] = "<",
+["value"] = "2",
+["variable"] = "stacks",
+},
+["changes"] = {
+{
+["property"] = "sub.4.text_visible",
+},
+},
+},
+},
+["authorOptions"] = {
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Dynamic Effects - LWA - Druid",
+["uid"] = "D(iOUxfDOP(",
+["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
+["anchorFrameType"] = "SCREEN",
+["anchorFrameParent"] = false,
+["zoom"] = 0.3,
+["semver"] = "11.0.8",
+["cooldownTextDisabled"] = false,
+["auto"] = true,
+["tocversion"] = 110000,
+["id"] = "Vicious Cycle (Optional)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["keepAspectRatio"] = true,
+["config"] = {
+},
+["inverse"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["displayIcon"] = "",
+["cooldown"] = true,
+["selfPoint"] = "CENTER",
+},
+["Power Infusion (Holy)"] = {
+["iconSource"] = -1,
+["wagoID"] = "BJu2WDqBX",
+["xOffset"] = 0,
+["adjustedMax"] = "",
+["adjustedMin"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["cooldownSwipe"] = true,
+["cooldownEdge"] = false,
+["icon"] = true,
+["triggers"] = {
+{
+["trigger"] = {
+["useName"] = true,
+["useExactSpellId"] = false,
+["match_countOperator"] = ">",
+["names"] = {
+},
+["ownOnly"] = true,
+["event"] = "Health",
+["unit"] = "group",
+["subeventSuffix"] = "_CAST_START",
+["auranames"] = {
+"10060",
+},
+["spellIds"] = {
+},
+["subeventPrefix"] = "SPELL",
+["match_count"] = "0",
+["useMatch_count"] = true,
+["type"] = "aura2",
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["track"] = "auto",
+["use_genericShowOn"] = true,
+["genericShowOn"] = "showAlways",
+["names"] = {
+},
+["use_showgcd"] = true,
+["debuffType"] = "HELPFUL",
+["type"] = "spell",
+["use_absorbHealMode"] = true,
+["subeventSuffix"] = "_CAST_START",
+["event"] = "Cooldown Progress (Spell)",
+["subeventPrefix"] = "SPELL",
+["realSpellName"] = "Power Infusion",
+["use_spellName"] = true,
+["spellIds"] = {
+},
+["use_unit"] = true,
+["use_absorbMode"] = true,
+["unit"] = "player",
+["use_track"] = true,
+["spellName"] = 10060,
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "any",
+["customTriggerLogic"] = "",
+["activeTriggerMode"] = -10,
+},
+["internalVersion"] = 75,
+["keepAspectRatio"] = true,
+["selfPoint"] = "CENTER",
+["desaturate"] = false,
+["version"] = 68,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["border_size"] = 2,
+["type"] = "subborder",
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["border_offset"] = 0,
+},
+{
+["glowFrequency"] = 0.25,
+["type"] = "subglow",
+["glowDuration"] = 1,
+["glowType"] = "Proc",
+["glowThickness"] = 1,
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["useGlowColor"] = false,
+["glowXOffset"] = 0,
+["glowScale"] = 1,
+["glow"] = false,
+["glowLength"] = 10,
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+},
+["height"] = 48,
+["load"] = {
+["use_petbattle"] = false,
+["class_and_spec"] = {
+["single"] = 257,
+["multi"] = {
+[257] = true,
+[256] = true,
+},
+},
+["talent"] = {
+["multi"] = {
+},
+},
+["use_class_and_spec"] = true,
+["use_class"] = true,
+["role"] = {
+["multi"] = {
+},
+},
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["MAGE"] = true,
+},
+},
+["use_never"] = false,
+["use_spellknown"] = true,
+["spec"] = {
+["multi"] = {
+},
+},
+["spellknown"] = 10060,
+["size"] = {
+["multi"] = {
+},
+},
+},
+["useAdjustededMax"] = false,
+["source"] = "import",
+["cooldownTextDisabled"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["authorOptions"] = {
+},
+["progressSource"] = {
+-1,
+"",
+},
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["zoom"] = 0.3,
+["semver"] = "11.0.4",
+["tocversion"] = 110000,
+["id"] = "Power Infusion (Holy)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
+["uid"] = "DLY6WtxGQ0I",
+["inverse"] = true,
+["preferToUpdate"] = false,
+["conditions"] = {
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 0,
+},
+["changes"] = {
+{
+["value"] = false,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Proc",
+["property"] = "sub.3.glowType",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -1,
+["variable"] = "incombat",
+["value"] = 0,
+},
+["changes"] = {
+{
+["property"] = "sub.3.glow",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 1,
+["variable"] = "show",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Pixel",
+["property"] = "sub.3.glowType",
+},
+{
+["property"] = "desaturate",
+},
+{
+["property"] = "inverse",
+},
+{
+["value"] = true,
+["property"] = "cooldownEdge",
+},
+},
+},
+},
+["cooldown"] = true,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
+},
+["Fade"] = {
+["iconSource"] = -1,
+["wagoID"] = "BJu2WDqBX",
+["xOffset"] = 0,
+["adjustedMax"] = "",
+["adjustedMin"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["cooldownSwipe"] = true,
+["cooldownEdge"] = false,
+["icon"] = true,
+["triggers"] = {
+{
+["trigger"] = {
+["type"] = "aura2",
+["auranames"] = {
+"586",
+},
+["ownOnly"] = true,
+["event"] = "Health",
+["unit"] = "player",
+["spellIds"] = {
+},
+["names"] = {
+},
+["subeventSuffix"] = "_CAST_START",
+["subeventPrefix"] = "SPELL",
+["useName"] = true,
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["track"] = "auto",
+["use_genericShowOn"] = true,
+["genericShowOn"] = "showAlways",
+["names"] = {
+},
+["use_showgcd"] = true,
+["debuffType"] = "HELPFUL",
+["type"] = "spell",
+["use_absorbHealMode"] = true,
+["subeventSuffix"] = "_CAST_START",
+["event"] = "Cooldown Progress (Spell)",
+["subeventPrefix"] = "SPELL",
+["realSpellName"] = "Fade",
+["use_spellName"] = true,
+["spellIds"] = {
+},
+["use_unit"] = true,
+["use_absorbMode"] = true,
+["unit"] = "player",
+["use_track"] = true,
+["spellName"] = 586,
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["track"] = "auto",
+["use_genericShowOn"] = true,
+["genericShowOn"] = "showOnCooldown",
+["names"] = {
+},
+["use_showgcd"] = true,
+["debuffType"] = "HELPFUL",
+["type"] = "spell",
+["use_absorbHealMode"] = true,
+["subeventSuffix"] = "_CAST_START",
+["event"] = "Cooldown Progress (Spell)",
+["subeventPrefix"] = "SPELL",
+["realSpellName"] = "Fade",
+["use_spellName"] = true,
+["spellIds"] = {
+},
+["use_unit"] = true,
+["use_absorbMode"] = true,
+["unit"] = "player",
+["use_track"] = true,
+["spellName"] = 586,
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "custom",
+["customTriggerLogic"] = "function(t)\n    if aura_env.config.utility.behavior == 1 then -- Show Only on Cooldown\n        return t[1] or t[3]\n    else\n        return t[2] -- Default: Always Show\n    end\nend\n\n",
+["activeTriggerMode"] = -10,
+},
+["internalVersion"] = 75,
+["keepAspectRatio"] = true,
+["selfPoint"] = "CENTER",
+["desaturate"] = false,
+["version"] = 68,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["border_size"] = 2,
+["type"] = "subborder",
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["border_offset"] = 0,
+},
+{
+["glowFrequency"] = 0.25,
+["type"] = "subglow",
+["glowDuration"] = 1,
+["glowType"] = "Proc",
+["glowThickness"] = 1,
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["useGlowColor"] = false,
+["glowXOffset"] = 0,
+["glowScale"] = 1,
+["glow"] = false,
+["glowLength"] = 10,
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+},
+["height"] = 48,
+["load"] = {
+["use_petbattle"] = false,
+["class_and_spec"] = {
+["single"] = 64,
+["multi"] = {
+[257] = true,
+[258] = true,
+[256] = true,
+},
+},
+["talent"] = {
+["multi"] = {
+},
+},
+["use_class_and_spec"] = false,
+["use_class"] = true,
+["role"] = {
+["multi"] = {
+},
+},
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["MAGE"] = true,
+},
+},
+["use_never"] = false,
+["use_spellknown"] = true,
+["spec"] = {
+["multi"] = {
+},
+},
+["spellknown"] = 586,
+["size"] = {
+["multi"] = {
+},
+},
+},
+["useAdjustededMax"] = false,
+["source"] = "import",
+["cooldownTextDisabled"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Utilities - LWA - Priest",
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["authorOptions"] = {
+{
+["subOptions"] = {
+{
+["useName"] = true,
+["type"] = "header",
+["text"] = "Behavior",
+["noMerge"] = false,
+["width"] = 1,
+},
+{
+["type"] = "select",
+["default"] = 2,
+["values"] = {
+"Show on Cooldown",
+"Always Show",
+},
+["name"] = "Display Behavior",
+["useDesc"] = false,
+["key"] = "behavior",
+["width"] = 1,
+},
+{
+["softMin"] = 0,
+["type"] = "range",
+["bigStep"] = 1,
+["max"] = 100,
+["step"] = 1,
+["width"] = 1,
+["min"] = 0,
+["key"] = "alpha",
+["softMax"] = 100,
+["default"] = 30,
+["name"] = "Always Show Alpha",
+["useDesc"] = false,
+},
+},
+["hideReorder"] = true,
+["useDesc"] = false,
+["nameSource"] = 0,
+["name"] = "Utility Icons",
+["width"] = 1,
+["useCollapse"] = true,
+["noMerge"] = false,
+["collapse"] = true,
+["type"] = "group",
+["limitType"] = "none",
+["groupType"] = "simple",
+["key"] = "utility",
+["size"] = 10,
+},
+},
+["progressSource"] = {
+-1,
+"",
+},
+["config"] = {
+["utility"] = {
+["behavior"] = 2,
+["alpha"] = 30,
+},
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["zoom"] = 0.3,
+["semver"] = "11.0.4",
+["tocversion"] = 110000,
+["id"] = "Fade",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
+["uid"] = "a1z8cZuWa20",
+["inverse"] = true,
+["preferToUpdate"] = false,
+["conditions"] = {
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 0,
+},
+["changes"] = {
+{
+["value"] = false,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Proc",
+["property"] = "sub.3.glowType",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -1,
+["variable"] = "incombat",
+["value"] = 0,
+},
+["changes"] = {
+{
+["property"] = "sub.3.glow",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 1,
+["variable"] = "show",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Pixel",
+["property"] = "sub.3.glowType",
+},
+{
+["property"] = "desaturate",
+},
+{
+["property"] = "inverse",
+},
+{
+["value"] = true,
+["property"] = "cooldownEdge",
+},
+{
+["property"] = "color",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -2,
+["variable"] = "AND",
+["checks"] = {
+{
+["trigger"] = 1,
+["variable"] = "show",
+["value"] = 0,
+},
+{
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 0,
+},
+},
+},
+["linked"] = false,
+["changes"] = {
+{
+["value"] = {
+["custom"] = "aura_env.region:SetAlpha(aura_env.config.utility.alpha /100)",
+},
+["property"] = "customcode",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -1,
+["variable"] = "alwaystrue",
+},
+["linked"] = true,
+["changes"] = {
+{
+["value"] = {
+["custom"] = "aura_env.region:SetAlpha(1)",
+},
+["property"] = "customcode",
+},
+},
+},
+},
+["cooldown"] = true,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
+},
+["Twist of Fate (Optional - Discipline)"] = {
+["iconSource"] = -1,
+["wagoID"] = "BJu2WDqBX",
+["parent"] = "Dynamic Effects - LWA - Priest",
+["adjustedMax"] = "",
+["adjustedMin"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["cooldownSwipe"] = true,
+["cooldownEdge"] = true,
+["icon"] = true,
+["triggers"] = {
+{
+["trigger"] = {
+["type"] = "aura2",
+["auranames"] = {
+"390978",
+},
+["matchesShowOn"] = "showOnActive",
+["event"] = "Health",
+["unit"] = "player",
+["unitExists"] = true,
+["ownOnly"] = true,
+["spellIds"] = {
+},
+["subeventSuffix"] = "_CAST_START",
+["subeventPrefix"] = "SPELL",
+["useName"] = true,
+["names"] = {
+},
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "any",
+["activeTriggerMode"] = -10,
+},
+["internalVersion"] = 75,
+["progressSource"] = {
+-1,
+"",
+},
+["selfPoint"] = "CENTER",
+["desaturate"] = false,
+["version"] = 68,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["border_size"] = 2,
+["type"] = "subborder",
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["border_offset"] = 0,
+},
+{
+["glowFrequency"] = 0.25,
+["type"] = "subglow",
+["glowDuration"] = 1,
+["glowType"] = "Proc",
+["glowThickness"] = 1,
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["useGlowColor"] = false,
+["glowXOffset"] = 0,
+["glowScale"] = 1,
+["glow"] = false,
+["glowLength"] = 10,
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+},
+["height"] = 48,
+["load"] = {
+["use_petbattle"] = false,
+["class_and_spec"] = {
+["single"] = 256,
+["multi"] = {
+[257] = true,
+[258] = true,
+[256] = true,
+},
+},
+["talent"] = {
+["multi"] = {
+},
+},
+["use_class_and_spec"] = true,
+["use_class"] = true,
+["role"] = {
+["multi"] = {
+},
+},
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["MAGE"] = true,
+},
+},
+["use_never"] = true,
+["use_spellknown"] = true,
+["spec"] = {
+["multi"] = {
+},
+},
+["spellknown"] = 390972,
+["size"] = {
+["multi"] = {
+},
+},
+},
+["alpha"] = 1,
+["useAdjustededMax"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["source"] = "import",
+["preferToUpdate"] = false,
+["information"] = {
+["forceEvents"] = true,
+},
+["conditions"] = {
+},
+["authorOptions"] = {
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["xOffset"] = 0,
+["uid"] = "xgULnXhgN60",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["anchorFrameType"] = "SCREEN",
+["anchorFrameParent"] = false,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.0.4",
+["zoom"] = 0.3,
+["auto"] = true,
+["tocversion"] = 110000,
+["id"] = "Twist of Fate (Optional - Discipline)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["keepAspectRatio"] = true,
+["config"] = {
+},
+["inverse"] = false,
+["animation"] = {
+["start"] = {
+["type"] = "preset",
+["easeType"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["preset"] = "shrink",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["type"] = "preset",
+["easeType"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["preset"] = "shrink",
+},
+},
+["displayIcon"] = "",
+["cooldown"] = true,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
+},
+["Rapture"] = {
+["iconSource"] = -1,
+["wagoID"] = "BJu2WDqBX",
+["parent"] = "Core - LWA - Priest",
+["adjustedMax"] = "",
+["adjustedMin"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["cooldownSwipe"] = true,
+["cooldownEdge"] = false,
+["icon"] = true,
+["triggers"] = {
+{
+["trigger"] = {
+["type"] = "aura2",
+["auranames"] = {
+"47536",
+},
+["ownOnly"] = true,
+["event"] = "Health",
+["unit"] = "player",
+["spellIds"] = {
+},
+["names"] = {
+},
+["subeventSuffix"] = "_CAST_START",
+["subeventPrefix"] = "SPELL",
+["useName"] = true,
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["track"] = "auto",
+["use_genericShowOn"] = true,
+["genericShowOn"] = "showAlways",
+["names"] = {
+},
+["use_showgcd"] = true,
+["debuffType"] = "HELPFUL",
+["type"] = "spell",
+["use_absorbHealMode"] = true,
+["subeventSuffix"] = "_CAST_START",
+["event"] = "Cooldown Progress (Spell)",
+["subeventPrefix"] = "SPELL",
+["realSpellName"] = "Rapture",
+["use_spellName"] = true,
+["spellIds"] = {
+},
+["use_unit"] = true,
+["use_absorbMode"] = true,
+["unit"] = "player",
+["use_track"] = true,
+["spellName"] = 47536,
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "any",
+["activeTriggerMode"] = -10,
+},
+["internalVersion"] = 75,
+["progressSource"] = {
+-1,
+"",
+},
+["selfPoint"] = "CENTER",
+["desaturate"] = false,
+["version"] = 68,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["border_size"] = 2,
+["type"] = "subborder",
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["border_offset"] = 0,
+},
+{
+["glowFrequency"] = 0.25,
+["type"] = "subglow",
+["glowDuration"] = 1,
+["glowType"] = "Proc",
+["glowThickness"] = 1,
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["useGlowColor"] = false,
+["glowXOffset"] = 0,
+["glowScale"] = 1,
+["glow"] = false,
+["glowLength"] = 10,
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+{
+["text_shadowXOffset"] = 0,
+["text_text_format_s_format"] = "none",
+["text_text"] = "%s",
+["text_text_format_p_format"] = "timed",
+["text_selfPoint"] = "CENTER",
+["text_automaticWidth"] = "Auto",
+["text_fixedWidth"] = 64,
+["anchorYOffset"] = 0,
+["text_justify"] = "CENTER",
+["rotateText"] = "NONE",
+["text_text_format_p_time_format"] = 0,
+["type"] = "subtext",
+["text_text_format_p_time_dynamic_threshold"] = 60,
+["text_color"] = {
+1,
+0.88627450980392,
+0.76862745098039,
+1,
+},
+["text_font"] = "Friz Quadrata TT",
+["text_anchorYOffset"] = -4,
+["text_shadowYOffset"] = 0,
+["text_shadowColor"] = {
+0,
+0,
+0,
+1,
+},
+["text_wordWrap"] = "WordWrap",
+["text_visible"] = true,
+["text_anchorPoint"] = "OUTER_TOP",
+["text_text_format_2.s_format"] = "none",
+["text_fontType"] = "OUTLINE",
+["text_fontSize"] = 18,
+["anchorXOffset"] = 0,
+["text_text_format_p_time_precision"] = 1,
+},
+},
+["height"] = 48,
+["load"] = {
+["use_petbattle"] = false,
+["class_and_spec"] = {
+["single"] = 256,
+["multi"] = {
+[257] = true,
+[258] = true,
+[256] = true,
+},
+},
+["talent"] = {
+["multi"] = {
+},
+},
+["use_class_and_spec"] = true,
+["use_class"] = true,
+["role"] = {
+["multi"] = {
+},
+},
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["MAGE"] = true,
+},
+},
+["use_never"] = false,
+["use_spellknown"] = true,
+["spec"] = {
+["multi"] = {
+},
+},
+["spellknown"] = 47536,
+["size"] = {
+["multi"] = {
+},
+},
+},
+["alpha"] = 1,
+["useAdjustededMax"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["source"] = "import",
+["preferToUpdate"] = false,
+["information"] = {
+["forceEvents"] = true,
+["ignoreOptionsEventErrors"] = true,
+},
+["conditions"] = {
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 0,
+},
+["changes"] = {
+{
+["value"] = false,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Proc",
+["property"] = "sub.3.glowType",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -1,
+["variable"] = "incombat",
+["value"] = 0,
+},
+["changes"] = {
+{
+["property"] = "sub.3.glow",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "insufficientResources",
+["value"] = 1,
+["checks"] = {
+{
+["value"] = 1,
+["variable"] = "insufficientResources",
+},
+{
+["trigger"] = -1,
+["variable"] = "incombat",
+},
+},
+},
+["changes"] = {
+{
+["value"] = {
+0.47450983524323,
+0.5137255191803,
+1,
+1,
+},
+["property"] = "color",
+},
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 1,
+["variable"] = "show",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Pixel",
+["property"] = "sub.3.glowType",
+},
+{
+["property"] = "desaturate",
+},
+{
+["property"] = "inverse",
+},
+{
+["value"] = true,
+["property"] = "cooldownEdge",
+},
+{
+["property"] = "color",
+},
+},
+},
+},
+["authorOptions"] = {
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["xOffset"] = 0,
+["uid"] = "LZ6ee5aBayZ",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["anchorFrameType"] = "SCREEN",
+["anchorFrameParent"] = false,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.0.4",
+["zoom"] = 0.3,
+["auto"] = true,
+["tocversion"] = 110000,
+["id"] = "Rapture",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["keepAspectRatio"] = true,
+["config"] = {
+},
+["inverse"] = true,
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
+["displayIcon"] = "",
+["cooldown"] = true,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
+},
+["Fury of Elune"] = {
+["iconSource"] = 0,
+["wagoID"] = "ryBp05DHX",
+["parent"] = "Core - LWA - Druid",
+["preferToUpdate"] = true,
+["adjustedMin"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["cooldownSwipe"] = true,
+["cooldownEdge"] = false,
+["icon"] = true,
+["triggers"] = {
+{
+["trigger"] = {
+["type"] = "combatlog",
+["spellId"] = {
+"202770",
+},
+["subeventSuffix"] = "_CAST_SUCCESS",
+["duration"] = "8",
+["event"] = "Combat Log",
+["unit"] = "player",
+["ownOnly"] = true,
+["use_spellId"] = true,
+["spellIds"] = {
+},
+["use_sourceUnit"] = true,
+["subeventPrefix"] = "SPELL",
+["names"] = {
+},
+["sourceUnit"] = "player",
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["track"] = "auto",
+["use_genericShowOn"] = true,
+["genericShowOn"] = "showAlways",
+["use_unit"] = true,
+["use_showgcd"] = true,
+["debuffType"] = "HELPFUL",
+["type"] = "spell",
+["use_absorbHealMode"] = true,
+["subeventSuffix"] = "_CAST_START",
+["event"] = "Cooldown Progress (Spell)",
+["subeventPrefix"] = "SPELL",
+["realSpellName"] = "Fury of Elune",
+["use_spellName"] = true,
+["spellIds"] = {
+},
+["names"] = {
+},
+["use_absorbMode"] = true,
+["unit"] = "player",
+["use_track"] = true,
+["spellName"] = 202770,
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "any",
+["activeTriggerMode"] = -10,
+},
+["internalVersion"] = 75,
+["progressSource"] = {
+-1,
+"",
+},
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
+["desaturate"] = false,
+["version"] = 105,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["border_offset"] = 0,
+["type"] = "subborder",
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["border_size"] = 2,
+},
+{
+["glowFrequency"] = 0.25,
+["type"] = "subglow",
+["useGlowColor"] = false,
+["glowType"] = "Proc",
+["glowThickness"] = 1,
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["glowDuration"] = 1,
+["glowXOffset"] = 0,
+["glowScale"] = 1,
+["glow"] = false,
+["glowLength"] = 10,
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+},
+["height"] = 48,
+["load"] = {
+["use_petbattle"] = false,
+["use_never"] = false,
+["talent"] = {
+["multi"] = {
+},
+},
+["use_class_and_spec"] = true,
+["use_class"] = true,
+["use_spellknown"] = true,
+["spec"] = {
+["multi"] = {
+},
+},
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["MAGE"] = true,
+},
+},
+["class_and_spec"] = {
+["single"] = 102,
+["multi"] = {
+[103] = true,
+[104] = true,
+[102] = true,
+[105] = true,
+},
+},
+["spellknown"] = 202770,
+["size"] = {
+["multi"] = {
+},
+},
+},
+["useAdjustededMax"] = false,
+["anchorFrameType"] = "SCREEN",
+["source"] = "import",
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
+["information"] = {
+["forceEvents"] = true,
+},
+["conditions"] = {
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 0,
+},
+["changes"] = {
+{
+["value"] = false,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Proc",
+["property"] = "sub.3.glowType",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -1,
+["variable"] = "incombat",
+["value"] = 0,
+},
+["changes"] = {
+{
+["property"] = "sub.3.glow",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "spellInRange",
+["value"] = 0,
+},
+["changes"] = {
+{
+["value"] = {
+0.87450980392157,
+0.34117647058824,
+0.32941176470588,
+1,
+},
+["property"] = "color",
+},
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 1,
+["variable"] = "show",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Pixel",
+["property"] = "sub.3.glowType",
+},
+{
+["property"] = "desaturate",
+},
+{
+["property"] = "inverse",
+},
+{
+["value"] = true,
+["property"] = "cooldownEdge",
+},
+{
+["property"] = "color",
+},
+},
+},
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["xOffset"] = 0,
+["uid"] = "VGKSxWnER6V",
+["alpha"] = 1,
+["anchorFrameParent"] = false,
+["frameStrata"] = 1,
+["cooldownTextDisabled"] = false,
+["zoom"] = 0.3,
+["semver"] = "11.0.8",
+["tocversion"] = 110000,
+["id"] = "Fury of Elune",
+["selfPoint"] = "CENTER",
+["useCooldownModRate"] = true,
+["width"] = 48,
+["authorOptions"] = {
+},
+["config"] = {
+},
+["inverse"] = true,
+["adjustedMax"] = "",
+["displayIcon"] = 132123,
+["cooldown"] = true,
+["keepAspectRatio"] = true,
+},
+["Mindgames (Discipline - PvP Talent)"] = {
+["iconSource"] = -1,
+["wagoID"] = "BJu2WDqBX",
+["xOffset"] = 0,
+["adjustedMax"] = "",
+["adjustedMin"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["cooldownSwipe"] = true,
+["cooldownEdge"] = false,
+["icon"] = true,
+["triggers"] = {
+{
+["trigger"] = {
+["type"] = "aura2",
+["auranames"] = {
+"375901",
+},
+["ownOnly"] = true,
+["event"] = "Health",
+["unit"] = "target",
+["spellIds"] = {
+},
+["names"] = {
+},
+["subeventSuffix"] = "_CAST_START",
+["subeventPrefix"] = "SPELL",
+["useName"] = true,
+["debuffType"] = "HARMFUL",
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["track"] = "auto",
+["use_genericShowOn"] = true,
+["genericShowOn"] = "showAlways",
+["use_unit"] = true,
+["use_showgcd"] = true,
+["debuffType"] = "HELPFUL",
+["type"] = "spell",
+["use_absorbHealMode"] = true,
+["subeventSuffix"] = "_CAST_START",
+["subeventPrefix"] = "SPELL",
+["use_exact_spellName"] = true,
+["event"] = "Cooldown Progress (Spell)",
+["use_ignoreoverride"] = true,
+["realSpellName"] = 375901,
+["use_spellName"] = true,
+["spellIds"] = {
+},
+["names"] = {
+},
+["spellName"] = 375901,
+["use_absorbMode"] = true,
+["use_track"] = true,
+["unit"] = "player",
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "any",
+["activeTriggerMode"] = -10,
+},
+["internalVersion"] = 75,
+["keepAspectRatio"] = true,
+["selfPoint"] = "CENTER",
+["desaturate"] = false,
+["version"] = 68,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["border_size"] = 2,
+["type"] = "subborder",
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["border_offset"] = 0,
+},
+{
+["glowFrequency"] = 0.25,
+["type"] = "subglow",
+["glowDuration"] = 1,
+["glowType"] = "Proc",
+["glowThickness"] = 1,
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["useGlowColor"] = false,
+["glowXOffset"] = 0,
+["glowScale"] = 1,
+["glow"] = false,
+["glowLength"] = 10,
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+},
+["height"] = 48,
+["load"] = {
+["use_petbattle"] = false,
+["class_and_spec"] = {
+["single"] = 256,
+["multi"] = {
+[257] = true,
+[258] = true,
+},
+},
+["talent"] = {
+["multi"] = {
+},
+},
+["use_class_and_spec"] = true,
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["MAGE"] = true,
+},
+},
+["use_class"] = true,
+["role"] = {
+["multi"] = {
+},
+},
+["use_never"] = false,
+["spec"] = {
+["multi"] = {
+},
+},
+["use_spellknown"] = true,
+["use_exact_spellknown"] = true,
+["spellknown"] = 375901,
+["size"] = {
+["multi"] = {
+},
+},
+},
+["useAdjustededMax"] = false,
+["source"] = "import",
+["cooldownTextDisabled"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["authorOptions"] = {
+},
+["progressSource"] = {
+-1,
+"",
+},
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["zoom"] = 0.3,
+["semver"] = "11.0.4",
+["tocversion"] = 110000,
+["id"] = "Mindgames (Discipline - PvP Talent)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
+["uid"] = "OWwwkZQyUie",
+["inverse"] = true,
+["preferToUpdate"] = false,
+["conditions"] = {
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 0,
+},
+["changes"] = {
+{
+["value"] = false,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Proc",
+["property"] = "sub.3.glowType",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -1,
+["variable"] = "incombat",
+["value"] = 0,
+},
+["changes"] = {
+{
+["property"] = "sub.3.glow",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "insufficientResources",
+["value"] = 1,
+["checks"] = {
+{
+["value"] = 1,
+["variable"] = "insufficientResources",
+},
+{
+["trigger"] = -1,
+["variable"] = "incombat",
+},
+},
+},
+["changes"] = {
+{
+["value"] = {
+0.47450980392157,
+0.51372549019608,
+1,
+1,
+},
+["property"] = "color",
+},
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "spellInRange",
+["value"] = 0,
+},
+["changes"] = {
+{
+["value"] = {
+0.87450980392157,
+0.34117647058824,
+0.32941176470588,
+1,
+},
+["property"] = "color",
+},
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 1,
+["variable"] = "show",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Pixel",
+["property"] = "sub.3.glowType",
+},
+{
+["property"] = "desaturate",
+},
+{
+["property"] = "inverse",
+},
+{
+["value"] = true,
+["property"] = "cooldownEdge",
+},
+{
+["property"] = "color",
+},
+},
+},
+},
+["cooldown"] = true,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
+},
+["Surge of Light (Discipline)"] = {
+["iconSource"] = -1,
+["wagoID"] = "BJu2WDqBX",
+["parent"] = "Dynamic Effects - LWA - Priest",
+["adjustedMax"] = "",
+["adjustedMin"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["cooldownSwipe"] = true,
+["cooldownEdge"] = true,
+["icon"] = true,
+["triggers"] = {
+{
+["trigger"] = {
+["type"] = "aura2",
+["auranames"] = {
+"114255",
+},
+["matchesShowOn"] = "showOnActive",
+["event"] = "Health",
+["unit"] = "player",
+["unitExists"] = true,
+["ownOnly"] = true,
+["spellIds"] = {
+},
+["subeventSuffix"] = "_CAST_START",
+["subeventPrefix"] = "SPELL",
+["useName"] = true,
+["names"] = {
+},
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "any",
+["activeTriggerMode"] = -10,
+},
+["internalVersion"] = 75,
+["progressSource"] = {
+-1,
+"",
+},
+["selfPoint"] = "CENTER",
+["desaturate"] = false,
+["version"] = 68,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["border_size"] = 2,
+["type"] = "subborder",
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["border_offset"] = 0,
+},
+{
+["glowFrequency"] = 0.25,
+["type"] = "subglow",
+["glowDuration"] = 1,
+["glowType"] = "Proc",
+["glowThickness"] = 1,
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["useGlowColor"] = false,
+["glowXOffset"] = 0,
+["glowScale"] = 1,
+["glow"] = false,
+["glowLength"] = 10,
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+},
+["height"] = 48,
+["load"] = {
+["use_petbattle"] = false,
+["class_and_spec"] = {
+["single"] = 256,
+["multi"] = {
+[257] = true,
+[258] = true,
+[256] = true,
+},
+},
+["talent"] = {
+["multi"] = {
+},
+},
+["use_class_and_spec"] = true,
+["use_class"] = true,
+["role"] = {
+["multi"] = {
+},
+},
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["MAGE"] = true,
+},
+},
+["use_never"] = false,
+["use_spellknown"] = true,
+["spec"] = {
+["multi"] = {
+},
+},
+["spellknown"] = 109186,
+["size"] = {
+["multi"] = {
+},
+},
+},
+["alpha"] = 1,
+["useAdjustededMax"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["source"] = "import",
+["preferToUpdate"] = false,
+["information"] = {
+["forceEvents"] = true,
+},
+["conditions"] = {
+{
+["check"] = {
+["trigger"] = 1,
+["variable"] = "show",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Proc",
+["property"] = "sub.3.glowType",
+},
+},
+},
+},
+["authorOptions"] = {
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["xOffset"] = 0,
+["uid"] = "tlHfHGGa1YG",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["anchorFrameType"] = "SCREEN",
+["anchorFrameParent"] = false,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.0.4",
+["zoom"] = 0.3,
+["auto"] = true,
+["tocversion"] = 110000,
+["id"] = "Surge of Light (Discipline)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["keepAspectRatio"] = true,
+["config"] = {
+},
+["inverse"] = false,
+["animation"] = {
+["start"] = {
+["type"] = "preset",
+["easeType"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["preset"] = "shrink",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["type"] = "preset",
+["easeType"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["preset"] = "shrink",
+},
+},
+["displayIcon"] = "",
+["cooldown"] = true,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
+},
+["Frenzied Regeneration (Guardian)"] = {
+["iconSource"] = -1,
+["wagoID"] = "ryBp05DHX",
+["xOffset"] = 0,
+["adjustedMax"] = "",
+["adjustedMin"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["cooldownSwipe"] = true,
+["cooldownEdge"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
+["triggers"] = {
+{
+["trigger"] = {
+["type"] = "aura2",
+["auranames"] = {
+"22842",
+},
+["ownOnly"] = true,
+["event"] = "Health",
+["unit"] = "player",
+["spellIds"] = {
+},
+["names"] = {
+},
+["subeventSuffix"] = "_CAST_START",
+["subeventPrefix"] = "SPELL",
+["useName"] = true,
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["track"] = "auto",
+["use_genericShowOn"] = true,
+["genericShowOn"] = "showAlways",
+["use_unit"] = true,
+["use_showgcd"] = true,
+["debuffType"] = "HELPFUL",
+["type"] = "spell",
+["use_absorbHealMode"] = true,
+["subeventSuffix"] = "_CAST_START",
+["event"] = "Cooldown Progress (Spell)",
+["subeventPrefix"] = "SPELL",
+["realSpellName"] = "Frenzied Regeneration",
+["use_spellName"] = true,
+["spellIds"] = {
+},
+["names"] = {
+},
+["use_absorbMode"] = true,
+["unit"] = "player",
+["use_track"] = true,
+["spellName"] = 22842,
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "any",
+["activeTriggerMode"] = -10,
+},
+["internalVersion"] = 75,
+["progressSource"] = {
+-1,
+"",
+},
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
+["desaturate"] = false,
+["version"] = 105,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["border_offset"] = 0,
+["type"] = "subborder",
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["border_size"] = 2,
+},
+{
+["glowFrequency"] = 0.25,
+["type"] = "subglow",
+["useGlowColor"] = false,
+["glowType"] = "Proc",
+["glowThickness"] = 1,
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["glowDuration"] = 1,
+["glowXOffset"] = 0,
+["glowScale"] = 1,
+["glow"] = false,
+["glowLength"] = 10,
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+{
+["text_text_format_p_time_precision"] = 1,
+["text_text_format_s_format"] = "none",
+["text_text"] = "%2.s",
+["text_text_format_p_format"] = "timed",
+["text_selfPoint"] = "CENTER",
+["text_automaticWidth"] = "Auto",
+["text_fixedWidth"] = 64,
+["anchorYOffset"] = 0,
+["text_justify"] = "CENTER",
+["rotateText"] = "NONE",
+["text_text_format_p_time_format"] = 0,
+["type"] = "subtext",
+["text_text_format_p_time_dynamic_threshold"] = 60,
+["text_color"] = {
+1,
+0.88627450980392,
+0.76862745098039,
+1,
+},
+["text_font"] = "Friz Quadrata TT",
+["text_anchorYOffset"] = -4,
+["text_shadowYOffset"] = 0,
+["text_shadowColor"] = {
+0,
+0,
+0,
+1,
+},
+["text_wordWrap"] = "WordWrap",
+["text_fontType"] = "OUTLINE",
+["text_anchorPoint"] = "OUTER_TOP",
+["text_text_format_2.s_format"] = "none",
+["text_visible"] = true,
+["text_fontSize"] = 18,
+["anchorXOffset"] = 0,
+["text_shadowXOffset"] = 0,
+},
+},
+["height"] = 48,
+["load"] = {
+["use_petbattle"] = false,
+["use_never"] = false,
+["talent"] = {
+["multi"] = {
+},
+},
+["use_class_and_spec"] = true,
+["use_class"] = true,
+["use_spellknown"] = true,
+["spec"] = {
+["multi"] = {
+},
+},
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["MAGE"] = true,
+},
+},
+["class_and_spec"] = {
+["single"] = 104,
+["multi"] = {
+[103] = true,
+[104] = true,
+[102] = true,
+[105] = true,
+},
+},
+["spellknown"] = 22842,
+["size"] = {
+["multi"] = {
+},
+},
+},
+["alpha"] = 1,
+["useAdjustededMax"] = false,
+["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
+["information"] = {
+["forceEvents"] = true,
+["ignoreOptionsEventErrors"] = true,
+},
+["conditions"] = {
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 0,
+},
+["changes"] = {
+{
+["value"] = false,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Proc",
+["property"] = "sub.3.glowType",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -1,
+["variable"] = "incombat",
+["value"] = 0,
+},
+["changes"] = {
+{
+["property"] = "sub.3.glow",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -2,
+["op"] = "==",
+["variable"] = "AND",
+["checks"] = {
+{
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 1,
+},
+{
+["trigger"] = 2,
+["op"] = ">",
+["value"] = "0",
+["variable"] = "charges",
+},
+},
+},
+["changes"] = {
+{
+["property"] = "cooldownSwipe",
+},
+{
+["value"] = true,
+["property"] = "cooldownEdge",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 2,
+["op"] = "==",
+["value"] = "0",
+["variable"] = "charges",
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "insufficientResources",
+["value"] = 1,
+["checks"] = {
+{
+["value"] = 1,
+["variable"] = "insufficientResources",
+},
+{
+["trigger"] = -1,
+["variable"] = "incombat",
+},
+},
+},
+["changes"] = {
+{
+["value"] = {
+0.47450983524323,
+0.5137255191803,
+1,
+1,
+},
+["property"] = "color",
+},
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 1,
+["variable"] = "show",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Pixel",
+["property"] = "sub.3.glowType",
+},
+{
+["property"] = "desaturate",
+},
+{
+["property"] = "inverse",
+},
+{
+["value"] = true,
+["property"] = "cooldownEdge",
+},
+{
+["property"] = "color",
+},
+},
+},
+},
+["authorOptions"] = {
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["uid"] = "h0BnBIIndzX",
+["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
+["anchorFrameType"] = "SCREEN",
+["anchorFrameParent"] = false,
+["zoom"] = 0.3,
+["semver"] = "11.0.8",
+["cooldownTextDisabled"] = false,
+["auto"] = true,
+["tocversion"] = 110000,
+["id"] = "Frenzied Regeneration (Guardian)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["keepAspectRatio"] = true,
+["config"] = {
+},
+["inverse"] = true,
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["displayIcon"] = "",
+["cooldown"] = true,
+["selfPoint"] = "CENTER",
+},
+["Call of the Elder Druid"] = {
+["iconSource"] = -1,
+["wagoID"] = "ryBp05DHX",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["adjustedMax"] = "",
+["adjustedMin"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["cooldownSwipe"] = true,
+["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
+["icon"] = true,
+["triggers"] = {
+{
+["trigger"] = {
+["type"] = "aura2",
+["auranames"] = {
+},
+["ownOnly"] = true,
+["event"] = "Health",
+["unit"] = "player",
+["subeventSuffix"] = "_CAST_START",
+["names"] = {
+},
+["spellIds"] = {
+},
+["subeventPrefix"] = "SPELL",
+["auraspellids"] = {
+"319454",
+},
+["useName"] = false,
+["useExactSpellId"] = true,
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["track"] = "auto",
+["auranames"] = {
+"426790",
+},
+["matchesShowOn"] = "showAlways",
+["genericShowOn"] = "showAlways",
+["unit"] = "player",
+["use_showgcd"] = true,
+["debuffType"] = "HARMFUL",
+["subeventPrefix"] = "SPELL",
+["type"] = "aura2",
+["use_absorbHealMode"] = true,
+["subeventSuffix"] = "_CAST_START",
+["use_absorbMode"] = true,
+["use_genericShowOn"] = true,
+["event"] = "Cooldown Progress (Spell)",
+["useName"] = true,
+["realSpellName"] = "Flourish",
+["use_spellName"] = true,
+["spellIds"] = {
+},
+["spellName"] = 426790,
+["ownOnly"] = true,
+["names"] = {
+},
+["use_track"] = true,
+["use_unit"] = true,
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "any",
+["activeTriggerMode"] = -10,
+},
+["internalVersion"] = 75,
+["keepAspectRatio"] = true,
+["selfPoint"] = "CENTER",
+["desaturate"] = false,
+["version"] = 105,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["border_offset"] = 0,
+["type"] = "subborder",
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["border_size"] = 2,
+},
+{
+["glowFrequency"] = 0.25,
+["type"] = "subglow",
+["useGlowColor"] = false,
+["glowType"] = "Proc",
+["glowThickness"] = 1,
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["glowDuration"] = 1,
+["glowXOffset"] = 0,
+["glowScale"] = 1,
+["glow"] = false,
+["glowLength"] = 10,
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+},
+["height"] = 48,
+["load"] = {
+["use_petbattle"] = false,
+["use_never"] = false,
+["talent"] = {
+["multi"] = {
+},
+},
+["use_class_and_spec"] = true,
+["use_class"] = true,
+["use_spellknown"] = true,
+["spec"] = {
+["multi"] = {
+},
+},
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["MAGE"] = true,
+},
+},
+["class_and_spec"] = {
+["single"] = 105,
+["multi"] = {
+[103] = true,
+[104] = true,
+[102] = true,
+[105] = true,
+},
+},
+["spellknown"] = 426784,
+["size"] = {
+["multi"] = {
+},
+},
+},
+["useAdjustededMax"] = false,
+["source"] = "import",
+["zoom"] = 0.3,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["authorOptions"] = {
+},
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.0.8",
+["tocversion"] = 110000,
+["id"] = "Call of the Elder Druid",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = true,
+["uid"] = "OL5Bvlnh26w",
+["inverse"] = true,
+["cooldownEdge"] = false,
+["conditions"] = {
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 0,
+},
+["changes"] = {
+{
+["value"] = false,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Proc",
+["property"] = "sub.3.glowType",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -1,
+["variable"] = "incombat",
+["value"] = 0,
+},
+["changes"] = {
+{
+["property"] = "sub.3.glow",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "buffed",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 1,
+["variable"] = "show",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Pixel",
+["property"] = "sub.3.glowType",
+},
+{
+["property"] = "desaturate",
+},
+{
+["property"] = "inverse",
+},
+{
+["value"] = true,
+["property"] = "cooldownEdge",
+},
+},
+},
+},
+["cooldown"] = true,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
+},
+["Dynamic Effects - LWA - Druid"] = {
+["arcLength"] = 360,
+["controlledChildren"] = {
+"Wild Synthesis",
+"Abundance",
+"Reforrestation",
+"Starsuge (Restoration)",
+"Moonfire (Restoration)",
+"Sunfire (Restoration)",
+"Rake (Restoration)",
+"Rip (Restoration)",
+"Thrash (Restoration)",
+"Bloodseeker Vines (Restoration)",
+"Blooming Infusion",
+"Dream Surge (Restoration)",
+"Owlkin Frenzy",
+"Orbit Breaker ",
+"Starlord",
+"Nature's Grace",
+"Dream Burst",
+"Stellar Amplification",
+"Umbral Embrace (Optional)",
+"Parting Skies (Optional)",
+"Balance of All Things (Optional)",
+"Sudden Ambush",
+"Apex Predator's Craving",
+"Ravage (Feral)",
+"Bloodseeker Vines (Feral)",
+"Ursine Potential",
+"Ursine Vigor (Feral)",
+"Wildshape Mastery (Feral)",
+"Omen of Clarity (Feral)",
+"Predatory Swiftness",
+"Overflowing Power (Optional)",
+"Wild Attunement (PvP Talent)",
+"Dream of Cenarius",
+"Feline Potential",
+"Thrash Debuff (Optional - Guardian)",
+"Rake (Guardian)",
+"Rip (Guardian)",
+"After the Wildfire ",
+"Vicious Cycle (Optional)",
+"Ursine Vigor (Guardian)",
+"Wildshape Mastery (Guardian)",
+"Guardian of Elune",
+"Precognition (Balance & Restoration - PvP Talent)",
+},
+["xOffset"] = -6.103515625e-05,
+["preferToUpdate"] = true,
+["yOffset"] = 0,
+["anchorPoint"] = "TOP",
+["sharedFrameLevel"] = true,
+["borderColor"] = {
+0,
+0,
+0,
+1,
+},
+["rowSpace"] = 1,
+["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
+["selfPoint"] = "BOTTOM",
+["desc"] = "Made by Luxthos - twitch.tv/luxthos",
+["stagger"] = 0,
+["load"] = {
+["size"] = {
+["multi"] = {
+},
+},
+["spec"] = {
+["multi"] = {
+},
+},
+["class"] = {
+["multi"] = {
+},
+},
+["talent"] = {
+["multi"] = {
+},
+},
+},
+["animate"] = false,
+["customGrow"] = "function(newPositions, activeRegions)\n    local LWA = LWA and LWA[\"Druid\"] or {}\n    \n    if LWA and LWA.GrowDynamicEffects then\n        LWA.GrowDynamicEffects(newPositions, activeRegions)\n    end\nend",
+["scale"] = 1,
+["stepAngle"] = 15,
+["hybridSortMode"] = "descending",
+["constantFactor"] = "RADIUS",
+["borderOffset"] = 4,
+["tocversion"] = 110000,
+["alpha"] = 1,
+["borderInset"] = 1,
+["grow"] = "CUSTOM",
+["borderBackdrop"] = "Blizzard Tooltip",
+["wagoID"] = "ryBp05DHX",
+["parent"] = "Luxthos - Druid",
+["sortHybridTable"] = {
+["Stellar Amplification"] = false,
+["Ravage (Feral)"] = false,
+["Ursine Vigor (Guardian)"] = false,
+["Omen of Clarity (Feral)"] = false,
+["Sudden Ambush"] = false,
+["Rip (Guardian)"] = false,
+["Nature's Grace"] = false,
+["Parting Skies (Optional)"] = false,
+["Thrash (Restoration)"] = false,
+["Overflowing Power (Optional)"] = false,
+["Sunfire (Restoration)"] = false,
+["Owlkin Frenzy"] = false,
+["Abundance"] = false,
+["Reforrestation"] = false,
+["Blooming Infusion"] = false,
+["Umbral Embrace (Optional)"] = false,
+["Rake (Restoration)"] = false,
+["Orbit Breaker "] = false,
+["Bloodseeker Vines (Feral)"] = false,
+["Predatory Swiftness"] = false,
+["Moonfire (Restoration)"] = false,
+["Guardian of Elune"] = false,
+["Wildshape Mastery (Guardian)"] = false,
+["Bloodseeker Vines (Restoration)"] = false,
+["After the Wildfire (Optional)"] = false,
+["Starsuge (Restoration)"] = false,
+["Thrash Debuff (Optional - Guardian)"] = false,
+["Rake (Guardian)"] = false,
+["Feline Potential"] = false,
+["Ursine Vigor (Feral)"] = false,
+["Dream of Cenarius"] = false,
+["Precognition (Balance & Restoration - PvP Talent)"] = false,
+["Balance of All Things (Optional)"] = false,
+["Starlord"] = false,
+["Wild Attunement (PvP Talent)"] = false,
+["Dream Burst"] = false,
+["Wild Synthesis"] = false,
+["Ursine Potential"] = false,
+["Rip (Restoration)"] = false,
+["Wildshape Mastery (Feral)"] = false,
+["Dream Surge (Restoration)"] = false,
+["Vicious Cycle (Optional)"] = false,
+["Apex Predator's Craving"] = false,
+},
+["fullCircle"] = true,
+["triggers"] = {
+{
+["trigger"] = {
+["names"] = {
+},
+["type"] = "aura2",
+["spellIds"] = {
+},
+["subeventSuffix"] = "_CAST_START",
+["subeventPrefix"] = "SPELL",
+["debuffType"] = "HELPFUL",
+["event"] = "Health",
+["unit"] = "player",
+},
+["untrigger"] = {
+},
+},
+},
+["columnSpace"] = 1,
+["radius"] = 200,
+["useLimit"] = false,
+["align"] = "CENTER",
+["growOn"] = "show",
+["version"] = 105,
+["subRegions"] = {
+},
+["backdropColor"] = {
+1,
+1,
+1,
+0.5,
+},
+["source"] = "import",
+["centerType"] = "LR",
+["border"] = false,
+["anchorFrameFrame"] = "WeakAuras:General Options - LWA - Druid",
+["hybridPosition"] = "hybridFirst",
+["limit"] = 5,
+["config"] = {
+},
+["authorOptions"] = {
+},
+["borderSize"] = 2,
+["anchorFrameParent"] = false,
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
+["uid"] = "iGDEwE2C3T(",
+["space"] = 2,
+["semver"] = "11.0.8",
+["internalVersion"] = 75,
+["id"] = "Dynamic Effects - LWA - Druid",
+["rotation"] = 0,
+["gridWidth"] = 5,
+["anchorFrameType"] = "SELECTFRAME",
+["frameStrata"] = 1,
+["sort"] = "none",
+["borderEdge"] = "Square Full White",
+["regionType"] = "dynamicgroup",
+["conditions"] = {
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["gridType"] = "RD",
+},
+["Vampiric Touch"] = {
+["iconSource"] = -1,
+["wagoID"] = "BJu2WDqBX",
+["parent"] = "Core - LWA - Priest",
+["adjustedMax"] = "",
+["adjustedMin"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["cooldownSwipe"] = true,
+["cooldownEdge"] = true,
+["icon"] = true,
+["triggers"] = {
+{
+["trigger"] = {
+["type"] = "aura2",
+["auranames"] = {
+"34914",
+},
+["matchesShowOn"] = "showAlways",
+["event"] = "Health",
+["unit"] = "target",
+["unitExists"] = true,
+["ownOnly"] = true,
+["spellIds"] = {
+},
+["subeventSuffix"] = "_CAST_START",
+["subeventPrefix"] = "SPELL",
+["useName"] = true,
+["names"] = {
+},
+["debuffType"] = "HARMFUL",
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["unit"] = "player",
+["type"] = "unit",
+["use_absorbHealMode"] = true,
+["use_alwaystrue"] = true,
+["debuffType"] = "HELPFUL",
+["use_absorbMode"] = true,
+["event"] = "Conditions",
+["use_unit"] = true,
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["type"] = "aura2",
+["auranames"] = {
+"341282",
+},
+["debuffType"] = "HELPFUL",
+["useName"] = true,
+["unit"] = "player",
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["useName"] = true,
+["spellId"] = {
+"341282",
+},
+["auranames"] = {
+"341291",
+},
+["duration"] = "8",
+["event"] = "Combat Log",
+["unit"] = "player",
+["use_spellId"] = true,
+["type"] = "aura2",
+["use_sourceUnit"] = true,
+["subeventSuffix"] = "_AURA_APPLIED",
+["subeventPrefix"] = "SPELL",
+["sourceUnit"] = "player",
+["debuffType"] = "HARMFUL",
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "any",
+["activeTriggerMode"] = -10,
+},
+["internalVersion"] = 75,
+["progressSource"] = {
+-1,
+"",
+},
+["selfPoint"] = "CENTER",
+["desaturate"] = false,
+["version"] = 68,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["border_size"] = 2,
+["type"] = "subborder",
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["border_offset"] = 0,
+},
+{
+["glowFrequency"] = 0.25,
+["type"] = "subglow",
+["glowDuration"] = 1,
+["glowType"] = "Proc",
+["glowThickness"] = 1,
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["useGlowColor"] = false,
+["glowXOffset"] = 0,
+["glowScale"] = 1,
+["glow"] = false,
+["glowLength"] = 10,
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+{
+["text_text_format_p_time_precision"] = 1,
+["text_text_format_s_format"] = "none",
+["text_text"] = "%4.p",
+["rotateText"] = "NONE",
+["text_text_format_p_time_dynamic_threshold"] = 60,
+["text_text_format_p_format"] = "timed",
+["text_fontSize"] = 18,
+["text_selfPoint"] = "CENTER",
+["text_automaticWidth"] = "Auto",
+["text_fixedWidth"] = 64,
+["text_text_format_4.p_time_mod_rate"] = true,
+["anchorYOffset"] = 0,
+["text_justify"] = "CENTER",
+["text_text_format_4.p_time_precision"] = 1,
+["text_shadowColor"] = {
+0,
+0,
+0,
+1,
+},
+["text_text_format_2.s_format"] = "none",
+["text_color"] = {
+1,
+0.76862752437592,
+0.42745101451874,
+1,
+},
+["type"] = "subtext",
+["text_visible"] = true,
+["text_text_format_4.p_time_format"] = 0,
+["text_font"] = "Friz Quadrata TT",
+["text_anchorYOffset"] = -4,
+["text_shadowYOffset"] = 0,
+["text_text_format_4.p_time_dynamic_threshold"] = 0,
+["text_wordWrap"] = "WordWrap",
+["text_fontType"] = "OUTLINE",
+["text_anchorPoint"] = "OUTER_TOP",
+["text_text_format_4.p_time_legacy_floor"] = false,
+["text_text_format_p_time_format"] = 0,
+["text_text_format_4.p_format"] = "timed",
+["anchorXOffset"] = 0,
+["text_shadowXOffset"] = 0,
+},
+},
+["height"] = 48,
+["load"] = {
+["use_petbattle"] = false,
+["class_and_spec"] = {
+["single"] = 258,
+["multi"] = {
+[257] = true,
+[258] = true,
+[256] = true,
+},
+},
+["talent"] = {
+["multi"] = {
+},
+},
+["use_class_and_spec"] = true,
+["use_class"] = true,
+["role"] = {
+["multi"] = {
+},
+},
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["MAGE"] = true,
+},
+},
+["use_never"] = false,
+["use_spellknown"] = true,
+["spec"] = {
+["multi"] = {
+},
+},
+["spellknown"] = 34914,
+["size"] = {
+["multi"] = {
+},
+},
+},
+["alpha"] = 1,
+["useAdjustededMax"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["source"] = "import",
+["preferToUpdate"] = false,
+["information"] = {
+["forceEvents"] = true,
+["ignoreOptionsEventErrors"] = true,
+},
+["conditions"] = {
+{
+["check"] = {
+["trigger"] = 1,
+["variable"] = "buffed",
+["value"] = 0,
+["checks"] = {
+{
+["trigger"] = -1,
+["variable"] = "incombat",
+["value"] = 1,
+},
+{
+["trigger"] = 1,
+["variable"] = "buffed",
+["value"] = 0,
+},
+},
+},
+["changes"] = {
+{
+["value"] = false,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Proc",
+["property"] = "sub.3.glowType",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -1,
+["variable"] = "incombat",
+["value"] = 0,
+},
+["changes"] = {
+{
+["property"] = "sub.3.glow",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 1,
+["variable"] = "buffed",
+["value"] = 0,
+["checks"] = {
+{
+["trigger"] = 1,
+["variable"] = "show",
+["value"] = 0,
+},
+{
+["value"] = "0",
+["op"] = "==",
+["variable"] = "matchCount",
+},
+},
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 3,
+["variable"] = "show",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Proc",
+["property"] = "sub.3.glowType",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 1,
+["op"] = "<=",
+["value"] = "7",
+["variable"] = "expirationTime",
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Proc",
+["property"] = "sub.3.glowType",
+},
+},
+},
+},
+["authorOptions"] = {
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["xOffset"] = 0,
+["uid"] = "evpguIAd2(X",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["anchorFrameType"] = "SCREEN",
+["anchorFrameParent"] = false,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.0.4",
+["zoom"] = 0.3,
+["auto"] = true,
+["tocversion"] = 110000,
+["id"] = "Vampiric Touch",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["keepAspectRatio"] = true,
+["config"] = {
+},
+["inverse"] = false,
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
+["displayIcon"] = "",
+["cooldown"] = true,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
+},
 ["Combot Point 5 (Off-Spec) - Druid"] = {
 ["overlays"] = {
 {
@@ -94388,14 +93976,15 @@ true,
 ["sparkOffsetY"] = 0,
 ["gradientOrientation"] = "HORIZONTAL",
 ["load"] = {
-["itemtypeequipped"] = {
-},
 ["use_petbattle"] = false,
 ["use_never"] = false,
 ["talent"] = {
 ["multi"] = {
 },
 },
+["itemtypeequipped"] = {
+},
+["use_class_and_spec"] = false,
 ["class_and_spec"] = {
 ["single"] = 102,
 ["multi"] = {
@@ -94404,19 +93993,19 @@ true,
 [105] = true,
 },
 },
-["use_class_and_spec"] = false,
 ["class"] = {
 ["single"] = "MONK",
 ["multi"] = {
 ["EVOKER"] = true,
 },
 },
-["use_spellknown"] = false,
 ["use_class"] = true,
 ["role"] = {
 ["multi"] = {
 },
 },
+["use_spellknown"] = false,
+["use_spec"] = true,
 ["spec"] = {
 ["single"] = 3,
 ["multi"] = {
@@ -94425,9 +94014,7 @@ true,
 true,
 },
 },
-["use_spec"] = true,
 ["zoneIds"] = "",
-["use_combat"] = true,
 ["spellknown"] = 1822,
 ["size"] = {
 ["multi"] = {
@@ -94825,818 +94412,13 @@ true,
 },
 ["configGroup"] = "combo_points",
 },
-["Thorns (PvP Talent)"] = {
-["iconSource"] = -1,
-["wagoID"] = "ryBp05DHX",
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["adjustedMax"] = "",
-["adjustedMin"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["cooldownSwipe"] = true,
-["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
-["icon"] = true,
-["triggers"] = {
-{
-["trigger"] = {
-["useName"] = true,
-["auranames"] = {
-"305497",
-},
-["match_countOperator"] = ">",
-["ownOnly"] = true,
-["event"] = "Health",
-["unit"] = "group",
-["names"] = {
-},
-["subeventSuffix"] = "_CAST_START",
-["spellIds"] = {
-},
-["subeventPrefix"] = "SPELL",
-["match_count"] = "0",
-["type"] = "aura2",
-["useMatch_count"] = true,
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["track"] = "auto",
-["use_genericShowOn"] = true,
-["genericShowOn"] = "showAlways",
-["use_unit"] = true,
-["use_showgcd"] = true,
-["debuffType"] = "HELPFUL",
-["type"] = "spell",
-["use_absorbHealMode"] = true,
-["subeventSuffix"] = "_CAST_START",
-["event"] = "Cooldown Progress (Spell)",
-["subeventPrefix"] = "SPELL",
-["realSpellName"] = "Thorns",
-["use_spellName"] = true,
-["spellIds"] = {
-},
-["names"] = {
-},
-["use_absorbMode"] = true,
-["unit"] = "player",
-["use_track"] = true,
-["spellName"] = 305497,
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["track"] = "auto",
-["use_genericShowOn"] = true,
-["genericShowOn"] = "showOnCooldown",
-["use_unit"] = true,
-["use_showgcd"] = true,
-["debuffType"] = "HELPFUL",
-["type"] = "spell",
-["use_absorbHealMode"] = true,
-["subeventSuffix"] = "_CAST_START",
-["event"] = "Cooldown Progress (Spell)",
-["subeventPrefix"] = "SPELL",
-["realSpellName"] = "Thorns",
-["use_spellName"] = true,
-["spellIds"] = {
-},
-["names"] = {
-},
-["use_absorbMode"] = true,
-["unit"] = "player",
-["use_track"] = true,
-["spellName"] = 305497,
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "custom",
-["customTriggerLogic"] = "function(t)\n    if aura_env.config.utility.behavior == 1 then -- Show Only on Cooldown\n        return t[1] or t[3]\n    else\n        return t[2] -- Default: Always Show\n    end\nend\n\n",
-["activeTriggerMode"] = -10,
-},
-["internalVersion"] = 75,
-["keepAspectRatio"] = true,
-["selfPoint"] = "CENTER",
-["desaturate"] = false,
-["version"] = 105,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["border_offset"] = 0,
-["type"] = "subborder",
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["border_size"] = 2,
-},
-{
-["glowFrequency"] = 0.25,
-["type"] = "subglow",
-["useGlowColor"] = false,
-["glowType"] = "Proc",
-["glowThickness"] = 1,
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["glowDuration"] = 1,
-["glowXOffset"] = 0,
-["glowScale"] = 1,
-["glow"] = false,
-["glowLength"] = 10,
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-},
-["height"] = 48,
-["load"] = {
-["use_petbattle"] = false,
-["use_never"] = false,
-["talent"] = {
-["multi"] = {
-},
-},
-["use_class_and_spec"] = false,
-["use_class"] = true,
-["use_spellknown"] = true,
-["spec"] = {
-["multi"] = {
-},
-},
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["MAGE"] = true,
-},
-},
-["class_and_spec"] = {
-["single"] = 64,
-["multi"] = {
-[103] = true,
-[104] = true,
-[102] = true,
-[105] = true,
-},
-},
-["use_combat"] = true,
-["spellknown"] = 305497,
-["size"] = {
-["multi"] = {
-},
-},
-},
-["useAdjustededMax"] = false,
-["source"] = "import",
-["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-{
-["subOptions"] = {
-{
-["type"] = "header",
-["useName"] = true,
-["text"] = "Behavior",
-["noMerge"] = false,
-["width"] = 1,
-},
-{
-["type"] = "select",
-["values"] = {
-"Show on Cooldown",
-"Always Show",
-},
-["default"] = 2,
-["name"] = "Display Behavior",
-["useDesc"] = false,
-["key"] = "behavior",
-["width"] = 1,
-},
-{
-["softMin"] = 0,
-["type"] = "range",
-["bigStep"] = 1,
-["max"] = 100,
-["step"] = 1,
-["width"] = 1,
-["min"] = 0,
-["key"] = "alpha",
-["softMax"] = 100,
-["default"] = 30,
-["name"] = "Always Show Alpha",
-["useDesc"] = false,
-},
-},
-["hideReorder"] = true,
-["useDesc"] = false,
-["nameSource"] = 0,
-["name"] = "Utility Icons",
-["width"] = 1,
-["useCollapse"] = true,
-["noMerge"] = false,
-["collapse"] = true,
-["type"] = "group",
-["limitType"] = "none",
-["groupType"] = "simple",
-["key"] = "utility",
-["size"] = 10,
-},
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["config"] = {
-["utility"] = {
-["behavior"] = 2,
-["alpha"] = 30,
-},
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.0.8",
-["tocversion"] = 110000,
-["id"] = "Thorns (PvP Talent)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
-["uid"] = "8xocQO6bwPt",
-["inverse"] = true,
-["preferToUpdate"] = true,
-["conditions"] = {
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 0,
-},
-["changes"] = {
-{
-["value"] = false,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Proc",
-["property"] = "sub.3.glowType",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -1,
-["variable"] = "incombat",
-["value"] = 0,
-},
-["changes"] = {
-{
-["property"] = "sub.3.glow",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 1,
-["variable"] = "show",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Pixel",
-["property"] = "sub.3.glowType",
-},
-{
-["property"] = "desaturate",
-},
-{
-["property"] = "inverse",
-},
-{
-["value"] = true,
-["property"] = "cooldownEdge",
-},
-{
-["property"] = "color",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -2,
-["variable"] = "AND",
-["checks"] = {
-{
-["trigger"] = 1,
-["variable"] = "show",
-["value"] = 0,
-},
-{
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 0,
-},
-},
-},
-["linked"] = false,
-["changes"] = {
-{
-["value"] = {
-["custom"] = "aura_env.region:SetAlpha(aura_env.config.utility.alpha /100)",
-},
-["property"] = "customcode",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -1,
-["variable"] = "alwaystrue",
-},
-["linked"] = true,
-["changes"] = {
-{
-["value"] = {
-["custom"] = "aura_env.region:SetAlpha(1)",
-},
-["property"] = "customcode",
-},
-},
-},
-},
-["cooldown"] = true,
-["xOffset"] = 0,
-},
-["Voidwraith (Shadow)"] = {
-["iconSource"] = 0,
-["wagoID"] = "BJu2WDqBX",
-["xOffset"] = 0,
-["adjustedMax"] = "",
-["adjustedMin"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["cooldownSwipe"] = true,
-["cooldownEdge"] = false,
-["icon"] = true,
-["triggers"] = {
-{
-["trigger"] = {
-["use_unit"] = true,
-["use_track"] = true,
-["spellId"] = "49206",
-["auranames"] = {
-},
-["subeventPrefix"] = "SPELL",
-["ownOnly"] = true,
-["genericShowOn"] = "showOnCooldown",
-["unit"] = "player",
-["use_genericShowOn"] = true,
-["custom"] = "function(event, arg1)\n    if event == \"PLAYER_TOTEM_UPDATE\" and arg1 then\n        local haveTotem, name, startTime, duration, icon = GetTotemInfo(arg1)\n        if haveTotem and icon == aura_env.texture then\n            aura_env.haveTotem, aura_env.name, aura_env.startTime, aura_env.duration, aura_env.icon = haveTotem, name, startTime, duration, icon\n            aura_env.index = arg1\n            return true\n        elseif aura_env.index == arg1 then\n            aura_env.index = 0\n            aura_env.startTime, aura_env.duration = nil, nil\n        end\n    end\nend",
-["spellIds"] = {
-},
-["use_spellId"] = true,
-["customDuration"] = "function()\n    if aura_env.startTime then\n        return aura_env.duration, aura_env.startTime + aura_env.duration\n    end\nend",
-["duration"] = "35",
-["use_absorbMode"] = true,
-["spellName"] = 0,
-["unevent"] = "auto",
-["type"] = "custom",
-["custom_type"] = "status",
-["subeventSuffix"] = "_CAST_SUCCESS",
-["debuffType"] = "HELPFUL",
-["useName"] = true,
-["event"] = "Cooldown Progress (Spell)",
-["totemName"] = "27829",
-["realSpellName"] = 0,
-["use_spellName"] = true,
-["events"] = "PLAYER_TOTEM_UPDATE",
-["use_sourceUnit"] = true,
-["check"] = "event",
-["names"] = {
-},
-["sourceUnit"] = "player",
-["use_totemName"] = true,
-},
-["untrigger"] = {
-["custom"] = "function()\n    return aura_env.index == 0\nend",
-},
-},
-{
-["trigger"] = {
-["track"] = "auto",
-["duration"] = "1",
-["genericShowOn"] = "showAlways",
-["use_unit"] = true,
-["use_showgcd"] = true,
-["debuffType"] = "HELPFUL",
-["type"] = "spell",
-["spellName"] = 451235,
-["subeventSuffix"] = "_CAST_START",
-["use_genericShowOn"] = true,
-["unevent"] = "auto",
-["event"] = "Cooldown Progress (Spell)",
-["use_exact_spellName"] = true,
-["realSpellName"] = "Mindbender",
-["use_spellName"] = true,
-["spellIds"] = {
-},
-["names"] = {
-},
-["subeventPrefix"] = "SPELL",
-["use_absorbMode"] = true,
-["use_track"] = true,
-["unit"] = "player",
-},
-["untrigger"] = {
-["genericShowOn"] = "showOnCooldown",
-},
-},
-["disjunctive"] = "any",
-["activeTriggerMode"] = -10,
-},
-["internalVersion"] = 75,
-["keepAspectRatio"] = true,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["desaturate"] = false,
-["version"] = 68,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["border_size"] = 2,
-["type"] = "subborder",
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["border_offset"] = 0,
-},
-{
-["glowFrequency"] = 0.25,
-["type"] = "subglow",
-["glowDuration"] = 1,
-["glowType"] = "Proc",
-["glowThickness"] = 1,
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["useGlowColor"] = false,
-["glowXOffset"] = 0,
-["glowScale"] = 1,
-["glow"] = false,
-["glowLength"] = 10,
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-},
-["height"] = 48,
-["load"] = {
-["use_petbattle"] = false,
-["class_and_spec"] = {
-["single"] = 258,
-["multi"] = {
-[257] = true,
-[258] = true,
-[256] = true,
-},
-},
-["talent"] = {
-["multi"] = {
-},
-},
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["MAGE"] = true,
-},
-},
-["use_class_and_spec"] = true,
-["use_never"] = false,
-["use_herotalent"] = false,
-["use_class"] = true,
-["role"] = {
-["multi"] = {
-},
-},
-["use_spellknown"] = true,
-["herotalent"] = {
-["multi"] = {
-["123841"] = true,
-},
-},
-["spec"] = {
-["multi"] = {
-},
-},
-["use_exact_spellknown"] = false,
-["spellknown"] = 34433,
-["size"] = {
-["multi"] = {
-},
-},
-},
-["useAdjustededMax"] = false,
-["anchorFrameType"] = "SCREEN",
-["source"] = "import",
-["parent"] = "Core - LWA - Priest",
-["progressSource"] = {
--1,
-"",
-},
-["information"] = {
-["forceEvents"] = true,
-},
-["conditions"] = {
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 0,
-},
-["changes"] = {
-{
-["value"] = false,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Proc",
-["property"] = "sub.3.glowType",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -1,
-["variable"] = "incombat",
-["value"] = 0,
-},
-["changes"] = {
-{
-["property"] = "sub.3.glow",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "insufficientResources",
-["value"] = 1,
-["checks"] = {
-{
-["value"] = 1,
-["variable"] = "insufficientResources",
-},
-{
-["trigger"] = -1,
-["variable"] = "incombat",
-},
-},
-},
-["changes"] = {
-{
-["value"] = {
-0.47450980392157,
-0.51372549019608,
-1,
-1,
-},
-["property"] = "color",
-},
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "spellInRange",
-["value"] = 0,
-},
-["changes"] = {
-{
-["value"] = {
-0.87450980392157,
-0.34117647058824,
-0.32941176470588,
-1,
-},
-["property"] = "color",
-},
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 1,
-["variable"] = "show",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Pixel",
-["property"] = "sub.3.glowType",
-},
-{
-["property"] = "desaturate",
-},
-{
-["property"] = "inverse",
-},
-{
-["value"] = true,
-["property"] = "cooldownEdge",
-},
-{
-["property"] = "color",
-},
-},
-},
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["preferToUpdate"] = false,
-["uid"] = "1U3lhoPgh)o",
-["frameStrata"] = 1,
-["anchorFrameParent"] = false,
-["alpha"] = 1,
-["zoom"] = 0.3,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.0.4",
-["tocversion"] = 110000,
-["id"] = "Voidwraith (Shadow)",
-["selfPoint"] = "CENTER",
-["useCooldownModRate"] = true,
-["width"] = 48,
-["authorOptions"] = {
-},
-["config"] = {
-},
-["inverse"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-["custom"] = "aura_env.texture = 615099",
-["do_custom"] = true,
-},
-},
-["displayIcon"] = "615099",
-["cooldown"] = true,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-},
-["Combot Point 2 (Off-Spec) - Druid"] = {
+["Combot Point 1 (Off-Spec) - Druid"] = {
 ["overlays"] = {
 {
 0,
 0,
 0,
-0,
-},
-{
-0,
-0,
-0,
-0,
-},
-{
-0,
-0,
-0,
-0,
-},
-{
-0,
-0,
-0,
-0,
+0.40000003576279,
 },
 },
 ["iconSource"] = -1,
@@ -95665,14 +94447,15 @@ true,
 ["sparkOffsetY"] = 0,
 ["gradientOrientation"] = "HORIZONTAL",
 ["load"] = {
-["itemtypeequipped"] = {
-},
 ["use_petbattle"] = false,
 ["use_never"] = false,
 ["talent"] = {
 ["multi"] = {
 },
 },
+["itemtypeequipped"] = {
+},
+["use_class_and_spec"] = false,
 ["class_and_spec"] = {
 ["single"] = 102,
 ["multi"] = {
@@ -95681,19 +94464,19 @@ true,
 [105] = true,
 },
 },
-["use_class_and_spec"] = false,
 ["class"] = {
 ["single"] = "MONK",
 ["multi"] = {
 ["EVOKER"] = true,
 },
 },
-["use_spellknown"] = false,
 ["use_class"] = true,
 ["role"] = {
 ["multi"] = {
 },
 },
+["use_spellknown"] = false,
+["use_spec"] = true,
 ["spec"] = {
 ["single"] = 3,
 ["multi"] = {
@@ -95702,9 +94485,7 @@ true,
 true,
 },
 },
-["use_spec"] = true,
 ["zoneIds"] = "",
-["use_combat"] = true,
 ["spellknown"] = 1822,
 ["size"] = {
 ["multi"] = {
@@ -95737,28 +94518,28 @@ true,
 ["trigger"] = {
 ["auranames"] = {
 },
-["ownOnly"] = true,
+["matchesShowOn"] = "showAlways",
 ["use_showCost"] = false,
-["subeventPrefix"] = "SPELL",
+["names"] = {
+},
 ["powertype"] = 4,
 ["use_powertype"] = true,
 ["debuffType"] = "HELPFUL",
 ["useName"] = true,
 ["use_absorbHealMode"] = true,
 ["subeventSuffix"] = "_CAST_START",
-["use_requirePowerType"] = false,
 ["event"] = "Power",
+["use_requirePowerType"] = false,
 ["use_percentpower"] = false,
-["unit"] = "player",
+["subeventPrefix"] = "SPELL",
 ["use_showChargedComboPoints"] = false,
 ["spellIds"] = {
 },
 ["type"] = "unit",
+["ownOnly"] = true,
 ["use_absorbMode"] = true,
+["unit"] = "player",
 ["use_unit"] = true,
-["names"] = {
-},
-["matchesShowOn"] = "showAlways",
 },
 ["untrigger"] = {
 },
@@ -95934,6 +94715,7 @@ true,
 ["zoom"] = 0,
 ["actions"] = {
 ["start"] = {
+["do_custom"] = false,
 },
 ["finish"] = {
 },
@@ -95943,19 +94725,16 @@ true,
 },
 },
 ["icon_side"] = "RIGHT",
-["uid"] = "iB4HdCDCdV8",
+["uid"] = "xWhMk7iU5kW",
 ["sparkWidth"] = 10,
 ["sparkHeight"] = 30,
-["adjustedMax"] = "2",
+["adjustedMax"] = "1",
 ["overlaysTexture"] = {
-"Solid",
-"Solid",
-"Solid",
 "Solid",
 },
 ["anchorFrameType"] = "SCREEN",
 ["semver"] = "11.0.8",
-["id"] = "Combot Point 2 (Off-Spec) - Druid",
+["id"] = "Combot Point 1 (Off-Spec) - Druid",
 ["sparkHidden"] = "NEVER",
 ["backgroundColor"] = {
 0,
@@ -95965,7 +94744,7 @@ true,
 },
 ["frameStrata"] = 1,
 ["width"] = 65,
-["adjustedMin"] = "1",
+["adjustedMin"] = "0",
 ["anchorFrameParent"] = false,
 ["inverse"] = false,
 ["config"] = {
@@ -95988,7 +94767,7 @@ true,
 ["variable"] = "power",
 },
 {
-["trigger"] = 3,
+["trigger"] = 2,
 ["variable"] = "show",
 ["value"] = 0,
 },
@@ -96005,7 +94784,7 @@ true,
 ["variable"] = "power",
 },
 {
-["trigger"] = 3,
+["trigger"] = 2,
 ["variable"] = "show",
 ["value"] = 1,
 },
@@ -96016,7 +94795,6 @@ true,
 ["variable"] = "percentpower",
 ["trigger"] = 1,
 },
-["linked"] = false,
 ["changes"] = {
 {
 ["value"] = {
@@ -96042,7 +94820,7 @@ true,
 ["variable"] = "power",
 },
 {
-["trigger"] = 3,
+["trigger"] = 2,
 ["variable"] = "show",
 ["value"] = 0,
 },
@@ -96059,7 +94837,7 @@ true,
 ["variable"] = "power",
 },
 {
-["trigger"] = 3,
+["trigger"] = 2,
 ["variable"] = "show",
 ["value"] = 1,
 },
@@ -96101,6 +94879,1077 @@ true,
 ["ignoreOptionsEventErrors"] = true,
 },
 ["configGroup"] = "combo_points",
+},
+["Thorns (PvP Talent)"] = {
+["iconSource"] = -1,
+["wagoID"] = "ryBp05DHX",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["adjustedMax"] = "",
+["adjustedMin"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["cooldownSwipe"] = true,
+["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
+["icon"] = true,
+["triggers"] = {
+{
+["trigger"] = {
+["useName"] = true,
+["auranames"] = {
+"305497",
+},
+["match_countOperator"] = ">",
+["ownOnly"] = true,
+["event"] = "Health",
+["unit"] = "group",
+["names"] = {
+},
+["subeventSuffix"] = "_CAST_START",
+["spellIds"] = {
+},
+["subeventPrefix"] = "SPELL",
+["match_count"] = "0",
+["type"] = "aura2",
+["useMatch_count"] = true,
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["track"] = "auto",
+["use_genericShowOn"] = true,
+["genericShowOn"] = "showAlways",
+["use_unit"] = true,
+["use_showgcd"] = true,
+["debuffType"] = "HELPFUL",
+["type"] = "spell",
+["use_absorbHealMode"] = true,
+["subeventSuffix"] = "_CAST_START",
+["event"] = "Cooldown Progress (Spell)",
+["subeventPrefix"] = "SPELL",
+["realSpellName"] = "Thorns",
+["use_spellName"] = true,
+["spellIds"] = {
+},
+["names"] = {
+},
+["use_absorbMode"] = true,
+["unit"] = "player",
+["use_track"] = true,
+["spellName"] = 305497,
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["track"] = "auto",
+["use_genericShowOn"] = true,
+["genericShowOn"] = "showOnCooldown",
+["use_unit"] = true,
+["use_showgcd"] = true,
+["debuffType"] = "HELPFUL",
+["type"] = "spell",
+["use_absorbHealMode"] = true,
+["subeventSuffix"] = "_CAST_START",
+["event"] = "Cooldown Progress (Spell)",
+["subeventPrefix"] = "SPELL",
+["realSpellName"] = "Thorns",
+["use_spellName"] = true,
+["spellIds"] = {
+},
+["names"] = {
+},
+["use_absorbMode"] = true,
+["unit"] = "player",
+["use_track"] = true,
+["spellName"] = 305497,
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "custom",
+["customTriggerLogic"] = "function(t)\n    if aura_env.config.utility.behavior == 1 then -- Show Only on Cooldown\n        return t[1] or t[3]\n    else\n        return t[2] -- Default: Always Show\n    end\nend\n\n",
+["activeTriggerMode"] = -10,
+},
+["internalVersion"] = 75,
+["keepAspectRatio"] = true,
+["selfPoint"] = "CENTER",
+["desaturate"] = false,
+["version"] = 105,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["border_offset"] = 0,
+["type"] = "subborder",
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["border_size"] = 2,
+},
+{
+["glowFrequency"] = 0.25,
+["type"] = "subglow",
+["useGlowColor"] = false,
+["glowType"] = "Proc",
+["glowThickness"] = 1,
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["glowDuration"] = 1,
+["glowXOffset"] = 0,
+["glowScale"] = 1,
+["glow"] = false,
+["glowLength"] = 10,
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+},
+["height"] = 48,
+["load"] = {
+["use_petbattle"] = false,
+["use_never"] = false,
+["talent"] = {
+["multi"] = {
+},
+},
+["use_class_and_spec"] = false,
+["use_class"] = true,
+["use_spellknown"] = true,
+["spec"] = {
+["multi"] = {
+},
+},
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["MAGE"] = true,
+},
+},
+["class_and_spec"] = {
+["single"] = 64,
+["multi"] = {
+[103] = true,
+[104] = true,
+[102] = true,
+[105] = true,
+},
+},
+["spellknown"] = 305497,
+["size"] = {
+["multi"] = {
+},
+},
+},
+["useAdjustededMax"] = false,
+["source"] = "import",
+["zoom"] = 0.3,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Utilities - LWA - Druid",
+["authorOptions"] = {
+{
+["subOptions"] = {
+{
+["type"] = "header",
+["useName"] = true,
+["text"] = "Behavior",
+["noMerge"] = false,
+["width"] = 1,
+},
+{
+["type"] = "select",
+["values"] = {
+"Show on Cooldown",
+"Always Show",
+},
+["default"] = 2,
+["name"] = "Display Behavior",
+["useDesc"] = false,
+["key"] = "behavior",
+["width"] = 1,
+},
+{
+["softMin"] = 0,
+["type"] = "range",
+["bigStep"] = 1,
+["max"] = 100,
+["step"] = 1,
+["width"] = 1,
+["min"] = 0,
+["key"] = "alpha",
+["softMax"] = 100,
+["default"] = 30,
+["name"] = "Always Show Alpha",
+["useDesc"] = false,
+},
+},
+["hideReorder"] = true,
+["useDesc"] = false,
+["nameSource"] = 0,
+["name"] = "Utility Icons",
+["width"] = 1,
+["useCollapse"] = true,
+["noMerge"] = false,
+["collapse"] = true,
+["type"] = "group",
+["limitType"] = "none",
+["groupType"] = "simple",
+["key"] = "utility",
+["size"] = 10,
+},
+},
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
+["config"] = {
+["utility"] = {
+["behavior"] = 2,
+["alpha"] = 30,
+},
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.0.8",
+["tocversion"] = 110000,
+["id"] = "Thorns (PvP Talent)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = true,
+["uid"] = "8xocQO6bwPt",
+["inverse"] = true,
+["cooldownEdge"] = false,
+["conditions"] = {
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 0,
+},
+["changes"] = {
+{
+["value"] = false,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Proc",
+["property"] = "sub.3.glowType",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -1,
+["variable"] = "incombat",
+["value"] = 0,
+},
+["changes"] = {
+{
+["property"] = "sub.3.glow",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 1,
+["variable"] = "show",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Pixel",
+["property"] = "sub.3.glowType",
+},
+{
+["property"] = "desaturate",
+},
+{
+["property"] = "inverse",
+},
+{
+["value"] = true,
+["property"] = "cooldownEdge",
+},
+{
+["property"] = "color",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -2,
+["variable"] = "AND",
+["checks"] = {
+{
+["trigger"] = 1,
+["variable"] = "show",
+["value"] = 0,
+},
+{
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 0,
+},
+},
+},
+["linked"] = false,
+["changes"] = {
+{
+["value"] = {
+["custom"] = "aura_env.region:SetAlpha(aura_env.config.utility.alpha /100)",
+},
+["property"] = "customcode",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -1,
+["variable"] = "alwaystrue",
+},
+["linked"] = true,
+["changes"] = {
+{
+["value"] = {
+["custom"] = "aura_env.region:SetAlpha(1)",
+},
+["property"] = "customcode",
+},
+},
+},
+},
+["cooldown"] = true,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
+},
+["Voidwraith (Shadow)"] = {
+["iconSource"] = 0,
+["wagoID"] = "BJu2WDqBX",
+["xOffset"] = 0,
+["adjustedMax"] = "",
+["adjustedMin"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["cooldownSwipe"] = true,
+["cooldownEdge"] = false,
+["icon"] = true,
+["triggers"] = {
+{
+["trigger"] = {
+["unit"] = "player",
+["use_track"] = true,
+["spellId"] = "49206",
+["auranames"] = {
+},
+["names"] = {
+},
+["ownOnly"] = true,
+["genericShowOn"] = "showOnCooldown",
+["use_unit"] = true,
+["use_genericShowOn"] = true,
+["spellIds"] = {
+},
+["events"] = "PLAYER_TOTEM_UPDATE",
+["use_spellId"] = true,
+["customDuration"] = "function()\n    if aura_env.startTime then\n        return aura_env.duration, aura_env.startTime + aura_env.duration\n    end\nend",
+["duration"] = "35",
+["use_absorbMode"] = true,
+["spellName"] = 0,
+["subeventSuffix"] = "_CAST_SUCCESS",
+["type"] = "custom",
+["unevent"] = "auto",
+["custom_type"] = "status",
+["debuffType"] = "HELPFUL",
+["useName"] = true,
+["event"] = "Cooldown Progress (Spell)",
+["totemName"] = "27829",
+["realSpellName"] = 0,
+["use_spellName"] = true,
+["custom"] = "function(event, arg1)\n    if event == \"PLAYER_TOTEM_UPDATE\" and arg1 then\n        local haveTotem, name, startTime, duration, icon = GetTotemInfo(arg1)\n        if haveTotem and icon == aura_env.texture then\n            aura_env.haveTotem, aura_env.name, aura_env.startTime, aura_env.duration, aura_env.icon = haveTotem, name, startTime, duration, icon\n            aura_env.index = arg1\n            return true\n        elseif aura_env.index == arg1 then\n            aura_env.index = 0\n            aura_env.startTime, aura_env.duration = nil, nil\n        end\n    end\nend",
+["use_sourceUnit"] = true,
+["check"] = "event",
+["subeventPrefix"] = "SPELL",
+["sourceUnit"] = "player",
+["use_totemName"] = true,
+},
+["untrigger"] = {
+["custom"] = "function()\n    return aura_env.index == 0\nend",
+},
+},
+{
+["trigger"] = {
+["track"] = "auto",
+["duration"] = "1",
+["genericShowOn"] = "showAlways",
+["use_unit"] = true,
+["use_showgcd"] = true,
+["debuffType"] = "HELPFUL",
+["type"] = "spell",
+["spellName"] = 451235,
+["subeventSuffix"] = "_CAST_START",
+["use_genericShowOn"] = true,
+["unevent"] = "auto",
+["event"] = "Cooldown Progress (Spell)",
+["use_exact_spellName"] = true,
+["realSpellName"] = "Mindbender",
+["use_spellName"] = true,
+["spellIds"] = {
+},
+["names"] = {
+},
+["subeventPrefix"] = "SPELL",
+["use_absorbMode"] = true,
+["use_track"] = true,
+["unit"] = "player",
+},
+["untrigger"] = {
+["genericShowOn"] = "showOnCooldown",
+},
+},
+["disjunctive"] = "any",
+["activeTriggerMode"] = -10,
+},
+["internalVersion"] = 75,
+["keepAspectRatio"] = true,
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
+["desaturate"] = false,
+["version"] = 68,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["border_size"] = 2,
+["type"] = "subborder",
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["border_offset"] = 0,
+},
+{
+["glowFrequency"] = 0.25,
+["type"] = "subglow",
+["glowDuration"] = 1,
+["glowType"] = "Proc",
+["glowThickness"] = 1,
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["useGlowColor"] = false,
+["glowXOffset"] = 0,
+["glowScale"] = 1,
+["glow"] = false,
+["glowLength"] = 10,
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+},
+["height"] = 48,
+["load"] = {
+["use_petbattle"] = false,
+["class_and_spec"] = {
+["single"] = 258,
+["multi"] = {
+[257] = true,
+[258] = true,
+[256] = true,
+},
+},
+["talent"] = {
+["multi"] = {
+},
+},
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["MAGE"] = true,
+},
+},
+["use_class_and_spec"] = true,
+["use_never"] = false,
+["use_herotalent"] = false,
+["use_class"] = true,
+["role"] = {
+["multi"] = {
+},
+},
+["use_spellknown"] = true,
+["herotalent"] = {
+["multi"] = {
+["123841"] = true,
+},
+},
+["spec"] = {
+["multi"] = {
+},
+},
+["use_exact_spellknown"] = false,
+["spellknown"] = 34433,
+["size"] = {
+["multi"] = {
+},
+},
+},
+["useAdjustededMax"] = false,
+["anchorFrameType"] = "SCREEN",
+["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["information"] = {
+["forceEvents"] = true,
+},
+["conditions"] = {
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 0,
+},
+["changes"] = {
+{
+["value"] = false,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Proc",
+["property"] = "sub.3.glowType",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -1,
+["variable"] = "incombat",
+["value"] = 0,
+},
+["changes"] = {
+{
+["property"] = "sub.3.glow",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "insufficientResources",
+["value"] = 1,
+["checks"] = {
+{
+["value"] = 1,
+["variable"] = "insufficientResources",
+},
+{
+["trigger"] = -1,
+["variable"] = "incombat",
+},
+},
+},
+["changes"] = {
+{
+["value"] = {
+0.47450980392157,
+0.51372549019608,
+1,
+1,
+},
+["property"] = "color",
+},
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "spellInRange",
+["value"] = 0,
+},
+["changes"] = {
+{
+["value"] = {
+0.87450980392157,
+0.34117647058824,
+0.32941176470588,
+1,
+},
+["property"] = "color",
+},
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 1,
+["variable"] = "show",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Pixel",
+["property"] = "sub.3.glowType",
+},
+{
+["property"] = "desaturate",
+},
+{
+["property"] = "inverse",
+},
+{
+["value"] = true,
+["property"] = "cooldownEdge",
+},
+{
+["property"] = "color",
+},
+},
+},
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["preferToUpdate"] = false,
+["uid"] = "1U3lhoPgh)o",
+["frameStrata"] = 1,
+["anchorFrameParent"] = false,
+["alpha"] = 1,
+["zoom"] = 0.3,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.0.4",
+["tocversion"] = 110000,
+["id"] = "Voidwraith (Shadow)",
+["selfPoint"] = "CENTER",
+["useCooldownModRate"] = true,
+["width"] = 48,
+["authorOptions"] = {
+},
+["config"] = {
+},
+["inverse"] = true,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+["custom"] = "aura_env.texture = 615099",
+["do_custom"] = true,
+},
+},
+["displayIcon"] = "615099",
+["cooldown"] = true,
+["parent"] = "Core - LWA - Priest",
+},
+["Nature's Swiftness (Druid)"] = {
+["iconSource"] = -1,
+["wagoID"] = "ryBp05DHX",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["adjustedMax"] = "",
+["adjustedMin"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["cooldownSwipe"] = true,
+["url"] = "https://wago.io/LuxthosDruidWarWithin/105",
+["icon"] = true,
+["triggers"] = {
+{
+["trigger"] = {
+["type"] = "aura2",
+["auranames"] = {
+"132158",
+},
+["ownOnly"] = true,
+["event"] = "Health",
+["unit"] = "player",
+["spellIds"] = {
+},
+["names"] = {
+},
+["subeventSuffix"] = "_CAST_START",
+["subeventPrefix"] = "SPELL",
+["useName"] = true,
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["track"] = "auto",
+["use_genericShowOn"] = true,
+["genericShowOn"] = "showAlways",
+["use_unit"] = true,
+["use_showgcd"] = true,
+["debuffType"] = "HELPFUL",
+["type"] = "spell",
+["use_absorbHealMode"] = true,
+["subeventSuffix"] = "_CAST_START",
+["event"] = "Cooldown Progress (Spell)",
+["subeventPrefix"] = "SPELL",
+["realSpellName"] = "Nature's Swiftness",
+["use_spellName"] = true,
+["spellIds"] = {
+},
+["names"] = {
+},
+["use_absorbMode"] = true,
+["unit"] = "player",
+["use_track"] = true,
+["spellName"] = 132158,
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "any",
+["customTriggerLogic"] = "",
+["activeTriggerMode"] = -10,
+},
+["internalVersion"] = 75,
+["keepAspectRatio"] = true,
+["selfPoint"] = "CENTER",
+["desaturate"] = false,
+["version"] = 105,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["border_offset"] = 0,
+["type"] = "subborder",
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["border_size"] = 2,
+},
+{
+["glowFrequency"] = 0.25,
+["type"] = "subglow",
+["useGlowColor"] = false,
+["glowType"] = "Proc",
+["glowThickness"] = 1,
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["glowDuration"] = 1,
+["glowXOffset"] = 0,
+["glowScale"] = 1,
+["glow"] = false,
+["glowLength"] = 10,
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+},
+["height"] = 48,
+["load"] = {
+["use_petbattle"] = false,
+["use_never"] = false,
+["talent"] = {
+["multi"] = {
+},
+},
+["use_class_and_spec"] = true,
+["use_class"] = true,
+["use_spellknown"] = true,
+["spec"] = {
+["multi"] = {
+},
+},
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["MAGE"] = true,
+},
+},
+["class_and_spec"] = {
+["single"] = 105,
+["multi"] = {
+[103] = true,
+[104] = true,
+[102] = true,
+[105] = true,
+},
+},
+["spellknown"] = 132158,
+["size"] = {
+["multi"] = {
+},
+},
+},
+["useAdjustededMax"] = false,
+["source"] = "import",
+["zoom"] = 0.3,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["authorOptions"] = {
+},
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.0.8",
+["tocversion"] = 110000,
+["id"] = "Nature's Swiftness (Druid)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = true,
+["uid"] = "A2tqHaNKW3h",
+["inverse"] = true,
+["cooldownEdge"] = false,
+["conditions"] = {
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 0,
+},
+["changes"] = {
+{
+["value"] = false,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Proc",
+["property"] = "sub.3.glowType",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -1,
+["variable"] = "incombat",
+["value"] = 0,
+},
+["changes"] = {
+{
+["property"] = "sub.3.glow",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 1,
+["variable"] = "show",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Pixel",
+["property"] = "sub.3.glowType",
+},
+{
+["property"] = "desaturate",
+},
+{
+["property"] = "inverse",
+},
+{
+["value"] = true,
+["property"] = "cooldownEdge",
+},
+{
+["property"] = "color",
+},
+},
+},
+},
+["cooldown"] = true,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Pain Suppresion"] = {
 ["iconSource"] = -1,
@@ -96295,21 +96144,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -96463,7 +96305,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Holy Word: Sanctify"] = {
 ["iconSource"] = -1,
@@ -96647,21 +96496,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -96857,7 +96699,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Power Word: Radiance 1"] = {
 ["sparkWidth"] = 10,
@@ -96970,11 +96819,11 @@ true,
 ["stacks"] = "2",
 ["names"] = {
 },
-["trackcharge"] = "1",
+["useName"] = true,
 ["use_trackcharge"] = true,
 ["debuffType"] = "HELPFUL",
 ["charges_operator"] = "==",
-["type"] = "spell",
+["charges"] = "2",
 ["power"] = "1",
 ["unevent"] = "auto",
 ["track"] = "auto",
@@ -96985,8 +96834,8 @@ true,
 ["use_spellName"] = true,
 ["spellIds"] = {
 },
-["charges"] = "2",
-["useName"] = true,
+["type"] = "spell",
+["trackcharge"] = "1",
 ["unit"] = "player",
 ["duration"] = "1",
 ["use_genericShowOn"] = true,
@@ -97293,7 +97142,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 1822,
 ["size"] = {
 ["multi"] = {
@@ -97303,7 +97151,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = true,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Dynamic Effects - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["type"] = "preset",
@@ -97326,25 +97186,6 @@ true,
 ["preset"] = "shrink",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -97357,14 +97198,21 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Dynamic Effects - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "LmsgVsWPxHg",
 ["inverse"] = false,
-["preferToUpdate"] = true,
+["cooldownEdge"] = true,
 ["conditions"] = {
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Prayer of Mending (Discipline)"] = {
 ["iconSource"] = -1,
@@ -97494,26 +97342,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -97527,9 +97373,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "zgxCCUkvQ7J",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -97550,6 +97393,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "zgxCCUkvQ7J",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -97627,11 +97473,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Core - LWA - Druid"] = {
@@ -97769,10 +97617,10 @@ true,
 ["Convoke the Spirits (Balance)"] = false,
 ["Starfire"] = false,
 ["Wrath"] = false,
-["Tranquility"] = false,
+["Lunar Beam"] = false,
 ["Feral Frenzy"] = false,
 ["Ironfur"] = false,
-["Convoke the Spirits (Restoration)"] = false,
+["Tranquility"] = false,
 ["Wild Mushroom"] = false,
 ["Regrowth (Clearcasting)"] = false,
 ["Rage of the Sleeper"] = false,
@@ -97780,7 +97628,7 @@ true,
 ["Celestial Alignment"] = false,
 ["Flourish"] = false,
 ["Berserk (Guardian)"] = false,
-["Lunar Beam"] = false,
+["Convoke the Spirits (Restoration)"] = false,
 ["Celestial Alignment (Orbital Strike)"] = false,
 ["Warrior of Elune"] = false,
 ["Pulverize"] = false,
@@ -98018,21 +97866,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -98101,7 +97942,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Circle of Healing"] = {
 ["iconSource"] = -1,
@@ -98311,21 +98159,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -98491,7 +98332,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Halo (Discipline)"] = {
 ["iconSource"] = -1,
@@ -98620,26 +98468,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -98653,9 +98499,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "HnlBIneghXJ",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -98676,6 +98519,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "HnlBIneghXJ",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -98753,11 +98599,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Moonfire (Feral)"] = {
@@ -98996,7 +98844,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 155580,
 ["size"] = {
 ["multi"] = {
@@ -99398,7 +99245,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 6795,
 ["size"] = {
 ["multi"] = {
@@ -99408,36 +99254,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -99490,12 +99317,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -99514,10 +99353,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "kbw4)0WNE7K",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -99616,7 +99455,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Precognition (Priest - PvP Talent)"] = {
 ["iconSource"] = -1,
@@ -99746,21 +99592,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -99829,7 +99668,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Class Options - LWA - Druid"] = {
 ["iconSource"] = 0,
@@ -99850,14 +99696,14 @@ true,
 ["event"] = "GTFO",
 ["unit"] = "player",
 ["debuffType"] = "HELPFUL",
+["events"] = "OPTIONS",
 ["custom"] = "function ()\n    WeakAuras.ScanEvents(\"LWA_OPTIONS\")\nend",
-["spellIds"] = {
-},
 ["custom_type"] = "event",
 ["names"] = {
 },
 ["subeventPrefix"] = "SPELL",
-["events"] = "OPTIONS",
+["spellIds"] = {
+},
 ["custom_hide"] = "custom",
 },
 ["untrigger"] = {
@@ -99901,24 +99747,7 @@ true,
 },
 ["height"] = 1.0000075101852,
 ["load"] = {
-["use_never"] = false,
-["talent"] = {
-["multi"] = {
-},
-},
-["spec"] = {
-["multi"] = {
-},
-},
 ["use_class"] = true,
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["WARLOCK"] = true,
-},
-},
-["use_class_and_spec"] = false,
-["use_combat"] = true,
 ["class_and_spec"] = {
 ["single"] = 64,
 ["multi"] = {
@@ -99926,6 +99755,22 @@ true,
 [104] = true,
 [102] = true,
 [105] = true,
+},
+},
+["use_never"] = false,
+["talent"] = {
+["multi"] = {
+},
+},
+["use_class_and_spec"] = false,
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["WARLOCK"] = true,
+},
+},
+["spec"] = {
+["multi"] = {
 },
 },
 ["size"] = {
@@ -99937,7 +99782,6 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["desaturate"] = false,
 ["actions"] = {
 ["start"] = {
 },
@@ -99947,6 +99791,12 @@ true,
 ["custom"] = "aura_env.CLASS = aura_env.id:gsub(\"Class Options %- LWA %- \", \"\")\n\nLWA = LWA or {}\nLWA[aura_env.CLASS] = LWA[aura_env.CLASS] or {}\n\nlocal LWA = LWA[aura_env.CLASS]\n\nLWA.configs = LWA.configs or {}\nLWA.configs[\"class\"] = aura_env.config\n\n",
 ["do_custom"] = true,
 },
+},
+["color"] = {
+0,
+0,
+0,
+0,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -102296,12 +102146,7 @@ true,
 ["adjustedMax"] = "",
 ["displayIcon"] = 134520,
 ["cooldown"] = false,
-["color"] = {
-0,
-0,
-0,
-0,
-},
+["desaturate"] = false,
 },
 ["Umbral Embrace (Optional)"] = {
 ["iconSource"] = -1,
@@ -102469,7 +102314,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 393760,
 ["size"] = {
 ["multi"] = {
@@ -102478,9 +102322,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -102544,7 +102388,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Sanctified Prayers (Optional)"] = {
 ["iconSource"] = -1,
@@ -102672,21 +102516,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -102755,7 +102592,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Apotheosis"] = {
 ["iconSource"] = -1,
@@ -102907,26 +102751,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -102940,9 +102782,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "w3dOH7WpJfB",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -102963,6 +102802,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "w3dOH7WpJfB",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -103070,11 +102912,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Brutal Slash"] = {
@@ -103274,7 +103118,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 202028,
 ["size"] = {
 ["multi"] = {
@@ -103283,9 +103126,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -103464,7 +103307,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Void Torrent"] = {
 ["iconSource"] = -1,
@@ -103664,11 +103507,11 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["parent"] = "Core - LWA - Priest",
 ["progressSource"] = {
 -1,
 "",
 },
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -103815,7 +103658,7 @@ true,
 },
 ["displayIcon"] = 1386551,
 ["cooldown"] = true,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["parent"] = "Core - LWA - Priest",
 },
 ["Lifebloom"] = {
 ["iconSource"] = -1,
@@ -104042,7 +103885,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 33763,
 ["size"] = {
 ["multi"] = {
@@ -104051,9 +103893,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -104207,7 +104049,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Rage Bar (Off-Spec) - LWA - Druid"] = {
 ["overlays"] = {
@@ -104249,14 +104091,15 @@ true,
 ["sparkOffsetY"] = 0,
 ["gradientOrientation"] = "HORIZONTAL",
 ["load"] = {
-["itemtypeequipped"] = {
-},
 ["use_petbattle"] = false,
 ["use_never"] = false,
 ["talent"] = {
 ["multi"] = {
 },
 },
+["itemtypeequipped"] = {
+},
+["use_class_and_spec"] = false,
 ["class_and_spec"] = {
 ["multi"] = {
 [103] = true,
@@ -104264,18 +104107,18 @@ true,
 [105] = true,
 },
 },
-["use_class_and_spec"] = false,
 ["class"] = {
 ["single"] = "MONK",
 ["multi"] = {
 },
 },
-["use_spellknown"] = true,
 ["use_class"] = true,
 ["role"] = {
 ["multi"] = {
 },
 },
+["use_spellknown"] = true,
+["use_spec"] = false,
 ["spec"] = {
 ["single"] = 3,
 ["multi"] = {
@@ -104283,9 +104126,7 @@ true,
 [3] = true,
 },
 },
-["use_spec"] = false,
 ["zoneIds"] = "",
-["use_combat"] = true,
 ["spellknown"] = 5487,
 ["size"] = {
 ["multi"] = {
@@ -104462,9 +104303,9 @@ true,
 ["icon"] = false,
 ["actions"] = {
 ["start"] = {
+["do_message"] = false,
 ["custom"] = "",
 ["do_custom"] = false,
-["do_message"] = false,
 },
 ["finish"] = {
 },
@@ -104657,21 +104498,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -104724,7 +104558,14 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Power Word: Life (Discipline)"] = {
 ["iconSource"] = -1,
@@ -104853,26 +104694,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -104886,9 +104725,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "pyx)UoEeyse",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -104909,6 +104745,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "pyx)UoEeyse",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -104986,11 +104825,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Dream Surge (Restoration)"] = {
@@ -105155,25 +104996,24 @@ true,
 },
 },
 ["use_class_and_spec"] = true,
+["use_class"] = true,
+["use_spellknown"] = false,
 ["spec"] = {
 ["multi"] = {
 },
 },
-["use_class"] = true,
-["use_spellknown"] = false,
-["use_herotalent"] = false,
 ["herotalent"] = {
 ["multi"] = {
 ["117195"] = true,
 },
 },
+["use_herotalent"] = false,
 ["class"] = {
 ["single"] = "MAGE",
 ["multi"] = {
 ["MAGE"] = true,
 },
 },
-["use_combat"] = true,
 ["class_and_spec"] = {
 ["single"] = 105,
 ["multi"] = {
@@ -105190,9 +105030,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -105260,7 +105100,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Demoralizing Roar (PvP Talent)"] = {
 ["iconSource"] = -1,
@@ -105432,7 +105272,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 201664,
 ["size"] = {
 ["multi"] = {
@@ -105442,36 +105281,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -105524,12 +105344,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -105548,10 +105380,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "lPfEyKFr(nh",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -105669,7 +105501,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Starsuge (Restoration)"] = {
 ["iconSource"] = -1,
@@ -105793,7 +105632,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 197626,
 ["size"] = {
 ["multi"] = {
@@ -105803,7 +105641,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Dynamic Effects - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["type"] = "preset",
@@ -105826,27 +105676,6 @@ true,
 ["preset"] = "shrink",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-["custom"] = "aura_env.region.extraZoom = 0.2",
-["do_custom"] = true,
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -105859,10 +105688,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Dynamic Effects - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "hjPZhwohi7p",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -105962,7 +105791,16 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+["custom"] = "aura_env.region.extraZoom = 0.2",
+["do_custom"] = true,
+},
+},
 },
 ["Dispersion"] = {
 ["iconSource"] = -1,
@@ -106141,17 +105979,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Utilities - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -106204,13 +106044,9 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 ["utility"] = {
@@ -106228,9 +106064,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "IZZzjerIG(r",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -106251,6 +106084,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "IZZzjerIG(r",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -106368,11 +106204,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Evangelism"] = {
@@ -106502,26 +106340,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -106535,9 +106371,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = ")dF)fgnQ80n",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -106558,6 +106391,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = ")dF)fgnQ80n",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -106603,11 +106439,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Predatory Swiftness"] = {
@@ -106753,7 +106591,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 16974,
 ["size"] = {
 ["multi"] = {
@@ -106762,9 +106599,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -106817,7 +106654,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Holy Fire"] = {
 ["iconSource"] = 0,
@@ -107006,21 +106843,14 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["source"] = "import",
+["preferToUpdate"] = false,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -107197,7 +107027,14 @@ true,
 },
 ["displayIcon"] = 135972,
 ["cooldown"] = true,
-["preferToUpdate"] = false,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Divine Ascension (PvP Talent)"] = {
 ["iconSource"] = 0,
@@ -107398,11 +107235,11 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["parent"] = "Utilities - LWA - Priest",
 ["progressSource"] = {
 -1,
 "",
 },
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -107676,7 +107513,7 @@ true,
 },
 ["displayIcon"] = 642580,
 ["cooldown"] = true,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
+["parent"] = "Utilities - LWA - Priest",
 },
 ["Power Word: LIfe (Shadow)"] = {
 ["iconSource"] = -1,
@@ -107834,17 +107671,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Utilities - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -107897,13 +107736,9 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 ["utility"] = {
@@ -107921,9 +107756,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "oYa(Bv6IJDF",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -107944,6 +107776,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "oYa(Bv6IJDF",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -108032,11 +107867,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Soothe"] = {
@@ -108188,7 +108025,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 2908,
 ["size"] = {
 ["multi"] = {
@@ -108198,36 +108034,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -108280,12 +108097,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -108304,10 +108133,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "btdy4tbgSDK",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -108406,7 +108235,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Starlord"] = {
 ["iconSource"] = -1,
@@ -108588,7 +108424,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 202345,
 ["size"] = {
 ["multi"] = {
@@ -108597,9 +108432,9 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["selfPoint"] = "CENTER",
-["source"] = "import",
 ["icon"] = true,
+["source"] = "import",
+["preferToUpdate"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
@@ -108636,7 +108471,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["preferToUpdate"] = true,
+["selfPoint"] = "CENTER",
 },
 ["Health Bar - LWA - Priest"] = {
 ["sparkWidth"] = 10,
@@ -108649,9 +108484,9 @@ true,
 ["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["actions"] = {
 ["start"] = {
+["do_message"] = false,
 ["do_custom"] = false,
 ["custom"] = "",
-["do_message"] = false,
 },
 ["finish"] = {
 },
@@ -109077,7 +108912,6 @@ true,
 [105] = true,
 },
 },
-["use_combat"] = true,
 ["spellknown"] = 132469,
 ["size"] = {
 ["multi"] = {
@@ -109087,36 +108921,17 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -109169,12 +108984,24 @@ true,
 ["size"] = 10,
 },
 },
-["actions"] = {
+["animation"] = {
 ["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 ["finish"] = {
-},
-["init"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
 },
 ["config"] = {
@@ -109193,10 +109020,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Utilities - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "J4D9Tz4dUZj",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -109285,7 +109112,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Starfire 2"] = {
 ["sparkWidth"] = 10,
@@ -109320,13 +109154,13 @@ true,
 ["sparkOffsetY"] = 0,
 ["gradientOrientation"] = "HORIZONTAL",
 ["load"] = {
-["zoneIds"] = "",
 ["use_petbattle"] = false,
 ["use_never"] = false,
 ["talent"] = {
 ["multi"] = {
 },
 },
+["zoneIds"] = "",
 ["spec"] = {
 ["single"] = 2,
 ["multi"] = {
@@ -109335,25 +109169,24 @@ true,
 },
 },
 ["use_class_and_spec"] = true,
-["use_exact_spellknown"] = false,
+["class_and_spec"] = {
+["single"] = 102,
+},
+["use_class"] = true,
+["use_spellknown"] = true,
 ["class"] = {
 ["single"] = "HUNTER",
 ["multi"] = {
 ["EVOKER"] = true,
 },
 },
-["use_class"] = true,
-["use_spellknown"] = true,
-["use_spec"] = true,
 ["herotalent"] = {
 ["multi"] = {
 ["117770"] = false,
 },
 },
-["class_and_spec"] = {
-["single"] = 102,
-},
-["use_combat"] = true,
+["use_spec"] = true,
+["use_exact_spellknown"] = false,
 ["spellknown"] = 79577,
 ["size"] = {
 ["multi"] = {
@@ -109398,20 +109231,21 @@ true,
 ["duration"] = "1",
 ["useStacks"] = true,
 ["use_rune"] = true,
-["use_unit"] = true,
+["names"] = {
+},
 ["use_absorbMode"] = true,
 ["genericShowOn"] = "showAlways",
-["unit"] = "player",
+["use_unit"] = true,
 ["powertype"] = 19,
 ["stacks"] = "1",
 ["use_charges"] = false,
-["type"] = "spell",
+["useName"] = true,
 ["use_trackcharge"] = false,
-["trackcharge"] = "2",
+["charges"] = "1",
 ["use_powertype"] = true,
 ["debuffType"] = "HELPFUL",
 ["charges_operator"] = ">",
-["charges"] = "1",
+["trackcharge"] = "2",
 ["unevent"] = "auto",
 ["power"] = "1",
 ["use_spellCount"] = false,
@@ -109422,10 +109256,9 @@ true,
 ["use_spellName"] = true,
 ["spellIds"] = {
 },
-["useName"] = true,
+["type"] = "spell",
 ["subeventPrefix"] = "SPELL",
-["names"] = {
-},
+["unit"] = "player",
 ["spellCount_operator"] = "==",
 ["matchesShowOn"] = "showOnActive",
 },
@@ -109862,14 +109695,14 @@ true,
 },
 },
 ["use_class_and_spec"] = true,
+["use_class"] = true,
+["use_spellknown"] = true,
 ["class"] = {
 ["single"] = "MAGE",
 ["multi"] = {
 ["MAGE"] = true,
 },
 },
-["use_class"] = true,
-["use_spellknown"] = true,
 ["class_and_spec"] = {
 ["single"] = 103,
 ["multi"] = {
@@ -109879,12 +109712,11 @@ true,
 [105] = true,
 },
 },
-["use_exact_spellknown"] = true,
 ["spec"] = {
 ["multi"] = {
 },
 },
-["use_combat"] = true,
+["use_exact_spellknown"] = true,
 ["spellknown"] = 391528,
 ["size"] = {
 ["multi"] = {
@@ -109894,7 +109726,19 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["cooldownEdge"] = false,
+["xOffset"] = 0,
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["parent"] = "Core - LWA - Druid",
+["authorOptions"] = {
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -109915,25 +109759,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["progressSource"] = {
--1,
-"",
-},
-["authorOptions"] = {
-},
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 ["config"] = {
 },
 ["anchorFrameParent"] = false,
@@ -109946,10 +109771,10 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["parent"] = "Core - LWA - Druid",
+["preferToUpdate"] = true,
 ["uid"] = "01OtqLk(lEo",
 ["inverse"] = true,
-["preferToUpdate"] = true,
+["cooldownEdge"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -110022,7 +109847,14 @@ true,
 },
 },
 ["cooldown"] = true,
-["xOffset"] = 0,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 },
 ["Power Word: Radiance - LWA - Priest"] = {
 ["grow"] = "CUSTOM",
@@ -110034,13 +109866,13 @@ true,
 ["wagoID"] = "BJu2WDqBX",
 ["xOffset"] = 0,
 ["preferToUpdate"] = false,
-["alpha"] = 1,
+["gridWidth"] = 5,
 ["yOffset"] = 0,
 ["sortHybridTable"] = {
 ["Power Word: Radiance 1"] = false,
 ["Power Word: Radiance 2"] = false,
 },
-["limit"] = 6,
+["source"] = "import",
 ["sharedFrameLevel"] = true,
 ["borderColor"] = {
 0,
@@ -110078,7 +109910,13 @@ true,
 },
 ["columnSpace"] = 1,
 ["internalVersion"] = 75,
-["useLimit"] = false,
+["gridType"] = "RD",
+["selfPoint"] = "TOP",
+["align"] = "LEFT",
+["growOn"] = "show",
+["anchorPoint"] = "CENTER",
+["radius"] = 200,
+["rotation"] = 0,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -110099,12 +109937,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["align"] = "LEFT",
-["growOn"] = "show",
-["selfPoint"] = "TOP",
-["anchorPoint"] = "CENTER",
-["rotation"] = 0,
-["radius"] = 200,
 ["version"] = 68,
 ["subRegions"] = {
 },
@@ -110136,25 +109968,25 @@ true,
 0.5,
 },
 ["borderInset"] = 1,
-["source"] = "import",
+["animate"] = false,
 ["customGrow"] = "function(newPositions, activeRegions)\n    local LWA = LWA and LWA[\"Priest\"] or {}\n    \n    if LWA and LWA.GrowDynamicResource then\n        LWA.GrowDynamicResource(newPositions, activeRegions)\n    end\nend",
 ["scale"] = 1,
 ["centerType"] = "LR",
 ["border"] = false,
 ["borderEdge"] = "Square Full White",
-["stepAngle"] = 15,
+["regionType"] = "dynamicgroup",
 ["borderSize"] = 2,
 ["sort"] = "none",
-["regionType"] = "dynamicgroup",
-["gridWidth"] = 5,
+["limit"] = 6,
+["frameStrata"] = 1,
 ["constantFactor"] = "RADIUS",
 ["space"] = 2,
 ["borderOffset"] = 4,
 ["semver"] = "11.0.4",
 ["tocversion"] = 110000,
 ["id"] = "Power Word: Radiance - LWA - Priest",
-["animate"] = false,
-["frameStrata"] = 1,
+["stepAngle"] = 15,
+["alpha"] = 1,
 ["anchorFrameType"] = "SCREEN",
 ["fullCircle"] = true,
 ["config"] = {
@@ -110167,7 +109999,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["gridType"] = "RD",
+["useLimit"] = false,
 },
 ["Power Infusion (Discipline)"] = {
 ["iconSource"] = -1,
@@ -110322,26 +110154,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -110355,9 +110185,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "94vBkgHZl0r",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -110378,6 +110205,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "94vBkgHZl0r",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -110450,11 +110280,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Power Word: Radiance 2"] = {
@@ -110568,11 +110400,11 @@ true,
 ["stacks"] = "1",
 ["names"] = {
 },
-["trackcharge"] = "2",
+["useName"] = true,
 ["use_trackcharge"] = true,
 ["debuffType"] = "HELPFUL",
 ["charges_operator"] = ">",
-["type"] = "spell",
+["charges"] = "1",
 ["power"] = "1",
 ["unevent"] = "auto",
 ["track"] = "auto",
@@ -110583,8 +110415,8 @@ true,
 ["use_spellName"] = true,
 ["spellIds"] = {
 },
-["charges"] = "1",
-["useName"] = true,
+["type"] = "spell",
+["trackcharge"] = "2",
 ["unit"] = "player",
 ["duration"] = "1",
 ["use_genericShowOn"] = true,
@@ -110935,26 +110767,24 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["cooldownTextDisabled"] = false,
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
+["color"] = {
+1,
+1,
+1,
+1,
 },
+["parent"] = "Core - LWA - Priest",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
 ["authorOptions"] = {
 },
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 ["config"] = {
 },
@@ -110968,9 +110798,6 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["url"] = "https://wago.io/LuxthosPriestWarWithin/68",
-["uid"] = "fVlmN6ZtEzr",
-["inverse"] = true,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -110991,6 +110818,9 @@ true,
 ["easeType"] = "none",
 },
 },
+["uid"] = "fVlmN6ZtEzr",
+["inverse"] = true,
+["preferToUpdate"] = false,
 ["conditions"] = {
 {
 ["check"] = {
@@ -111098,11 +110928,13 @@ true,
 },
 },
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
 },
 },
 ["Cast Bar - LWA - Priest"] = {
@@ -111530,4 +111362,7 @@ true,
 ["preferToUpdate"] = false,
 },
 },
+["features"] = {
+},
+["lastUpgrade"] = 1722213308,
 }

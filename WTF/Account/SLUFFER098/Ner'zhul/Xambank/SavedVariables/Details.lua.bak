@@ -92,10 +92,10 @@ _detalhes_database = {
 ["attribute"] = 1,
 ["pos"] = {
 ["normal"] = {
-["y"] = -585.9990386962891,
-["x"] = 1510.748779296875,
+["y"] = -585.9990234375,
+["x"] = 1510.74951171875,
 ["w"] = 380.4989624023438,
-["h"] = 184.0003662109375,
+["h"] = 184.0003509521484,
 },
 ["solo"] = {
 ["y"] = 2,
@@ -127,8 +127,8 @@ _detalhes_database = {
 ["attribute"] = 2,
 ["pos"] = {
 ["normal"] = {
-["y"] = -414.4986877441406,
-["x"] = 1510.748779296875,
+["y"] = -414.4986267089844,
+["x"] = 1510.74951171875,
 ["w"] = 380.4989624023438,
 ["h"] = 119.0003356933594,
 },
@@ -200,30 +200,33 @@ _detalhes_database = {
 ["evoker_show_realtimedps"] = false,
 ["inverse_deathlog_mplus"] = false,
 },
-["announce_firsthit"] = {
-["enabled"] = true,
-["channel"] = "SELF",
-},
+["on_death_menu"] = false,
 ["mythic_plus_log"] = {
 },
-["SoloTablesSaved"] = {
-["Mode"] = 1,
+["nick_tag_cache"] = {
+["nextreset"] = 1725827179,
+["last_version"] = 16,
 },
 ["announce_damagerecord"] = {
 ["enabled"] = true,
 ["channel"] = "SELF",
 },
-["ignore_nicktag"] = false,
-["combat_counter"] = 26,
-["on_death_menu"] = false,
+["announce_firsthit"] = {
+["enabled"] = true,
+["channel"] = "SELF",
+},
+["SoloTablesSaved"] = {
+["Mode"] = 1,
+},
+["combat_counter"] = 30,
 ["last_realversion"] = 159,
 ["last_instance_time"] = 1610128442,
 ["combat_id"] = 0,
 ["savedStyles"] = {
 },
-["last_day"] = "24",
+["last_day"] = "25",
 ["character_data"] = {
-["logons"] = 12,
+["logons"] = 14,
 },
 ["announce_deaths"] = {
 ["enabled"] = false,
@@ -259,7 +262,7 @@ _detalhes_database = {
 },
 ["raid_roster"] = {
 },
-["tempo_start"] = 51512.751,
+["tempo_start"] = 515.594,
 ["last_events_tables"] = {
 },
 ["alternate_power"] = {
@@ -353,7 +356,7 @@ _detalhes_database = {
 ["start_time"] = 0,
 ["TimeData"] = {
 },
-["combat_counter"] = 25,
+["combat_counter"] = 29,
 },
 ["plugin_database"] = {
 ["DETAILS_PLUGIN_TINY_THREAT"] = {
@@ -440,11 +443,11 @@ _detalhes_database = {
 1,
 0.5,
 },
-["arrow_anchor_y"] = 0,
 ["main_frame_size"] = {
 299.9999694824219,
 500.0000610351563,
 },
+["arrow_anchor_y"] = 0,
 ["minimap"] = {
 ["minimapPos"] = 160,
 ["radius"] = 160,
@@ -452,30 +455,19 @@ _detalhes_database = {
 },
 ["main_frame_locked"] = false,
 ["arrow_anchor_x"] = 0,
+["author"] = "Terciob",
+["row_texture"] = "Details Serenity",
+["square_grow_direction"] = "right",
+["y"] = 1.52587890625e-05,
 ["row_color"] = {
 0.1,
 0.1,
 0.1,
 0.4,
 },
-["row_texture"] = "Details Serenity",
-["square_grow_direction"] = "right",
-["use_spark"] = true,
-["author"] = "Terciob",
 ["square_amount"] = 5,
 ["enabled"] = false,
 ["arrow_size"] = 10,
-["y"] = 1.52587890625e-05,
-["row_spacement"] = 21,
-["main_frame_color"] = {
-0,
-0,
-0,
-0.2,
-},
-["main_frame_strata"] = "LOW",
-["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
-["font_size"] = 10,
 ["per_second"] = {
 ["enabled"] = false,
 ["point"] = "CENTER",
@@ -487,6 +479,17 @@ _detalhes_database = {
 ["update_speed"] = 0.05,
 ["size"] = 32,
 },
+["row_spacement"] = 21,
+["main_frame_color"] = {
+0,
+0,
+0,
+0.2,
+},
+["main_frame_strata"] = "LOW",
+["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
+["use_spark"] = true,
+["font_size"] = 10,
 ["x"] = -0.000244140625,
 ["font_face"] = "Friz Quadrata TT",
 ["square_size"] = 32,
@@ -501,12 +504,9 @@ _detalhes_database = {
 ["scale"] = 1,
 },
 },
-["nick_tag_cache"] = {
-["nextreset"] = 1725827179,
-["last_version"] = 16,
-},
 ["data_harvested_for_charts"] = {
 },
+["ignore_nicktag"] = false,
 ["announce_cooldowns"] = {
 ["ignored_cooldowns"] = {
 },
