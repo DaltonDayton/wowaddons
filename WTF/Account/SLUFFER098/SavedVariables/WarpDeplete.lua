@@ -1,17 +1,17 @@
 
 WarpDepleteDB = {
-["global"] = {
-["mdtAlertShown"] = true,
-},
 ["profileKeys"] = {
 ["Xavaat - Ner'zhul"] = "ToxiUI",
-["Faelaena - Ner'zhul"] = "ToxiUI",
-["Zatta - Ner'zhul"] = "Default",
 ["Xambank - Ner'zhul"] = "ToxiUI",
+["Zatta - Ner'zhul"] = "Default",
+["Faelaena - Ner'zhul"] = "ToxiUI",
 ["Xenoth - Ner'zhul"] = "Default",
-["Zaldrysa - Ner'zhul"] = "Default",
 ["Xamuul - Ner'zhul"] = "ToxiUI",
+["Zaldrysa - Ner'zhul"] = "Default",
 ["Yushien - Ner'zhul"] = "ToxiUI",
+},
+["global"] = {
+["mdtAlertShown"] = true,
 },
 ["profiles"] = {
 ["Default"] = {
@@ -31,19 +31,19 @@ WarpDepleteDB = {
 ["keyDetailsColor"] = "ff61c2ff",
 ["keyDetailsFont"] = "- ToxiUI",
 ["alignBossClear"] = "end",
-["deathsFont"] = "- ToxiUI",
+["frameY"] = 288,
 ["forcesTexture"] = "- Tx Left",
 ["forcesOverlayTexture"] = "- Tx Left",
 ["timingsImprovedTimeColor"] = "ff00e5f6",
 ["bar3Texture"] = "- Tx Left",
 ["bar1Font"] = "- ToxiUI",
 ["bar2TextureColor"] = "ff00e5f6",
-["frameY"] = 288,
+["keyColor"] = "ffffb35f",
 ["forcesTextureColor"] = "ffbc9f23",
 ["bar2Texture"] = "- Tx Left",
 ["bar1TextureColor"] = "ff00e5f6",
+["deathsFont"] = "- ToxiUI",
 ["forcesFont"] = "- ToxiUI",
-["keyColor"] = "ffffb35f",
 ["keyFont"] = "- M 900",
 },
 },

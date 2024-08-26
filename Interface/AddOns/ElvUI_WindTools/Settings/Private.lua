@@ -12,7 +12,9 @@ local lfr = format("|cffff8000%s|r", L["[ABBR] Looking for raid"])
 -- The helper function for progression data.
 local function configTable(t, sourceMetadata)
 	for k in pairs(sourceMetadata) do
-		t[k] = true
+		if t[k] == nil then
+			t[k] = true
+		end
 	end
 
 	return t
@@ -142,7 +144,7 @@ V.misc = {
 	skipCutScene = false,
 	onlyStopWatched = true,
 	tags = true,
-	hotKeyAboveCD = false,
+	keybindTextAbove = false,
 	guildNewsItemLevel = true,
 	addCNFilter = false,
 	autoToggleChatBubble = false,
@@ -215,7 +217,7 @@ V.misc = {
 
 V.quest = {
 	objectiveTracker = {
-		enable = true,
+		enable = false,
 		noDash = true,
 		colorfulProgress = true,
 		percentage = false,
@@ -355,10 +357,14 @@ V.skins = {
 				texture = "WindTools Glow",
 				classColor = false,
 				color = { r = 0.145, g = 0.353, b = 0.698 },
-				alpha = 1,
-				animationType = "FADE",
-				animationDuration = 0.2,
 				removeBorderEffect = true,
+				animation = {
+					type = "fade",
+					duration = 0.2,
+					alpha = 1,
+					fadeEase = "quadratic",
+					fadeEaseInvert = false,
+				},
 			},
 			selected = {
 				enable = true,
@@ -384,9 +390,13 @@ V.skins = {
 				texture = "WindTools Glow",
 				classColor = false,
 				color = { r = 0.145, g = 0.353, b = 0.698 },
-				alpha = 1,
-				animationType = "FADE",
-				animationDuration = 0.2,
+				animation = {
+					type = "fade",
+					duration = 0.2,
+					alpha = 1,
+					fadeEase = "quadratic",
+					fadeEaseInvert = false,
+				},
 			},
 			selected = {
 				enable = true,
@@ -430,9 +440,13 @@ V.skins = {
 				classColor = false,
 				color = { r = 0.145, g = 0.353, b = 0.698 },
 				alpha = 1,
-				animationType = "FADE",
-				animationDuration = 0.2,
-				removeBorderEffect = true,
+				animation = {
+					type = "fade",
+					duration = 0.2,
+					alpha = 1,
+					fadeEase = "quadratic",
+					fadeEaseInvert = false,
+				},
 			},
 			selected = {
 				enable = true,
@@ -570,6 +584,7 @@ V.skins = {
 		trade = true,
 		trainer = true,
 		tutorial = true,
+		uiWidget = true,
 		warboard = true,
 		weeklyRewards = true,
 		worldMap = true,
@@ -614,7 +629,7 @@ V.tooltips = {
 	progression = {
 		enable = true,
 		header = "TEXTURE",
-		raid = configTable({ enable = true }, W.RaidData),
+		raid = configTable({ enable = true, [2388] = false, [2403] = false }, W.RaidData),
 		specialAchievement = configTable({ enable = true }, W.MythicPlusSeasonAchievementData),
 		mythicPlus = configTable({ enable = true, markHighestScore = true, showNoRecord = true }, W.MythicPlusMapData),
 	},

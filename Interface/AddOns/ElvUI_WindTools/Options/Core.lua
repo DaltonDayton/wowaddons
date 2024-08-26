@@ -5,8 +5,6 @@ local async = W.Utilities.Async
 local gsub = gsub
 local pairs = pairs
 local strrep = strrep
-local tostring = tostring
-local type = type
 
 -- All categories
 W.options = {
@@ -165,3 +163,16 @@ function W:OptionsCallback()
 	async.WithItemIDTable(E.db.WT.item.extraItemsBar.blackList, "key")
 	async.WithItemIDTable(E.db.WT.item.extraItemsBar.customList, "value")
 end
+
+
+W.AnimationEaseTable = {
+	["linear"] = L["Linear Ease"],
+	["quadratic"] = L["Quadratic Ease"],
+	["cubic"] = L["Cubic Ease"],
+	["quartic"] = L["Quartic Ease"],
+	["quintic"] = L["Quintic Ease"],
+	["sinusoidal"] = L["Sinusoidal Ease"],
+	["exponential"] = L["Exponential Ease"],
+	["circular"] = L["Circular Ease"],
+	["bounce"] = L["Bounce Ease"],
+}

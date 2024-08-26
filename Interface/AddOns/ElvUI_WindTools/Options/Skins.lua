@@ -856,6 +856,11 @@ options.blizzard = {
 			type = "toggle",
 			name = L["Tutorials"],
 		},
+		uiWidget = {
+			order = 10,
+			type = "toggle",
+			name = L["UI Widget"],
+		},
 		warboard = {
 			order = 10,
 			type = "toggle",
@@ -1524,33 +1529,6 @@ options.widgets = {
 								db.r, db.g, db.b = r, g, b
 							end,
 						},
-						alpha = {
-							order = 6,
-							type = "range",
-							name = L["Alpha"],
-							min = 0,
-							max = 1,
-							step = 0.01,
-						},
-						animationType = {
-							order = 7,
-							type = "select",
-							name = L["Animation Type"],
-							desc = L["The type of animation activated when a button is hovered."],
-							hidden = true,
-							values = {
-								FADE = L["Fade"],
-							},
-						},
-						animationDuration = {
-							order = 8,
-							type = "range",
-							name = L["Animation Duration"],
-							desc = L["The duration of the animation in seconds."],
-							min = 0,
-							max = 3,
-							step = 0.01,
-						},
 					},
 				},
 				selected = {
@@ -1804,33 +1782,6 @@ options.widgets = {
 								local db = E.private.WT.skins.widgets[info[#info - 2]][info[#info - 1]][info[#info]]
 								db.r, db.g, db.b = r, g, b
 							end,
-						},
-						alpha = {
-							order = 5,
-							type = "range",
-							name = L["Alpha"],
-							min = 0,
-							max = 1,
-							step = 0.01,
-						},
-						animationType = {
-							order = 6,
-							type = "select",
-							name = L["Animation Type"],
-							desc = L["The type of animation activated when a button is hovered."],
-							hidden = true,
-							values = {
-								FADE = L["Fade"],
-							},
-						},
-						animationDuration = {
-							order = 7,
-							type = "range",
-							name = L["Animation Duration"],
-							desc = L["The duration of the animation in seconds."],
-							min = 0,
-							max = 3,
-							step = 0.01,
 						},
 					},
 				},
@@ -2140,33 +2091,6 @@ options.widgets = {
 								local db = E.private.WT.skins.widgets[info[#info - 2]][info[#info - 1]][info[#info]]
 								db.r, db.g, db.b = r, g, b
 							end,
-						},
-						alpha = {
-							order = 5,
-							type = "range",
-							name = L["Alpha"],
-							min = 0,
-							max = 1,
-							step = 0.01,
-						},
-						animationType = {
-							order = 6,
-							type = "select",
-							name = L["Animation Type"],
-							desc = L["The type of animation activated when a button is hovered."],
-							hidden = true,
-							values = {
-								FADE = L["Fade"],
-							},
-						},
-						animationDuration = {
-							order = 7,
-							type = "range",
-							name = L["Animation Duration"],
-							desc = L["The duration of the animation in seconds."],
-							min = 0,
-							max = 3,
-							step = 0.01,
 						},
 					},
 				},
@@ -2547,6 +2471,74 @@ options.widgets = {
 		},
 	},
 }
+
+for _, widget in pairs({ "button", "treeGroupButton", "tab" }) do
+	options.widgets.args[widget].args.backdrop.args.animation = {
+		order = 10,
+		type = "group",
+		name = L["Animation Effect"],
+		disabled = function()
+			return not E.private.WT.skins.enable
+				or not E.private.WT.skins.widgets[widget].enable
+				or not E.private.WT.skins.widgets[widget].backdrop.enable
+		end,
+		get = function(info)
+			return E.private.WT.skins.widgets[widget].backdrop.animation[info[#info]]
+		end,
+		set = function(info, value)
+			E.private.WT.skins.widgets[widget].backdrop.animation[info[#info]] = value
+		end,
+		args = {
+			type = {
+				order = 1,
+				type = "select",
+				name = L["Type"],
+				desc = L["The type of animation activated when a button is hovered."],
+				values = {
+					fade = L["Fade"],
+				},
+			},
+			duration = {
+				order = 2,
+				type = "range",
+				name = L["Duration"],
+				desc = L["The duration of the animation in seconds."],
+				min = 0,
+				max = 3,
+				step = 0.01,
+			},
+			alpha = {
+				order = 3,
+				type = "range",
+				name = L["Alpha"],
+				desc = L["The maximum alpha of the animation."],
+				min = 0,
+				max = 1,
+				step = 0.01,
+			},
+			fadeEase = {
+				order = 4,
+				type = "select",
+				name = L["Ease"],
+				width = 1.3,
+				desc = L["The easing function used for fading the backdrop."]
+					.. "\n"
+					.. L["You can preview the ease type in https://easings.net/"],
+				values = W.AnimationEaseTable,
+			},
+			fadeEaseInvert = {
+				order = 5,
+				type = "toggle",
+				name = L["Invert Ease"],
+				desc = L["When enabled, this option inverts the easing function."]
+					.. " "
+					.. L["(e.g., 'in-quadratic' becomes 'out-quadratic' and vice versa)"]
+					.. "\n"
+					.. L["Generally, enabling this option makes the value increase faster in the first half of the animation."],
+			},
+		},
+	}
+end
 
 options.bigWigsSkin = {
 	order = 8,

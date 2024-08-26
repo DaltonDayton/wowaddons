@@ -719,7 +719,7 @@ P.maps = {
 		radiantEchoes = {
 			enable = true,
 			desaturate = false,
-			alert = true,
+			alert = false,
 			sound = true,
 			soundFile = "OnePlus Surprise",
 			second = 600,
@@ -727,9 +727,9 @@ P.maps = {
 			stopAlertIfPlayerNotEnteredDragonlands = true,
 		},
 		communityFeast = {
-			enable = true,
+			enable = false,
 			desaturate = false,
-			alert = true,
+			alert = false,
 			sound = false,
 			soundFile = "OnePlus Surprise",
 			second = 600,
@@ -737,9 +737,9 @@ P.maps = {
 			stopAlertIfPlayerNotEnteredDragonlands = true,
 		},
 		siegeOnDragonbaneKeep = {
-			enable = true,
+			enable = false,
 			desaturate = false,
-			alert = true,
+			alert = false,
 			sound = false,
 			soundFile = "OnePlus Surprise",
 			second = 600,
@@ -747,9 +747,9 @@ P.maps = {
 			stopAlertIfPlayerNotEnteredDragonlands = true,
 		},
 		researchersUnderFire = {
-			enable = true,
+			enable = false,
 			desaturate = false,
-			alert = true,
+			alert = false,
 			sound = false,
 			soundFile = "OnePlus Surprise",
 			second = 600,
@@ -757,9 +757,9 @@ P.maps = {
 			stopAlertIfPlayerNotEnteredDragonlands = true,
 		},
 		timeRiftThaldraszus = {
-			enable = true,
+			enable = false,
 			desaturate = false,
-			alert = true,
+			alert = false,
 			sound = false,
 			soundFile = "OnePlus Surprise",
 			second = 600,
@@ -767,9 +767,9 @@ P.maps = {
 			stopAlertIfPlayerNotEnteredDragonlands = true,
 		},
 		superBloom = {
-			enable = true,
+			enable = false,
 			desaturate = false,
-			alert = true,
+			alert = false,
 			sound = false,
 			soundFile = "OnePlus Surprise",
 			second = 600,
@@ -777,9 +777,9 @@ P.maps = {
 			stopAlertIfPlayerNotEnteredDragonlands = true,
 		},
 		bigDig = {
-			enable = true,
+			enable = false,
 			desaturate = false,
-			alert = true,
+			alert = false,
 			sound = true,
 			soundFile = "OnePlus Surprise",
 			second = 600,
@@ -788,7 +788,7 @@ P.maps = {
 		},
 		iskaaranFishingNet = {
 			enable = false,
-			alert = true,
+			alert = false,
 			sound = true,
 			soundFile = "OnePlus Surprise",
 			disableAlertAfterHours = 48,
@@ -1009,7 +1009,7 @@ P.social = {
 
 P.quest = {
 	paragonReputation = {
-		enable = true,
+		enable = false,
 		color = { r = 0, g = 0.5, b = 0.9 },
 		text = "PARAGON",
 		toast = {
@@ -1107,8 +1107,13 @@ P.misc = {
 		buttonSize = 24,
 		spacing = 4,
 		fadeTime = 0.618,
-		normalColor = "NONE",
+		normalColor = "DEFAULT",
 		hoverColor = "CLASS",
+		animation = {
+			duration = 0.2,
+			ease = "quadratic",
+			easeInvert = false,
+		},
 		customNormalColor = { r = 1, g = 1, b = 1 },
 		customHoverColor = { r = 0, g = 0.659, b = 1 },
 		notification = true,
@@ -1132,7 +1137,7 @@ P.misc = {
 		},
 		home = {
 			left = "6948",
-			right = "141605",
+			right = "140192",
 		},
 		additionalText = {
 			enable = true,
