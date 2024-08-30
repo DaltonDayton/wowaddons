@@ -5,9 +5,17 @@ BigWigs3DB = {
 },
 ["BigWigs_Plugins_BossBlock"] = {
 },
+["BigWigs_Bosses_Priory of the Sacred Flame Trash"] = {
+},
 ["BigWigs_Plugins_Sounds"] = {
 },
 ["BigWigs_Plugins_Statistics"] = {
+},
+["BigWigs_Bosses_Prioress Murrpray"] = {
+},
+["BigWigs_Bosses_Captain Dailcry"] = {
+},
+["BigWigs_Bosses_Baron Braunpyke"] = {
 },
 ["BigWigs_Plugins_Countdown"] = {
 ["profiles"] = {
@@ -16,6 +24,7 @@ BigWigs3DB = {
 ["fontColor"] = {
 ["b"] = 0.3,
 },
+["fontName"] = "- M 900",
 ["position"] = {
 "CENTER",
 "CENTER",
@@ -23,11 +32,12 @@ nil,
 -180,
 },
 ["voice"] = "enUS: Default (Male)",
-["fontName"] = "- M 900",
 },
 },
 },
 ["BigWigs_Plugins_AltPower"] = {
+},
+["BigWigs_Bosses_Ki'katal the Harvester"] = {
 },
 ["BigWigs_Plugins_Colors"] = {
 ["profiles"] = {
@@ -68,6 +78,7 @@ nil,
 ["iconPosition"] = "RIGHT",
 ["emphasizeGrowup"] = true,
 ["expWidth"] = 271,
+["normalHeight"] = 26,
 ["texture"] = "- Tx Left",
 ["barStyle"] = "ElvUI",
 ["growup"] = true,
@@ -75,11 +86,6 @@ nil,
 ["fontName"] = "- M 700",
 ["alignText"] = "RIGHT",
 ["fill"] = true,
-["normalHeight"] = 26,
-["visibleBarLimitEmph"] = 4,
-["fontSize"] = 16,
-["spacing"] = 5,
-["emphasizeTime"] = 10,
 ["expPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -87,6 +93,10 @@ nil,
 130,
 "ElvUF_Target",
 },
+["visibleBarLimitEmph"] = 4,
+["emphasizeTime"] = 10,
+["spacing"] = 5,
+["fontSize"] = 16,
 ["normalPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -97,26 +107,41 @@ nil,
 },
 },
 },
-["BigWigs_Plugins_AutoReply"] = {
+["BigWigs_Bosses_Anub'zekt"] = {
+},
+["BigWigs_Bosses_Avanoxx"] = {
+},
+["BigWigs_Bosses_Ara-Kara, City of Echoes Trash"] = {
+},
+["BigWigs_Plugins_Nameplates"] = {
+["profiles"] = {
+["ToxiUI"] = {
+["updated"] = true,
+},
+},
 },
 ["BigWigs_Plugins_Raid Icons"] = {
+},
+["LibDualSpec-1.0"] = {
+},
+["BigWigs_Plugins_Proximity"] = {
 },
 ["BigWigs_Plugins_Messages"] = {
 ["profiles"] = {
 ["ToxiUI"] = {
 ["outline"] = "OUTLINE",
-["emphUppercase"] = false,
-["align"] = "RIGHT",
 ["emphFontName"] = "- M 700",
 ["emphFontSize"] = 24,
-["growUpwards"] = true,
 ["emphPosition"] = {
 "TOP",
 "TOP",
 nil,
 -215,
 },
+["emphUppercase"] = false,
+["align"] = "RIGHT",
 ["fontName"] = "- M 700",
+["growUpwards"] = true,
 ["normalPosition"] = {
 "CENTER",
 "CENTER",
@@ -126,13 +151,9 @@ nil,
 },
 },
 },
-["BigWigs_Plugins_Proximity"] = {
-},
-["LibDualSpec-1.0"] = {
-},
 ["BigWigs_Plugins_Pull"] = {
 },
-["BigWigs_Plugins_Nameplates"] = {
+["BigWigs_Plugins_AutoReply"] = {
 },
 },
 ["profileKeys"] = {
