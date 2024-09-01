@@ -18,6 +18,7 @@ PlumberDB = {
 ["HandyLockpick"] = true,
 ["TrackHolidayItem"] = true,
 ["EmeraldBountySeedList"] = true,
+["TalkingHead_HideWorldQuest"] = false,
 ["WorldMapPin_TWW_Delve"] = true,
 ["Navigator_Dreamseed"] = false,
 ["Technoscryers"] = true,
@@ -31,7 +32,7 @@ PlumberDB = {
 ["MerchantPrice"] = true,
 ["BackpackItemTracker"] = true,
 ["TalkingHead_InstantText"] = false,
-["TalkingHead_HideWorldQuest"] = false,
+["TooltipShowExtraInfoCrest"] = false,
 ["AutoJoinEvents"] = true,
 ["BackpackTrackedItems"] = {
 },

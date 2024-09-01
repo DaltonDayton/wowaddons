@@ -718,8 +718,41 @@ P.maps = {
 			scale = 1,
 			outline = "OUTLINE",
 		},
-		radiantEchoes = {
+		twwProfessions = {
 			enable = true,
+			desaturate = true,
+		},
+		worldSoul = {
+			enable = true,
+			desaturate = true,
+		},
+		khazAlgarEmissary = {
+			enable = true,
+			desaturate = true,
+		},
+		theaterTroupe = {
+			enable = true,
+			desaturate = true,
+			alert = true,
+			sound = true,
+			soundFile = "OnePlus Surprise",
+			second = 600,
+			stopAlertIfCompleted = true,
+		},
+		ringingDeeps = {
+			enable = true,
+			desaturate = true,
+		},
+		spreadingTheLight = {
+			enable = true,
+			desaturate = true,
+		},
+		underworldOperative = {
+			enable = true,
+			desaturate = true,
+		},
+		radiantEchoes = {
+			enable = false,
 			desaturate = false,
 			alert = false,
 			sound = true,

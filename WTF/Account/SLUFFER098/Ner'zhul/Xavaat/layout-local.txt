@@ -10,13 +10,13 @@ Frame: ItemTextFrame
 FrameLevel: 1
 Anchor: TOPLEFT
 X: 16
-Y: -116
+Y: -113
 W: 338
 H: 424
 Frame: CharacterFrame
 FrameLevel: 1
 Anchor: TOP
-X: -746
+X: -310
 Y: -116
-W: 338
+W: 540
 H: 424

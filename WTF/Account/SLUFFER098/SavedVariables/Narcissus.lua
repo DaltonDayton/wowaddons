@@ -64,6 +64,18 @@ NarcissusDB = {
 ["TalentTreeForEquipmentManager"] = true,
 ["SpeedyScreenshotAlert"] = true,
 ["UseEntranceVisual"] = true,
+["NamePlateNameOffset"] = 0,
+["UseEscapeButton"] = true,
+["TalentTreeAnchor"] = 1,
+["GemManager"] = true,
+["ModelPanelScale"] = 1,
+["AutoDisplayQuestItem"] = true,
+["TalentTreeForPaperDoll"] = false,
+["AutoFilterGem"] = false,
+["TalentTreeForInspection"] = true,
+["CameraOrbit"] = true,
+["TooltipTheme"] = "Bright",
+["OnlyShowOwnedUpgradeItem"] = true,
 ["PerksProgramDB"] = {
 ["MonthNames"] = {
 {
@@ -166,18 +178,6 @@ NarcissusDB = {
 ["month"] = 20,
 },
 },
-["UseEscapeButton"] = true,
-["TalentTreeAnchor"] = 1,
-["GemManager"] = true,
-["ModelPanelScale"] = 1,
-["TooltipTheme"] = "Bright",
-["TalentTreeForPaperDoll"] = false,
-["AutoFilterGem"] = false,
-["TalentTreeForInspection"] = true,
-["CameraOrbit"] = true,
-["AutoDisplayQuestItem"] = true,
-["OnlyShowOwnedUpgradeItem"] = true,
-["NamePlateNameOffset"] = 0,
 ["Tutorials"] = {
 ["ExitConfirmation"] = true,
 ["Movement"] = true,
@@ -204,19 +204,11 @@ NarciStatisticsDB = {
 ["InstalledDate"] = 1723331811,
 ["QuestItems"] = {
 },
-["TimeSpentInNarcissus"] = 3495,
+["TimeSpentInNarcissus"] = 3707,
 ["AddOnActionForbidden"] = {
 ["timeLastError"] = 1724516878,
 ["addons"] = {
 ["ElvUI"] = {
-["errorTime"] = {
-1724515179,
-1724515181,
-1724515183,
-1724516876,
-1724516877,
-1724516878,
-},
 ["count"] = 7,
 ["timeLastError"] = 1724516878,
 },
@@ -262,7 +254,7 @@ NarciCharacterProfiles = {
 ["name"] = "Xamuul",
 ["birth"] = 1723331811,
 ["serverID"] = "1168",
-["lastVisit"] = 1725052480,
+["lastVisit"] = 1725118322,
 ["outfits"] = {
 {
 ["s"] = "36724,36727,45116,36655,20511,0,41771,36642,66904,36701,36666,12036:0:1898,67870",
@@ -348,7 +340,7 @@ NarciCharacterProfiles = {
 ["name"] = "Xambank",
 ["birth"] = 1724531197,
 ["serverID"] = "1168",
-["lastVisit"] = 1725052289,
+["lastVisit"] = 1725205579,
 ["outfits"] = {
 },
 ["class"] = 11,
@@ -496,7 +488,7 @@ NarciCharacterProfiles = {
 ["name"] = "Xavaat",
 ["birth"] = 1724534901,
 ["serverID"] = "1168",
-["lastVisit"] = 1724535369,
+["lastVisit"] = 1725136221,
 ["outfits"] = {
 {
 ["s"] = "6898,6901,183119,6900,0,83203,104604,106492,107364,38567,104603,183059:-1:5865,181699",

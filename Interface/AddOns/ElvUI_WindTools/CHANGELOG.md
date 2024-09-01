@@ -1,120 +1,70 @@
-# Version: 3.72
-2024/08/29 Released
+# Version: 3.73
+2024/09/01 Released
 ## ❗ Important
-- [Chat Bar] The settings of the world channel now support separate settings based on region, realm, and faction.
-- [Chat Bar] Due to major changes in the settings of the world channel, the previous settings have been reset and are now disabled by default. Please read the setting instructions carefully before enabling them.
-- [Friend List] Due to the default game client icons of Blizzard now changed to flat style, the previous game icon pack is removed in this version.
-- [Friend List] Game icon modification is now limited to WoW game icons only, and you can switch between Blizzard style, patch icons, and faction icons.
-- Remove some outdated APIs. Thanks to DakJaniels
+- [Event Tracker] Default disable the weekly quest tracking of Iskaaran Fishing Net in Dragon Isles.
 ## ✳️ New
-- [Extra Item Bar] Added a new item group DELVE for available items in Delve. Thanks to mcc
-- Add developer functions for DevTool.
+- [Event Tracker] Add the weekly quest tracking of Iskaaran Fishing Net in Dragon Isles.
 ## 💪 Improvement
-- [Skins] Optimized the BugSack skin.
-- [Context Menu] Updated the logic for generating Hero List links, now it will generate links more accurately.
-- [Chat Text] No longer append incorrect spaces when not using player icons.
-- [Chat Text] For players on CN and TW realms, common world channels can now be automatically abbreviated under the default configuration.
-- [Chat Bar] For players on CN and Shadowmoon-TW, common world channels can now be used under the default configuration.
-- [Extra Item Bar] Add more items that can be enabled. Thanks to mcc
-- [Extra Item Bar] Add new healing stones and utility items in TWW. Thanks to LvWind
-- [Extra Item Bar] Complete the cooking items for TWW.
-- [World Map] Fix a bug that may cause Blizzard map errors.
-- [Minimap Buttons] Optimize the processing logic of some icons.
+- [Extra Item Bar] Update the food list of TWW.
+- [Extra Item Bar] Update the rune list of TWW.
+- [Super Tracker] Support the function of setting tracking points across maps using #mapID, such as #1234, now it should be able to work perfectly with TomTom's command.
+- [Super Tracker] When setting tracking points, it will prioritize the map currently viewed on the world map.
+- [Game Bar] Optimize the processing logic of the Battle.net offline, the impact on frame rate will be smaller.
 
 ------
-# 版本: 3.72
-2024/08/29 发布
+# 版本: 3.73
+2024/09/01 发布
 ## ❗ 重要
-- [聊天条] 世界频道的设定现在支持根据地区，服务器，阵营来分开设定。
-- [聊天条] 世界频道的设定由于大幅改动，之前的设定已经被重置，国服台服默认开启。
-- [好友名单] 由于暴雪默认的游戏客户端图标现在已经更改为扁平风格，之前的游戏图标包在此版本中移除。
-- [好友名单] 游戏图标修改现在仅限魔兽世界游戏图标，可以在暴雪图标，版本图标和阵营图标中切换。
-- 移除了部分过时的 API。感谢 DakJaniels
+- [事件追踪器] 默认关闭巨龙群岛钓鱼周常任务追踪。
 ## ✳️ 新增
-- [额外物品条] 新增地下堡可用物品分组 DELVE。感谢 mcc
-- 新增用于 DevTool 的开发者便利函数。
+- [事件追踪器] 新增地心之战周常任务追踪。
 ## 💪 改善
-- [美化外观] 优化 BugSack 皮肤。
-- [右键菜单] 更新了英雄榜链接生成逻辑，现在会更加准确的生成链接。
-- [聊天文字] 在未使用玩家图标时，不会再附加错误的空格了。
-- [聊天文字] 对于国服和台服玩家，现在默认配置下可以自动缩写常见的世界频道了。
-- [聊天条] 对于国服和台服暗影之月的玩家，现在默认配置下可以使用常见的世界频道了。
-- [额外物品条] 添加更多的可开启物品。感谢 mcc
-- [额外物品条] 添加地心之战的治疗石和实用物品。感谢 LvWind
-- [额外物品条] 补全地心之战的烹饪物品。
-- [世界地图] 修复了一个可能导致暴雪地图错误的 Bug。
-- [小地图按键] 优化了部分图标的处理逻辑。
+- [额外物品条] 更新地心之战的食物列表。
+- [额外物品条] 更新地心之战的符文列表。
+- [超级追踪] 支持使用 #地图ID 比如 #1234 跨地图设定追踪点的功能，现在应该能完美兼容 TomTom 的指令了。
+- [超级追踪] 追踪点设定时会优先使用世界地图当前查看中的地图。
+- [游戏条] 优化了战网掉线时的处理逻辑，对帧数的影响会更小。
 
 ------
-# 版本: 3.72
-2024/08/29 發布
+# 版本: 3.73
+2024/09/01 發布
 ## ❗ 重要
-- [聊天條] 世界頻道的設定現在支援根據地區，伺服器，陣營來分開設定。
-- [聊天條] 世界頻道的設定由於大幅改動，之前的設定已經被重置，國服台服默認啟用。
-- [好友名單] 由於暴雪默認的遊戲客戶端圖標現在已經更改為扁平風格，之前的遊戲圖標包在此版本中移除。
-- [好友名單] 遊戲圖標修改現在僅限魔獸世界遊戲圖標，可以在暴雪圖標，版本圖標和陣營圖標中切換。
-- 移除了部分過時的 API。感謝 DakJaniels
+- [事件追蹤器] 預設關閉巨龍群島的伊斯卡拉魚網周常任務追蹤。
 ## ✳️ 新增
-- [額外物品條] 新增探究可用物品分組 DELVE。感謝 mcc
-- 新增用於 DevTool 的開發者便利函數。
+- [事件追蹤器] 新增地心之戰周常任務追蹤。
 ## 💪 改善
-- [美化外觀] 優化 BugSack 皮膚。
-- [右鍵選單] 更新了英雄榜連結生成邏輯，現在會更加準確的生成連結。
-- [聊天文字] 在未使用玩家圖標時，不會再附加錯誤的空格了。
-- [聊天文字] 對於國服和台服玩家，現在默認配置下可以自動縮寫常見的世界頻道了。
-- [聊天條] 對於國服和台服暗影之月的玩家，現在默認配置下可以使用常見的世界頻道了。
-- [額外物品條] 添加更多的可開啟物品。感謝 mcc
-- [額外物品條] 添加地心之戰的治療石和實用物品。感謝 LvWind
-- [額外物品條] 補全地心之戰的烹飪物品。
-- [世界地圖] 修復了一個可能導致暴雪地圖錯誤的 Bug。
-- [小地圖按鍵] 優化了部分圖標的處理邏輯。
+- [額外物品條] 更新地心之戰的食物列表。
+- [額外物品條] 更新地心之戰的符文列表。
+- [超級追蹤] 支援使用 #地圖ID 比如 #1234 跨地圖設定追蹤點的功能，現在應該能完美兼容 TomTom 的指令了。
+- [超級追蹤] 追蹤點設定時會優先使用世界地圖當前查看中的地圖。
+- [遊戲條] 優化了戰網掉線時的處理邏輯，對幀數的影響會更小。
 
 ------
-# 버전: 3.72
-2024/08/29 Released
+# 버전: 3.73
+2024/09/01 Released
 ## ❗ 중요 사항
-- [채팅 바] 세계 채널의 설정은 이제 지역, 서버 및 진영별로 별도의 설정을 지원합니다.
-- [채팅 바] 세계 채널의 설정이 크게 변경되어 이전 설정이 재설정되었으며 기본적으로 비활성화됩니다. 활성화하기 전에 설정 지침을 주의 깊게 읽어주세요.
-- [친구 목록] 블리자드의 기본 게임 클라이언트 아이콘이 이제 평면 스타일로 변경되었기 때문에 이전의 게임 아이콘 팩은 이 버전에서 제거되었습니다.
-- [친구 목록] 게임 아이콘 수정은 이제 WoW 게임 아이콘에만 제한되며 블리자드 스타일, 패치 아이콘 및 진영 아이콘 사이를 전환할 수 있습니다.
-- 일부 오래된 API를 제거했습니다. DakJaniels에게 감사드립니다.
+- [이벤트 추적기] 기본적으로 드래곤 제도의 이스카라 낚시 그물 주간 퀘스트 추적을 비활성화합니다.
 ## ✳️ 신규 사항
-- [추가 아이템 바] Delve에서 사용 가능한 항목을위한 새로운 항목 그룹 DELVE가 추가되었습니다. mcc에게 감사드립니다.
-- DevTool을 위한 개발자 기능 추가.
+- [이벤트 추적기] 이카라안 낚시 네트 주간 퀘스트 추적을 추가합니다.
 ## 💪 개선 사항
-- [스킨] BugSack 스킨을 최적화했습니다.
-- [컨텍스트 메뉴] 영웅 목록 링크 생성 로직을 업데이트하여 더 정확한 링크를 생성합니다.
-- [채팅 텍스트] 플레이어 아이콘을 사용하지 않을 때 더 이상 잘못된 공백을 추가하지 않습니다.
-- [채팅 텍스트] CN 및 TW 서버의 플레이어를위한 공통 세계 채널이 기본 구성에서 자동으로 약어로 사용됩니다.
-- [채팅 바] CN 및 Shadowmoon-TW 플레이어를위한 공통 세계 채널이 기본 구성에서 사용할 수 있습니다.
-- [추가 아이템 바] 활성화 할 수있는 항목을 추가했습니다. mcc에게 감사드립니다.
-- [추가 아이템 바] TWW의 새로운 치유 돌 및 유틸리티 항목을 추가했습니다. LvWind에게 감사드립니다.
-- [추가 아이템 바] TWW의 요리 항목을 완료했습니다.
-- [세계 지도] 블리자드 지도 오류를 일으킬 수있는 버그를 수정했습니다.
-- [미니맵 버튼] 일부 아이콘의 처리 로직을 최적화했습니다.
+- [추가 아이템 바] TWW의 음식 목록을 업데이트합니다.
+- [추가 아이템 바] TWW의 룬 목록을 업데이트합니다.
+- [슈퍼 추적기] #지도ID와 같이 지도를 통해 추적 지점을 설정하는 기능을 지원합니다. 예를 들어 #1234와 같이, 이제 TomTom의 명령어와 완벽하게 작동해야합니다.
+- [슈퍼 추적기] 추적 지점을 설정할 때, 현재 세계 지도에서 보고있는 지도를 우선적으로 사용합니다.
+- [게임 바] Battle.net 오프라인 처리 로직을 최적화하고, 프레임 속도에 미치는 영향이 더 적어집니다.
 
 ------
-# Версия: 3.72
-2024/08/29 Релиз
+# Версия: 3.73
+2024/09/01 Релиз
 ## ❗ Важные
-- [Панель чата] Теперь настройки мирового канала поддерживают отдельные настройки на основе региона, сервера и фракции.
-- [Панель чата] Из-за кардинальных изменений в настройках мирового канала предыдущие настройки были сброшены и теперь отключены по умолчанию. Пожалуйста, внимательно прочитайте инструкции по настройке перед их включением.
-- [Список друзей] Из-за того, что значки игровых клиентов Blizzard теперь изменены на плоский стиль по умолчанию, предыдущий пакет значков игр был удален в этой версии.
-- [Список друзей] Изменение значков игр теперь ограничено только значками игры WoW, и вы можете переключаться между стилем Blizzard, значками патчей и значками фракций.
-- Удалены некоторые устаревшие API. Спасибо DakJaniels
+- [Событие-отслеживатель] По умолчанию отключает отслеживание недельного задания по ловле рыбы в Дракон-Ландах.
 ## ✳️ Новые
-- [Дополнительная панель предметов] Добавлена новая группа предметов DELVE для доступных предметов в Delve. Спасибо mcc
-- Добавлены функции разработчика для DevTool.
+- [Событие-отслеживатель] Добавляет отслеживание недельного задания по ловле рыбы в Дракон-Ландах.
 ## 💪 Улучшения
-- [Скины] Оптимизирован скин BugSack.
-- [Контекстное меню] Обновлена логика генерации ссылок на список героев, теперь она будет генерировать ссылки более точно.
-- [Текст чата] Больше не добавляет неверные пробелы при отсутствии значков игрока.
-- [Текст чата] Для игроков на серверах CN и TW общие мировые каналы теперь могут быть автоматически сокращены в рамках настроек по умолчанию.
-- [Панель чата] Для игроков на серверах CN и Shadowmoon-TW общие мировые каналы теперь могут быть использованы в рамках настроек по умолчанию.
-- [Дополнительная панель предметов] Добавлены дополнительные предметы, которые можно включить. Спасибо mcc
-- [Дополнительная панель предметов] Добавлены новые камни и предметы для лечения в TWW. Спасибо LvWind
-- [Дополнительная панель предметов] Добавлены предметы для приготовления пищи для TWW.
-- [Карта мира] Исправлена ошибка, которая могла вызвать ошибки карт Blizzard.
-- [Кнопки миникарты] Оптимизирована логика обработки некоторых значков.
+- [Дополнительная панель предметов] Обновлен список еды TWW.
+- [Дополнительная панель предметов] Обновлен список рун TWW.
+- [Супер-трекер] Поддержка функции установки точек отслеживания на разных картах с использованием #IDкарты, например #1234, теперь должна работать идеально с командами TomTom.
+- [Супер-трекер] При установке точек отслеживания будет использоваться карта, которая в данный момент просматривается на мировой карте.
+- [Игровая панель] Оптимизирована логика обработки отключения Battle.net, влияние на частоту кадров будет меньше.
 
 ------

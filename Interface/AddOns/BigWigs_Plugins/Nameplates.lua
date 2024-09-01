@@ -95,7 +95,7 @@ local iconDefaults = {
 	iconWidth = 15,
 	iconHeight = 15,
 	iconOffsetX = 0,
-	iconOffsetY = -4,
+	iconOffsetY = 0,
 	iconCooldownNumbers = true,
 	iconFontName = "Noto Sans Regular", -- Only dealing with numbers so we can use this on all locales
 	iconFontSize = 7,
@@ -228,10 +228,10 @@ local function updateProfile()
 	if db.iconHeight < 8 or db.iconHeight > 50 then
 		db.iconHeight = plugin.defaultDB.iconHeight
 	end
-	if db.iconOffsetX < -50 or db.iconOffsetX > 50 then
+	if db.iconOffsetX < -100 or db.iconOffsetX > 100 then
 		db.iconOffsetX = plugin.defaultDB.iconOffsetX
 	end
-	if db.iconOffsetY < -50 or db.iconOffsetY > 50 then
+	if db.iconOffsetY < -100 or db.iconOffsetY > 100 then
 		db.iconOffsetY = plugin.defaultDB.iconOffsetY
 	end
 	if not media:IsValid(FONT, db.iconFontName) then
@@ -314,10 +314,10 @@ local function updateProfile()
 	if db.textSpacing < 0 or db.textSpacing > 20 then
 		db.textSpacing = plugin.defaultDB.textSpacing
 	end
-	if db.textOffsetX < -50 or db.textOffsetX > 50 then
+	if db.textOffsetX < -150 or db.textOffsetX > 150 then
 		db.textOffsetX = plugin.defaultDB.textOffsetX
 	end
-	if db.textOffsetY < -50 or db.textOffsetY > 50 then
+	if db.textOffsetY < -150 or db.textOffsetY > 150 then
 		db.textOffsetY = plugin.defaultDB.textOffsetY
 	end
 	if not media:IsValid(FONT, db.textFontName) then
@@ -821,8 +821,8 @@ do
 						name = L.positionX,
 						desc = L.positionDesc,
 						order = 4,
-						min = -50,
-						max = 50,
+						max = 100,
+						min = -100,
 						step = 1,
 						width = 1,
 					},
@@ -831,8 +831,8 @@ do
 						name = L.positionY,
 						desc = L.positionDesc,
 						order = 5,
-						min = -50,
-						max = 50,
+						max = 100,
+						min = -100,
 						step = 1,
 						width = 1,
 					},
@@ -1225,8 +1225,8 @@ do
 						name = L.positionX,
 						desc = L.positionDesc,
 						order = 4,
-						min = -50,
-						max = 50,
+						max = 150, softMax = 100,
+						min = -150, softMin = -100,
 						step = 1,
 						width = 1,
 					},
@@ -1235,8 +1235,8 @@ do
 						name = L.positionY,
 						desc = L.positionDesc,
 						order = 5,
-						min = -50,
-						max = 50,
+						max = 150, softMax = 100,
+						min = -150, softMin = -100,
 						step = 1,
 						width = 1,
 					},
@@ -1509,7 +1509,6 @@ function plugin:OnPluginEnable()
 	self:RegisterMessage("BigWigs_StopBars", "StopModuleNameplates")
 	self:RegisterMessage("BigWigs_OnBossDisable", "StopModuleNameplates")
 	self:RegisterMessage("BigWigs_OnBossWipe", "StopModuleNameplates")
-	self:RegisterMessage("BigWigs_OnPluginDisable", "StopModuleNameplates")
 	self:RegisterMessage("BigWigs_ProfileUpdate", updateProfile)
 
 	self:RegisterEvent("NAME_PLATE_UNIT_ADDED")
