@@ -13,8 +13,8 @@ _detalhes_database = {
 },
 ["pos"] = {
 },
-["lines_per_column"] = 12,
 ["group_frames"] = true,
+["lines_per_column"] = 12,
 ["own_frame"] = {
 ["defensive-raid"] = false,
 ["ofensive"] = false,
@@ -92,10 +92,10 @@ _detalhes_database = {
 ["attribute"] = 1,
 ["pos"] = {
 ["normal"] = {
-["y"] = -585.9990844726562,
-["x"] = 1510.748779296875,
-["w"] = 380.4989624023438,
-["h"] = 184.0004730224609,
+["y"] = -578.4988861083984,
+["x"] = 1492.8349609375,
+["w"] = 380.4989929199219,
+["h"] = 184.0003509521484,
 },
 ["solo"] = {
 ["y"] = 2,
@@ -127,10 +127,10 @@ _detalhes_database = {
 ["attribute"] = 2,
 ["pos"] = {
 ["normal"] = {
-["y"] = -414.4986877441406,
-["x"] = 1510.748779296875,
-["w"] = 380.4989624023438,
-["h"] = 119.000358581543,
+["y"] = -406.9985656738281,
+["x"] = 1492.8349609375,
+["w"] = 380.4989929199219,
+["h"] = 119.0002899169922,
 },
 ["solo"] = {
 ["y"] = 2,
@@ -147,10 +147,10 @@ _detalhes_database = {
 ["data_harvest_for_charsts"] = {
 ["players"] = {
 {
-["name"] = "Damage of Each Individual Player",
-["playerOnly"] = true,
 ["playerKey"] = "total",
 ["combatObjectContainer"] = 1,
+["name"] = "Damage of Each Individual Player",
+["playerOnly"] = true,
 },
 },
 ["totals"] = {
@@ -200,34 +200,31 @@ _detalhes_database = {
 ["evoker_show_realtimedps"] = false,
 ["inverse_deathlog_mplus"] = false,
 },
-["nick_tag_cache"] = {
-["nextreset"] = 1725827179,
-["last_version"] = 16,
-},
+["combat_counter"] = 62,
 ["mythic_plus_log"] = {
 },
-["announce_firsthit"] = {
-["enabled"] = true,
-["channel"] = "SELF",
+["data_harvested_for_charts"] = {
 },
 ["announce_damagerecord"] = {
 ["enabled"] = true,
 ["channel"] = "SELF",
 },
+["on_death_menu"] = false,
+["nick_tag_cache"] = {
+["nextreset"] = 1725827179,
+["last_version"] = 16,
+},
 ["SoloTablesSaved"] = {
 ["Mode"] = 1,
-},
-["ignore_nicktag"] = false,
-["data_harvested_for_charts"] = {
 },
 ["last_realversion"] = 160,
 ["last_instance_time"] = 1610128442,
 ["combat_id"] = 0,
 ["savedStyles"] = {
 },
-["last_day"] = "31",
+["last_day"] = "01",
 ["character_data"] = {
-["logons"] = 20,
+["logons"] = 30,
 },
 ["announce_deaths"] = {
 ["enabled"] = false,
@@ -263,7 +260,7 @@ _detalhes_database = {
 },
 ["raid_roster"] = {
 },
-["tempo_start"] = 645.152,
+["tempo_start"] = 4392.018,
 ["last_events_tables"] = {
 },
 ["alternate_power"] = {
@@ -357,7 +354,7 @@ _detalhes_database = {
 ["start_time"] = 0,
 ["TimeData"] = {
 },
-["combat_counter"] = 41,
+["combat_counter"] = 61,
 },
 ["plugin_database"] = {
 ["DETAILS_PLUGIN_TINY_THREAT"] = {
@@ -444,11 +441,11 @@ _detalhes_database = {
 1,
 0.5,
 },
-["arrow_anchor_y"] = 0,
 ["main_frame_size"] = {
 299.9999694824219,
 500.0000610351563,
 },
+["arrow_anchor_y"] = 0,
 ["minimap"] = {
 ["minimapPos"] = 160,
 ["radius"] = 160,
@@ -456,30 +453,19 @@ _detalhes_database = {
 },
 ["main_frame_locked"] = false,
 ["arrow_anchor_x"] = 0,
+["author"] = "Terciob",
+["row_texture"] = "Details Serenity",
+["square_grow_direction"] = "right",
+["y"] = 1.52587890625e-05,
 ["row_color"] = {
 0.1,
 0.1,
 0.1,
 0.4,
 },
-["row_texture"] = "Details Serenity",
-["square_grow_direction"] = "right",
-["use_spark"] = true,
-["author"] = "Terciob",
 ["square_amount"] = 5,
 ["enabled"] = false,
 ["arrow_size"] = 10,
-["y"] = 1.52587890625e-05,
-["row_spacement"] = 21,
-["main_frame_color"] = {
-0,
-0,
-0,
-0.2,
-},
-["main_frame_strata"] = "LOW",
-["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
-["font_size"] = 10,
 ["per_second"] = {
 ["enabled"] = false,
 ["point"] = "CENTER",
@@ -491,6 +477,17 @@ _detalhes_database = {
 ["update_speed"] = 0.05,
 ["size"] = 32,
 },
+["row_spacement"] = 21,
+["main_frame_color"] = {
+0,
+0,
+0,
+0.2,
+},
+["main_frame_strata"] = "LOW",
+["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
+["use_spark"] = true,
+["font_size"] = 10,
 ["x"] = -0.000244140625,
 ["font_face"] = "Friz Quadrata TT",
 ["square_size"] = 32,
@@ -505,12 +502,15 @@ _detalhes_database = {
 ["scale"] = 1,
 },
 },
-["on_death_menu"] = false,
-["combat_counter"] = 42,
+["ignore_nicktag"] = false,
+["announce_firsthit"] = {
+["enabled"] = true,
+["channel"] = "SELF",
+},
 ["announce_cooldowns"] = {
+["enabled"] = false,
 ["ignored_cooldowns"] = {
 },
-["enabled"] = false,
 ["custom"] = "",
 ["channel"] = "RAID",
 },
