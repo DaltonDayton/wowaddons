@@ -9,7 +9,7 @@ H: 250
 Frame: CharacterFrame
 FrameLevel: 1
 Anchor: TOPLEFT
-X: 409
+X: 16
 Y: -116
 W: 338
 H: 424

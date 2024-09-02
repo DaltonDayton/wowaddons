@@ -1,12 +1,14 @@
 # BigWigs
 
-## [v356.1](https://github.com/BigWigsMods/BigWigs/tree/v356.1) (2024-08-30)
-[Full Changelog](https://github.com/BigWigsMods/BigWigs/compare/v356...v356.1) [Previous Releases](https://github.com/BigWigsMods/BigWigs/releases)
+## [v357](https://github.com/BigWigsMods/BigWigs/tree/v357) (2024-09-01)
+[Full Changelog](https://github.com/BigWigsMods/BigWigs/compare/v356.1...v357) [Previous Releases](https://github.com/BigWigsMods/BigWigs/releases)
 
-- bump toc  
-- Plugins/Nameplates: Change default icon position to 0, 0 instead of slightly offset  
-- Initial work on scope reduction of our plugins  
-- Plugins/Messages: Change between icons when testing messages  
-- Plugins/Nameplates: Just stick to 100 for now and see how it goes  
-- Loader: Add Awakening the Machine scenario ID (#1782)  
-- Plugins/Nameplates: Increase X and Y offset max and min settings  
+- bump version  
+- Update koKR (#1787)  
+- Update deDE (#1786)  
+- Update zhCN (#1785)  
+- Update locale  
+- Core/BossPrototype: Update `GetUnitTarget` documentation  
+- Plugins: Tweak locale of an option description  
+- Core/BossPrototype: Shorten messages containing the AI NPC names you see in follower dungeons  
+- Plugins/BossBlock: Additional War Within talking heads  
