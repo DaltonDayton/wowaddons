@@ -26,3 +26,5 @@ WeakAurasCompanion: enabled
 WeakAurasArchive: enabled
 Blizzard_CombatText: enabled
 LittleWigs: enabled
+OmniCD: enabled
+OmniCD_BattleRes: enabled

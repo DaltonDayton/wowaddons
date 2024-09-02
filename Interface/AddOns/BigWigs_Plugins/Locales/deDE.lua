@@ -2,6 +2,7 @@ local L = BigWigsAPI:NewLocale("BigWigs: Plugins", "deDE")
 if not L then return end
 
 L.general = "Allgemein"
+L.advanced = "Erweitert"
 L.comma = ", "
 
 L.positionX = "X-Position"
@@ -328,9 +329,8 @@ L.showBorder = "Rand anzeigen"
 L.showBorderDesc = "Zeigt einen Rand um das Symbol."
 L.borderColor = "Randfarbe"
 L.borderSize = "Randgröße"
-L.timer = "Timer"
-L.showTimer = "Timer anzeigen"
-L.showTimerDesc = "Zeigt einen Text-Timer auf dem Symbol."
+L.showNumbers = "Zahlen anzeigen"
+L.showNumbersDesc = "Zeigt Zahlen auf dem Symbol an."
 L.cooldown = "Abklingzeit"
 L.showCooldownSwipe = "Zirkel anzeigen"
 L.showCooldownSwipeDesc = "Zeigt einen Zirkel auf der Abklingzeit, wenn diese aktiv ist."
@@ -338,7 +338,7 @@ L.showCooldownEdge = "Kante hervorheben"
 L.showCooldownEdgeDesc = "Hebt die Kante des Zirkels auf der Abklingzeit hervor, wenn diese aktiv ist."
 L.inverse = "Invertieren"
 L.inverseSwipeDesc = "Invertiert die Abklingzeit Animationen."
-L.iconGlow = "Symbolleuchten"
+L.glow = "Leuchten"
 L.enableExpireGlow = "Aktiviere Leuchten beim Ablaufen"
 L.enableExpireGlowDesc = "Zeigt ein Leuchten um das Symbol wenn die Abklingzeit abgelaufen ist."
 L.glowColor = "Leuchtfarbe"
@@ -348,6 +348,8 @@ L.resetNameplateIconsDesc = "Setzt alle Optionen für Namensplaketten-Symbole zu
 L.nameplateTextSettings = "Texteinstellungen"
 L.fixate_test = "Fixierung Test" -- Text that displays to test on the frame
 L.resetNameplateTextDesc = "Setzt die Optionen für Namensplaketten-Texte zurück."
+--L.autoScale = "Auto Scale"
+--L.autoScaleDesc = "Automatically change scale according to the nameplate scale."
 
 -- Glow types as part of LibCustomGlow
 L.pixelGlow = "Pixel-Leuchten"
