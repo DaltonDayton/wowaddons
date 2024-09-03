@@ -16,7 +16,6 @@ BigWigs3DB = {
 ["fontColor"] = {
 ["b"] = 0.3,
 },
-["voice"] = "enUS: Default (Male)",
 ["position"] = {
 "CENTER",
 "CENTER",
@@ -24,6 +23,7 @@ nil,
 -180,
 },
 ["fontName"] = "- M 900",
+["voice"] = "enUS: Default (Male)",
 },
 },
 },
@@ -68,16 +68,17 @@ nil,
 ["iconPosition"] = "RIGHT",
 ["emphasizeGrowup"] = true,
 ["expWidth"] = 271,
-["fontSize"] = 16,
 ["fill"] = true,
 ["barStyle"] = "ElvUI",
 ["growup"] = true,
 ["fontSizeEmph"] = 16,
-["normalHeight"] = 26,
-["alignText"] = "RIGHT",
 ["fontName"] = "- M 700",
-["texture"] = "- Tx Left",
+["alignText"] = "RIGHT",
+["normalHeight"] = 26,
+["fontSize"] = 16,
 ["visibleBarLimitEmph"] = 4,
+["spacing"] = 5,
+["emphasizeTime"] = 10,
 ["expPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -85,8 +86,7 @@ nil,
 130,
 "ElvUF_Target",
 },
-["emphasizeTime"] = 10,
-["spacing"] = 5,
+["texture"] = "- Tx Left",
 ["normalPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -97,28 +97,31 @@ nil,
 },
 },
 },
-["LibDualSpec-1.0"] = {
+["BigWigs_Plugins_Nameplates"] = {
+["profiles"] = {
+["ToxiUI"] = {
+["updated"] = true,
+},
+},
 },
 ["BigWigs_Plugins_Wipe"] = {
-},
-["BigWigs_Plugins_AutoReply"] = {
 },
 ["BigWigs_Plugins_Messages"] = {
 ["profiles"] = {
 ["ToxiUI"] = {
 ["outline"] = "OUTLINE",
+["emphUppercase"] = false,
+["align"] = "RIGHT",
 ["emphFontName"] = "- M 700",
 ["emphFontSize"] = 24,
+["growUpwards"] = true,
 ["emphPosition"] = {
 "TOP",
 "TOP",
 nil,
 -215,
 },
-["emphUppercase"] = false,
-["align"] = "RIGHT",
 ["fontName"] = "- M 700",
-["growUpwards"] = true,
 ["normalPosition"] = {
 "CENTER",
 "CENTER",
@@ -130,14 +133,11 @@ nil,
 },
 ["BigWigs_Plugins_Proximity"] = {
 },
+["BigWigs_Plugins_AutoReply"] = {
+},
 ["BigWigs_Plugins_Pull"] = {
 },
-["BigWigs_Plugins_Nameplates"] = {
-["profiles"] = {
-["ToxiUI"] = {
-["updated"] = true,
-},
-},
+["LibDualSpec-1.0"] = {
 },
 },
 ["profileKeys"] = {
