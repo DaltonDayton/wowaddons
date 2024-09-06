@@ -8,9 +8,9 @@ ElvCharacterDB = {
 "/i :||",
 "/tsm",
 "/wa",
-"/reload",
 "/m",
 "asdf",
+"/reload",
 },
 ["ChatHistoryLog"] = {
 {
