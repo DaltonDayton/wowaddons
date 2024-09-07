@@ -75,8 +75,10 @@ nil,
 ["normalHeight"] = 26,
 ["alignText"] = "RIGHT",
 ["fontName"] = "- M 700",
-["texture"] = "- Tx Left",
+["fontSize"] = 16,
 ["visibleBarLimitEmph"] = 4,
+["spacing"] = 5,
+["emphasizeTime"] = 10,
 ["expPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -84,9 +86,7 @@ nil,
 130,
 "ElvUF_Target",
 },
-["emphasizeTime"] = 10,
-["spacing"] = 5,
-["fontSize"] = 16,
+["texture"] = "- Tx Left",
 ["normalPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -97,9 +97,16 @@ nil,
 },
 },
 },
-["LibDualSpec-1.0"] = {
+["BigWigs_Plugins_Nameplates"] = {
+["profiles"] = {
+["ToxiUI"] = {
+["updated"] = true,
+},
+},
 },
 ["BigWigs_Plugins_AutoReply"] = {
+},
+["BigWigs_Plugins_Wipe"] = {
 },
 ["BigWigs_Plugins_Proximity"] = {
 },
@@ -128,16 +135,9 @@ nil,
 },
 },
 },
-["BigWigs_Plugins_Wipe"] = {
-},
 ["BigWigs_Plugins_Pull"] = {
 },
-["BigWigs_Plugins_Nameplates"] = {
-["profiles"] = {
-["ToxiUI"] = {
-["updated"] = true,
-},
-},
+["LibDualSpec-1.0"] = {
 },
 },
 ["profileKeys"] = {

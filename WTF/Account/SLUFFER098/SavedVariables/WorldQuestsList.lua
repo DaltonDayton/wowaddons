@@ -1,7 +1,7 @@
 
 VWQL = {
 ["Yushien-Ner'zhul"] = {
-["VERSION"] = 112,
+["Filter"] = 63,
 ["FilterType"] = {
 },
 ["Quests"] = {
@@ -12,14 +12,14 @@ VWQL = {
 [71164] = true,
 [81804] = true,
 },
-["Filter"] = 63,
+["VERSION"] = 112,
 },
 ["Scale"] = 0.8,
 ["DisableIconsGeneralMap947"] = true,
 ["DisableLFG_Popup"] = true,
 ["Sort"] = 5,
 ["Xavaat-Ner'zhul"] = {
-["Filter"] = 63,
+["VERSION"] = 112,
 ["FilterType"] = {
 },
 ["Quests"] = {
@@ -27,55 +27,71 @@ VWQL = {
 [83930] = true,
 [81862] = true,
 [82041] = true,
-[83079] = true,
+[82552] = true,
 [82197] = true,
 [76586] = true,
-[82552] = true,
+[83079] = true,
 },
-["VERSION"] = 112,
+["Filter"] = 63,
 },
 ["Xenoth-Ner'zhul"] = {
-["Filter"] = 63,
+["VERSION"] = 111,
 ["FilterType"] = {
 },
 ["Quests"] = {
 },
-["VERSION"] = 111,
+["Filter"] = 63,
 },
 ["AzeriteFormat"] = 20,
 ["Xambank-Ner'zhul"] = {
-["VERSION"] = 112,
+["Filter"] = 63,
 ["FilterType"] = {
 },
 ["Quests"] = {
 },
-["Filter"] = 63,
+["VERSION"] = 112,
 },
 ["Xamuul-Ner'zhul"] = {
-["Filter"] = 63,
+["VERSION"] = 112,
 ["FilterType"] = {
 },
 ["Quests"] = {
+[81818] = true,
+[83715] = true,
+[82293] = true,
 [81675] = true,
-[44114] = true,
+[83537] = true,
+[81621] = true,
+[81656] = true,
+[81806] = true,
+[82658] = true,
+[82288] = true,
+[82586] = true,
+[82292] = true,
+[81808] = true,
+[82583] = true,
+[82298] = true,
+[82300] = true,
+[81620] = true,
 [43943] = true,
+[82455] = true,
 },
-["VERSION"] = 112,
+["Filter"] = 63,
 },
 ["SortPrio"] = {
 },
 ["Ignore"] = {
 },
 ["Zatta-Ner'zhul"] = {
-["VERSION"] = 111,
+["Filter"] = 63,
 ["FilterType"] = {
 },
 ["Quests"] = {
 },
-["Filter"] = 63,
+["VERSION"] = 111,
 },
 ["Zaldrysa-Ner'zhul"] = {
-["Filter"] = 63,
+["VERSION"] = 111,
 ["FilterType"] = {
 },
 ["Quests"] = {
@@ -84,18 +100,18 @@ VWQL = {
 [69938] = true,
 [70075] = true,
 [66551] = true,
-[67006] = true,
 [67062] = true,
+[67006] = true,
 },
-["VERSION"] = 111,
+["Filter"] = 63,
 },
 ["Faelaena-Ner'zhul"] = {
-["Filter"] = 63,
+["VERSION"] = 111,
 ["FilterType"] = {
 },
 ["Quests"] = {
 },
-["VERSION"] = 111,
+["Filter"] = 63,
 },
 ["VERSION"] = 112,
 ["HideLegion"] = true,

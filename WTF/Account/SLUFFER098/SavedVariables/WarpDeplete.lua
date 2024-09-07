@@ -1,17 +1,17 @@
 
 WarpDepleteDB = {
-["profileKeys"] = {
-["Xavaat - Ner'zhul"] = "ToxiUI",
-["Xambank - Ner'zhul"] = "ToxiUI",
-["Zatta - Ner'zhul"] = "Default",
-["Faelaena - Ner'zhul"] = "ToxiUI",
-["Xenoth - Ner'zhul"] = "Default",
-["Xamuul - Ner'zhul"] = "ToxiUI",
-["Zaldrysa - Ner'zhul"] = "Default",
-["Yushien - Ner'zhul"] = "ToxiUI",
-},
 ["global"] = {
 ["mdtAlertShown"] = true,
+},
+["profileKeys"] = {
+["Xavaat - Ner'zhul"] = "ToxiUI",
+["Faelaena - Ner'zhul"] = "ToxiUI",
+["Zatta - Ner'zhul"] = "Default",
+["Xambank - Ner'zhul"] = "ToxiUI",
+["Xenoth - Ner'zhul"] = "Default",
+["Zaldrysa - Ner'zhul"] = "Default",
+["Xamuul - Ner'zhul"] = "ToxiUI",
+["Yushien - Ner'zhul"] = "ToxiUI",
 },
 ["profiles"] = {
 ["Default"] = {
@@ -38,12 +38,12 @@ WarpDepleteDB = {
 ["bar3Texture"] = "- Tx Left",
 ["bar1Font"] = "- ToxiUI",
 ["bar2TextureColor"] = "ff00e5f6",
-["keyColor"] = "ffffb35f",
+["frameY"] = 285,
 ["forcesTextureColor"] = "ffbc9f23",
 ["bar2Texture"] = "- Tx Left",
 ["bar1TextureColor"] = "ff00e5f6",
-["frameY"] = 285,
 ["forcesFont"] = "- ToxiUI",
+["keyColor"] = "ffffb35f",
 ["keyFont"] = "- M 900",
 },
 },
