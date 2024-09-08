@@ -1,0 +1,30 @@
+
+ElvCharacterDB = {
+["ConvertKeybindings"] = true,
+["ChatEditHistory"] = {
+},
+["ChatHistoryLog"] = {
+{
+"|cffffd000|Htrade:Player-1168-0ACE2650:2018:164|h[Blacksmithing]|h|r|cffa335ee|Hitem:222440::::::::73:102::13:1:3524:2:40:2151:38:8:::::|h[Everforged Longsword |A:Professions-ChatIcon-Quality-Tier5:17:17::1|a]|h|r|cffa335ee|Hitem:222447::::::::73:102::13:1:3524:2:40:2158:38:8:::::|h[Charged Claymore |A:Professions-ChatIcon-Quality-Tier5:17:17::1|a]|h|r|cffa335ee|Hitem:222439::::::::73:102::13:1:3524:2:40:2150:38:8:::::|h[Everforged Dagger |A:Professions-ChatIcon-Quality-Tier5:17:17::1|a]|h|r|cffa335ee|Hitem:222438::::::::73:102::13:1:3524:2:40:2149:38:8:::::|h[Everforged Stabber |A:Professions-ChatIcon-Quality-Tier5:17:17::1|a]|h|r|cffa335ee|Hitem:222441::::::::73:102::13:1:3524:2:40:2152:38:8:::::|h[Everforged Warglaive |A:Professions-ChatIcon-Quality-Tier5:17:17::1|a]|h|r|cffa335ee|Hitem:222444::::::::73:102::13:1:3524:2:40:2155:38:8:::::|h[Charged Hexsword |A:Professions-ChatIcon-Quality-Tier5:17:17::1|a]|h|r Can Also R5 Rings/Necks and Profession Tools",
+"Moritwo-Frostmane",
+"",
+"2. Trade - City",
+"Moritwo-Frostmane",
+"",
+2,
+2,
+"Trade - City",
+0,
+6,
+"Player-1168-0ACE2650",
+0,
+false,
+false,
+false,
+true,
+[52] = "|cffff7c0aMoritwo-Frostmane|r",
+[51] = 1725803517,
+[50] = "CHAT_MSG_CHANNEL",
+},
+},
+}

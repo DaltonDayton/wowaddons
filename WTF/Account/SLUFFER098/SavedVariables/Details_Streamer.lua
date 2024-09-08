@@ -1,14 +1,16 @@
 
 Details_StreamerDB = {
 ["characters"] = {
-["Xavaat - Ner'zhul"] = "Xamuul - Ner'zhul",
-["Faelaena - Ner'zhul"] = "Xamuul - Ner'zhul",
 ["Zatta - Ner'zhul"] = "Xamuul - Ner'zhul",
-["Xambank - Ner'zhul"] = "Xamuul - Ner'zhul",
 ["Xenoth - Ner'zhul"] = "Xamuul - Ner'zhul",
 ["Zaldrysa - Ner'zhul"] = "Xamuul - Ner'zhul",
-["Xamuul - Ner'zhul"] = "Xamuul - Ner'zhul",
 ["Yushien - Ner'zhul"] = "Xamuul - Ner'zhul",
+["Xavaat - Ner'zhul"] = "Xamuul - Ner'zhul",
+["Faelaena - Ner'zhul"] = "Xamuul - Ner'zhul",
+["Kariq - Ner'zhul"] = "Xamuul - Ner'zhul",
+["Xamuul - Ner'zhul"] = "Xamuul - Ner'zhul",
+["Xambank - Ner'zhul"] = "Xamuul - Ner'zhul",
+["Shantyclause - Ner'zhul"] = "Xamuul - Ner'zhul",
 },
 ["profiles"] = {
 ["Xamuul - Ner'zhul"] = {
@@ -21,7 +23,10 @@ Details_StreamerDB = {
 0.5,
 },
 ["scale"] = 1,
-["arrow_anchor_y"] = 0,
+["main_frame_size"] = {
+299.9999694824219,
+500.0000610351563,
+},
 ["minimap"] = {
 ["minimapPos"] = 160,
 ["radius"] = 160,
@@ -42,21 +47,6 @@ Details_StreamerDB = {
 ["square_amount"] = 5,
 ["enabled"] = false,
 ["arrow_size"] = 10,
-["font_size"] = 10,
-["row_spacement"] = 21,
-["main_frame_color"] = {
-0,
-0,
-0,
-0.2,
-},
-["row_color"] = {
-0.1,
-0.1,
-0.1,
-0.4,
-},
-["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
 ["per_second"] = {
 ["enabled"] = false,
 ["point"] = "CENTER",
@@ -68,17 +58,29 @@ Details_StreamerDB = {
 ["update_speed"] = 0.05,
 ["attribute_type"] = 1,
 },
-["use_spark"] = true,
+["row_spacement"] = 21,
+["main_frame_color"] = {
+0,
+0,
+0,
+0.2,
+},
+["author"] = "Terciob",
+["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
+["y"] = 1.52587890625e-05,
+["font_size"] = 10,
 ["x"] = -0.000244140625,
 ["font_face"] = "Friz Quadrata TT",
 ["square_size"] = 32,
-["y"] = 1.52587890625e-05,
-["author"] = "Terciob",
-["main_frame_locked"] = false,
-["main_frame_size"] = {
-299.9999694824219,
-500.0000610351563,
+["row_color"] = {
+0.1,
+0.1,
+0.1,
+0.4,
 },
+["use_spark"] = true,
+["main_frame_locked"] = false,
+["arrow_anchor_y"] = 0,
 },
 },
 }

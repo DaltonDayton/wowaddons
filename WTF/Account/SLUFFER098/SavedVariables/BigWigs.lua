@@ -16,7 +16,6 @@ BigWigs3DB = {
 ["fontColor"] = {
 ["b"] = 0.3,
 },
-["voice"] = "enUS: Default (Male)",
 ["position"] = {
 "CENTER",
 "CENTER",
@@ -24,6 +23,7 @@ nil,
 -180,
 },
 ["fontName"] = "- M 900",
+["voice"] = "enUS: Default (Male)",
 },
 },
 },
@@ -68,14 +68,13 @@ nil,
 ["iconPosition"] = "RIGHT",
 ["emphasizeGrowup"] = true,
 ["expWidth"] = 271,
-["fontSize"] = 16,
 ["fill"] = true,
 ["barStyle"] = "ElvUI",
 ["growup"] = true,
 ["fontSizeEmph"] = 16,
-["normalHeight"] = 26,
-["alignText"] = "RIGHT",
 ["fontName"] = "- M 700",
+["alignText"] = "RIGHT",
+["normalHeight"] = 26,
 ["texture"] = "- Tx Left",
 ["visibleBarLimitEmph"] = 4,
 ["expPosition"] = {
@@ -87,6 +86,7 @@ nil,
 },
 ["emphasizeTime"] = 10,
 ["spacing"] = 5,
+["fontSize"] = 16,
 ["normalPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -97,32 +97,28 @@ nil,
 },
 },
 },
-["BigWigs_Bosses_Kobold Delve Trash"] = {
-},
 ["BigWigs_Plugins_Wipe"] = {
 },
 ["LibDualSpec-1.0"] = {
 },
-["BigWigs_Bosses_Delve Rares"] = {
-},
-["BigWigs_Plugins_AutoReply"] = {
+["BigWigs_Plugins_Proximity"] = {
 },
 ["BigWigs_Plugins_Messages"] = {
 ["profiles"] = {
 ["ToxiUI"] = {
 ["outline"] = "OUTLINE",
+["emphUppercase"] = false,
+["align"] = "RIGHT",
 ["emphFontName"] = "- M 700",
 ["emphFontSize"] = 24,
+["growUpwards"] = true,
 ["emphPosition"] = {
 "TOP",
 "TOP",
 nil,
 -215,
 },
-["emphUppercase"] = false,
-["align"] = "RIGHT",
 ["fontName"] = "- M 700",
-["growUpwards"] = true,
 ["normalPosition"] = {
 "CENTER",
 "CENTER",
@@ -132,9 +128,7 @@ nil,
 },
 },
 },
-["BigWigs_Plugins_Proximity"] = {
-},
-["BigWigs_Bosses_Waxface"] = {
+["BigWigs_Plugins_AutoReply"] = {
 },
 ["BigWigs_Plugins_Pull"] = {
 },
@@ -142,6 +136,10 @@ nil,
 ["profiles"] = {
 ["ToxiUI"] = {
 ["updated"] = true,
+},
+["Default"] = {
+["updated"] = true,
+["iconOffsetY"] = -4,
 },
 },
 },
@@ -151,6 +149,7 @@ nil,
 ["Xambank - Ner'zhul"] = "ToxiUI",
 ["Faelaena - Ner'zhul"] = "ToxiUI",
 ["Xamuul - Ner'zhul"] = "ToxiUI",
+["Shantyclause - Ner'zhul"] = "ToxiUI",
 ["Yushien - Ner'zhul"] = "ToxiUI",
 },
 ["profiles"] = {

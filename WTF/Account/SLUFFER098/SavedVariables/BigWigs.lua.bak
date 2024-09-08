@@ -72,9 +72,9 @@ nil,
 ["barStyle"] = "ElvUI",
 ["growup"] = true,
 ["fontSizeEmph"] = 16,
-["normalHeight"] = 26,
-["alignText"] = "RIGHT",
 ["fontName"] = "- M 700",
+["alignText"] = "RIGHT",
+["normalHeight"] = 26,
 ["fontSize"] = 16,
 ["visibleBarLimitEmph"] = 4,
 ["spacing"] = 5,
@@ -102,13 +102,15 @@ nil,
 ["ToxiUI"] = {
 ["updated"] = true,
 },
+["Default"] = {
+["updated"] = true,
+["iconOffsetY"] = -4,
 },
+},
+},
+["LibDualSpec-1.0"] = {
 },
 ["BigWigs_Plugins_AutoReply"] = {
-},
-["BigWigs_Plugins_Wipe"] = {
-},
-["BigWigs_Plugins_Proximity"] = {
 },
 ["BigWigs_Plugins_Messages"] = {
 ["profiles"] = {
@@ -135,15 +137,18 @@ nil,
 },
 },
 },
+["BigWigs_Plugins_Proximity"] = {
+},
 ["BigWigs_Plugins_Pull"] = {
 },
-["LibDualSpec-1.0"] = {
+["BigWigs_Plugins_Wipe"] = {
 },
 },
 ["profileKeys"] = {
 ["Xavaat - Ner'zhul"] = "ToxiUI",
 ["Xambank - Ner'zhul"] = "ToxiUI",
 ["Faelaena - Ner'zhul"] = "ToxiUI",
+["Shantyclause - Ner'zhul"] = "ToxiUI",
 ["Xamuul - Ner'zhul"] = "ToxiUI",
 ["Yushien - Ner'zhul"] = "ToxiUI",
 },
