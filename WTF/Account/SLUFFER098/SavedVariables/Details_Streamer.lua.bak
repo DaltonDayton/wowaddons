@@ -7,10 +7,10 @@ Details_StreamerDB = {
 ["Yushien - Ner'zhul"] = "Xamuul - Ner'zhul",
 ["Xavaat - Ner'zhul"] = "Xamuul - Ner'zhul",
 ["Faelaena - Ner'zhul"] = "Xamuul - Ner'zhul",
-["Kariq - Ner'zhul"] = "Xamuul - Ner'zhul",
-["Xamuul - Ner'zhul"] = "Xamuul - Ner'zhul",
-["Xambank - Ner'zhul"] = "Xamuul - Ner'zhul",
 ["Shantyclause - Ner'zhul"] = "Xamuul - Ner'zhul",
+["Xambank - Ner'zhul"] = "Xamuul - Ner'zhul",
+["Xamuul - Ner'zhul"] = "Xamuul - Ner'zhul",
+["Kariq - Ner'zhul"] = "Xamuul - Ner'zhul",
 },
 ["profiles"] = {
 ["Xamuul - Ner'zhul"] = {
