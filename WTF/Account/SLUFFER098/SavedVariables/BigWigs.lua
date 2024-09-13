@@ -75,8 +75,10 @@ nil,
 ["fontName"] = "- M 700",
 ["alignText"] = "RIGHT",
 ["normalHeight"] = 26,
-["texture"] = "- Tx Left",
+["fontSize"] = 16,
 ["visibleBarLimitEmph"] = 4,
+["spacing"] = 5,
+["emphasizeTime"] = 10,
 ["expPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -84,9 +86,7 @@ nil,
 130,
 "ElvUF_Target",
 },
-["emphasizeTime"] = 10,
-["spacing"] = 5,
-["fontSize"] = 16,
+["texture"] = "- Tx Left",
 ["normalPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -97,11 +97,20 @@ nil,
 },
 },
 },
-["BigWigs_Plugins_Wipe"] = {
+["BigWigs_Plugins_Nameplates"] = {
+["profiles"] = {
+["ToxiUI"] = {
+["updated"] = true,
+},
+["Default"] = {
+["updated"] = true,
+["iconOffsetY"] = -4,
+},
+},
 },
 ["LibDualSpec-1.0"] = {
 },
-["BigWigs_Plugins_Proximity"] = {
+["BigWigs_Plugins_AutoReply"] = {
 },
 ["BigWigs_Plugins_Messages"] = {
 ["profiles"] = {
@@ -128,28 +137,19 @@ nil,
 },
 },
 },
-["BigWigs_Plugins_AutoReply"] = {
+["BigWigs_Plugins_Proximity"] = {
 },
 ["BigWigs_Plugins_Pull"] = {
 },
-["BigWigs_Plugins_Nameplates"] = {
-["profiles"] = {
-["ToxiUI"] = {
-["updated"] = true,
-},
-["Default"] = {
-["updated"] = true,
-["iconOffsetY"] = -4,
-},
-},
+["BigWigs_Plugins_Wipe"] = {
 },
 },
 ["profileKeys"] = {
 ["Xavaat - Ner'zhul"] = "ToxiUI",
 ["Xambank - Ner'zhul"] = "ToxiUI",
 ["Faelaena - Ner'zhul"] = "ToxiUI",
-["Xamuul - Ner'zhul"] = "ToxiUI",
 ["Shantyclause - Ner'zhul"] = "ToxiUI",
+["Xamuul - Ner'zhul"] = "ToxiUI",
 ["Yushien - Ner'zhul"] = "ToxiUI",
 },
 ["profiles"] = {

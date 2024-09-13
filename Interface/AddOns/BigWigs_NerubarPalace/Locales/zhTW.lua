@@ -1,11 +1,13 @@
 local L = BigWigs:NewBossLocale("Ulgrax the Devourer", "zhTW")
 if not L then return end
 if L then
+	--L.carnivorous_contest_pull = "Pull In"
 	L.chunky_viscera_message = "使用額外快捷鍵餵食首領！"
 end
 
 L = BigWigs:NewBossLocale("The Bloodbound Horror", "zhTW")
 if L then
+	--L.gruesome_disgorge_debuff = "Phase Shift"
 	L.grasp_from_beyond = "地刺" -- 觸手
 	L.grasp_from_beyond_say = "地刺"
 	L.bloodcurdle = "分散"

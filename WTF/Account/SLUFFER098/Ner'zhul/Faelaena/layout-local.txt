@@ -1,4 +1,11 @@
 Version: 1
+Frame: SettingsPanel
+FrameLevel: 1
+Anchor: TOP
+X: 0
+Y: -116
+W: 920
+H: 724
 Frame: ColorPickerFrame
 FrameLevel: 1
 Anchor: CENTER
@@ -20,3 +27,10 @@ X: 16
 Y: -116
 W: 338
 H: 424
+Frame: ProfessionsBookFrame
+FrameLevel: 1
+Anchor: TOPLEFT
+X: 16
+Y: -116
+W: 550
+H: 525
