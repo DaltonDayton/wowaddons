@@ -55,6 +55,7 @@ function mod:GetOptions()
 	return {
 		-- Scrimshaw Enforcer / Kul Tiran Halberd
 		{256627, "NAMEPLATE"}, -- Slobber Knocker
+		{257732, "NAMEPLATE"}, -- Shattering Bellow
 		-- Blacktar Bomber
 		{256640, "NAMEPLATE"}, -- Burning Tar
 		-- Irontide Waveshaper / Kul Tiran Wavetender
@@ -96,12 +97,10 @@ function mod:GetOptions()
 end
 
 function mod:OnBossEnable()
-	-- Interrupts
-	self:Log("SPELL_INTERRUPT", "Interrupt", "*")
-
 	-- Scrimshaw Enforcer / Kul Tiran Halberd
 	self:Log("SPELL_CAST_START", "SlobberKnocker", 256627)
 	self:Log("SPELL_CAST_SUCCESS", "SlobberKnockerSuccess", 256627)
+	self:Log("SPELL_CAST_START", "ShatteringBellow", 257732)
 	self:Death("KulTiranHalberdDeath", 141283, 129374) -- Enforcer, Halberd
 
 	-- Blacktar Bomber
@@ -110,6 +109,7 @@ function mod:OnBossEnable()
 
 	-- Irontide Waveshaper / Kul Tiran Wavetender
 	self:Log("SPELL_CAST_START", "WatertightShell", 256957)
+	self:Log("SPELL_INTERRUPT", "WatertightShellInterrupt", 256957)
 	self:Log("SPELL_CAST_SUCCESS", "WatertightShellSuccess", 256957)
 	self:Log("SPELL_AURA_APPLIED", "WatertightShellApplied", 256957)
 	self:Death("KulTiranWavetenderDeath", 129370, 141284) -- Waveshaper, Wavetender
@@ -125,6 +125,7 @@ function mod:OnBossEnable()
 	-- Ashvane Commander
 	self:Log("SPELL_AURA_APPLIED", "AzeriteCharge", 454437)
 	self:Log("SPELL_CAST_START", "BolsteringShout", 275826)
+	self:Log("SPELL_INTERRUPT", "BolsteringShoutInterrupt", 275826)
 	self:Log("SPELL_CAST_SUCCESS", "BolsteringShoutSuccess", 275826)
 	self:Death("AshvaneCommanderDeath", 128969)
 
@@ -149,6 +150,7 @@ function mod:OnBossEnable()
 
 	-- Bilge Rat Tempest
 	self:Log("SPELL_CAST_START", "ChokingWaters", 272571)
+	self:Log("SPELL_INTERRUPT", "ChokingWatersInterrupt", 272571)
 	self:Log("SPELL_CAST_SUCCESS", "ChokingWatersSuccess", 272571)
 	self:Death("BilgeRatTempestDeath", 129367)
 
@@ -161,18 +163,6 @@ end
 -- Event Handlers
 --
 
--- Interrupts
-
-function mod:Interrupt(args)
-	if args.extraSpellId == 256957 then -- Watertight Shell
-		self:Nameplate(256957, 46.3, args.destGUID)
-	elseif args.extraSpellId == 275826 then -- Bolstering Shout
-		self:Nameplate(275826, 15.3, args.destGUID)
-	elseif args.extraSpellId == 272571 then -- Choking Waters
-		self:Nameplate(272571, 21.8, args.destGUID)
-	end
-end
-
 -- Scrimshaw Enforcer / Kul Tiran Halberd
 
 function mod:SlobberKnocker(args)
@@ -182,6 +172,12 @@ end
 
 function mod:SlobberKnockerSuccess(args)
 	self:Nameplate(args.spellId, 15.4, args.sourceGUID)
+end
+
+function mod:ShatteringBellow(args)
+	self:Message(args.spellId, "yellow")
+	self:Nameplate(args.spellId, 27.9, args.sourceGUID)
+	self:PlaySound(args.spellId, "alert")
 end
 
 function mod:KulTiranHalberdDeath(args)
@@ -213,6 +209,10 @@ function mod:WatertightShell(args)
 	self:Message(args.spellId, "red", CL.casting:format(args.spellName))
 	self:PlaySound(args.spellId, "alert")
 	self:Nameplate(args.spellId, 0, args.sourceGUID)
+end
+
+function mod:WatertightShellInterrupt(args)
+	self:Nameplate(256957, 46.3, args.destGUID)
 end
 
 function mod:WatertightShellSuccess(args)
@@ -273,6 +273,10 @@ function mod:BolsteringShout(args)
 	self:Message(args.spellId, "red", CL.casting:format(args.spellName))
 	self:PlaySound(args.spellId, "alert")
 	self:Nameplate(args.spellId, 0, args.sourceGUID)
+end
+
+function mod:BolsteringShoutInterrupt(args)
+	self:Nameplate(275826, 15.3, args.destGUID)
 end
 
 function mod:BolsteringShoutSuccess(args)
@@ -371,6 +375,10 @@ function mod:ChokingWaters(args)
 	self:Message(args.spellId, "red", CL.casting:format(args.spellName))
 	self:PlaySound(args.spellId, "alert")
 	self:Nameplate(args.spellId, 0, args.sourceGUID)
+end
+
+function mod:ChokingWatersInterrupt(args)
+	self:Nameplate(272571, 21.8, args.destGUID)
 end
 
 function mod:ChokingWatersSuccess(args)

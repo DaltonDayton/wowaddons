@@ -38,7 +38,7 @@ function mod:OnRegister()
 	self:SetSpellRename(445210, CL.charge) -- Fire Charge (Charge)
 end
 
-local autotalk = mod:AddAutoTalkOption(true)
+local autotalk = mod:AddAutoTalkOption(false)
 function mod:GetOptions()
 	return {
 		autotalk,
@@ -85,9 +85,7 @@ end
 -- Autotalk
 
 function mod:GOSSIP_SHOW()
-	local info = self:GetWidgetInfo("delve", 6183)
-	local level = info and tonumber(info.tierText)
-	if (not level or level > 3) and self:GetOption(autotalk) then
+	if self:GetOption(autotalk) then
 		if self:GetGossipID(119802) then -- Kriegval's Rest, start Delve (Kuvkel)
 			-- 119802:I'll get your valuables back from the kobolds.
 			self:SelectGossipID(119802)
@@ -97,7 +95,7 @@ function mod:GOSSIP_SHOW()
 		elseif self:GetGossipID(120018) then -- The Waterworks, start Delve (Foreman Bruknar)
 			-- 120018:|cFF0000FF(Delve)|r I'll rescue the rest of your workers from the kobolds.
 			self:SelectGossipID(120018)
-		elseif self:GetGossipID(120096) then
+		elseif self:GetGossipID(120096) then -- The Waterworks, continue Delve (Foreman Bruknar)
 			-- 120096:|cFF0000FF(Delve)|r I'll take the stomping shoes and use them to get your stolen goods back.
 			self:SelectGossipID(120096)
 		elseif self:GetGossipID(120081) then -- The Waterworks, start Delve (Pagsly)

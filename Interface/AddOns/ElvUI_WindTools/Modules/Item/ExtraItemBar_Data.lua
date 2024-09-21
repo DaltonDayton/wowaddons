@@ -699,6 +699,34 @@ local foods = {
 	},
 }
 
+local fishings = {
+	general = {
+		6529, -- 闪光的小珠
+		6530, -- 夜色虫
+		6532, -- 明亮的小珠
+		6533, -- 水下诱鱼器
+		136377, -- 巨型鱼漂
+		202207, -- 可重复使用的巨型鱼漂
+	},
+	tww = {
+		-- fish lure https://www.wowhead.com/cn/items/consumables/other/name:%E9%B1%BC%E9%A5%B5?filter=166;11;0
+		219002, -- 高光虹鱼鱼饵
+		219003, -- 静谧河鲈鱼饵
+		219004, -- 多恩梭鱼鱼饵
+		219005, -- 阿拉索锤头鲨鱼饵
+		219006, -- 咆哮的渔夫寻猎者鱼饵
+		-- fish that can be used to get buff https://www.wowhead.com/items/trade-goods/meat?filter=166:69;11:1;0:0
+		220134, -- 拖沓鲦
+		220135, -- 血红鲈
+		220136, -- 晶脉鲟
+		220137, -- 铋鳑鲏
+		220138, -- 轻吻鲦鱼
+		220139, -- 低语观星鲑
+		220146, -- 皇家拟雀鲷
+		220152, -- 受诅食尸鱼
+	},
+}
+
 local banners = {
 	18606, -- 聯盟戰旗
 	18607, -- 部落戰旗
@@ -717,6 +745,7 @@ local utilities = {
 	132516, -- 槍靴
 	193470, -- 兇野皮鼓
 	221945, -- 誘人的紅色按鈕
+	221949, -- 暫停裝置
 	221953, -- 極為實用的起搏器 (1)
 	221954, -- 極為實用的起搏器 (2)
 	221955, -- 極為實用的起搏器 (3)
@@ -1029,6 +1058,7 @@ local openableItems = {
 	226263, -- 劇團寶箱
 	226264, -- 聖輝寶箱
 	226273, -- 覺醒機械寶箱
+	226392, -- 粗心猛冲者的宝藏
 	226813, -- 黃金勇氣石
 	227450, -- 天空競速騎師的錢包
 	227713, -- 工匠聯盟報酬
@@ -1338,6 +1368,8 @@ local delveItem = {
 	225905, -- 往昔追尋者聖物
 	225906, -- 寂滅死靈聖物
 	225907, -- 感知聖物
+	225908, -- 澤克維爾的遺血
+	227784, -- 探究者的獎賞
 	228582, -- 流線降阻聖物
 	228984, -- 不滅的鋼鐵塑像
 	229353, -- 盛怒塑像
@@ -1386,6 +1418,8 @@ EB.moduleList = {
 	["FOODTWW"] = createList(foods, "crafted_tww"),
 	["FOODVENDOR"] = createList(foods, "vendor"),
 	["MAGEFOOD"] = createList(foods, "mage"),
+	["FISHING"] = createList(fishings, "general", "tww"),
+	["FISHINGTWW"] = createList(fishings, "tww"),
 	["BANNER"] = banners,
 	["UTILITY"] = utilities,
 	["OPENABLE"] = openableItems,

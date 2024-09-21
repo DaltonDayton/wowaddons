@@ -17,7 +17,6 @@ end
 
 L = BigWigs:NewBossLocale("Rasha'nan", "esMX")
 if L then
-	--L.rolling_acid = "Waves"
 	--L.spinnerets_strands = "Strands"
 	--L.enveloping_webs = "Webs"
 	--L.enveloping_web_say = "Web" -- Singular of Webs
@@ -60,4 +59,19 @@ if L then
 	--L.cataclysmic_entropy = "Big Boom" -- Interrupt before it casts
 	--L.spike_eruption = "Spikes"
 	--L.unleashed_swarm = "Swarm"
+end
+
+L = BigWigs:NewBossLocale("Queen Ansurek", "esMX")
+if L then
+	--L.stacks_onboss = "%dx %s on BOSS"
+
+	--L.reactive_toxin = "Toxins"
+	--L.reactive_toxin_say = "Toxin"
+	--L.venom_nova = "Nova"
+	--L.web_blades = "Blades"
+	--L.silken_tomb = "Roots" -- Raid being rooted in place
+	--L.wrest = "Pull In"
+	--L.slow = "Slow"
+	--L.royal_condemnation = "Shackles"
+	--L.frothing_gluttony = "Ring"
 end

@@ -1,7 +1,10 @@
 # WarpDeplete
 
-## [v3.0.6](https://github.com/happenslol/WarpDeplete/tree/v3.0.6) (2024-08-12)
-[Full Changelog](https://github.com/happenslol/WarpDeplete/compare/v3.0.5...v3.0.6) [Previous Releases](https://github.com/happenslol/WarpDeplete/releases)
+## [v3.1.0](https://github.com/happenslol/WarpDeplete/tree/v3.1.0) (2024-09-21)
+[Full Changelog](https://github.com/happenslol/WarpDeplete/compare/v3.0.6...v3.1.0) [Previous Releases](https://github.com/happenslol/WarpDeplete/releases)
 
-- fix: Also remove capitalized 'defeated' text from objective names  
-- fix: Add additional fallback for objective tracker hiding  
+- chore: Bump version  
+- feat: Shorten affix names for better readability  
+- fix: Add new TWW Challenger's Peril affix support (#86)  
+    * fix: Add new TWW Challenger's Peril affix support  
+    * fix: typo  

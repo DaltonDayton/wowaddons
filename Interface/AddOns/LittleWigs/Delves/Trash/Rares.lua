@@ -48,10 +48,11 @@ function mod:OnRegister()
 	self:SetSpellRename(445781, CL.frontal_cone) -- Lava Blast (Frontal Cone)
 	self:SetSpellRename(415253, CL.frontal_cone) -- Fungal Breath (Frontal Cone)
 	self:SetSpellRename(415250, CL.explosion) -- Fungal Bloom (Explosion)
+	self:SetSpellRename(449038, CL.spikes) -- Impaling Spikes (Spikes)
 	self:SetSpellRename(450492, CL.fear) -- Horrendous Roar (Fear)
 end
 
-local autotalk = mod:AddAutoTalkOption(true, "boss")
+local autotalk = mod:AddAutoTalkOption(false, "boss")
 function mod:GetOptions()
 	return {
 		autotalk,
@@ -103,6 +104,7 @@ function mod:GetOptions()
 		[445781] = CL.frontal_cone, -- Lava Blast (Frontal Cone)
 		[415253] = CL.frontal_cone, -- Fungal Breath (Frontal Cone)
 		[415250] = CL.explosion, -- Fungal Bloom (Explosion)
+		[449038] = CL.spikes, -- Impaling Spikes (Spikes)
 		[450492] = CL.fear, -- Horrendous Roar (Fear)
 	}
 end
@@ -179,9 +181,7 @@ end
 -- Autotalk
 
 function mod:GOSSIP_SHOW()
-	local info = self:GetWidgetInfo("delve", 6183)
-	local level = info and tonumber(info.tierText)
-	if (not level or level > 3) and self:GetOption(autotalk) then
+	if self:GetOption(autotalk) then
 		if self:GetGossipID(123520) then -- Reno Jackson, start combat
 			-- 123520:Let's fight!
 			self:SelectGossipID(123520)
@@ -499,13 +499,15 @@ do
 	local timer
 
 	function mod:ImpalingSpikes(args)
-		if timer then
-			self:CancelTimer(timer)
+		if self:MobId(args.sourceGUID) == 227573 then -- Cast by others
+			if timer then
+				self:CancelTimer(timer)
+			end
+			self:Message(args.spellId, "yellow", CL.spikes)
+			self:CDBar(args.spellId, 13.3, CL.spikes)
+			timer = self:ScheduleTimer("AnubvirDeath", 30)
+			self:PlaySound(args.spellId, "warning")
 		end
-		self:Message(args.spellId, "yellow")
-		self:PlaySound(args.spellId, "alarm")
-		self:CDBar(args.spellId, 13.3)
-		timer = self:ScheduleTimer("AnubvirDeath", 30)
 	end
 
 	function mod:AnubvirDeath()
@@ -513,7 +515,7 @@ do
 			self:CancelTimer(timer)
 			timer = nil
 		end
-		self:StopBar(449038) -- Impaling Spikes
+		self:StopBar(CL.spikes) -- Impaling Spikes
 	end
 end
 

@@ -21,7 +21,6 @@ local impalingEruptionCount = 1
 local callOfTheSwarmCount = 1
 local recklessChargeCount = 1
 local stingingSwarmCount = 1
-local unleashedSwarmCount = 1
 local burrowedEruptionCount = 1
 
 local skitteringLeapCount = 1
@@ -198,7 +197,7 @@ function mod:GetOptions()
 
 		-- Stage Two: Grasp of the Void
 			-- Anub'arash
-			438677, -- Stinging Swarm
+			{438677, "ME_ONLY_EMPHASIZE"}, -- Stinging Swarm
 				-- 449993, -- Stinging Burst
 				456245, -- Stinging Delirium
 
@@ -342,7 +341,6 @@ function mod:OnEngage()
 	burrowedEruptionCount = 1
 	recklessChargeCount = 1
 	stingingSwarmCount = 1
-	unleashedSwarmCount = 1
 
 	self:Bar(438801, timers[1][438801][1], CL.count:format(CL.adds, callOfTheSwarmCount)) -- Call of the Swarm
 	self:Bar(438218, timers[1][438218][1], CL.count:format(self:SpellName(438218), piercingStrikeCount)) -- Piercing Strike
@@ -603,7 +601,11 @@ end
 
 function mod:StingingSwarmApplied(args)
 	if self:Me(args.destGUID) then
-		self:StackMessage(438677, "blue", args.destName, args.amount or 1, 4)
+		if not args.amount then
+			self:PersonalMessage(438677)
+		else
+			self:StackMessage(438677, "blue", args.destName, args.amount, args.amount)
+		end
 		self:PlaySound(438677, "warning")
 	end
 end
@@ -711,6 +713,7 @@ end
 
 function mod:BurrowTransition()
 	self:StopBar(CL.count:format(CL.intermission, 2))
+	self:CancelTimer(checkTimer)
 
 	self:SetStage(2.5)
 	self:Message("stages", "cyan", CL.count:format(CL.intermission, 2), false)

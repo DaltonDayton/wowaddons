@@ -50,6 +50,7 @@ local glowValues = {
 }
 
 local GetNamePlateForUnit = C_NamePlate.GetNamePlateForUnit
+local GetCVar = C_CVar.GetCVar
 local findUnitByGUID
 do
 	local unitTable = {
@@ -307,12 +308,14 @@ local function getTextFrame()
 	if next(textFrameCache) then
 		textFrame = table.remove(textFrameCache)
 	else
-
 		textFrame = CreateFrame("Frame", nil, UIParent)
 		textFrame:SetPoint("CENTER")
-		-- textFrame:SetSize(db.iconWidth, db.iconHeight)
+		textFrame:SetFrameStrata("MEDIUM")
+		textFrame:SetFixedFrameStrata(true)
+		textFrame:SetFrameLevel(300)
+		textFrame:SetFixedFrameLevel(true)
 
-		local fontString = textFrame:CreateFontString(nil, "OVERLAY")
+		local fontString = textFrame:CreateFontString()
 		fontString:SetPoint("CENTER")
 		fontString:SetFont("Fonts\\FRIZQT__.TTF", 11, "OUTLINE")
 		textFrame.fontString = fontString
@@ -436,9 +439,14 @@ local function getIconFrame()
 	else
 		iconFrame = CreateFrame("Frame", nil, UIParent)
 		iconFrame:SetPoint("CENTER")
+		iconFrame:SetIgnoreParentScale(true)
+		iconFrame:SetFrameStrata("MEDIUM")
+		iconFrame:SetFixedFrameStrata(true)
+		iconFrame:SetFrameLevel(200)
+		iconFrame:SetFixedFrameLevel(true)
 		iconFrame:SetSize(db.iconWidth, db.iconHeight)
 
-		local icon = iconFrame:CreateTexture(nil, "ARTWORK")
+		local icon = iconFrame:CreateTexture()
 		icon:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
 		icon:SetSnapToPixelGrid(false)
 		icon:SetTexelSnappingBias(0)
@@ -452,16 +460,18 @@ local function getIconFrame()
 		cooldown:SetDrawEdge(db.iconCooldownEdge)
 		cooldown:SetDrawSwipe(db.iconCooldownSwipe)
 		cooldown:SetReverse(db.iconCooldownInverse)
-		cooldown:SetFrameLevel(100)
+		cooldown:SetFrameLevel(210)
+		cooldown:SetFixedFrameLevel(true)
 		cooldown:SetHideCountdownNumbers(true) -- Blizzard
 		cooldown.noCooldownCount = true -- OmniCC
 
 		local textFrame = CreateFrame("Frame", nil, iconFrame)
 		textFrame:SetAllPoints(iconFrame)
 		textFrame:SetPoint("CENTER")
-		textFrame:SetFrameLevel(cooldown:GetFrameLevel() + 1)
+		textFrame:SetFrameLevel(220)
+		textFrame:SetFixedFrameLevel(true)
 
-		local countdownNumber = textFrame:CreateFontString(nil, "OVERLAY")
+		local countdownNumber = textFrame:CreateFontString()
 		countdownNumber:SetPoint("CENTER")
 		countdownNumber:SetFont("Fonts\\FRIZQT__.TTF", 11, "OUTLINE")
 		countdownNumber:SetJustifyH("CENTER")
@@ -1357,8 +1367,6 @@ do
 				end
 
 				icon:ClearAllPoints()
-				icon:SetIgnoreParentScale(not db.iconAutoScale)
-				icon:SetParent(nameplate)
 				icon:SetPoint(iconPoint, nameplate, nameplatePoint, offsetX, offsetY)
 			end
 		end
@@ -1396,7 +1404,6 @@ do
 					end
 				end
 				text:ClearAllPoints()
-				text:SetParent(nameplate)
 				text:SetPoint(textPoint, nameplate, nameplatePoint, offsetX, offsetY)
 			end
 		end
@@ -1448,20 +1455,6 @@ end
 -- Initialization
 --
 
-function plugin:OnRegister()
-	updateProfile()
-
-	-- Pre-create some frames
-	local dummyFrames = {}
-	for i = 1, 5 do
-		dummyFrames[i] = {icon = getIconFrame(), text = getTextFrame()}
-	end
-	for i = 1, 5 do
-		dummyFrames[i].icon:HideFrame()
-		dummyFrames[i].text:HideFrame()
-	end
-end
-
 function plugin:OnPluginEnable()
 	updateProfile()
 
@@ -1475,6 +1468,7 @@ function plugin:OnPluginEnable()
 
 	self:RegisterEvent("NAME_PLATE_UNIT_ADDED")
 	self:RegisterEvent("NAME_PLATE_UNIT_REMOVED")
+	self:RegisterEvent("PLAYER_TARGET_CHANGED")
 end
 
 function plugin:OnPluginDisable()
@@ -1578,6 +1572,14 @@ local function createNameplateIcon(module, guid, key, length, icon, hideOnExpire
 	local height = db.iconHeight
 
 	iconFrame:SetSize(width, height)
+	if db.iconAutoScale then
+		local target = module:UnitGUID("target")
+		if guid == target then
+			iconFrame:SetScale(GetCVar("nameplateSelectedScale"))
+		else
+			iconFrame:SetScale(GetCVar("nameplateGlobalScale"))
+		end
+	end
 	iconFrame:Set("bigwigs:key", key)
 	iconFrame:Set("bigwigs:unitGUID", guid)
 	iconFrame:SetHideOnExpire(hideOnExpire)
@@ -1766,5 +1768,29 @@ do
 		for _, frameInfo in next, unitTexts do
 			handleFrame(guid, frameInfo)
 		end
+	end
+end
+
+do
+	local prevTarget = nil
+	function plugin:PLAYER_TARGET_CHANGED()
+		if not db.iconAutoScale then return end
+
+		local guid = self:UnitGUID("target")
+		if nameplateIcons[guid] then
+			for _, tbl in next, nameplateIcons[guid] do
+				if tbl.nameplateFrame then
+					tbl.nameplateFrame:SetScale(GetCVar("nameplateSelectedScale"))
+				end
+			end
+		end
+		if prevTarget and nameplateIcons[prevTarget] then
+			for _, tbl in next, nameplateIcons[prevTarget] do
+				if tbl.nameplateFrame then
+					tbl.nameplateFrame:SetScale(GetCVar("nameplateGlobalScale"))
+				end
+			end
+		end
+		prevTarget = guid
 	end
 end

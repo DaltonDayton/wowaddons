@@ -47,13 +47,15 @@ end
 -- Initialization
 --
 
+local experimentalDosageMarker = mod:AddMarkerOption(false, "player", 8, 442526, 6, 4, 3, 7) -- Experimental Dosage
 local voraciousWormMarker = mod:AddMarkerOption(false, "npc", 8, -28999, 8, 7, 6, 5) -- Voracious Worm
 function mod:GetOptions()
 	return {
 		"berserk",
 		{442526, "SAY", "SAY_COUNTDOWN", "ME_ONLY_EMPHASIZE"}, -- Experimental Dosage
-		442660, -- Experimental Dosage (was rupture/healing absorb)
-		"custom_on_experimental_dosage_marks",
+			442660, -- Experimental Dosage (was rupture/healing absorb)
+			"custom_on_experimental_dosage_marks",
+			experimentalDosageMarker,
 		442432, -- Ingest Black Blood
 			443274, -- Unstable Infusion
 		442799, -- Sanguine Overflow (Damage)
@@ -195,11 +197,11 @@ do
 
 	local function sortPriority(first, second)
 		if first and second then
-			if first.melee ~= second.melee then
-				return first.melee and not second.melee
-			end
 			if first.healer ~= second.healer then
 				return not first.healer and second.healer
+			end
+			if first.melee ~= second.melee then
+				return first.melee and not second.melee
 			end
 			return first.index < second.index
 		end
@@ -225,6 +227,9 @@ do
 			playerList[#playerList+1] = player
 			playerList[player] = icon
 			self:TargetsMessage(442526, "yellow", playerList, nil, CL.count:format(self:SpellName(442526), experimentalDosageCount - 1))
+			if not self:Mythic() then
+				self:CustomIcon(experimentalDosageMarker, player, icon)
+			end
 		end
 	end
 
@@ -261,6 +266,9 @@ do
 	function mod:ExperimentalDosageRemoved(args)
 		if self:Me(args.destGUID) then
 			self:CancelSayCountdown(442526)
+		end
+		if not self:Mythic() then
+			self:CustomIcon(experimentalDosageMarker, args.destName)
 		end
 	end
 end

@@ -113,7 +113,7 @@ function WarpDeplete:GetTimerInfo()
     C_Timer.After(0.5, function() 
       local current = select(2, GetWorldElapsedTime(1))
       local deaths = C_ChallengeMode.GetDeathCount()
-      local trueTime = current - deaths * 5
+      local trueTime = current - deaths * self.keyDetailsState.deathPenalty
       self.timerState.startOffset = trueTime
       self.timerState.startTime = GetTime()
       self.timerState.isBlizzardTimer = true
@@ -127,6 +127,37 @@ function WarpDeplete:GetTimerInfo()
   return true
 end
 
+-- TODO(happens): Add missing locales
+local affixNameFilters = {
+  ["enUS"] = {"Xal'atath's", "Challenger's", "Bargain:"},
+  ["deDE"] = {"Xal'ataths", "des Herausforderers", "Handel:"},
+  ["frFR"] = {},
+  ["itIT"] = {},
+  ["koKR"] = {},
+  ["zhCN"] = {},
+  ["zhTW"] = {},
+  ["ruRU"] = {},
+  ["esES"] = {},
+  ["esMX"] = {},
+  ["ptBR"] = {},
+}
+
+local locale = GetLocale()
+-- These should have the same names
+if locale == "enGB" then
+  locale = "enUS"
+end
+
+local function formatAffixName(name)
+  local result = name
+  local filters = affixNameFilters[locale] or {}
+  for _, filter in ipairs(filters) do
+    result = result:gsub(filter, "")
+  end
+
+  return result:match("^%s*(.-)%s*$")
+end
+
 function WarpDeplete:GetKeyInfo()
   self:PrintDebug("Getting key info")
 
@@ -134,10 +165,14 @@ function WarpDeplete:GetKeyInfo()
 
   local affixNames = {}
   local affixIds = {}
+  local deathPenalty = 5
   for i, affixID in ipairs(affixes) do
     local name = C_ChallengeMode.GetAffixInfo(affixID)
-    affixNames[i] = name
+    affixNames[i] = formatAffixName(name)
     affixIds[i] = affixID
+    if affixID == 152 then
+      deathPenalty = 15
+    end
   end
 
   if level <= 0 or #affixNames <= 0 then
@@ -145,7 +180,7 @@ function WarpDeplete:GetKeyInfo()
     return false
   end
 
-  self:SetKeyDetails(level or 0, affixNames, affixIds)
+  self:SetKeyDetails(level or 0, deathPenalty, affixNames, affixIds)
   return true
 end
 
@@ -447,7 +482,7 @@ function WarpDeplete:OnTimerTick(elapsed)
     self:SetDeaths(newDeaths)
   end
 
-  local deathPenalty = self.timerState.deaths * 5
+  local deathPenalty = self.timerState.deaths * self.keyDetailsState.deathPenalty
   local current = GetTime() + self.timerState.startOffset - self.timerState.startTime + deathPenalty
 
   self:SetTimerCurrent(current)

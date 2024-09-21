@@ -620,10 +620,13 @@ EncounterDetailsDB = {
 },
 ["source"] = "Prioress Murrpray",
 },
-[450131] = {
-["school"] = 8,
+[450142] = {
+["school"] = 4,
+["type"] = "BUFF",
 ["token"] = {
-["SPELL_DAMAGE"] = true,
+["SPELL_AURA_APPLIED"] = true,
+["SPELL_CAST_START"] = true,
+["SPELL_CAST_SUCCESS"] = true,
 },
 ["source"] = "Waxface",
 },
@@ -660,13 +663,16 @@ EncounterDetailsDB = {
 },
 ["source"] = "Waxface",
 },
-[430013] = {
-["school"] = 8,
+[450330] = {
+["school"] = 1,
+["type"] = "DEBUFF",
 ["token"] = {
-["SPELL_CAST_SUCCESS"] = true,
+["SPELL_AURA_APPLIED"] = true,
 ["SPELL_CAST_START"] = true,
+["SPELL_CAST_SUCCESS"] = true,
+["SPELL_DAMAGE"] = true,
 },
-["source"] = "Unruly Stormrook",
+["source"] = "Waxface",
 },
 [445504] = {
 ["school"] = 1,
@@ -675,14 +681,13 @@ EncounterDetailsDB = {
 },
 ["source"] = "Highlord Darion Mograine",
 },
-[424148] = {
+[430013] = {
 ["school"] = 8,
 ["token"] = {
-["SPELL_CAST_START"] = true,
 ["SPELL_CAST_SUCCESS"] = true,
-["SPELL_DAMAGE"] = true,
+["SPELL_CAST_START"] = true,
 },
-["source"] = "Kyrioss",
+["source"] = "Unruly Stormrook",
 },
 [443847] = {
 ["school"] = 32,
@@ -715,12 +720,13 @@ EncounterDetailsDB = {
 },
 ["source"] = "Goldie Baronbottom",
 },
-[423356] = {
-["school"] = 32,
+[429999] = {
+["school"] = 4,
+["type"] = "DEBUFF",
 ["token"] = {
-["SPELL_DAMAGE"] = true,
+["SPELL_AURA_APPLIED"] = true,
 },
-["source"] = "Voidstone Monstrosity",
+["source"] = "Vent Stalker",
 },
 [432182] = {
 ["school"] = 4,
@@ -738,14 +744,6 @@ EncounterDetailsDB = {
 },
 ["source"] = "Trilling Attendant",
 },
-[438494] = {
-["school"] = 1,
-["type"] = "BUFF",
-["token"] = {
-["SPELL_AURA_APPLIED"] = true,
-},
-["source"] = "Avanoxx",
-},
 [432119] = {
 ["school"] = 32,
 ["type"] = "DEBUFF",
@@ -754,15 +752,21 @@ EncounterDetailsDB = {
 },
 ["source"] = "Ki'katal the Harvester",
 },
-[444608] = {
-["school"] = 2,
+[438494] = {
+["school"] = 1,
 ["type"] = "BUFF",
 ["token"] = {
 ["SPELL_AURA_APPLIED"] = true,
-["SPELL_CAST_START"] = true,
-["SPELL_CAST_SUCCESS"] = true,
 },
-["source"] = "Prioress Murrpray",
+["source"] = "Avanoxx",
+},
+[447270] = {
+["school"] = 1,
+["token"] = {
+["SPELL_CAST_SUCCESS"] = true,
+["SPELL_CAST_START"] = true,
+},
+["source"] = "Captain Dailcry",
 },
 [427402] = {
 ["school"] = 9,
@@ -838,20 +842,24 @@ EncounterDetailsDB = {
 },
 ["source"] = "Voidrider",
 },
-[422261] = {
-["school"] = 32,
+[427616] = {
+["school"] = 8,
 ["token"] = {
 ["SPELL_DAMAGE"] = true,
+["SPELL_CAST_SUCCESS"] = true,
+["SPELL_CAST_START"] = true,
 },
-["source"] = "Skarmorak",
+["source"] = "Unruly Stormrook",
 },
-[428212] = {
+[447272] = {
 ["school"] = 1,
-["type"] = "BUFF",
+["type"] = "DEBUFF",
 ["token"] = {
 ["SPELL_AURA_APPLIED"] = true,
+["SPELL_DAMAGE"] = true,
+["SPELL_PERIODIC_DAMAGE"] = true,
 },
-["source"] = "Speaker Brokk",
+["source"] = "Captain Dailcry",
 },
 [425556] = {
 ["school"] = 2,
@@ -931,13 +939,12 @@ EncounterDetailsDB = {
 },
 ["source"] = "Stormguard Gorren",
 },
-[428202] = {
-["school"] = 1,
+[419871] = {
+["school"] = 8,
 ["token"] = {
 ["SPELL_CAST_SUCCESS"] = true,
-["SPELL_CAST_START"] = true,
 },
-["source"] = "Speaker Brokk",
+["source"] = "Kyrioss",
 },
 [434284] = {
 ["school"] = 1,
@@ -946,13 +953,14 @@ EncounterDetailsDB = {
 },
 ["source"] = "Anub'zekt",
 },
-[449167] = {
-["school"] = 1,
+[443954] = {
+["school"] = 4,
+["type"] = "DEBUFF",
 ["token"] = {
-["SPELL_CAST_SUCCESS"] = true,
-["SPELL_CAST_START"] = true,
+["SPELL_AURA_APPLIED"] = true,
+["SPELL_PERIODIC_DAMAGE"] = true,
 },
-["source"] = "Speaker Dorlita",
+["source"] = "Vent Stalker",
 },
 [427854] = {
 ["school"] = 32,
@@ -978,12 +986,14 @@ EncounterDetailsDB = {
 },
 ["source"] = "I'pa",
 },
-[462373] = {
-["school"] = 1,
+[428711] = {
+["school"] = 4,
 ["token"] = {
+["SPELL_CAST_START"] = true,
 ["SPELL_CAST_SUCCESS"] = true,
+["SPELL_DAMAGE"] = true,
 },
-["source"] = "Vent Stalker",
+["source"] = "Speaker Dorlita",
 },
 [424795] = {
 ["school"] = 1,
@@ -1025,14 +1035,12 @@ EncounterDetailsDB = {
 },
 ["source"] = "Elaena Emberlanz",
 },
-[443854] = {
+[443405] = {
 ["school"] = 32,
-["type"] = "BUFF",
 ["token"] = {
-["SPELL_AURA_APPLIED"] = true,
-["SPELL_CAST_SUCCESS"] = true,
+["SPELL_DAMAGE"] = true,
 },
-["source"] = "Inflicted Civilian",
+["source"] = "Skarmorak",
 },
 [424414] = {
 ["school"] = 1,
@@ -1046,12 +1054,12 @@ EncounterDetailsDB = {
 },
 ["source"] = "Captain Dailcry",
 },
-[426136] = {
-["school"] = 32,
+[423076] = {
+["school"] = 2,
 ["token"] = {
 ["SPELL_DAMAGE"] = true,
 },
-["source"] = "Stormguard Gorren",
+["source"] = "Baron Braunpyke",
 },
 [425052] = {
 ["school"] = 32,
@@ -1060,12 +1068,12 @@ EncounterDetailsDB = {
 },
 ["source"] = "Stormguard Gorren",
 },
-[423076] = {
-["school"] = 2,
+[426136] = {
+["school"] = 32,
 ["token"] = {
 ["SPELL_DAMAGE"] = true,
 },
-["source"] = "Baron Braunpyke",
+["source"] = "Stormguard Gorren",
 },
 [439365] = {
 ["school"] = 4,
@@ -1122,13 +1130,14 @@ EncounterDetailsDB = {
 },
 ["source"] = "Ki'katal the Harvester",
 },
-[433766] = {
+[422233] = {
 ["school"] = 1,
 ["token"] = {
-["SPELL_CAST_SUCCESS"] = true,
 ["SPELL_CAST_START"] = true,
+["SPELL_CAST_SUCCESS"] = true,
+["SPELL_DAMAGE"] = true,
 },
-["source"] = "Anub'zekt",
+["source"] = "Skarmorak",
 },
 [423588] = {
 ["school"] = 2,
@@ -1147,14 +1156,14 @@ EncounterDetailsDB = {
 },
 ["source"] = "Scrap Block",
 },
-[432117] = {
-["school"] = 32,
+[441171] = {
+["school"] = 4,
+["type"] = "BUFF",
 ["token"] = {
-["SPELL_CAST_START"] = true,
+["SPELL_AURA_APPLIED"] = true,
 ["SPELL_CAST_SUCCESS"] = true,
-["SPELL_DAMAGE"] = true,
 },
-["source"] = "Ki'katal the Harvester",
+["source"] = "Brew Drop",
 },
 [448515] = {
 ["school"] = 2,
@@ -1176,6 +1185,14 @@ EncounterDetailsDB = {
 },
 ["source"] = "E.D.N.A",
 },
+[427894] = {
+["school"] = 1,
+["token"] = {
+["SPELL_CAST_SUCCESS"] = true,
+["SPELL_CAST_START"] = true,
+},
+["source"] = "Forge Master Damian",
+},
 [424737] = {
 ["school"] = 32,
 ["token"] = {
@@ -1183,15 +1200,6 @@ EncounterDetailsDB = {
 ["SPELL_CAST_START"] = true,
 },
 ["source"] = "Stormguard Gorren",
-},
-[432132] = {
-["school"] = 8,
-["type"] = "DEBUFF",
-["token"] = {
-["SPELL_AURA_APPLIED"] = true,
-["SPELL_DAMAGE"] = true,
-},
-["source"] = "Ki'katal the Harvester",
 },
 [432196] = {
 ["school"] = 4,
@@ -1201,13 +1209,13 @@ EncounterDetailsDB = {
 },
 ["source"] = "Brew Master Aldryr",
 },
-[438971] = {
+[424903] = {
 ["school"] = 1,
 ["token"] = {
 ["SPELL_CAST_SUCCESS"] = true,
 ["SPELL_CAST_START"] = true,
 },
-["source"] = "Ravenous Cinderbee",
+["source"] = "E.D.N.A",
 },
 [424419] = {
 ["school"] = 1,
@@ -1220,20 +1228,19 @@ EncounterDetailsDB = {
 },
 ["source"] = "Captain Dailcry",
 },
+[438949] = {
+["school"] = 1,
+["token"] = {
+["SPELL_DAMAGE"] = true,
+},
+["source"] = "Avanoxx",
+},
 [55078] = {
 ["school"] = 32,
 ["token"] = {
 ["SPELL_PERIODIC_DAMAGE"] = true,
 },
 ["source"] = "Rune Weapon",
-},
-[445457] = {
-["school"] = 32,
-["token"] = {
-["SPELL_CAST_SUCCESS"] = true,
-["SPELL_CAST_START"] = true,
-},
-["source"] = "Voidstone Monstrosity",
 },
 [436592] = {
 ["school"] = 1,
@@ -1272,19 +1279,20 @@ EncounterDetailsDB = {
 },
 ["source"] = "Brew Master Aldryr",
 },
+[423062] = {
+["school"] = 2,
+["token"] = {
+["SPELL_CAST_SUCCESS"] = true,
+["SPELL_CAST_START"] = true,
+},
+["source"] = "Baron Braunpyke",
+},
 [429521] = {
 ["school"] = 32,
 ["token"] = {
 ["SPELL_DAMAGE"] = true,
 },
 ["source"] = "Voidstone Monstrosity",
-},
-[31707] = {
-["school"] = 16,
-["token"] = {
-["SPELL_DAMAGE"] = true,
-},
-["source"] = "Water Elemental",
 },
 [428820] = {
 ["school"] = 4,
@@ -1302,21 +1310,14 @@ EncounterDetailsDB = {
 },
 ["source"] = "Brew Drop",
 },
-[423536] = {
-["school"] = 2,
+[439586] = {
+["school"] = 8,
+["type"] = "DEBUFF",
 ["token"] = {
-["SPELL_CAST_START"] = true,
-["SPELL_CAST_SUCCESS"] = true,
-["SPELL_DAMAGE"] = true,
+["SPELL_AURA_APPLIED"] = true,
+["SPELL_PERIODIC_DAMAGE"] = true,
 },
-["source"] = "Prioress Murrpray",
-},
-[424805] = {
-["school"] = 4,
-["token"] = {
-["SPELL_DAMAGE"] = true,
-},
-["source"] = "E.D.N.A",
+["source"] = "Benk Buzzbee",
 },
 [427865] = {
 ["school"] = 1,
@@ -1331,6 +1332,13 @@ EncounterDetailsDB = {
 ["SPELL_CAST_SUCCESS"] = true,
 },
 ["source"] = "Speaker Dorlita",
+},
+[424805] = {
+["school"] = 4,
+["token"] = {
+["SPELL_DAMAGE"] = true,
+},
+["source"] = "E.D.N.A",
 },
 [440134] = {
 ["school"] = 1,
@@ -1364,22 +1372,21 @@ EncounterDetailsDB = {
 },
 ["source"] = "Anub'zekt",
 },
-[439586] = {
-["school"] = 8,
-["type"] = "DEBUFF",
-["token"] = {
-["SPELL_AURA_APPLIED"] = true,
-["SPELL_PERIODIC_DAMAGE"] = true,
-},
-["source"] = "Benk Buzzbee",
-},
-[423062] = {
+[423536] = {
 ["school"] = 2,
 ["token"] = {
-["SPELL_CAST_SUCCESS"] = true,
 ["SPELL_CAST_START"] = true,
+["SPELL_CAST_SUCCESS"] = true,
+["SPELL_DAMAGE"] = true,
 },
-["source"] = "Baron Braunpyke",
+["source"] = "Prioress Murrpray",
+},
+[31707] = {
+["school"] = 16,
+["token"] = {
+["SPELL_DAMAGE"] = true,
+},
+["source"] = "Water Elemental",
 },
 [444123] = {
 ["school"] = 1,
@@ -1389,28 +1396,30 @@ EncounterDetailsDB = {
 },
 ["source"] = "Kyrioss",
 },
-[438949] = {
+[445457] = {
+["school"] = 32,
+["token"] = {
+["SPELL_CAST_SUCCESS"] = true,
+["SPELL_CAST_START"] = true,
+},
+["source"] = "Voidstone Monstrosity",
+},
+[438971] = {
 ["school"] = 1,
 ["token"] = {
+["SPELL_CAST_SUCCESS"] = true,
+["SPELL_CAST_START"] = true,
+},
+["source"] = "Ravenous Cinderbee",
+},
+[432132] = {
+["school"] = 8,
+["type"] = "DEBUFF",
+["token"] = {
+["SPELL_AURA_APPLIED"] = true,
 ["SPELL_DAMAGE"] = true,
 },
-["source"] = "Avanoxx",
-},
-[424903] = {
-["school"] = 1,
-["token"] = {
-["SPELL_CAST_SUCCESS"] = true,
-["SPELL_CAST_START"] = true,
-},
-["source"] = "E.D.N.A",
-},
-[427894] = {
-["school"] = 1,
-["token"] = {
-["SPELL_CAST_SUCCESS"] = true,
-["SPELL_CAST_START"] = true,
-},
-["source"] = "Forge Master Damian",
+["source"] = "Ki'katal the Harvester",
 },
 [447439] = {
 ["school"] = 1,
@@ -1421,23 +1430,22 @@ EncounterDetailsDB = {
 },
 ["source"] = "Captain Dailcry",
 },
-[441171] = {
-["school"] = 4,
-["type"] = "BUFF",
-["token"] = {
-["SPELL_AURA_APPLIED"] = true,
-["SPELL_CAST_SUCCESS"] = true,
-},
-["source"] = "Brew Drop",
-},
-[422233] = {
-["school"] = 1,
+[432117] = {
+["school"] = 32,
 ["token"] = {
 ["SPELL_CAST_START"] = true,
 ["SPELL_CAST_SUCCESS"] = true,
 ["SPELL_DAMAGE"] = true,
 },
-["source"] = "Skarmorak",
+["source"] = "Ki'katal the Harvester",
+},
+[433766] = {
+["school"] = 1,
+["token"] = {
+["SPELL_CAST_SUCCESS"] = true,
+["SPELL_CAST_START"] = true,
+},
+["source"] = "Anub'zekt",
 },
 [424426] = {
 ["school"] = 1,
@@ -1462,12 +1470,14 @@ EncounterDetailsDB = {
 },
 ["source"] = "Void Speaker Eirich",
 },
-[443405] = {
+[443854] = {
 ["school"] = 32,
+["type"] = "BUFF",
 ["token"] = {
-["SPELL_DAMAGE"] = true,
+["SPELL_AURA_APPLIED"] = true,
+["SPELL_CAST_SUCCESS"] = true,
 },
-["source"] = "Skarmorak",
+["source"] = "Inflicted Civilian",
 },
 [193473] = {
 ["school"] = 32,
@@ -1477,23 +1487,20 @@ EncounterDetailsDB = {
 },
 ["source"] = "Void Tendril",
 },
-[428711] = {
-["school"] = 4,
+[462373] = {
+["school"] = 1,
 ["token"] = {
-["SPELL_CAST_START"] = true,
 ["SPELL_CAST_SUCCESS"] = true,
-["SPELL_DAMAGE"] = true,
-},
-["source"] = "Speaker Dorlita",
-},
-[443954] = {
-["school"] = 4,
-["type"] = "DEBUFF",
-["token"] = {
-["SPELL_AURA_APPLIED"] = true,
-["SPELL_PERIODIC_DAMAGE"] = true,
 },
 ["source"] = "Vent Stalker",
+},
+[449167] = {
+["school"] = 1,
+["token"] = {
+["SPELL_CAST_SUCCESS"] = true,
+["SPELL_CAST_START"] = true,
+},
+["source"] = "Speaker Dorlita",
 },
 [455219] = {
 ["school"] = 1,
@@ -1502,31 +1509,28 @@ EncounterDetailsDB = {
 },
 ["source"] = "Voidstone Monstrosity",
 },
-[419871] = {
-["school"] = 8,
-["token"] = {
-["SPELL_CAST_SUCCESS"] = true,
-},
-["source"] = "Kyrioss",
-},
-[447272] = {
+[428202] = {
 ["school"] = 1,
-["type"] = "DEBUFF",
 ["token"] = {
-["SPELL_AURA_APPLIED"] = true,
-["SPELL_DAMAGE"] = true,
-["SPELL_PERIODIC_DAMAGE"] = true,
-},
-["source"] = "Captain Dailcry",
-},
-[427616] = {
-["school"] = 8,
-["token"] = {
-["SPELL_DAMAGE"] = true,
 ["SPELL_CAST_SUCCESS"] = true,
 ["SPELL_CAST_START"] = true,
 },
-["source"] = "Unruly Stormrook",
+["source"] = "Speaker Brokk",
+},
+[428212] = {
+["school"] = 1,
+["type"] = "BUFF",
+["token"] = {
+["SPELL_AURA_APPLIED"] = true,
+},
+["source"] = "Speaker Brokk",
+},
+[422261] = {
+["school"] = 32,
+["token"] = {
+["SPELL_DAMAGE"] = true,
+},
+["source"] = "Skarmorak",
 },
 [455220] = {
 ["school"] = 32,
@@ -1563,13 +1567,15 @@ EncounterDetailsDB = {
 },
 ["source"] = "Anub'zekt",
 },
-[447270] = {
-["school"] = 1,
+[444608] = {
+["school"] = 2,
+["type"] = "BUFF",
 ["token"] = {
-["SPELL_CAST_SUCCESS"] = true,
+["SPELL_AURA_APPLIED"] = true,
 ["SPELL_CAST_START"] = true,
+["SPELL_CAST_SUCCESS"] = true,
 },
-["source"] = "Captain Dailcry",
+["source"] = "Prioress Murrpray",
 },
 [423665] = {
 ["school"] = 2,
@@ -1580,13 +1586,12 @@ EncounterDetailsDB = {
 },
 ["source"] = "Prioress Murrpray",
 },
-[429999] = {
-["school"] = 4,
-["type"] = "DEBUFF",
+[423356] = {
+["school"] = 32,
 ["token"] = {
-["SPELL_AURA_APPLIED"] = true,
+["SPELL_DAMAGE"] = true,
 },
-["source"] = "Vent Stalker",
+["source"] = "Voidstone Monstrosity",
 },
 [423538] = {
 ["school"] = 32,
@@ -1597,16 +1602,14 @@ EncounterDetailsDB = {
 },
 ["source"] = "Skarmorak",
 },
-[450330] = {
-["school"] = 1,
-["type"] = "DEBUFF",
+[424148] = {
+["school"] = 8,
 ["token"] = {
-["SPELL_AURA_APPLIED"] = true,
 ["SPELL_CAST_START"] = true,
 ["SPELL_CAST_SUCCESS"] = true,
 ["SPELL_DAMAGE"] = true,
 },
-["source"] = "Waxface",
+["source"] = "Kyrioss",
 },
 [424431] = {
 ["school"] = 2,
@@ -1618,13 +1621,10 @@ EncounterDetailsDB = {
 },
 ["source"] = "Elaena Emberlanz",
 },
-[450142] = {
-["school"] = 4,
-["type"] = "BUFF",
+[450131] = {
+["school"] = 8,
 ["token"] = {
-["SPELL_AURA_APPLIED"] = true,
-["SPELL_CAST_START"] = true,
-["SPELL_CAST_SUCCESS"] = true,
+["SPELL_DAMAGE"] = true,
 },
 ["source"] = "Waxface",
 },

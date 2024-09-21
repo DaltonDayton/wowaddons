@@ -9,6 +9,7 @@ local L = LibTSMUI.Locale.GetTable()
 local CraftingUIUtils = LibTSMUI:Include("Crafting.CraftingUIUtils")
 local UIElements = LibTSMUI:Include("Util.UIElements")
 local UIUtils = LibTSMUI:Include("Util.UIUtils")
+local Table = LibTSMUI:From("LibTSMUtil"):Include("Lua.Table")
 local Money = LibTSMUI:From("LibTSMUtil"):Include("UI.Money")
 local ItemString = LibTSMUI:From("LibTSMTypes"):Include("Item.ItemString")
 local MatString = LibTSMUI:From("LibTSMTypes"):Include("Crafting.MatString")
@@ -69,7 +70,7 @@ CraftDetails:_AddActionScripts("OnQueueButtonClick", "OnCraftButtonMouseDown", "
 function CraftDetails:__init(frame)
 	self.__super:__init(frame)
 	self._craftableQuantityFunc = nil
-	self._dfCraftingOptionalMatsFunc = nil
+	self._qualityCraftingOptionalMatsFunc = nil
 	self._craftStringCostsFunc = nil
 	BagTracking.RegisterCallback(self:__closure("_HandleInventoryUpdate"))
 end
@@ -371,7 +372,7 @@ end
 function CraftDetails:Release()
 	self._craftableQuantityFunc = nil
 	self._hasVellumFunc = nil
-	self._dfCraftingOptionalMatsFunc = nil
+	self._qualityCraftingOptionalMatsFunc = nil
 	self._craftStringCostsFunc = nil
 	self.__super:Release()
 end
@@ -397,12 +398,12 @@ function CraftDetails:SetHasVellumFunction(func)
 	return self
 end
 
----Sets the DF crafting optional mats function.
----@param func fun(craftString: string, mats, optionalMats): boolean Function which gets the DF crafting optional mats
+---Sets the quality crafting optional mats function.
+---@param func fun(craftString: string, mats, optionalMats): boolean Function which gets the quality crafting optional mats
 ---@return CraftDetails
-function CraftDetails:SetDFCraftingMatsFunction(func)
-	assert(func and not self._dfCraftingOptionalMatsFunc)
-	self._dfCraftingOptionalMatsFunc = func
+function CraftDetails:SetQualityCraftingMatsFunction(func)
+	assert(func and not self._qualityCraftingOptionalMatsFunc)
+	self._qualityCraftingOptionalMatsFunc = func
 	return self
 end
 
@@ -550,14 +551,15 @@ function CraftDetails.__private:_UpdateRecipeString(wipeExisting)
 	for _, matString, quantity in Profession.MatIterator(self._state.craftString) do
 		private.matsTemp[matString] = quantity
 	end
-	if not self._dfCraftingOptionalMatsFunc(self._state.craftString, private.matsTemp, private.qualityMatsTemp) then
+	if not self._qualityCraftingOptionalMatsFunc(self._state.craftString, private.matsTemp, private.qualityMatsTemp) then
 		wipe(private.qualityMatsTemp)
 	end
 	for _, matString in Profession.MatIterator(self._state.craftString) do
 		local matType = MatString.GetType(matString)
 		if matType == MatString.TYPE.QUALITY then
 			local slotId = MatString.GetSlotId(matString)
-			private.optionalMatsTemp[slotId] = private.optionalMatsTemp[slotId] or ItemString.ToId(private.qualityMatsTemp[slotId] or MatString.GetQualityItem(matString, 1))
+			local qualityMatItemString = Table.KeyByValue(private.qualityMatsTemp, matString)
+			private.optionalMatsTemp[slotId] = private.optionalMatsTemp[slotId] or ItemString.ToId(qualityMatItemString or MatString.GetQualityItem(matString, 1))
 		elseif matType == MatString.TYPE.REQUIRED and not Profession.IsSalvage(self._state.craftString) then
 			local slotId = MatString.GetSlotId(matString)
 			private.optionalMatsTemp[slotId] = private.optionalMatsTemp[slotId] or ItemString.ToId(MatString.GetRequiredItem(matString, 1))

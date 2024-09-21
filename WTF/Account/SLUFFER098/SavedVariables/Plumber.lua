@@ -6,6 +6,7 @@ PlumberDB = {
 ["settingsOpenTime"] = 1723332384,
 ["ExpansionLandingPage"] = true,
 ["GossipFrameMedal"] = true,
+["TooltipRepTokens"] = true,
 ["TrackItemUpgradeCurrency"] = true,
 ["TooltipChestKeys"] = true,
 ["PlayerChoiceFrameToken"] = true,
@@ -18,12 +19,13 @@ PlumberDB = {
 ["HandyLockpick"] = true,
 ["TrackHolidayItem"] = true,
 ["EmeraldBountySeedList"] = true,
-["TalkingHead_HideWorldQuest"] = false,
+["WorldMapPinSeedPlanting"] = true,
 ["WorldMapPin_TWW_Delve"] = true,
 ["Navigator_Dreamseed"] = false,
 ["Technoscryers"] = true,
-["TalkingHead_TextOutline"] = false,
-["TrackerBarInsideSeparateBag"] = false,
+["BackpackTrackedItems"] = {
+},
+["AutoJoinEvents"] = true,
 ["WorldMapPin_TWW"] = true,
 ["Delves_SeasonProgress"] = true,
 ["TalkingHead_BelowWorldMap"] = false,
@@ -33,9 +35,8 @@ PlumberDB = {
 ["BackpackItemTracker"] = true,
 ["TalkingHead_InstantText"] = false,
 ["TooltipShowExtraInfoCrest"] = false,
-["AutoJoinEvents"] = true,
-["BackpackTrackedItems"] = {
-},
-["WorldMapPinSeedPlanting"] = true,
+["TrackerBarInsideSeparateBag"] = false,
+["TalkingHead_TextOutline"] = false,
+["TalkingHead_HideWorldQuest"] = false,
 }
 PlumberDevData = nil

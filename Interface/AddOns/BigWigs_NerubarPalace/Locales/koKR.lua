@@ -17,7 +17,6 @@ end
 
 L = BigWigs:NewBossLocale("Rasha'nan", "koKR")
 if L then
-	L.rolling_acid = "파도"
 	L.spinnerets_strands = "가닥"
 	L.enveloping_webs = "거미줄"
 	L.enveloping_web_say = "거미줄" -- Singular of Webs
@@ -60,4 +59,19 @@ if L then
 	L.cataclysmic_entropy = "큰 폭발" -- Interrupt before it casts
 	L.spike_eruption = "가시"
 	L.unleashed_swarm = "무리"
+end
+
+L = BigWigs:NewBossLocale("Queen Ansurek", "koKR")
+if L then
+	L.stacks_onboss = "넴드 %dx %s"
+
+	L.reactive_toxin = "독소"
+	L.reactive_toxin_say = "독소"
+	L.venom_nova = "회오리"
+	L.web_blades = "칼날"
+	L.silken_tomb = "이동 불가" -- Raid being rooted in place
+	L.wrest = "끌어당김"
+	L.slow = "이감"
+	L.royal_condemnation = "족쇄"
+	L.frothing_gluttony = "고리"
 end
