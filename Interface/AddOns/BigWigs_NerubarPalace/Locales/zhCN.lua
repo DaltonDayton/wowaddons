@@ -74,4 +74,6 @@ if L then
 	L.slow = "减速"
 	L.royal_condemnation = "镣铐"
 	L.frothing_gluttony = "能量环"
+
+	L.stage_two_end_message_storymode = "快进传送门"
 end

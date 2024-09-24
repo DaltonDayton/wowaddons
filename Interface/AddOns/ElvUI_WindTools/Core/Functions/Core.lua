@@ -336,3 +336,39 @@ function F.DelvesEventFix(original, func)
 		end)
 	end
 end
+
+function F.WaitFor(condition, callback, interval, leftTimes)
+	leftTimes = (leftTimes or 10) - 1
+	interval = interval or 0.1
+
+	if condition() then
+		callback()
+		return
+	end
+
+	if leftTimes and leftTimes <= 0 then
+		return
+	end
+
+	E:Delay(interval, F.WaitFor, condition, callback, interval, leftTimes)
+end
+
+function F.MoveFrameWithOffset(frame, x, y)
+	if not frame or not frame.ClearAllPoints then
+		return
+	end
+
+	local pointsData = {}
+
+	for i = 1, frame:GetNumPoints() do
+		local point, relativeTo, relativePoint, xOfs, yOfs = frame:GetPoint(i)
+		pointsData[i] = { point, relativeTo, relativePoint, xOfs, yOfs }
+	end
+
+	frame:ClearAllPoints()
+
+	for _, data in pairs(pointsData) do
+		local point, relativeTo, relativePoint, xOfs, yOfs = unpack(data)
+		frame:SetPoint(point, relativeTo, relativePoint, xOfs + x, yOfs + y)
+	end
+end

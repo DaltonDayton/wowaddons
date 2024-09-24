@@ -24,33 +24,38 @@ local infestedSpawnCount = {1, 1}
 local spinneretsStrandsCount = {1, 1}
 local erosiveSprayCount = {1, 1}
 local envelopingWebsCount = {1, 1}
+local savageAssaultCount = 1
 local causticHailCount = 1
 local webReaveCount = 1
 local canStartPhase = false
 
 -- the stages are just segments of the fight with different cast sequences
 -- grouping by spell id instead of stage to make copy pasta easier
-local timersNormal = { -- 7:18
+local timersNormal = { -- 12:43
 	[439789] = { -- Rolling Acid
-		{43.3, 0},
+		{43.4, 0},
 		{18.4, 53.0, 0},
 		{65.5, 0},
 		{65.5, 0},
-		{18.4, 0},
+		{18.4, 53.0, 0},
+		{44.0, 0},
 	},
 	[455373] = { -- Infested Spawn
 		{62.5, 0},
 		{41.5, 0},
 		{15.9, 53.0, 0},
-		{42.0, 0},
+		{41.5, 0},
 		{63.5, 0},
+		{15.9, 53.0, 0},
 	},
 	[439784] = { -- Spinneret's Strands
-		{14.8, 52.9, 0},
+		{14.8, 53.0, 0},
 		{62.5, 0},
 		{41.0, 0},
-		{15.4, 0},
+		{15.4, 53.0, 0},
 		{41.0, 0},
+		{62.5, 0},
+		{15.4, 0},
 	},
 }
 local timersHeroic = { -- 10:26
@@ -219,10 +224,12 @@ function mod:OnEngage()
 	spinneretsStrandsCount = {1, 1}
 	erosiveSprayCount = {1, 1}
 	envelopingWebsCount = {1, 1}
+	savageAssaultCount = 1
 	causticHailCount = 1
 	webReaveCount = 1
 	canStartPhase = false
 
+	self:Bar(444687, self:Mythic() and 5.6 or 10.5, CL.count:format(self:SpellName(444687), savageAssaultCount)) -- Savage Assault
 	self:Bar(439811, self:Mythic() and 8.1 or 3.0, CL.count:format(L.erosive_spray, erosiveSprayCount[2])) -- Erosive Spray
 	self:Bar(439784, cd(439784, spinneretsStrandsCount[2]), CL.count:format(L.spinnerets_strands, spinneretsStrandsCount[1])) -- Spinneret's Strands
 	self:Bar(439789, cd(439789, rollingAcidCount[2]), CL.count:format(CL.waves, rollingAcidCount[1])) -- Rolling Acid
@@ -240,9 +247,36 @@ end
 function mod:SavageAssault(args)
 	self:Message(args.spellId, "purple")
 	self:PlaySound(args.spellId, "info")
-	-- XXX can skip the short cast? that's annoying
-	-- [10.5] 14.8, 23.7, 5.9, 14.8, 3.7, 39.0
-	-- self:Bar(args.spellId, 10)
+	savageAssaultCount = savageAssaultCount + 1
+
+	-- XXX frequently skipped the follow up cast in testing, but seems fine now
+	local cd
+	if self:Mythic() then
+		if self:GetStage() == 1 then
+			local timer = { 5.6, 22.6, 2.0, 12.9, 2.5 }
+			cd = timer[savageAssaultCount]
+		else
+			local timer = { 9.8, 2.0, 18.0, 2.0, 11.8, 2.5 }
+			cd = timer[savageAssaultCount]
+		end
+	elseif self:Heroic() then
+		if self:GetStage() == 1 then
+			local timer = { 10.5, 14.8, 23.1, 6.5, 14.8 }
+			cd = timer[savageAssaultCount]
+		else
+			local timer = { 11.1, 14.8, 23.7, 5.9, 14.8, 3.7 }
+			cd = timer[savageAssaultCount]
+		end
+	else -- Easy
+		if self:GetStage() == 1 then
+			local timer = { 10.9, 15.7, 23.6, 7.8, 15.7 }
+			cd = timer[savageAssaultCount]
+		else
+			local timer = { 3.6, 7.8, 15.7, 23.5, 7.8, 15.7 }
+			cd = timer[savageAssaultCount]
+		end
+	end
+	self:Bar(args.spellId, cd, CL.count:format(args.spellName, savageAssaultCount))
 end
 
 function mod:SavageWoundApplied(args)
@@ -314,7 +348,7 @@ end
 
 function mod:ErosiveSpray(args)
 	self:StopBar(CL.count:format(L.erosive_spray, erosiveSprayCount[1]))
-	if self:Mythic() and erosiveSprayCount[1] == 12 then -- soft enrage?
+	if erosiveSprayCount[1] >= (self:Mythic() and 12 or self:Heroic() and 13 or 15) then -- soft enrage?
 		self:Message(args.spellId, "red", CL.count:format(L.erosive_spray, erosiveSprayCount[1]))
 		self:PlaySound(args.spellId, "long")
 	else
@@ -334,7 +368,7 @@ function mod:ErosiveSpray(args)
 				cd = 40.0
 			end
 		else
-			local timer = {3.0, 29.6, 44.4}
+			local timer = { 3.0, 29.6, 44.4 }
 			cd = timer[erosiveSprayCount[2]]
 		end
 	elseif erosiveSprayCount[2] == 2 then -- then 2 per
@@ -406,7 +440,9 @@ function mod:AcidicEruptionInterrupted(args)
 		spinneretsStrandsCount[2] = 1
 		erosiveSprayCount[2] = 1
 		envelopingWebsCount[2] = 1
+		savageAssaultCount = 1
 
+		self:Bar(444687, self:Mythic() and 9.8 or 11.1, CL.count:format(self:SpellName(444687), savageAssaultCount)) -- Savage Assault
 		self:Bar(439789, cd(439789, rollingAcidCount[2]), CL.count:format(CL.waves, rollingAcidCount[1])) -- Rolling Acid
 		self:Bar(455373, cd(455373, infestedSpawnCount[2]), CL.count:format(CL.adds, infestedSpawnCount[1])) -- Infested Spawn
 		self:Bar(439784, cd(439784, spinneretsStrandsCount[2]), CL.count:format(L.spinnerets_strands, spinneretsStrandsCount[1])) -- Spinneret's Strands

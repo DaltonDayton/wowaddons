@@ -1,11 +1,8 @@
 # BigWigs
 
-## [v361.2](https://github.com/BigWigsMods/BigWigs/tree/v361.2) (2024-09-19)
-[Full Changelog](https://github.com/BigWigsMods/BigWigs/compare/v361.1...v361.2) [Previous Releases](https://github.com/BigWigsMods/BigWigs/releases)
+## [v362.2](https://github.com/BigWigsMods/BigWigs/tree/v362.2) (2024-09-23)
+[Full Changelog](https://github.com/BigWigsMods/BigWigs/compare/v362.1...v362.2) [Previous Releases](https://github.com/BigWigsMods/BigWigs/releases)
 
-- Update deDE (#1828)  
-- Update option files  
-- KhazAlgar/Shurrai: Import module  
-- NerubarPalace/Rashanan: Cleanup  
-- Core: Add more common locale  
-- Update zhTW (#1827)  
+- Update zhCN (#1839)  
+- Loader: Enable some locale prints  
+- Tweak nameplate message text  

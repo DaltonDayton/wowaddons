@@ -6,6 +6,7 @@ PlumberDB = {
 ["settingsOpenTime"] = 1723332384,
 ["ExpansionLandingPage"] = true,
 ["GossipFrameMedal"] = true,
+["TooltipRepTokens"] = true,
 ["TrackItemUpgradeCurrency"] = true,
 ["TooltipChestKeys"] = true,
 ["PlayerChoiceFrameToken"] = true,

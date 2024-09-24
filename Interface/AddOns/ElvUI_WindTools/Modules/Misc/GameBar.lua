@@ -1036,6 +1036,13 @@ function GB:UpdateTimeArea()
 		E:StopFlash(panel.colon)
 	end
 
+	panel.text:ClearAllPoints()
+	if self.db.tooltipsAnchor == "ANCHOR_TOP" then
+		panel.text:SetPoint("BOTTOM", self.bar, "TOP", 0, 5)
+	else
+		panel.text:SetPoint("TOP", self.bar, "BOTTOM", 0, -5)
+	end
+
 	if self.db.time.alwaysSystemInfo then
 		DT.RegisteredDataTexts["System"].onUpdate(panel, 10)
 		panel.text:SetAlpha(1)
@@ -1168,7 +1175,7 @@ function GB:UpdateButton(button, buttonType)
 		button:SetAttribute("macrotext1", config.macro.LeftButton or "")
 		button:SetAttribute("macrotext2", config.macro.RightButton or config.macro.LeftButton or "")
 	elseif config.click then
-		function button:Click(mouseButton)
+		button.Click = function(_, mouseButton)
 			local func = mouseButton and config.click[mouseButton] or config.click.LeftButton
 			func(GB.bar.middlePanel)
 		end
@@ -1253,7 +1260,7 @@ function GB:ConstructButtons()
 	end
 
 	self.buttons = {}
-	for i = 1, NUM_PANEL_BUTTONS * 2 do
+	for _ = 1, NUM_PANEL_BUTTONS * 2 do
 		self:ConstructButton()
 	end
 end

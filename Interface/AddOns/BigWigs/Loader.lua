@@ -12,7 +12,7 @@ local strfind = string.find
 -- Generate our version variables
 --
 
-local BIGWIGS_VERSION = 361
+local BIGWIGS_VERSION = 362
 local BIGWIGS_RELEASE_STRING, BIGWIGS_VERSION_STRING
 local versionQueryString, versionResponseString = "Q^%d^%s^%d^%s", "V^%d^%s^%d^%s"
 local customGuildName = false
@@ -39,7 +39,7 @@ do
 	local ALPHA = "ALPHA"
 
 	local releaseType
-	local myGitHash = "38c1448" -- The ZIP packager will replace this with the Git hash.
+	local myGitHash = "e9c59ac" -- The ZIP packager will replace this with the Git hash.
 	local releaseString
 	--[=[@alpha@
 	-- The following code will only be present in alpha ZIPs.
@@ -1351,19 +1351,19 @@ do
 		--ruRU = "Russian (ruRU)",
 		--zhCN = "Simplified Chinese (zhCN)",
 		--zhTW = "Traditional Chinese (zhTW)",
-		--itIT = "Italian (itIT)",
+		itIT = "Italian (itIT)",
 		--koKR = "Korean (koKR)",
 		--esES = "Spanish (esES)",
 		--esMX = "Spanish (esMX)",
 		--deDE = "German (deDE)",
-		--ptBR = "Portuguese (ptBR)",
+		ptBR = "Portuguese (ptBR)",
 		--frFR = "French (frFR)",
 	}
 	local realms = {
 		--[542] = locales.frFR, -- frFR
-		--[3207] = locales.ptBR, [3208] = locales.ptBR, [3209] = locales.ptBR, [3210] = locales.ptBR, [3234] = locales.ptBR, -- ptBR
+		[3207] = locales.ptBR, [3208] = locales.ptBR, [3209] = locales.ptBR, [3210] = locales.ptBR, [3234] = locales.ptBR, -- ptBR
 		--[1425] = locales.esMX, [1427] = locales.esMX, [1428] = locales.esMX, -- esMX
-		--[1309] = locales.itIT, [1316] = locales.itIT, -- itIT
+		[1309] = locales.itIT, [1316] = locales.itIT, -- itIT
 		--[1378] = locales.esES, [1379] = locales.esES, [1380] = locales.esES, [1381] = locales.esES, [1382] = locales.esES, [1383] = locales.esES, -- esES
 	}
 	local language = locales[myLocale]
@@ -1464,9 +1464,9 @@ end
 --
 
 do
-	local DBMdotRevision = "20240917105637" -- The changing version of the local client, changes with every new zip using the project-date-integer packager replacement.
-	local DBMdotDisplayVersion = "11.0.13" -- "N.N.N" for a release and "N.N.N alpha" for the alpha duration.
-	local DBMdotReleaseRevision = "20240917000000" -- Hardcoded time, manually changed every release, they use it to track the highest release version, a new DBM release is the only time it will change.
+	local DBMdotRevision = "20240921150709" -- The changing version of the local client, changes with every new zip using the project-date-integer packager replacement.
+	local DBMdotDisplayVersion = "11.0.15" -- "N.N.N" for a release and "N.N.N alpha" for the alpha duration.
+	local DBMdotReleaseRevision = "20240921000000" -- Hardcoded time, manually changed every release, they use it to track the highest release version, a new DBM release is the only time it will change.
 	local protocol = 3
 	local versionPrefix = "V"
 	local PForceDisable = public.isRetail and 15 or 14
@@ -1735,6 +1735,12 @@ do
 		if type(zoneAddon) == "table" then
 			-- default to the expansion addon for current season modules
 			zoneAddon = zoneAddon[1]
+			if enableZones[id] and not BigWigsTempNameplates then -- XXX temp
+				BigWigsTempNameplates = true
+				CTimerAfter(1, function() sysprint(L.tempNPMsg) end)
+				RaidNotice_AddMessage(RaidWarningFrame, "BigWigs: ".. L.tempNPMsg, {r=1,g=1,b=1}, 10)
+				Popup("BigWigs: ".. L.tempNPMsg)
+			end
 		end
 		if zoneAddon and id > 0 and not fakeZones[id] and not warnedThisZone[id] then
 			if public.usingBigWigsRepo and public.currentExpansion.bigWigsBundled[zoneAddon] then return end -- If we are a BW Git user, then bundled content can't be missing, so return

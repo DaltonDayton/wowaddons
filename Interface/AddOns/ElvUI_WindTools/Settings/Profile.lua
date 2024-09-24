@@ -441,7 +441,7 @@ P.item = {
 					b = 1,
 				},
 			},
-			include = "QUEST,BANNER,EQUIP,PROF,OPENABLE,DELVE",
+			include = "QUEST,BANNER,EQUIP,PROF,HOLIDAY,OPENABLE,DELVE",
 		},
 		bar2 = {
 			enable = true,
@@ -1077,16 +1077,6 @@ if W.ChineseLocale then
 end
 
 P.quest = {
-	paragonReputation = {
-		enable = false,
-		color = { r = 0, g = 0.5, b = 0.9 },
-		text = "PARAGON",
-		toast = {
-			enable = true,
-			sound = true,
-			fade_time = 5,
-		},
-	},
 	switchButtons = {
 		enable = true,
 		tooltip = true,
@@ -1135,6 +1125,13 @@ P.tooltips = {
 	},
 	yOffsetOfHealthBar = 0,
 	yOffsetOfHealthText = 0,
+	keystone = {
+		enable = true,
+		useAbbreviation = true,
+		icon = true,
+		iconWidth = 16,
+		iconHeight = 14,
+	},
 	groupInfo = {
 		enable = false,
 		title = true,
