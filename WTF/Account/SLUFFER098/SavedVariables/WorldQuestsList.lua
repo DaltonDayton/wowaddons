@@ -23,14 +23,9 @@ VWQL = {
 ["FilterType"] = {
 },
 ["Quests"] = {
-[82288] = true,
-[82455] = true,
-[82291] = true,
-[81512] = true,
-[81799] = true,
-[82234] = true,
-[81816] = true,
 [82582] = true,
+[81802] = true,
+[82456] = true,
 [83080] = true,
 [76586] = true,
 },

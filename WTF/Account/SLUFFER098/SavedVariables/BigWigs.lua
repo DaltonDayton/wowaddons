@@ -5,21 +5,29 @@ BigWigs3DB = {
 },
 ["BigWigs_Plugins_BossBlock"] = {
 },
-["BigWigs_Bosses_Delve Rares"] = {
-},
 ["BigWigs_Plugins_Sounds"] = {
-},
-["BigWigs_Plugins_Pull"] = {
-},
-["BigWigs_Plugins_Wipe"] = {
 },
 ["BigWigs_Plugins_Statistics"] = {
 },
-["BigWigs_Plugins_Proximity"] = {
+["BigWigs_Bosses_Voidstone Monstrosity"] = {
 },
-["LibDualSpec-1.0"] = {
+["BigWigs_Plugins_Countdown"] = {
+["profiles"] = {
+["ToxiUI"] = {
+["fontSize"] = 100,
+["fontColor"] = {
+["b"] = 0.3,
 },
-["BigWigs_Bosses_Web General Ab'enar"] = {
+["voice"] = "enUS: Default (Male)",
+["position"] = {
+"CENTER",
+"CENTER",
+nil,
+-180,
+},
+["fontName"] = "- M 900",
+},
+},
 },
 ["BigWigs_Plugins_AltPower"] = {
 },
@@ -47,7 +55,7 @@ BigWigs3DB = {
 },
 },
 },
-["BigWigs_Plugins_Raid Icons"] = {
+["BigWigs_Plugins_Wipe"] = {
 },
 ["BigWigs_Plugins_Nameplates"] = {
 ["profiles"] = {
@@ -68,16 +76,17 @@ BigWigs3DB = {
 ["iconPosition"] = "RIGHT",
 ["emphasizeGrowup"] = true,
 ["expWidth"] = 271,
-["fontName"] = "- M 700",
+["texture"] = "- Tx Left",
 ["fill"] = true,
 ["barStyle"] = "ElvUI",
 ["growup"] = true,
 ["fontSizeEmph"] = 16,
-["normalHeight"] = 26,
+["fontName"] = "- M 700",
 ["alignText"] = "RIGHT",
+["normalHeight"] = 26,
 ["fontSize"] = 16,
-["spacing"] = 5,
 ["visibleBarLimitEmph"] = 4,
+["spacing"] = 5,
 ["emphasizeTime"] = 10,
 ["expPosition"] = {
 "BOTTOMLEFT",
@@ -86,7 +95,6 @@ nil,
 130,
 "ElvUF_Target",
 },
-["texture"] = "- Tx Left",
 ["normalPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -97,11 +105,19 @@ nil,
 },
 },
 },
+["BigWigs_Bosses_The Rookery Trash"] = {
+},
+["LibDualSpec-1.0"] = {
+},
+["BigWigs_Bosses_Kyrioss"] = {
+},
+["BigWigs_Bosses_Stormguard Gorren"] = {
+},
 ["BigWigs_Plugins_InfoBox"] = {
 },
-["BigWigs_Bosses_Nerubian Delve Trash"] = {
+["BigWigs_Plugins_Raid Icons"] = {
 },
-["BigWigs_Plugins_AutoReply"] = {
+["BigWigs_Plugins_Proximity"] = {
 },
 ["BigWigs_Plugins_Messages"] = {
 ["profiles"] = {
@@ -128,23 +144,9 @@ nil,
 },
 },
 },
-["BigWigs_Plugins_Countdown"] = {
-["profiles"] = {
-["ToxiUI"] = {
-["fontSize"] = 100,
-["fontColor"] = {
-["b"] = 0.3,
+["BigWigs_Plugins_Pull"] = {
 },
-["fontName"] = "- M 900",
-["position"] = {
-"CENTER",
-"CENTER",
-nil,
--180,
-},
-["voice"] = "enUS: Default (Male)",
-},
-},
+["BigWigs_Plugins_AutoReply"] = {
 },
 },
 ["profileKeys"] = {
