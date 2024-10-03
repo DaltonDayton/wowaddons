@@ -122,6 +122,7 @@ local iconDefaults = {
 	iconGlowAutoCastScale = 1,
 	iconGlowProcStartAnim = true,
 	iconGlowProcAnimDuration = 1,
+	iconGlowTimeLeft = 0,
 	iconBorder = true,
 	iconBorderSize = 1,
 	iconBorderColor = {0, 0, 0, 1},
@@ -222,6 +223,9 @@ local function updateProfile()
 	end
 	if db.iconGlowProcAnimDuration < 0.1 or db.iconGlowProcAnimDuration > 3 then
 		db.iconGlowProcAnimDuration = plugin.defaultDB.iconGlowProcAnimDuration
+	end
+	if db.iconGlowTimeLeft < 0 or db.iconGlowTimeLeft > 3 then
+		db.iconGlowTimeLeft = plugin.defaultDB.iconGlowTimeLeft
 	end
 	if db.iconZoom < 0 or db.iconZoom > 0.5 then
 		db.iconZoom = plugin.defaultDB.iconZoom
@@ -399,6 +403,9 @@ local function iconLoop(updater)
 		if db.iconCooldownNumbers then
 			iconFrame.countdownNumber:SetText(timeToDisplay)
 		end
+		if db.iconGlowTimeLeft > 0 and timeToDisplay <= db.iconGlowTimeLeft and not iconFrame.activeGlow then
+			iconFrame:StartGlow(db.iconExpireGlowType)
+		end
 	else
 		iconFrame.countdownNumber:Hide()
 		iconFrame.updater:Stop()
@@ -443,7 +450,6 @@ local function getIconFrame()
 		iconFrame:SetFrameStrata("MEDIUM")
 		iconFrame:SetFixedFrameStrata(true)
 		iconFrame:SetFrameLevel(5500)
-		iconFrame:SetFixedFrameLevel(true)
 		iconFrame:SetSize(db.iconWidth, db.iconHeight)
 
 		local icon = iconFrame:CreateTexture()
@@ -460,18 +466,10 @@ local function getIconFrame()
 		cooldown:SetDrawEdge(db.iconCooldownEdge)
 		cooldown:SetDrawSwipe(db.iconCooldownSwipe)
 		cooldown:SetReverse(db.iconCooldownInverse)
-		cooldown:SetFrameLevel(5510)
-		cooldown:SetFixedFrameLevel(true)
 		cooldown:SetHideCountdownNumbers(true) -- Blizzard
 		cooldown.noCooldownCount = true -- OmniCC
 
-		local textFrame = CreateFrame("Frame", nil, iconFrame)
-		textFrame:SetAllPoints(iconFrame)
-		textFrame:SetPoint("CENTER")
-		textFrame:SetFrameLevel(5520)
-		textFrame:SetFixedFrameLevel(true)
-
-		local countdownNumber = textFrame:CreateFontString()
+		local countdownNumber = cooldown:CreateFontString(nil, "OVERLAY")
 		countdownNumber:SetPoint("CENTER")
 		countdownNumber:SetFont("Fonts\\FRIZQT__.TTF", 11, "OUTLINE")
 		countdownNumber:SetJustifyH("CENTER")
@@ -1143,6 +1141,16 @@ do
 								disabled = function() return not db.iconExpireGlow end,
 								hidden = function() return db.iconExpireGlowType ~= "pixel" end,
 							},
+							iconGlowTimeLeft = {
+								type = "range",
+								name = L.glowAt,
+								desc = L.glowAt_desc,
+								order = 12,
+								min = 0,
+								max = 3,
+								step = 1,
+								width = 2,
+							},
 						},
 					},
 					advanced = {
@@ -1572,11 +1580,15 @@ local function createNameplateIcon(module, guid, key, length, icon, hideOnExpire
 	local height = db.iconHeight
 
 	iconFrame:SetSize(width, height)
-	if db.iconAutoScale then
-		local target = module:UnitGUID("target")
-		if guid == target then
+	local target = module:UnitGUID("target")
+	if guid == target then
+		iconFrame:SetFrameLevel(5555)
+		if db.iconAutoScale then
 			iconFrame:SetScale(GetCVar("nameplateSelectedScale"))
-		else
+		end
+	else
+		iconFrame:SetFrameLevel(5500)
+		if db.iconAutoScale then
 			iconFrame:SetScale(GetCVar("nameplateGlobalScale"))
 		end
 	end
@@ -1774,20 +1786,24 @@ end
 do
 	local prevTarget = nil
 	function plugin:PLAYER_TARGET_CHANGED()
-		if not db.iconAutoScale then return end
-
 		local guid = self:UnitGUID("target")
 		if nameplateIcons[guid] then
 			for _, tbl in next, nameplateIcons[guid] do
 				if tbl.nameplateFrame then
-					tbl.nameplateFrame:SetScale(GetCVar("nameplateSelectedScale"))
+					tbl.nameplateFrame:SetFrameLevel(5555)
+					if db.iconAutoScale then
+						tbl.nameplateFrame:SetScale(GetCVar("nameplateSelectedScale"))
+					end
 				end
 			end
 		end
 		if prevTarget and nameplateIcons[prevTarget] then
 			for _, tbl in next, nameplateIcons[prevTarget] do
 				if tbl.nameplateFrame then
-					tbl.nameplateFrame:SetScale(GetCVar("nameplateGlobalScale"))
+					tbl.nameplateFrame:SetFrameLevel(5500)
+					if db.iconAutoScale then
+						tbl.nameplateFrame:SetScale(GetCVar("nameplateGlobalScale"))
+					end
 				end
 			end
 		end

@@ -1,7 +1,7 @@
 
 VWQL = {
 ["Yushien-Ner'zhul"] = {
-["VERSION"] = 112,
+["Filter"] = 63,
 ["FilterType"] = {
 },
 ["Quests"] = {
@@ -12,44 +12,40 @@ VWQL = {
 [71164] = true,
 [81804] = true,
 },
-["Filter"] = 63,
+["VERSION"] = 112,
 },
 ["Scale"] = 0.8,
 ["DisableIconsGeneralMap947"] = true,
 ["DisableLFG_Popup"] = true,
 ["Sort"] = 5,
 ["Xavaat-Ner'zhul"] = {
-["Filter"] = 63,
+["VERSION"] = 113,
 ["FilterType"] = {
 },
 ["Quests"] = {
-[82582] = true,
-[81802] = true,
-[82456] = true,
-[83080] = true,
 [76586] = true,
 },
-["VERSION"] = 113,
+["Filter"] = 63,
 },
 ["Xenoth-Ner'zhul"] = {
-["Filter"] = 63,
+["VERSION"] = 111,
 ["FilterType"] = {
 },
 ["Quests"] = {
 },
-["VERSION"] = 111,
+["Filter"] = 63,
 },
 ["AzeriteFormat"] = 20,
 ["Xambank-Ner'zhul"] = {
-["VERSION"] = 112,
+["Filter"] = 63,
 ["FilterType"] = {
 },
 ["Quests"] = {
 },
-["Filter"] = 63,
+["VERSION"] = 112,
 },
 ["Xamuul-Ner'zhul"] = {
-["Filter"] = 63,
+["VERSION"] = 113,
 ["FilterType"] = {
 },
 ["Quests"] = {
@@ -57,39 +53,39 @@ VWQL = {
 [82470] = true,
 [82291] = true,
 [70654] = true,
-[74794] = true,
-[81465] = true,
+[43943] = true,
+[82234] = true,
 [81802] = true,
 [82448] = true,
 [71154] = true,
 [82583] = true,
-[82234] = true,
-[43943] = true,
+[81465] = true,
+[74794] = true,
 },
-["VERSION"] = 113,
+["Filter"] = 63,
 },
 ["SortPrio"] = {
 },
 ["Ignore"] = {
 },
 ["Zatta-Ner'zhul"] = {
-["VERSION"] = 111,
+["Filter"] = 63,
 ["FilterType"] = {
 },
 ["Quests"] = {
 },
-["Filter"] = 63,
+["VERSION"] = 111,
 },
 ["Kariq-Ner'zhul"] = {
-["Filter"] = 63,
+["VERSION"] = 113,
 ["FilterType"] = {
 },
 ["Quests"] = {
 },
-["VERSION"] = 113,
+["Filter"] = 63,
 },
 ["Zaldrysa-Ner'zhul"] = {
-["Filter"] = 63,
+["VERSION"] = 111,
 ["FilterType"] = {
 },
 ["Quests"] = {
@@ -98,24 +94,13 @@ VWQL = {
 [69938] = true,
 [70075] = true,
 [66551] = true,
-[67006] = true,
 [67062] = true,
+[67006] = true,
 },
-["VERSION"] = 111,
-},
-["Faelaena-Ner'zhul"] = {
 ["Filter"] = 63,
-["FilterType"] = {
 },
-["Quests"] = {
-[81802] = true,
-},
-["VERSION"] = 113,
-},
-["VERSION"] = 113,
 ["Shantyclause-Ner'zhul"] = {
-["FilterType"] = {
-},
+["VERSION"] = 112,
 ["Filter"] = 63,
 ["Quests"] = {
 [70782] = true,
@@ -129,14 +114,25 @@ VWQL = {
 [70661] = true,
 [70632] = true,
 [72029] = true,
-[67024] = true,
+[70410] = true,
 [70602] = true,
 [69931] = true,
 [70150] = true,
 [70369] = true,
-[70410] = true,
+[67024] = true,
 },
-["VERSION"] = 112,
+["FilterType"] = {
+},
+},
+["VERSION"] = 113,
+["Faelaena-Ner'zhul"] = {
+["VERSION"] = 113,
+["FilterType"] = {
+},
+["Quests"] = {
+[81802] = true,
+},
+["Filter"] = 63,
 },
 ["HideLegion"] = true,
 }

@@ -65,17 +65,17 @@ end
 
 function mod:OnBossEnable()
 	self:Log("SPELL_CAST_START", "ClawSmash", 450451)
-	self:Log("SPELL_CAST_START", "EnfeeblingSpittle", 450505)
-	self:Log("SPELL_INTERRUPT", "EnfeeblingSpittleInterrupt", 450505)
-	self:Log("SPELL_CAST_SUCCESS", "EnfeeblingSpittleSuccess", 450505)
-	self:Log("SPELL_AURA_APPLIED", "EnfeeblingSpittleApplied", 450505)
+	self:Log("SPELL_CAST_START", "EnfeeblingSpittle", 450505, 472128)
+	self:Log("SPELL_INTERRUPT", "EnfeeblingSpittleInterrupt", 450505, 472128)
+	self:Log("SPELL_CAST_SUCCESS", "EnfeeblingSpittleSuccess", 450505, 472128)
+	self:Log("SPELL_AURA_APPLIED", "EnfeeblingSpittleApplied", 450505, 472128)
 	self:Log("SPELL_CAST_START", "HorrendousRoar", 450492)
 	self:Log("SPELL_CAST_START", "AnglersWeb", 450519, 450676) -- Stage 1, Stage 2
 	self:Log("SPELL_CAST_START", "RegeneratingCarapace", 450449)
 	self:Log("SPELL_INTERRUPT", "RegeneratingCarapaceInterrupt", 450449)
 	self:Log("SPELL_CAST_SUCCESS", "RegeneratingCarapaceSuccess", 450449)
-	self:Log("SPELL_CAST_START", "CallWebTerror", 450568)
-	self:Log("SPELL_SUMMON", "WebTerrorSummon", 450568)
+	self:Log("SPELL_CAST_START", "CallWebTerror", 450568, 472159)
+	self:Log("SPELL_SUMMON", "WebTerrorSummon", 450568, 472002)
 
 	-- Web Terror
 	self:Log("SPELL_CAST_START", "Hatching", 453937)
@@ -83,7 +83,7 @@ function mod:OnBossEnable()
 	self:Log("SPELL_CAST_START", "WebBlast", 450597)
 	self:Log("SPELL_INTERRUPT", "WebBlastInterrupt", 450597)
 	self:Log("SPELL_CAST_SUCCESS", "WebBlastSuccess", 450597)
-	self:Death("WebTerrorDeath", 224077)
+	self:Death("WebTerrorDeath", 224077, 234024)
 
 	-- Stage 2
 	self:Log("SPELL_CAST_START", "BlackBlood", 451003)
@@ -112,35 +112,35 @@ end
 function mod:ClawSmash(args)
 	if self:MobId(args.sourceGUID) == 221427 then -- Zekvir Tier ??
 		self:Message(args.spellId, "orange")
-		self:CDBar(args.spellId, 15.1)
+		self:CDBar(args.spellId, 15.7)
 		self:PlaySound(args.spellId, "alarm")
 	end
 end
 
 function mod:EnfeeblingSpittle(args)
 	if self:MobId(args.sourceGUID) == 221427 then -- Zekvir Tier ??
-		self:Message(args.spellId, "red", CL.casting:format(args.spellName))
-		self:PlaySound(args.spellId, "alert")
+		self:Message(450505, "red", CL.casting:format(args.spellName))
+		self:PlaySound(450505, "alert")
 	end
 end
 
 function mod:EnfeeblingSpittleInterrupt(args)
 	if self:MobId(args.destGUID) == 221427 then -- Zekvir Tier ??
-		self:CDBar(450505, 23.7)
+		self:CDBar(450505, 25.2)
 	end
 end
 
 function mod:EnfeeblingSpittleSuccess(args)
 	if self:MobId(args.sourceGUID) == 221427 then -- Zekvir Tier ??
-		self:CDBar(args.spellId, 23.7)
+		self:CDBar(450505, 25.2)
 	end
 end
 
 function mod:EnfeeblingSpittleApplied(args)
 	if self:MobId(args.sourceGUID) == 221427 then -- Zekvir Tier ??
 		if self:Me(args.destGUID) then
-			self:PersonalMessage(args.spellId)
-			self:PlaySound(args.spellId, "info", nil, args.destName)
+			self:PersonalMessage(450505)
+			self:PlaySound(450505, "info", nil, args.destName)
 		end
 	end
 end
@@ -148,7 +148,7 @@ end
 function mod:HorrendousRoar(args)
 	if self:MobId(args.sourceGUID) == 221427 then -- Zekvir Tier ??
 		self:Message(args.spellId, "yellow", CL.fear)
-		self:CDBar(args.spellId, 17.4, CL.fear)
+		self:CDBar(args.spellId, 18.2, CL.fear)
 		self:PlaySound(args.spellId, "alarm")
 	end
 end
@@ -177,10 +177,10 @@ end
 function mod:CallWebTerror(args)
 	if self:MobId(args.sourceGUID) == 221427 then -- Zekvir Tier ??
 		self:StopBar(CL.count:format(args.spellName, callWebTerrorCount))
-		self:Message(args.spellId, "cyan", CL.count:format(args.spellName, callWebTerrorCount))
+		self:Message(450568, "cyan", CL.count:format(args.spellName, callWebTerrorCount))
 		callWebTerrorCount = callWebTerrorCount + 1
-		self:CDBar(args.spellId, 41.2, CL.count:format(args.spellName, callWebTerrorCount))
-		self:PlaySound(args.spellId, "long")
+		self:CDBar(450568, 41.2, CL.count:format(args.spellName, callWebTerrorCount))
+		self:PlaySound(450568, "long")
 	end
 end
 
@@ -210,7 +210,7 @@ end
 
 function mod:Hatching(args)
 	if self:IsEngaged() then -- same spellId and same mobId as other Zekvir
-		self:CastBar(args.spellId, 15)
+		self:CastBar(args.spellId, 20)
 	end
 end
 
@@ -231,13 +231,13 @@ end
 
 function mod:WebBlastInterrupt(args)
 	if self:IsEngaged() then -- same spellId and same mobId as other Zekvir
-		self:Nameplate(450597, 12.1, args.destGUID)
+		self:Nameplate(450597, 10.8, args.destGUID)
 	end
 end
 
 function mod:WebBlastSuccess(args)
 	if self:IsEngaged() then -- same spellId and same mobId as other Zekvir
-		self:Nameplate(args.spellId, 12.1, args.sourceGUID)
+		self:Nameplate(args.spellId, 10.8, args.sourceGUID)
 	end
 end
 
@@ -267,7 +267,7 @@ end
 
 function mod:UnendingSpines(args)
 	self:Message(args.spellId, "yellow")
-	self:CDBar(args.spellId, 22.2)
+	self:CDBar(args.spellId, 21.8)
 	self:PlaySound(args.spellId, "long")
 end
 

@@ -49,16 +49,21 @@ end
 L = BigWigs:NewBossLocale("The Silken Court", "deDE")
 if L then
 	L.skipped_cast = "%s (%d) übersprungen"
+	L.intermission_trigger = "Gipfel der Macht!" -- Skeinspinner Takazj 100 energy yell
 
 	L.venomous_rain = "Regen"
 	L.burrowed_eruption = "Eingraben"
 	L.stinging_swarm = "Debuffs entfernen"
 	L.strands_of_reality = "Frontal [S]" -- S for Skeinspinner Takazj
+	L.strands_of_reality_message = "Frontal [Strangspinnerin Takazj]"
 	L.impaling_eruption = "Frontal [A]" -- A for Anub'arash
+	L.impaling_eruption_message = "Frontal [Anub'arash]"
 	L.entropic_desolation = "Rausrennen"
 	L.cataclysmic_entropy = "Großer Knall" -- Interrupt before it casts
 	L.spike_eruption = "Stacheln"
 	L.unleashed_swarm = "Schwarm"
+	L.void_degeneration = "Blaue Kugel"
+	L.burning_rage = "Rote Kugel"
 end
 
 L = BigWigs:NewBossLocale("Queen Ansurek", "deDE")
@@ -71,7 +76,6 @@ if L then
 	L.web_blades = "Klingen"
 	L.silken_tomb = "Wurzeln" -- Raid being rooted in place
 	L.wrest = "Heranziehen"
-	L.slow = "Verlangsamen"
 	L.royal_condemnation = "Fesseln"
 	L.frothing_gluttony = "Ring"
 

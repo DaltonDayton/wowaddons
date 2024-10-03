@@ -1,5 +1,5 @@
-local VERSION_TEXT = "v1.3.8";
-local VERSION_DATE = 1726600000;
+local VERSION_TEXT = "v1.4.1";
+local VERSION_DATE = 1727900000;
 
 
 local addonName, addon = ...
@@ -59,15 +59,19 @@ function CallbackRegistry:Trigger(event, ...)
     end
 end
 
+function CallbackRegistry:RegisterSettingCallback(dbKey, func, owner)
+    self:Register("SettingChanged."..dbKey, func, owner);
+end
+
 
 local function GetDBValue(dbKey)
     return DB[dbKey]
 end
 addon.GetDBValue = GetDBValue;
 
-local function SetDBValue(dbKey, value)
+local function SetDBValue(dbKey, value, userInput)
     DB[dbKey] = value;
-    addon.CallbackRegistry:Trigger("SettingChanged."..dbKey, value);
+    addon.CallbackRegistry:Trigger("SettingChanged."..dbKey, value, userInput);
 end
 addon.SetDBValue = SetDBValue;
 
@@ -90,6 +94,17 @@ local DefaultValues = {
     TooltipRepTokens = true,            --Show faction info for items that grant rep
     ExpansionLandingPage = true,        --Display extra info on the ExpansionLandingPage
     Delves_SeasonProgress = true,       --Display Seaonal Journey changes on a progress bar
+
+
+    --Custom Loot Window
+    LootUI = false,
+        LootUI_FontSize = 14,
+        LootUI_ShowItemCount = false,
+        LootUI_UseHotkey = true,
+        LootUI_HotkeyName = "E",
+        LootUI_ForceAutoLoot = true,
+        LootUI_NewTransmogIcon = true,
+        LootUI_FadeDelayPerItem = 0.25,
 
 
     --Unified Map Pin System
@@ -136,6 +151,10 @@ local function LoadDatabase()
         if DB[dbKey] == nil then
             DB[dbKey] = value;
         end
+    end
+
+    for dbKey, value in pairs(DB) do
+        addon.CallbackRegistry:Trigger("SettingChanged."..dbKey, value);
     end
 
     if not DB.installTime or type(DB.installTime) ~= "number" then

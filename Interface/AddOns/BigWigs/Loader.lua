@@ -12,7 +12,7 @@ local strfind = string.find
 -- Generate our version variables
 --
 
-local BIGWIGS_VERSION = 362
+local BIGWIGS_VERSION = 365
 local BIGWIGS_RELEASE_STRING, BIGWIGS_VERSION_STRING
 local versionQueryString, versionResponseString = "Q^%d^%s^%d^%s", "V^%d^%s^%d^%s"
 local customGuildName = false
@@ -39,7 +39,7 @@ do
 	local ALPHA = "ALPHA"
 
 	local releaseType
-	local myGitHash = "e9c59ac" -- The ZIP packager will replace this with the Git hash.
+	local myGitHash = "f892671" -- The ZIP packager will replace this with the Git hash.
 	local releaseString
 	--[=[@alpha@
 	-- The following code will only be present in alpha ZIPs.
@@ -92,7 +92,7 @@ local tooltipFunctions = {}
 local next, tonumber, type, strsplit, strsub = next, tonumber, type, strsplit, string.sub
 local SendAddonMessage, RegisterAddonMessagePrefix, CTimerAfter, CTimerNewTicker = C_ChatInfo.SendAddonMessage, C_ChatInfo.RegisterAddonMessagePrefix, C_Timer.After, C_Timer.NewTicker
 local GetInstanceInfo, GetBestMapForUnit, GetMapInfo = GetInstanceInfo, C_Map.GetBestMapForUnit, C_Map.GetMapInfo
-local Ambiguate, UnitName, UnitGUID = Ambiguate, UnitName, UnitGUID
+local Ambiguate, UnitName, UnitGUID = Ambiguate, UnitNameUnmodified or UnitName, UnitGUID
 local debugstack, print = debugstack, print
 local myLocale = GetLocale()
 
@@ -282,6 +282,7 @@ do
 		[531] = c, -- Ahn'Qiraj Temple
 		[2789] = public.isSeasonOfDiscovery and c or nil, -- The Tainted Scar (Lord Kazzak) [Classic Season of Discovery Only]
 		[2791] = public.isSeasonOfDiscovery and c or nil, -- Storm Cliffs (Azuregos) [Classic Season of Discovery Only]
+		[2804] = public.isSeasonOfDiscovery and c or nil, -- The Crystal Vale (Thunderaan) [Classic Season of Discovery Only]
 		--[[ BigWigs: The Burning Crusade ]]--
 		[-101] = bc, -- Outland (Fake Menu)
 		[-1945] = bc, -- Outland (Fake Menu) [Classic Only]
@@ -541,7 +542,7 @@ do
 		[-942] = -947, -- Azeroth/BfA
 		[-1536] = -1647, [-1565] = -1647, [-1525] = -1647, [-1533] = -1647, -- Shadowlands
 		[-2022] = -1978, [-2023] = -1978, [-2024] = -1978, [-2085] = -1978, -- Dragon Isles
-		[-2214] = -2274, [-2215] = -2274, -- Khaz Algar
+		[-2214] = -2274, [-2215] = -2274, [-2213] = -2274, -- Khaz Algar
 	}
 end
 
@@ -1111,12 +1112,12 @@ function mod:ADDON_LOADED(addon)
 	self:BigWigs_CoreOptionToggled(nil, "fakeDBMVersion", self.isFakingDBM)
 
 	local num = tonumber(C_CVar.GetCVar("Sound_NumChannels")) or 0
-	if num < 64 then
-		C_CVar.SetCVar("Sound_NumChannels", "64") -- Blizzard keeps screwing with addon sound priority so we force this minimum
+	if num < 90 then
+		C_CVar.SetCVar("Sound_NumChannels", "90") -- 64 is the default, enforce a little higher as a minimum to prevent sound clipping issues with addons
 	end
 	num = tonumber(C_CVar.GetCVar("Sound_MaxCacheSizeInBytes")) or 0
-	if num < 67108864 then
-		C_CVar.SetCVar("Sound_MaxCacheSizeInBytes", "67108864") -- Set the cache to the "Small (64MB)" setting as a minimum
+	if num < 134217728 then
+		C_CVar.SetCVar("Sound_MaxCacheSizeInBytes", "134217728") -- "Large (128MB)" is the default, enforce it as a minimum
 	end
 
 	--bwFrame:UnregisterEvent("ADDON_LOADED")
@@ -1354,7 +1355,7 @@ do
 		itIT = "Italian (itIT)",
 		--koKR = "Korean (koKR)",
 		--esES = "Spanish (esES)",
-		--esMX = "Spanish (esMX)",
+		esMX = "Spanish (esMX)",
 		--deDE = "German (deDE)",
 		ptBR = "Portuguese (ptBR)",
 		--frFR = "French (frFR)",
@@ -1362,14 +1363,15 @@ do
 	local realms = {
 		--[542] = locales.frFR, -- frFR
 		[3207] = locales.ptBR, [3208] = locales.ptBR, [3209] = locales.ptBR, [3210] = locales.ptBR, [3234] = locales.ptBR, -- ptBR
-		--[1425] = locales.esMX, [1427] = locales.esMX, [1428] = locales.esMX, -- esMX
+		[1425] = locales.esMX, [1427] = locales.esMX, [1428] = locales.esMX, -- esMX
 		[1309] = locales.itIT, [1316] = locales.itIT, -- itIT
 		--[1378] = locales.esES, [1379] = locales.esES, [1380] = locales.esES, [1381] = locales.esES, [1382] = locales.esES, [1383] = locales.esES, -- esES
 	}
 	local language = locales[myLocale]
 	local realmLanguage = realms[GetRealmID()]
 	if public.isRetail and (language or realmLanguage) then
-		delayedMessages[#delayedMessages+1] = ("BigWigs is missing translations for %s. Can you help? Ask us on Discord for more info."):format(language or realmLanguage)
+		delayedMessages[#delayedMessages+1] = ("BigWigs is missing translations for %s. Can you help?"):format(language or realmLanguage)
+		delayedMessages[#delayedMessages+1] = "Ask us on Discord for more info."
 	end
 
 	if #delayedMessages > 0 then
@@ -1464,9 +1466,9 @@ end
 --
 
 do
-	local DBMdotRevision = "20240921150709" -- The changing version of the local client, changes with every new zip using the project-date-integer packager replacement.
-	local DBMdotDisplayVersion = "11.0.15" -- "N.N.N" for a release and "N.N.N alpha" for the alpha duration.
-	local DBMdotReleaseRevision = "20240921000000" -- Hardcoded time, manually changed every release, they use it to track the highest release version, a new DBM release is the only time it will change.
+	local DBMdotRevision = "20240928073327" -- The changing version of the local client, changes with every new zip using the project-date-integer packager replacement.
+	local DBMdotDisplayVersion = "11.0.19" -- "N.N.N" for a release and "N.N.N alpha" for the alpha duration.
+	local DBMdotReleaseRevision = "20240926000000" -- Hardcoded time, manually changed every release, they use it to track the highest release version, a new DBM release is the only time it will change.
 	local protocol = 3
 	local versionPrefix = "V"
 	local PForceDisable = public.isRetail and 15 or 14

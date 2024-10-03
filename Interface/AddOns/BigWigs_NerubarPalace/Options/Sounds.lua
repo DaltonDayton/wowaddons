@@ -103,7 +103,6 @@ BigWigs:AddSounds("The Silken Court", {
 	[441782] = "alert",
 	[442994] = "alarm",
 	[443068] = "alarm",
-	[443598] = {"alarm","long"},
 	[449857] = "alarm",
 	[450129] = "warning",
 	[450980] = {"alert","long"},
@@ -112,14 +111,15 @@ BigWigs:AddSounds("The Silken Court", {
 	[455850] = "info",
 	[455863] = "alarm",
 	[456245] = {"alarm","info","long"},
-	[460281] = "info",
-	[460359] = "info",
+	[460281] = {"info","warning"},
+	[460359] = {"info","warning"},
+	["berserk"] = {"alarm","long"},
 	["stages"] = "long",
 })
 
 BigWigs:AddSounds("Queen Ansurek", {
 	[437078] = "underyou",
-	[437093] = {"alarm","warning"},
+	[437093] = "alarm",
 	[437417] = "alert",
 	[437592] = "warning",
 	[438481] = "underyou",
@@ -150,8 +150,8 @@ BigWigs:AddSounds("Queen Ansurek", {
 	[451278] = "alarm",
 	[451600] = "alert",
 	[451832] = "alarm",
+	[455374] = "alarm",
 	[455387] = "alarm",
-	[462558] = "warning",
 	[464638] = "alarm",
 	["stages"] = {"info","long"},
 })
