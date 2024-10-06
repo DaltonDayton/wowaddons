@@ -19,21 +19,23 @@ ln -sfn $(pwd)/WTF "$wow_retail_path"
 
 echo "Symlinks for Interface and WTF directories have been created."
 
-# Check if the ToxiUI repository already exists
-if [ ! -d "ToxiUI" ]; then
-    git clone https://github.com/Toxicom/toxiui.git "./ToxiUI"
-    echo "ToxiUI repository has been cloned."
-else
-    echo "ToxiUI repository already exists."
-fi
-
-# Check if the ElvUI repository already exists
-if [ ! -d "ElvUI" ]; then
-    git clone https://github.com/tukui-org/ElvUI.git "./ElvUI"
-    echo "ElvUI repository has been cloned."
-else
-    echo "ElvUI repository already exists."
-fi
+# NOTE: Don't think these are necessary now that they're git submodules
+#
+# # Check if the ToxiUI repository already exists
+# if [ ! -d "ToxiUI" ]; then
+#     git clone https://github.com/Toxicom/toxiui.git "./ToxiUI"
+#     echo "ToxiUI repository has been cloned."
+# else
+#     echo "ToxiUI repository already exists."
+# fi
+#
+# # Check if the ElvUI repository already exists
+# if [ ! -d "ElvUI" ]; then
+#     git clone https://github.com/tukui-org/ElvUI.git "./ElvUI"
+#     echo "ElvUI repository has been cloned."
+# else
+#     echo "ElvUI repository already exists."
+# fi
 
 # Creating symlinks for ToxiUI and ElvUI directories inside the Interface folder
 ln -sfn $(pwd)/ToxiUI "$(pwd)/Interface/AddOns/ElvUI_ToxiUI"
@@ -42,6 +44,14 @@ ln -sfn $(pwd)/ElvUI/ElvUI_Libraries "$(pwd)/Interface/AddOns/ElvUI_Libraries"
 ln -sfn $(pwd)/ElvUI/ElvUI_Options "$(pwd)/Interface/AddOns/ElvUI_Options"
 
 echo "Symlinks for ToxiUI and ElvUI addons have been created in the Interface directory."
+
+# Extract the path up to drive_c/
+drive_c_path=$(echo "$wow_retail_path" | sed -n 's|\(.*drive_c/\).*|\1|p')
+
+# Symlink battlenet_tsm.bat to the extracted drive_c_path
+ln -sfn $(pwd)/battlenet_tsm.bat "$drive_c_path/battlenet_tsm.bat"
+
+echo "Symlink for battlenet_tsm.bat has been created in the extracted drive_c path."
 
 echo "Installation complete."
 
