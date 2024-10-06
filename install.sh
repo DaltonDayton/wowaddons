@@ -51,6 +51,8 @@ drive_c_path=$(echo "$wow_retail_path" | sed -n 's|\(.*drive_c/\).*|\1|p')
 # Symlink battlenet_tsm.bat to the extracted drive_c_path
 ln -sfn $(pwd)/battlenet_tsm.bat "$drive_c_path/battlenet_tsm.bat"
 
+# TODO: tsm needs to be installed for this to work. Maybe curl or something?
+
 echo "Symlink for battlenet_tsm.bat has been created in the extracted drive_c path."
 
 echo "Installation complete."
