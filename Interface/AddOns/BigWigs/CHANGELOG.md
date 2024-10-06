@@ -1,9 +1,11 @@
 # BigWigs
 
-## [v365.1](https://github.com/BigWigsMods/BigWigs/tree/v365.1) (2024-10-02)
-[Full Changelog](https://github.com/BigWigsMods/BigWigs/compare/v365...v365.1) [Previous Releases](https://github.com/BigWigsMods/BigWigs/releases)
+## [v365.2](https://github.com/BigWigsMods/BigWigs/tree/v365.2) (2024-10-06)
+[Full Changelog](https://github.com/BigWigsMods/BigWigs/compare/v365.1...v365.2) [Previous Releases](https://github.com/BigWigsMods/BigWigs/releases)
 
-- NerubarPalace/Ovinax: Also change the Experimental Dosage say countdown duration  
-- NerubarPalace/Ovinax: Change Experimental Dosage duration from 6 to 8 seconds on Mythic as per hotfix  
-- Core/BossPrototype: Tweak  
-- Loader: Swap from `UnitName` to `UnitNameUnmodified`  
+- NerubarPalace/Ansurek: Cleanup  
+- NerubarPalace/Ansurek: Fix Grasping Silk damage, closes #1870  
+- Update ptBR (#1869)  
+- Plugins/Nameplates: Cleanups  
+- Update ptBR (#1868)  
+- Plugins: Enforce some sane minimum font sizes  

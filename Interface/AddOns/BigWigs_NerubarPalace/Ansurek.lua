@@ -236,7 +236,6 @@ function mod:OnBossEnable()
 	self:Log("SPELL_AURA_APPLIED", "ReactiveVaporApplied", 441556)
 	self:Log("SPELL_AURA_APPLIED_DOSE", "ReactiveVaporApplied", 441556)
 	self:Log("SPELL_CAST_START", "SilkenTomb", 439814)
-	self:Log("SPELL_DAMAGE", "GraspingSilkDamage", 441958)
 	self:Log("SPELL_CAST_START", "Liquefy", 440899)
 	self:Log("SPELL_AURA_APPLIED", "LiquefyApplied", 436800)
 	self:Log("SPELL_CAST_START", "Feast", 437093)
@@ -305,9 +304,9 @@ function mod:OnBossEnable()
 	self:Log("SPELL_AURA_APPLIED_DOSE", "GorgeApplied", 443342)
 	self:Log("SPELL_CAST_SUCCESS", "CataclysmicEvolution", 451832)
 
-	self:Log("SPELL_AURA_APPLIED", "GroundDamage", 437078, 443403) -- Acid, Gloom
-	self:Log("SPELL_PERIODIC_DAMAGE", "GroundDamage", 437078, 443403)
-	self:Log("SPELL_PERIODIC_MISSED", "GroundDamage", 437078, 443403)
+	self:Log("SPELL_AURA_APPLIED", "GroundDamage", 437078, 443403, 441958) -- Acid, Gloom, Grasping Silk
+	self:Log("SPELL_PERIODIC_DAMAGE", "GroundDamage", 437078, 443403, 441958)
+	self:Log("SPELL_PERIODIC_MISSED", "GroundDamage", 437078, 443403, 441958)
 end
 
 function mod:OnEngage()
@@ -527,17 +526,6 @@ function mod:SilkenTomb(args)
 	self:PlaySound(args.spellId, "alarm") -- spread
 	silkenTombCount = silkenTombCount + 1
 	self:Bar(args.spellId, self:Story() and 38.0 or timers[1][args.spellId][silkenTombCount], CL.count:format(L.silken_tomb, silkenTombCount))
-end
-
-do
-	local prev = 0
-	function mod:GraspingSilkDamage(args)
-		if self:Me(args.destGUID) and args.time - prev > 5 then
-			prev = args.time
-			self:PersonalMessage(args.spellId, "underyou")
-			self:PlaySound(args.spellId, "underyou")
-		end
-	end
 end
 
 function mod:Liquefy(args)

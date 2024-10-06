@@ -1,40 +1,45 @@
-# Version: 3.81
-2024/09/29 Released
+# Version: 3.82
+2024/10/05 Released
 ## 💪 Improvement
-- [Game Bar] Fix the time data tooltip with latest ElvUI changes.
-- [Move Frames] Code optimization.
-- [Event Tracker] Add new meta quest ID.
+- [World Map] World Map Scale will no longer affect full screen mode.
+- [Move Frames] Optimize the stability of frame position updates.
+- [Extra Item Bar] Update the feast list. Thanks mcc1
+- [Extra Item Bar] Update the portal list. Thanks mcc1
 
 ------
-# 版本: 3.81
-2024/09/29 发布
+# 版本: 3.82
+2024/10/05 发布
 ## 💪 改善
-- [游戏条] 适配全新的 ElvUI 时间数据文字提示。
-- [移动框体] 代码优化。
-- [事件追踪器] 添加新的主任务 ID。
+- [世界地图] 缩放现在不会作用在全屏模式了。
+- [移动框体] 优化了框体位置更新的稳定性。
+- [额外物品条] 更新了大餐列表。感谢 mcc1
+- [额外物品条] 更新了传送门列表。感谢 mcc1
 
 ------
-# 版本: 3.81
-2024/09/29 發布
+# 版本: 3.82
+2024/10/05 發布
 ## 💪 改善
-- [遊戲條] 适配全新的 ElvUI 時間數據文字提示。
-- [移動框體] 代碼優化。
-- [事件追踪器] 添加新的主任務 ID。
+- [世界地圖] 縮放現在不會作用在全屏模式了。
+- [移動框架] 優化了框架位置更新的穩定性。
+- [額外物品條] 更新了大餐列表。感謝 mcc1
+- [額外物品條] 更新了傳送門列表。感謝 mcc1
 
 ------
-# 버전: 3.81
-2024/09/29 Released
+# 버전: 3.82
+2024/10/05 Released
 ## 💪 개선 사항
-- [게임 바] 최신 ElvUI 변경 사항에 따른 시간 데이터 툴팁 수정.
-- [프레임 이동] 코드 최적화.
-- [이벤트 추적기] 새로운 메타 퀘스트 ID 추가.
+- [세계 지도] 세계 지도 크기는 더 이상 전체 화면 모드에 영향을 미치지 않습니다.
+- [프레임 이동] 프레임 위치 업데이트의 안정성을 최적화했습니다.
+- [추가 아이템 바] 연회 목록을 업데이트했습니다. 감사합니다 mcc1
+- [추가 아이템 바] 포탈 목록을 업데이트했습니다. 감사합니다 mcc1
 
 ------
-# Версия: 3.81
-2024/09/29 Релиз
+# Версия: 3.82
+2024/10/05 Релиз
 ## 💪 Улучшения
-- [Игровая панель] Исправлена подсказка с данными времени с последними изменениями ElvUI.
-- [Перемещение фреймов] Оптимизация кода.
-- [Отслеживание событий] Добавлен новый идентификатор мета-задания.
+- [World Map] World Map Scale will no longer affect full screen mode.
+- [Move Frames] Optimize the stability of frame position updates.
+- [Extra Item Bar] Update the feast list. Thanks mcc1
+- [Extra Item Bar] Update the portal list. Thanks mcc1
 
 ------

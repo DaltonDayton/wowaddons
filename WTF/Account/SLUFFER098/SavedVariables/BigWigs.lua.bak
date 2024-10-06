@@ -9,8 +9,6 @@ BigWigs3DB = {
 },
 ["BigWigs_Plugins_Statistics"] = {
 },
-["BigWigs_Bosses_Voidstone Monstrosity"] = {
-},
 ["BigWigs_Plugins_Countdown"] = {
 ["profiles"] = {
 ["ToxiUI"] = {
@@ -18,13 +16,13 @@ BigWigs3DB = {
 ["fontColor"] = {
 ["b"] = 0.3,
 },
-["voice"] = "enUS: Default (Male)",
 ["position"] = {
 "CENTER",
 "CENTER",
 nil,
 -180,
 },
+["voice"] = "enUS: Default (Male)",
 ["fontName"] = "- M 900",
 },
 },
@@ -77,17 +75,12 @@ nil,
 ["emphasizeGrowup"] = true,
 ["expWidth"] = 271,
 ["texture"] = "- Tx Left",
-["fill"] = true,
 ["barStyle"] = "ElvUI",
 ["growup"] = true,
 ["fontSizeEmph"] = 16,
 ["fontName"] = "- M 700",
 ["alignText"] = "RIGHT",
-["normalHeight"] = 26,
-["fontSize"] = 16,
-["visibleBarLimitEmph"] = 4,
-["spacing"] = 5,
-["emphasizeTime"] = 10,
+["fill"] = true,
 ["expPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -95,6 +88,11 @@ nil,
 130,
 "ElvUF_Target",
 },
+["visibleBarLimitEmph"] = 4,
+["emphasizeTime"] = 10,
+["spacing"] = 5,
+["fontSize"] = 16,
+["normalHeight"] = 26,
 ["normalPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -105,17 +103,9 @@ nil,
 },
 },
 },
-["BigWigs_Bosses_The Rookery Trash"] = {
-},
-["LibDualSpec-1.0"] = {
-},
-["BigWigs_Bosses_Kyrioss"] = {
-},
-["BigWigs_Bosses_Stormguard Gorren"] = {
+["BigWigs_Plugins_AutoReply"] = {
 },
 ["BigWigs_Plugins_InfoBox"] = {
-},
-["BigWigs_Plugins_Raid Icons"] = {
 },
 ["BigWigs_Plugins_Proximity"] = {
 },
@@ -123,18 +113,18 @@ nil,
 ["profiles"] = {
 ["ToxiUI"] = {
 ["outline"] = "OUTLINE",
+["emphUppercase"] = false,
+["align"] = "RIGHT",
 ["emphFontName"] = "- M 700",
 ["emphFontSize"] = 24,
+["growUpwards"] = true,
 ["emphPosition"] = {
 "TOP",
 "TOP",
 nil,
 -215,
 },
-["emphUppercase"] = false,
-["align"] = "RIGHT",
 ["fontName"] = "- M 700",
-["growUpwards"] = true,
 ["normalPosition"] = {
 "CENTER",
 "CENTER",
@@ -144,17 +134,19 @@ nil,
 },
 },
 },
+["BigWigs_Plugins_Raid Icons"] = {
+},
 ["BigWigs_Plugins_Pull"] = {
 },
-["BigWigs_Plugins_AutoReply"] = {
+["LibDualSpec-1.0"] = {
 },
 },
 ["profileKeys"] = {
 ["Xavaat - Ner'zhul"] = "ToxiUI",
 ["Xambank - Ner'zhul"] = "ToxiUI",
 ["Faelaena - Ner'zhul"] = "ToxiUI",
-["Shantyclause - Ner'zhul"] = "ToxiUI",
 ["Xamuul - Ner'zhul"] = "ToxiUI",
+["Shantyclause - Ner'zhul"] = "ToxiUI",
 ["Yushien - Ner'zhul"] = "ToxiUI",
 },
 ["profiles"] = {
