@@ -248,11 +248,24 @@ do  -- Checkbox
         if IsMouseButtonDown() then return end;
 
         if self.tooltip then
-            GameTooltip:Hide();
-            GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
-            GameTooltip:SetText(self.Label:GetText(), 1, 1, 1, true);
-            GameTooltip:AddLine(self.tooltip, 1, 0.82, 0, true);
-            GameTooltip:Show();
+            local f = GameTooltip;
+            f:Hide();
+            f:SetOwner(self, "ANCHOR_RIGHT");
+            f:SetText(self.Label:GetText(), 1, 1, 1, true);
+            f:AddLine(self.tooltip, 1, 0.82, 0, true);
+            if self.tooltip2 then
+                local tooltip2;
+                if type(self.tooltip2) == "function" then
+                    tooltip2 = self.tooltip2();
+                else
+                    tooltip2 = self.tooltip2;
+                end
+                if tooltip2 then
+                    f:AddLine(" ", 1, 0.82, 0, true);
+                    f:AddLine(tooltip2, 1, 0.82, 0, true);
+                end
+            end
+            f:Show();
         end
 
         if self.onEnterFunc then
@@ -339,6 +352,7 @@ do  -- Checkbox
     function CheckboxMixin:SetData(data)
         self.dbKey = data.dbKey;
         self.tooltip = data.tooltip;
+        self.tooltip2 = data.tooltip2;
         self.onClickFunc = data.onClickFunc;
         self.onEnterFunc = data.onEnterFunc;
         self.onLeaveFunc = data.onLeaveFunc;
@@ -805,7 +819,9 @@ do  -- TokenFrame   -- Money   -- Coin
 
     function MoneyDisplayMixin:SetAmountByDelta(addRawCopper, animte)
         if animte then
-            self.fromCopper = self.fromCopper or GetMoney();
+            if not self.fromCopper then
+                self.fromCopper = 0;
+            end
             self.toCopper = self.fromCopper + addRawCopper;
             self.updateTime = 0;
             self.totalTime = 0;
@@ -813,9 +829,9 @@ do  -- TokenFrame   -- Money   -- Coin
             self.showCopperDuringAnimation = floor(copper) > 0;
             self:SetScript("OnUpdate", self.OnUpdate_AnimateValue);
         else
-            self.fromCopper = self:GetAmount();
+            self.fromCopper = self:GetAmount() + addRawCopper;
             self.showCopperDuringAnimation = nil;
-            self:SetAmount(self:GetAmount() + addRawCopper);
+            self:SetAmount(self.fromCopper);
         end
     end
 

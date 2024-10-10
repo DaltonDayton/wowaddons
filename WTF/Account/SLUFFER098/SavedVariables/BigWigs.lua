@@ -5,35 +5,42 @@ BigWigs3DB = {
 },
 ["BigWigs_Plugins_BossBlock"] = {
 },
-["BigWigs_Bosses_Shadowcrown"] = {
-},
 ["BigWigs_Plugins_Sounds"] = {
+},
+["LibDualSpec-1.0"] = {
 },
 ["BigWigs_Plugins_Statistics"] = {
 },
-["BigWigs_Bosses_Anub'ikkaj"] = {
-},
-["BigWigs_Plugins_Countdown"] = {
+["BigWigs_Plugins_Messages"] = {
 ["profiles"] = {
 ["ToxiUI"] = {
-["fontSize"] = 100,
-["fontColor"] = {
-["b"] = 0.3,
-},
-["fontName"] = "- M 900",
-["position"] = {
-"CENTER",
-"CENTER",
+["outline"] = "OUTLINE",
+["emphUppercase"] = false,
+["align"] = "RIGHT",
+["emphFontName"] = "- M 700",
+["emphFontSize"] = 24,
+["growUpwards"] = true,
+["emphPosition"] = {
+"TOP",
+"TOP",
 nil,
--180,
+-215,
 },
-["voice"] = "enUS: Default (Male)",
+["fontName"] = "- M 700",
+["normalPosition"] = {
+"CENTER",
+"CENTER",
+-340,
+-192,
 },
 },
+},
+},
+["BigWigs_Plugins_AutoReply"] = {
 },
 ["BigWigs_Plugins_AltPower"] = {
 },
-["BigWigs_Bosses_The Dawnbreaker Trash"] = {
+["BigWigs_Plugins_Raid Icons"] = {
 },
 ["BigWigs_Plugins_Colors"] = {
 ["profiles"] = {
@@ -80,6 +87,12 @@ nil,
 ["iconPosition"] = "RIGHT",
 ["emphasizeGrowup"] = true,
 ["expWidth"] = 271,
+["fill"] = true,
+["barStyle"] = "ElvUI",
+["growup"] = true,
+["fontSizeEmph"] = 16,
+["fontName"] = "- M 700",
+["alignText"] = "RIGHT",
 ["expPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -87,18 +100,12 @@ nil,
 130,
 "ElvUF_Target",
 },
-["texture"] = "- Tx Left",
-["barStyle"] = "ElvUI",
-["growup"] = true,
-["fontSizeEmph"] = 16,
-["fontName"] = "- M 700",
-["alignText"] = "RIGHT",
-["fill"] = true,
-["normalHeight"] = 26,
-["visibleBarLimitEmph"] = 4,
-["fontSize"] = 16,
-["spacing"] = 5,
 ["emphasizeTime"] = 10,
+["visibleBarLimitEmph"] = 4,
+["spacing"] = 5,
+["fontSize"] = 16,
+["normalHeight"] = 26,
+["texture"] = "- Tx Left",
 ["normalPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -109,52 +116,37 @@ nil,
 },
 },
 },
-["BigWigs_Bosses_Rasha'nan Dawnbreaker"] = {
-},
-["LibDualSpec-1.0"] = {
-},
 ["BigWigs_Plugins_InfoBox"] = {
-},
-["BigWigs_Plugins_Raid Icons"] = {
 },
 ["BigWigs_Plugins_Proximity"] = {
 },
-["BigWigs_Plugins_Messages"] = {
+["BigWigs_Plugins_Countdown"] = {
 ["profiles"] = {
 ["ToxiUI"] = {
-["outline"] = "OUTLINE",
-["emphFontName"] = "- M 700",
-["emphFontSize"] = 24,
-["emphPosition"] = {
-"TOP",
-"TOP",
+["fontSize"] = 100,
+["fontColor"] = {
+["b"] = 0.3,
+},
+["position"] = {
+"CENTER",
+"CENTER",
 nil,
--215,
+-180,
 },
-["emphUppercase"] = false,
-["align"] = "RIGHT",
-["fontName"] = "- M 700",
-["growUpwards"] = true,
-["normalPosition"] = {
-"CENTER",
-"CENTER",
--340,
--192,
-},
+["fontName"] = "- M 900",
+["voice"] = "enUS: Default (Male)",
 },
 },
 },
 ["BigWigs_Plugins_Pull"] = {
-},
-["BigWigs_Plugins_AutoReply"] = {
 },
 },
 ["profileKeys"] = {
 ["Xavaat - Ner'zhul"] = "ToxiUI",
 ["Xambank - Ner'zhul"] = "ToxiUI",
 ["Faelaena - Ner'zhul"] = "ToxiUI",
-["Shantyclause - Ner'zhul"] = "ToxiUI",
 ["Xamuul - Ner'zhul"] = "ToxiUI",
+["Shantyclause - Ner'zhul"] = "ToxiUI",
 ["Yushien - Ner'zhul"] = "ToxiUI",
 },
 ["profiles"] = {
