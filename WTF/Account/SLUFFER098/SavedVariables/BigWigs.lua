@@ -7,40 +7,27 @@ BigWigs3DB = {
 },
 ["BigWigs_Plugins_Sounds"] = {
 },
-["LibDualSpec-1.0"] = {
-},
 ["BigWigs_Plugins_Statistics"] = {
 },
-["BigWigs_Plugins_Messages"] = {
+["BigWigs_Plugins_Countdown"] = {
 ["profiles"] = {
 ["ToxiUI"] = {
-["outline"] = "OUTLINE",
-["emphUppercase"] = false,
-["align"] = "RIGHT",
-["emphFontName"] = "- M 700",
-["emphFontSize"] = 24,
-["growUpwards"] = true,
-["emphPosition"] = {
-"TOP",
-"TOP",
+["fontSize"] = 100,
+["fontColor"] = {
+["b"] = 0.3,
+},
+["voice"] = "enUS: Default (Male)",
+["position"] = {
+"CENTER",
+"CENTER",
 nil,
--215,
+-180,
 },
-["fontName"] = "- M 700",
-["normalPosition"] = {
-"CENTER",
-"CENTER",
--340,
--192,
+["fontName"] = "- M 900",
 },
 },
-},
-},
-["BigWigs_Plugins_AutoReply"] = {
 },
 ["BigWigs_Plugins_AltPower"] = {
-},
-["BigWigs_Plugins_Raid Icons"] = {
 },
 ["BigWigs_Plugins_Colors"] = {
 ["profiles"] = {
@@ -66,7 +53,7 @@ nil,
 },
 },
 },
-["BigWigs_Plugins_Wipe"] = {
+["BigWigs_Plugins_Raid Icons"] = {
 },
 ["BigWigs_Plugins_Nameplates"] = {
 ["profiles"] = {
@@ -87,6 +74,7 @@ nil,
 ["iconPosition"] = "RIGHT",
 ["emphasizeGrowup"] = true,
 ["expWidth"] = 271,
+["texture"] = "- Tx Left",
 ["fill"] = true,
 ["barStyle"] = "ElvUI",
 ["growup"] = true,
@@ -105,7 +93,6 @@ nil,
 ["spacing"] = 5,
 ["fontSize"] = 16,
 ["normalHeight"] = 26,
-["texture"] = "- Tx Left",
 ["normalPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -116,29 +103,48 @@ nil,
 },
 },
 },
+["BigWigs_Bosses_Web General Ab'enar"] = {
+},
+["BigWigs_Bosses_Delve Rares"] = {
+},
+["LibDualSpec-1.0"] = {
+},
+["BigWigs_Bosses_Nerubian Delve Trash"] = {
+},
 ["BigWigs_Plugins_InfoBox"] = {
+},
+["BigWigs_Plugins_Wipe"] = {
 },
 ["BigWigs_Plugins_Proximity"] = {
 },
-["BigWigs_Plugins_Countdown"] = {
+["BigWigs_Plugins_Messages"] = {
 ["profiles"] = {
 ["ToxiUI"] = {
-["fontSize"] = 100,
-["fontColor"] = {
-["b"] = 0.3,
-},
-["position"] = {
-"CENTER",
-"CENTER",
+["outline"] = "OUTLINE",
+["emphFontName"] = "- M 700",
+["emphFontSize"] = 24,
+["emphPosition"] = {
+"TOP",
+"TOP",
 nil,
--180,
+-215,
 },
-["fontName"] = "- M 900",
-["voice"] = "enUS: Default (Male)",
+["emphUppercase"] = false,
+["align"] = "RIGHT",
+["fontName"] = "- M 700",
+["growUpwards"] = true,
+["normalPosition"] = {
+"CENTER",
+"CENTER",
+-340,
+-192,
+},
 },
 },
 },
 ["BigWigs_Plugins_Pull"] = {
+},
+["BigWigs_Plugins_AutoReply"] = {
 },
 },
 ["profileKeys"] = {

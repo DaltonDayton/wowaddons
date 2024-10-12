@@ -1,9 +1,15 @@
 # BigWigs
 
-## [v365.3](https://github.com/BigWigsMods/BigWigs/tree/v365.3) (2024-10-06)
-[Full Changelog](https://github.com/BigWigsMods/BigWigs/compare/v365.2...v365.3) [Previous Releases](https://github.com/BigWigsMods/BigWigs/releases)
+## [v366](https://github.com/BigWigsMods/BigWigs/tree/v366) (2024-10-10)
+[Full Changelog](https://github.com/BigWigsMods/BigWigs/compare/v365.3...v366) [Previous Releases](https://github.com/BigWigsMods/BigWigs/releases)
 
-- Plugins/Nameplates: Remove unused support for hide on expire, cleanups  
-- NerubarPalace/Kyveza: Add a message when daggers are over and increase the Eternal Night castbar until the full room hits.  
-- NerubarPalace/TheBloodboundHorror: Add a castbar for Goresplatter/Run Away  
-- NerubarPalace/Ulgrax: Set Brutal Crush as Tank only (Fixes #1844)  
+- Core/BossPrototype: Parse any nameplates that may already be showing on the first call to `RegisterEngageMob`  
+- Core/BossPrototype: Add `:RegisterEngageMob` (#1872)  
+- Update option files  
+- bump version  
+- Options/Sharing: Make sure we store values set to false  
+- Loader: Remove a locale print  
+- Update ptBR (#1876)  
+- Options/Sharing: Prevent a potential error when importing an older string that lacks newer settings  
+- KhazAlgar/Kordac: Import module  
+- KhazAlgar/Orta: Fix a sound  
