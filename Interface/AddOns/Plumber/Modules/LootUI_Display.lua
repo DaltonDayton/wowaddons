@@ -53,7 +53,7 @@ local FORCE_AUTO_LOOT = true;
 local AUTO_LOOT_ENABLE_TOOLTIP = true;
 local FADE_DELAY_PER_ITEM = 0.25;
 local REPLACE_LOOT_ALERT = true;
-local LOOT_UNDER_MOUSE = true;
+local LOOT_UNDER_MOUSE = false;
 local USE_STOCK_UI = false;
 ------------------
 
@@ -1446,6 +1446,7 @@ do  --Edit Mode
             {type = "Checkbox", label = L["LootUI Option Loot Under Mouse"], onClickFunc = nil, dbKey = "LootUI_LootUnderMouse", tooltip = L["LootUI Option Loot Under Mouse Tooltip"]},
             {type = "Checkbox", label = L["LootUI Option Replace Default"], onClickFunc = nil, dbKey = "LootUI_ReplaceDefaultAlert", tooltip = L["LootUI Option Replace Default Tooltip"]},
             {type = "Checkbox", label = L["LootUI Option Use Hotkey"], onClickFunc = Options_UseHotkey_OnClick, dbKey = "LootUI_UseHotkey", tooltip = L["LootUI Option Use Hotkey Tooltip"]},
+            {type = "Keybind", label = L["Take All"], dbKey = "LootUI_HotkeyName", tooltip = L["LootUI Option Use Hotkey Tooltip"], defaultKey = "E"},
 
             {type = "Divider"},
             {type = "Checkbox", label = L["LootUI Option Use Default UI"], onClickFunc = nil, dbKey = "LootUI_UseStockUI", tooltip = L["LootUI Option Use Default UI Tooltip"], tooltip2 = Tooltip_ManualLootInstruction},
@@ -1554,12 +1555,20 @@ do
         end
     end
 
+    local STOCK_UI_MUTED = false;
+
     local function SettingChanged_UseStockUI(state, userInput)
         USE_STOCK_UI = state == true;
+        local f = LootFrame;
         if USE_STOCK_UI then
-            if LootFrame then
-                LootFrame:RegisterEvent("LOOT_OPENED");
-                LootFrame:RegisterEvent("LOOT_CLOSED");
+            if f then
+                if STOCK_UI_MUTED then
+                    STOCK_UI_MUTED = false;
+                    if not C_AddOns.IsAddOnLoaded("Xloot") then
+                        f:RegisterEvent("LOOT_OPENED");
+                        f:RegisterEvent("LOOT_CLOSED");
+                    end
+                end
             end
 
             if not MainFrame.inEditMode then
@@ -1569,9 +1578,12 @@ do
             EL:ListenAlertSystemEvent(false);
         else
             if addon.GetDBBool("LootUI") then
-                if LootFrame then
-                    LootFrame:UnregisterEvent("LOOT_OPENED");
-                    LootFrame:UnregisterEvent("LOOT_CLOSED");
+                if f then
+                    if not STOCK_UI_MUTED then
+                        STOCK_UI_MUTED = true;
+                        f:UnregisterEvent("LOOT_OPENED");
+                        f:UnregisterEvent("LOOT_CLOSED");
+                    end
                 end
 
                 if REPLACE_LOOT_ALERT then

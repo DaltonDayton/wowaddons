@@ -23,7 +23,7 @@ local webBladesCount = 1
 local paralyzingVenomCount = 1
 local wrestCount = 1
 
-local firstShadowGate = false
+local firstShadowgate = false
 local gloomTouchCount = 1
 local platformAddsKilled = 0
 local worshippersKilled = 0
@@ -363,6 +363,7 @@ end
 function mod:AddMarking(_, unit, guid)
 	if self:MobId(guid) == 226200 and not mobCollector[guid] then -- Chamber Acolyte
 		mobCollector[guid] = true
+		-- use the spawn counter from the mob spawn uid for marking (1/2)
 		local uid = select(7, strsplit("-", guid))
 		local index = bit.rshift(bit.band(tonumber(string.sub(uid, 1, 5), 16), 0xffff8), 3) + 1
 		self:CustomIcon(chamberAcolyteMarker, unit, index)
@@ -625,12 +626,13 @@ do
 		platformAddsKilled = 0
 		worshippersKilled = 0
 		acolytesKilled = 0
-		firstShadowGate = true
+		firstShadowgate = true
 
 		if self:Mythic() then
 			if self:GetOption(chamberAcolyteMarker) then
 				self:RegisterTargetEvents("AddMarking")
 			end
+			self:RegisterEvent("NAME_PLATE_UNIT_ADDED", "ShadowgateNameplateCheck")
 			self:RegisterEvent("UNIT_SPELLCAST_START")
 			self:RegisterEvent("UNIT_SPELLCAST_STOP")
 		end
@@ -668,15 +670,32 @@ do
 	-- Shadowgate
 	local prev = nil
 	local casterGUID = nil
+
 	-- cast events from nameplates, requires looking at the gate D;
-	function mod:UNIT_SPELLCAST_START(_, unit, castGUID, spellId)
-		if spellId == 460369 and prev ~= castGUID then -- Shadowgate
-			firstShadowGate = false
-			prev = castGUID
-			casterGUID = self:UnitGUID(unit)
-			self:CastBar(460369, 10)
+	function mod:ShadowgateNameplateCheck(event, unit)
+		local guid = self:UnitGUID(unit)
+		if self:MobId(guid) == 228617 and casterGUID ~= guid then -- Shadowgate
+			casterGUID = guid
+			local name, _, _, _, endTime = UnitCastingInfo(unit)
+			if name then
+				local remaining = endTime / 1000 - GetTime()
+				self:CastBar(460369, {remaining, 12})
+			end
+		end
+		if self.targetEventFunc then -- for RegisterTargetEvents
+			self:NAME_PLATE_UNIT_ADDED(event, unit)
 		end
 	end
+
+	function mod:UNIT_SPELLCAST_START(_, unit, castGUID, spellId)
+		if spellId == 460369 and prev ~= castGUID then -- Shadowgate
+			firstShadowgate = false
+			prev = castGUID
+			casterGUID = self:UnitGUID(unit)
+			self:CastBar(460369, 12)
+		end
+	end
+
 	function mod:UNIT_SPELLCAST_STOP(_, unit, _, spellId)
 		if spellId == 460369 then -- Shadowgate
 			casterGUID = self:UnitGUID(unit)
@@ -685,12 +704,12 @@ do
 	end
 
 	function mod:Shadowgate(args)
-		if firstShadowGate then -- get the next cast
-			firstShadowGate = false
-			self:CastBar(args.spellId, 10)
+		if firstShadowgate then -- get the next cast
+			firstShadowgate = false
+			self:CastBar(args.spellId, 12)
 		elseif casterGUID == args.sourceGUID then
 			-- show the cast for the last gate you saw a nameplate for
-			self:CastBar(args.spellId, 10)
+			self:CastBar(args.spellId, 12)
 		end
 	end
 
@@ -800,7 +819,7 @@ do
 			self:StopBar(CL.count:format(L.wrest, i)) -- nuclear cleanup
 		end
 		self:StopCastBar(460369) -- Shadowgate
-		-- firstShadowGate = true -- XXX can still catch desync'd casts here z.z
+		-- firstShadowgate = true -- XXX can still catch desync'd casts here z.z
 	end
 
 	function mod:AcidicApocalypse(args)
@@ -840,7 +859,7 @@ do
 				self:Bar(448046, self:Mythic() and 5.2 or self:Easy() and 7.1 or 5.9, CL.knockback) -- Gloom Eruption
 
 				if wrestCount == 1 then -- first Voidspeaker set
-					firstShadowGate = true
+					firstShadowgate = true
 					self:CDBar(447411, self:Easy() and 13.5 or 11.8, CL.count:format(L.wrest, wrestCount)) -- Wrest
 					self:Bar(451600, 12.5) -- Expulsion Beam
 					self:Bar(448147, 14.2) -- Oust
