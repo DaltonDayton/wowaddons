@@ -9,6 +9,8 @@ local L = addon.L;
 --Module Control Panel
 L["Module Control"] = "功能选项";
 L["Quick Slot Generic Description"] = "\n\n*快捷按钮是一组在特定情形下出现的、可交互的按钮。";
+L["Quick Slot Edit Mode"] = "更改布局";
+L["Quick Slot High Contrast Mode"] = "切换高对比度模式";
 L["Restriction Combat"] = "战斗中不可用";    --Indicate a feature can only work when out of combat
 L["Map Pin Change Size Method"] = "\n\n*如需更改标记大小，请打开 世界地图 - 地图筛选 - Plumber";
 
@@ -198,6 +200,7 @@ L["ModuleDescription Delves_SeasonProgress"] = "在你提升“地下堡行者�
 L["ModuleName WoWAnniversary"] = "魔兽周年庆";
 L["ModuleDescription WoWAnniversary"] = "- 在坐骑狂欢活动期间轻松召唤相应坐骑。\n\n- 在时尚比赛期间显示投票结果。";
 L["Voting Result Header"] = "投票结果";
+L["Mount Not Collected"] = "你尚未收集到该坐骑。";
 
 
 --BlizzFixFishingArtifact

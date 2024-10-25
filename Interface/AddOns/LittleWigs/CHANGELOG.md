@@ -1,9 +1,12 @@
 # LittleWigs
 
-## [v11.0.43](https://github.com/BigWigsMods/LittleWigs/tree/v11.0.43) (2024-10-16)
-[Full Changelog](https://github.com/BigWigsMods/LittleWigs/compare/v11.0.42...v11.0.43) [Previous Releases](https://github.com/BigWigsMods/LittleWigs/releases)
+## [v11.0.44](https://github.com/BigWigsMods/LittleWigs/tree/v11.0.44) (2024-10-22)
+[Full Changelog](https://github.com/BigWigsMods/LittleWigs/compare/v11.0.43...v11.0.44) [Previous Releases](https://github.com/BigWigsMods/LittleWigs/releases)
 
-- WarWithin/TheStonevault/Skarmorak: Timer updates due to hotfixes  
-- WarWithin/TheStonevault/VoidSpeakerEirich: Timer updates due to hotfixes  
-- BfA/SiegeOfBoralus/Trash: Tweaks, localization  
-- BfA/SiegeOfBoralus/Trash: Iron Ambush (#1171)  
+- Delves/NightfallSanctum/CultLeaders: Add boss module (#1178)  
+- Delves/TheSinkhole/Cragpie: Add boss module (#1177)  
+- Cataclysm/GrimBatol/Drahga: Timer improvements  
+- WarWithin/TheStonevault/VoidSpeakerEirich: Entropy under you  
+- Update koKR (#1174)  
+- Update workflow  
+- Update koKR (#1172)  
