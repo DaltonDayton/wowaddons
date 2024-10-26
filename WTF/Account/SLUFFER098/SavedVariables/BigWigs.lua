@@ -3,6 +3,8 @@ BigWigs3DB = {
 ["namespaces"] = {
 ["BigWigs_Plugins_Victory"] = {
 },
+["BigWigs_Bosses_The Headless Horseman"] = {
+},
 ["BigWigs_Plugins_BossBlock"] = {
 },
 ["BigWigs_Plugins_Sounds"] = {
@@ -16,6 +18,7 @@ BigWigs3DB = {
 ["fontColor"] = {
 ["b"] = 0.3,
 },
+["fontName"] = "- M 900",
 ["position"] = {
 "CENTER",
 "CENTER",
@@ -23,7 +26,6 @@ nil,
 -180,
 },
 ["voice"] = "enUS: Default (Male)",
-["fontName"] = "- M 900",
 },
 },
 },
@@ -74,13 +76,6 @@ nil,
 ["iconPosition"] = "RIGHT",
 ["emphasizeGrowup"] = true,
 ["expWidth"] = 271,
-["texture"] = "- Tx Left",
-["barStyle"] = "ElvUI",
-["growup"] = true,
-["fontSizeEmph"] = 16,
-["fontName"] = "- M 700",
-["alignText"] = "RIGHT",
-["fill"] = true,
 ["expPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -88,11 +83,18 @@ nil,
 130,
 "ElvUF_Target",
 },
-["visibleBarLimitEmph"] = 4,
-["emphasizeTime"] = 10,
-["spacing"] = 5,
-["fontSize"] = 16,
+["texture"] = "- Tx Left",
+["barStyle"] = "ElvUI",
+["growup"] = true,
+["fontSizeEmph"] = 16,
+["fontName"] = "- M 700",
+["alignText"] = "RIGHT",
+["fill"] = true,
 ["normalHeight"] = 26,
+["visibleBarLimitEmph"] = 4,
+["fontSize"] = 16,
+["spacing"] = 5,
+["emphasizeTime"] = 10,
 ["normalPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -103,28 +105,30 @@ nil,
 },
 },
 },
-["LibDualSpec-1.0"] = {
-},
-["BigWigs_Plugins_Proximity"] = {
+["BigWigs_Plugins_AutoReply"] = {
 },
 ["BigWigs_Plugins_Wipe"] = {
+},
+["BigWigs_Plugins_InfoBox"] = {
+},
+["BigWigs_Plugins_Proximity"] = {
 },
 ["BigWigs_Plugins_Messages"] = {
 ["profiles"] = {
 ["ToxiUI"] = {
 ["outline"] = "OUTLINE",
-["emphUppercase"] = false,
-["align"] = "RIGHT",
 ["emphFontName"] = "- M 700",
 ["emphFontSize"] = 24,
-["growUpwards"] = true,
 ["emphPosition"] = {
 "TOP",
 "TOP",
 nil,
 -215,
 },
+["emphUppercase"] = false,
+["align"] = "RIGHT",
 ["fontName"] = "- M 700",
+["growUpwards"] = true,
 ["normalPosition"] = {
 "CENTER",
 "CENTER",
@@ -134,19 +138,17 @@ nil,
 },
 },
 },
-["BigWigs_Plugins_InfoBox"] = {
-},
 ["BigWigs_Plugins_Pull"] = {
 },
-["BigWigs_Plugins_AutoReply"] = {
+["LibDualSpec-1.0"] = {
 },
 },
 ["profileKeys"] = {
 ["Xavaat - Ner'zhul"] = "ToxiUI",
 ["Xambank - Ner'zhul"] = "ToxiUI",
 ["Faelaena - Ner'zhul"] = "ToxiUI",
-["Xamuul - Ner'zhul"] = "ToxiUI",
 ["Shantyclause - Ner'zhul"] = "ToxiUI",
+["Xamuul - Ner'zhul"] = "ToxiUI",
 ["Yushien - Ner'zhul"] = "ToxiUI",
 },
 ["profiles"] = {

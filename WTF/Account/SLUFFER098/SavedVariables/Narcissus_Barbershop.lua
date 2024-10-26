@@ -1,13 +1,15 @@
 
 NarciBarberShopDB = {
+["SharedSavedLooks"] = {
+},
 ["PlayerData"] = {
 ["09F208D4"] = {
-["realmName"] = "Ner'zhul",
-["playerName"] = "Xamuul",
-["realmID"] = "1168",
-["classID"] = 11,
 ["SavedLooks"] = {
+["chrModel202"] = {
+},
 ["chrModel193"] = {
+},
+["chrModel149"] = {
 },
 [28] = {
 ["male"] = {
@@ -17,27 +19,33 @@ NarciBarberShopDB = {
 },
 ["chrModel186"] = {
 },
+["chrModel191"] = {
+},
 ["chrModel190"] = {
 },
 ["chrModel189"] = {
 },
 ["chrModel194"] = {
 },
-["chrModel192"] = {
+["chrModel188"] = {
+},
+["chrModel125"] = {
 },
 ["chrModel124"] = {
 },
-["chrModel191"] = {
+["chrModel192"] = {
 },
 },
+["playerName"] = "Xamuul",
+["realmName"] = "Ner'zhul",
+["classID"] = 11,
+["realmID"] = "1168",
 },
 },
 ["Hotkeys"] = {
-["ZoomIn"] = "W",
+["RotateRight"] = "D",
 ["RotateLeft"] = "A",
 ["ZoomOut"] = "S",
-["RotateRight"] = "D",
-},
-["SharedSavedLooks"] = {
+["ZoomIn"] = "W",
 },
 }

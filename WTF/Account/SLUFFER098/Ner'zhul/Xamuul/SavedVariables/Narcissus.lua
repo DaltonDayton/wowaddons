@@ -9,8 +9,8 @@ NarciStatisticsDB_PC = {
 ["Barbershop"] = {
 ["Locations"] = {
 [2339] = {
-["visit"] = 4,
-["time"] = 424,
+["visit"] = 5,
+["time"] = 459,
 },
 },
 },

@@ -19,3 +19,5 @@ ElvUI_BuffHighlight: disabled
 kExtraBossFrames: disabled
 WeakAurasCompanion: enabled
 WeakAurasArchive: enabled
+Blizzard_CombatText: enabled
+LittleWigs_MistsOfPandaria: enabled

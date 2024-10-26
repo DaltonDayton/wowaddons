@@ -68,3 +68,4 @@ ElvUI_VisualAuraTimers: disabled
 ElvUI_SecondsToBuff: disabled
 ElvUI_BuffHighlight: disabled
 kExtraBossFrames: disabled
+Blizzard_CombatText: enabled
