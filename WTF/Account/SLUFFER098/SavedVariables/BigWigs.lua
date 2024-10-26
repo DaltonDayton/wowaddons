@@ -3,8 +3,6 @@ BigWigs3DB = {
 ["namespaces"] = {
 ["BigWigs_Plugins_Victory"] = {
 },
-["BigWigs_Bosses_The Headless Horseman"] = {
-},
 ["BigWigs_Plugins_BossBlock"] = {
 },
 ["BigWigs_Plugins_Sounds"] = {
@@ -18,14 +16,14 @@ BigWigs3DB = {
 ["fontColor"] = {
 ["b"] = 0.3,
 },
-["fontName"] = "- M 900",
+["voice"] = "enUS: Default (Male)",
 ["position"] = {
 "CENTER",
 "CENTER",
 nil,
 -180,
 },
-["voice"] = "enUS: Default (Male)",
+["fontName"] = "- M 900",
 },
 },
 },
@@ -76,6 +74,11 @@ nil,
 ["iconPosition"] = "RIGHT",
 ["emphasizeGrowup"] = true,
 ["expWidth"] = 271,
+["emphasizeTime"] = 10,
+["texture"] = "- Tx Left",
+["barStyle"] = "ElvUI",
+["growup"] = true,
+["fontSizeEmph"] = 16,
 ["expPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -83,18 +86,13 @@ nil,
 130,
 "ElvUF_Target",
 },
-["texture"] = "- Tx Left",
-["barStyle"] = "ElvUI",
-["growup"] = true,
-["fontSizeEmph"] = 16,
-["fontName"] = "- M 700",
 ["alignText"] = "RIGHT",
+["fontName"] = "- M 700",
 ["fill"] = true,
-["normalHeight"] = 26,
 ["visibleBarLimitEmph"] = 4,
+["normalHeight"] = 26,
 ["fontSize"] = 16,
 ["spacing"] = 5,
-["emphasizeTime"] = 10,
 ["normalPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -105,7 +103,13 @@ nil,
 },
 },
 },
+["BigWigs_Bosses_Web General Ab'enar"] = {
+},
+["BigWigs_Bosses_Delve Rares"] = {
+},
 ["BigWigs_Plugins_AutoReply"] = {
+},
+["BigWigs_Bosses_Nerubian Delve Trash"] = {
 },
 ["BigWigs_Plugins_Wipe"] = {
 },

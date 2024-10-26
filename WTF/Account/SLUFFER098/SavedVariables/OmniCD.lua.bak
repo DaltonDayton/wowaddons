@@ -3,8 +3,9 @@ OmniCDDB = {
 ["profileKeys"] = {
 ["Xavaat - Ner'zhul"] = "ToxiUI-Horizontal",
 ["Faelaena - Ner'zhul"] = "Default",
-["Kariq - Ner'zhul"] = "Default",
+["Xambank - Ner'zhul"] = "Default",
 ["Xamuul - Ner'zhul"] = "Default",
+["Kariq - Ner'zhul"] = "Default",
 ["Shantyclause - Ner'zhul"] = "ToxiUI-Vertical",
 ["Yushien - Ner'zhul"] = "Default",
 },
@@ -443,18 +444,18 @@ OmniCDDB = {
 ["offsetY"] = 42,
 ["anchorMore"] = "TOPLEFT",
 },
-["frame"] = {
-["counterCC"] = 3,
-["defensive"] = 2,
-["cc"] = 3,
-["raidDefensive"] = 0,
-["disarm"] = 3,
-["immunity"] = 4,
-["externalDefensive"] = 0,
-["aoeCC"] = 3,
-},
 ["priority"] = {
 ["dispel"] = 0,
+},
+["frame"] = {
+["raidDefensive"] = 0,
+["defensive"] = 2,
+["cc"] = 3,
+["counterCC"] = 3,
+["disarm"] = 3,
+["immunity"] = 4,
+["aoeCC"] = 3,
+["externalDefensive"] = 0,
 },
 ["icons"] = {
 ["scale"] = 0.85,
@@ -480,13 +481,13 @@ OmniCDDB = {
 ["scale"] = 1,
 ["layout"] = "horizontal",
 ["progressBar"] = false,
+["columns"] = 20,
 ["manualPos"] = {
 ["raidBar1"] = {
 ["y"] = 243,
 ["x"] = 285,
 },
 },
-["columns"] = 20,
 ["sortDirection"] = "dsc",
 ["spellType"] = {
 ["other"] = false,
