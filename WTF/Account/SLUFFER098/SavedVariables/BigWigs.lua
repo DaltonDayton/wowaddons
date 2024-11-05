@@ -3,7 +3,11 @@ BigWigs3DB = {
 ["namespaces"] = {
 ["BigWigs_Plugins_Victory"] = {
 },
+["BigWigs_Bosses_The Headless Horseman"] = {
+},
 ["BigWigs_Plugins_BossBlock"] = {
+},
+["BigWigs_Bosses_Tomb-Raider Drywhisker"] = {
 },
 ["BigWigs_Plugins_Sounds"] = {
 },
@@ -16,18 +20,20 @@ BigWigs3DB = {
 ["fontColor"] = {
 ["b"] = 0.3,
 },
-["voice"] = "enUS: Default (Male)",
+["fontName"] = "- M 900",
 ["position"] = {
 "CENTER",
 "CENTER",
 nil,
 -180,
 },
-["fontName"] = "- M 900",
+["voice"] = "enUS: Default (Male)",
 },
 },
 },
 ["BigWigs_Plugins_AltPower"] = {
+},
+["BigWigs_Bosses_Spinshroom"] = {
 },
 ["BigWigs_Plugins_Colors"] = {
 ["profiles"] = {
@@ -74,11 +80,14 @@ nil,
 ["iconPosition"] = "RIGHT",
 ["emphasizeGrowup"] = true,
 ["expWidth"] = 271,
-["emphasizeTime"] = 10,
-["texture"] = "- Tx Left",
+["normalHeight"] = 26,
+["fill"] = true,
 ["barStyle"] = "ElvUI",
 ["growup"] = true,
 ["fontSizeEmph"] = 16,
+["fontName"] = "- M 700",
+["alignText"] = "RIGHT",
+["emphasizeTime"] = 10,
 ["expPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -86,13 +95,10 @@ nil,
 130,
 "ElvUF_Target",
 },
-["alignText"] = "RIGHT",
-["fontName"] = "- M 700",
-["fill"] = true,
 ["visibleBarLimitEmph"] = 4,
-["normalHeight"] = 26,
-["fontSize"] = 16,
+["texture"] = "- Tx Left",
 ["spacing"] = 5,
+["fontSize"] = 16,
 ["normalPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -103,19 +109,17 @@ nil,
 },
 },
 },
-["BigWigs_Bosses_Web General Ab'enar"] = {
+["BigWigs_Bosses_Kobold Delve Trash"] = {
+},
+["BigWigs_Plugins_Proximity"] = {
+},
+["BigWigs_Bosses_Fungarian Delve Trash"] = {
 },
 ["BigWigs_Bosses_Delve Rares"] = {
 },
-["BigWigs_Plugins_AutoReply"] = {
-},
-["BigWigs_Bosses_Nerubian Delve Trash"] = {
-},
-["BigWigs_Plugins_Wipe"] = {
+["LibDualSpec-1.0"] = {
 },
 ["BigWigs_Plugins_InfoBox"] = {
-},
-["BigWigs_Plugins_Proximity"] = {
 },
 ["BigWigs_Plugins_Messages"] = {
 ["profiles"] = {
@@ -142,17 +146,19 @@ nil,
 },
 },
 },
+["BigWigs_Plugins_Wipe"] = {
+},
 ["BigWigs_Plugins_Pull"] = {
 },
-["LibDualSpec-1.0"] = {
+["BigWigs_Plugins_AutoReply"] = {
 },
 },
 ["profileKeys"] = {
 ["Xavaat - Ner'zhul"] = "ToxiUI",
 ["Xambank - Ner'zhul"] = "ToxiUI",
 ["Faelaena - Ner'zhul"] = "ToxiUI",
-["Shantyclause - Ner'zhul"] = "ToxiUI",
 ["Xamuul - Ner'zhul"] = "ToxiUI",
+["Shantyclause - Ner'zhul"] = "ToxiUI",
 ["Yushien - Ner'zhul"] = "ToxiUI",
 },
 ["profiles"] = {

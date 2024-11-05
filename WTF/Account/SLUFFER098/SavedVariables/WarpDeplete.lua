@@ -1,5 +1,8 @@
 
 WarpDepleteDB = {
+["global"] = {
+["mdtAlertShown"] = true,
+},
 ["profileKeys"] = {
 ["Zatta - Ner'zhul"] = "Default",
 ["Xenoth - Ner'zhul"] = "Default",
@@ -7,13 +10,10 @@ WarpDepleteDB = {
 ["Yushien - Ner'zhul"] = "ToxiUI",
 ["Xavaat - Ner'zhul"] = "ToxiUI",
 ["Faelaena - Ner'zhul"] = "ToxiUI",
-["Shantyclause - Ner'zhul"] = "ToxiUI",
-["Xambank - Ner'zhul"] = "ToxiUI",
-["Xamuul - Ner'zhul"] = "ToxiUI",
 ["Kariq - Ner'zhul"] = "Default",
-},
-["global"] = {
-["mdtAlertShown"] = true,
+["Xamuul - Ner'zhul"] = "ToxiUI",
+["Xambank - Ner'zhul"] = "ToxiUI",
+["Shantyclause - Ner'zhul"] = "ToxiUI",
 },
 ["profiles"] = {
 ["Default"] = {
@@ -40,12 +40,12 @@ WarpDepleteDB = {
 ["bar3Texture"] = "- Tx Left",
 ["bar1Font"] = "- ToxiUI",
 ["bar2TextureColor"] = "ff00e5f6",
-["keyColor"] = "ffffb35f",
+["deathsFont"] = "- ToxiUI",
 ["forcesTextureColor"] = "ffbc9f23",
 ["bar2Texture"] = "- Tx Left",
 ["bar1TextureColor"] = "ff00e5f6",
-["deathsFont"] = "- ToxiUI",
 ["forcesFont"] = "- ToxiUI",
+["keyColor"] = "ffffb35f",
 ["keyFont"] = "- M 900",
 },
 },

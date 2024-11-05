@@ -22,12 +22,14 @@ BigWigs3DB = {
 nil,
 -180,
 },
-["fontName"] = "- M 900",
 ["voice"] = "enUS: Default (Male)",
+["fontName"] = "- M 900",
 },
 },
 },
 ["BigWigs_Plugins_AltPower"] = {
+},
+["BigWigs_Plugins_AutoReply"] = {
 },
 ["BigWigs_Plugins_Colors"] = {
 ["profiles"] = {
@@ -63,52 +65,6 @@ nil,
 },
 },
 },
-["BigWigs_Plugins_Bars"] = {
-["profiles"] = {
-["ToxiUI"] = {
-["outline"] = "OUTLINE",
-["normalWidth"] = 354,
-["visibleBarLimit"] = 8,
-["alignTime"] = "LEFT",
-["expHeight"] = 26,
-["iconPosition"] = "RIGHT",
-["emphasizeGrowup"] = true,
-["expWidth"] = 271,
-["texture"] = "- Tx Left",
-["barStyle"] = "ElvUI",
-["growup"] = true,
-["fontSizeEmph"] = 16,
-["expPosition"] = {
-"BOTTOMLEFT",
-"TOPLEFT",
-nil,
-130,
-"ElvUF_Target",
-},
-["alignText"] = "RIGHT",
-["fontName"] = "- M 700",
-["emphasizeTime"] = 10,
-["visibleBarLimitEmph"] = 4,
-["spacing"] = 5,
-["fontSize"] = 16,
-["normalHeight"] = 26,
-["fill"] = true,
-["normalPosition"] = {
-"BOTTOMLEFT",
-"TOPLEFT",
-0,
-180,
-"DetailsBaseFrame1",
-},
-},
-},
-},
-["LibDualSpec-1.0"] = {
-},
-["BigWigs_Plugins_Wipe"] = {
-},
-["BigWigs_Plugins_Proximity"] = {
-},
 ["BigWigs_Plugins_Messages"] = {
 ["profiles"] = {
 ["ToxiUI"] = {
@@ -134,19 +90,63 @@ nil,
 },
 },
 },
+["BigWigs_Plugins_Proximity"] = {
+},
+["BigWigs_Plugins_Wipe"] = {
+},
 ["BigWigs_Plugins_InfoBox"] = {
+},
+["LibDualSpec-1.0"] = {
 },
 ["BigWigs_Plugins_Pull"] = {
 },
-["BigWigs_Plugins_AutoReply"] = {
+["BigWigs_Plugins_Bars"] = {
+["profiles"] = {
+["ToxiUI"] = {
+["outline"] = "OUTLINE",
+["normalWidth"] = 354,
+["visibleBarLimit"] = 8,
+["alignTime"] = "LEFT",
+["expHeight"] = 26,
+["iconPosition"] = "RIGHT",
+["emphasizeGrowup"] = true,
+["expWidth"] = 271,
+["fill"] = true,
+["barStyle"] = "ElvUI",
+["growup"] = true,
+["fontSizeEmph"] = 16,
+["fontName"] = "- M 700",
+["alignText"] = "RIGHT",
+["emphasizeTime"] = 10,
+["normalHeight"] = 26,
+["visibleBarLimitEmph"] = 4,
+["fontSize"] = 16,
+["spacing"] = 5,
+["texture"] = "- Tx Left",
+["expPosition"] = {
+"BOTTOMLEFT",
+"TOPLEFT",
+nil,
+130,
+"ElvUF_Target",
+},
+["normalPosition"] = {
+"BOTTOMLEFT",
+"TOPLEFT",
+0,
+180,
+"DetailsBaseFrame1",
+},
+},
+},
 },
 },
 ["profileKeys"] = {
 ["Xavaat - Ner'zhul"] = "ToxiUI",
 ["Xambank - Ner'zhul"] = "ToxiUI",
 ["Faelaena - Ner'zhul"] = "ToxiUI",
-["Xamuul - Ner'zhul"] = "ToxiUI",
 ["Shantyclause - Ner'zhul"] = "ToxiUI",
+["Xamuul - Ner'zhul"] = "ToxiUI",
 ["Yushien - Ner'zhul"] = "ToxiUI",
 },
 ["profiles"] = {

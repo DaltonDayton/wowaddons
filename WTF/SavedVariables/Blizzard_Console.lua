@@ -4,66 +4,6 @@ Blizzard_Console_SavedVars = {
 ["height"] = 299.9999694824219,
 ["messageHistory"] = {
 {
-"Multithreaded BeginDraw enabled.",
-0,
-},
-{
-"Multithread shadows changed to 1.",
-0,
-},
-{
-"Multithreaded prepass enabled.",
-0,
-},
-{
-"Multithreaded opaque pass enabled.",
-0,
-},
-{
-"Multithreaded opaque pass enabled.",
-0,
-},
-{
-"Multithreaded alpha M2 pass enabled.",
-0,
-},
-{
-"Multithreaded opaque WMO pass enabled.",
-0,
-},
-{
-"Multithreaded terrain pass enabled.",
-0,
-},
-{
-"Multithreaded volumetric fog enabled.",
-0,
-},
-{
-"Multithreaded Refraction Pass enabled.",
-0,
-},
-{
-"Multithreaded miscellaneous passes enabled.",
-0,
-},
-{
-"Multithreaded decal passes disabled.",
-0,
-},
-{
-"Multithreaded outline passes enabled.",
-0,
-},
-{
-"Use trigger on BeginDrawComplete enabled.",
-4,
-},
-{
-"Multithreaded alpha pass enabled.",
-0,
-},
-{
 "Multithreaded daynight update enabled.",
 0,
 },
@@ -300,387 +240,7 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"[GlueLogin] [F] Reconnect token saved;  creationTime=\"1729957323\" expirationTime=\"1729971723\"",
-0,
-},
-{
-"[GlueLogin] [F] Waiting for realm list.",
-0,
-},
-{
-"[IBN_Login] [F] Requesting realm list ticket",
-0,
-},
-{
-"[IBN_Login] [F] Received realm list ticket code=\"ERROR_OK (0)\"",
-0,
-},
-{
-"[GlueLogin] [F] Waiting for realm list.",
-0,
-},
-{
-"[IBN_Login] [F] Received sub region list code=\"ERROR_OK (0)\"",
-0,
-},
-{
-"[IBN_Login] [F] Requesting last played chars numSubRegions=\"6\"",
-0,
-},
-{
-"[GlueLogin] [F] Realm list ready.",
-0,
-},
-{
-"[IBN_Login] [F] Joining realm subRegion=\"1-1-89\" realmAddress=\"1-3-8\"",
-0,
-},
-{
-"[IBN_Login] [F] OnRealmJoin code=\"ERROR_OK (0)\"",
-0,
-},
-{
-"NetClient::HandleConnect()\n",
-0,
-},
-{
-"[GlueLogin] [F] Received AuthedToWoW result=\"ERROR_OK (0)\"",
-0,
-},
-{
-"[IBN_Login] [F] Front disconnecting connectionId=\"1\"",
-0,
-},
-{
-"[GlueLogin] [F] Disconnecting from authentication server.",
-0,
-},
-{
-"[IBN_BackInterface] [F] Session with Battle.net established.",
-0,
-},
-{
-"[IBN_Login] [F] Front disconnected connectionId=\"1\" result=\"( code=\"ERROR_NETWORK_MODULE_SOCKET_CLOSED (1016)\" localizedMessage=\"\" debugMessage=\"\")\"",
-0,
-},
-{
-"[GlueLogin] [F] Disconnected from authentication server.",
-0,
-},
-{
-"[WowEntitlements] [BNetAccount-0-000002FB9A78] [WowAccount-0-000001331CA6] Initialized with 105 entitlements.",
-0,
-},
-{
-"-------------------------------------------------- Previous Session --------------------------------------------------",
-0,
-},
-{
-"Sorting particles normally.",
-0,
-},
-{
-"Multithreaded rendering enabled.",
-0,
-},
-{
-"Multithreaded BeginDraw enabled.",
-0,
-},
-{
-"Multithread shadows changed to 1.",
-0,
-},
-{
-"Multithreaded prepass enabled.",
-0,
-},
-{
-"Multithreaded opaque pass enabled.",
-0,
-},
-{
-"Multithreaded opaque pass enabled.",
-0,
-},
-{
-"Multithreaded alpha M2 pass enabled.",
-0,
-},
-{
-"Multithreaded opaque WMO pass enabled.",
-0,
-},
-{
-"Multithreaded terrain pass enabled.",
-0,
-},
-{
-"Multithreaded volumetric fog enabled.",
-0,
-},
-{
-"Multithreaded Refraction Pass enabled.",
-0,
-},
-{
-"Multithreaded miscellaneous passes enabled.",
-0,
-},
-{
-"Multithreaded decal passes disabled.",
-0,
-},
-{
-"Multithreaded outline passes enabled.",
-0,
-},
-{
-"Use trigger on BeginDrawComplete enabled.",
-4,
-},
-{
-"Multithreaded alpha pass enabled.",
-0,
-},
-{
-"Multithreaded daynight update enabled.",
-0,
-},
-{
-"Water detail changed to 3",
-0,
-},
-{
-"Ripple detail changed to 2",
-0,
-},
-{
-"Reflection mode changed to 3",
-0,
-},
-{
-"Reflection downscale changed to 0",
-0,
-},
-{
-"Sunshafts quality changed to 2",
-0,
-},
-{
-"Refraction mode changed to 2",
-0,
-},
-{
-"Volume fog enabled.",
-0,
-},
-{
-"Particulate volumes enabled.",
-0,
-},
-{
-"Projected textures enabled.",
-0,
-},
-{
-"Spell Clutter disabled",
-0,
-},
-{
-"Shadow mode changed to 4 - 4 band dynamic shadows on units and terrain, 2048",
-0,
-},
-{
-"Shadow texture size changed to 2048.",
-0,
-},
-{
-"Soft shadows changed to 1.",
-0,
-},
-{
-"Shadow cascade blending changed to 1",
-0,
-},
-{
-"Shadow RT mode changed to 3 (High) - Full-resolution directional & local light shadows",
-0,
-},
-{
-"maxLightCount must be in range 0 to 32.",
-0,
-},
-{
-"CVar 'maxLightCount' failed validation for its initial value.",
-0,
-},
-{
-"Clustered shading enabled.",
-0,
-},
-{
-"Not forcing clustered shading.",
-0,
-},
-{
-"SSAO mode set to 4",
-0,
-},
-{
-"SSAO type set to 0",
-0,
-},
-{
-"Depth Based Opacity Enabled",
-0,
-},
-{
-"SkyCloudLOD set to 0",
-0,
-},
-{
-"Texture filtering mode updated.",
-0,
-},
-{
-"Terrain mip level changed to 0.",
-0,
-},
-{
-"Outline mode changed to 2",
-0,
-},
-{
-"Physics interaction level changed to 2",
-0,
-},
-{
-"Render scale changed to 0.75",
-0,
-},
-{
-"Resample quality changed to 3",
-0,
-},
-{
-"MSAA disabled",
-0,
-},
-{
-"MSAA for alpha-test enabled.",
-0,
-},
-{
-"VALAR mode changed to 1",
-0,
-},
-{
-"lodObjectSizeScale cannot be changed.",
-0,
-},
-{
-"Volume fog disabled.",
-0,
-},
-{
-"dynamicLod enabled",
-0,
-},
-{
-"World preload object sort enabled.",
-0,
-},
-{
-"World load object sort enabled.",
-0,
-},
-{
-"World preload non critical enabled.",
-0,
-},
-{
-"World preload high res textures enabled.",
-0,
-},
-{
-"FFX: Color Blind Test Mode Disabled",
-0,
-},
-{
-"Error display disabled",
-0,
-},
-{
-"Error display shown",
-0,
-},
-{
-"Displaying errors through fatal errors",
-0,
-},
-{
-"Displaying errors through fatal errors",
-0,
-},
-{
-"Now filtering: all messages",
-0,
-},
-{
-"CVar 'Sound_AmbienceHighpassDSPCutoff' failed validation for its initial value.",
-0,
-},
-{
-"CVar 'Sound_AllyPlayerHighpassDSPCutoff' failed validation for its initial value.",
-0,
-},
-{
-"CVar 'Sound_EnemyPlayerHighpassDSPCutoff' failed validation for its initial value.",
-0,
-},
-{
-"CVar 'Sound_NPCHighpassDSPCutoff' failed validation for its initial value.",
-0,
-},
-{
-"ChromaEffects disabled",
-0,
-},
-{
-"[GlueLogin] [F] Starting login launcherPortal=\"us.actual.battle.net\" loginPortal=\"us.actual.battle.net:1119\"",
-0,
-},
-{
-"[GlueLogin] [F] Resetting",
-0,
-},
-{
-"[IBN_Login] [F] Initializing",
-0,
-},
-{
-"[IBN_Login] [F] Attempting logon host=\"us.actual.battle.net\" port=\"1119\"",
-0,
-},
-{
-"[GlueLogin] [F] Waiting for server response.",
-0,
-},
-{
-"[GlueLogin] [F] Waiting for server response.",
-0,
-},
-{
-"[GlueLogin] [F] Waiting for server response.",
-0,
-},
-{
-"[GlueLogin] [F] Logon complete.",
-0,
-},
-{
-"[GlueLogin] [F] Reconnect token saved;  creationTime=\"1729961818\" expirationTime=\"1729976218\"",
+"[GlueLogin] [F] Reconnect token saved;  creationTime=\"1730079747\" expirationTime=\"1730094147\"",
 0,
 },
 {
@@ -744,10 +304,6 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"[WowEntitlements] [BNetAccount-0-000002FB9A78] [WowAccount-0-000001331CA6] Initialized with 105 entitlements.",
-0,
-},
-{
 "[IBN_Login] [F] Front disconnected connectionId=\"1\" result=\"( code=\"ERROR_NETWORK_MODULE_SOCKET_CLOSED (1016)\" localizedMessage=\"\" debugMessage=\"\")\"",
 0,
 },
@@ -756,455 +312,7 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"-------------------------------------------------- Previous Session --------------------------------------------------",
-0,
-},
-{
-"Sorting particles normally.",
-0,
-},
-{
-"Multithreaded rendering enabled.",
-0,
-},
-{
-"Multithreaded BeginDraw enabled.",
-0,
-},
-{
-"Multithread shadows changed to 1.",
-0,
-},
-{
-"Multithreaded prepass enabled.",
-0,
-},
-{
-"Multithreaded opaque pass enabled.",
-0,
-},
-{
-"Multithreaded opaque pass enabled.",
-0,
-},
-{
-"Multithreaded alpha M2 pass enabled.",
-0,
-},
-{
-"Multithreaded opaque WMO pass enabled.",
-0,
-},
-{
-"Multithreaded terrain pass enabled.",
-0,
-},
-{
-"Multithreaded volumetric fog enabled.",
-0,
-},
-{
-"Multithreaded Refraction Pass enabled.",
-0,
-},
-{
-"Multithreaded miscellaneous passes enabled.",
-0,
-},
-{
-"Multithreaded decal passes disabled.",
-0,
-},
-{
-"Multithreaded outline passes enabled.",
-0,
-},
-{
-"Use trigger on BeginDrawComplete enabled.",
-4,
-},
-{
-"Multithreaded alpha pass enabled.",
-0,
-},
-{
-"Multithreaded daynight update enabled.",
-0,
-},
-{
-"Water detail changed to 3",
-0,
-},
-{
-"Ripple detail changed to 2",
-0,
-},
-{
-"Reflection mode changed to 3",
-0,
-},
-{
-"Reflection downscale changed to 0",
-0,
-},
-{
-"Sunshafts quality changed to 2",
-0,
-},
-{
-"Refraction mode changed to 2",
-0,
-},
-{
-"Volume fog enabled.",
-0,
-},
-{
-"Particulate volumes enabled.",
-0,
-},
-{
-"Projected textures enabled.",
-0,
-},
-{
-"Spell Clutter disabled",
-0,
-},
-{
-"Shadow mode changed to 4 - 4 band dynamic shadows on units and terrain, 2048",
-0,
-},
-{
-"Shadow texture size changed to 2048.",
-0,
-},
-{
-"Soft shadows changed to 1.",
-0,
-},
-{
-"Shadow cascade blending changed to 1",
-0,
-},
-{
-"Shadow RT mode changed to 3 (High) - Full-resolution directional & local light shadows",
-0,
-},
-{
-"maxLightCount must be in range 0 to 32.",
-0,
-},
-{
-"CVar 'maxLightCount' failed validation for its initial value.",
-0,
-},
-{
-"Clustered shading enabled.",
-0,
-},
-{
-"Not forcing clustered shading.",
-0,
-},
-{
-"SSAO mode set to 4",
-0,
-},
-{
-"SSAO type set to 0",
-0,
-},
-{
-"Depth Based Opacity Enabled",
-0,
-},
-{
-"SkyCloudLOD set to 0",
-0,
-},
-{
-"Texture filtering mode updated.",
-0,
-},
-{
-"Terrain mip level changed to 0.",
-0,
-},
-{
-"Outline mode changed to 2",
-0,
-},
-{
-"Physics interaction level changed to 2",
-0,
-},
-{
-"Render scale changed to 0.75",
-0,
-},
-{
-"Resample quality changed to 3",
-0,
-},
-{
-"MSAA disabled",
-0,
-},
-{
-"MSAA for alpha-test enabled.",
-0,
-},
-{
-"VALAR mode changed to 1",
-0,
-},
-{
-"lodObjectSizeScale cannot be changed.",
-0,
-},
-{
-"Volume fog disabled.",
-0,
-},
-{
-"dynamicLod enabled",
-0,
-},
-{
-"World preload object sort enabled.",
-0,
-},
-{
-"World load object sort enabled.",
-0,
-},
-{
-"World preload non critical enabled.",
-0,
-},
-{
-"World preload high res textures enabled.",
-0,
-},
-{
-"FFX: Color Blind Test Mode Disabled",
-0,
-},
-{
-"Error display disabled",
-0,
-},
-{
-"Error display shown",
-0,
-},
-{
-"Displaying errors through fatal errors",
-0,
-},
-{
-"Displaying errors through fatal errors",
-0,
-},
-{
-"Now filtering: all messages",
-0,
-},
-{
-"CVar 'Sound_AmbienceHighpassDSPCutoff' failed validation for its initial value.",
-0,
-},
-{
-"CVar 'Sound_AllyPlayerHighpassDSPCutoff' failed validation for its initial value.",
-0,
-},
-{
-"CVar 'Sound_EnemyPlayerHighpassDSPCutoff' failed validation for its initial value.",
-0,
-},
-{
-"CVar 'Sound_NPCHighpassDSPCutoff' failed validation for its initial value.",
-0,
-},
-{
-"ChromaEffects disabled",
-0,
-},
-{
-"[GlueLogin] [F] Starting login launcherPortal=\"us.actual.battle.net\" loginPortal=\"us.actual.battle.net:1119\"",
-0,
-},
-{
-"[GlueLogin] [F] Resetting",
-0,
-},
-{
-"[IBN_Login] [F] Initializing",
-0,
-},
-{
-"[IBN_Login] [F] Attempting logon host=\"us.actual.battle.net\" port=\"1119\"",
-0,
-},
-{
-"[GlueLogin] [F] Waiting for server response.",
-0,
-},
-{
-"[GlueLogin] [F] Waiting for server response.",
-0,
-},
-{
-"[GlueLogin] [F] Waiting for server response.",
-0,
-},
-{
-"[GlueLogin] [F] Logon complete.",
-0,
-},
-{
-"[GlueLogin] [F] Reconnect token saved;  creationTime=\"1729962041\" expirationTime=\"1729976441\"",
-0,
-},
-{
-"[GlueLogin] [F] Waiting for realm list.",
-0,
-},
-{
-"[IBN_Login] [F] Requesting realm list ticket",
-0,
-},
-{
-"[IBN_Login] [F] Received realm list ticket code=\"ERROR_OK (0)\"",
-0,
-},
-{
-"[GlueLogin] [F] Waiting for realm list.",
-0,
-},
-{
-"[IBN_Login] [F] Received sub region list code=\"ERROR_OK (0)\"",
-0,
-},
-{
-"[IBN_Login] [F] Requesting last played chars numSubRegions=\"6\"",
-0,
-},
-{
-"[GlueLogin] [F] Realm list ready.",
-0,
-},
-{
-"[IBN_Login] [F] Joining realm subRegion=\"1-1-89\" realmAddress=\"1-3-8\"",
-0,
-},
-{
-"[IBN_Login] [F] OnRealmJoin code=\"ERROR_OK (0)\"",
-0,
-},
-{
-"NetClient::HandleConnect()\n",
-0,
-},
-{
-"[GlueLogin] [F] Received AuthedToWoW result=\"ERROR_OK (0)\"",
-0,
-},
-{
-"[IBN_Login] [F] Front disconnecting connectionId=\"1\"",
-0,
-},
-{
-"[GlueLogin] [F] Disconnecting from authentication server.",
-0,
-},
-{
-"[IBN_BackInterface] [F] Session with Battle.net established.",
-0,
-},
-{
 "[WowEntitlements] [BNetAccount-0-000002FB9A78] [WowAccount-0-000001331CA6] Initialized with 105 entitlements.",
-0,
-},
-{
-"[IBN_Login] [F] Front disconnected connectionId=\"1\" result=\"( code=\"ERROR_OK (0)\" localizedMessage=\"\" debugMessage=\"\")\"",
-0,
-},
-{
-"[GlueLogin] [F] Disconnected from authentication server.",
-0,
-},
-{
-"Sunshafts quality changed to 0",
-0,
-},
-{
-"Refraction mode changed to 0",
-0,
-},
-{
-"Depth Based Opacity Disabled",
-0,
-},
-{
-"Water detail changed to 0",
-0,
-},
-{
-"Reflection mode changed to 0",
-0,
-},
-{
-"Ripple detail changed to 0",
-0,
-},
-{
-"Volume fog disabled.",
-0,
-},
-{
-"Particulate volumes disabled.",
-0,
-},
-{
-"Clustered shading disabled.",
-0,
-},
-{
-"SSAO mode set to 0",
-0,
-},
-{
-"Shadow mode changed to 0 - Blob shadows",
-0,
-},
-{
-"Shadow texture size changed to 1024.",
-0,
-},
-{
-"Soft shadows changed to 0.",
-0,
-},
-{
-"Shadow cascade blending changed to 0",
-0,
-},
-{
-"Projected textures disabled.",
-0,
-},
-{
-"Terrain mip level changed to 1.",
-0,
-},
-{
-"Outline mode changed to 0",
-0,
-},
-{
-"Spell Clutter intensity value set",
 0,
 },
 {
@@ -1272,7 +380,7 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"Time set to 10/26/2024 (Sat) 10:00",
+"Time set to 10/27/2024 (Sun) 18:42",
 0,
 },
 {
@@ -1288,10 +396,6 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"World transfer pending...",
-0,
-},
-{
 "Got new connection 3",
 0,
 },
@@ -1300,7 +404,39 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
+"[Airlock] Received PreloadMap Destination MapID:2681, Current MapID:2552, PreviousTransitionID:-1, Position (-354.349, 17.4412, 159.641)",
+0,
+},
+{
+"[Airlock] Preload initiated.",
+0,
+},
+{
+"[Airlock] Received PreloadMap Destination MapID:2681, Current MapID:2552, PreviousTransitionID:2681, Position (-348.406, -13.717, 152.572)",
+0,
+},
+{
+"[Airlock] Preload skipped - map is same as current map.",
+0,
+},
+{
 "Got new connection 3",
+0,
+},
+{
+"[Airlock] Loading new map 2681 from previous map 2552 with translation: (-3057.43, 3623.23, -43.819)\n    Location : (-350.508, -26.9253, 152.166)\n    Location in previous map : (2706.92, -3650.16, 195.985)",
+0,
+},
+{
+"[Airlock] Swapping to preloaded map 2681 but keeping old map 2552 RESIDENT.",
+0,
+},
+{
+"[Airlock] Freezing AOI updates for old map 2552",
+0,
+},
+{
+"[Airlock] Finished transition to new map 2681",
 0,
 },
 {
@@ -1308,7 +444,27 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
+"[Airlock] Received PreloadMap Destination MapID:2552, Current MapID:2681, PreviousTransitionID:2552, Position (2706.92, -3650.16, 195.985)",
+0,
+},
+{
+"[Airlock] Preload skipped - map is same as current map.",
+0,
+},
+{
 "Got new connection 3",
+0,
+},
+{
+"[Airlock] Loading new map 2552 from previous map 2681 with translation: (3057.43, -3623.23, 43.819)\n    Location : (2707.56, -3625.16, 195.976)\n    Location in previous map : (-349.867, -1.93164, 152.157)",
+0,
+},
+{
+"[Airlock] Swapping to preloaded map 2552 and unloading map 2681. (Map Table Size 288 larger than budget 8)",
+0,
+},
+{
+"[Airlock] Finished transition to new map 2552",
 0,
 },
 {
@@ -1316,7 +472,35 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"[Airlock] Received PreloadMap Destination MapID:2681, Current MapID:2552, PreviousTransitionID:-1, Position (-350.039, -13.468, 152.157)",
+0,
+},
+{
+"[Airlock] Preload initiated.",
+0,
+},
+{
 "Got new connection 3",
+0,
+},
+{
+"[Airlock] Loading new map 2681 from previous map 2552 with translation: (-3057.43, 3623.23, -43.819)\n    Location : (-350.214, -22.0129, 152.157)\n    Location in previous map : (2707.22, -3645.24, 195.976)",
+0,
+},
+{
+"[Airlock] Swapping to preloaded map 2681 but keeping old map 2552 RESIDENT.",
+0,
+},
+{
+"[Airlock] Freezing AOI updates for old map 2552",
+0,
+},
+{
+"[Airlock] Finished transition to new map 2681",
 0,
 },
 {
@@ -1324,7 +508,27 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
+"[Airlock] Received PreloadMap Destination MapID:2552, Current MapID:2681, PreviousTransitionID:2552, Position (2707.2, -3646.37, 195.976)",
+0,
+},
+{
+"[Airlock] Preload skipped - map is same as current map.",
+0,
+},
+{
 "Got new connection 3",
+0,
+},
+{
+"[Airlock] Loading new map 2552 from previous map 2681 with translation: (3057.43, -3623.23, 43.819)\n    Location : (2707.04, -3624.67, 195.976)\n    Location in previous map : (-350.394, -1.44312, 152.157)",
+0,
+},
+{
+"[Airlock] Swapping to preloaded map 2552 and unloading map 2681. (Map Table Size 288 larger than budget 8)",
+0,
+},
+{
+"[Airlock] Finished transition to new map 2552",
 0,
 },
 {
@@ -1332,7 +536,35 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"[Airlock] Received PreloadMap Destination MapID:2681, Current MapID:2552, PreviousTransitionID:-1, Position (-351.034, -15.0996, 152.156)",
+0,
+},
+{
+"[Airlock] Preload initiated.",
+0,
+},
+{
 "Got new connection 3",
+0,
+},
+{
+"[Airlock] Loading new map 2681 from previous map 2552 with translation: (-3057.43, 3623.23, -43.819)\n    Location : (-351.128, -20.9956, 152.157)\n    Location in previous map : (2706.3, -3644.23, 195.976)",
+0,
+},
+{
+"[Airlock] Swapping to preloaded map 2681 but keeping old map 2552 RESIDENT.",
+0,
+},
+{
+"[Airlock] Freezing AOI updates for old map 2552",
+0,
+},
+{
+"[Airlock] Finished transition to new map 2681",
 0,
 },
 {
@@ -1340,31 +572,103 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"Got new connection 3",
+"[Airlock] Received PreloadMap Destination MapID:2552, Current MapID:2681, PreviousTransitionID:2552, Position (2706.3, -3644.23, 195.976)",
 0,
 },
 {
-"Weather changed to 1, intensity 0.000000\n",
+"[Airlock] Preload skipped - map is same as current map.",
 0,
 },
 {
-"Got new connection 3",
+"-------------------------------------------------- Previous Session --------------------------------------------------",
 0,
 },
 {
-"Weather changed to 2, intensity 0.800000\n",
+"Sorting particles normally.",
 0,
 },
 {
-"Got new connection 3",
+"Multithreaded rendering enabled.",
 0,
 },
 {
-"Weather changed to 1, intensity 0.000000\n",
+"Multithreaded BeginDraw enabled.",
 0,
 },
 {
-"Projected textures enabled.",
+"Multithread shadows changed to 1.",
+0,
+},
+{
+"Multithreaded prepass enabled.",
+0,
+},
+{
+"Multithreaded opaque pass enabled.",
+0,
+},
+{
+"Multithreaded opaque pass enabled.",
+0,
+},
+{
+"Multithreaded alpha M2 pass enabled.",
+0,
+},
+{
+"Multithreaded opaque WMO pass enabled.",
+0,
+},
+{
+"Multithreaded terrain pass enabled.",
+0,
+},
+{
+"Multithreaded volumetric fog enabled.",
+0,
+},
+{
+"Multithreaded Refraction Pass enabled.",
+0,
+},
+{
+"Multithreaded miscellaneous passes enabled.",
+0,
+},
+{
+"Multithreaded decal passes disabled.",
+0,
+},
+{
+"Multithreaded outline passes enabled.",
+0,
+},
+{
+"Use trigger on BeginDrawComplete enabled.",
+4,
+},
+{
+"Multithreaded alpha pass enabled.",
+0,
+},
+{
+"Multithreaded daynight update enabled.",
+0,
+},
+{
+"Water detail changed to 3",
+0,
+},
+{
+"Ripple detail changed to 2",
+0,
+},
+{
+"Reflection mode changed to 3",
+0,
+},
+{
+"Reflection downscale changed to 0",
 0,
 },
 {
@@ -1376,26 +680,6 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"Depth Based Opacity Enabled",
-0,
-},
-{
-"Water detail changed to 3",
-0,
-},
-{
-"Reflection mode changed to 3",
-0,
-},
-{
-"Ripple detail changed to 2",
-0,
-},
-{
-"Outline mode changed to 2",
-0,
-},
-{
 "Volume fog enabled.",
 0,
 },
@@ -1404,7 +688,7 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"Clustered shading enabled.",
+"Projected textures enabled.",
 0,
 },
 {
@@ -1428,7 +712,23 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"Terrain mip level changed to 0.",
+"Shadow RT mode changed to 3 (High) - Full-resolution directional & local light shadows",
+0,
+},
+{
+"maxLightCount must be in range 0 to 32.",
+0,
+},
+{
+"CVar 'maxLightCount' failed validation for its initial value.",
+0,
+},
+{
+"Clustered shading enabled.",
+0,
+},
+{
+"Not forcing clustered shading.",
 0,
 },
 {
@@ -1436,7 +736,295 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"World transfer pending...",
+"SSAO type set to 0",
+0,
+},
+{
+"Depth Based Opacity Enabled",
+0,
+},
+{
+"SkyCloudLOD set to 0",
+0,
+},
+{
+"Texture filtering mode updated.",
+0,
+},
+{
+"Terrain mip level changed to 0.",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Physics interaction level changed to 2",
+0,
+},
+{
+"Render scale changed to 0.75",
+0,
+},
+{
+"Resample quality changed to 3",
+0,
+},
+{
+"MSAA disabled",
+0,
+},
+{
+"MSAA for alpha-test enabled.",
+0,
+},
+{
+"VALAR mode changed to 1",
+0,
+},
+{
+"lodObjectSizeScale cannot be changed.",
+0,
+},
+{
+"Volume fog disabled.",
+0,
+},
+{
+"dynamicLod enabled",
+0,
+},
+{
+"World preload object sort enabled.",
+0,
+},
+{
+"World load object sort enabled.",
+0,
+},
+{
+"World preload non critical enabled.",
+0,
+},
+{
+"World preload high res textures enabled.",
+0,
+},
+{
+"FFX: Color Blind Test Mode Disabled",
+0,
+},
+{
+"Error display disabled",
+0,
+},
+{
+"Error display shown",
+0,
+},
+{
+"Displaying errors through fatal errors",
+0,
+},
+{
+"Displaying errors through fatal errors",
+0,
+},
+{
+"Now filtering: all messages",
+0,
+},
+{
+"CVar 'Sound_AmbienceHighpassDSPCutoff' failed validation for its initial value.",
+0,
+},
+{
+"CVar 'Sound_AllyPlayerHighpassDSPCutoff' failed validation for its initial value.",
+0,
+},
+{
+"CVar 'Sound_EnemyPlayerHighpassDSPCutoff' failed validation for its initial value.",
+0,
+},
+{
+"CVar 'Sound_NPCHighpassDSPCutoff' failed validation for its initial value.",
+0,
+},
+{
+"ChromaEffects disabled",
+0,
+},
+{
+"[GlueLogin] [F] Starting login launcherPortal=\"us.actual.battle.net\" loginPortal=\"us.actual.battle.net:1119\"",
+0,
+},
+{
+"[GlueLogin] [F] Resetting",
+0,
+},
+{
+"[IBN_Login] [F] Initializing",
+0,
+},
+{
+"[IBN_Login] [F] Attempting logon host=\"us.actual.battle.net\" port=\"1119\"",
+0,
+},
+{
+"[GlueLogin] [F] Waiting for server response.",
+0,
+},
+{
+"[GlueLogin] [F] Waiting for server response.",
+0,
+},
+{
+"[GlueLogin] [F] Waiting for server response.",
+0,
+},
+{
+"[GlueLogin] [F] Logon complete.",
+0,
+},
+{
+"[GlueLogin] [F] Reconnect token saved;  creationTime=\"1730738723\" expirationTime=\"1730753123\"",
+0,
+},
+{
+"[GlueLogin] [F] Waiting for realm list.",
+0,
+},
+{
+"[IBN_Login] [F] Requesting realm list ticket",
+0,
+},
+{
+"[IBN_Login] [F] Received realm list ticket code=\"ERROR_OK (0)\"",
+0,
+},
+{
+"[GlueLogin] [F] Waiting for realm list.",
+0,
+},
+{
+"[IBN_Login] [F] Received sub region list code=\"ERROR_OK (0)\"",
+0,
+},
+{
+"[IBN_Login] [F] Requesting last played chars numSubRegions=\"6\"",
+0,
+},
+{
+"[GlueLogin] [F] Realm list ready.",
+0,
+},
+{
+"[IBN_Login] [F] Joining realm subRegion=\"1-1-89\" realmAddress=\"1-3-8\"",
+0,
+},
+{
+"[IBN_Login] [F] OnRealmJoin code=\"ERROR_OK (0)\"",
+0,
+},
+{
+"NetClient::HandleConnect()\n",
+0,
+},
+{
+"[GlueLogin] [F] Received AuthedToWoW result=\"ERROR_OK (0)\"",
+0,
+},
+{
+"Got new connection 2",
+0,
+},
+{
+"[IBN_Login] [F] Front disconnecting connectionId=\"1\"",
+0,
+},
+{
+"[GlueLogin] [F] Disconnecting from authentication server.",
+0,
+},
+{
+"[IBN_BackInterface] [F] Session with Battle.net established.",
+0,
+},
+{
+"[IBN_Login] [F] Front disconnected connectionId=\"1\" result=\"( code=\"ERROR_OK (0)\" localizedMessage=\"\" debugMessage=\"\")\"",
+0,
+},
+{
+"[GlueLogin] [F] Disconnected from authentication server.",
+0,
+},
+{
+"[WowEntitlements] [BNetAccount-0-000002FB9A78] [WowAccount-0-000001331CA6] Initialized with 105 entitlements.",
+0,
+},
+{
+"-------------------------------------------------- Previous Session --------------------------------------------------",
+0,
+},
+{
+"Got new connection 3",
+0,
+},
+{
+"Proficiency in item class 2 set to 0x0000000040",
+0,
+},
+{
+"Proficiency in item class 2 set to 0x0000008040",
+0,
+},
+{
+"Proficiency in item class 4 set to 0x0000000021",
+0,
+},
+{
+"Proficiency in item class 2 set to 0x000000c040",
+0,
+},
+{
+"Proficiency in item class 2 set to 0x000000c440",
+0,
+},
+{
+"Proficiency in item class 4 set to 0x0000000025",
+0,
+},
+{
+"Proficiency in item class 2 set to 0x000000c460",
+0,
+},
+{
+"Proficiency in item class 2 set to 0x000000e460",
+0,
+},
+{
+"Proficiency in item class 2 set to 0x000000e470",
+0,
+},
+{
+"Proficiency in item class 4 set to 0x0000000027",
+0,
+},
+{
+"Proficiency in item class 2 set to 0x000000e470",
+0,
+},
+{
+"Proficiency in item class 4 set to 0x0000000027",
+0,
+},
+{
+"Time set to 11/4/2024 (Mon) 8:45",
+0,
+},
+{
+"Gamespeed set from 0.017 to 0.017",
 0,
 },
 {
@@ -1448,14 +1036,6 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"GameTimeSync: skipping forwards 2 game minutes, (current = 10/26/2024 (Sat) 10:10, newtime = 10/26/2024 (Sat) 10:12)",
-0,
-},
-{
-"World transfer pending...",
-0,
-},
-{
 "Got new connection 3",
 0,
 },
@@ -1472,7 +1052,7 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"Got new connection 3",
+"Weather changed to 3, intensity 0.277667\n",
 0,
 },
 {
@@ -1532,934 +1112,6 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"Proficiency in item class 2 set to 0x000000e470",
-0,
-},
-{
-"Proficiency in item class 4 set to 0x0000000027",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x000000e470",
-0,
-},
-{
-"Proficiency in item class 4 set to 0x0000000027",
-0,
-},
-{
-"Time set to 10/26/2024 (Sat) 10:42",
-0,
-},
-{
-"Gamespeed set from 0.017 to 0.017",
-0,
-},
-{
-"Got new connection 3",
-0,
-},
-{
-"-------------------------------------------------- Previous Session --------------------------------------------------",
-0,
-},
-{
-"Sorting particles normally.",
-0,
-},
-{
-"Multithreaded rendering enabled.",
-0,
-},
-{
-"Multithreaded BeginDraw enabled.",
-0,
-},
-{
-"Multithread shadows changed to 1.",
-0,
-},
-{
-"Multithreaded prepass enabled.",
-0,
-},
-{
-"Multithreaded opaque pass enabled.",
-0,
-},
-{
-"Multithreaded opaque pass enabled.",
-0,
-},
-{
-"Multithreaded alpha M2 pass enabled.",
-0,
-},
-{
-"Multithreaded opaque WMO pass enabled.",
-0,
-},
-{
-"Multithreaded terrain pass enabled.",
-0,
-},
-{
-"Multithreaded volumetric fog enabled.",
-0,
-},
-{
-"Multithreaded Refraction Pass enabled.",
-0,
-},
-{
-"Multithreaded miscellaneous passes enabled.",
-0,
-},
-{
-"Multithreaded decal passes disabled.",
-0,
-},
-{
-"Multithreaded outline passes enabled.",
-0,
-},
-{
-"Use trigger on BeginDrawComplete enabled.",
-4,
-},
-{
-"Multithreaded alpha pass enabled.",
-0,
-},
-{
-"Multithreaded daynight update enabled.",
-0,
-},
-{
-"Water detail changed to 3",
-0,
-},
-{
-"Ripple detail changed to 2",
-0,
-},
-{
-"Reflection mode changed to 3",
-0,
-},
-{
-"Reflection downscale changed to 0",
-0,
-},
-{
-"Sunshafts quality changed to 2",
-0,
-},
-{
-"Refraction mode changed to 2",
-0,
-},
-{
-"Volume fog enabled.",
-0,
-},
-{
-"Particulate volumes enabled.",
-0,
-},
-{
-"Projected textures enabled.",
-0,
-},
-{
-"Spell Clutter disabled",
-0,
-},
-{
-"Shadow mode changed to 4 - 4 band dynamic shadows on units and terrain, 2048",
-0,
-},
-{
-"Shadow texture size changed to 2048.",
-0,
-},
-{
-"Soft shadows changed to 1.",
-0,
-},
-{
-"Shadow cascade blending changed to 1",
-0,
-},
-{
-"Shadow RT mode changed to 3 (High) - Full-resolution directional & local light shadows",
-0,
-},
-{
-"maxLightCount must be in range 0 to 32.",
-0,
-},
-{
-"CVar 'maxLightCount' failed validation for its initial value.",
-0,
-},
-{
-"Clustered shading enabled.",
-0,
-},
-{
-"Not forcing clustered shading.",
-0,
-},
-{
-"SSAO mode set to 4",
-0,
-},
-{
-"SSAO type set to 0",
-0,
-},
-{
-"Depth Based Opacity Enabled",
-0,
-},
-{
-"SkyCloudLOD set to 0",
-0,
-},
-{
-"Texture filtering mode updated.",
-0,
-},
-{
-"Terrain mip level changed to 0.",
-0,
-},
-{
-"Outline mode changed to 2",
-0,
-},
-{
-"Physics interaction level changed to 2",
-0,
-},
-{
-"Render scale changed to 0.75",
-0,
-},
-{
-"Resample quality changed to 3",
-0,
-},
-{
-"MSAA disabled",
-0,
-},
-{
-"MSAA for alpha-test enabled.",
-0,
-},
-{
-"VALAR mode changed to 1",
-0,
-},
-{
-"lodObjectSizeScale cannot be changed.",
-0,
-},
-{
-"Volume fog disabled.",
-0,
-},
-{
-"dynamicLod enabled",
-0,
-},
-{
-"World preload object sort enabled.",
-0,
-},
-{
-"World load object sort enabled.",
-0,
-},
-{
-"World preload non critical enabled.",
-0,
-},
-{
-"World preload high res textures enabled.",
-0,
-},
-{
-"FFX: Color Blind Test Mode Disabled",
-0,
-},
-{
-"Error display disabled",
-0,
-},
-{
-"Error display shown",
-0,
-},
-{
-"Displaying errors through fatal errors",
-0,
-},
-{
-"Displaying errors through fatal errors",
-0,
-},
-{
-"Now filtering: all messages",
-0,
-},
-{
-"CVar 'Sound_AmbienceHighpassDSPCutoff' failed validation for its initial value.",
-0,
-},
-{
-"CVar 'Sound_AllyPlayerHighpassDSPCutoff' failed validation for its initial value.",
-0,
-},
-{
-"CVar 'Sound_EnemyPlayerHighpassDSPCutoff' failed validation for its initial value.",
-0,
-},
-{
-"CVar 'Sound_NPCHighpassDSPCutoff' failed validation for its initial value.",
-0,
-},
-{
-"ChromaEffects disabled",
-0,
-},
-{
-"[GlueLogin] [F] Starting login launcherPortal=\"us.actual.battle.net\" loginPortal=\"us.actual.battle.net:1119\"",
-0,
-},
-{
-"[GlueLogin] [F] Resetting",
-0,
-},
-{
-"[IBN_Login] [F] Initializing",
-0,
-},
-{
-"[IBN_Login] [F] Attempting logon host=\"us.actual.battle.net\" port=\"1119\"",
-0,
-},
-{
-"[GlueLogin] [F] Waiting for server response.",
-0,
-},
-{
-"[GlueLogin] [F] Waiting for server response.",
-0,
-},
-{
-"[GlueLogin] [F] Waiting for server response.",
-0,
-},
-{
-"[GlueLogin] [F] Logon complete.",
-0,
-},
-{
-"[GlueLogin] [F] Reconnect token saved;  creationTime=\"1729964933\" expirationTime=\"1729979333\"",
-0,
-},
-{
-"[GlueLogin] [F] Waiting for realm list.",
-0,
-},
-{
-"[IBN_Login] [F] Requesting realm list ticket",
-0,
-},
-{
-"[IBN_Login] [F] Received realm list ticket code=\"ERROR_OK (0)\"",
-0,
-},
-{
-"[GlueLogin] [F] Waiting for realm list.",
-0,
-},
-{
-"[IBN_Login] [F] Received sub region list code=\"ERROR_OK (0)\"",
-0,
-},
-{
-"[IBN_Login] [F] Requesting last played chars numSubRegions=\"6\"",
-0,
-},
-{
-"[GlueLogin] [F] Realm list ready.",
-0,
-},
-{
-"[IBN_Login] [F] Joining realm subRegion=\"1-1-89\" realmAddress=\"1-3-8\"",
-0,
-},
-{
-"[IBN_Login] [F] OnRealmJoin code=\"ERROR_OK (0)\"",
-0,
-},
-{
-"NetClient::HandleConnect()\n",
-0,
-},
-{
-"[GlueLogin] [F] Received AuthedToWoW result=\"ERROR_OK (0)\"",
-0,
-},
-{
-"Got new connection 2",
-0,
-},
-{
-"[IBN_Login] [F] Front disconnecting connectionId=\"1\"",
-0,
-},
-{
-"[GlueLogin] [F] Disconnecting from authentication server.",
-0,
-},
-{
-"[IBN_BackInterface] [F] Session with Battle.net established.",
-0,
-},
-{
-"[WowEntitlements] [BNetAccount-0-000002FB9A78] [WowAccount-0-000001331CA6] Initialized with 105 entitlements.",
-0,
-},
-{
-"[IBN_Login] [F] Front disconnected connectionId=\"1\" result=\"( code=\"ERROR_OK (0)\" localizedMessage=\"\" debugMessage=\"\")\"",
-0,
-},
-{
-"[GlueLogin] [F] Disconnected from authentication server.",
-0,
-},
-{
-"-------------------------------------------------- Previous Session --------------------------------------------------",
-0,
-},
-{
-"Got new connection 3",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x0000000040",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x0000008040",
-0,
-},
-{
-"Proficiency in item class 4 set to 0x0000000021",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x000000c040",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x000000c440",
-0,
-},
-{
-"Proficiency in item class 4 set to 0x0000000025",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x000000c460",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x000000e460",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x000000e470",
-0,
-},
-{
-"Proficiency in item class 4 set to 0x0000000027",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x000000e470",
-0,
-},
-{
-"Proficiency in item class 4 set to 0x0000000027",
-0,
-},
-{
-"Time set to 10/26/2024 (Sat) 10:49",
-0,
-},
-{
-"Gamespeed set from 0.017 to 0.017",
-0,
-},
-{
-"Got new connection 3",
-0,
-},
-{
-"-------------------------------------------------- Previous Session --------------------------------------------------",
-0,
-},
-{
-"[GlueLogin] [F] Explicitly disconnecting from realm server",
-0,
-},
-{
-"Disconnecting for reason 14",
-0,
-},
-{
-"NetClient::HandleDisconnect()\n",
-0,
-},
-{
-"[IBN_BackInterface] [F] Session with Battle.net destroyed.",
-0,
-},
-{
-"[GlueLogin] [F] Disconnected from WoW previouslyConnected=\"false\"",
-0,
-},
-{
-"-------------------------------------------------- Previous Session --------------------------------------------------",
-0,
-},
-{
-"Sorting particles normally.",
-0,
-},
-{
-"Multithreaded rendering enabled.",
-0,
-},
-{
-"Multithreaded BeginDraw enabled.",
-0,
-},
-{
-"Multithread shadows changed to 1.",
-0,
-},
-{
-"Multithreaded prepass enabled.",
-0,
-},
-{
-"Multithreaded opaque pass enabled.",
-0,
-},
-{
-"Multithreaded opaque pass enabled.",
-0,
-},
-{
-"Multithreaded alpha M2 pass enabled.",
-0,
-},
-{
-"Multithreaded opaque WMO pass enabled.",
-0,
-},
-{
-"Multithreaded terrain pass enabled.",
-0,
-},
-{
-"Multithreaded volumetric fog enabled.",
-0,
-},
-{
-"Multithreaded Refraction Pass enabled.",
-0,
-},
-{
-"Multithreaded miscellaneous passes enabled.",
-0,
-},
-{
-"Multithreaded decal passes disabled.",
-0,
-},
-{
-"Multithreaded outline passes enabled.",
-0,
-},
-{
-"Use trigger on BeginDrawComplete enabled.",
-4,
-},
-{
-"Multithreaded alpha pass enabled.",
-0,
-},
-{
-"Multithreaded daynight update enabled.",
-0,
-},
-{
-"Water detail changed to 3",
-0,
-},
-{
-"Ripple detail changed to 2",
-0,
-},
-{
-"Reflection mode changed to 3",
-0,
-},
-{
-"Reflection downscale changed to 0",
-0,
-},
-{
-"Sunshafts quality changed to 2",
-0,
-},
-{
-"Refraction mode changed to 2",
-0,
-},
-{
-"Volume fog enabled.",
-0,
-},
-{
-"Particulate volumes enabled.",
-0,
-},
-{
-"Projected textures enabled.",
-0,
-},
-{
-"Spell Clutter disabled",
-0,
-},
-{
-"Shadow mode changed to 4 - 4 band dynamic shadows on units and terrain, 2048",
-0,
-},
-{
-"Shadow texture size changed to 2048.",
-0,
-},
-{
-"Soft shadows changed to 1.",
-0,
-},
-{
-"Shadow cascade blending changed to 1",
-0,
-},
-{
-"Shadow RT mode changed to 3 (High) - Full-resolution directional & local light shadows",
-0,
-},
-{
-"maxLightCount must be in range 0 to 32.",
-0,
-},
-{
-"CVar 'maxLightCount' failed validation for its initial value.",
-0,
-},
-{
-"Clustered shading enabled.",
-0,
-},
-{
-"Not forcing clustered shading.",
-0,
-},
-{
-"SSAO mode set to 4",
-0,
-},
-{
-"SSAO type set to 0",
-0,
-},
-{
-"Depth Based Opacity Enabled",
-0,
-},
-{
-"SkyCloudLOD set to 0",
-0,
-},
-{
-"Texture filtering mode updated.",
-0,
-},
-{
-"Terrain mip level changed to 0.",
-0,
-},
-{
-"Outline mode changed to 2",
-0,
-},
-{
-"Physics interaction level changed to 2",
-0,
-},
-{
-"Render scale changed to 0.75",
-0,
-},
-{
-"Resample quality changed to 3",
-0,
-},
-{
-"MSAA disabled",
-0,
-},
-{
-"MSAA for alpha-test enabled.",
-0,
-},
-{
-"VALAR mode changed to 1",
-0,
-},
-{
-"lodObjectSizeScale cannot be changed.",
-0,
-},
-{
-"Volume fog disabled.",
-0,
-},
-{
-"dynamicLod enabled",
-0,
-},
-{
-"World preload object sort enabled.",
-0,
-},
-{
-"World load object sort enabled.",
-0,
-},
-{
-"World preload non critical enabled.",
-0,
-},
-{
-"World preload high res textures enabled.",
-0,
-},
-{
-"FFX: Color Blind Test Mode Disabled",
-0,
-},
-{
-"Error display disabled",
-0,
-},
-{
-"Error display shown",
-0,
-},
-{
-"Displaying errors through fatal errors",
-0,
-},
-{
-"Displaying errors through fatal errors",
-0,
-},
-{
-"Now filtering: all messages",
-0,
-},
-{
-"CVar 'Sound_AmbienceHighpassDSPCutoff' failed validation for its initial value.",
-0,
-},
-{
-"CVar 'Sound_AllyPlayerHighpassDSPCutoff' failed validation for its initial value.",
-0,
-},
-{
-"CVar 'Sound_EnemyPlayerHighpassDSPCutoff' failed validation for its initial value.",
-0,
-},
-{
-"CVar 'Sound_NPCHighpassDSPCutoff' failed validation for its initial value.",
-0,
-},
-{
-"ChromaEffects disabled",
-0,
-},
-{
-"[GlueLogin] [F] Starting login launcherPortal=\"us.actual.battle.net\" loginPortal=\"us.actual.battle.net:1119\"",
-0,
-},
-{
-"[GlueLogin] [F] Resetting",
-0,
-},
-{
-"[IBN_Login] [F] Initializing",
-0,
-},
-{
-"[IBN_Login] [F] Attempting logon host=\"us.actual.battle.net\" port=\"1119\"",
-0,
-},
-{
-"[GlueLogin] [F] Waiting for server response.",
-0,
-},
-{
-"[GlueLogin] [F] Waiting for server response.",
-0,
-},
-{
-"[GlueLogin] [F] Waiting for server response.",
-0,
-},
-{
-"[GlueLogin] [F] Logon complete.",
-0,
-},
-{
-"[GlueLogin] [F] Reconnect token saved;  creationTime=\"1729969154\" expirationTime=\"1729983554\"",
-0,
-},
-{
-"[GlueLogin] [F] Waiting for realm list.",
-0,
-},
-{
-"[IBN_Login] [F] Requesting realm list ticket",
-0,
-},
-{
-"[IBN_Login] [F] Received realm list ticket code=\"ERROR_OK (0)\"",
-0,
-},
-{
-"[GlueLogin] [F] Waiting for realm list.",
-0,
-},
-{
-"[IBN_Login] [F] Received sub region list code=\"ERROR_OK (0)\"",
-0,
-},
-{
-"[IBN_Login] [F] Requesting last played chars numSubRegions=\"6\"",
-0,
-},
-{
-"[GlueLogin] [F] Realm list ready.",
-0,
-},
-{
-"[IBN_Login] [F] Joining realm subRegion=\"1-1-89\" realmAddress=\"1-3-8\"",
-0,
-},
-{
-"[IBN_Login] [F] OnRealmJoin code=\"ERROR_OK (0)\"",
-0,
-},
-{
-"NetClient::HandleConnect()\n",
-0,
-},
-{
-"[GlueLogin] [F] Received AuthedToWoW result=\"ERROR_OK (0)\"",
-0,
-},
-{
-"Got new connection 2",
-0,
-},
-{
-"[IBN_Login] [F] Front disconnecting connectionId=\"1\"",
-0,
-},
-{
-"[GlueLogin] [F] Disconnecting from authentication server.",
-0,
-},
-{
-"[IBN_BackInterface] [F] Session with Battle.net established.",
-0,
-},
-{
-"[WowEntitlements] [BNetAccount-0-000002FB9A78] [WowAccount-0-000001331CA6] Initialized with 105 entitlements.",
-0,
-},
-{
-"[IBN_Login] [F] Front disconnected connectionId=\"1\" result=\"( code=\"ERROR_NETWORK_MODULE_SOCKET_CLOSED (1016)\" localizedMessage=\"\" debugMessage=\"\")\"",
-0,
-},
-{
-"[GlueLogin] [F] Disconnected from authentication server.",
-0,
-},
-{
-"-------------------------------------------------- Previous Session --------------------------------------------------",
-0,
-},
-{
-"Got new connection 3",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x0000000040",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x0000008040",
-0,
-},
-{
-"Proficiency in item class 4 set to 0x0000000021",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x000000c040",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x000000c440",
-0,
-},
-{
-"Proficiency in item class 4 set to 0x0000000025",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x000000c460",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x000000e460",
-0,
-},
-{
 "Proficiency in item class 2 set to 0x000010e460",
 0,
 },
@@ -2484,7 +1136,7 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"Time set to 10/26/2024 (Sat) 11:59",
+"Time set to 11/4/2024 (Mon) 8:58",
 0,
 },
 {
@@ -2500,187 +1152,79 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"[GlueLogin] [F] Fatal error while logging in result=\"( code=\" (325)\" localizedMessage=\"\" debugMessage=\"\")\"",
+"Outline mode changed to 0",
 0,
 },
 {
-"ModifierTree: 132484.  Modifier not supported on client (type=174, asset=59755, secondaryAsset=0, tertiaryAsset=0). Put in a task to add this.",
-3,
-},
-{
-"ModifierTree: 132484.  Modifier not supported on client (type=174, asset=59755, secondaryAsset=0, tertiaryAsset=0). Put in a task to add this.",
-3,
-},
-{
-"Spell 343955 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 343955 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344017 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344017 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344018 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344018 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344024 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344024 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344028 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344028 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344115 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344115 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344223 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344223 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344224 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344224 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"ModifierTree: 296564.  Modifier not supported on client (type=174, asset=82817, secondaryAsset=0, tertiaryAsset=0). Put in a task to add this.",
-3,
-},
-{
-"ModifierTree: 296564.  Modifier not supported on client (type=174, asset=82817, secondaryAsset=0, tertiaryAsset=0). Put in a task to add this.",
-3,
-},
-{
-"-------------------------------------------------- Previous Session --------------------------------------------------",
+"Outline mode changed to 2",
 0,
 },
 {
-"ModifierTree: 132484.  Modifier not supported on client (type=174, asset=59755, secondaryAsset=0, tertiaryAsset=0). Put in a task to add this.",
-3,
-},
-{
-"ModifierTree: 132484.  Modifier not supported on client (type=174, asset=59755, secondaryAsset=0, tertiaryAsset=0). Put in a task to add this.",
-3,
-},
-{
-"Spell 343955 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 343955 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344017 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344017 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344018 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344018 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344024 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344024 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344028 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344028 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344115 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344115 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344223 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344223 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344224 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"Spell 344224 tried to cast with a spellVisualScript evaluated on the client.  This is unsupported.",
-3,
-},
-{
-"ModifierTree: 296564.  Modifier not supported on client (type=174, asset=82817, secondaryAsset=0, tertiaryAsset=0). Put in a task to add this.",
-3,
-},
-{
-"ModifierTree: 296564.  Modifier not supported on client (type=174, asset=82817, secondaryAsset=0, tertiaryAsset=0). Put in a task to add this.",
-3,
-},
-{
-"-------------------------------------------------- Previous Session --------------------------------------------------",
+"Outline mode changed to 0",
 0,
 },
 {
-"-------------------------------------------------- Previous Session --------------------------------------------------",
+"Outline mode changed to 2",
 0,
 },
 {
-"-------------------------------------------------- Previous Session --------------------------------------------------",
+"Outline mode changed to 0",
 0,
 },
 {
-"World transfer pending...",
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"[Airlock] Received PreloadMap Destination MapID:2601, Current MapID:2552, PreviousTransitionID:-1, Position (2459.7, -2305.85, 1065.49)",
+0,
+},
+{
+"[Airlock] Preload initiated.",
+0,
+},
+{
+"Got new connection 3",
+0,
+},
+{
+"[Airlock] Loading new map 2601 from previous map 2552 with translation: (0.340088, 0.820068, 1131.33)\n    Location : (2255.53, -2277.34, 569.899)\n    Location in previous map : (2255.19, -2278.16, -561.434)",
+0,
+},
+{
+"[Airlock] Swapping to preloaded map 2601 and unloading map 2552. (Map Table Size 960 larger than budget 8)",
+0,
+},
+{
+"[Airlock] Finished transition to new map 2601",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"[Airlock] Received PreloadMap Destination MapID:2552, Current MapID:2601, PreviousTransitionID:-1, Position (2255.51, -2275.36, -562.447)",
+0,
+},
+{
+"[Airlock] Preload initiated.",
+0,
+},
+{
+"[Airlock] Cancel Preload of MapID:2552",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
 0,
 },
 {
@@ -2692,31 +1236,19 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"Weather changed to 1, intensity 0.000000\n",
+"[Airlock] Received PreloadMap Destination MapID:2686, Current MapID:2601, PreviousTransitionID:-1, Position (-443.133, -198.039, 166.508)",
 0,
 },
 {
-"Weather changed to 1, intensity 0.000000\n",
+"[Airlock] Preload initiated.",
 0,
 },
 {
-"Weather changed to 1, intensity 0.000000\n",
+"[Airlock] Received PreloadMap Destination MapID:2686, Current MapID:2601, PreviousTransitionID:2686, Position (-511.898, -111.647, 148.987)",
 0,
 },
 {
-"Weather changed to 1, intensity 0.000000\n",
-0,
-},
-{
-"Weather changed to 1, intensity 0.000000\n",
-0,
-},
-{
-"-------------------------------------------------- Previous Session --------------------------------------------------",
-0,
-},
-{
-"Weather changed to 1, intensity 0.000000\n",
+"[Airlock] Preload skipped - map is same as current map.",
 0,
 },
 {
@@ -2724,155 +1256,375 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.027565048378873 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.010348302558315 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.059229543797933 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.019545121657024 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.13183303222576 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.040224468583473 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.17390797883735 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.051700158025654 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.22624327438625 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.064308574138136 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.26067390934514 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.074610439875794 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.2920714700057 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.084897394255604 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.33964727691149 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.096307354607097 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.3686533979969 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.10655608208003 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.39594867954833 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.12018757097949 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.42277115740389 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.14280944216223 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.45027255294135 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.15294463428983 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.47718629172262 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.16304925948637 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.50347724826576 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.17200385459475 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.52690901629031 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.18204523759405 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.55084126718709 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.19094042985203 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.5720278105801 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.19980547039982 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.5956931794055 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.20974085759002 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.62150758831576 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.2283917324152 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.65644631212623 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.23711307235217 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.69425803334244 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.24687975557077 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.71877298564062 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.25659709834336 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.73873027330996 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.26519174441914 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.75675851923478 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.27481059811188 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.77296817899972 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.28437452920698 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.78988999257056 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.29282814785956 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.8048427624717 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.30437609984161 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.81745449320839 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.3241065730939 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.82890457635989 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.33539865479763 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.84037719365098 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.3465906038526 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.8489587815676 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.35868187566329 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.85613061966053 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.36965369557847 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.86278824051231 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.37953239630021 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.86821979204225 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.39029071526449 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.87226736578775 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.39996997605566 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.87517653167926 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.41050308874491 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.87699436596524 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.42185387522861 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.87756702599525 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.43119854038893 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.44043681374652 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.44865841021181 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.45858509424231 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.46749062356323 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.47628080655168 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.4866737166385 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.49520254422746 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.5036091879812 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.51189157368589 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.52166354016853 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.54142256423679 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.5521248618276 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.56034675461828 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.56984766745826 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.57840693017243 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.58676068765488 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.59356302595728 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.60087638160747 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.60736927361119 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.61371230631369 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.61990391466634 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.62594257098222 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.63298496627386 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.63868193718144 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.64476654132687 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.65013100614104 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.65584659401574 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.66136638010142 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.66668871647615 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.67089537969306 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.67541215700469 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.6797622864494 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.68353403102437 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.68795834980276 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.69142553606961 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.69547548122697 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.69897710280616 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.70230626221984 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.70546213804761 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.70844395162425 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.71152202789013 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.71438768056908 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.71704005412576 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.71947835669897 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.72150861753275 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.72336085688612 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.72519216124862 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.72666912047721 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.72808667748429 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.72938518196467 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.73034783390173 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.73109244184224 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.73161878348488 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.73194385963813 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.73201700773239 (default 0.000000)",
 0,
 },
 {
@@ -2880,167 +1632,355 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.85689175241566 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.71821962917158 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.75801228258594 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.6459776324725 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.7131273565705 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.62432345941275 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.68344208912522 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.59485069524242 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.65265591180274 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.57794809595951 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.62480214050392 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.56672663530131 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.58159913463207 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.55666211151574 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.54683744077141 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.54663263349068 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.51016503076364 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.53331797586671 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.44636580613839 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.51128608510211 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.40967317613949 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.49490394044595 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.37183418222497 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.48405508016292 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.34955631970121 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.47326740078384 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.32779954007081 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.46361299933179 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.30763281494037 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.45507628246672 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.27382311771459 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.44552481633374 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.25024793965007 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.42868702328568 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.23221487015618 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.40379285599448 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.21385395631055 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.39355593793615 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.184153022762 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.38441404145028 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.16922436932916 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.37634617584571 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.15252408197369 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.3584007561532 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.13735219964793 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.34075399961177 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.12291082009196 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.33204703795498 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.11054995280474 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.32056240043026 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.098167744758916 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.31298694084465 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.08176866205646 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.3026789686828 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.070001882918695 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.29341923369223 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.060614947702003 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.28245059859811 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.05188107155584 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.26452639076159 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.042951172044025 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.25748491223926 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.036008040596671 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.25138505031765 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.028958392791955 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.2444849761134 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.022354364209937 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.23766188887591 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.01659432739349 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.22924293280475 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.012136622771447 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.222596986856 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.0083707300558226 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.21521650426738 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.005001431847772 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.20793930745561 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.0027052413122148 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.19136897873675 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.0011787438956082 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.18444645367714 (default 0.000000)",
 0,
 },
 {
-"Test CVar test_cameraOverShoulder has been set to 0.00021219035826814 (default 0.000000)",
+"Test CVar test_cameraOverShoulder has been set to 0.17838492728073 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.17315277515665 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.16725594484783 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.16144829686623 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.15573074830687 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.15010420203704 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.14388421929717 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.13845398490872 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.13245705050483 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.12593437763542 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.11893221910908 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.11395458743246 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.10907455498609 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.10252528428926 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.097880109939833 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.093335073167224 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.0888908916855 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.084548267282501 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.080307885709027 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.075152206159272 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.070650630384976 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.064854291815423 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.060662485540087 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.05616232343453 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.051828918382899 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.047256052045172 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.043276267635333 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.039466419721319 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.035827448326229 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.03236025131193 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.028427558832111 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.025341216742668 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.022712567328857 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.019958128008165 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.01737937858615 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.014976955330735 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.012751451003994 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.010508391646041 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.0086561521598587 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.0068248476508971 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.0052100479215883 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.0036959358810927 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.0026318264935293 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.0018279914804582 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.0011700892582472 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.00061040146382596 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.00026097586639273 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 5.7796237581398e-05 (default 0.000000)",
 0,
 },
 {
@@ -3060,11 +2000,823 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
+"[Airlock] Received PreloadMap Destination MapID:2686, Current MapID:2601, PreviousTransitionID:2686, Position (-513.434, -108.754, 141.626)",
+0,
+},
+{
+"[Airlock] Preload skipped - map is same as current map.",
+0,
+},
+{
+"Got new connection 3",
+0,
+},
+{
+"[Airlock] Loading new map 2686 from previous map 2601 with translation: (-2841.71, -1653.08, 300.371)\n    Location : (-519.931, -101.222, 139.634)\n    Location in previous map : (2321.78, 1551.86, -160.737)",
+0,
+},
+{
+"[Airlock] Swapping to preloaded map 2686 but keeping old map 2601 RESIDENT.",
+0,
+},
+{
+"[Airlock] Freezing AOI updates for old map 2601",
+0,
+},
+{
+"[Airlock] Finished transition to new map 2686",
+0,
+},
+{
 "Weather changed to 1, intensity 0.000000\n",
 0,
 },
 {
+"[Airlock] Received PreloadMap Destination MapID:2601, Current MapID:2686, PreviousTransitionID:2601, Position (2321.78, 1551.86, -160.737)",
+0,
+},
+{
+"[Airlock] Preload skipped - map is same as current map.",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Got new connection 3",
+0,
+},
+{
+"[Airlock] Loading new map 2601 from previous map 2686 with translation: (2841.71, 1653.08, -300.371)\n    Location : (2369.86, 1504.42, -145.866)\n    Location in previous map : (-471.848, -148.663, 154.505)",
+0,
+},
+{
+"[Airlock] Swapping to preloaded map 2601 and unloading map 2686. (Map Table Size 960 larger than budget 8)",
+0,
+},
+{
+"[Airlock] Finished transition to new map 2601",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"[Airlock] Received PreloadMap Destination MapID:2686, Current MapID:2601, PreviousTransitionID:-1, Position (-512.766, -107.392, 141.722)",
+0,
+},
+{
+"[Airlock] Preload initiated.",
+0,
+},
+{
+"Got new connection 3",
+0,
+},
+{
+"[Airlock] Loading new map 2686 from previous map 2601 with translation: (-2841.71, -1653.08, 300.371)\n    Location : (-516.408, -103.374, 140.79)\n    Location in previous map : (2325.3, 1549.71, -159.581)",
+0,
+},
+{
+"[Airlock] Swapping to preloaded map 2686 but keeping old map 2601 RESIDENT.",
+0,
+},
+{
+"[Airlock] Freezing AOI updates for old map 2601",
+0,
+},
+{
+"[Airlock] Finished transition to new map 2686",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"[Airlock] Received PreloadMap Destination MapID:2601, Current MapID:2686, PreviousTransitionID:2601, Position (2321.96, 1552.79, -160.66)",
+0,
+},
+{
+"[Airlock] Preload skipped - map is same as current map.",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Got new connection 3",
+0,
+},
+{
+"[Airlock] Loading new map 2601 from previous map 2686 with translation: (2841.71, 1653.08, -300.371)\n    Location : (2367.67, 1505.45, -146.214)\n    Location in previous map : (-474.042, -147.635, 154.157)",
+0,
+},
+{
+"[Airlock] Swapping to preloaded map 2601 and unloading map 2686. (Map Table Size 960 larger than budget 8)",
+0,
+},
+{
+"[Airlock] Finished transition to new map 2601",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"[Airlock] Received PreloadMap Destination MapID:2686, Current MapID:2601, PreviousTransitionID:-1, Position (-511.118, -110.204, 142.297)",
+0,
+},
+{
+"[Airlock] Preload initiated.",
+0,
+},
+{
+"[Airlock] Received PreloadMap Destination MapID:2686, Current MapID:2601, PreviousTransitionID:2686, Position (-513.88, -108.052, 141.477)",
+0,
+},
+{
+"[Airlock] Preload skipped - map is same as current map.",
+0,
+},
+{
+"Got new connection 3",
+0,
+},
+{
+"[Airlock] Loading new map 2686 from previous map 2601 with translation: (-2841.71, -1653.08, 300.371)\n    Location : (-520.017, -101.903, 139.614)\n    Location in previous map : (2321.7, 1551.18, -160.757)",
+0,
+},
+{
+"[Airlock] Swapping to preloaded map 2686 but keeping old map 2601 RESIDENT.",
+0,
+},
+{
+"[Airlock] Freezing AOI updates for old map 2601",
+0,
+},
+{
+"[Airlock] Finished transition to new map 2686",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"[Airlock] Received PreloadMap Destination MapID:2601, Current MapID:2686, PreviousTransitionID:2601, Position (2321.7, 1551.18, -160.757)",
+0,
+},
+{
+"[Airlock] Preload skipped - map is same as current map.",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Got new connection 3",
+0,
+},
+{
+"[Airlock] Loading new map 2601 from previous map 2686 with translation: (2841.71, 1653.08, -300.371)\n    Location : (2368.76, 1503.35, -146.095)\n    Location in previous map : (-472.955, -149.733, 154.276)",
+0,
+},
+{
+"[Airlock] Swapping to preloaded map 2601 and unloading map 2686. (Map Table Size 960 larger than budget 8)",
+0,
+},
+{
+"[Airlock] Finished transition to new map 2601",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"[Airlock] Received PreloadMap Destination MapID:2686, Current MapID:2601, PreviousTransitionID:-1, Position (-510.266, -110.066, 142.544)",
+0,
+},
+{
+"[Airlock] Preload initiated.",
+0,
+},
+{
+"Got new connection 3",
+0,
+},
+{
+"[Airlock] Loading new map 2686 from previous map 2601 with translation: (-2841.71, -1653.08, 300.371)\n    Location : (-519.592, -102.05, 139.733)\n    Location in previous map : (2322.12, 1551.03, -160.638)",
+0,
+},
+{
+"[Airlock] Swapping to preloaded map 2686 but keeping old map 2601 RESIDENT.",
+0,
+},
+{
+"[Airlock] Freezing AOI updates for old map 2601",
+0,
+},
+{
+"[Airlock] Finished transition to new map 2686",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"[Airlock] Received PreloadMap Destination MapID:2601, Current MapID:2686, PreviousTransitionID:2601, Position (2322.12, 1551.03, -160.638)",
+0,
+},
+{
+"[Airlock] Preload skipped - map is same as current map.",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Skill 2876 increased from 104 to 105",
+0,
+},
+{
+"[Airlock] Received PreloadMap Destination MapID:2601, Current MapID:2686, PreviousTransitionID:2601, Position (2114.63, 1741.22, -167.149)",
+0,
+},
+{
+"[Airlock] Preload skipped - map is same as current map.",
+0,
+},
+{
+"Got new connection 3",
+0,
+},
+{
+"[Airlock] Loading new map 2601 from previous map 2686 with translation: (2841.71, 1653.08, -300.371)\n    Location : (2368.9, 1503.45, -146.072)\n    Location in previous map : (-472.808, -149.634, 154.299)",
+0,
+},
+{
+"[Airlock] Swapping to preloaded map 2601 and unloading map 2686. (Map Table Size 960 larger than budget 8)",
+0,
+},
+{
+"[Airlock] Finished transition to new map 2601",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"[Airlock] Received Cancel Preload for MapID 2686, but we have not preloaded it. Current preloaded map: -1",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"Got new connection 3",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"[Airlock] Received PreloadMap Destination MapID:2689, Current MapID:2601, PreviousTransitionID:-1, Position (-235.311, 235.23, 407.975)",
+0,
+},
+{
+"[Airlock] Preload initiated.",
+0,
+},
+{
+"[Airlock] Received PreloadMap Destination MapID:2689, Current MapID:2601, PreviousTransitionID:2689, Position (-291.152, 231.639, 380.795)",
+0,
+},
+{
+"[Airlock] Preload skipped - map is same as current map.",
+0,
+},
+{
+"GameTimeSync: delta=0, differential=1, HoursAndMinutes=646",
+0,
+},
+{
+"Got new connection 3",
+0,
+},
+{
+"[Airlock] Loading new map 2689 from previous map 2601 with translation: (1528.52, 1538.16, 1885.42)\n    Location : (-299.188, 230.889, 380.425)\n    Location in previous map : (-1827.71, -1307.27, -1504.99)",
+0,
+},
+{
+"[Airlock] Swapping to preloaded map 2689 but keeping old map 2601 RESIDENT.",
+0,
+},
+{
+"[Airlock] Freezing AOI updates for old map 2601",
+0,
+},
+{
+"[Airlock] Finished transition to new map 2689",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"[Airlock] Received PreloadMap Destination MapID:2601, Current MapID:2689, PreviousTransitionID:2601, Position (-1827.71, -1307.27, -1504.99)",
+0,
+},
+{
+"[Airlock] Preload skipped - map is same as current map.",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"[Airlock] Received PreloadMap Destination MapID:2601, Current MapID:2689, PreviousTransitionID:2601, Position (-2229.41, -1300.77, -1592.42)",
+0,
+},
+{
+"[Airlock] Preload skipped - map is same as current map.",
+0,
+},
+{
+"Got new connection 3",
+0,
+},
+{
+"[Airlock] Loading new map 2601 from previous map 2689 with translation: (-1528.52, -1538.16, -1885.42)\n    Location : (-1793.74, -1301.94, -1502.95)\n    Location in previous map : (-265.222, 236.224, 382.469)",
+0,
+},
+{
+"[Airlock] Swapping to preloaded map 2601 and unloading map 2689. (Map Table Size 960 larger than budget 8)",
+0,
+},
+{
+"[Airlock] Finished transition to new map 2601",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"[Airlock] Received Cancel Preload for MapID 2689, but we have not preloaded it. Current preloaded map: -1",
+0,
+},
+{
+"World transfer pending...",
+0,
+},
+{
+"Got new connection 3",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"Test CVar test_cameraDynamicPitch has been set to 1 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.47188701424599 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraDynamicPitch has been set to 0 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.46076946672063 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.44151724375944 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.43043117413142 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.41936811828223 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.40686556299782 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.39294739642727 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.37909953867455 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.36822478712031 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.35596995949088 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.34165898845067 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.32959515985333 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.31693246400913 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.30508681754476 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.29198870060345 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.27837452897214 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.26495133082777 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.2537016657938 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.24131298393443 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.22785960298902 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.21591588420908 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.20481091421599 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.19391944079667 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.1803270717501 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.16995411440863 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.16037891359319 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.15048270845364 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.14031560256511 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.13044381599308 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.1198870585419 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.11066541032632 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.10176548983942 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.094526192729917 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.0866671070601 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.07911596032724 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.071878788803231 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.064586565133259 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.056949051460574 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.050094839185051 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.043656884921647 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.037932178949375 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.030989307169107 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.025441607633931 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.021079201886699 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.017118315240118 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.013211871452653 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.0095061312590951 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.0067741222578488 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.0043995648437228 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.0025336456415553 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.0010760150987864 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.00021014545282932 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0 (default 0.000000)",
+0,
+},
+{
+"ACTION Camera set to 'off' - 'Disable action cam features'",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"Test CVar test_cameraDynamicPitch has been set to 1 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.47188468563879 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0.47188701424599 (default 0.000000)",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"Test CVar test_cameraOverShoulder has been set to 0 (default 0.000000)",
+0,
+},
+{
+"Test CVar test_cameraDynamicPitch has been set to 0 (default 0.000000)",
+0,
+},
+{
 "-------------------------------------------------- Previous Session --------------------------------------------------",
+0,
+},
+{
+"NetClient::HandleDisconnect()\n",
+0,
+},
+{
+"[IBN_BackInterface] [F] Session with Battle.net destroyed.",
+0,
+},
+{
+"[GlueLogin] [F] Disconnected from WoW previouslyConnected=\"true\"",
 0,
 },
 {
@@ -3376,7 +3128,7 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"[GlueLogin] [F] Reconnect token saved;  creationTime=\"1729974036\" expirationTime=\"1729988436\"",
+"[GlueLogin] [F] Reconnect token saved;  creationTime=\"1730782555\" expirationTime=\"1730796955\"",
 0,
 },
 {
@@ -3488,11 +3240,7 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"Proficiency in item class 2 set to 0x000010e460",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x000010e470",
+"Proficiency in item class 2 set to 0x000000e470",
 0,
 },
 {
@@ -3500,7 +3248,7 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"Proficiency in item class 2 set to 0x000010e470",
+"Proficiency in item class 2 set to 0x000000e470",
 0,
 },
 {
@@ -3512,7 +3260,7 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"Time set to 10/26/2024 (Sat) 13:24",
+"Time set to 11/4/2024 (Mon) 20:56",
 0,
 },
 {
@@ -3592,115 +3340,7 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"Time set to 10/26/2024 (Sat) 13:27",
-0,
-},
-{
-"Gamespeed set from 0.017 to 0.017",
-0,
-},
-{
-"Weather changed to 1, intensity 0.144608\n",
-0,
-},
-{
-"Weather changed to 2, intensity 0.228024\n",
-0,
-},
-{
-"Weather changed to 1, intensity 0.125660\n",
-0,
-},
-{
-"Weather changed to 1, intensity 0.000000\n",
-0,
-},
-{
-"-------------------------------------------------- Previous Session --------------------------------------------------",
-0,
-},
-{
-"Weather changed to 1, intensity 0.000000\n",
-0,
-},
-{
-"-------------------------------------------------- Previous Session --------------------------------------------------",
-0,
-},
-{
-"-------------------------------------------------- Previous Session --------------------------------------------------",
-0,
-},
-{
-"Attempted to register existing command: ShowObjUsage\n",
-0,
-},
-{
-"Attempted to register existing command: SetDifficulty\n",
-0,
-},
-{
-"Got new connection 3",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x0000000001",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x0000000041",
-0,
-},
-{
-"Proficiency in item class 4 set to 0x0000000021",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x0000004041",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x0000004441",
-0,
-},
-{
-"Proficiency in item class 4 set to 0x0000000025",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x0000006441",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x0000106441",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x0000106451",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x00001064d1",
-0,
-},
-{
-"Proficiency in item class 4 set to 0x0000000027",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x00001064d1",
-0,
-},
-{
-"Proficiency in item class 4 set to 0x0000000027",
-0,
-},
-{
-"Weather changed to 1, intensity 0.000000\n",
-0,
-},
-{
-"Time set to 10/26/2024 (Sat) 13:39",
+"Time set to 11/4/2024 (Mon) 21:00",
 0,
 },
 {
@@ -3716,171 +3356,23 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"Player-1168-09F2953A TRAIT_VALIDATION: Failure: Config 2178643. 10 pending (including duplicates) after adding all open nodes.",
+"Outline mode changed to 0",
 0,
 },
 {
-"-------------------------------------------------- Previous Session --------------------------------------------------",
+"Outline mode changed to 2",
 0,
 },
 {
-"Weather changed to 1, intensity 0.000000\n",
+"Outline mode changed to 0",
 0,
 },
 {
-"TRAIT_VALIDATION: Config 2178643. Failed to purchase node 80613 entry 101423 rank 0 with fail reason NODE_OP_FAILURE_REASON_WRONG_TREE_ID",
+"Outline mode changed to 2",
 0,
 },
 {
-"-------------------------------------------------- Previous Session --------------------------------------------------",
-0,
-},
-{
-"-------------------------------------------------- Previous Session --------------------------------------------------",
-0,
-},
-{
-"Attempted to register existing command: ShowObjUsage\n",
-0,
-},
-{
-"Attempted to register existing command: SetDifficulty\n",
-0,
-},
-{
-"Got new connection 3",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x0000000040",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x0000008040",
-0,
-},
-{
-"Proficiency in item class 4 set to 0x0000000021",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x000000c040",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x000000c440",
-0,
-},
-{
-"Proficiency in item class 4 set to 0x0000000025",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x000000c460",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x000000e460",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x000000e470",
-0,
-},
-{
-"Proficiency in item class 4 set to 0x0000000027",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x000000e470",
-0,
-},
-{
-"Proficiency in item class 4 set to 0x0000000027",
-0,
-},
-{
-"Time set to 10/26/2024 (Sat) 13:55",
-0,
-},
-{
-"Gamespeed set from 0.017 to 0.017",
-0,
-},
-{
-"Got new connection 3",
-0,
-},
-{
-"-------------------------------------------------- Previous Session --------------------------------------------------",
-0,
-},
-{
-"-------------------------------------------------- Previous Session --------------------------------------------------",
-0,
-},
-{
-"Attempted to register existing command: ShowObjUsage\n",
-0,
-},
-{
-"Attempted to register existing command: SetDifficulty\n",
-0,
-},
-{
-"Got new connection 3",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x0000000040",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x0000008040",
-0,
-},
-{
-"Proficiency in item class 4 set to 0x0000000021",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x000000c040",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x000000c440",
-0,
-},
-{
-"Proficiency in item class 4 set to 0x0000000025",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x000000c460",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x000000e460",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x000010e460",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x000010e470",
-0,
-},
-{
-"Proficiency in item class 4 set to 0x0000000027",
-0,
-},
-{
-"Proficiency in item class 2 set to 0x000010e470",
-0,
-},
-{
-"Proficiency in item class 4 set to 0x0000000027",
+"Outline mode changed to 0",
 0,
 },
 {
@@ -3888,11 +3380,51 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"Time set to 10/26/2024 (Sat) 13:56",
+"Outline mode changed to 2",
 0,
 },
 {
-"Gamespeed set from 0.017 to 0.017",
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"GameTimeSync: skipping forwards 2 game minutes, (current = 11/4/2024 (Mon) 21:02, newtime = 11/4/2024 (Mon) 21:04)",
 0,
 },
 {
@@ -3904,19 +3436,7 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"Weather changed to 1, intensity 0.000000\n",
-0,
-},
-{
-"Got new connection 3",
-0,
-},
-{
-"Weather changed to 1, intensity 0.000000\n",
-0,
-},
-{
-"[Airlock] Received PreloadMap Destination MapID:2680, Current MapID:2552, PreviousTransitionID:-1, Position (-143.208, -129.583, 82.6501)",
+"[Airlock] Received PreloadMap Destination MapID:2664, Current MapID:2552, PreviousTransitionID:-1, Position (-517.933, -312.224, 396.985)",
 0,
 },
 {
@@ -3924,7 +3444,7 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"[Airlock] Received PreloadMap Destination MapID:2680, Current MapID:2552, PreviousTransitionID:2680, Position (-175.673, -104.754, 76.5034)",
+"[Airlock] Received PreloadMap Destination MapID:2664, Current MapID:2552, PreviousTransitionID:2664, Position (-513.688, -271.632, 379.659)",
 0,
 },
 {
@@ -3936,11 +3456,11 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"[Airlock] Loading new map 2680 from previous map 2552 with translation: (-1108.2, 1530.38, -9.7603)\n    Location : (-179.388, -102.011, 73.5783)\n    Location in previous map : (928.812, -1632.39, 83.3386)",
+"[Airlock] Loading new map 2664 from previous map 2552 with translation: (-1918.11, 2505.35, 327.201)\n    Location : (-509.891, -264.721, 378.983)\n    Location in previous map : (1408.22, -2770.07, 51.7823)",
 0,
 },
 {
-"[Airlock] Swapping to preloaded map 2680 but keeping old map 2552 RESIDENT.",
+"[Airlock] Swapping to preloaded map 2664 but keeping old map 2552 RESIDENT.",
 0,
 },
 {
@@ -3948,7 +3468,7 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"[Airlock] Finished transition to new map 2680",
+"[Airlock] Finished transition to new map 2664",
 0,
 },
 {
@@ -3956,7 +3476,7 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"[Airlock] Received PreloadMap Destination MapID:2552, Current MapID:2680, PreviousTransitionID:2552, Position (928.812, -1632.39, 83.3386)",
+"[Airlock] Received PreloadMap Destination MapID:2552, Current MapID:2664, PreviousTransitionID:2552, Position (1408.22, -2770.07, 51.7823)",
 0,
 },
 {
@@ -3964,7 +3484,23 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"[Airlock] Received PreloadMap Destination MapID:2552, Current MapID:2680, PreviousTransitionID:2552, Position (378.173, -1783.44, 86.2166)",
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"[Airlock] Received PreloadMap Destination MapID:2552, Current MapID:2664, PreviousTransitionID:2552, Position (1729.09, -2492.19, -196.189)",
 0,
 },
 {
@@ -3976,11 +3512,11 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"[Airlock] Loading new map 2552 from previous map 2680 with translation: (1108.2, -1530.38, 9.7603)\n    Location : (946.283, -1645.39, 83.1607)\n    Location in previous map : (-161.917, -115.007, 73.4004)",
+"[Airlock] Loading new map 2552 from previous map 2664 with translation: (1918.11, -2505.35, -327.201)\n    Location : (1383.79, -2801.15, 61.7231)\n    Location in previous map : (-534.323, -295.798, 388.924)",
 0,
 },
 {
-"[Airlock] Swapping to preloaded map 2552 and unloading map 2680. (Map Table Size 288 larger than budget 8)",
+"[Airlock] Swapping to preloaded map 2552 and unloading map 2664. (Map Table Size 288 larger than budget 8)",
 0,
 },
 {
@@ -3992,7 +3528,163 @@ Blizzard_Console_SavedVars = {
 0,
 },
 {
-"[Airlock] Received Cancel Preload for MapID 2680, but we have not preloaded it. Current preloaded map: -1",
+"[Airlock] Received Cancel Preload for MapID 2664, but we have not preloaded it. Current preloaded map: -1",
+0,
+},
+{
+"[Airlock] Received PreloadMap Destination MapID:2681, Current MapID:2552, PreviousTransitionID:-1, Position (-350.982, 7.65088, 157.082)",
+0,
+},
+{
+"[Airlock] Preload initiated.",
+0,
+},
+{
+"[Airlock] Received PreloadMap Destination MapID:2681, Current MapID:2552, PreviousTransitionID:2681, Position (-350.867, -14.4763, 152.157)",
+0,
+},
+{
+"[Airlock] Preload skipped - map is same as current map.",
+0,
+},
+{
+"Got new connection 3",
+0,
+},
+{
+"[Airlock] Loading new map 2681 from previous map 2552 with translation: (-3057.43, 3623.23, -43.819)\n    Location : (-350.148, -26.9282, 152.157)\n    Location in previous map : (2707.28, -3650.16, 195.976)",
+0,
+},
+{
+"[Airlock] Swapping to preloaded map 2681 but keeping old map 2552 RESIDENT.",
+0,
+},
+{
+"[Airlock] Freezing AOI updates for old map 2552",
+0,
+},
+{
+"[Airlock] Finished transition to new map 2681",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"[Airlock] Received PreloadMap Destination MapID:2552, Current MapID:2681, PreviousTransitionID:2552, Position (2707.13, -3655.57, 195.977)",
+0,
+},
+{
+"[Airlock] Preload skipped - map is same as current map.",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Got new connection 3",
+0,
+},
+{
+"[Airlock] Loading new map 2552 from previous map 2681 with translation: (3057.43, -3623.23, 43.819)\n    Location : (2707.99, -3627.75, 195.976)\n    Location in previous map : (-349.444, -4.521, 152.157)",
+0,
+},
+{
+"[Airlock] Swapping to preloaded map 2552 and unloading map 2681. (Map Table Size 288 larger than budget 8)",
+0,
+},
+{
+"[Airlock] Finished transition to new map 2552",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"[Airlock] Received PreloadMap Destination MapID:2681, Current MapID:2552, PreviousTransitionID:-1, Position (-349.245, -13.4124, 152.157)",
+0,
+},
+{
+"[Airlock] Preload initiated.",
+0,
+},
+{
+"Got new connection 3",
+0,
+},
+{
+"[Airlock] Loading new map 2681 from previous map 2552 with translation: (-3057.43, 3623.23, -43.819)\n    Location : (-349.404, -23.54, 152.157)\n    Location in previous map : (2708.03, -3646.77, 195.976)",
+0,
+},
+{
+"[Airlock] Swapping to preloaded map 2681 but keeping old map 2552 RESIDENT.",
+0,
+},
+{
+"[Airlock] Freezing AOI updates for old map 2552",
+0,
+},
+{
+"[Airlock] Finished transition to new map 2681",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"[Airlock] Received PreloadMap Destination MapID:2552, Current MapID:2681, PreviousTransitionID:2552, Position (2707.9, -3654.76, 195.977)",
+0,
+},
+{
+"[Airlock] Preload skipped - map is same as current map.",
+0,
+},
+{
+"[Airlock] Received PreloadMap Destination MapID:2552, Current MapID:2681, PreviousTransitionID:2552, Position (2436.86, -3838.18, 100.969)",
+0,
+},
+{
+"[Airlock] Preload skipped - map is same as current map.",
+0,
+},
+{
+"Got new connection 3",
+0,
+},
+{
+"[Airlock] Loading new map 2552 from previous map 2681 with translation: (3057.43, -3623.23, 43.819)\n    Location : (2707.39, -3626.18, 195.976)\n    Location in previous map : (-350.038, -2.94971, 152.157)",
+0,
+},
+{
+"[Airlock] Swapping to preloaded map 2552 and unloading map 2681. (Map Table Size 288 larger than budget 8)",
+0,
+},
+{
+"[Airlock] Finished transition to new map 2552",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"[Airlock] Received Cancel Preload for MapID 2681, but we have not preloaded it. Current preloaded map: -1",
 0,
 },
 {
@@ -4001,6 +3693,314 @@ Blizzard_Console_SavedVars = {
 },
 {
 "Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"World transfer pending...",
+0,
+},
+{
+"Got new connection 3",
+0,
+},
+{
+"World transfer pending...",
+0,
+},
+{
+"Got new connection 3",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"Got new connection 3",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"GameTimeSync: delta=0, differential=2, HoursAndMinutes=1336",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"World transfer pending...",
+0,
+},
+{
+"Got new connection 3",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"World transfer pending...",
+0,
+},
+{
+"Got new connection 3",
+0,
+},
+{
+"Weather changed to 1, intensity 0.000000\n",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
+0,
+},
+{
+"Outline mode changed to 0",
+0,
+},
+{
+"Outline mode changed to 2",
 0,
 },
 {

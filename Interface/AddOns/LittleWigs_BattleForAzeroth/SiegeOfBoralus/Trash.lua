@@ -208,8 +208,8 @@ end
 -- RP Timers
 
 -- triggered from Dread Captain Lockwood's :OnWin
-function mod:LockwoodDefeated()
-	self:Bar("gate_open", 4.8, L.gate_open, L.gate_open_icon)
+function mod:LockwoodDefeated(duration)
+	self:Bar("gate_open", duration, L.gate_open, L.gate_open_icon)
 end
 
 -- Scrimshaw Enforcer / Kul Tiran Halberd
@@ -258,7 +258,7 @@ do
 	local prev = 0
 	function mod:BurningTarDamage(args)
 		local t = args.time
-		if t - prev > 1.5 then
+		if self:Me(args.destGUID) and t - prev > 1.5 then
 			prev = t
 			self:PersonalMessage(256640, "underyou")
 			self:PlaySound(256640, "underyou")
@@ -340,7 +340,7 @@ do
 		if args.time - prev > 2 then
 			prev = args.time
 			self:TargetMessage(args.spellId, "yellow", args.destName)
-			self:PlaySound(args.spellId, "alarm")
+			self:PlaySound(args.spellId, "alarm", nil, args.destName)
 		end
 	end
 end

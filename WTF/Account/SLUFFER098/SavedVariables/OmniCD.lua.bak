@@ -2,11 +2,11 @@
 OmniCDDB = {
 ["profileKeys"] = {
 ["Xavaat - Ner'zhul"] = "ToxiUI-Horizontal",
-["Faelaena - Ner'zhul"] = "Default",
 ["Xambank - Ner'zhul"] = "Default",
-["Xamuul - Ner'zhul"] = "Default",
-["Kariq - Ner'zhul"] = "Default",
+["Faelaena - Ner'zhul"] = "Default",
 ["Shantyclause - Ner'zhul"] = "ToxiUI-Vertical",
+["Kariq - Ner'zhul"] = "Default",
+["Xamuul - Ner'zhul"] = "Default",
 ["Yushien - Ner'zhul"] = "Default",
 },
 ["namespaces"] = {
@@ -34,8 +34,8 @@ OmniCDDB = {
 ["size"] = 24,
 },
 ["icon"] = {
-["font"] = "- ToxiUI",
 ["size"] = 12,
+["font"] = "- ToxiUI",
 },
 ["anchor"] = {
 ["flag"] = "OUTLINE",
@@ -49,6 +49,50 @@ OmniCDDB = {
 ["raidCDS"] = {
 },
 ["extraBars"] = {
+["raidBar4"] = {
+["enabled"] = true,
+["manualPos"] = {
+["raidBar4"] = {
+["y"] = 510,
+["x"] = 948,
+},
+},
+["truncateIconName"] = 4,
+["scale"] = 0.9199999999999999,
+["progressBar"] = false,
+["columns"] = 3,
+["name"] = "Immunes",
+["spellType"] = {
+["other"] = true,
+["raidMovement"] = true,
+["immunity"] = true,
+},
+["sortDirection"] = "dsc",
+["growUpward"] = true,
+["paddingX"] = 1,
+["paddingY"] = 1,
+},
+["raidBar1"] = {
+["manualPos"] = {
+["raidBar1"] = {
+["y"] = 198,
+["x"] = 395,
+},
+},
+["reverseFill"] = false,
+["scale"] = 0.65,
+["statusBarWidth"] = 426,
+["bgColors"] = {
+["activeColor"] = {
+["a"] = 0.6,
+},
+},
+["name"] = "Interrupts",
+["textOfsX"] = 4,
+["locked"] = true,
+["sortBy"] = 1,
+["hideSpark"] = true,
+},
 ["raidBar2"] = {
 ["enabled"] = true,
 ["manualPos"] = {
@@ -74,57 +118,13 @@ OmniCDDB = {
 ["covenant"] = false,
 ["consumable"] = false,
 ["cc"] = false,
-["disarm"] = false,
+["raidMovement"] = false,
 ["offensive"] = false,
 ["immunity"] = false,
 ["counterCC"] = false,
-["raidMovement"] = false,
+["disarm"] = false,
 },
 ["columns"] = 21,
-},
-["raidBar1"] = {
-["manualPos"] = {
-["raidBar1"] = {
-["y"] = 198,
-["x"] = 395,
-},
-},
-["reverseFill"] = false,
-["scale"] = 0.65,
-["statusBarWidth"] = 426,
-["bgColors"] = {
-["activeColor"] = {
-["a"] = 0.6,
-},
-},
-["name"] = "Interrupts",
-["textOfsX"] = 4,
-["locked"] = true,
-["sortBy"] = 1,
-["hideSpark"] = true,
-},
-["raidBar4"] = {
-["enabled"] = true,
-["manualPos"] = {
-["raidBar4"] = {
-["y"] = 510,
-["x"] = 948,
-},
-},
-["truncateIconName"] = 4,
-["scale"] = 0.9199999999999999,
-["progressBar"] = false,
-["columns"] = 3,
-["name"] = "Immunes",
-["spellType"] = {
-["other"] = true,
-["raidMovement"] = true,
-["immunity"] = true,
-},
-["sortDirection"] = "dsc",
-["paddingX"] = 1,
-["growUpward"] = true,
-["paddingY"] = 1,
 },
 ["raidBar3"] = {
 ["enabled"] = true,
@@ -159,9 +159,15 @@ OmniCDDB = {
 ["preset"] = "TOPLEFT",
 ["attach"] = "TOPLEFT",
 },
-["highlight"] = {
-["glowBuffs"] = false,
-["glow"] = false,
+["frame"] = {
+["immunity"] = 4,
+["defensive"] = 2,
+["cc"] = 3,
+["raidDefensive"] = 0,
+["disarm"] = 3,
+["counterCC"] = 3,
+["externalDefensive"] = 0,
+["aoeCC"] = 3,
 },
 ["priority"] = {
 ["dispel"] = 0,
@@ -171,20 +177,14 @@ OmniCDDB = {
 ["markEnhanced"] = false,
 ["desaturateActive"] = true,
 },
-["frame"] = {
-["externalDefensive"] = 0,
-["aoeCC"] = 3,
-["cc"] = 3,
-["counterCC"] = 3,
-["disarm"] = 3,
-["raidDefensive"] = 0,
-["defensive"] = 2,
-["immunity"] = 4,
+["highlight"] = {
+["glowBuffs"] = false,
+["glow"] = false,
 },
 },
 ["visibility"] = {
-["arena"] = false,
 ["size"] = 40,
+["arena"] = false,
 },
 ["raid"] = {
 ["raidCDS"] = {
@@ -197,8 +197,13 @@ OmniCDDB = {
 ["layout"] = "horizontal",
 ["progressBar"] = false,
 ["columns"] = 20,
-["paddingX"] = 1,
-["locked"] = true,
+["manualPos"] = {
+["raidBar1"] = {
+["y"] = 246,
+["x"] = 288,
+},
+},
+["sortDirection"] = "dsc",
 ["spellType"] = {
 ["other"] = false,
 ["racial"] = false,
@@ -218,14 +223,9 @@ OmniCDDB = {
 ["raidDefensive"] = false,
 ["counterCC"] = false,
 },
-["sortDirection"] = "dsc",
+["locked"] = true,
 ["sortBy"] = 4,
-["manualPos"] = {
-["raidBar1"] = {
-["y"] = 246,
-["x"] = 288,
-},
-},
+["paddingX"] = 1,
 ["paddingY"] = 2,
 },
 ["raidBar2"] = {
@@ -249,7 +249,7 @@ OmniCDDB = {
 ["paddingY"] = 1,
 },
 ["raidBar0"] = {
-["hideSpark"] = true,
+["locked"] = true,
 ["bgColors"] = {
 ["activeColor"] = {
 ["a"] = 0.6,
@@ -262,7 +262,7 @@ OmniCDDB = {
 },
 },
 ["reverseFill"] = false,
-["locked"] = true,
+["hideSpark"] = true,
 ["sortBy"] = 1,
 ["scale"] = 0.65,
 ["statusBarWidth"] = 240,
@@ -277,8 +277,11 @@ OmniCDDB = {
 ["position"] = {
 ["offsetX"] = 2,
 },
-["highlight"] = {
-["glowBuffs"] = false,
+["manualPos"] = {
+["raidCDBar2"] = {
+["y"] = 276,
+["x"] = 42,
+},
 },
 ["priority"] = {
 ["offensive"] = 9,
@@ -288,15 +291,12 @@ OmniCDDB = {
 ["counterScale"] = 0.7,
 ["showForbearanceCounter"] = false,
 ["scale"] = 0.96,
-["desaturateActive"] = true,
-["markEnhanced"] = false,
 ["chargeScale"] = 0.9,
+["markEnhanced"] = false,
+["desaturateActive"] = true,
 },
-["manualPos"] = {
-["raidCDBar2"] = {
-["y"] = 276,
-["x"] = 42,
-},
+["highlight"] = {
+["glowBuffs"] = false,
 },
 },
 },
@@ -316,8 +316,8 @@ OmniCDDB = {
 ["size"] = 24,
 },
 ["icon"] = {
-["size"] = 12,
 ["font"] = "- ToxiUI",
+["size"] = 12,
 },
 ["anchor"] = {
 ["flag"] = "OUTLINE",
@@ -331,50 +331,6 @@ OmniCDDB = {
 ["raidCDS"] = {
 },
 ["extraBars"] = {
-["raidBar4"] = {
-["enabled"] = true,
-["manualPos"] = {
-["raidBar4"] = {
-["y"] = 504.9999937857174,
-["x"] = 937.9999187121721,
-},
-},
-["truncateIconName"] = 4,
-["scale"] = 0.9199999999999999,
-["progressBar"] = false,
-["columns"] = 3,
-["name"] = "Immunes",
-["spellType"] = {
-["other"] = true,
-["raidMovement"] = true,
-["immunity"] = true,
-},
-["sortDirection"] = "dsc",
-["growUpward"] = true,
-["paddingX"] = 1,
-["paddingY"] = 1,
-},
-["raidBar1"] = {
-["manualPos"] = {
-["raidBar1"] = {
-["y"] = 433,
-["x"] = 196,
-},
-},
-["reverseFill"] = false,
-["scale"] = 0.65,
-["statusBarWidth"] = 426,
-["bgColors"] = {
-["activeColor"] = {
-["a"] = 0.6,
-},
-},
-["name"] = "Interrupts",
-["textOfsX"] = 4,
-["locked"] = true,
-["sortBy"] = 1,
-["hideSpark"] = true,
-},
 ["raidBar2"] = {
 ["enabled"] = true,
 ["manualPos"] = {
@@ -400,13 +356,57 @@ OmniCDDB = {
 ["covenant"] = false,
 ["consumable"] = false,
 ["cc"] = false,
-["immunity"] = false,
-["offensive"] = false,
-["raidMovement"] = false,
-["counterCC"] = false,
 ["disarm"] = false,
+["offensive"] = false,
+["immunity"] = false,
+["counterCC"] = false,
+["raidMovement"] = false,
 },
 ["columns"] = 21,
+},
+["raidBar1"] = {
+["manualPos"] = {
+["raidBar1"] = {
+["y"] = 433,
+["x"] = 196,
+},
+},
+["reverseFill"] = false,
+["scale"] = 0.65,
+["statusBarWidth"] = 426,
+["bgColors"] = {
+["activeColor"] = {
+["a"] = 0.6,
+},
+},
+["name"] = "Interrupts",
+["textOfsX"] = 4,
+["locked"] = true,
+["sortBy"] = 1,
+["hideSpark"] = true,
+},
+["raidBar4"] = {
+["enabled"] = true,
+["manualPos"] = {
+["raidBar4"] = {
+["y"] = 504.9999937857174,
+["x"] = 937.9999187121721,
+},
+},
+["truncateIconName"] = 4,
+["scale"] = 0.9199999999999999,
+["progressBar"] = false,
+["columns"] = 3,
+["name"] = "Immunes",
+["spellType"] = {
+["other"] = true,
+["raidMovement"] = true,
+["immunity"] = true,
+},
+["sortDirection"] = "dsc",
+["paddingX"] = 1,
+["growUpward"] = true,
+["paddingY"] = 1,
 },
 ["raidBar3"] = {
 ["enabled"] = true,
@@ -436,40 +436,40 @@ OmniCDDB = {
 },
 ["position"] = {
 ["attachMore"] = "BOTTOMLEFT",
-["maxNumIcons"] = 5,
-["offsetX"] = 0,
 ["paddingX"] = 1,
+["offsetX"] = 0,
+["maxNumIcons"] = 5,
 ["attach"] = "BOTTOMLEFT",
 ["preset"] = "manual",
 ["offsetY"] = 42,
 ["anchorMore"] = "TOPLEFT",
 },
+["highlight"] = {
+["glowBuffs"] = false,
+["glow"] = false,
+},
 ["priority"] = {
 ["dispel"] = 0,
-},
-["frame"] = {
-["raidDefensive"] = 0,
-["defensive"] = 2,
-["cc"] = 3,
-["counterCC"] = 3,
-["disarm"] = 3,
-["immunity"] = 4,
-["aoeCC"] = 3,
-["externalDefensive"] = 0,
 },
 ["icons"] = {
 ["scale"] = 0.85,
 ["markEnhanced"] = false,
 ["desaturateActive"] = true,
 },
-["highlight"] = {
-["glowBuffs"] = false,
-["glow"] = false,
+["frame"] = {
+["externalDefensive"] = 0,
+["aoeCC"] = 3,
+["cc"] = 3,
+["immunity"] = 4,
+["disarm"] = 3,
+["raidDefensive"] = 0,
+["defensive"] = 2,
+["counterCC"] = 3,
 },
 },
 ["visibility"] = {
-["size"] = 40,
 ["arena"] = false,
+["size"] = 40,
 },
 ["raid"] = {
 ["raidCDS"] = {
@@ -482,13 +482,8 @@ OmniCDDB = {
 ["layout"] = "horizontal",
 ["progressBar"] = false,
 ["columns"] = 20,
-["manualPos"] = {
-["raidBar1"] = {
-["y"] = 243,
-["x"] = 285,
-},
-},
-["sortDirection"] = "dsc",
+["paddingX"] = 1,
+["locked"] = true,
 ["spellType"] = {
 ["other"] = false,
 ["racial"] = false,
@@ -508,9 +503,14 @@ OmniCDDB = {
 ["raidDefensive"] = false,
 ["counterCC"] = false,
 },
-["locked"] = true,
+["sortDirection"] = "dsc",
 ["sortBy"] = 4,
-["paddingX"] = 1,
+["manualPos"] = {
+["raidBar1"] = {
+["y"] = 243,
+["x"] = 285,
+},
+},
 ["paddingY"] = 2,
 },
 ["raidBar2"] = {
@@ -534,7 +534,7 @@ OmniCDDB = {
 ["paddingY"] = 1,
 },
 ["raidBar0"] = {
-["locked"] = true,
+["hideSpark"] = true,
 ["bgColors"] = {
 ["activeColor"] = {
 ["a"] = 0.6,
@@ -547,7 +547,7 @@ OmniCDDB = {
 },
 },
 ["reverseFill"] = false,
-["hideSpark"] = true,
+["locked"] = true,
 ["sortBy"] = 1,
 ["scale"] = 0.65,
 ["statusBarWidth"] = 238,
@@ -562,11 +562,8 @@ OmniCDDB = {
 ["position"] = {
 ["offsetX"] = 2,
 },
-["manualPos"] = {
-["raidCDBar2"] = {
-["y"] = 273,
-["x"] = 42,
-},
+["highlight"] = {
+["glowBuffs"] = false,
 },
 ["priority"] = {
 ["offensive"] = 9,
@@ -576,12 +573,15 @@ OmniCDDB = {
 ["counterScale"] = 0.7,
 ["showForbearanceCounter"] = false,
 ["scale"] = 0.96,
-["chargeScale"] = 0.9,
-["markEnhanced"] = false,
 ["desaturateActive"] = true,
+["markEnhanced"] = false,
+["chargeScale"] = 0.9,
 },
-["highlight"] = {
-["glowBuffs"] = false,
+["manualPos"] = {
+["raidCDBar2"] = {
+["y"] = 273,
+["x"] = 42,
+},
 },
 },
 },
