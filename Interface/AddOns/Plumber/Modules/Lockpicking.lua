@@ -112,8 +112,8 @@ end
 
 local function IsPlayerInteracingBank()
     --Merchant is checked by another function
-    --Banker, GuildBanker, MailInfo
-    return IsInteractingWithNpcOfType(8) or IsInteractingWithNpcOfType(10) or IsInteractingWithNpcOfType(17)
+    --Banker, GuildBanker, MailInfo, CharacterBanker, AccountBanker
+    return IsInteractingWithNpcOfType(8) or IsInteractingWithNpcOfType(10) or IsInteractingWithNpcOfType(17) or IsInteractingWithNpcOfType(67) or IsInteractingWithNpcOfType(68)
 end
 
 local function ShouldShowOverlay()
@@ -183,9 +183,10 @@ local function ActionButton_Bag_OnEnter(self)
 
         TooltipFrame:SetOwner(self, "ANCHOR_LEFT");
 
-        for i, lineData in ipairs(tooltipData.lines) do
-            AddLineDataText(TooltipFrame, lineData);
-        end
+        --for i, lineData in ipairs(tooltipData.lines) do
+        --    AddLineDataText(TooltipFrame, lineData);
+        --end
+        TooltipFrame:SetBagItem(self.bag, self.slot);
 
         TooltipFrame:AddLine(INSTRUCTION_PICK_LOCK, 0.400, 0.733, 1.000, true);    --Use a different color to distinguish it from other <Action> text in Pure Green
         TooltipFrame:Show();

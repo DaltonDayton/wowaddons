@@ -23,3 +23,5 @@ Blizzard_CombatText: enabled
 LittleWigs_MistsOfPandaria: enabled
 ElvUI_Options: enabled
 LittleWigs: enabled
+LittleWigs_BurningCrusade: enabled
+BigWigs_KhazAlgar: enabled

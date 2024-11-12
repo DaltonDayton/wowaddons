@@ -66,3 +66,4 @@ WeakAurasModelPaths: enabled
 WeakAurasOptions: enabled
 WeakAurasTemplates: enabled
 WorldQuestsList: enabled
+BigWigs_KhazAlgar: enabled

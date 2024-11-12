@@ -1,7 +1,15 @@
 
 VWQL = {
-["Yushien-Ner'zhul"] = {
+["Bibia-Arathor"] = {
+["Filter"] = 63,
+["FilterType"] = {
+},
+["Quests"] = {
+},
 ["VERSION"] = 114,
+},
+["Yushien-Ner'zhul"] = {
+["Filter"] = 63,
 ["FilterType"] = {
 },
 ["Quests"] = {
@@ -12,136 +20,123 @@ VWQL = {
 [71164] = true,
 [81804] = true,
 },
-["Filter"] = 63,
+["VERSION"] = 114,
 },
 ["Scale"] = 0.8,
 ["DisableIconsGeneralMap947"] = true,
 ["DisableLFG_Popup"] = true,
 ["Sort"] = 5,
 ["Xavaat-Ner'zhul"] = {
-["Filter"] = 63,
+["VERSION"] = 114,
 ["FilterType"] = {
 },
 ["Quests"] = {
+[70655] = true,
+[58742] = true,
+[82653] = true,
+[58705] = true,
+[52157] = true,
 [76586] = true,
+[69928] = true,
+[51640] = true,
+[74501] = true,
+[70625] = true,
+[82298] = true,
 },
-["VERSION"] = 114,
+["Filter"] = 63,
 },
 ["Xenoth-Ner'zhul"] = {
-["Filter"] = 63,
+["VERSION"] = 111,
 ["FilterType"] = {
 },
 ["Quests"] = {
 },
-["VERSION"] = 111,
+["Filter"] = 63,
+},
+["Kamao-Arathor"] = {
+["VERSION"] = 114,
+["FilterType"] = {
+},
+["Quests"] = {
+},
+["Filter"] = 63,
+},
+["Arnadun-Ner'zhul"] = {
+["VERSION"] = 114,
+["FilterType"] = {
+},
+["Quests"] = {
+},
+["Filter"] = 63,
 },
 ["AzeriteFormat"] = 20,
 ["Xambank-Ner'zhul"] = {
-["VERSION"] = 114,
+["Filter"] = 63,
 ["FilterType"] = {
 },
 ["Quests"] = {
 },
-["Filter"] = 63,
+["VERSION"] = 114,
 },
 ["Xamuul-Ner'zhul"] = {
-["Filter"] = 63,
+["VERSION"] = 114,
 ["FilterType"] = {
 },
 ["Quests"] = {
-[81621] = true,
-[58744] = true,
-[58746] = true,
-[43943] = true,
-[66588] = true,
-[82291] = true,
-[76586] = true,
-[81630] = true,
-[70420] = true,
-[69924] = true,
-[70440] = true,
-[82288] = true,
-[82292] = true,
-[71145] = true,
-[82237] = true,
-[81615] = true,
-[81816] = true,
-[82041] = true,
-[71206] = true,
-[82088] = true,
-[82533] = true,
-[51157] = true,
-[71166] = true,
-[82293] = true,
-[81810] = true,
-[51434] = true,
-[55304] = true,
-[81805] = true,
-[56400] = true,
-[81750] = true,
-[81656] = true,
-[79959] = true,
-[82518] = true,
-[81829] = true,
-[82526] = true,
-[82197] = true,
-[73147] = true,
-[70064] = true,
-[51296] = true,
-[82294] = true,
-[83079] = true,
+[54796] = true,
+[81512] = true,
 [82225] = true,
+[54521] = true,
+[82258] = true,
+[58742] = true,
+[54896] = true,
+[81802] = true,
+[83537] = true,
+[83538] = true,
+[82451] = true,
+[81807] = true,
+[82582] = true,
+[81827] = true,
+[54811] = true,
+[54812] = true,
+[82293] = true,
+[79959] = true,
+[82470] = true,
+[82133] = true,
+[76586] = true,
+[82292] = true,
+[54509] = true,
+[83536] = true,
+[82298] = true,
+[82238] = true,
+[82519] = true,
+[43943] = true,
+[81822] = true,
 },
-["VERSION"] = 114,
+["Filter"] = 63,
 },
 ["SortPrio"] = {
 },
 ["Ignore"] = {
 },
 ["Zatta-Ner'zhul"] = {
-["VERSION"] = 111,
+["Filter"] = 63,
 ["FilterType"] = {
 },
 ["Quests"] = {
 },
-["Filter"] = 63,
+["VERSION"] = 111,
 },
 ["Kariq-Ner'zhul"] = {
-["Filter"] = 63,
-["FilterType"] = {
-},
-["Quests"] = {
-},
 ["VERSION"] = 113,
-},
-["Zaldrysa-Ner'zhul"] = {
-["Filter"] = 63,
 ["FilterType"] = {
 },
 ["Quests"] = {
-[72030] = true,
-[70382] = true,
-[69938] = true,
-[70075] = true,
-[66551] = true,
-[67006] = true,
-[67062] = true,
 },
-["VERSION"] = 111,
-},
-["Faelaena-Ner'zhul"] = {
 ["Filter"] = 63,
-["FilterType"] = {
 },
-["Quests"] = {
-[81802] = true,
-},
-["VERSION"] = 113,
-},
-["VERSION"] = 114,
 ["Shantyclause-Ner'zhul"] = {
-["FilterType"] = {
-},
+["VERSION"] = 112,
 ["Filter"] = 63,
 ["Quests"] = {
 [70782] = true,
@@ -155,14 +150,48 @@ VWQL = {
 [70661] = true,
 [70632] = true,
 [72029] = true,
-[67024] = true,
+[70410] = true,
 [70602] = true,
 [69931] = true,
 [70150] = true,
 [70369] = true,
-[70410] = true,
+[67024] = true,
 },
-["VERSION"] = 112,
+["FilterType"] = {
+},
+},
+["Zaldrysa-Ner'zhul"] = {
+["VERSION"] = 111,
+["FilterType"] = {
+},
+["Quests"] = {
+[72030] = true,
+[70382] = true,
+[69938] = true,
+[70075] = true,
+[66551] = true,
+[67062] = true,
+[67006] = true,
+},
+["Filter"] = 63,
+},
+["VERSION"] = 114,
+["Faelaena-Ner'zhul"] = {
+["VERSION"] = 114,
+["FilterType"] = {
+},
+["Quests"] = {
+[82237] = true,
+},
+["Filter"] = 63,
+},
+["Sakonako-Arathor"] = {
+["Filter"] = 63,
+["FilterType"] = {
+},
+["Quests"] = {
+},
+["VERSION"] = 114,
 },
 ["HideLegion"] = true,
 }

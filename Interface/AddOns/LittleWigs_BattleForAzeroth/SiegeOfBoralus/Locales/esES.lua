@@ -3,6 +3,7 @@ if not L then return end
 if L then
 	L.enforcer = "Déspota Tallamarfil"
 	L.halberd = "Alabardero de Kul Tiras"
+	L.gutter = "Matarife Tallamarfil"
 	L.bomber = "Bombardero Breanegra"
 	L.waveshaper = "Tallaolas Marea de Hierro"
 	L.wavetender = "Cuidaolas de Kul Tiras"
@@ -10,6 +11,7 @@ if L then
 	L.shredder = "Triturador Mareaviva"
 	L.vanguard = "Vanguardia de Kul Tiras"
 	L.commander = "Comandante Gobernalle"
+	L.curseblade = "Hoja maldita Marea de Hierro"
 	L.spotter = "Avistador de los Gobernalle"
 	L.cannoneer = "Cañonero de los Gobernalle"
 	L.demolisher = "Demoledor de las Ratas de Pantoque"
@@ -18,7 +20,7 @@ if L then
 	L.tempest = "Tempestad de las Ratas de Pantoque"
 	L.invader = "Invasor de los Gobernalle"
 
-	--L.gate_open_desc = "Show a bar indicating when the Kul Tiran Wavetender will open the gate after Dread Captain Lockwood."
+	--L.gate_open_desc = "Show a bar indicating when the gate to the next area will open after defeating each boss."
 end
 
 L = BigWigs:NewBossLocale("Dread Captain Lockwood", "esES") or BigWigs:NewBossLocale("Dread Captain Lockwood", "esMX")

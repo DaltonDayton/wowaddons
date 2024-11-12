@@ -57,7 +57,7 @@ _detalhes_database = {
 ["defensive-personal"] = false,
 },
 },
-["last_version"] = "11.0.2 12879",
+["last_version"] = "11.0.5 13166",
 ["player_stats"] = {
 },
 ["force_font_outline"] = "",
@@ -92,10 +92,10 @@ _detalhes_database = {
 ["attribute"] = 1,
 ["pos"] = {
 ["normal"] = {
-["y"] = -585.9990234375,
+["y"] = -585.9989929199219,
 ["x"] = 1510.748779296875,
 ["w"] = 380.4989624023438,
-["h"] = 184.0003509521484,
+["h"] = 184.0003356933594,
 },
 ["solo"] = {
 ["y"] = 2,
@@ -200,19 +200,20 @@ _detalhes_database = {
 ["evoker_show_realtimedps"] = false,
 ["inverse_deathlog_mplus"] = false,
 },
-["ignore_nicktag"] = false,
-["mythic_plus_log"] = {
-},
-["combat_counter"] = 6,
-["cached_roles"] = {
-},
-["data_harvested_for_charts"] = {
-},
-["on_death_menu"] = false,
 ["announce_firsthit"] = {
 ["enabled"] = true,
 ["channel"] = "SELF",
 },
+["mythic_plus_log"] = {
+},
+["SoloTablesSaved"] = {
+["Mode"] = 1,
+},
+["cached_roles"] = {
+},
+["ignore_nicktag"] = false,
+["combat_counter"] = 10,
+["on_death_menu"] = false,
 ["plugin_database"] = {
 ["DETAILS_PLUGIN_TINY_THREAT"] = {
 ["enabled"] = true,
@@ -299,10 +300,7 @@ _detalhes_database = {
 0.5,
 },
 ["scale"] = 1,
-["main_frame_size"] = {
-299.9999694824219,
-500.0000610351563,
-},
+["arrow_anchor_y"] = 0,
 ["minimap"] = {
 ["minimapPos"] = 160,
 ["radius"] = 160,
@@ -323,17 +321,7 @@ _detalhes_database = {
 ["square_amount"] = 5,
 ["enabled"] = false,
 ["arrow_size"] = 10,
-["per_second"] = {
-["enabled"] = false,
-["point"] = "CENTER",
-["scale"] = 1,
-["font_shadow"] = true,
-["y"] = -0.00018310546875,
-["x"] = -0.00042724609375,
-["size"] = 32,
-["update_speed"] = 0.05,
-["attribute_type"] = 1,
-},
+["font_size"] = 10,
 ["row_spacement"] = 21,
 ["main_frame_color"] = {
 0,
@@ -341,31 +329,44 @@ _detalhes_database = {
 0,
 0.2,
 },
-["author"] = "Terciob",
-["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
-["y"] = 1.52587890625e-05,
-["font_size"] = 10,
-["x"] = -0.000244140625,
-["font_face"] = "Friz Quadrata TT",
-["square_size"] = 32,
 ["row_color"] = {
 0.1,
 0.1,
 0.1,
 0.4,
 },
+["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
+["per_second"] = {
+["enabled"] = false,
+["point"] = "CENTER",
+["scale"] = 1,
+["font_shadow"] = true,
+["y"] = -0.000244140625,
+["x"] = -0.00048828125,
+["size"] = 32,
+["update_speed"] = 0.05,
+["attribute_type"] = 1,
+},
 ["use_spark"] = true,
+["x"] = -0.000244140625,
+["font_face"] = "Friz Quadrata TT",
+["square_size"] = 32,
+["y"] = 1.52587890625e-05,
+["author"] = "Terciob",
 ["main_frame_locked"] = false,
-["arrow_anchor_y"] = 0,
+["main_frame_size"] = {
+299.9999694824219,
+500.0000610351563,
+},
 },
 },
 ["last_instance_time"] = 1610128442,
 ["combat_id"] = 0,
 ["savedStyles"] = {
 },
-["last_day"] = "24",
+["last_day"] = "06",
 ["character_data"] = {
-["logons"] = 3,
+["logons"] = 5,
 },
 ["announce_deaths"] = {
 ["enabled"] = false,
@@ -401,7 +402,7 @@ _detalhes_database = {
 },
 ["raid_roster"] = {
 },
-["tempo_start"] = 23250.141,
+["tempo_start"] = 20431.732,
 ["last_events_tables"] = {
 },
 ["alternate_power"] = {
@@ -464,11 +465,11 @@ _detalhes_database = {
 ["data_inicio"] = 0,
 ["amountCasts"] = {
 },
-["mapId"] = 1,
+["mapId"] = 2552,
 ["cleu_events"] = {
 ["n"] = 1,
 },
-["zoneName"] = "Kalimdor",
+["zoneName"] = "Khaz Algar (Surface)",
 ["boss_hp"] = 1,
 ["is_challenge"] = false,
 ["frags"] = {
@@ -495,15 +496,14 @@ _detalhes_database = {
 ["start_time"] = 0,
 ["TimeData"] = {
 },
-["combat_counter"] = 5,
+["combat_counter"] = 9,
 },
-["last_realversion"] = 159,
-["SoloTablesSaved"] = {
-["Mode"] = 1,
-},
+["last_realversion"] = 161,
 ["nick_tag_cache"] = {
-["nextreset"] = 1725831729,
+["nextreset"] = 1732237021,
 ["last_version"] = 16,
+},
+["data_harvested_for_charts"] = {
 },
 ["announce_cooldowns"] = {
 ["enabled"] = false,
@@ -521,6 +521,15 @@ _detalhes_database = {
 ["channel"] = "SELF",
 },
 ["cached_specs"] = {
+["Player-1168-0A84922E"] = 261,
+["Player-1168-0846E229"] = 267,
+["Player-1168-09497218"] = 264,
+["Player-1168-09266910"] = 253,
+["Player-1168-0ADBC023"] = 577,
+["Player-1168-0A57FDBA"] = 266,
+["Player-1168-0AD630EB"] = 267,
+["Player-1168-09ABE749"] = 255,
+["Player-1168-0946A7EF"] = 253,
 ["Player-1168-09F609D9"] = 65,
 },
 }

@@ -2,69 +2,8 @@
 EncounterDetailsDB = {
 ["chartData"] = {
 [51] = {
-["Raid Damage Done"] = {
-2590,
-0,
-0,
-0,
-0,
-["max_value"] = 2590,
-["__time"] = 1729975557,
-},
 },
 [52] = {
-["Raid Damage Done"] = {
-6848,
-0,
-0,
-0,
-0,
-0,
-0,
-0,
-20590,
-1157,
-13549,
-0,
-2319,
-0,
-0,
-0,
-1149,
-0,
-0,
-10131,
-0,
-0,
-1147,
-3827,
-3822,
-0,
-6039,
-1994,
-7743,
-2268,
-1965,
-0,
-9907,
-3801,
-0,
-3808,
-6263,
-9750,
-0,
-1136,
-3785,
-5915,
-3825,
-2310,
-0,
-0,
-0,
-0,
-["max_value"] = 20590,
-["__time"] = 1729975619,
-},
 },
 },
 ["encounter_spells"] = {
@@ -289,7 +228,63 @@ EncounterDetailsDB = {
 },
 ["source"] = "Voidstone Monstrosity",
 },
-[423356] = {
+[432605] = {
+["school"] = 8,
+["token"] = {
+["SPELL_DAMAGE"] = true,
+},
+["source"] = "Voidrider",
+},
+[426218] = {
+["school"] = 8,
+["token"] = {
+["SPELL_PERIODIC_HEAL"] = true,
+},
+["source"] = "Healing Stream Totem",
+},
+[455220] = {
+["school"] = 32,
+["type"] = "DEBUFF",
+["token"] = {
+["SPELL_AURA_APPLIED"] = true,
+["SPELL_PERIODIC_DAMAGE"] = true,
+},
+["source"] = "Voidstone Monstrosity",
+},
+[445457] = {
+["school"] = 32,
+["token"] = {
+["SPELL_CAST_SUCCESS"] = true,
+["SPELL_CAST_START"] = true,
+},
+["source"] = "Voidstone Monstrosity",
+},
+[429487] = {
+["school"] = 32,
+["token"] = {
+["SPELL_CAST_SUCCESS"] = true,
+["SPELL_CAST_START"] = true,
+},
+["source"] = "Voidstone Monstrosity",
+},
+[427402] = {
+["school"] = 9,
+["token"] = {
+["SPELL_CAST_SUCCESS"] = true,
+["SPELL_CAST_START"] = true,
+},
+["source"] = "Cursed Rookguard",
+},
+[423839] = {
+["school"] = 1,
+["type"] = "BUFF",
+["token"] = {
+["SPELL_AURA_APPLIED"] = true,
+["SPELL_CAST_SUCCESS"] = true,
+},
+["source"] = "Voidstone Monstrosity",
+},
+[429521] = {
 ["school"] = 32,
 ["token"] = {
 ["SPELL_DAMAGE"] = true,
@@ -304,68 +299,12 @@ EncounterDetailsDB = {
 },
 ["source"] = "Voidstone Monstrosity",
 },
-[455220] = {
-["school"] = 32,
-["type"] = "DEBUFF",
-["token"] = {
-["SPELL_AURA_APPLIED"] = true,
-["SPELL_PERIODIC_DAMAGE"] = true,
-},
-["source"] = "Voidstone Monstrosity",
-},
-[429521] = {
+[423356] = {
 ["school"] = 32,
 ["token"] = {
 ["SPELL_DAMAGE"] = true,
 },
 ["source"] = "Voidstone Monstrosity",
-},
-[423839] = {
-["school"] = 1,
-["type"] = "BUFF",
-["token"] = {
-["SPELL_AURA_APPLIED"] = true,
-["SPELL_CAST_SUCCESS"] = true,
-},
-["source"] = "Voidstone Monstrosity",
-},
-[427402] = {
-["school"] = 9,
-["token"] = {
-["SPELL_CAST_SUCCESS"] = true,
-["SPELL_CAST_START"] = true,
-},
-["source"] = "Cursed Rookguard",
-},
-[429487] = {
-["school"] = 32,
-["token"] = {
-["SPELL_CAST_SUCCESS"] = true,
-["SPELL_CAST_START"] = true,
-},
-["source"] = "Voidstone Monstrosity",
-},
-[445457] = {
-["school"] = 32,
-["token"] = {
-["SPELL_CAST_SUCCESS"] = true,
-["SPELL_CAST_START"] = true,
-},
-["source"] = "Voidstone Monstrosity",
-},
-[426218] = {
-["school"] = 8,
-["token"] = {
-["SPELL_PERIODIC_HEAL"] = true,
-},
-["source"] = "Healing Stream Totem",
-},
-[432605] = {
-["school"] = 8,
-["token"] = {
-["SPELL_DAMAGE"] = true,
-},
-["source"] = "Voidrider",
 },
 },
 ["emotes"] = {

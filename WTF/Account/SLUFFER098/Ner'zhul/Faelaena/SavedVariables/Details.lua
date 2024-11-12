@@ -57,7 +57,7 @@ _detalhes_database = {
 ["defensive-personal"] = false,
 },
 },
-["last_version"] = "11.0.2 13009",
+["last_version"] = "11.0.5 13190",
 ["player_stats"] = {
 },
 ["force_font_outline"] = "",
@@ -200,31 +200,34 @@ _detalhes_database = {
 ["evoker_show_realtimedps"] = false,
 ["inverse_deathlog_mplus"] = false,
 },
-["SoloTablesSaved"] = {
-["Mode"] = 1,
+["nick_tag_cache"] = {
+["nextreset"] = 1732237021,
+["last_version"] = 16,
 },
 ["mythic_plus_log"] = {
 },
-["ignore_nicktag"] = false,
+["announce_firsthit"] = {
+["enabled"] = true,
+["channel"] = "SELF",
+},
 ["announce_damagerecord"] = {
 ["enabled"] = true,
 ["channel"] = "SELF",
 },
-["combat_counter"] = 8,
-["data_harvested_for_charts"] = {
+["SoloTablesSaved"] = {
+["Mode"] = 1,
 },
-["nick_tag_cache"] = {
-["nextreset"] = 1727489855,
-["last_version"] = 16,
+["ignore_nicktag"] = false,
+["data_harvested_for_charts"] = {
 },
 ["last_realversion"] = 161,
 ["last_instance_time"] = 1610128442,
 ["combat_id"] = 0,
 ["savedStyles"] = {
 },
-["last_day"] = "12",
+["last_day"] = "10",
 ["character_data"] = {
-["logons"] = 4,
+["logons"] = 6,
 },
 ["announce_deaths"] = {
 ["enabled"] = false,
@@ -260,7 +263,7 @@ _detalhes_database = {
 },
 ["raid_roster"] = {
 },
-["tempo_start"] = 2614.523,
+["tempo_start"] = 18934.759,
 ["last_events_tables"] = {
 },
 ["alternate_power"] = {
@@ -323,11 +326,11 @@ _detalhes_database = {
 ["data_inicio"] = 0,
 ["amountCasts"] = {
 },
-["mapId"] = 1,
+["mapId"] = 2552,
 ["cleu_events"] = {
 ["n"] = 1,
 },
-["zoneName"] = "Kalimdor",
+["zoneName"] = "Khaz Algar (Surface)",
 ["boss_hp"] = 1,
 ["is_challenge"] = false,
 ["frags"] = {
@@ -354,7 +357,7 @@ _detalhes_database = {
 ["start_time"] = 0,
 ["TimeData"] = {
 },
-["combat_counter"] = 7,
+["combat_counter"] = 11,
 },
 ["plugin_database"] = {
 ["DETAILS_PLUGIN_TINY_THREAT"] = {
@@ -441,11 +444,11 @@ _detalhes_database = {
 1,
 0.5,
 },
-["arrow_anchor_y"] = 0,
 ["main_frame_size"] = {
 299.9999694824219,
 500.0000610351563,
 },
+["arrow_anchor_y"] = 0,
 ["minimap"] = {
 ["minimapPos"] = 160,
 ["radius"] = 160,
@@ -453,30 +456,19 @@ _detalhes_database = {
 },
 ["main_frame_locked"] = false,
 ["arrow_anchor_x"] = 0,
-["use_spark"] = true,
+["author"] = "Terciob",
 ["row_texture"] = "Details Serenity",
 ["square_grow_direction"] = "right",
+["y"] = 1.52587890625e-05,
 ["row_color"] = {
 0.1,
 0.1,
 0.1,
 0.4,
 },
-["author"] = "Terciob",
 ["square_amount"] = 5,
 ["enabled"] = false,
 ["arrow_size"] = 10,
-["y"] = 1.52587890625e-05,
-["row_spacement"] = 21,
-["main_frame_color"] = {
-0,
-0,
-0,
-0.2,
-},
-["main_frame_strata"] = "LOW",
-["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
-["font_size"] = 10,
 ["per_second"] = {
 ["enabled"] = false,
 ["point"] = "CENTER",
@@ -488,6 +480,17 @@ _detalhes_database = {
 ["update_speed"] = 0.05,
 ["size"] = 32,
 },
+["row_spacement"] = 21,
+["main_frame_color"] = {
+0,
+0,
+0,
+0.2,
+},
+["main_frame_strata"] = "LOW",
+["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
+["use_spark"] = true,
+["font_size"] = 10,
 ["x"] = -0.000244140625,
 ["font_face"] = "Friz Quadrata TT",
 ["square_size"] = 32,
@@ -502,11 +505,8 @@ _detalhes_database = {
 ["scale"] = 1,
 },
 },
-["announce_firsthit"] = {
-["enabled"] = true,
-["channel"] = "SELF",
-},
 ["on_death_menu"] = false,
+["combat_counter"] = 12,
 ["announce_cooldowns"] = {
 ["ignored_cooldowns"] = {
 },
@@ -522,5 +522,7 @@ _detalhes_database = {
 },
 ["cached_specs"] = {
 ["Player-1168-09F609D9"] = 65,
+["Player-1168-09ACC12B"] = 70,
+["Player-1168-0AB0348E"] = 267,
 },
 }

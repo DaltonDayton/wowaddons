@@ -3,11 +3,7 @@ BigWigs3DB = {
 ["namespaces"] = {
 ["BigWigs_Plugins_Victory"] = {
 },
-["BigWigs_Bosses_The Headless Horseman"] = {
-},
-["BigWigs_Plugins_BossBlock"] = {
-},
-["BigWigs_Bosses_Tomb-Raider Drywhisker"] = {
+["LibDualSpec-1.0"] = {
 },
 ["BigWigs_Plugins_Sounds"] = {
 },
@@ -20,7 +16,6 @@ BigWigs3DB = {
 ["fontColor"] = {
 ["b"] = 0.3,
 },
-["fontName"] = "- M 900",
 ["position"] = {
 "CENTER",
 "CENTER",
@@ -28,12 +23,11 @@ nil,
 -180,
 },
 ["voice"] = "enUS: Default (Male)",
+["fontName"] = "- M 900",
 },
 },
 },
 ["BigWigs_Plugins_AltPower"] = {
-},
-["BigWigs_Bosses_Spinshroom"] = {
 },
 ["BigWigs_Plugins_Colors"] = {
 ["profiles"] = {
@@ -59,13 +53,26 @@ nil,
 },
 },
 },
-["BigWigs_Plugins_Raid Icons"] = {
+["BigWigs_Plugins_Wipe"] = {
 },
 ["BigWigs_Plugins_Nameplates"] = {
 ["profiles"] = {
 ["Default"] = {
-["updated"] = true,
 ["iconOffsetY"] = -4,
+},
+["ToxiUI"] = {
+["textFontName"] = "- ToxiUI",
+["iconWidth"] = 16,
+["iconSpacing"] = 2,
+["textGrowDirection"] = "LEFT",
+["textOutline"] = "OUTLINE",
+["iconFontSize"] = 8,
+["textOffsetY"] = 5,
+["iconHeight"] = 12,
+["iconOffsetX"] = 10,
+["iconGlowFrequency"] = 0.3500000000000001,
+["iconGlowPixelLines"] = 6,
+["iconFontName"] = "- ToxiUI",
 },
 },
 },
@@ -80,14 +87,16 @@ nil,
 ["iconPosition"] = "RIGHT",
 ["emphasizeGrowup"] = true,
 ["expWidth"] = 271,
-["normalHeight"] = 26,
 ["fill"] = true,
 ["barStyle"] = "ElvUI",
 ["growup"] = true,
 ["fontSizeEmph"] = 16,
 ["fontName"] = "- M 700",
 ["alignText"] = "RIGHT",
-["emphasizeTime"] = 10,
+["fontSize"] = 16,
+["spacing"] = 5,
+["visibleBarLimitEmph"] = 4,
+["texture"] = "- Tx Left",
 ["expPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -95,10 +104,8 @@ nil,
 130,
 "ElvUF_Target",
 },
-["visibleBarLimitEmph"] = 4,
-["texture"] = "- Tx Left",
-["spacing"] = 5,
-["fontSize"] = 16,
+["emphasizeTime"] = 10,
+["normalHeight"] = 26,
 ["normalPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -109,34 +116,30 @@ nil,
 },
 },
 },
-["BigWigs_Bosses_Kobold Delve Trash"] = {
+["BigWigs_Plugins_BossBlock"] = {
 },
-["BigWigs_Plugins_Proximity"] = {
-},
-["BigWigs_Bosses_Fungarian Delve Trash"] = {
-},
-["BigWigs_Bosses_Delve Rares"] = {
-},
-["LibDualSpec-1.0"] = {
+["BigWigs_Plugins_Raid Icons"] = {
 },
 ["BigWigs_Plugins_InfoBox"] = {
+},
+["BigWigs_Plugins_Proximity"] = {
 },
 ["BigWigs_Plugins_Messages"] = {
 ["profiles"] = {
 ["ToxiUI"] = {
 ["outline"] = "OUTLINE",
+["emphUppercase"] = false,
+["align"] = "RIGHT",
 ["emphFontName"] = "- M 700",
 ["emphFontSize"] = 24,
+["growUpwards"] = true,
 ["emphPosition"] = {
 "TOP",
 "TOP",
 nil,
 -215,
 },
-["emphUppercase"] = false,
-["align"] = "RIGHT",
 ["fontName"] = "- M 700",
-["growUpwards"] = true,
 ["normalPosition"] = {
 "CENTER",
 "CENTER",
@@ -146,8 +149,6 @@ nil,
 },
 },
 },
-["BigWigs_Plugins_Wipe"] = {
-},
 ["BigWigs_Plugins_Pull"] = {
 },
 ["BigWigs_Plugins_AutoReply"] = {
@@ -155,10 +156,11 @@ nil,
 },
 ["profileKeys"] = {
 ["Xavaat - Ner'zhul"] = "ToxiUI",
+["Sakonako - Arathor"] = "ToxiUI",
 ["Xambank - Ner'zhul"] = "ToxiUI",
 ["Faelaena - Ner'zhul"] = "ToxiUI",
-["Xamuul - Ner'zhul"] = "ToxiUI",
 ["Shantyclause - Ner'zhul"] = "ToxiUI",
+["Xamuul - Ner'zhul"] = "ToxiUI",
 ["Yushien - Ner'zhul"] = "ToxiUI",
 },
 ["profiles"] = {

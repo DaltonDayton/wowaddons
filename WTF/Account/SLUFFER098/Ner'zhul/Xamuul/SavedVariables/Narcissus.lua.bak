@@ -12,6 +12,10 @@ NarciStatisticsDB_PC = {
 ["visit"] = 5,
 ["time"] = 459,
 },
+[71] = {
+["visit"] = 3,
+["time"] = 83,
+},
 },
 },
 }

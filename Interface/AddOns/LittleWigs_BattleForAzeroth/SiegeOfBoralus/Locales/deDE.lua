@@ -3,6 +3,7 @@ if not L then return end
 if L then
 	L.enforcer = "Vollstrecker der Knochenritzer"
 	L.halberd = "Hellebardier von Kul Tiras"
+	L.gutter = "Schlächter der Knochenritzer"
 	L.bomber = "Schwarzteerbomber"
 	L.waveshaper = "Wellenformer der Eisenfluträuber"
 	L.wavetender = "Wellenzähmer von Kul Tiras"
@@ -10,6 +11,7 @@ if L then
 	L.shredder = "Springflutschredder"
 	L.vanguard = "Vorhut von Kul Tiras"
 	L.commander = "Aschenwindkommandant"
+	L.curseblade = "Fluchklinge der Eisenfluträuber"
 	L.spotter = "Aschenwindkundschafter"
 	L.cannoneer = "Aschenwindkanonier"
 	L.demolisher = "Verwüster der Bilgeratten"
@@ -18,7 +20,7 @@ if L then
 	L.tempest = "Orkan der Bilgeratten"
 	L.invader = "Aschenwindeindringling"
 
-	L.gate_open_desc = "Zeigt einen Timer wann der Wellenzähmer von Kul Tiras das Tor hinter Schreckenskapitänin Luebke öffnet."
+	--L.gate_open_desc = "Show a bar indicating when the gate to the next area will open after defeating each boss."
 end
 
 L = BigWigs:NewBossLocale("Dread Captain Lockwood", "deDE")

@@ -1,8 +1,11 @@
 # LittleWigs
 
-## [v11.0.46](https://github.com/BigWigsMods/LittleWigs/tree/v11.0.46) (2024-10-30)
-[Full Changelog](https://github.com/BigWigsMods/LittleWigs/compare/v11.0.45...v11.0.46) [Previous Releases](https://github.com/BigWigsMods/LittleWigs/releases)
+## [v11.0.49](https://github.com/BigWigsMods/LittleWigs/tree/v11.0.49) (2024-11-09)
+[Full Changelog](https://github.com/BigWigsMods/LittleWigs/compare/v11.0.48...v11.0.49) [Previous Releases](https://github.com/BigWigsMods/LittleWigs/releases)
 
-- Fix some tabs  
-- BfA/SiegeOfBoralus: Add missing gate timers  
-- Update frFR (#1183)  
+- BfA/SiegeOfBoralus: Gate timer updates  
+- BfA/SiegeOfBoralus/Trash: Tooth Breaker, Cursed Slash  
+- BfA/SiegeOfBoralus/Redhook: Initial timers for Heavy Slash  
+- BfA/SiegeOfBoralus/Redhook: Heavy Ordnance message update  
+- Shadowlands/TheNecroticWake/Trash: Boneflay  
+- Cataclysm/GrimBatol/Trash: Rive  
