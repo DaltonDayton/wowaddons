@@ -47,6 +47,7 @@ NarcissusDB = {
 ["BaseLineOffset"] = 0,
 ["TalentTreeBiggerUI"] = false,
 ["DressingRoomShowIconSelect"] = false,
+["UseAddonCompartment"] = true,
 ["DressingRoom"] = true,
 ["UseBustShot"] = true,
 ["PaperDollWidget_ClassSet"] = true,
@@ -54,16 +55,14 @@ NarcissusDB = {
 ["TalentTreeUseClassBackground"] = false,
 ["installTime"] = 1723331793,
 ["SoloQueueLFRDetails"] = true,
-["TalentTreeAnchor"] = 1,
+["EnableDoubleTap"] = true,
 ["AutoPlayAnimation"] = false,
 ["AFKScreen"] = true,
-["EnableDoubleTap"] = true,
-["AKFScreenDelay"] = false,
 ["FontHeightItemName"] = 10,
+["AKFScreenDelay"] = false,
+["TalentTreeAnchor"] = 1,
 ["Version"] = 10000,
 ["IndependentMinimapButton"] = false,
-["AnchorToMinimap"] = true,
-["TalentTreeForEquipmentManager"] = true,
 ["Tutorials"] = {
 ["ExitConfirmation"] = true,
 ["Movement"] = true,
@@ -72,6 +71,8 @@ NarcissusDB = {
 ["WeaponBrowser"] = true,
 ["NPCBrowser"] = true,
 },
+["TalentTreeForEquipmentManager"] = true,
+["AnchorToMinimap"] = true,
 ["NamePlateNameOffset"] = 0,
 ["PerksProgramDB"] = {
 ["MonthNames"] = {
@@ -347,7 +348,7 @@ NarciStatisticsDB = {
 ["InstalledDate"] = 1723331811,
 ["QuestItems"] = {
 },
-["TimeSpentInNarcissus"] = 10652,
+["TimeSpentInNarcissus"] = 10843,
 ["AddOnActionForbidden"] = {
 ["addons"] = {
 ["ElvUI"] = {
@@ -355,11 +356,6 @@ NarciStatisticsDB = {
 ["timeLastError"] = 1724516878,
 },
 ["WorldQuestsList"] = {
-["errorTime"] = {
-1731266504,
-1731266511,
-1731266991,
-},
 ["count"] = 3,
 ["timeLastError"] = 1731266991,
 },
@@ -388,7 +384,7 @@ NarciCharacterProfiles = {
 ["name"] = "Xamuul",
 ["birth"] = 1723331811,
 ["serverID"] = "1168",
-["lastVisit"] = 1731273758,
+["lastVisit"] = 1731976299,
 ["outfits"] = {
 {
 ["s"] = "36724,36727,45116,36655,20511,0,41771,36642,66904,36701,36666,12036:0:1898,67870",
@@ -483,6 +479,16 @@ NarciCharacterProfiles = {
 },
 ["class"] = 11,
 },
+["096847B0"] = {
+["race"] = 84,
+["name"] = "Oridioneer",
+["birth"] = 1731787178,
+["serverID"] = "1138",
+["lastVisit"] = 1731787259,
+["outfits"] = {
+},
+["class"] = 7,
+},
 ["09F3F457"] = {
 ["race"] = 36,
 ["name"] = "Zatta",
@@ -522,7 +528,7 @@ NarciCharacterProfiles = {
 ["name"] = "Zaldrysa",
 ["birth"] = 1724564475,
 ["serverID"] = "1168",
-["lastVisit"] = 1724564630,
+["lastVisit"] = 1731786953,
 ["outfits"] = {
 {
 ["s"] = "81037,86757,82002,3643,0,93940,91224,86795,84588,3644,74351,32958,0",
@@ -565,22 +571,12 @@ NarciCharacterProfiles = {
 },
 ["class"] = 4,
 },
-["0ADFEB86"] = {
-["race"] = 84,
-["name"] = "Arnadun",
-["birth"] = 1730944162,
-["serverID"] = "1168",
-["lastVisit"] = 1730944162,
-["outfits"] = {
-},
-["class"] = 4,
-},
 ["09F2953A"] = {
 ["race"] = 26,
 ["name"] = "Yushien",
 ["birth"] = 1724539642,
 ["serverID"] = "1168",
-["lastVisit"] = 1731271424,
+["lastVisit"] = 1731791856,
 ["outfits"] = {
 {
 ["s"] = "36648,36684,13444,36655,0,35447,76813,36642,80499,36634,36695,13387,67870",
@@ -636,6 +632,16 @@ NarciCharacterProfiles = {
 },
 },
 ["class"] = 10,
+},
+["0ADFEB86"] = {
+["race"] = 84,
+["name"] = "Arnadun",
+["birth"] = 1730944162,
+["serverID"] = "1168",
+["lastVisit"] = 1730944162,
+["outfits"] = {
+},
+["class"] = 4,
 },
 ["0ADB1B05"] = {
 ["race"] = 85,
@@ -708,7 +714,7 @@ NarciCharacterProfiles = {
 ["name"] = "Xavaat",
 ["birth"] = 1724534901,
 ["serverID"] = "1168",
-["lastVisit"] = 1731374511,
+["lastVisit"] = 1731976519,
 ["outfits"] = {
 {
 ["s"] = "6898,6901,183119,6900,0,83203,104604,106492,107364,38567,104603,183059:-1:5865,181699",

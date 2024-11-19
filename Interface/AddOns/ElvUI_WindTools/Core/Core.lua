@@ -36,7 +36,7 @@ E.PopupDialogs.WINDTOOLS_ELVUI_OUTDATED = {
 }
 
 E.PopupDialogs.WINDTOOLS_OPEN_CHANGELOG = {
-	text = format(L["Welcome to %s %s!"], W.Title, W.Version),
+	text = format(L["Welcome to %s %s!"], W.Title, W.DisplayVersion),
 	button1 = L["Open Changelog"],
 	button2 = format("|cffaaaaaa%s|r", L["Next Time"]),
 	OnAccept = function(self)
@@ -184,6 +184,31 @@ function W:GameFixing()
 		self:RegisterEvent("CVAR_UPDATE", function(_, cvar, value)
 			if cvar == "ActionButtonUseKeyDown" and W.UseKeyDown ~= (value == "1") then
 				E:StaticPopup_Show("WINDTOOLS_BUTTON_FIX_RELOAD")
+			end
+		end)
+	end
+
+	if E.global.WT.core.guildNewsUpdateFix then
+		-- https://nga.178.com/read.php?tid=42399961
+		local BLZCommunitiesGuildNewsFrame_OnEvent = CommunitiesGuildNewsFrame_OnEvent
+		local newsRequireUpdate, newsTimer
+		_G.CommunitiesFrameGuildDetailsFrameNews:SetScript("OnEvent", function(frame, event)
+			if event == "GUILD_NEWS_UPDATE" then
+				if newsTimer then
+					newsRequireUpdate = true
+				else
+					BLZCommunitiesGuildNewsFrame_OnEvent(frame, event)
+
+					-- After 1 second, if guild news still need to be updated, update again
+					newsTimer = C_Timer.NewTimer(1, function()
+						if newsRequireUpdate then
+							BLZCommunitiesGuildNewsFrame_OnEvent(frame, event)
+						end
+						newsTimer = nil
+					end)
+				end
+			else
+				BLZCommunitiesGuildNewsFrame_OnEvent(frame, event)
 			end
 		end)
 	end

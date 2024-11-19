@@ -3,15 +3,17 @@ OmniCDDB = {
 ["profileKeys"] = {
 ["Arnadun - Ner'zhul"] = "Default",
 ["Sakonako - Arathor"] = "ToxiUI-Vertical",
-["Xamuul - Ner'zhul"] = "Default",
-["Yushien - Ner'zhul"] = "Default",
+["Xavaat - Ner'zhul"] = "ToxiUI-Horizontal",
+["Xamuul - Ner'zhul"] = "ToxiUI-Vertical",
+["Yushien - Ner'zhul"] = "ToxiUI-Horizontal",
 ["Kariq - Ner'zhul"] = "Default",
 ["Bibia - Arathor"] = "Default",
 ["Kamao - Arathor"] = "Default",
-["Faelaena - Ner'zhul"] = "Default",
-["Xavaat - Ner'zhul"] = "ToxiUI-Horizontal",
 ["Xambank - Ner'zhul"] = "Default",
+["Zaldrysa - Ner'zhul"] = "Default",
 ["Shantyclause - Ner'zhul"] = "ToxiUI-Vertical",
+["Oridioneer - Arathor"] = "Default",
+["Faelaena - Ner'zhul"] = "Default",
 },
 ["namespaces"] = {
 ["LibDualSpec-1.0"] = {
@@ -38,8 +40,8 @@ OmniCDDB = {
 ["size"] = 24,
 },
 ["icon"] = {
-["font"] = "- ToxiUI",
 ["size"] = 12,
+["font"] = "- ToxiUI",
 },
 ["anchor"] = {
 ["flag"] = "OUTLINE",
@@ -126,8 +128,8 @@ OmniCDDB = {
 ["immunity"] = true,
 },
 ["sortDirection"] = "dsc",
-["paddingX"] = 1,
 ["growUpward"] = true,
+["paddingX"] = 1,
 ["paddingY"] = 1,
 },
 ["raidBar3"] = {
@@ -163,9 +165,15 @@ OmniCDDB = {
 ["preset"] = "TOPLEFT",
 ["attach"] = "TOPLEFT",
 },
-["highlight"] = {
-["glowBuffs"] = false,
-["glow"] = false,
+["frame"] = {
+["counterCC"] = 3,
+["raidDefensive"] = 0,
+["cc"] = 3,
+["defensive"] = 2,
+["disarm"] = 3,
+["immunity"] = 4,
+["aoeCC"] = 3,
+["externalDefensive"] = 0,
 },
 ["priority"] = {
 ["dispel"] = 0,
@@ -175,20 +183,14 @@ OmniCDDB = {
 ["markEnhanced"] = false,
 ["desaturateActive"] = true,
 },
-["frame"] = {
-["externalDefensive"] = 0,
-["aoeCC"] = 3,
-["cc"] = 3,
-["counterCC"] = 3,
-["disarm"] = 3,
-["raidDefensive"] = 0,
-["defensive"] = 2,
-["immunity"] = 4,
+["highlight"] = {
+["glowBuffs"] = false,
+["glow"] = false,
 },
 },
 ["visibility"] = {
-["arena"] = false,
 ["size"] = 40,
+["arena"] = false,
 },
 ["raid"] = {
 ["raidCDS"] = {
@@ -201,8 +203,13 @@ OmniCDDB = {
 ["layout"] = "horizontal",
 ["progressBar"] = false,
 ["columns"] = 20,
-["paddingX"] = 1,
-["locked"] = true,
+["sortDirection"] = "dsc",
+["manualPos"] = {
+["raidBar1"] = {
+["y"] = 246,
+["x"] = 522.6666666666666,
+},
+},
 ["spellType"] = {
 ["other"] = false,
 ["racial"] = false,
@@ -222,14 +229,9 @@ OmniCDDB = {
 ["raidDefensive"] = false,
 ["counterCC"] = false,
 },
-["sortDirection"] = "dsc",
+["locked"] = true,
 ["sortBy"] = 4,
-["manualPos"] = {
-["raidBar1"] = {
-["y"] = 246,
-["x"] = 522.6666666666666,
-},
-},
+["paddingX"] = 1,
 ["paddingY"] = 2,
 },
 ["raidBar2"] = {
@@ -272,17 +274,20 @@ OmniCDDB = {
 ["statusBarWidth"] = 240,
 },
 },
+["manualPos"] = {
+["raidCDBar2"] = {
+["y"] = 276,
+["x"] = 276.6666666666666,
+},
+},
+["position"] = {
+["offsetX"] = 2,
+},
 ["general"] = {
 ["zoneSelected"] = "party",
 ["showPlayer"] = true,
 ["showPlayerEx"] = false,
 ["showRange"] = true,
-},
-["position"] = {
-["offsetX"] = 2,
-},
-["highlight"] = {
-["glowBuffs"] = false,
 },
 ["priority"] = {
 ["offensive"] = 9,
@@ -292,15 +297,12 @@ OmniCDDB = {
 ["counterScale"] = 0.7,
 ["showForbearanceCounter"] = false,
 ["scale"] = 0.96,
-["desaturateActive"] = true,
-["markEnhanced"] = false,
 ["chargeScale"] = 0.9,
+["markEnhanced"] = false,
+["desaturateActive"] = true,
 },
-["manualPos"] = {
-["raidCDBar2"] = {
-["y"] = 276,
-["x"] = 276.6666666666666,
-},
+["highlight"] = {
+["glowBuffs"] = false,
 },
 },
 },
@@ -325,8 +327,8 @@ OmniCDDB = {
 },
 ["manualPos"] = {
 ["raidBar4"] = {
-["y"] = 504.9999937857174,
-["x"] = 937.9999187121721,
+["y"] = 510,
+["x"] = 1182.666666666667,
 },
 },
 ["scale"] = 0.9199999999999999,
@@ -345,8 +347,8 @@ OmniCDDB = {
 },
 ["manualPos"] = {
 ["raidBar3"] = {
-["y"] = 410,
-["x"] = 938,
+["y"] = 414,
+["x"] = 1182.666666666667,
 },
 },
 ["scale"] = 0.94,
@@ -360,8 +362,8 @@ OmniCDDB = {
 ["locked"] = true,
 ["manualPos"] = {
 ["raidBar1"] = {
-["y"] = 433,
-["x"] = 196,
+["y"] = 438,
+["x"] = 432.6666666666666,
 },
 },
 ["scale"] = 0.65,
@@ -399,8 +401,8 @@ OmniCDDB = {
 ["scale"] = 0.8,
 ["manualPos"] = {
 ["raidBar2"] = {
-["y"] = 297,
-["x"] = 196,
+["y"] = 300,
+["x"] = 432.6666666666666,
 },
 },
 ["showName"] = false,
@@ -438,13 +440,13 @@ OmniCDDB = {
 },
 ["frame"] = {
 ["disarm"] = 3,
-["cc"] = 3,
-["counterCC"] = 3,
-["externalDefensive"] = 0,
 ["aoeCC"] = 3,
+["cc"] = 3,
+["immunity"] = 4,
+["externalDefensive"] = 0,
 ["defensive"] = 2,
 ["raidDefensive"] = 0,
-["immunity"] = 4,
+["counterCC"] = 3,
 },
 },
 ["raid"] = {
@@ -458,15 +460,15 @@ OmniCDDB = {
 },
 ["manualPos"] = {
 ["raidBar0"] = {
-["y"] = 184,
-["x"] = 404,
+["y"] = 186,
+["x"] = 642.6666666666666,
 },
 },
 ["reverseFill"] = false,
 ["locked"] = true,
 ["sortBy"] = 1,
 ["scale"] = 0.65,
-["statusBarWidth"] = 238,
+["statusBarWidth"] = 240,
 },
 ["raidBar1"] = {
 ["truncateIconName"] = 3,
@@ -497,14 +499,14 @@ OmniCDDB = {
 ["counterCC"] = false,
 },
 ["scale"] = 1,
+["columns"] = 20,
+["sortBy"] = 4,
 ["manualPos"] = {
 ["raidBar1"] = {
-["y"] = 243,
-["x"] = 285,
+["y"] = 246,
+["x"] = 522.6666666666666,
 },
 },
-["sortBy"] = 4,
-["columns"] = 20,
 },
 ["raidBar2"] = {
 ["truncateIconName"] = 3,
@@ -515,8 +517,8 @@ OmniCDDB = {
 ["sortDirection"] = "dsc",
 ["manualPos"] = {
 ["raidBar2"] = {
-["y"] = 267,
-["x"] = 315,
+["y"] = 270,
+["x"] = 552.6666666666666,
 },
 },
 ["scale"] = 1,
@@ -527,11 +529,11 @@ OmniCDDB = {
 ["columns"] = 20,
 },
 },
-["general"] = {
-["showPlayerEx"] = false,
-["showPlayer"] = true,
-["zoneSelected"] = "party",
-["showRange"] = true,
+["manualPos"] = {
+["raidCDBar2"] = {
+["y"] = 276,
+["x"] = 276.6666666666666,
+},
 },
 ["icons"] = {
 ["counterScale"] = 0.7,
@@ -550,14 +552,14 @@ OmniCDDB = {
 ["offensive"] = 9,
 ["immunity"] = 12,
 },
+["general"] = {
+["showPlayerEx"] = false,
+["showPlayer"] = true,
+["zoneSelected"] = "party",
+["showRange"] = true,
+},
 ["highlight"] = {
 ["glowBuffs"] = false,
-},
-["manualPos"] = {
-["raidCDBar2"] = {
-["y"] = 273,
-["x"] = 42,
-},
 },
 },
 ["visibility"] = {
