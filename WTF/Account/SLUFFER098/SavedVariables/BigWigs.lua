@@ -67,12 +67,12 @@ nil,
 ["textGrowDirection"] = "LEFT",
 ["textOutline"] = "OUTLINE",
 ["iconFontSize"] = 8,
-["iconFontName"] = "- ToxiUI",
 ["textOffsetY"] = 5,
-["iconOffsetX"] = 10,
-["iconGlowPixelLines"] = 6,
-["iconGlowFrequency"] = 0.3500000000000001,
 ["iconHeight"] = 12,
+["iconOffsetX"] = 10,
+["iconGlowFrequency"] = 0.3500000000000001,
+["iconGlowPixelLines"] = 6,
+["iconFontName"] = "- ToxiUI",
 },
 },
 },
@@ -94,8 +94,10 @@ nil,
 ["fontName"] = "- M 700",
 ["alignText"] = "RIGHT",
 ["spacing"] = 5,
-["texture"] = "- Tx Left",
+["fontSize"] = 16,
 ["visibleBarLimitEmph"] = 4,
+["normalHeight"] = 26,
+["emphasizeTime"] = 10,
 ["expPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -103,9 +105,7 @@ nil,
 130,
 "ElvUF_Target",
 },
-["emphasizeTime"] = 10,
-["normalHeight"] = 26,
-["fontSize"] = 16,
+["texture"] = "- Tx Left",
 ["normalPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -116,9 +116,13 @@ nil,
 },
 },
 },
-["BigWigs_Plugins_BossBlock"] = {
+["BigWigs_Plugins_AutoReply"] = {
 },
 ["BigWigs_Plugins_InfoBox"] = {
+},
+["BigWigs_Plugins_Raid Icons"] = {
+},
+["BigWigs_Plugins_Proximity"] = {
 },
 ["BigWigs_Plugins_Messages"] = {
 ["profiles"] = {
@@ -145,13 +149,9 @@ nil,
 },
 },
 },
-["BigWigs_Plugins_Proximity"] = {
-},
-["BigWigs_Plugins_Raid Icons"] = {
-},
 ["BigWigs_Plugins_Pull"] = {
 },
-["BigWigs_Plugins_AutoReply"] = {
+["BigWigs_Plugins_BossBlock"] = {
 },
 },
 ["profileKeys"] = {
@@ -159,8 +159,8 @@ nil,
 ["Sakonako - Arathor"] = "ToxiUI",
 ["Xambank - Ner'zhul"] = "ToxiUI",
 ["Faelaena - Ner'zhul"] = "ToxiUI",
-["Shantyclause - Ner'zhul"] = "ToxiUI",
 ["Xamuul - Ner'zhul"] = "ToxiUI",
+["Shantyclause - Ner'zhul"] = "ToxiUI",
 ["Yushien - Ner'zhul"] = "ToxiUI",
 },
 ["profiles"] = {

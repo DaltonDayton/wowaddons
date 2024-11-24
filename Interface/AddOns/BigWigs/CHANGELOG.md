@@ -1,6 +1,10 @@
 # BigWigs
 
-## [v367.3](https://github.com/BigWigsMods/BigWigs/tree/v367.3) (2024-11-12)
-[Full Changelog](https://github.com/BigWigsMods/BigWigs/compare/v367.2...v367.3) [Previous Releases](https://github.com/BigWigsMods/BigWigs/releases)
+## [v368.1](https://github.com/BigWigsMods/BigWigs/tree/v368.1) (2024-11-21)
+[Full Changelog](https://github.com/BigWigsMods/BigWigs/compare/v368...v368.1) [Previous Releases](https://github.com/BigWigsMods/BigWigs/releases)
 
-- NerubarPalace/Ansurek: Update for mythic changes  
+- NerubarPalace: Update option files  
+- bump version  
+- Plugins/Statistics: Make sure to flag hardcore fresh as hardcore stats  
+- Plugins/Countdown: Tweak  
+- NerubarPalace/TheSilkenCourt: Add sounds for Piercing Strike and a debuff warning  

@@ -1,8 +1,8 @@
 <div align="center">
 <img width="512" alt="Título" src="https://raw.githubusercontent.com/wind-addons/resources/main/dist/addons/elvui-windtools/logo.svg"/><br><br>
 
-![Versión](https://img.shields.io/badge/Version-3.86-538AED.svg?longCache=true&style=for-the-badge)
-![Versión ElvUI](https://img.shields.io/badge/ElvUI-13.80-ff784d.svg?longCache=true&style=for-the-badge)
+![Versión](https://img.shields.io/badge/Version-3.87-538AED.svg?longCache=true&style=for-the-badge)
+![Versión ElvUI](https://img.shields.io/badge/ElvUI-13.81-ff784d.svg?longCache=true&style=for-the-badge)
 
 [![Discord](https://img.shields.io/discord/747075771213807707?color=7289DA&label=DISCORD&logo=discord&style=for-the-badge)](https://discord.gg/CMDsBmhvyW) [![Estrellas en GitHub](https://img.shields.io/github/stars/wind-addons/ElvUI_WindTools?style=for-the-badge&label=Estrellas%20en%20GitHub%20%E2%AD%90&logo=github&color=yellow)](https://github.com/wind-addons/ElvUI_WindTools)
 
@@ -20,6 +20,10 @@
 ## 💝 Donar
 
 [![Patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://patreon.com/fang2hou) [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](http://paypal.me/fang2h0u) [![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/fang2hou) [![Patrocinadores de GitHub](https://img.shields.io/badge/Patrocinar-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA)](https://github.com/sponsors/fang2hou)
+
+**BTC**: `bc1pezz99sk9c4sjl2qhx2lwflqe0lqrdnan8fyd68x4lyfm8tfch44q5ccj37`<br>
+**ETH**: `0x856beeca9fbb4744a0649b11cf52342d5af9c900`<br>
+**SOL**: `3ZxmGzvZ1inVB41AdiNArnweCQmKYcn3i91GGiPqQvLs`
 
 ## 🌍 Localización
 

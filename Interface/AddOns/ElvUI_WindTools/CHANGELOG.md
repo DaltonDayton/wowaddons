@@ -1,55 +1,65 @@
-# Version: 3.86
-2024/11/16 Released
+# Version: 3.87
+2024/11/22 Released
 ## ❗ Important
-- Added [Guild News Update Fix] in [Advanced], enabled by default, expected to significantly increase the game frame rate of characters with a large number of guild members. Thanks to 老李三鹿李@NGA
-- Partial code cleanup.
+- In [Information], now will show the name of donors who donate more than 30 CNY (5 USD).
+- Code cleanup.
+- Update localizations.
+## ✳️ New
+- [Advanced] Add a new CLEU event enhancement feature, which can get more detailed information when using /etrace. Thanks DakJaniels
 ## 💪 Improvement
-- [Extra Item Bar] Updated item list. Thanks to mcc1
-- [Skins] When SuperTracker is enabled, the search box of RareScanner will be arranged together with the waypoint input box of SuperTracker and get a brand new style.
-- [Skins] The bar background of OmniCD skin will now automatically hide with OmniCD's hide border option.
+- Optimize all font style settings in the settings.
+- [Skin] Optimized the stability of the OmniCD skin on old versions.
 
 ------
-# 版本: 3.86
-2024/11/16 发布
+# 版本: 3.87
+2024/11/22 发布
 ## ❗ 重要
-- 在 [高级] 中新增了 [公会新闻更新修复]，默认开启，预计能大幅提升在公会人数非常多的角色的游戏帧数。感谢 老李三鹿李@NGA
-- 部分代码清理。
+- 在 [信息] 中，现在会展示大于 30 CNY (5 USD) 捐助者的姓名。
+- 代码整理。
+- 本地化文本更新。
+## ✳️ 新增
+- [高级] 新增一个高级战斗日志事件增强功能，可在使用 /etrace 时获取更加详细的信息。感谢 DakJaniels
 ## 💪 改善
-- [额外物品条] 更新了物品列表。感谢 mcc1
-- [美化皮肤] 在启用超级追踪时，RareScanner的搜索框将会和超级追踪的搜索框排列在一起并获得全新的风格美化。
-- [美化皮肤] OmniCD 美化皮肤的条背景现在会跟随 OmniCD 的隐藏边框选项自动隐藏了。
+- 优化了设定中全部有关于字体风格的设定项目。
+- [美化皮肤] 优化了 OmniCD 皮肤在旧版本上的稳定性。
 
 ------
-# 版本: 3.86
-2024/11/16 發布
+# 版本: 3.87
+2024/11/22 發布
 ## ❗ 重要
-- 在 [進階] 中新增了 [公會新聞更新修復]，默認開啓，預計能大幅提升在公會人數非常多的角色的遊戲幀數。感謝 老李三鹿李@NGA
-- 部分代碼清理。
+- 在 [信息] 中，現在會展示大於 30 CNY (5 USD) 捐助者的姓名。
+- 代碼整理。
+- 本地化文本更新。
+## ✳️ 新增
+- [進階] 新增一個進階戰鬥日誌事件增強功能，可在使用 /etrace 時獲取更加詳細的訊息。感謝 DakJaniels
 ## 💪 改善
-- [額外物品條] 更新了物品列表。感謝 mcc1
-- [美化皮膚] 在啟用超級追踪時，RareScanner的搜索框將會和超級追踪的搜索框排列在一起並獲得全新的風格美化。
-- [美化皮膚] OmniCD 美化皮膚的條背景現在會跟隨 OmniCD 的隱藏邊框選項自動隱藏了。
+- 優化了設定中全部有關於字體風格的設定項目。
+- [美化皮膚] 優化了 OmniCD 皮膚在舊版本上的穩定性。
 
 ------
-# 버전: 3.86
-2024/11/16 Released
+# 버전: 3.87
+2024/11/22 Released
 ## ❗ 중요 사항
-- [고급]에 [Guild News Update Fix]을 추가했습니다. 기본적으로 활성화되며, 길드 멤버가 많은 캐릭터의 게임 프레임 속도를 크게 향상시킬 것으로 예상됩니다. 감사합니다. 老李三鹿李@NGA
-- 일부 코드 정리.
+- [정보]에서 30 CNY (5 USD) 이상 기부한 기부자의 이름이 표시됩니다.
+- 코드 정리.
+- 로컬라이제이션 업데이트.
+## ✳️ 신규 사항
+- [고급] /etrace 사용 시 더 자세한 정보를 얻을 수 있는 새로운 CLEU 이벤트 향상 기능 추가. 감사합니다 DakJaniels
 ## 💪 개선 사항
-- [추가 아이템 바] 아이템 목록을 업데이트했습니다. mcc1에게 감사드립니다.
-- [스킨] SuperTracker가 활성화되어 있을 때 RareScanner의 검색 상자가 SuperTracker의 웨이포인트 입력 상자와 함께 배열되고 새로운 스타일을 얻습니다.
-- [스킨] OmniCD 스킨의 바 배경은 이제 OmniCD의 테두리 숨김 옵션과 함께 자동으로 숨겨집니다.
+- 설정에서 모든 글꼴 스타일 설정을 최적화했습니다.
+- [스킨] 이전 버전에서 OmniCD 스킨의 안정성을 최적화했습니다.
 
 ------
-# Версия: 3.86
-2024/11/16 Релиз
+# Версия: 3.87
+2024/11/22 Релиз
 ## ❗ Важные
-- Добавлено [Guild News Update Fix] в [Расширенные], включено по умолчанию, ожидается значительное увеличение частоты кадров игры у персонажей с большим количеством членов гильдии. Спасибо 老李三鹿李@NGA
-- Частичная очистка кода.
+- В [Информации] теперь будет отображаться имя доноров, которые пожертвовали более 30 CNY (5 USD).
+- Очистка кода.
+- Обновление локализации.
+## ✳️ Новые
+- [Продвинутый] Добавлена новая функция улучшения событий CLEU, которая позволяет получать более подробную информацию при использовании /etrace. Спасибо DakJaniels
 ## 💪 Улучшения
-- [Дополнительная панель предметов] Обновлен список предметов. Спасибо mcc1.
-- [Скин] Когда включен SuperTracker, поле поиска RareScanner будет расположено вместе с полем ввода путевой точки SuperTracker и получит совершенно новый стиль.
-- [Скин] Фон панели скина OmniCD теперь автоматически скрывается с опцией скрытия границ OmniCD.
+- Оптимизированы все настройки стиля шрифта в настройках.
+- [Скин] Оптимизирована стабильность скина OmniCD на старых версиях.
 
 ------

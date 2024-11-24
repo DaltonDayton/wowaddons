@@ -128,7 +128,21 @@ options.gameFix = {
 				E.global.WT.core.guildNewsUpdateFix = value
 			end,
 			width = "full",
-		}
+		},
+		advancedCLEUEventTrace = {
+			order = 3,
+			type = "toggle",
+			name = L["Advanced CLEU Event Trace"],
+			desc = L["Enhanced Combat Log Events in /etrace frame."],
+			get = function(info)
+				return E.global.WT.core.advancedCLEUEventTrace
+			end,
+			set = function(info, value)
+				E.global.WT.core.advancedCLEUEventTrace = value
+				E:StaticPopup_Show("PRIVATE_RL")
+			end,
+			width = "full",
+		},
 	},
 }
 
