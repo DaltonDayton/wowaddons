@@ -5224,9 +5224,6 @@ function Plater.OnInit() --private --~oninit ~init
 					self.Spark:SetAlpha (profile.cast_statusbar_spark_alpha)
 					PixelUtil.SetSize(self.Spark, profile.cast_statusbar_spark_width, self:GetHeight())
 
-					--cut the spell name text to fit within the castbar
-					Plater.UpdateSpellNameSize (self.Text, unitFrame.ActorType, nil, isInCombat)
-
 					Plater.UpdateCastbarTargetText (self)
 
 					--castbar icon
@@ -5281,6 +5278,9 @@ function Plater.OnInit() --private --~oninit ~init
 					end
 
 					self.Text:SetText(self.SpellNameRenamed)
+					
+					--cut the spell name text to fit within the castbar
+					Plater.UpdateSpellNameSize (self.Text, unitFrame.ActorType, nil, isInCombat)
 					
 					-- in some occasions channeled casts don't have a CLEU entry... check this here
 					if (unitFrame.ActorType == "enemynpc" and event == "UNIT_SPELLCAST_CHANNEL_START" and (not DB_CAPTURED_SPELLS[self.spellID] or DB_CAPTURED_SPELLS[self.spellID].isChanneled == nil)) then
@@ -7732,7 +7732,7 @@ end
 			end
 		end
 		
-		while (nameString:GetStringWidth() > maxLength) do
+		while (nameString:GetUnboundedStringWidth() > maxLength) do
 			spellName = strsub (spellName, 1, #spellName - 1)
 			nameString:SetText (spellName)
 			if (string.len (spellName) <= 1) then
@@ -7781,7 +7781,7 @@ end
 			return
 		end
 		
-		while (nameString:GetStringWidth() > stringSize) do
+		while (nameString:GetUnboundedStringWidth() > stringSize) do
 			name = strsub (name, 1, #name-1)
 			nameString:SetText (name)
 			if (string.len (name) <= 1) then
@@ -10493,7 +10493,7 @@ end
 			return
 		end
 		
-		while (fontString:GetStringWidth() > maxWidth) do
+		while (fontString:GetUnboundedStringWidth() > maxWidth) do
 			text = strsub (text, 1, #text - 1)
 			fontString:SetText (text)
 			if (string.len (text) <= 1) then

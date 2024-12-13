@@ -183,12 +183,16 @@ L["Right Click To Close UI"] = "Right Click To Close UI";
 L["Right Click To Close UI Desc"] = "Right click on the dialogue UI to close it.";
 L["Press Tab To Select Reward"] = "Press Tab To Select Reward";
 L["Press Tab To Select Reward Desc"] = "Press [KEY:PC:TAB] to cycle through choosable rewards when you turn in the quest.";
+L["Disable Hokey For Teleport"] = "Disable Hokey For Teleport";
+L["Disable Hokey For Teleport Desc"] = "Disable the hotkeys when you are choosing a teleport destination.";
 L["Experimental Features"] = "Experimental";
 L["Emulate Swipe"] = "Emulate Swipe Gesture";
 L["Emulate Swipe Desc"] = "Scroll the dialogue UI up/down by clicking and dragging on the window.";
 L["Mobile Device Mode"] = "Mobile Device Mode";
 L["Mobile Device Mode Desc"] = "Experimental Feature:\n\nIncreases UI and font size to make texts readable on small-screen devices.";
 L["Mobile Device Mode Override Option"] = "This option currently has no effect because you have enabled \"Mobile Device Mode\" in Control.";
+L["GamePad Click First Object"] = "Click First Option";
+L["GamePad Click First Object Desc"] = "When starting a new interaction with an NPC, press the Confirm Button to click the first dialogue option.";
 
 L["Key Space"] = "Space";
 L["Key Interact"] = "Interact";

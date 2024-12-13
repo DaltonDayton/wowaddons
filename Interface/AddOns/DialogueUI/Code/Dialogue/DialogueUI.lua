@@ -709,9 +709,11 @@ end
 
 function DUIDialogBaseMixin:UseQuestLayout(state)
     local forceUpdate = SETTINGS_UI_VISIBLE == true;
+    local isQuestChanged;
 
     if state then
         local questID = GetQuestID();
+        isQuestChanged = self.questID ~= questID;
         self.questID = questID;
 
         if (not self.questLayout) or forceUpdate then
@@ -758,6 +760,8 @@ function DUIDialogBaseMixin:UseQuestLayout(state)
         self.WarbandCompleteAlert:Hide();
         CallbackRegistry:Trigger("StopViewingQuest");
     end
+
+    return isQuestChanged
 end
 
 function DUIDialogBaseMixin:UpdateQuestTitle(method)
@@ -810,7 +814,7 @@ function DUIDialogBaseMixin:UpdateQuestTitle(method)
             HeaderWidgetManger:AddQuestRemainingTime(seconds);
         end
 
-        HeaderWidgetManger:RequestQuestLineQuest(questID, 0);
+        HeaderWidgetManger:RequestQuestLineQuest(questID);
     end
 
     local decor = API.GetQuestBackgroundDecor(questID);
@@ -1090,6 +1094,10 @@ function DUIDialogBaseMixin:HandleGossip()
     if self:IsGossipHandledExternally() then
         if self:IsShown() then
             CallbackRegistry:Trigger("PlayerInteraction.ShowUI", true);
+            self.interactionIsContinuing = true;
+            self:Hide();
+        else
+            self.interactionIsContinuing = nil;
         end
         return false
     end
@@ -1118,6 +1126,8 @@ function DUIDialogBaseMixin:HandleGossip()
         end
     end
     --]]
+
+    local autoCompleteQuest = GetDBBool("AutoCompleteQuest");
 
     if HandleAutoSelect(options, activeQuests, availableQuests, anyOption, anyActiveQuest, anyAvailableQuest, numAvailableQuests) then
         return false
@@ -1166,6 +1176,11 @@ function DUIDialogBaseMixin:HandleGossip()
     local hotkeyIndex = 0;
     local hotkey;
 
+    local enableGossipHotkey = anyOption and (not INPUT_DEVICE_GAME_PAD);
+    if GetDBBool("DisableHotkeyForTeleport") then
+        enableGossipHotkey = enableGossipHotkey and GossipDataProvider:IsGossipHotkeyEnabled();
+    end
+
     local anyNewOrCompleteQuest = anyAvailableQuest;
     if not anyNewOrCompleteQuest then
         for i, questInfo in ipairs(activeQuests) do
@@ -1196,7 +1211,11 @@ function DUIDialogBaseMixin:HandleGossip()
         if hintGossipData then
             hotkeyIndex = hotkeyIndex + 1;
             button = self:AcquireOptionButton();
-            hotkey = KeyboardControl:SetKeyButton(hotkeyIndex, button);
+            if enableGossipHotkey then
+                hotkey = KeyboardControl:SetKeyButton(hotkeyIndex, button);
+            else
+                hotkey = nil;
+            end
             button:SetGossipHint(hintGossipData, hotkey);
             local spacing = -PARAGRAPH_SPACING;
             button:SetPoint("TOPLEFT", lastObject, "BOTTOMLEFT", 0, spacing);
@@ -1206,7 +1225,11 @@ function DUIDialogBaseMixin:HandleGossip()
         for i, data in ipairs(options) do
             hotkeyIndex = hotkeyIndex + 1;
             button = self:AcquireOptionButton();
-            hotkey = KeyboardControl:SetKeyButton(hotkeyIndex, button);
+            if enableGossipHotkey then
+                hotkey = KeyboardControl:SetKeyButton(hotkeyIndex, button);
+            else
+                hotkey = nil;
+            end
             button:SetGossip(data, hotkey);
 
             if i == 1 and not hintGossipData then
@@ -1306,7 +1329,11 @@ function DUIDialogBaseMixin:HandleGossip()
         if hintGossipData then
             hotkeyIndex = hotkeyIndex + 1;
             button = self:AcquireOptionButton();
-            hotkey = KeyboardControl:SetKeyButton(hotkeyIndex, button);
+            if enableGossipHotkey then
+                hotkey = KeyboardControl:SetKeyButton(hotkeyIndex, button);
+            else
+                hotkey = nil;
+            end
             button:SetGossipHint(hintGossipData, hotkey);
             local spacing = (anyQuest and -PARAGRAPH_BUTTON_SPACING) or -PARAGRAPH_SPACING;
             button:SetPoint("TOPLEFT", lastObject, "BOTTOMLEFT", 0, spacing);
@@ -1316,7 +1343,11 @@ function DUIDialogBaseMixin:HandleGossip()
         for i, data in ipairs(options) do
             hotkeyIndex = hotkeyIndex + 1;
             button = self:AcquireOptionButton();
-            hotkey = KeyboardControl:SetKeyButton(hotkeyIndex, button);
+            if enableGossipHotkey then
+                hotkey = KeyboardControl:SetKeyButton(hotkeyIndex, button);
+            else
+                hotkey = nil;
+            end
             button:SetGossip(data, hotkey);
 
             if i == 1 and not hintGossipData then
@@ -1376,7 +1407,8 @@ end
 
 function DUIDialogBaseMixin:HandleQuestDetail(playFadeIn)
     self:ReleaseAllObjects();
-    self:UseQuestLayout(true);
+    local isQuestChanged = self:UseQuestLayout(true);
+    playFadeIn = playFadeIn or isQuestChanged;
 
     if self.handlerArgs and self.handlerArgs[1] and self.handlerArgs[1] ~= 0 then
         local questStartItemID = self.handlerArgs[1];
@@ -1387,7 +1419,7 @@ function DUIDialogBaseMixin:HandleQuestDetail(playFadeIn)
     end
 
 
-    local fs, text;
+    local text;
 
     --Title
     local offsetY = self:UpdateQuestTitle("Detail");
@@ -1438,7 +1470,6 @@ function DUIDialogBaseMixin:HandleQuestDetail(playFadeIn)
     else
         self.FrontFrame.QuestPortrait:FadeOut();
     end
-
 
     --Rewards
     local rewardList;
@@ -1516,7 +1547,8 @@ end
 
 function DUIDialogBaseMixin:HandleQuestProgress(playFadeIn)
     self:ReleaseAllObjects();
-    self:UseQuestLayout(true);
+    local isQuestChanged = self:UseQuestLayout(true);
+    playFadeIn = playFadeIn or isQuestChanged;
 
     local canComplete = IsQuestCompletable();
     if canComplete and GetDBBool("AutoCompleteQuest") then
@@ -1655,7 +1687,8 @@ function DUIDialogBaseMixin:HandleQuestComplete(playFadeIn)
         end
     end
 
-    self:UseQuestLayout(true);
+    local isQuestChanged = self:UseQuestLayout(true);
+    playFadeIn = playFadeIn or isQuestChanged;
 
     --Title
     local offsetY = self:UpdateQuestTitle("Complete");
@@ -1738,7 +1771,6 @@ function DUIDialogBaseMixin:HandleQuestGreeting()
 
 
     local numActiveQuests = GetNumActiveQuests();
-    local autoCompleteQuest = GetDBBool("AutoCompleteQuest");
 
     for i = 1, numActiveQuests do
         questIndex = questIndex + 1;
@@ -2222,16 +2254,16 @@ function DUIDialogBaseMixin:OnShow()
 end
 
 function DUIDialogBaseMixin:CloseDialogInteraction()
+    if self.interactionIsContinuing then
+        self.interactionIsContinuing = nil;
+        return
+    end
+
     CloseQuest();
     CloseGossipInteraction();
 
     --Classic:
     --HideUI will cause ClassTrainerFrame to not processing events (Blizzard_TrainerUI/Blizzard_TrainerUI.lua#72)
-end
-
-function DUIDialogBaseMixin:SetInteractionIsContinuing(interactionIsContinuing)
-    --Not used
-	self.interactionIsContinuing = true;    --?
 end
 
 function DUIDialogBaseMixin:OnHide()
@@ -3013,6 +3045,13 @@ do  --GamePad/Controller
         if self.gamepadFocus then
             self.gamepadFocus:OnClick("GamePad");
             return true
+        else
+            --Select the next object widthout clicking it if we don't have a focus (usually when starting a fresh interaction)
+            self:FocusNextObject();
+            if self.gamepadFocus and GetDBBool("GamePadClickFirstObject") then
+                self.gamepadFocus:OnClick("GamePad");
+                return true
+            end
         end
         return false
     end
@@ -3252,6 +3291,7 @@ do
     CallbackRegistry:Register("SettingChanged.ForceGossip", GenericOnSettingsChanged);
     CallbackRegistry:Register("SettingChanged.AutoSelectGossip", GenericOnSettingsChanged);
     CallbackRegistry:Register("SettingChanged.ShowDialogHint", GenericOnSettingsChanged);
+    CallbackRegistry:Register("SettingChanged.DisableHotkeyForTeleport", GenericOnSettingsChanged);
 
 
     local function SettingsUI_Show()

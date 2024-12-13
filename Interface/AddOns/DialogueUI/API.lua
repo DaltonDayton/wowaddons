@@ -13,6 +13,7 @@ local LOCALE = GetLocale and GetLocale() or "enUS";
 
 local function AlwaysNil(arg)
 end
+API.Nop = AlwaysNil;
 
 local function AlwaysFalse(arg)
     --used to replace non-existent API in Classic
@@ -428,6 +429,8 @@ end
 do  -- NPC Interaction
     local SetUnitCursorTexture = SetUnitCursorTexture;
     local UnitExists = UnitExists;
+    local UnitName = UnitName;
+    local UnitGUID = UnitGUID;
 
     local f = CreateFrame("Frame");
     f.texture = f:CreateTexture();
@@ -687,7 +690,8 @@ do  -- NPC Interaction
     local match = string.match;
 
     local function GetCreatureIDFromGUID(guid)
-        local id = match(guid, "Creature%-0%-%d*%-%d*%-%d*%-(%d*)");
+        --Including Creature, Vehicle, GameObject
+        local id = guid and match(guid, "^%a+%-0%-%d*%-%d*%-%d*%-(%d*)");
         if id then
             return tonumber(id)
         end
@@ -695,9 +699,10 @@ do  -- NPC Interaction
     API.GetCreatureIDFromGUID = GetCreatureIDFromGUID;
 
     local function GetCurrentNPCInfo()
-        if UnitExists("npc") then
-            local name = UnitName("npc");
-            local creatureID = GetCreatureIDFromGUID(UnitGUID("npc"));
+        local name = UnitName("npc");
+        local creatureID = GetCreatureIDFromGUID(UnitGUID("npc"));
+        if creatureID then
+            name = name or "";
             return name, creatureID
         end
     end
@@ -3071,6 +3076,13 @@ do  -- System
         end
     end
     API.RemoveQuestObjectiveTrackerQuestPopUp = RemoveQuestObjectiveTrackerQuestPopUp;
+end
+
+do  -- Zone -- Location -- Area
+    local function GetZoneName(areaID)
+        return C_Map.GetAreaInfo(areaID)
+    end
+    API.GetZoneName = GetZoneName;
 end
 
 do  -- Dev Tool

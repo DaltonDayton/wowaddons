@@ -67,8 +67,8 @@ nil,
 ["textGrowDirection"] = "LEFT",
 ["textOutline"] = "OUTLINE",
 ["iconFontSize"] = 8,
-["textOffsetY"] = 5,
 ["iconHeight"] = 12,
+["textOffsetY"] = 5,
 ["iconOffsetX"] = 10,
 ["iconGlowFrequency"] = 0.3500000000000001,
 ["iconGlowPixelLines"] = 6,
@@ -122,8 +122,6 @@ nil,
 },
 ["BigWigs_Plugins_Raid Icons"] = {
 },
-["BigWigs_Plugins_Proximity"] = {
-},
 ["BigWigs_Plugins_Messages"] = {
 ["profiles"] = {
 ["ToxiUI"] = {
@@ -148,6 +146,8 @@ nil,
 },
 },
 },
+},
+["BigWigs_Plugins_Proximity"] = {
 },
 ["BigWigs_Plugins_Pull"] = {
 },

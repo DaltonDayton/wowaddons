@@ -68,11 +68,11 @@ nil,
 ["textOutline"] = "OUTLINE",
 ["iconFontSize"] = 8,
 ["iconFontName"] = "- ToxiUI",
-["iconHeight"] = 12,
+["textOffsetY"] = 5,
 ["iconOffsetX"] = 10,
 ["iconGlowPixelLines"] = 6,
 ["iconGlowFrequency"] = 0.3500000000000001,
-["textOffsetY"] = 5,
+["iconHeight"] = 12,
 },
 },
 },
@@ -120,8 +120,6 @@ nil,
 },
 ["BigWigs_Plugins_InfoBox"] = {
 },
-["BigWigs_Plugins_Proximity"] = {
-},
 ["BigWigs_Plugins_Messages"] = {
 ["profiles"] = {
 ["ToxiUI"] = {
@@ -146,6 +144,8 @@ nil,
 },
 },
 },
+},
+["BigWigs_Plugins_Proximity"] = {
 },
 ["BigWigs_Plugins_Raid Icons"] = {
 },

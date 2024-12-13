@@ -6,7 +6,7 @@ WarpDepleteDB = {
 ["Sakonako - Arathor"] = "ToxiUI",
 ["Xenoth - Ner'zhul"] = "Default",
 ["Xavaat - Ner'zhul"] = "ToxiUI",
-["Zaldrysa - Ner'zhul"] = "Default",
+["Shantyclause - Ner'zhul"] = "ToxiUI",
 ["Yushien - Ner'zhul"] = "ToxiUI",
 ["Kariq - Ner'zhul"] = "Default",
 ["Bibia - Arathor"] = "Default",
@@ -15,7 +15,7 @@ WarpDepleteDB = {
 ["Xambank - Ner'zhul"] = "ToxiUI",
 ["Xamuul - Ner'zhul"] = "ToxiUI",
 ["Oridioneer - Arathor"] = "Default",
-["Shantyclause - Ner'zhul"] = "ToxiUI",
+["Zaldrysa - Ner'zhul"] = "Default",
 },
 ["global"] = {
 ["mdtAlertShown"] = true,
