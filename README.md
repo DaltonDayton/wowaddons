@@ -1,5 +1,10 @@
 REVIEW this before running
 
+# Windows
+1. Run `windows_install.ps1`
+2. May need to download ElvUI from their site directly and overwrite `ElvUI`, `ElvUI_Libraries`, `ElvUI_Options`
+
+# Linux
 1. Run `install.sh`
 2. Paste the path to your `_retail_` folder. eg: `World of Warcraft/_retail_`. No need to escape spaces or use quotes.
 3. Run `git submodule init` then `git submodule update`
