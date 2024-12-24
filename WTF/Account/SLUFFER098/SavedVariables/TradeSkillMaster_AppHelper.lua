@@ -8,11 +8,6 @@ TradeSkillMaster_AppHelperDB = {
 },
 ["updateTime"] = 0,
 },
-["fullScan"] = {
-["data"] = {
-},
-["updateTime"] = 0,
-},
 ["analytics"] = {
 ["data"] = {
 "[\"AC\",\"v4.14.22\",1734120429111,0,1,\"ADDON_INITIALIZE\",1]",
@@ -41,7 +36,22 @@ TradeSkillMaster_AppHelperDB = {
 "[\"AC\",\"v4.14.22\",1734999461862,0,5,\"UI_NAVIGATION\",\"mailing/inbox\",\"\"]",
 "[\"AC\",\"v4.14.24\",1735000018033,0,1,\"ADDON_INITIALIZE\",0]",
 "[\"AC\",\"v4.14.24\",1735000024593,0,2,\"ADDON_ENABLE\",0]",
+"[\"AC\",\"v4.14.24\",1735000375167,0,1,\"ADDON_INITIALIZE\",1]",
+"[\"AC\",\"v4.14.24\",1735000381531,0,2,\"ADDON_ENABLE\",0]",
+"[\"AC\",\"v4.14.24\",1735000411059,0,3,\"UI_NAVIGATION\",\"\",\"auction\"]",
+"[\"AC\",\"v4.14.24\",1735000411073,0,4,\"UI_NAVIGATION\",\"auction\",\"auction/auctioning\"]",
+"[\"AC\",\"v4.14.24\",1735000411074,0,5,\"UI_NAVIGATION\",\"auction/auctioning\",\"auction/auctioning/selection\"]",
+"[\"AC\",\"v4.14.24\",1735000411284,0,6,\"AH_API_TIME\",\"US-Ner'zhul\",\"QueryOwnedAuctions\",76]",
+"[\"AC\",\"v4.14.24\",1735000414185,0,7,\"UI_NAVIGATION\",\"auction/auctioning/selection\",\"auction/my_auctions\"]",
+"[\"AC\",\"v4.14.24\",1735000416902,0,8,\"UI_NAVIGATION\",\"auction/my_auctions\",\"auction/auctioning\"]",
+"[\"AC\",\"v4.14.24\",1735000416902,0,9,\"UI_NAVIGATION\",\"auction/auctioning\",\"auction/auctioning/selection\"]",
+"[\"AC\",\"v4.14.24\",1735000418434,0,10,\"UI_NAVIGATION\",\"auction/auctioning/selection\",\"\"]",
 },
-["updateTime"] = 1735000024.593534,
+["updateTime"] = 1735000418.434452,
+},
+["fullScan"] = {
+["data"] = {
+},
+["updateTime"] = 0,
 },
 }
