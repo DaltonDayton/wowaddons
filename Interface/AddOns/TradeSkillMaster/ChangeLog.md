@@ -1,5 +1,5 @@
-## v4.14.22 Changes
+## v4.14.24 Changes
 
-* [All] Fixed issue with gold tracking from previous version
+* [All] Fixed error on logout
 
 [Known Issues](https://support.tradeskillmaster.com/en_US/known_issues)

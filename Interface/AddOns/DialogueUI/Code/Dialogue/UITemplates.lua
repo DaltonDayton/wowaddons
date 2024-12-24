@@ -7,9 +7,9 @@ local TooltipFrame = addon.SharedTooltip;
 local GossipDataProvider = addon.GossipDataProvider;
 local PlaySound = addon.PlaySound;
 local ThemeUtil = addon.ThemeUtil;
-local GetPrimaryControlKey = addon.KeyboardControl.GetPrimaryControlKey;
 local RewardTooltipCode = addon.RewardTooltipCode;
 local SwipeEmulator = addon.SwipeEmulator;
+local BindingUtil = addon.BindingUtil;
 
 -- User Settings
 local SHOW_QUEST_TYPE_TEXT = true;
@@ -484,7 +484,7 @@ function DUIDialogOptionButtonMixin:SetQuestVisual(questInfo)
     self.Icon:SetTexture(GetQuestIcon(questInfo));  --We fill in the QuestInfo through this API
 
     if questInfo.isComplete or (not questInfo.isOnQuest) then
-        if questInfo.repeatable or questInfo.frequency ~= 0 then
+        if questInfo.repeatable or (questInfo.frequency and questInfo.frequency ~= 0) then
             self:SetButtonArt(2);
         else
             self:SetButtonArt(1);
@@ -1018,7 +1018,7 @@ end
 
 function DUIDialogHotkeyFrameMixin:SetKey(key)
     if key == "PRIMARY" then
-        key = GAME_PAD_CONFIRM_KEY or GetPrimaryControlKey();
+        key = GAME_PAD_CONFIRM_KEY or BindingUtil:GetActiveActionKey("Confirm");
     end
 
     if key ~= self.key then

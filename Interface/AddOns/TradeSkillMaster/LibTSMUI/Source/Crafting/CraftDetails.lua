@@ -809,7 +809,7 @@ function private.RecipeStringToResultTooltip(recipeString)
 		if TradeSkill.IsClassicCrafting() then
 			return "craft:"..(Profession.GetIndexByCraftString(craftString) or craftString)
 		else
-			return "enchant:"..RecipeString.GetSpellId(recipeString)
+			return recipeString
 		end
 	end
 
