@@ -1,5 +1,0 @@
-VER 3 0100000000000001 "Eruption" "134400"
-#showtooltip Eruption
-/cast [nostance:1] Black Attunement
-/cast Eruption
-END

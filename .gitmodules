@@ -1,6 +1,0 @@
-[submodule "ElvUI"]
-    path = ElvUI
-    url = https://github.com/tukui-org/ElvUI.git
-[submodule "ToxiUI"]
-    path = ToxiUI
-    url = https://github.com/Toxicom/toxiui.git
