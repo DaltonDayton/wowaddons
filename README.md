@@ -44,7 +44,7 @@ git subtree pull --prefix=ElvUI https://github.com/tukui-org/ElvUI main --squash
 
 After updating ElvUI, you may need to repeat step 2 from setup if new dependencies were added.
 
-### Update ToxiUI (when added)
+### Update ToxiUI
 ```bash
 git subtree pull --prefix=ToxiUI https://github.com/Toxicom/toxiui development --squash
 ```
@@ -57,9 +57,10 @@ C:\wowaddons\
 │   └── AddOns/
 │       ├── ElvUI -> ../../ElvUI/ElvUI/
 │       ├── ElvUI_Libraries -> ../../ElvUI/ElvUI_Libraries/
-│       └── ElvUI_Options -> ../../ElvUI/ElvUI_Options/
+│       ├── ElvUI_Options -> ../../ElvUI/ElvUI_Options/
+│       └── ElvUI_ToxiUI -> ../../ToxiUI/
 ├── ElvUI/ (git subtree)
-├── ToxiUI/ (git subtree - future)
+├── ToxiUI/ (git subtree)
 ├── WTF/ (future)
 └── README.md
 ```
