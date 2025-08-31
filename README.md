@@ -9,7 +9,7 @@ This repository manages World of Warcraft addons using git subtrees and symlinks
 - World of Warcraft Retail installation
 - Git
 
-### Setup Steps
+### One-Button Setup
 
 1. **Clone this repository**
    ```bash
@@ -17,8 +17,48 @@ This repository manages World of Warcraft addons using git subtrees and symlinks
    cd C:\wowaddons
    ```
 
-2. **Download ElvUI dependencies**
-   - Download the latest ElvUI release from [ElvUI Releases](https://github.com/tukui-org/ElvUI/releases)
+2. **Download ElvUI release** (required for dependencies)
+   - Go to: https://tukui.org/elvui
+   - Download the latest ElvUI zip
+   - Extract to `./elvui_latest_release/` folder
+
+3. **Run the setup script** (PowerShell as Administrator)
+   ```powershell
+   .\setup-addons.ps1
+   ```
+
+4. **Done!** Launch WoW and your addons should be available.
+
+### Setup Script Options
+
+```powershell
+# Default setup (recommended)
+.\setup-addons.ps1
+
+# Custom WoW installation path
+.\setup-addons.ps1 -WoWPath "D:\Games\World of Warcraft\_retail_"
+
+# Skip ElvUI dependency setup (if you don't have release folder)
+.\setup-addons.ps1 -SkipDownload
+```
+
+The setup script automatically:
+- Sets up ElvUI dependencies from release folder
+- Intelligently handles existing WoW directories (backs up if needed)
+- Creates required WoW symlinks
+- **Fixes Git symlink issues** - recreates internal addon symlinks as proper Windows symlinks
+- Verifies everything works correctly
+- **Safe to run multiple times** (fully idempotent)
+
+### Manual Setup (Advanced Users)
+
+<details>
+<summary>Click to expand manual setup steps</summary>
+
+If you prefer to set up everything manually instead of using the script:
+
+1. **Download ElvUI dependencies**
+   - Download the latest ElvUI release from [tukui.org/elvui](https://tukui.org/elvui)
    - Extract to `./elvui_latest_release/`
    - Copy dependencies to resolve missing libraries:
    ```powershell
@@ -28,13 +68,24 @@ This repository manages World of Warcraft addons using git subtrees and symlinks
    cd ..
    ```
 
-3. **Create WoW symlinks** (Run PowerShell as Administrator)
+2. **Create WoW symlinks** (Run PowerShell as Administrator)
    ```powershell
    New-Item -ItemType SymbolicLink -Path "C:\Program Files (x86)\World of Warcraft\_retail_\Interface" -Target "C:\wowaddons\Interface"
    New-Item -ItemType SymbolicLink -Path "C:\Program Files (x86)\World of Warcraft\_retail_\WTF" -Target "C:\wowaddons\WTF"
    ```
 
-4. **Done!** Launch WoW and your addons should be available.
+3. **Fix internal addon symlinks** (Git converts these to shortcuts)
+   ```powershell
+   cd Interface\AddOns
+   Remove-Item ElvUI, ElvUI_Libraries, ElvUI_Options, ElvUI_ToxiUI -Force -Recurse
+   New-Item -ItemType SymbolicLink -Name "ElvUI" -Target "..\..\ElvUI\ElvUI"
+   New-Item -ItemType SymbolicLink -Name "ElvUI_Libraries" -Target "..\..\ElvUI\ElvUI_Libraries"
+   New-Item -ItemType SymbolicLink -Name "ElvUI_Options" -Target "..\..\ElvUI\ElvUI_Options"
+   New-Item -ItemType SymbolicLink -Name "ElvUI_ToxiUI" -Target "..\..\ToxiUI"
+   cd ..\..
+   ```
+
+</details>
 
 ## Updating Addons
 
