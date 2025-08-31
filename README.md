@@ -28,9 +28,10 @@ This repository manages World of Warcraft addons using git subtrees and symlinks
    cd ..
    ```
 
-3. **Create WoW symlink** (Run PowerShell as Administrator)
+3. **Create WoW symlinks** (Run PowerShell as Administrator)
    ```powershell
    New-Item -ItemType SymbolicLink -Path "C:\Program Files (x86)\World of Warcraft\_retail_\Interface" -Target "C:\wowaddons\Interface"
+   New-Item -ItemType SymbolicLink -Path "C:\Program Files (x86)\World of Warcraft\_retail_\WTF" -Target "C:\wowaddons\WTF"
    ```
 
 4. **Done!** Launch WoW and your addons should be available.
@@ -61,7 +62,7 @@ C:\wowaddons\
 │       └── ElvUI_ToxiUI -> ../../ToxiUI/
 ├── ElvUI/ (git subtree)
 ├── ToxiUI/ (git subtree)
-├── WTF/ (future)
+├── WTF/ (addon settings & saved variables)
 └── README.md
 ```
 
