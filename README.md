@@ -75,12 +75,18 @@ C:\wowaddons\
 
 ## Troubleshooting
 
+### No addons showing in WoW
+- **Most common issue**: Git converts internal addon symlinks to Windows shortcuts on clone
+- **Solution**: Run `setup-addons.ps1` script - it automatically fixes this by recreating proper symlinks
+- The script requires Administrator privileges to create symlinks
+
 ### ElvUI not loading / Lua errors
-The git version requires dependencies from a release build. Make sure you've completed step 2 of the setup.
+The git version requires dependencies from a release build. Download from tukui.org and extract to `elvui_latest_release/`
 
 ### Symlinks not working
-- Ensure PowerShell is run as Administrator when creating the WoW symlink
-- Verify paths are correct for your WoW installation
+- Ensure PowerShell is run as Administrator when creating symlinks
+- Verify WoW installation path is correct
+- Use the setup script to ensure all symlinks are created properly
 
 ### Updates not working
 - Use `git subtree pull` commands as shown above
