@@ -1,5 +1,5 @@
 # WoW Addon Management Script
-# Manages ElvUI and ToxiUI git repos + WTF settings backup/restore
+# Manages ElvUI and ToxiUI git repos with symlinks for two-way sync
 
 param(
     [string]$Action = "setup",
@@ -7,14 +7,32 @@ param(
 )
 
 # Configuration
-$WoWAddOns = "$WoWPath\Interface\AddOns"
+$WoWInterface = "$WoWPath\Interface"
 $WoWWTF = "$WoWPath\WTF"
+$RepoInterface = ".\Interface"
 $RepoWTF = ".\WTF"
+$RepoPath = (Get-Location).Path
 
 # Helper functions
 function Write-Info($Message) { Write-Host "[INFO] $Message" -ForegroundColor Green }
 function Write-Warn($Message) { Write-Host "[WARN] $Message" -ForegroundColor Yellow }
 function Write-Error($Message) { Write-Host "[ERROR] $Message" -ForegroundColor Red }
+
+# Check if running as administrator
+function Test-AdminPrivileges {
+    $currentUser = [Security.Principal.WindowsIdentity]::GetCurrent()
+    $principal = New-Object Security.Principal.WindowsPrincipal($currentUser)
+    return $principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+}
+
+# Ensure admin privileges for symlink operations
+function Ensure-AdminPrivileges {
+    if (-not (Test-AdminPrivileges)) {
+        Write-Error "This script requires administrator privileges to create symlinks."
+        Write-Error "Please run PowerShell as Administrator and try again."
+        exit 1
+    }
+}
 
 # Setup git repositories
 function Setup-Repos {
@@ -60,82 +78,171 @@ function Update-Addons {
     }
 }
 
-# Copy addons to WoW directory
-function Copy-ToWoW {
-    if (-not (Test-Path $WoWAddOns)) {
-        Write-Error "WoW AddOns directory not found: $WoWAddOns"
-        Write-Error "Check WoW installation or use -WoWPath parameter"
-        return
-    }
+# Create external symlinks (WoW directories to repository)
+function Create-ExternalSymlinks {
+    Ensure-AdminPrivileges
 
-    Write-Info "Copying addons to WoW directory..."
+    Write-Info "Creating external symlinks (WoW → Repository)..."
 
-    # Copy ElvUI components
-    if (Test-Path "ElvUI\ElvUI") {
-        Write-Info "Copying ElvUI core..."
-        Copy-Item -Path "ElvUI\ElvUI" -Destination $WoWAddOns -Recurse -Force
-    }
-
-    if (Test-Path "ElvUI\ElvUI_Libraries") {
-        Write-Info "Copying ElvUI Libraries..."
-        Copy-Item -Path "ElvUI\ElvUI_Libraries" -Destination $WoWAddOns -Recurse -Force
-    }
-
-    if (Test-Path "ElvUI\ElvUI_Options") {
-        Write-Info "Copying ElvUI Options..."
-        Copy-Item -Path "ElvUI\ElvUI_Options" -Destination $WoWAddOns -Recurse -Force
-    }
-
-    # Copy ToxiUI
-    if (Test-Path "toxiui") {
-        Write-Info "Copying ToxiUI..."
-        $ToxiUITarget = "$WoWAddOns\ElvUI_ToxiUI"
-        if (Test-Path $ToxiUITarget) { Remove-Item $ToxiUITarget -Recurse -Force }
-        Copy-Item -Path "toxiui" -Destination $ToxiUITarget -Recurse -Force
-    }
-
-    Write-Info "Addons copied successfully!"
-}
-
-# Backup WTF settings from WoW to repo
-function Backup-Settings {
-    if (-not (Test-Path $WoWWTF)) {
-        Write-Error "WoW WTF directory not found: $WoWWTF"
-        return
-    }
-
-    Write-Info "Backing up WTF settings from WoW..."
-
-    if (Test-Path $RepoWTF) { Remove-Item $RepoWTF -Recurse -Force }
-    Copy-Item -Path $WoWWTF -Destination $RepoWTF -Recurse -Force
-
-    Write-Info "WTF settings backed up to $RepoWTF"
-    Write-Warn "Don't forget to commit these changes to git!"
-}
-
-# Restore WTF settings from repo to WoW
-function Restore-Settings {
-    if (-not (Test-Path $RepoWTF)) {
-        Write-Error "Repository WTF directory not found: $RepoWTF"
-        Write-Error "No settings to restore. Run backup first or ensure WTF\ exists in repo."
-        return
-    }
-
+    # Check if WoW path exists
     if (-not (Test-Path $WoWPath)) {
         Write-Error "WoW installation not found: $WoWPath"
+        Write-Error "Use -WoWPath parameter to specify correct path"
         return
     }
 
-    Write-Info "Restoring WTF settings to WoW..."
-
-    if (Test-Path $WoWWTF) {
-        Write-Warn "Backing up existing WoW WTF to WTF.backup..."
-        if (Test-Path "$WoWWTF.backup") { Remove-Item "$WoWWTF.backup" -Recurse -Force }
-        Move-Item $WoWWTF "$WoWWTF.backup"
+    # Backup existing WoW directories if they exist and aren't symlinks
+    foreach ($dir in @($WoWInterface, $WoWWTF)) {
+        if (Test-Path $dir) {
+            $item = Get-Item $dir
+            if ($item.LinkType -ne "SymbolicLink") {
+                $backupPath = "$dir.backup"
+                Write-Warn "Backing up existing directory: $dir → $backupPath"
+                if (Test-Path $backupPath) { Remove-Item $backupPath -Recurse -Force }
+                Move-Item $dir $backupPath
+            } else {
+                Write-Info "Existing symlink found, removing: $dir"
+                Remove-Item $dir -Force
+            }
+        }
     }
 
-    Copy-Item -Path $RepoWTF -Destination $WoWWTF -Recurse -Force
-    Write-Info "WTF settings restored to WoW!"
+    # Create symlinks from WoW to repository
+    if (Test-Path $RepoInterface) {
+        Write-Info "Creating Interface symlink: $WoWInterface → $RepoInterface"
+        New-Item -ItemType SymbolicLink -Path $WoWInterface -Target (Resolve-Path $RepoInterface).Path -Force | Out-Null
+    }
+
+    if (Test-Path $RepoWTF) {
+        Write-Info "Creating WTF symlink: $WoWWTF → $RepoWTF"
+        New-Item -ItemType SymbolicLink -Path $WoWWTF -Target (Resolve-Path $RepoWTF).Path -Force | Out-Null
+    }
+
+    Write-Info "External symlinks created successfully!"
+}
+
+# Create internal symlinks (Interface/AddOns to git repos)
+function Create-InternalSymlinks {
+    Ensure-AdminPrivileges
+
+    Write-Info "Creating internal symlinks (AddOns → Git Repos)..."
+
+    # Ensure Interface/AddOns directory exists
+    $AddOnsPath = "$RepoInterface\AddOns"
+    if (-not (Test-Path $AddOnsPath)) {
+        Write-Info "Creating Interface/AddOns directory..."
+        New-Item -ItemType Directory -Path $AddOnsPath -Force | Out-Null
+    }
+
+    # Create symlinks for ElvUI components
+    $symlinks = @(
+        @{ Name = "ElvUI"; Target = "..\..\ElvUI\ElvUI" },
+        @{ Name = "ElvUI_Libraries"; Target = "..\..\ElvUI\ElvUI_Libraries" },
+        @{ Name = "ElvUI_Options"; Target = "..\..\ElvUI\ElvUI_Options" },
+        @{ Name = "ElvUI_ToxiUI"; Target = "..\..\toxiui" }
+    )
+
+    foreach ($link in $symlinks) {
+        $linkPath = "$AddOnsPath\$($link.Name)"
+        $targetPath = "$RepoPath\$($link.Target -replace '\.\.\\.\.\\')"
+
+        # Remove existing item if it exists
+        if (Test-Path $linkPath) {
+            Write-Info "Removing existing item: $linkPath"
+            Remove-Item $linkPath -Recurse -Force
+        }
+
+        # Check if target exists
+        if (Test-Path $targetPath) {
+            Write-Info "Creating symlink: $($link.Name) → $($link.Target)"
+            New-Item -ItemType SymbolicLink -Path $linkPath -Target $targetPath -Force | Out-Null
+        } else {
+            Write-Warn "Target not found, skipping: $targetPath"
+        }
+    }
+
+    Write-Info "Internal symlinks created successfully!"
+}
+
+# Verify symlinks are working correctly
+function Test-Symlinks {
+    Write-Info "Verifying symlink configuration..."
+    $allGood = $true
+
+    # Check external symlinks
+    $externalLinks = @(
+        @{ Path = $WoWInterface; Target = $RepoInterface; Name = "Interface" },
+        @{ Path = $WoWWTF; Target = $RepoWTF; Name = "WTF" }
+    )
+
+    foreach ($link in $externalLinks) {
+        if (Test-Path $link.Path) {
+            $item = Get-Item $link.Path
+            if ($item.LinkType -eq "SymbolicLink") {
+                $actualTarget = $item.Target
+                $expectedTarget = (Resolve-Path $link.Target -ErrorAction SilentlyContinue).Path
+                if ($actualTarget -eq $expectedTarget) {
+                    Write-Info "✓ External symlink OK: $($link.Name)"
+                } else {
+                    Write-Error "✗ External symlink target mismatch: $($link.Name)"
+                    Write-Error "  Expected: $expectedTarget"
+                    Write-Error "  Actual: $actualTarget"
+                    $allGood = $false
+                }
+            } else {
+                Write-Error "✗ Not a symlink: $($link.Path)"
+                $allGood = $false
+            }
+        } else {
+            Write-Error "✗ Missing external symlink: $($link.Name)"
+            $allGood = $false
+        }
+    }
+
+    # Check internal symlinks
+    $AddOnsPath = "$RepoInterface\AddOns"
+    if (Test-Path $AddOnsPath) {
+        $internalLinks = @(
+            @{ Name = "ElvUI"; Target = "ElvUI\ElvUI" },
+            @{ Name = "ElvUI_Libraries"; Target = "ElvUI\ElvUI_Libraries" },
+            @{ Name = "ElvUI_Options"; Target = "ElvUI\ElvUI_Options" },
+            @{ Name = "ElvUI_ToxiUI"; Target = "toxiui" }
+        )
+
+        foreach ($link in $internalLinks) {
+            $linkPath = "$AddOnsPath\$($link.Name)"
+            $targetPath = "$RepoPath\$($link.Target)"
+
+            if (Test-Path $linkPath) {
+                $item = Get-Item $linkPath
+                if ($item.LinkType -eq "SymbolicLink") {
+                    if (Test-Path $targetPath) {
+                        Write-Info "✓ Internal symlink OK: $($link.Name)"
+                    } else {
+                        Write-Error "✗ Internal symlink target missing: $($link.Name) → $targetPath"
+                        $allGood = $false
+                    }
+                } else {
+                    Write-Error "✗ Not a symlink: $linkPath"
+                    $allGood = $false
+                }
+            } else {
+                Write-Warn "✗ Missing internal symlink: $($link.Name)"
+                $allGood = $false
+            }
+        }
+    } else {
+        Write-Error "✗ Interface/AddOns directory not found"
+        $allGood = $false
+    }
+
+    if ($allGood) {
+        Write-Info "All symlinks are configured correctly!"
+    } else {
+        Write-Error "Some symlinks need attention. Run 'setup' to fix."
+    }
+
+    return $allGood
 }
 
 # Show help
@@ -145,38 +252,41 @@ function Show-Help {
     Write-Host "Usage: .\setup.ps1 [-Action <command>] [-WoWPath <path>]"
     Write-Host ""
     Write-Host "Commands:"
-    Write-Host "  setup     - Clone ElvUI and ToxiUI repositories (default)"
-    Write-Host "  update    - Pull latest changes and copy to WoW"
-    Write-Host "  copy      - Copy current addon versions to WoW"
-    Write-Host "  backup    - Backup WTF settings from WoW to repository"
-    Write-Host "  restore   - Restore WTF settings from repository to WoW"
+    Write-Host "  setup     - Clone repositories and create all symlinks (default)"
+    Write-Host "  update    - Pull latest changes from git repositories"
+    Write-Host "  symlinks  - Create/recreate all symlinks"
+    Write-Host "  verify    - Verify all symlinks are working correctly"
     Write-Host "  help      - Show this help message"
     Write-Host ""
     Write-Host "Parameters:"
     Write-Host "  -WoWPath  - WoW installation path (default: Program Files (x86)\World of Warcraft\_retail_)"
     Write-Host ""
     Write-Host "Examples:"
-    Write-Host "  .\setup.ps1"
-    Write-Host "  .\setup.ps1 -Action update"
-    Write-Host "  .\setup.ps1 -Action copy -WoWPath 'D:\Games\World of Warcraft\_retail_'"
+    Write-Host "  .\setup.ps1                                    # Initial setup"
+    Write-Host "  .\setup.ps1 -Action update                     # Update addons"
+    Write-Host "  .\setup.ps1 -Action verify                     # Check symlinks"
+    Write-Host "  .\setup.ps1 -Action symlinks -WoWPath 'D:\Games\World of Warcraft\_retail_'"
+    Write-Host ""
+    Write-Host "Note: This script requires administrator privileges to create symlinks."
 }
 
 # Main script logic
 switch ($Action.ToLower()) {
     "setup" {
         Setup-Repos
-        if (Test-Path $RepoWTF) {
-            Write-Info "WTF directory found, restoring settings..."
-            Restore-Settings
-        }
+        Create-ExternalSymlinks
+        Create-InternalSymlinks
+        Write-Info "Setup complete! Symlinks created for two-way sync."
     }
     "update" {
         Update-Addons
-        Copy-ToWoW
+        Write-Info "Addons updated! Changes are automatically synced via symlinks."
     }
-    "copy" { Copy-ToWoW }
-    "backup" { Backup-Settings }
-    "restore" { Restore-Settings }
+    "symlinks" {
+        Create-ExternalSymlinks
+        Create-InternalSymlinks
+    }
+    "verify" { Test-Symlinks }
     "help" { Show-Help }
     default {
         Write-Error "Unknown command: $Action"
