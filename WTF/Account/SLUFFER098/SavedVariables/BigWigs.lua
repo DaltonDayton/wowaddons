@@ -139,7 +139,7 @@ nil,
 },
 ["Player-1168-09F927BE"] = {
 ["playerRating"] = 0,
-["specId"] = 258,
+["specId"] = 256,
 ["keyMap"] = 0,
 ["name"] = "Xavaat",
 ["keyLevel"] = 0,
