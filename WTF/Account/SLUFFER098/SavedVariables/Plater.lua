@@ -79,28 +79,16 @@ PlaterDB = {
 ["source"] = "Overfiend",
 ["npcID"] = 217429,
 },
+[1238902] = {
+["source"] = "Unknown",
+["type"] = "BUFF",
+["event"] = "SPELL_AURA_APPLIED",
+["npcID"] = 26125,
+},
 [108446] = {
 ["isChanneled"] = false,
 ["source"] = "Unknown",
 ["event"] = "SPELL_CAST_SUCCESS",
-["npcID"] = 17252,
-},
-[1238902] = {
-["type"] = "BUFF",
-["source"] = "Unknown",
-["event"] = "SPELL_AURA_APPLIED",
-["npcID"] = 26125,
-},
-[444741] = {
-["event"] = "SPELL_AURA_APPLIED",
-["type"] = "BUFF",
-["source"] = "King Thoras Trollbane",
-["npcID"] = 221635,
-},
-[386176] = {
-["event"] = "SPELL_AURA_APPLIED",
-["type"] = "BUFF",
-["source"] = "Unknown",
 ["npcID"] = 17252,
 },
 [317792] = {
@@ -108,6 +96,24 @@ PlaterDB = {
 ["event"] = "SPELL_CAST_SUCCESS",
 ["source"] = "Magus of the Dead",
 ["npcID"] = 163366,
+},
+[260249] = {
+["event"] = "SPELL_AURA_APPLIED",
+["type"] = "BUFF",
+["source"] = "Sambas",
+["npcID"] = 165189,
+},
+[386176] = {
+["event"] = "SPELL_AURA_APPLIED",
+["type"] = "BUFF",
+["source"] = "Unknown",
+["npcID"] = 17252,
+},
+[444741] = {
+["event"] = "SPELL_AURA_APPLIED",
+["type"] = "BUFF",
+["source"] = "King Thoras Trollbane",
+["npcID"] = 221635,
 },
 [2649] = {
 ["isChanneled"] = false,
@@ -151,11 +157,11 @@ PlaterDB = {
 ["source"] = "Overlord",
 ["npcID"] = 228575,
 },
-[260249] = {
+[457797] = {
 ["event"] = "SPELL_AURA_APPLIED",
 ["type"] = "BUFF",
-["source"] = "Sambas",
-["npcID"] = 165189,
+["source"] = "Deployed Battle Supplies",
+["npcID"] = 227453,
 },
 },
 ["profileKeys"] = {
@@ -217,8 +223,8 @@ PlaterDB = {
 ["Cast - Castbar is Timer [P]"] = 2,
 ["Cast - Glowing [P]"] = 10,
 ["Add - Explode on Die [P]"] = 1,
-["Cast - Very Important"] = 15,
-["Cast - Alert + Timer [P]"] = 4,
+["Cast - Shield Interrupt"] = 2,
+["Cast - AoE Hit All [P]"] = 3,
 ["Cast - Debuff [P]"] = 2,
 ["Fixate by Unit Buff [P]"] = 2,
 ["Aura is Shield [P]"] = 5,
@@ -230,17 +236,17 @@ PlaterDB = {
 ["Cast - Voidzone [P]"] = 2,
 ["Cast - Heal Cut [P]"] = 3,
 ["Countdown"] = 12,
-["Spiteful Affix"] = 3,
+["Auto Set Skull"] = 11,
 ["Cast - Stop Casting"] = 4,
 ["Add - Non Elite Trash [P]"] = 4,
 ["Cast - Quick Flash"] = 2,
-["Auto Set Skull"] = 11,
+["Spiteful Affix"] = 3,
 ["Cast - On Going Cast [P]"] = 2,
 ["Cast - AoE With Range [P]"] = 2,
 ["Cast - Frontal Cone"] = 17,
 ["Fixate"] = 11,
-["Cast - AoE Hit All [P]"] = 3,
-["Cast - Shield Interrupt"] = 2,
+["Cast - Alert + Timer [P]"] = 4,
+["Cast - Very Important"] = 15,
 ["Cast - Circular Swipe"] = 4,
 ["Unit - Show Energy"] = 11,
 },
@@ -418,7 +424,7 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    envTable.overlaySpark:Show()\n    \n    self.BigSparkle:Show()\n    self.BigSparkle:SetWidth(8)\n    self.BigSparkle:SetHeight(self:GetHeight() + unitFrame.healthBar:GetHeight())\n    self.BigSparkle:SetScale(1)\n    self.BigSparkle:SetVertexColor(1,1, 1, 1)\n    envTable.overlaySpark:Hide()\n    \n    self.Spark:Hide()\n    \n    \n    Plater.FlashNameplateBorder (unitFrame, 0.05)   \n    Plater.FlashNameplateBody (unitFrame, \"\", 0.075)\n    \n    envTable.smallScaleAnimation:Play()\n    \n    --increase the nameplate size\n    local nameplateHeight = Plater.db.profile.plate_config.enemynpc.health_incombat [2]\n    unitFrame.healthBar:SetHeight (nameplateHeight + envTable.NameplateSizeOffset)\n    \n    envTable.overlaySpark.height = nameplateHeight + 5\n    \n    envTable.dotAnimation = Plater.PlayDotAnimation(unitFrame.healthBar, 2, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n    \n    envTable.dotAnimation:SetPoint(\"bottomright\", self, \"bottomright\", scriptTable.config.xOffset, -scriptTable.config.yOffset)\n    \n    \n    local customColor = scriptTable.config.castColor[tostring(envTable._SpellID)]\n    \n    Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, customColor or scriptTable.config.castBarColor, envTable)\n    \n    if (scriptTable.config.useNameplateColor) then\n        local npcIdString = tostring(envTable._NpcID)\n        envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.healthBarColor)        \n        Plater.DenyColorChange(unitFrame, true)            \n    end\n    \nend",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\cast_bar_important_bycolor.png",
-["Name"] = "Cast - Important by Color [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Used on casts that make the mob explode, summon or transform if the cast passes.",
@@ -434,7 +440,7 @@ PlaterDB = {
 321226,
 429428,
 },
-["version"] = -1,
+["Name"] = "Cast - Important by Color [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --creates a glow around the icon\n    envTable.buffIconGlow = envTable.buffIconGlow or Plater.CreateIconGlow (self, scriptTable.config.glowColor)\n    \nend",
@@ -527,7 +533,7 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    if (scriptTable.config.glowEnabled) then\n        envTable.buffIconGlow:Show()\n    end\n    \n    if (scriptTable.config.dotsEnabled) then\n        envTable.dotAnimation = Plater.PlayDotAnimation(self, 6, scriptTable.config.dotsColor, 6, 3) \n    end\n    \nend\n\n\n\n\n",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\icon_aura",
-["Name"] = "Aura - Buff Alert [Plater]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Add the buff name in the trigger box.",
@@ -536,7 +542,7 @@ PlaterDB = {
 377738,
 378149,
 },
-["version"] = -1,
+["Name"] = "Aura - Buff Alert [Plater]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    \n    --set the castbar config\n    envTable.configAltCastBar = {\n        iconTexture = \"\",\n        iconTexcoord = {0.1, 0.9, 0.1, 0.9},\n        iconAlpha = 1,\n        iconSize = 14,\n        \n        text = \"Boom!\",\n        textSize = 9,\n        \n        texture = [[Interface\\AddOns\\Plater\\images\\bar_background]],\n        color = \"silver\",\n        \n        isChanneling = false,\n        canInterrupt = false,\n        \n        height = 2,\n        width = Plater.db.profile.plate_config.enemynpc.health_incombat[1],\n        \n        spellNameAnchor = {side = 3, x = 0, y = -2},\n        timerAnchor = {side = 5, x = 0, y = -2},\n    }    \n    \n    function envTable.ShowAltCastBar(npcInfo, unitFrame, unitId, customTime, customStart)\n        --show the cast bar\n        if (npcInfo.timerId) then\n            local barObject = Plater.GetBossTimer(npcInfo.timerId)\n            if (barObject) then\n                if (npcInfo.remaining) then\n                    local timeLeft = barObject.timer + barObject.start - GetTime()\n                    if (timeLeft > npcInfo.remaining) then\n                        return\n                    end\n                end\n                \n                config.text = npcInfo.name\n                \n                if (npcInfo.spellIcon) then\n                    local _, _, iconTexture = GetSpellInfo(npcInfo.spellIcon)\n                    config.iconTexture = iconTexture\n                else\n                    config.iconTexture = \"\"\n                end\n                \n                Plater.SetAltCastBar(unitFrame.PlateFrame, config, barObject.timer, customStart or barObject.start, npcInfo.altCastId)\n            end\n        else\n            Plater.SetAltCastBar(unitFrame.PlateFrame, config, customTime or npcInfo.timer, customStart, npcInfo.altCastId)            \n        end    \n        \n        \n    end\nend\n\n\n\n\n",
@@ -555,14 +561,14 @@ PlaterDB = {
 ["Initialization"] = "		function (scriptTable)\n			--insert code here\n			\n		end\n	",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["Icon"] = 134229,
-["Name"] = "Cast - Effect After Cast [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Start extra cast bars for effects after the cast is done. Setup the effect on On Hide script.",
 ["SpellIds"] = {
 191284,
 },
-["version"] = -1,
+["Name"] = "Cast - Effect After Cast [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --settings\n    envTable.NameplateSizeOffset = scriptTable.config.castBarHeight\n    envTable.ShowArrow = scriptTable.config.showArrow\n    envTable.ArrowAlpha = scriptTable.config.arrowAlpha\n    \n    --creates the spark to show the cast progress inside the health bar\n    envTable.overlaySpark = envTable.overlaySpark or Plater:CreateImage (unitFrame.healthBar)\n    envTable.overlaySpark:SetBlendMode (\"ADD\")\n    envTable.overlaySpark.width = 16\n    envTable.overlaySpark.height = 36\n    envTable.overlaySpark.alpha = .9\n    envTable.overlaySpark.texture = [[Interface\\AddOns\\Plater\\images\\spark3]]\n    \n    envTable.topArrow = envTable.topArrow or Plater:CreateImage (unitFrame.healthBar)\n    envTable.topArrow:SetBlendMode (\"ADD\")\n    envTable.topArrow.width = scriptTable.config.arrowWidth\n    envTable.topArrow.height = scriptTable.config.arrowHeight\n    envTable.topArrow.alpha = envTable.ArrowAlpha\n    envTable.topArrow.texture = [[Interface\\BUTTONS\\Arrow-Down-Up]]\n    \n    --scale animation\n    envTable.smallScaleAnimation = envTable.smallScaleAnimation or Plater:CreateAnimationHub (unitFrame.healthBar)\n    Plater:CreateAnimation (envTable.smallScaleAnimation, \"SCALE\", 1, 0.075, 1, 1, 1.08, 1.08)\n    Plater:CreateAnimation (envTable.smallScaleAnimation, \"SCALE\", 2, 0.075, 1, 1, 0.95, 0.95)    \n    --envTable.smallScaleAnimation:Play() --envTable.smallScaleAnimation:Stop()\n    \nend\n\n\n\n\n\n\n\n",
@@ -750,7 +756,7 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    envTable.overlaySpark:Show()\n    \n    if (envTable.ShowArrow) then\n        envTable.topArrow:Show()\n    end\n    \n    Plater.FlashNameplateBorder (unitFrame, 0.05)   \n    Plater.FlashNameplateBody (unitFrame, \"\", 0.075)\n    \n    envTable.smallScaleAnimation:Play()\n    \n    --increase the nameplate size\n    local nameplateHeight = Plater.db.profile.plate_config.enemynpc.health_incombat [2]\n    unitFrame.healthBar:SetHeight (nameplateHeight + envTable.NameplateSizeOffset)\n    \n    envTable.overlaySpark.height = nameplateHeight + 5\n    \n    envTable.dotAnimation = Plater.PlayDotAnimation(unitFrame.healthBar, 2, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n    \n    Plater.SetCastBarColorForScript(self, true, scriptTable.config.castBarColor, envTable)\n    \n    if (scriptTable.config.useNameplateColor) then\n        envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.healthBarColor)\n        Plater.DenyColorChange(unitFrame, true)\n    end       \nend\n\n\n\n\n\n\n",
 ["Icon"] = 2175503,
-["Name"] = "Explosion Affix M+ [Plater]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Apply several animations when the explosion orb cast starts on a Mythic Dungeon with Explosion Affix",
@@ -762,7 +768,7 @@ PlaterDB = {
 360857,
 389446,
 },
-["version"] = -1,
+["Name"] = "Explosion Affix M+ [Plater]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --creates a glow around the icon\n    envTable.buffIconGlow = envTable.buffIconGlow or Plater.CreateIconGlow (self, scriptTable.config.glowColor)\n    \nend\n\n\n",
@@ -854,13 +860,13 @@ PlaterDB = {
 ["Author"] = "Tercioo-Sylvanas",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    if (scriptTable.config.glowEnabled) then\n        envTable.buffIconGlow:Show()\n    end\n    \n    if (scriptTable.config.dotsEnabled) then\n        envTable.dotAnimation = Plater.PlayDotAnimation(self, 6, scriptTable.config.dotsColor, 6, 3) \n    end\nend\n\n\n",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\icon_aura",
-["Name"] = "Aura - Debuff Alert [Plater]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Add the debuff name in the trigger box.",
 ["SpellIds"] = {
 },
-["version"] = -1,
+["Name"] = "Aura - Debuff Alert [Plater]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --create a texture to use for a flash behind the cast bar\n    local backGroundFlashTexture = Plater:CreateImage (self, [[Interface\\ACHIEVEMENTFRAME\\UI-Achievement-Alert-Glow]], self:GetWidth()+40, self:GetHeight()+20, \"background\", {0, 400/512, 0, 170/256})\n    backGroundFlashTexture:SetBlendMode (\"ADD\")\n    backGroundFlashTexture:SetDrawLayer(\"OVERLAY\", 7)\n    backGroundFlashTexture:SetPoint (\"center\", self, \"center\")\n    backGroundFlashTexture:SetVertexColor(Plater:ParseColors(scriptTable.config.flashColor))\n    backGroundFlashTexture:Hide()\n    \n    --create the animation hub to hold the flash animation sequence\n    envTable.BackgroundFlash = envTable.BackgroundFlash or Plater:CreateAnimationHub (backGroundFlashTexture, \n        function()\n            backGroundFlashTexture:Show()\n        end,\n        function()\n            backGroundFlashTexture:Hide()\n        end\n    )\n    \n    --create the flash animation sequence\n    local fadeIn = Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 1, scriptTable.config.flashDuration/2, 0, 1)\n    local fadeOut = Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 2, scriptTable.config.flashDuration/2, 1, 0)\n    \n    --create a camera shake for the nameplate\n    envTable.FrameShake = Plater:CreateFrameShake (unitFrame, scriptTable.config.shakeDuration, scriptTable.config.shakeAmplitude, scriptTable.config.shakeFrequency, false, false, 0, 1, 0.05, 0.1, Plater.GetPoints (unitFrame))\n    \n    --update the config for the flash here so it wont need a /reload\n    fadeIn:SetDuration (scriptTable.config.flashDuration/2)\n    fadeOut:SetDuration (scriptTable.config.flashDuration/2)\n    \n    --update the config for the skake here so it wont need a /reload\n    envTable.FrameShake.OriginalAmplitude = scriptTable.config.shakeAmplitude\n    envTable.FrameShake.OriginalDuration = scriptTable.config.shakeDuration\n    envTable.FrameShake.OriginalFrequency = scriptTable.config.shakeFrequency\nend",
@@ -1120,7 +1126,7 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    envTable.dotAnimation = Plater.PlayDotAnimation(unitFrame.castBar, 5, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n    \n    envTable.BackgroundFlash:Play()\n    \n    Plater.FlashNameplateBorder (unitFrame, 0.05)   \n    Plater.FlashNameplateBody (unitFrame, \"\", 0.075)\n    \n    unitFrame:PlayFrameShake (envTable.FrameShake)\n    \n    Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, scriptTable.config.castBarColor, envTable)\n    \n    --Dominator on Shadowmoon Burial Grounds\n    if (envTable._SpellID == 154327) then\n        if (UnitHealth(unitId) == UnitHealthMax(unitId)) then\n            if (envTable._Duration == 604800) then\n                Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, {1, 0, 0, 1}, envTable)\n            end\n        end\n    end\n    \nend",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\cast_bar_shining_green.png",
-["Name"] = "Cast - Shining Green [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Highlight a very important cast applying several effects into the Cast Bar. Add spell in the Add Trigger field.",
@@ -1148,7 +1154,7 @@ PlaterDB = {
 424420,
 444743,
 },
-["version"] = -1,
+["Name"] = "Cast - Shining Green [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --settings\n    envTable.NameplateSizeOffset = scriptTable.config.castBarHeight\n    envTable.ShowArrow = scriptTable.config.showArrow\n    envTable.ArrowAlpha = scriptTable.config.arrowAlpha\n    \n    --creates the spark to show the cast progress inside the health bar\n    envTable.overlaySpark = envTable.overlaySpark or Plater:CreateImage (unitFrame.healthBar)\n    envTable.overlaySpark:SetBlendMode (\"ADD\")\n    envTable.overlaySpark.width = 16\n    envTable.overlaySpark.height = 36\n    envTable.overlaySpark.alpha = .9\n    envTable.overlaySpark.texture = [[Interface\\AddOns\\Plater\\images\\spark3]]\n    \n    envTable.topArrow = envTable.topArrow or Plater:CreateImage (unitFrame.healthBar)\n    envTable.topArrow:SetBlendMode (\"ADD\")\n    envTable.topArrow.width = scriptTable.config.arrowWidth\n    envTable.topArrow.height = scriptTable.config.arrowHeight\n    envTable.topArrow.alpha = envTable.ArrowAlpha\n    envTable.topArrow.texture = [[Interface\\BUTTONS\\Arrow-Down-Up]]\n    \n    --scale animation\n    envTable.smallScaleAnimation = envTable.smallScaleAnimation or Plater:CreateAnimationHub (unitFrame.healthBar)\n    Plater:CreateAnimation (envTable.smallScaleAnimation, \"SCALE\", 1, 0.075, 1, 1, 1.08, 1.08)\n    Plater:CreateAnimation (envTable.smallScaleAnimation, \"SCALE\", 2, 0.075, 1, 1, 0.95, 0.95)    \n    --envTable.smallScaleAnimation:Play() --envTable.smallScaleAnimation:Stop()\n    \n    --create a camera shake for the nameplate\n    envTable.FrameShake = Plater:CreateFrameShake (unitFrame, scriptTable.config.shakeDuration, scriptTable.config.shakeAmplitude, scriptTable.config.shakeFrequency, false, false, 0, 1, 0.05, 0.1, Plater.GetPoints (unitFrame))    \n    \n    --update the config for the skake here so it wont need a /reload\n    envTable.FrameShake.OriginalAmplitude = scriptTable.config.shakeAmplitude\n    envTable.FrameShake.OriginalDuration = scriptTable.config.shakeDuration\n    envTable.FrameShake.OriginalFrequency = scriptTable.config.shakeFrequency\nend\n\n\n\n\n\n\n\n",
@@ -1397,7 +1403,7 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    envTable.overlaySpark:Show()\n    \n    if (envTable.ShowArrow) then\n        envTable.topArrow:Show()\n    else\n        envTable.topArrow:Hide()\n    end\n    \n    Plater.FlashNameplateBorder (unitFrame, 0.05)   \n    Plater.FlashNameplateBody (unitFrame, \"\", 0.075)\n    \n    envTable.smallScaleAnimation:Play()\n    \n    --increase the nameplate size\n    local nameplateHeight = Plater.db.profile.plate_config.enemynpc.health_incombat [2]\n    unitFrame.healthBar:SetHeight (nameplateHeight + envTable.NameplateSizeOffset)\n    \n    envTable.overlaySpark.height = nameplateHeight + 5\n    \n    envTable.dotAnimation = Plater.PlayDotAnimation(unitFrame.healthBar, 2, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n    \n    local customColor = scriptTable.config.castColor[tostring(envTable._SpellID)]\n    \n    Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, customColor or scriptTable.config.castBarColor, envTable)\n    \n    if (scriptTable.config.useNameplateColor) then\n        local npcIdString = tostring(envTable._NpcID)\n        envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.healthBarColor)        \n        Plater.DenyColorChange(unitFrame, true)            \n    end\n    \nend",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\cast_bar_red",
-["Name"] = "Cast - Ultra Important [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Used on casts that make the mob explode or transform if the cast passes.",
@@ -1443,7 +1449,7 @@ PlaterDB = {
 266181,
 253544,
 },
-["version"] = -1,
+["Name"] = "Cast - Ultra Important [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    envTable.lifePercent = { --dragonflight\n        [214840] = {25}, --engorged crawler\n        \n    }\n    \n    \n    function envTable.CreateMarker(unitFrame)\n        unitFrame.healthMarker = unitFrame.healthBar:CreateTexture(nil, \"overlay\")\n        unitFrame.healthMarker:SetColorTexture(1, 1, 1)\n        unitFrame.healthMarker:SetSize(1, unitFrame.healthBar:GetHeight())\n        \n        unitFrame.healthOverlay = unitFrame.healthBar:CreateTexture(nil, \"overlay\")\n        unitFrame.healthOverlay:SetColorTexture(1, 1, 1)\n        unitFrame.healthOverlay:SetSize(1, unitFrame.healthBar:GetHeight())\n    end\n    \n    function envTable.UpdateMarkers(unitFrame)\n        local markersTable = envTable.lifePercent[envTable._NpcID]\n        if (markersTable) then\n            local unitLifePercent = envTable._HealthPercent / 100\n            for i, percent in ipairs(markersTable) do\n                percent = percent / 100\n                if (unitLifePercent > percent) then\n                    if (not unitFrame.healthMarker) then\n                        envTable.CreateMarker(unitFrame)\n                    end\n                    \n                    unitFrame.healthMarker:Show()\n                    local width = unitFrame.healthBar:GetWidth()\n                    unitFrame.healthMarker:SetPoint(\"left\", unitFrame.healthBar, \"left\", width*percent, 0)\n                    \n                    local overlaySize = width * (unitLifePercent - percent)\n                    unitFrame.healthOverlay:SetWidth(overlaySize)\n                    unitFrame.healthOverlay:SetPoint(\"left\", unitFrame.healthMarker, \"right\", 0, 0)\n                    \n                    unitFrame.healthMarker:SetVertexColor(Plater:ParseColors(scriptTable.config.indicatorColor))\n                    unitFrame.healthMarker:SetAlpha(scriptTable.config.indicatorAlpha)\n                    \n                    unitFrame.healthOverlay:SetVertexColor(Plater:ParseColors(scriptTable.config.fillColor))\n                    unitFrame.healthOverlay:SetAlpha(scriptTable.config.fillAlpha)\n                    \n                    return\n                end\n            end --end for\n            \n            if (unitFrame.healthMarker and unitFrame.healthMarker:IsShown()) then\n                unitFrame.healthMarker:Hide()\n                unitFrame.healthOverlay:Hide()\n            end\n        end\n    end\nend      \n\n\n\n\n\n\n\n\n\n",
@@ -1535,13 +1541,13 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    envTable.UpdateMarkers(unitFrame)\nend\n\n\n",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\health_indicator",
-["Name"] = "Add - Health Markers [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Place a marker into the health bar to indicate when the unit will change phase or cast an important spell.",
 ["SpellIds"] = {
 },
-["version"] = -1,
+["Name"] = "Add - Health Markers [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --flash duration\n    local CONFIG_FLASH_DURATION = scriptTable.config.flashDuration\n    \n    --manually create a new texture for the flash animation\n    if (not envTable.SmallFlashTexture) then\n        envTable.SmallFlashTexture = envTable.SmallFlashTexture or Plater:CreateImage (unitFrame.castBar)\n        envTable.SmallFlashTexture:SetColorTexture (1, 1, 1)\n        envTable.SmallFlashTexture:SetAllPoints()\n    end\n    \n    --manually create a flash animation using the framework\n    if (not envTable.SmallFlashAnimationHub) then \n        \n        local onPlay = function()\n            envTable.SmallFlashTexture:Show()\n        end\n        \n        local onFinished = function()\n            envTable.SmallFlashTexture:Hide()\n        end\n        \n        local animationHub = Plater:CreateAnimationHub (envTable.SmallFlashTexture, onPlay, onFinished)\n        envTable.flashIn = Plater:CreateAnimation (animationHub, \"Alpha\", 1, CONFIG_FLASH_DURATION/2, 0, .6)\n        envTable.flashOut = Plater:CreateAnimation (animationHub, \"Alpha\", 2, CONFIG_FLASH_DURATION/2, 1, 0)\n        \n        envTable.SmallFlashAnimationHub = animationHub\n    end\n    \n    envTable.flashIn:SetDuration(scriptTable.config.flashDuration / 2)\n    envTable.flashOut:SetDuration(scriptTable.config.flashDuration / 2)\n    envTable.SmallFlashTexture:SetColorTexture (Plater:ParseColors(scriptTable.config.flashColor))\n    \nend\n\n\n\n\n\n\n\n",
@@ -1616,7 +1622,7 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    envTable.SmallFlashAnimationHub:Play()\n    \nend\n\n\n",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\cast_bar",
-["Name"] = "Cast - Small Alert [Plater]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Flashes the Cast Bar when a spell in the trigger list is Cast. Add spell in the Add Trigger field.",
@@ -1671,7 +1677,7 @@ PlaterDB = {
 301088,
 423479,
 },
-["version"] = -1,
+["Name"] = "Cast - Small Alert [Plater]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    envTable.NameplateColor = scriptTable.config.nameplateColor\n    envTable.NameplateSizeOffset = scriptTable.config.nameplateSizeOffset\n    \n    unitFrame.UnitImportantSkullTexture = unitFrame.UnitImportantSkullTexture or unitFrame:CreateTexture(nil, \"background\")\n    \n    unitFrame.UnitImportantSkullTexture:Hide()\nend\n\n--[=[\n\n154564 - debug\n\nUsing spellIDs for multi-language support\n\n196548 = ancient branch (academy dungeon)\n195580, 195821, 195820 = nokhub saboteur\n189886 = blazebound firestorm\n75966 = Defiled Spirit\n102019 = Stormforged Obliterator\n    187159 = Shrieking Whelp\n194897 = stormsurge totem\n104251 = duskwatch sentry\n101326 = honored ancestor\n189669 = binding speakl netharius\n192464 = raging ember neltharius\n--]=]\n\n\n",
@@ -1905,13 +1911,13 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    if (envTable.dotAnimation) then\n        Plater.StopDotAnimation(unitFrame.healthBar, envTable.dotAnimation)\n    end\n    \n    envTable.dotAnimation = Plater.PlayDotAnimation(unitFrame.healthBar, 2, scriptTable.config.dotsColor, 3, 4) \n    \n    --increase the nameplate size\n    local nameplateHeight = Plater.db.profile.plate_config.enemynpc.health_incombat [2]\n    unitFrame.healthBar:SetHeight (nameplateHeight + envTable.NameplateSizeOffset)\n    \n    unitFrame.UnitImportantSkullTexture:Show()\n    \n    --color priority:\n    local npcIdString = tostring(envTable._NpcID)\n    envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.npcColor[npcIdString], scriptTable.config.nameplateColor)    \n    \n    if (scriptTable.config.showExtraTexture) then\n        unitFrame.UnitImportantSkullTexture:SetVertexColor(Plater:ParseColors(scriptTable.config.skullColor))\n        unitFrame.UnitImportantSkullTexture:SetAlpha(scriptTable.config.skullAlpha)\n        unitFrame.UnitImportantSkullTexture:SetScale(scriptTable.config.skullScale)\n        unitFrame.UnitImportantSkullTexture:SetTexture([[Interface/AddOns/Plater/media/x_64]])\n        unitFrame.UnitImportantSkullTexture:ClearAllPoints()\n        unitFrame.UnitImportantSkullTexture:SetPoint(\"right\", unitFrame.healthBar, \"left\", -2, 0)\n        unitFrame.UnitImportantSkullTexture:SetSize(28, 28)\n        unitFrame.UnitImportantSkullTexture:Show()\n    else\n        unitFrame.UnitImportantSkullTexture:Hide()\n    end\n    \n    --rules for some npcs\n    if (envTable._NpcID == 194895) then --unstable squall (explode at dying\n        unitFrame.UnitImportantSkullTexture:Hide()\n        Plater.StopDotAnimation(unitFrame.healthBar, envTable.dotAnimation) \n    end\n    \n    if (scriptTable.config.changeNameplateColor) then\n        local npcIdString = tostring(envTable._NpcID)\n        \n        envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.npcColor[npcIdString], scriptTable.config.nameplateColor)        \n        \n        Plater.DenyColorChange(unitFrame, true)\n    end\n    \nend\n\n\n\n\n",
 ["Icon"] = "Interface\\AddOns\\Plater\\media\\skullbones_64",
-["Name"] = "Add - Important [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Change the color and highlight a nameplate of an important Add. Add the unit name or NpcID into the trigger box to add more.",
 ["SpellIds"] = {
 },
-["version"] = -1,
+["Name"] = "Add - Important [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --settings (require a /reload after editing any setting)\n    do\n        --blink and glow\n        envTable.BlinkEnabled = scriptTable.config.blinkEnabled\n        envTable.GlowEnabled = scriptTable.config.glowEnabled \n        envTable.ChangeNameplateColor = scriptTable.config.changeNameplateColor;\n        envTable.TimeLeftToBlink = scriptTable.config.timeleftToBlink;\n        envTable.BlinkSpeed = scriptTable.config.blinkSpeed; \n        envTable.BlinkColor = scriptTable.config.blinkColor; \n        envTable.BlinkMaxAlpha = scriptTable.config.blinkMaxAlpha; \n        envTable.NameplateColor = scriptTable.config.nameplateColor; \n        \n        --text color\n        envTable.TimerColorEnabled = scriptTable.config.timerColorEnabled \n        envTable.TimeLeftWarning = scriptTable.config.timeLeftWarning;\n        envTable.TimeLeftCritical = scriptTable.config.timeLeftCritical;\n        envTable.TextColor_Warning = scriptTable.config.warningColor; \n        envTable.TextColor_Critical = scriptTable.config.criticalColor; \n        \n        --list of spellIDs to ignore\n        envTable.IgnoredSpellID = {\n            [12] = true, --use a simple comma here\n            [13] = true,\n        }\n    end\n    \n    \n    --private\n    do\n        --if not envTable.blinkTexture then\n        envTable.blinkTexture = Plater:CreateImage (self, \"\", 1, 1, \"overlay\")\n        envTable.blinkTexture:SetPoint ('center', 0, 0)\n        envTable.blinkTexture:Hide()\n        \n        local onPlay = function()\n            envTable.blinkTexture:Show() \n            envTable.blinkTexture.color = envTable.BlinkColor\n        end\n        local onStop = function()\n            envTable.blinkTexture:Hide()  \n        end\n        envTable.blinkAnimation = Plater:CreateAnimationHub (envTable.blinkTexture, onPlay, onStop)\n        Plater:CreateAnimation (envTable.blinkAnimation, \"ALPHA\", 1, envTable.BlinkSpeed / 2, 0, envTable.BlinkMaxAlpha)\n        Plater:CreateAnimation (envTable.blinkAnimation, \"ALPHA\", 2, envTable.BlinkSpeed / 2, envTable.BlinkMaxAlpha, 0)\n        --end\n        \n        envTable.glowEffect = envTable.glowEffect or self.overlay or Plater.CreateIconGlow (self)\n        --envTable.glowEffect = envTable.glowEffect or Plater.CreateIconGlow (self)\n        --envTable.glowEffect:Show() --envTable.glowEffect:Hide()\n        \n    end\n    \nend\n\n\n\n\n",
@@ -2101,13 +2107,13 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    envTable.blinkTexture:SetSize (self:GetSize())\n    \nend\n\n\n",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\icon_aura_blink",
-["Name"] = "Aura - Blink by Time Left [Plater]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Blink, change the number and nameplate color. Add the debuffs int he trigger box. Set settings on constructor script.",
 ["SpellIds"] = {
 },
-["version"] = -1,
+["Name"] = "Aura - Blink by Time Left [Plater]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    function envTable.PlaySwipeAnimation(unitFrame)\n        unitFrame.CastSwipeTexture:Show()\n        unitFrame.CastSwipeAnimation:Play()\n        unitFrame.StartSwipeAnimation:Play()\n    end\n    \n    function envTable.StopSwipeAnimation(unitFrame)\n        unitFrame.EndSwipeAnimation:Play()\n        C_Timer.After(0.21, function()\n                unitFrame.CastSwipeAnimation:Stop()\n                unitFrame.CastSwipeTexture:Hide()\n        end)\n    end\n    \n    function envTable.CreateSwipeTextureAndAnimations(unitFrame)\n        if (unitFrame.CastSwipeTexture) then\n            return\n        end\n        \n        local swipeTexture = unitFrame:CreateTexture(nil, \"overlay\")\n        swipeTexture:SetTexture([[Interface\\AddOns\\Plater\\images\\circular_swipe]])\n        swipeTexture:SetPoint(\"center\", 0, 0)\n        swipeTexture:SetSize(64, 64)\n        swipeTexture:Hide()\n        \n        unitFrame.CastSwipeTexture = swipeTexture\n        \n        --rotation animation\n        unitFrame.CastSwipeAnimation = Plater:CreateAnimationHub(swipeTexture)\n        unitFrame.CastSwipeAnimation:SetLooping(\"repeat\")\n        unitFrame.CastSwipeAnimation.Rotation = Plater:CreateAnimation(unitFrame.CastSwipeAnimation, \"rotation\", 1, 1, 360)\n        \n        --starting animation\n        unitFrame.StartSwipeAnimation = Plater:CreateAnimationHub(swipeTexture, function()swipeTexture:Show() end)\n        unitFrame.StartSwipeAnimation.Alpha = Plater:CreateAnimation(unitFrame.StartSwipeAnimation, \"alpha\", 1, 0.2, 0, 1)\n        unitFrame.StartSwipeAnimation.Scale = Plater:CreateAnimation(unitFrame.StartSwipeAnimation, \"scale\", 1, 0.2, 1.3, 1.3, 1, 1)        \n        \n        --finished animation\n        unitFrame.EndSwipeAnimation = Plater:CreateAnimationHub(swipeTexture, nil, function()swipeTexture:Hide() end)\n        unitFrame.EndSwipeAnimation.Alpha = Plater:CreateAnimation(unitFrame.EndSwipeAnimation, \"alpha\", 1, 0.2, 1, 0)\n        unitFrame.EndSwipeAnimation.Scale = Plater:CreateAnimation(unitFrame.EndSwipeAnimation, \"scale\", 1, 0.2, 1, 1, 1.3, 1.3)\n    end\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
@@ -2210,7 +2216,7 @@ PlaterDB = {
 ["Initialization"] = "		function (scriptTable)\n			--insert code here\n			\n		end\n	",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    envTable.CreateSwipeTextureAndAnimations(unitFrame)\n    \n    local options = scriptTable.config\n    \n    local targetScale = scriptTable.config.textureScale\n    \n    --swipe rotation duration    \n    unitFrame.CastSwipeAnimation.Rotation:SetDuration(scriptTable.config.rotationDuration)\n    \n    --swipe texture settings\n    unitFrame.CastSwipeTexture:SetVertexColor(Plater:ParseColors(scriptTable.config.textureColor))\n    unitFrame.CastSwipeTexture:SetScale(targetScale)\n    unitFrame.CastSwipeTexture:SetAlpha(scriptTable.config.textureAlpha)  \n    \n    unitFrame.StartSwipeAnimation.Alpha:SetDuration(scriptTable.config.animStartDuration)\n    unitFrame.StartSwipeAnimation.Alpha:SetFromAlpha(scriptTable.config.textureStartAlpha)\n    unitFrame.StartSwipeAnimation.Alpha:SetToAlpha(scriptTable.config.textureAlpha)\n    \n    unitFrame.StartSwipeAnimation.Scale:SetDuration(scriptTable.config.animStartDuration)\n    unitFrame.StartSwipeAnimation.Scale:SetScaleTo(targetScale, targetScale)\n    \n    unitFrame.EndSwipeAnimation.Scale:SetDuration(0.1)\n    unitFrame.EndSwipeAnimation.Alpha:SetDuration(0.1)\n    \n    --start playing\n    envTable.PlaySwipeAnimation(unitFrame)    \n    \nend\n\n\n",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\circular_swipe",
-["Name"] = "Cast - Circle AoE [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Play a animation when the spell effect is an circular AoE around the caster.",
@@ -2253,7 +2259,7 @@ PlaterDB = {
 172578,
 412063,
 },
-["version"] = -1,
+["Name"] = "Cast - Circle AoE [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n",
@@ -2276,13 +2282,13 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    \n    scriptTable.allAdds = {} \n    scriptTable.nextAddWave = 0\n    scriptTable.waveTime = 20\n    \n    function scriptTable.ArrangeNpcNumbers(GUID)\n        local spawnId = select(7, strsplit (\"-\", GUID))\n        spawnId = tonumber(spawnId, 16)\n        \n        if (spawnId) then\n            --check if this is a new wave of adds\n            if (GetTime() > scriptTable.nextAddWave) then\n                scriptTable.nextAddWave = GetTime() + scriptTable.waveTime\n                scriptTable.allAdds = {}\n            end\n            \n            local bIsAlreadyOnTheList = false\n            \n            for o = 1, #scriptTable.allAdds do\n                if (scriptTable.allAdds[o][1] == GUID) then\n                    bIsAlreadyOnTheList = true\n                end\n            end\n            \n            if (not bIsAlreadyOnTheList) then\n                scriptTable.allAdds[#scriptTable.allAdds+1] = {GUID, spawnId}\n            end\n        end\n        \n        table.sort(scriptTable.allAdds, function(t1, t2) return t1[2] < t2[2] end)\n        \n        --this is a \"loop\" because this is running each time a nameplate is added!\n        \n        for namePlateIndex, plateFrame in ipairs(Plater.GetAllShownPlates()) do\n            local unitFrame = plateFrame.unitFrame\n            \n            --get the unit GUID\n            local unitGUID = unitFrame.namePlateUnitGUID\n            \n            for addId = 1, #scriptTable.allAdds do\n                local addTable = scriptTable.allAdds[addId]\n                local addGUID = addTable[1]\n                \n                if (unitGUID == addGUID) then\n                    scriptTable.TagNameplate(unitFrame, unitGUID, addId)\n                    break\n                end\n            end\n            \n        end\n    end\n    \n    function scriptTable.TagNameplate(unitFrame, GUID, addId)\n        scriptTable.CreateAddWidgetsForNameplate(unitFrame, GUID, addId)\n        \n        if (addId and addId >= 1 and addId <= 8) then\n            unitFrame.AddSpawnIDTexture:Show()\n            unitFrame.AddIcon:Show()\n            unitFrame.AddNumber:Show()\n            \n            local addTexture = \"Interface\\\\TargetingFrame\\\\UI-RaidTargetingIcon_\" .. addId\n            \n            unitFrame.AddIcon:SetTexture(addTexture)\n            unitFrame.AddNumber:SetText(addId)\n        end\n    end\n    \n    function scriptTable.CreateAddWidgetsForNameplate(unitFrame, GUID, addId)\n        if (not unitFrame.AddSpawnIDTexture) then\n            local healthBar = unitFrame.healthBar\n            \n            local textureBackground = healthBar.FrameOverlay:CreateTexture(nil, \"overlay\", nil, 5)\n            local addIcon = healthBar.FrameOverlay:CreateTexture(nil, \"overlay\", nil, 6)\n            local addNumber = healthBar.FrameOverlay:CreateFontString(nil, \"overlay\", \"GameFontNormal\", 6)           \n            \n            unitFrame.AddSpawnIDTexture = textureBackground\n            unitFrame.AddIcon = addIcon\n            unitFrame.AddNumber = addNumber\n        end\n    end    \nend\n\n--Creature-0-2085-1-11042-153285-0002F8DB2B --training dummy for testing\n--195138 Detonating Crystal\n--192955 dracomoc illusion\n--190294 nokhub stormcaster\n--76518 ritual of bones\n\n\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    if (unitFrame.AddSpawnIDTexture) then\n        unitFrame.AddSpawnIDTexture:Hide()\n        unitFrame.AddIcon:Hide()\n        unitFrame.AddNumber:Hide()\n    end\n    \n    scriptTable.ArrangeNpcNumbers(unitFrame.namePlateUnitGUID)\n    \n    local textureBackground = unitFrame.AddSpawnIDTexture\n    textureBackground:SetSize(22, 10)\n    textureBackground:ClearAllPoints()\n    textureBackground:SetPoint(\"bottomright\", unitFrame.healthBar, \"topright\", 0, 1)\n    \n    textureBackground:SetMask([[Interface\\AddOns\\Plater\\masks\\mask_smallrectangle_rounded1]])\n    textureBackground:SetTexture([[Interface\\AddOns\\Plater\\masks\\mask_smallrectangle_rounded1]])\n    textureBackground:SetVertexColor(0.1215, 0.1176, 0.1294, 1)\n    \n    \n    --textureBackground:SetMask([[Interface/ChatFrame/UI-ChatIcon-HotS]])\n    --    \"Interface/ChatFrame/UI-ChatIcon-HotS\"\n    \n    local addIcon = unitFrame.AddIcon\n    addIcon:ClearAllPoints()\n    addIcon:SetPoint(\"left\", textureBackground, \"left\", 2, 0)\n    addIcon:SetSize(10, 10)\n    \n    local addNumber = unitFrame.AddNumber\n    addNumber:ClearAllPoints()\n    addNumber:SetPoint(\"right\", textureBackground, \"right\", -2, 0)\n    DetailsFramework:SetFontSize(addNumber, 10)\n    \nend\n\n\n",
 ["Icon"] = "interface/addons/plater/images/add_id_icon",
-["Name"] = "Add - Tag Number [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Put a number above multiples adds, numbers follow their respawn id.",
 ["SpellIds"] = {
 },
-["version"] = -1,
+["Name"] = "Add - Tag Number [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --settings\n    envTable.NameplateSizeOffset = scriptTable.config.castBarHeight\n    envTable.ShowArrow = scriptTable.config.showArrow\n    envTable.ArrowAlpha = scriptTable.config.arrowAlpha\n    \n    --creates the spark to show the cast progress inside the health bar\n    envTable.overlaySpark = envTable.overlaySpark or Plater:CreateImage (unitFrame.healthBar)\n    envTable.overlaySpark:SetBlendMode (\"ADD\")\n    envTable.overlaySpark.width = 16\n    envTable.overlaySpark.height = 36\n    envTable.overlaySpark.alpha = .9\n    envTable.overlaySpark.texture = [[Interface\\AddOns\\Plater\\images\\spark3]]\n    \n    envTable.topArrow = envTable.topArrow or Plater:CreateImage (unitFrame.healthBar)\n    envTable.topArrow:SetBlendMode (\"ADD\")\n    envTable.topArrow.width = scriptTable.config.arrowWidth\n    envTable.topArrow.height = scriptTable.config.arrowHeight\n    envTable.topArrow.alpha = envTable.ArrowAlpha\n    envTable.topArrow.texture = [[Interface\\BUTTONS\\Arrow-Down-Up]]\n    \n    --scale animation\n    envTable.smallScaleAnimation = envTable.smallScaleAnimation or Plater:CreateAnimationHub (unitFrame.healthBar)\n    Plater:CreateAnimation (envTable.smallScaleAnimation, \"SCALE\", 1, 0.075, 1, 1, 1.08, 1.08)\n    Plater:CreateAnimation (envTable.smallScaleAnimation, \"SCALE\", 2, 0.075, 1, 1, 0.95, 0.95)    \n    --envTable.smallScaleAnimation:Play() --envTable.smallScaleAnimation:Stop()\n    \nend\n\n\n\n\n\n\n\n",
@@ -2470,7 +2476,7 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    envTable.overlaySpark:Show()\n    \n    if (envTable.ShowArrow) then\n        envTable.topArrow:Show()\n    end\n    \n    Plater.FlashNameplateBorder (unitFrame, 0.05)   \n    Plater.FlashNameplateBody (unitFrame, \"\", 0.075)\n    \n    envTable.smallScaleAnimation:Play()\n    \n    --increase the nameplate size\n    local nameplateHeight = Plater.db.profile.plate_config.enemynpc.health_incombat [2]\n    unitFrame.healthBar:SetHeight (nameplateHeight + envTable.NameplateSizeOffset)\n    \n    envTable.overlaySpark.height = nameplateHeight + 5\n    \n    envTable.dotAnimation = Plater.PlayDotAnimation(unitFrame.healthBar, 2, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n    \n    Plater.SetCastBarColorForScript(self, true, scriptTable.config.castBarColor, envTable)\n    \n    if (scriptTable.config.useNameplateColor) then\n        envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.healthBarColor)\n        Plater.DenyColorChange(unitFrame, true)\n    end       \nend\n\n\n\n\n\n\n",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\cast_bar_special_ability.png",
-["Name"] = "Cast - Special Ability [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "For unique abilities that are an important part of the fight against a bosses or mini bosse.",
@@ -2502,7 +2508,7 @@ PlaterDB = {
 468841,
 444034,
 },
-["version"] = -1,
+["Name"] = "Cast - Special Ability [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \n    if (not self.FrameOverlay.LeapArrow1) then\n        \n        self.FrameOverlay.LeapArrow1 = self.FrameOverlay:CreateTexture(nil, \"overlay\")\n        self.FrameOverlay.LeapArrow2 = self.FrameOverlay:CreateTexture(nil, \"overlay\")\n        self.FrameOverlay.LeapArrow3 = self.FrameOverlay:CreateTexture(nil, \"overlay\")\n        \n        local onPlayFunc = function()\n            --self.FrameOverlay.LeapArrow1:Show()\n            --self.FrameOverlay.LeapArrow2:Show()\n            --self.FrameOverlay.LeapArrow3:Show()            \n        end\n        local onStopFunc = function()\n            self.FrameOverlay.LeapArrow1:Hide()\n            self.FrameOverlay.LeapArrow2:Hide()\n            self.FrameOverlay.LeapArrow3:Hide()\n        end\n        \n        --first arrow animation\n        local animHub1 = DetailsFramework:CreateAnimationHub (self.FrameOverlay.LeapArrow1, onPlayFunc, onStopFunc)\n        animHub1.alpha1 = DetailsFramework:CreateAnimation (animHub1, \"alpha\", 1, 0.3, 0, 0.8)\n        animHub1.trans1 = DetailsFramework:CreateAnimation (animHub1, \"translation\", 1, 0.3, 8, 8)\n        \n        animHub1.alpha2 = DetailsFramework:CreateAnimation (animHub1, \"alpha\", 2, 0.3, 0.8, 0)\n        animHub1.trans2 = DetailsFramework:CreateAnimation (animHub1, \"translation\", 2, 0.3, 8, 8)        \n        \n        self.FrameOverlay.LeapArrow1.animation = animHub1\n        \n        --second arrow animation\n        local animHub2 = DetailsFramework:CreateAnimationHub (self.FrameOverlay.LeapArrow2, onPlayFunc, onStopFunc)\n        animHub2.alpha1 = DetailsFramework:CreateAnimation (animHub2, \"alpha\", 1, 0.3, 0, 0.8)\n        animHub2.trans1 = DetailsFramework:CreateAnimation (animHub2, \"translation\", 1, 0.3, 8, 8)\n        \n        animHub2.alpha2 = DetailsFramework:CreateAnimation (animHub2, \"alpha\", 2, 0.3, 0.8, 0)\n        animHub2.trans2 = DetailsFramework:CreateAnimation (animHub2, \"translation\", 2, 0.3, 8, 8)\n        \n        self.FrameOverlay.LeapArrow2.animation = animHub2\n        \n        --third arrow animation\n        local animHub3 = DetailsFramework:CreateAnimationHub (self.FrameOverlay.LeapArrow3, onPlayFunc, onStopFunc)\n        animHub3.alpha1 = DetailsFramework:CreateAnimation (animHub3, \"alpha\", 1, 0.3, 0, 0.8)\n        animHub3.trans1 = DetailsFramework:CreateAnimation (animHub3, \"translation\", 1, 0.3, 8, 8)\n        \n        animHub3.alpha2 = DetailsFramework:CreateAnimation (animHub3, \"alpha\", 2, 0.3, 0.8, 0)\n        animHub3.trans2 = DetailsFramework:CreateAnimation (animHub3, \"translation\", 2, 0.3, 8, 8)\n        \n        self.FrameOverlay.LeapArrow3.animation = animHub3\n        \n        self.FrameOverlay.LeapArrowTextures = {\n            self.FrameOverlay.LeapArrow1,\n            self.FrameOverlay.LeapArrow2,\n            self.FrameOverlay.LeapArrow3\n        }\n        \n        self.FrameOverlay.LeapArrowAnimations = {\n            alpha1Anim = {},\n            alpha2Anim = {},\n            trans1Anim = {},\n            trans2Anim = {},\n        }\n        \n        self.FrameOverlay.LeapArrowAnimations.alpha1Anim = {animHub1.alpha1, animHub2.alpha1, animHub3.alpha1}\n        self.FrameOverlay.LeapArrowAnimations.alpha2Anim = {animHub1.alpha2, animHub2.alpha2, animHub3.alpha2}\n        self.FrameOverlay.LeapArrowAnimations.trans1Anim = {animHub1.trans1, animHub2.trans1, animHub3.trans1}\n        self.FrameOverlay.LeapArrowAnimations.trans2Anim = {animHub1.trans2, animHub2.trans2, animHub3.trans2}        \n        \n    end\n    \nend\n\n\n\n\n\n\n",
@@ -2582,7 +2588,7 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    if (scriptTable.config.bUseCastbarColor) then\n        Plater.SetCastBarColor (unitFrame, DetailsFramework:ParseColors(scriptTable.config.castbarColor))\n    end\n    \n    \n    if (scriptTable.config.bRenameSpell) then\n        self.Text:SetText(scriptTable.config.spellName) \n    end\n    \n    ---@type texture[]\n    local leapTextures = self.FrameOverlay.LeapArrowTextures\n    for i, texture in ipairs(leapTextures) do\n        texture:SetTexture([[Interface\\AddOns\\Plater\\media\\arrow_right_64.tga]])\n        texture:ClearAllPoints()\n        texture:SetSize(self:GetHeight()*1.5, self:GetHeight()*1.5)\n        texture:SetRotation(math.pi - math.pi*0.75)        \n    end\n    \n    local startX = -10\n    leapTextures[1]:SetPoint(\"left\", self, \"left\", startX, -8)\n    leapTextures[2]:SetPoint(\"center\", self, \"center\", startX, -8)\n    leapTextures[3]:SetPoint(\"right\", self, \"right\", startX, -8)\n    \n    local animations = self.FrameOverlay.LeapArrowAnimations\n    local alpha1Animations = animations.alpha1Anim\n    local alpha2Animations = animations.alpha2Anim    \n    local trans1Animations = animations.trans1Anim\n    local trans2Animations = animations.trans2Anim    \n    \n    local castTime = envTable._Duration\n    \n    --on fade in\n    local fadeInDuration =  castTime/6\n    \n    C_Timer.After(fadeInDuration, function()\n            for i, texture in ipairs(leapTextures) do\n                texture:SetRotation(-math.pi*0.25)\n                --texture:Show()\n            end            \n    end)\n    \n    for i, alphaAnim in ipairs(alpha1Animations) do\n        alphaAnim:SetDuration(fadeInDuration)\n        alphaAnim:SetFromAlpha(0.3)\n        alphaAnim:SetToAlpha(1)\n    end\n    \n    for i, transAnim in ipairs(trans1Animations) do\n        transAnim:SetDuration(fadeInDuration)\n        transAnim:SetOffset(8, 20)\n    end\n    \n    --on fade out\n    local fadeOutDuration = castTime/2\n    \n    for i, alphaAnim in ipairs(alpha2Animations) do\n        alphaAnim:SetDuration(fadeOutDuration)\n        alphaAnim:SetFromAlpha(1)\n        alphaAnim:SetToAlpha(0.3)\n    end\n    \n    for i, transAnim in ipairs(trans2Animations) do\n        transAnim:SetDuration(fadeOutDuration)\n        transAnim:SetOffset(8, -16)\n    end    \n    \n    for i, texture in ipairs(leapTextures) do\n        texture:Show()\n        local animation = texture.animation\n        animation:Play()\n    end\n    \n    \n    --DetailsFramework:DebugVisibility(self.FrameOverlay.LeapArrow1)\nend",
 ["Icon"] = 236171,
-["Name"] = "Cast - Heroic Leap [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Modify a cast bar when the unit casts a spell with the same effect of the Warrior's Heroic Leap spell.",
@@ -2590,7 +2596,7 @@ PlaterDB = {
 447141,
 432967,
 },
-["version"] = -1,
+["Name"] = "Cast - Heroic Leap [P]",
 },
 {
 ["ConstructorCode"] = "		function (self, unitId, unitFrame, envTable, scriptTable)\n			--insert code here\n			\n		end\n	",
@@ -2664,7 +2670,7 @@ PlaterDB = {
 ["Initialization"] = "		function (scriptTable)\n			--insert code here\n			\n		end\n	",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --get the spark color\n    local sparkColor = scriptTable.config.sparkColor[tostring(envTable._SpellID)]\n    \n    self.Spark:SetVertexColor(DetailsFramework:ParseColors(sparkColor))\n    \n    self.Spark:SetWidth( self.Spark:GetWidth() * scriptTable.config.sparkWithScale )\n    self.Spark:SetHeight( self.Spark:GetHeight() * scriptTable.config.sparkHeightScale )\n    \nend\n\n\n",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\cast_bar_spark.png",
-["Name"] = "Cast - Spark Color [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Change the spark color to differentiate a cast from another.",
@@ -2678,7 +2684,7 @@ PlaterDB = {
 272422,
 429427,
 },
-["version"] = -1,
+["Name"] = "Cast - Spark Color [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    local castBar = unitFrame.castBar\n    local castBarPortion = castBar:GetWidth()/scriptTable.config.segmentsAmount\n    local castBarHeight = castBar:GetHeight()\n    \n    unitFrame.felAnimation = unitFrame.felAnimation or {}\n    \n    if (not unitFrame.felAnimation.textureStretched) then\n        unitFrame.felAnimation.textureStretched = castBar:CreateTexture(nil, \"overlay\", nil, 5)\n    end\n    \n    if (not unitFrame.stopCastingX) then\n        unitFrame.stopCastingX = castBar.FrameOverlay:CreateTexture(nil, \"overlay\", nil, 7)\n        unitFrame.stopCastingX:SetPoint(\"center\", unitFrame.castBar.Spark, \"center\", 0, 0)\n        unitFrame.stopCastingX:SetTexture([[Interface\\AddOns\\Plater\\Media\\stop_64]])\n        unitFrame.stopCastingX:SetSize(16, 16)\n        unitFrame.stopCastingX:Hide()\n    end\n    \n    if (not unitFrame.felAnimation.Textures) then\n        unitFrame.felAnimation.Textures = {}\n        \n        for i = 1, 20 do\n            local texture = castBar:CreateTexture(nil, \"overlay\", nil, 6)\n            unitFrame.felAnimation.Textures[i] = texture            \n            \n            texture.animGroup = texture.animGroup or texture:CreateAnimationGroup()\n            local animationGroup = texture.animGroup\n            animationGroup:SetToFinalAlpha(true)            \n            animationGroup:SetLooping(\"NONE\")\n            \n            texture:SetTexture([[Interface\\COMMON\\XPBarAnim]])\n            texture:SetTexCoord(0.2990, 0.0010, 0.0010, 0.4159)\n            texture:SetBlendMode(\"ADD\")\n            \n            texture.scale = animationGroup:CreateAnimation(\"SCALE\")\n            texture.scale:SetTarget(texture)\n            \n            texture.alpha = animationGroup:CreateAnimation(\"ALPHA\")\n            texture.alpha:SetTarget(texture)\n            \n            texture.alpha2 = animationGroup:CreateAnimation(\"ALPHA\")\n            texture.alpha2:SetTarget(texture)\n        end\n    end\n    \n    \n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
@@ -2734,7 +2740,7 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    local castBar = unitFrame.castBar\n    envTable.castBarWidth = castBar:GetWidth()\n    castBar.Spark:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.sparkColor))\n    \n    local textureStretched = unitFrame.felAnimation.textureStretched\n    textureStretched:Show()\n    textureStretched:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.glowColor))\n    textureStretched:SetAtlas(\"XPBarAnim-OrangeTrail\")\n    textureStretched:ClearAllPoints()\n    textureStretched:SetPoint(\"right\", castBar.Spark, \"center\", 0, 0)\n    textureStretched:SetHeight(castBar:GetHeight())\n    textureStretched:SetBlendMode(\"ADD\") \n    textureStretched:SetAlpha(0.5)\n    textureStretched:SetDrawLayer(\"overlay\", 7)\n    \n    for i = 1, scriptTable.config.segmentsAmount  do\n        local texture = unitFrame.felAnimation.Textures[i]\n        --texture:SetVertexColor(1, 1, 1, 1)\n        texture:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.glowColor))\n        texture:SetDesaturated(true)\n        \n        local castBarPortion = castBar:GetWidth()/scriptTable.config.segmentsAmount\n        \n        texture:SetSize(castBarPortion + 5, castBar:GetHeight() + math.random(1, 5))\n        texture:SetDrawLayer(\"overlay\", 6)\n        \n        texture:ClearAllPoints()\n        \n        if (i == scriptTable.config.segmentsAmount) then\n            texture:SetPoint(\"right\", castBar, \"right\", 0, 0)\n        else\n            texture:SetPoint(\"left\", castBar, \"left\", (i-1)*castBarPortion, 2 + math.random(-2, 2))\n        end\n        \n        texture:SetAlpha(0)\n        texture:Hide()\n        \n        texture.scale:SetOrder(1)\n        texture.scale:SetDuration(0.5)\n        texture.scale:SetScaleFrom(0.2, 1)\n        texture.scale:SetScaleTo(1, 1.5)\n        texture.scale:SetOrigin(\"right\", 0, 0)\n        \n        local durationTime = DetailsFramework:GetBezierPoint(i / scriptTable.config.segmentsAmount, 0.2, 0.01, 0.6)\n        local duration = abs(durationTime-0.6)\n        --local duration = 0.6 --debug\n        \n        texture.alpha:SetOrder(1)\n        texture.alpha:SetDuration(0.05)\n        texture.alpha:SetFromAlpha(0)\n        texture.alpha:SetToAlpha(1)\n        \n        texture.alpha2:SetOrder(1)\n        texture.alpha2:SetDuration(duration + 0.5) --0.6\n        texture.alpha2:SetStartDelay(duration)\n        texture.alpha2:SetFromAlpha(1)\n        texture.alpha2:SetToAlpha(0)\n    end\n    \n    unitFrame.stopCastingX:Show()\n    \n    envTable.CurrentTexture = 1\n    envTable.NextPercent  = 100  / scriptTable.config.segmentsAmount\n    \n    self.Text:SetDrawLayer(\"artwork\", 7)\n    self.Spark:SetDrawLayer(\"artwork\", 7)\n    self.Spark:Hide()\nend\n\n\n\n\n\n\n\n\n",
 ["Icon"] = "Interface\\AddOns\\Plater\\media\\stop_64",
-["Name"] = "Cast - Heal Stun [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Healing effect that cannot be interrupted.",
@@ -2742,7 +2748,7 @@ PlaterDB = {
 432520,
 320822,
 },
-["version"] = -1,
+["Name"] = "Cast - Heal Stun [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --castbar color (when can be interrupted)\n    envTable.CastbarColor = scriptTable.config.castbarColor\n    \n    --flash duration\n    local CONFIG_BACKGROUND_FLASH_DURATION = scriptTable.config.flashDuration\n    \n    --add this value to the cast bar height\n    envTable.CastBarHeightAdd = scriptTable.config.castBarHeight\n    \n    --create a fast flash above the cast bar\n    envTable.FullBarFlash = envTable.FullBarFlash or Plater.CreateFlash (self, 0.05, 1, \"white\")\n    \n    --create a camera shake for the nameplate\n    envTable.FrameShake = Plater:CreateFrameShake (unitFrame, scriptTable.config.shakeDuration, scriptTable.config.shakeAmplitude, scriptTable.config.shakeFrequency, false, false, 0, 1, 0.05, 0.1, Plater.GetPoints (unitFrame))\n    \n    --create a texture to use for a flash behind the cast bar\n    local backGroundFlashTexture = Plater:CreateImage (self, [[Interface\\ACHIEVEMENTFRAME\\UI-Achievement-Alert-Glow]], self:GetWidth()+60, self:GetHeight()+50, \"background\", {0, 400/512, 0, 170/256})\n    backGroundFlashTexture:SetBlendMode (\"ADD\")\n    backGroundFlashTexture:SetDrawLayer(\"OVERLAY\", 7)\n    backGroundFlashTexture:SetPoint (\"center\", self, \"center\")\n    backGroundFlashTexture:Hide()\n    \n    --create the animation hub to hold the flash animation sequence\n    envTable.BackgroundFlash = envTable.BackgroundFlash or Plater:CreateAnimationHub (backGroundFlashTexture, \n        function()\n            backGroundFlashTexture:Show()\n        end,\n        function()\n            backGroundFlashTexture:Hide()\n        end\n    )\n    \n    --create the flash animation sequence\n    envTable.BackgroundFlash.fadeIn = envTable.BackgroundFlash.fadeIn or Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 1, CONFIG_BACKGROUND_FLASH_DURATION/2, 0, .75)\n    envTable.BackgroundFlash.fadeIn:SetDuration(CONFIG_BACKGROUND_FLASH_DURATION/2)\n    \n    envTable.BackgroundFlash.fadeOut = envTable.BackgroundFlash.fadeOut or Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 2, CONFIG_BACKGROUND_FLASH_DURATION/2, 1, 0)    \n    envTable.BackgroundFlash.fadeOut:SetDuration(CONFIG_BACKGROUND_FLASH_DURATION/2)\n    \n    --envTable.BackgroundFlash:Play() --envTable.BackgroundFlash:Stop()    \n    \n    \n    \n    \n    \nend\n\n\n",
@@ -2877,7 +2883,7 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --don't execute on battlegrounds and arenas\n    if (Plater.ZoneInstanceType == \"arena\" or Plater.ZoneInstanceType == \"pvp\") then\n        return\n    end\n    \n    --play flash animations\n    envTable.FullBarFlash:Play()\n    \n    --envTable.currentHeight = unitFrame.castBar:GetHeight()\n    \n    --restoring the default size (not required since it already restore in the hide script)\n    if (envTable.OriginalHeight) then\n        self:SetHeight (envTable.OriginalHeight)\n    end\n    \n    --increase the cast bar size\n    local height = self:GetHeight()\n    envTable.OriginalHeight = height\n    \n    self:SetHeight (height + envTable.CastBarHeightAdd)\n    \n    Plater.SetCastBarBorderColor (self, 1, .2, .2, 0.4)\n    \n    unitFrame:PlayFrameShake (envTable.FrameShake)\n    \n    Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, scriptTable.config.castBarColor, envTable)\n    \n    envTable.BackgroundFlash:Play()\n    \n    unitFrame.castBar.Spark:SetHeight(unitFrame.castBar:GetHeight())\n    \nend\n\n\n\n\n\n\n\n\n\n\n",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\cast_bar_quickflash.tga",
-["Name"] = "Cast - Quick Flash [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Play a very fast flash when the cast start",
@@ -2905,7 +2911,7 @@ PlaterDB = {
 412012,
 411958,
 },
-["version"] = -1,
+["Name"] = "Cast - Quick Flash [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --castbar color (when can be interrupted)\n    envTable.CastbarColor = scriptTable.config.castbarColor\n    \n    --flash duration\n    local CONFIG_BACKGROUND_FLASH_DURATION = scriptTable.config.flashDuration\n    \n    --add this value to the cast bar height\n    envTable.CastBarHeightAdd = scriptTable.config.castBarHeight\n    \n    --create a fast flash above the cast bar\n    envTable.FullBarFlash = envTable.FullBarFlash or Plater.CreateFlash (self, 0.05, 1, \"white\")\n    \n    --create a camera shake for the nameplate\n    envTable.FrameShake = Plater:CreateFrameShake (unitFrame, scriptTable.config.shakeDuration, scriptTable.config.shakeAmplitude, scriptTable.config.shakeFrequency, false, false, 0, 1, 0.05, 0.1, Plater.GetPoints (unitFrame))\n    \n    --create a texture to use for a flash behind the cast bar\n    local backGroundFlashTexture = Plater:CreateImage (self, [[Interface\\ACHIEVEMENTFRAME\\UI-Achievement-Alert-Glow]], self:GetWidth()+60, self:GetHeight()+50, \"background\", {0, 400/512, 0, 170/256})\n    backGroundFlashTexture:SetBlendMode (\"ADD\", 7)\n    backGroundFlashTexture:SetDrawLayer(\"OVERLAY\", 7)\n    backGroundFlashTexture:SetPoint (\"center\", self, \"center\")\n    backGroundFlashTexture:Hide()\n    \n    --create the animation hub to hold the flash animation sequence\n    envTable.BackgroundFlash = envTable.BackgroundFlash or Plater:CreateAnimationHub (backGroundFlashTexture, \n        function()\n            backGroundFlashTexture:Show()\n        end,\n        function()\n            backGroundFlashTexture:Hide()\n        end\n    )\n    \n    --create the flash animation sequence\n    envTable.BackgroundFlash.fadeIn = envTable.BackgroundFlash.fadeIn or Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 1, CONFIG_BACKGROUND_FLASH_DURATION/2, 0, .75)\n    envTable.BackgroundFlash.fadeIn:SetDuration(CONFIG_BACKGROUND_FLASH_DURATION/2)\n    \n    envTable.BackgroundFlash.fadeOut = envTable.BackgroundFlash.fadeOut or Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 2, CONFIG_BACKGROUND_FLASH_DURATION/2, 1, 0)    \n    envTable.BackgroundFlash.fadeOut:SetDuration(CONFIG_BACKGROUND_FLASH_DURATION/2)\n    \n    --envTable.BackgroundFlash:Play() --envTable.BackgroundFlash:Stop()    \n    \n    \n    \n    \n    \nend\n\n\n\n\n",
@@ -3040,7 +3046,7 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --don't execute on battlegrounds and arenas\n    if (not Plater.IsShowingCastBarTest) then\n        if (Plater.ZoneInstanceType == \"arena\" or Plater.ZoneInstanceType == \"pvp\" or Plater.ZoneInstanceType == \"none\") then\n            return\n        end\n    end\n    \n    --don't execute if the player is not the tank\n    if (not Plater.IsPlayerTank()) then\n        return\n    end\n    \n    --play flash animations\n    envTable.FullBarFlash:Play()\n    \n    --envTable.currentHeight = unitFrame.castBar:GetHeight()\n    \n    --restoring the default size (not required since it already restore in the hide script)\n    if (envTable.OriginalHeight) then\n        self:SetHeight (envTable.OriginalHeight)\n    end\n    \n    --increase the cast bar size\n    local height = self:GetHeight()\n    envTable.OriginalHeight = height\n    \n    self:SetHeight (height + envTable.CastBarHeightAdd)\n    \n    Plater.SetCastBarBorderColor (self, 1, .2, .2, 0.4)\n    \n    unitFrame:PlayFrameShake (envTable.FrameShake)\n    \n    --set the color of the cast bar to dark orange (only if can be interrupted)\n    --Plater auto set this color to default when a new cast starts, no need to reset this value at OnHide.    \n    if (envTable._CanInterrupt) then\n        if (scriptTable.config.useCastbarColor) then\n            self:SetStatusBarColor (Plater:ParseColors (envTable.CastbarColor))\n        end\n    end\n    \n    Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, scriptTable.config.castbarColor, envTable)\n    \n    envTable.BackgroundFlash:Play()\n    \n    unitFrame.castBar.Spark:SetHeight(unitFrame.castBar:GetHeight())\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\cast_bar_tankbuster.png",
-["Name"] = "Cast - Tankbuster [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Abilities casted on the tank.",
@@ -3065,7 +3071,7 @@ PlaterDB = {
 424414,
 448515,
 },
-["version"] = -1,
+["Name"] = "Cast - Tankbuster [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --create a texture to use for a flash behind the cast bar\n    \n    if (not unitFrame.backGroundFlashTextureImpTarget) then\n        unitFrame.backGroundFlashTextureImpTarget =  Plater:CreateImage (self, [[Interface\\ACHIEVEMENTFRAME\\UI-Achievement-Alert-Glow]], self:GetWidth()+40, self:GetHeight()+20, \"background\", {0, 400/512, 0, 170/256})\n    end\n    \n    local backGroundFlashTexture = unitFrame.backGroundFlashTextureImpTarget\n    backGroundFlashTexture:SetBlendMode (\"ADD\")\n    backGroundFlashTexture:SetDrawLayer(\"OVERLAY\", 7)\n    backGroundFlashTexture:SetPoint (\"center\", self, \"center\")\n    backGroundFlashTexture:Hide()\n    \n    --create the animation hub to hold the flash animation sequence\n    envTable.BackgroundFlash = envTable.BackgroundFlash or Plater:CreateAnimationHub (backGroundFlashTexture, \n        function()\n            backGroundFlashTexture:Show()\n        end,\n        function()\n            backGroundFlashTexture:Hide()\n        end\n    )\n    \n    --create the flash animation sequence\n    local fadeIn = Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 1, scriptTable.config.flashDuration/2, 0, 1)\n    local fadeOut = Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 2, scriptTable.config.flashDuration/2, 1, 0)\n    \n    --create a camera shake for the nameplate\n    envTable.FrameShake = Plater:CreateFrameShake (unitFrame, scriptTable.config.shakeDuration, scriptTable.config.shakeAmplitude, scriptTable.config.shakeFrequency, false, false, 0, 1, 0.05, 0.1, Plater.GetPoints (unitFrame))\n    \n    --update the config for the flash here so it wont need a /reload\n    fadeIn:SetDuration (scriptTable.config.flashDuration/2)\n    fadeOut:SetDuration (scriptTable.config.flashDuration/2)\n    \n    --update the config for the skake here so it wont need a /reload\n    envTable.FrameShake.OriginalAmplitude = scriptTable.config.shakeAmplitude\n    envTable.FrameShake.OriginalDuration = scriptTable.config.shakeDuration\n    envTable.FrameShake.OriginalFrequency = scriptTable.config.shakeFrequency\n    \n    --create the target unit name box\n    if (not unitFrame.targetBox) then\n        unitFrame.targetBox = CreateFrame(\"frame\", unitFrame:GetName() .. \"ScriptImportantTarget\", unitFrame, \"BackdropTemplate\")\n        unitFrame.targetBox:SetSize(80, 20)\n        unitFrame.targetBox:SetFrameStrata(\"TOOLTIP\")\n        unitFrame.targetBox:Hide()\n        unitFrame.targetBox:SetPoint(\"left\", unitFrame, \"right\", 0, 0)\n        \n        unitFrame.targetBox:SetBackdrop({edgeFile = [[Interface\\Buttons\\WHITE8X8]], edgeSize = 1, bgFile = [[Interface\\AddOns\\Details\\images\\background]], tile = true, tileSize = 16})\n        unitFrame.targetBox:SetBackdropColor(.2, .2, .2, .8)\n        unitFrame.targetBox:SetBackdropBorderColor(0, 0, 0, 1)\n        \n        unitFrame.targetBoxName = unitFrame.targetBox:CreateFontString(nil, \"artwork\", \"GameFontNormal\")\n        unitFrame.targetBoxName:SetPoint(\"center\")\n    end\n    \n    function envTable.UpdateTargetBox(unitFrame, unitId)\n        local targetUnitId = unitId .. \"target\"\n        local unitName = UnitName(targetUnitId)\n        \n        if (unitName) then\n            if (scriptTable.config.colorByClass) then\n                Plater:SetFontColor(unitFrame.targetBoxName, \"white\")\n                unitName = Plater.SetTextColorByClass(targetUnitId, unitName)\n            else\n                Plater:SetFontColor(unitFrame.targetBoxName, scriptTable.config.textColor)\n            end\n            \n            unitFrame.targetBoxName:SetText(unitName)\n            Plater:SetFontSize(unitFrame.targetBoxName, scriptTable.config.targetNameSize)\n            unitFrame.targetBox:SetBackdropColor(Plater:ParseColors(scriptTable.config.targetBgColor))\n            unitFrame.targetBox:SetBackdropBorderColor(Plater:ParseColors(scriptTable.config.targetBgBorderColor))\n            unitFrame.targetBox:Show()\n            \n            unitFrame.targetBox:SetWidth(scriptTable.config.targetFrameWidth)\n            unitFrame.targetBox:SetHeight(scriptTable.config.targetFrameHeight)\n            \n            if (not Plater.HasDotAnimationPlaying(unitFrame.targetBox)) then\n                envTable.dotAnimation = Plater.PlayDotAnimation(unitFrame.targetBox, 5, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n            end\n            \n            unitFrame.backGroundFlashTextureImpTarget:SetVertexColor(Plater:ParseColors(scriptTable.config.flashColor))\n            \n            return true\n            \n        end\n    end\n    \nend",
@@ -3421,7 +3427,7 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    if (envTable.UpdateTargetBox(unitFrame, unitId)) then\n        \n        envTable.BackgroundFlash:Play()\n        \n        Plater.FlashNameplateBorder (unitFrame, 0.05)   \n        Plater.FlashNameplateBody (unitFrame, \"\", 0.075)\n        \n        unitFrame:PlayFrameShake (envTable.FrameShake)\n        \n        if (envTable._CanInterrupt) then\n            if (scriptTable.config.useCastbarColor) then\n                self:SetStatusBarColor (Plater:ParseColors (scriptTable.config.castBarColor))\n            end\n        end\n        \n    end\n    \nend\n\n\n\n\n\n\n",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\cast_bar_target",
-["Name"] = "Cast - Important Target [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Highlight the target name",
@@ -3429,7 +3435,7 @@ PlaterDB = {
 270042,
 260813,
 },
-["version"] = -1,
+["Name"] = "Cast - Important Target [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --castbar color (when can be interrupted)\n    envTable.CastbarColor = scriptTable.config.castbarColor\n    \n    --flash duration\n    local CONFIG_BACKGROUND_FLASH_DURATION = scriptTable.config.flashDuration\n    \n    --add this value to the cast bar height\n    envTable.CastBarHeightAdd = scriptTable.config.castBarHeight\n    \n    --create a fast flash above the cast bar\n    envTable.FullBarFlash = envTable.FullBarFlash or Plater.CreateFlash (self, 0.05, 1, \"white\")\n    \n    --create a camera shake for the nameplate\n    envTable.FrameShake = Plater:CreateFrameShake (unitFrame, scriptTable.config.shakeDuration, scriptTable.config.shakeAmplitude, scriptTable.config.shakeFrequency, false, false, 0, 1, 0.05, 0.1, Plater.GetPoints (unitFrame))\n    \n    --create a texture to use for a flash behind the cast bar\n    local backGroundFlashTexture = Plater:CreateImage (self, [[Interface\\ACHIEVEMENTFRAME\\UI-Achievement-Alert-Glow]], self:GetWidth()+60, self:GetHeight()+50, \"background\", {0, 400/512, 0, 170/256})\n    backGroundFlashTexture:SetBlendMode (\"ADD\", 7)\n    backGroundFlashTexture:SetDrawLayer(\"OVERLAY\", 7)\n    backGroundFlashTexture:SetPoint (\"center\", self, \"center\")\n    backGroundFlashTexture:Hide()\n    \n    --create the animation hub to hold the flash animation sequence\n    envTable.BackgroundFlash = envTable.BackgroundFlash or Plater:CreateAnimationHub (backGroundFlashTexture, \n        function()\n            backGroundFlashTexture:Show()\n        end,\n        function()\n            backGroundFlashTexture:Hide()\n        end\n    )\n    \n    --create the flash animation sequence\n    envTable.BackgroundFlash.fadeIn = envTable.BackgroundFlash.fadeIn or Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 1, CONFIG_BACKGROUND_FLASH_DURATION/2, 0, .75)\n    envTable.BackgroundFlash.fadeIn:SetDuration(CONFIG_BACKGROUND_FLASH_DURATION/2)\n    \n    envTable.BackgroundFlash.fadeOut = envTable.BackgroundFlash.fadeOut or Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 2, CONFIG_BACKGROUND_FLASH_DURATION/2, 1, 0)    \n    envTable.BackgroundFlash.fadeOut:SetDuration(CONFIG_BACKGROUND_FLASH_DURATION/2)\n    \n    --envTable.BackgroundFlash:Play() --envTable.BackgroundFlash:Stop()    \n    \n    \n    \n    \n    \nend\n\n\n\n\n",
@@ -3583,7 +3589,7 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --play flash animations\n    envTable.FullBarFlash:Play()\n    \n    --envTable.currentHeight = unitFrame.castBar:GetHeight()\n    \n    --restoring the default size (not required since it already restore in the hide script)\n    if (envTable.OriginalHeight) then\n        self:SetHeight (envTable.OriginalHeight)\n    end\n    \n    --increase the cast bar size\n    local height = self:GetHeight()\n    envTable.OriginalHeight = height\n    \n    self:SetHeight (height + envTable.CastBarHeightAdd)\n    \n    Plater.SetCastBarBorderColor (self, 1, .2, .2, 0.4)\n    \n    unitFrame:PlayFrameShake (envTable.FrameShake)\n    \n    --set the color of the cast bar to dark orange (only if can be interrupted)\n    --Plater auto set this color to default when a new cast starts, no need to reset this value at OnHide.    \n    if (envTable._CanInterrupt) then\n        if (scriptTable.config.useCastbarColor) then\n            self:SetStatusBarColor (Plater:ParseColors (envTable.CastbarColor))\n        end\n    end\n    \n    envTable.BackgroundFlash:Play()\n    \n    unitFrame.castBar.Spark:SetHeight(unitFrame.castBar:GetHeight())\n    \nend\n\n\n\n\n\n\n\n\n\n\n",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\cast_bar_orange",
-["Name"] = "Cast - Alert + Timer [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Player an animation when the cast start. Start a timer when the cast finishes. Set the time in the options.",
@@ -3592,7 +3598,7 @@ PlaterDB = {
 355787,
 348513,
 },
-["version"] = -1,
+["Name"] = "Cast - Alert + Timer [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    local castBar = unitFrame.castBar\n    local castBarPortion = castBar:GetWidth()/scriptTable.config.segmentsAmount\n    local castBarHeight = castBar:GetHeight()\n    \n    unitFrame.felAnimation = unitFrame.felAnimation or {}\n    \n    if (not unitFrame.felAnimation.textureStretched) then\n        unitFrame.felAnimation.textureStretched = castBar:CreateTexture(nil, \"overlay\", nil, 5)\n    end\n    \n    if (not unitFrame.felAnimation.Textures) then\n        unitFrame.felAnimation.Textures = {}\n        \n        for i = 1, 20 do --max amount of segments is 20\n            local texture = castBar:CreateTexture(nil, \"overlay\", nil, 6)\n            unitFrame.felAnimation.Textures[i] = texture            \n            \n            texture.animGroup = texture.animGroup or texture:CreateAnimationGroup()\n            local animationGroup = texture.animGroup\n            animationGroup:SetToFinalAlpha(true)            \n            animationGroup:SetLooping(\"NONE\")\n            \n            texture:SetTexture([[Interface\\COMMON\\XPBarAnim]])\n            texture:SetTexCoord(0.2990, 0.0010, 0.0010, 0.4159)\n            texture:SetBlendMode(\"ADD\")\n            \n            texture.scale = animationGroup:CreateAnimation(\"SCALE\")\n            texture.scale:SetTarget(texture)\n            \n            texture.alpha = animationGroup:CreateAnimation(\"ALPHA\")\n            texture.alpha:SetTarget(texture)\n            \n            texture.alpha2 = animationGroup:CreateAnimation(\"ALPHA\")\n            texture.alpha2:SetTarget(texture)\n        end\n    end\n    \n    \n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
@@ -3701,7 +3707,7 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    if (self.channeling) then\n        return \n    end\n    \n    local castBar = unitFrame.castBar\n    envTable.castBarWidth = castBar:GetWidth()\n    castBar.Spark:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.sparkColor))\n    \n    local textureStretched = unitFrame.felAnimation.textureStretched\n    textureStretched:Show()\n    textureStretched:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.glowColor))\n    textureStretched:SetAtlas(\"XPBarAnim-OrangeTrail\")\n    textureStretched:ClearAllPoints()\n    textureStretched:SetPoint(\"right\", castBar.Spark, \"center\", 0, 0)\n    textureStretched:SetHeight(castBar:GetHeight())\n    textureStretched:SetBlendMode(\"ADD\") \n    textureStretched:SetAlpha(0.5)\n    textureStretched:SetDrawLayer(\"overlay\", 7)\n    \n    for i = 1, scriptTable.config.segmentsAmount  do\n        local texture = unitFrame.felAnimation.Textures[i]\n        --texture:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.trailColor))\n        texture:SetVertexColor(1, 1, 1, 1)\n        texture:SetDesaturated(true)\n        \n        local castBarPortion = castBar:GetWidth()/scriptTable.config.segmentsAmount\n        \n        texture:SetSize(castBarPortion+5, castBar:GetHeight())\n        texture:SetDrawLayer(\"overlay\", 6)\n        \n        texture:ClearAllPoints()\n        if (i == scriptTable.config.segmentsAmount) then\n            texture:SetPoint(\"right\", castBar, \"right\", 0, 0)\n        else\n            texture:SetPoint(\"left\", castBar, \"left\", (i-1)*castBarPortion, 2)\n        end\n        \n        texture:SetAlpha(0)\n        texture:Hide()\n        \n        texture.scale:SetOrder(1)\n        texture.scale:SetDuration(0.5)\n        texture.scale:SetScaleFrom(0.2, 1)\n        texture.scale:SetScaleTo(1, 1.5)\n        texture.scale:SetOrigin(\"right\", 0, 0)\n        \n        local durationTime = DetailsFramework:GetBezierPoint(i / scriptTable.config.segmentsAmount, 0.2, 0.01, 0.6)\n        local duration = abs(durationTime-0.6)\n        \n        texture.alpha:SetOrder(1)\n        texture.alpha:SetDuration(0.05)\n        texture.alpha:SetFromAlpha(0)\n        texture.alpha:SetToAlpha(0.4)\n        \n        texture.alpha2:SetOrder(1)\n        texture.alpha2:SetDuration(duration) --0.6\n        texture.alpha2:SetStartDelay(duration)\n        texture.alpha2:SetFromAlpha(0.5)\n        texture.alpha2:SetToAlpha(0)\n    end\n    \n    envTable.CurrentTexture = 1\n    envTable.NextPercent  = 100  / scriptTable.config.segmentsAmount\n    \n    local customColor = scriptTable.config.castColor[tostring(envTable._SpellID)]\n    Plater.SetCastBarColorForScript(self, true, customColor or scriptTable.config.castBarColor, envTable)\nend\n\n\n\n\n\n\n\n\n\n\n\n\n",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\cast_bar_glow",
-["Name"] = "Cast - Glowing [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Show a different animation for the cast bar.",
@@ -3728,7 +3734,7 @@ PlaterDB = {
 411002,
 169445,
 },
-["version"] = -1,
+["Name"] = "Cast - Glowing [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --create a texture to use for a flash behind the cast bar\n    local backGroundFlashTexture = Plater:CreateImage (self, [[Interface\\ACHIEVEMENTFRAME\\UI-Achievement-Alert-Glow]], self:GetWidth()+40, self:GetHeight()+20, \"background\", {0, 400/512, 0, 170/256})\n    backGroundFlashTexture:SetBlendMode (\"ADD\")\n    backGroundFlashTexture:SetDrawLayer(\"OVERLAY\", 7)\n    backGroundFlashTexture:SetPoint (\"center\", self, \"center\")\n    backGroundFlashTexture:SetVertexColor(Plater:ParseColors(scriptTable.config.flashColor))\n    backGroundFlashTexture:Hide()\n    \n    --create the animation hub to hold the flash animation sequence\n    envTable.BackgroundFlash = envTable.BackgroundFlash or Plater:CreateAnimationHub (backGroundFlashTexture, \n        function()\n            backGroundFlashTexture:Show()\n        end,\n        function()\n            backGroundFlashTexture:Hide()\n        end\n    )\n    \n    --create the flash animation sequence\n    local fadeIn = Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 1, scriptTable.config.flashDuration/2, 0, 1)\n    local fadeOut = Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 2, scriptTable.config.flashDuration/2, 1, 0)\n    \n    --create a camera shake for the nameplate\n    envTable.FrameShake = Plater:CreateFrameShake (unitFrame, scriptTable.config.shakeDuration, scriptTable.config.shakeAmplitude, scriptTable.config.shakeFrequency, false, false, 0, 1, 0.05, 0.1, Plater.GetPoints (unitFrame))\n    \n    --update the config for the flash here so it wont need a /reload\n    fadeIn:SetDuration (scriptTable.config.flashDuration/2)\n    fadeOut:SetDuration (scriptTable.config.flashDuration/2)\n    \n    --update the config for the skake here so it wont need a /reload\n    envTable.FrameShake.OriginalAmplitude = scriptTable.config.shakeAmplitude\n    envTable.FrameShake.OriginalDuration = scriptTable.config.shakeDuration\n    envTable.FrameShake.OriginalFrequency = scriptTable.config.shakeFrequency\nend",
@@ -3988,7 +3994,7 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    envTable.dotAnimation = Plater.PlayDotAnimation(unitFrame.castBar, 5, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n    \n    envTable.BackgroundFlash:Play()\n    \n    Plater.FlashNameplateBorder (unitFrame, 0.05)   \n    Plater.FlashNameplateBody (unitFrame, \"\", 0.075)\n    \n    unitFrame:PlayFrameShake (envTable.FrameShake)\n    \n    Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, scriptTable.config.castBarColor, envTable)\n    \n    --Dominator on Shadowmoon Burial Grounds\n    if (envTable._SpellID == 154327) then\n        if (UnitHealth(unitId) == UnitHealthMax(unitId)) then\n            if (envTable._Duration == 604800) then\n                Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, {1, 0, 0, 1}, envTable)\n            end\n        end\n    end\nend",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\cast_bar_darkorange",
-["Name"] = "Cast - Very Important [Plater]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Highlight a very important cast applying several effects into the Cast Bar. Add spell in the Add Trigger field.",
@@ -4053,7 +4059,7 @@ PlaterDB = {
 253517,
 377488,
 },
-["version"] = -1,
+["Name"] = "Cast - Very Important [Plater]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \n    local healthBar = unitFrame.healthBar\n    \n    if (not healthBar.absorbBar) then\n        healthBar.absorbBar = healthBar.FrameOverlay:CreateTexture(nil, \"overlay\")\n        healthBar.absorbBar:SetTexture([[Interface\\RaidFrame\\Shield-Fill]])\n        healthBar.absorbBar:Hide()\n    end\n    \n    if (not healthBar.absorbSpark) then\n        healthBar.absorbSpark = healthBar.FrameOverlay:CreateTexture(nil, \"overlay\")\n        healthBar.absorbSpark:SetTexture([[Interface\\CastingBar\\UI-CastingBar-Spark]])\n        healthBar.absorbSpark:SetBlendMode(\"ADD\")\n        healthBar.absorbSpark:Hide()\n    end\n    \nend\n\n\n\n\n",
@@ -4072,7 +4078,7 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    if (not UnitGetTotalAbsorbs) then\n        return\n    end\n    \n    local healthBar = unitFrame.healthBar\n    \n    healthBar.absorbBar:Show()\n    healthBar.absorbSpark:Show()\n    \n    healthBar.absorbBar:SetTexture([[Interface\\RaidFrame\\Shield-Fill]])\n    \n    healthBar.absorbBar:ClearAllPoints()    \n    healthBar.absorbBar:SetPoint(\"topleft\", healthBar, \"topleft\", 0, 0)\n    healthBar.absorbBar:SetPoint(\"bottomleft\", healthBar, \"bottomleft\", 0, 0)\n    \n    healthBar.absorbBar:SetAlpha(1)\n    \n    healthBar.absorbBar.MaxValue = UnitGetTotalAbsorbs(unitId) or 0\n    healthBar.absorbBar.MinValue = 0\nend\n\n\n",
 ["Icon"] = "interface/addons/plater/images/cast_bar - absorb",
-["Name"] = "Cast - Shield Interrupt [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "When the caster has a shield and only when the shield is removed the cast can be interrupted",
@@ -4080,7 +4086,7 @@ PlaterDB = {
 373688,
 391050,
 },
-["version"] = -1,
+["Name"] = "Cast - Shield Interrupt [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    local DF = DetailsFramework\n    \n    function envTable.PlaySwipeAnimation(unitFrame)\n        unitFrame.CastSwipeTexture2:Show()\n        unitFrame.CastSwipeAnimation2:Play()\n        unitFrame.StartSwipeAnimation2:Play()\n    end\n    \n    function envTable.StopSwipeAnimation(unitFrame)\n        unitFrame.EndSwipeAnimation2:Play()\n        C_Timer.After(0.21, function()\n                unitFrame.CastSwipeAnimation2:Stop()\n                unitFrame.CastSwipeTexture2:Hide()\n        end)\n    end\n    \n    function envTable.CreateSwipeTextureAndAnimations(unitFrame)\n        if (unitFrame.CastSwipeTexture2) then\n            return\n        end\n        \n        local circularTexture = unitFrame:CreateTexture(nil, \"overlay\")\n        circularTexture:SetTexture([[Interface\\AddOns\\Plater\\images\\cast_bar_circular_swipe2.png]])\n        circularTexture:SetPoint(\"center\", 0, 0)\n        circularTexture:SetSize(64, 64)\n        circularTexture:Hide()\n        \n        unitFrame.CastSwipeTexture2 = circularTexture\n        \n        --rotation animation\n        unitFrame.CastSwipeAnimation2 = DF:CreateAnimationHub(circularTexture)\n        unitFrame.CastSwipeAnimation2:SetLooping(\"repeat\")\n        unitFrame.CastSwipeAnimation2.Rotation = DF:CreateAnimation(unitFrame.CastSwipeAnimation2, \"rotation\", 1, 1, 360)\n        unitFrame.CastSwipeAnimation2.Trans = DF:CreateAnimation(unitFrame.CastSwipeAnimation2, \"TRANSLATION\", 1, 1, 2, 2)\n        \n        --starting animation\n        unitFrame.StartSwipeAnimation2 = DF:CreateAnimationHub(circularTexture, function()circularTexture:Show() end)\n        \n        unitFrame.StartSwipeAnimation2.Alpha = DF:CreateAnimation(unitFrame.StartSwipeAnimation2, \"alpha\", 1, 0.2, 0, 1)\n        unitFrame.StartSwipeAnimation2.Scale = DF:CreateAnimation(unitFrame.StartSwipeAnimation2, \"scale\", 1, 0.2, 1.3, 1.3, 1, 1)        \n        \n        --finished animation\n        unitFrame.EndSwipeAnimation2 = DF:CreateAnimationHub(circularTexture, nil, function()circularTexture:Hide() end)\n        \n        unitFrame.EndSwipeAnimation2.Alpha = DF:CreateAnimation(unitFrame.EndSwipeAnimation2, \"alpha\", 1, 0.2, 1, 0)\n        \n        unitFrame.EndSwipeAnimation2.Scale = DF:CreateAnimation(unitFrame.EndSwipeAnimation2, \"scale\", 1, 0.2, 1, 1, 1.3, 1.3)\n        \n        \n    end\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
@@ -4183,7 +4189,7 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    envTable.CreateSwipeTextureAndAnimations(unitFrame)\n    \n    local options = scriptTable.config\n    \n    local targetScale = options.textureScale\n    \n    local circularTexture = unitFrame.CastSwipeTexture2\n    \n    --texture settings\n    circularTexture:SetTexture([[Interface\\AddOns\\Plater\\images\\cast_bar_circular_swipe2.png]])\n    circularTexture:SetPoint(\"center\", 0, 0)\n    circularTexture:SetSize(64, 64)    \n    circularTexture:SetBlendMode(\"ADD\")\n    circularTexture:SetVertexColor(DetailsFramework:ParseColors(options.textureColor))\n    circularTexture:SetScale(targetScale)\n    circularTexture:SetAlpha(options.textureAlpha)\n    \n    --animations    \n    unitFrame.CastSwipeAnimation2.Rotation:SetDuration(options.rotationDuration)\n    unitFrame.CastSwipeAnimation2.Trans:SetDuration(options.rotationDuration)\n    \n    local randomOffset = 5\n    unitFrame.CastSwipeAnimation2.Trans:SetOffset(math.random(-randomOffset, randomOffset), math.random(-randomOffset, randomOffset))\n    \n    \n    unitFrame.StartSwipeAnimation2.Alpha:SetDuration(options.animStartDuration)\n    unitFrame.StartSwipeAnimation2.Alpha:SetFromAlpha(options.textureStartAlpha)\n    unitFrame.StartSwipeAnimation2.Alpha:SetToAlpha(options.textureAlpha)\n    \n    unitFrame.StartSwipeAnimation2.Scale:SetDuration(options.animStartDuration)\n    unitFrame.StartSwipeAnimation2.Scale:SetScaleTo(targetScale, targetScale)\n    \n    unitFrame.EndSwipeAnimation2.Scale:SetDuration(0.1)\n    unitFrame.EndSwipeAnimation2.Alpha:SetDuration(0.1)\n    \n    --start playing\n    envTable.PlaySwipeAnimation(unitFrame)     \n    \nend\n\n\n\n\n",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\cast_bar_circular_swipe2_icon.png",
-["Name"] = "Cast - AoE Hit All [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Play a animation when the spell effect is an circular AoE around the caster.",
@@ -4243,7 +4249,7 @@ PlaterDB = {
 424431,
 448791,
 },
-["version"] = -1,
+["Name"] = "Cast - AoE Hit All [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --create a flash texture which keep blinking while the cast in going on\n    self.OGC_BlinkTexture = self.OGC_BlinkTexture or self:CreateTexture(nil, \"overlay\")\n    self.OGC_BlinkTexture:SetColorTexture(1, 1, 1)\n    self.OGC_BlinkTexture:SetAlpha(0)\n    \n    --create the animation group for the blinking texture\n    self.OGC_BlinkAnimation = self.OGC_BlinkAnimation or Plater:CreateAnimationHub(self.OGC_BlinkTexture, function() self.OGC_BlinkTexture:Show() end, function() self.OGC_BlinkTexture:Hide() end)\n    \n    self.OGC_BlinkAnimation.In = self.OGC_BlinkAnimation.In or Plater:CreateAnimation(self.OGC_BlinkAnimation, \"alpha\", 1, 0.5, 0.3, 1)\n    \n    self.OGC_BlinkAnimation.Out = self.OGC_BlinkAnimation.Out or Plater:CreateAnimation(self.OGC_BlinkAnimation, \"alpha\", 2, 0.5, 1, 0.2)    \n    \n    \nend\n\n\n",
@@ -4351,7 +4357,7 @@ PlaterDB = {
 ["Initialization"] = "		function (scriptTable)\n			--insert code here\n			\n		end\n	",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    self.OGC_BlinkTexture:ClearAllPoints()\n    self.OGC_BlinkTexture:SetPoint(\"topleft\", self, \"topleft\", 0, 0)\n    self.OGC_BlinkTexture:SetPoint(\"bottomright\", self, \"bottomright\", 0, 0)\n    \n    local red, green, blue = Plater:ParseColors(scriptTable.config.blinkColor)\n    self.OGC_BlinkTexture:SetVertexColor(red, green, blue)\n    \n    local blinkSpeed = scriptTable.config.speed\n    \n    self.OGC_BlinkAnimation.In:SetDuration(blinkSpeed)\n    self.OGC_BlinkAnimation.Out:SetDuration(blinkSpeed)\n    \n    local minBlinkAlpha = scriptTable.config.minAlpha\n    local maxBlinkAlpha = scriptTable.config.maxAlpha\n    \n    self.OGC_BlinkAnimation.In:SetFromAlpha(minBlinkAlpha)\n    self.OGC_BlinkAnimation.In:SetToAlpha(maxBlinkAlpha)\n    self.OGC_BlinkAnimation.Out:SetFromAlpha(maxBlinkAlpha)    \n    self.OGC_BlinkAnimation.Out:SetToAlpha(minBlinkAlpha)\n    \n    self.OGC_BlinkAnimation:SetLooping(\"repeat\")\n    self.OGC_BlinkAnimation:Play()\n    \n    envTable.dotAnimation1 = Plater.PlayDotAnimation(self, 2, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n    envTable.dotAnimation1.textureInfo.speedMultiplier = 0.3\n    \n    envTable.dotAnimation2 = Plater.PlayDotAnimation(self, 2, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n    envTable.dotAnimation2.textureInfo.speedMultiplier = 1\n    \nend",
 ["Icon"] = 4038101,
-["Name"] = "Cast - On Going Cast [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "The background of the nameplate blinks a red color indicating the cast is being performed. Useful to indicate channeling spells doing damage overtime.",
@@ -4360,7 +4366,7 @@ PlaterDB = {
 209676,
 377912,
 },
-["version"] = -1,
+["Name"] = "Cast - On Going Cast [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n",
@@ -4379,7 +4385,7 @@ PlaterDB = {
 ["Initialization"] = "		function (scriptTable)\n			--insert code here\n			\n		end\n	",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["Icon"] = 610472,
-["Name"] = "Aura is Shield [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Show power bar where its value is the buff value (usualy shown in the buff tooltip)",
@@ -4387,7 +4393,7 @@ PlaterDB = {
 343470,
 423228,
 },
-["version"] = -1,
+["Name"] = "Aura is Shield [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n--190187 draconic image\n--189893 infused whelp\n--99922 Ebonclaw Packmate\n--104822 flames of woe",
@@ -4482,13 +4488,13 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    unitFrame.onShowAddToKillFlash = unitFrame.onShowAddToKillFlash or Plater.CreateFlash (unitFrame.healthBar, 0.25, 1, \"white\")\n    \n    if (scriptTable.config.useFlash) then\n        unitFrame.onShowAddToKillFlash:Play()\n    end\n    \n    if (scriptTable.config.useNameplateColor) then\n        local npcIdString = tostring(envTable._NpcID)\n        envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.npcColor[npcIdString], scriptTable.config.healthBarColor)\n        Plater.DenyColorChange(unitFrame, true)\n    end\nend\n\n\n\n\n\n\n\n\n\n",
 ["Icon"] = "interface/addons/plater/media/exclamation_64",
-["Name"] = "Add - Warning [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Change the color of  add",
 ["SpellIds"] = {
 },
-["version"] = -1,
+["Name"] = "Add - Warning [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --castbar color (when can be interrupted)\n    envTable.CastbarColor = scriptTable.config.castbarColor\n    \n    --flash duration\n    local CONFIG_BACKGROUND_FLASH_DURATION = scriptTable.config.flashDuration\n    \n    --add this value to the cast bar height\n    envTable.CastBarHeightAdd = scriptTable.config.castBarHeight\n    \n    --create a fast flash above the cast bar\n    envTable.FullBarFlash = envTable.FullBarFlash or Plater.CreateFlash (self, 0.05, 1, \"white\")\n    \n    --create a camera shake for the nameplate\n    envTable.FrameShake = Plater:CreateFrameShake (unitFrame, scriptTable.config.shakeDuration, scriptTable.config.shakeAmplitude, scriptTable.config.shakeFrequency, false, false, 0, 1, 0.05, 0.1, Plater.GetPoints (unitFrame))\n    \n    --create a texture to use for a flash behind the cast bar\n    self.simpleInterruptFlash = self.simpleInterruptFlash or  Plater:CreateImage (self, [[Interface\\ACHIEVEMENTFRAME\\UI-Achievement-Alert-Glow]], self:GetWidth()+60, self:GetHeight()+50, \"background\", {0, 400/512, 0, 170/256})\n    \n    self.simpleInterruptFlash:SetBlendMode (\"ADD\")\n    self.simpleInterruptFlash:SetDrawLayer(\"OVERLAY\", 7)\n    self.simpleInterruptFlash:SetPoint (\"center\", self, \"center\")\n    self.simpleInterruptFlash:Hide()\n    \n    --create the animation hub to hold the flash animation sequence\n    self.simpleInterruptFlashAnimHub = self.simpleInterruptFlashAnimHub or Plater:CreateAnimationHub (self.simpleInterruptFlash, \n        function()\n            self.simpleInterruptFlash:Show()\n        end,\n        function()\n            self.simpleInterruptFlash:Hide()\n        end\n    )\n    \n    --create the flash animation sequence\n    self.simpleInterruptFlashAnimHub.fadeIn = self.simpleInterruptFlashAnimHub.fadeIn or Plater:CreateAnimation (self.simpleInterruptFlashAnimHub, \"ALPHA\", 1, CONFIG_BACKGROUND_FLASH_DURATION/2, 0, .75)\n    self.simpleInterruptFlashAnimHub.fadeIn:SetDuration(CONFIG_BACKGROUND_FLASH_DURATION/2)\n    \n    self.simpleInterruptFlashAnimHub.fadeOut = self.simpleInterruptFlashAnimHub.fadeOut or Plater:CreateAnimation (self.simpleInterruptFlashAnimHub, \"ALPHA\", 2, CONFIG_BACKGROUND_FLASH_DURATION/2, 1, 0)    \n    self.simpleInterruptFlashAnimHub.fadeOut:SetDuration(CONFIG_BACKGROUND_FLASH_DURATION/2)\n    \n    --envTable.BackgroundFlash:Play() --envTable.BackgroundFlash:Stop()    \n    \n    \n    \n    \n    \nend\n\n\n",
@@ -4623,7 +4629,7 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    if ( not envTable._CanInterrupt ) then\n        return\n    end\n    \n    --don't execute on battlegrounds and arenas\n    if (Plater.ZoneInstanceType == \"arena\" or Plater.ZoneInstanceType == \"pvp\") then\n        return\n    end\n    \n    --play flash animations\n    envTable.FullBarFlash:Play()\n    \n    --envTable.currentHeight = unitFrame.castBar:GetHeight()\n    \n    --restoring the default size (not required since it already restore in the hide script)\n    if (envTable.OriginalHeight) then\n        self:SetHeight (envTable.OriginalHeight)\n    end\n    \n    --increase the cast bar size\n    local height = self:GetHeight()\n    envTable.OriginalHeight = height\n    \n    self:SetHeight (height + envTable.CastBarHeightAdd)\n    \n    self.simpleInterruptFlash:SetHeight(self:GetHeight() * 2.5 )\n    \n    Plater.SetCastBarBorderColor (self, 1, .2, .2, 0.4)\n    \n    unitFrame:PlayFrameShake (envTable.FrameShake)\n    \n    Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, scriptTable.config.castBarColor, envTable)\n    \n    self.simpleInterruptFlashAnimHub:Play()\n    \n    unitFrame.castBar.Spark:SetHeight(unitFrame.castBar:GetHeight())\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\cast_bar_quickflash.tga",
-["Name"] = "Cast - Simple Interrupt [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Play a very fast flash when the cast start.",
@@ -4648,7 +4654,7 @@ PlaterDB = {
 426145,
 427260,
 },
-["version"] = -1,
+["Name"] = "Cast - Simple Interrupt [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \n    local plateFrame = unitFrame.PlateFrame\n    \n    if (not plateFrame.BWC_RedBackground) then\n        plateFrame.BWC_RedBackground = plateFrame:CreateTexture(nil, \"background\")\n        plateFrame.BWC_RedBackground:SetAllPoints()\n    end\n    \n    plateFrame.BWC_RedBackground:SetTexture([[Interface/AddOns/Plater/masks/mask1]])\n    plateFrame.BWC_RedBackground:Hide()\n    \n    function envTable.ShowBackground(unitFrame)\n        local plateFrame = unitFrame.PlateFrame\n        plateFrame.BWC_RedBackground:SetVertexColor(1, 0, 0, 0.4)\n        plateFrame.BWC_RedBackground:Show()\n    end\n    \n    function envTable.HideBackground(unitFrame)\n        plateFrame.BWC_RedBackground:Hide()\n    end\nend\n\n\n\n\n\n\n",
@@ -4667,7 +4673,7 @@ PlaterDB = {
 ["Initialization"] = "		function (scriptTable)\n			--insert code here\n			\n		end\n	",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["Icon"] = 236209,
-["Name"] = "Aura While Casting [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Highlight the nameplate of a unit when has a certain Buff (trigger) and start to cast a spell",
@@ -4676,7 +4682,7 @@ PlaterDB = {
 372749,
 384933,
 },
-["version"] = -1,
+["Name"] = "Aura While Casting [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --castbar color (when can be interrupted)\n    envTable.CastbarColor = scriptTable.config.castbarColor\n    \n    --flash duration\n    local CONFIG_BACKGROUND_FLASH_DURATION = scriptTable.config.flashDuration\n    \n    --add this value to the cast bar height\n    envTable.CastBarHeightAdd = scriptTable.config.castBarHeight\n    \n    --create a fast flash above the cast bar\n    envTable.FullBarFlash = envTable.FullBarFlash or Plater.CreateFlash (self, 0.05, 1, \"white\")\n    \n    --create a camera shake for the nameplate\n    envTable.FrameShake = Plater:CreateFrameShake (unitFrame, scriptTable.config.shakeDuration, scriptTable.config.shakeAmplitude, scriptTable.config.shakeFrequency, false, false, 0, 1, 0.05, 0.1, Plater.GetPoints (unitFrame))\n    \n    --create a texture to use for a flash behind the cast bar\n    local backGroundFlashTexture = Plater:CreateImage (self, [[Interface\\ACHIEVEMENTFRAME\\UI-Achievement-Alert-Glow]], self:GetWidth()+60, self:GetHeight()+50, \"background\", {0, 400/512, 0, 170/256})\n    backGroundFlashTexture:SetBlendMode (\"ADD\", 7)\n    backGroundFlashTexture:SetDrawLayer(\"OVERLAY\", 7)\n    backGroundFlashTexture:SetPoint (\"center\", self, \"center\")\n    backGroundFlashTexture:Hide()\n    \n    --create the animation hub to hold the flash animation sequence\n    envTable.BackgroundFlash = envTable.BackgroundFlash or Plater:CreateAnimationHub (backGroundFlashTexture, \n        function()\n            backGroundFlashTexture:Show()\n        end,\n        function()\n            backGroundFlashTexture:Hide()\n        end\n    )\n    \n    --create the flash animation sequence\n    envTable.BackgroundFlash.fadeIn = envTable.BackgroundFlash.fadeIn or Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 1, CONFIG_BACKGROUND_FLASH_DURATION/2, 0, .75)\n    envTable.BackgroundFlash.fadeIn:SetDuration(CONFIG_BACKGROUND_FLASH_DURATION/2)\n    \n    envTable.BackgroundFlash.fadeOut = envTable.BackgroundFlash.fadeOut or Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 2, CONFIG_BACKGROUND_FLASH_DURATION/2, 1, 0)    \n    envTable.BackgroundFlash.fadeOut:SetDuration(CONFIG_BACKGROUND_FLASH_DURATION/2)\n    \n    --envTable.BackgroundFlash:Play() --envTable.BackgroundFlash:Stop()    \n    \n    \n    \n    \n    \nend\n\n\n\n\n",
@@ -4811,7 +4817,7 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --don't execute on battlegrounds and arenas\n    if (not Plater.IsShowingCastBarTest) then\n        if (Plater.ZoneInstanceType == \"arena\" or Plater.ZoneInstanceType == \"pvp\" or Plater.ZoneInstanceType == \"none\") then\n            return\n        end\n    end\n    \n    --play flash animations\n    envTable.FullBarFlash:Play()\n    \n    --envTable.currentHeight = unitFrame.castBar:GetHeight()\n    \n    --restoring the default size (not required since it already restore in the hide script)\n    if (envTable.OriginalHeight) then\n        self:SetHeight (envTable.OriginalHeight)\n    end\n    \n    --increase the cast bar size\n    local height = self:GetHeight()\n    envTable.OriginalHeight = height\n    \n    self:SetHeight (height + envTable.CastBarHeightAdd)\n    \n    Plater.SetCastBarBorderColor (self, 1, .2, .2, 0.4)\n    \n    unitFrame:PlayFrameShake (envTable.FrameShake)\n    \n    --set the color of the cast bar to dark orange (only if can be interrupted)\n    --Plater auto set this color to default when a new cast starts, no need to reset this value at OnHide.    \n    if (envTable._CanInterrupt) then\n        if (scriptTable.config.useCastbarColor) then\n            self:SetStatusBarColor (Plater:ParseColors (envTable.CastbarColor))\n        end\n    end\n    \n    Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, scriptTable.config.castbarColor, envTable)\n    \n    envTable.BackgroundFlash:Play()\n    \n    unitFrame.castBar.Spark:SetHeight(unitFrame.castBar:GetHeight())\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\cast_bar_orange",
-["Name"] = "Cast - Big Alert [Plater]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Flash, Bounce and Red Color the CastBar border when when an important cast is happening. Add spell in the Add Trigger field.",
@@ -4875,7 +4881,7 @@ PlaterDB = {
 227913,
 265368,
 },
-["version"] = -1,
+["Name"] = "Cast - Big Alert [Plater]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --create a flash texture which keep blinking while the cast in going on\n    self.OGC_BlinkTexture = self.OGC_BlinkTexture or self:CreateTexture(nil, \"overlay\")\n    self.OGC_BlinkTexture:SetColorTexture(1, 1, 1)\n    self.OGC_BlinkTexture:SetAlpha(0)\n    \n    --create the animation group for the blinking texture\n    self.OGC_BlinkAnimation = self.OGC_BlinkAnimation or Plater:CreateAnimationHub(self.OGC_BlinkTexture, function() self.OGC_BlinkTexture:Show() end, function() self.OGC_BlinkTexture:Hide() end)\n    \n    self.OGC_BlinkAnimation.In = self.OGC_BlinkAnimation.In or Plater:CreateAnimation(self.OGC_BlinkAnimation, \"alpha\", 1, 0.5, 0.3, 1)\n    \n    self.OGC_BlinkAnimation.Out = self.OGC_BlinkAnimation.Out or Plater:CreateAnimation(self.OGC_BlinkAnimation, \"alpha\", 2, 0.5, 1, 0.2)    \n    \n    \nend\n\n\n",
@@ -4983,7 +4989,7 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    self.OGC_BlinkTexture:ClearAllPoints()\n    self.OGC_BlinkTexture:SetPoint(\"topleft\", self, \"topleft\", 0, 0)\n    self.OGC_BlinkTexture:SetPoint(\"bottomright\", self, \"bottomright\", 0, 0)\n    \n    local red, green, blue = Plater:ParseColors(scriptTable.config.blinkColor)\n    self.OGC_BlinkTexture:SetVertexColor(red, green, blue)\n    \n    local blinkSpeed = scriptTable.config.speed\n    \n    self.OGC_BlinkAnimation.In:SetDuration(blinkSpeed)\n    self.OGC_BlinkAnimation.Out:SetDuration(blinkSpeed)\n    \n    local minBlinkAlpha = scriptTable.config.minAlpha\n    local maxBlinkAlpha = scriptTable.config.maxAlpha\n    \n    self.OGC_BlinkAnimation.In:SetFromAlpha(minBlinkAlpha)\n    self.OGC_BlinkAnimation.In:SetToAlpha(maxBlinkAlpha)\n    self.OGC_BlinkAnimation.Out:SetFromAlpha(maxBlinkAlpha)    \n    self.OGC_BlinkAnimation.Out:SetToAlpha(minBlinkAlpha)\n    \n    self.OGC_BlinkAnimation:SetLooping(\"repeat\")\n    self.OGC_BlinkAnimation:Play()\n    \n    envTable.dotAnimation1 = Plater.PlayDotAnimation(self, 5, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n    envTable.dotAnimation1.textureInfo.speedMultiplier = 0.9\n    \n    envTable.dotAnimation1.dotTexture:SetVertexColor(unpack(scriptTable.config.dotColor))\n    \n    \n    envTable.dotAnimation1.dotTexture:Show()\n    \n    --envTable.dotAnimation2 = Plater.PlayDotAnimation(self, 2, scriptTable.config.dotColor, scriptTable.config.xOffset, scriptTable.config.yOffset)\n    --envTable.dotAnimation2.textureInfo.speedMultiplier = 1\n    \n    \n    \nend",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\cast_bar_ongoing.png",
-["Name"] = "Cast - Ongoing Cast [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "The background of the nameplate blinks a red color indicating the cast is being performed. Useful to indicate channeling spells doing damage overtime.",
@@ -4991,7 +4997,7 @@ PlaterDB = {
 431364,
 423327,
 },
-["version"] = -1,
+["Name"] = "Cast - Ongoing Cast [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \n    if (not unitFrame.spitefulTexture) then\n        unitFrame.spitefulTexture = unitFrame.healthBar:CreateTexture(nil, \"overlay\", nil, 6)\n        unitFrame.spitefulTexture:SetPoint('right', 0, 0)\n        unitFrame.spitefulTexture:SetSize(27, 14)\n        unitFrame.spitefulTexture:SetColorTexture(.3, .3, 1, .7)\n        \n        unitFrame.spitefulText = unitFrame.healthBar:CreateFontString(nil, \"overlay\", \"GameFontNormal\", 6)\n        DetailsFramework:SetFontFace (unitFrame.spitefulText, \"2002\")\n        unitFrame.spitefulText:SetPoint(\"right\", unitFrame.spitefulTexture, \"right\", -2, 0)\n        unitFrame.spitefulText:SetJustifyH(\"right\")\n        \n        unitFrame.roleIcon = unitFrame:CreateTexture(nil, \"overlay\")\n        unitFrame.roleIcon:SetPoint(\"left\", unitFrame.healthBar, \"left\", 2, 0)\n        unitFrame.targetName = unitFrame:CreateFontString(nil, \"overlay\", \"GameFontNormal\")\n        unitFrame.targetName:SetPoint(\"left\", unitFrame.roleIcon, \"right\", 2, 0)\n        \n        unitFrame.spitefulTexture:Hide()\n        unitFrame.spitefulText:Hide()\n    end\n    \n    function envTable.UpdateSpitefulWidget(unitFrame)\n        \n        local r, g, b, a = Plater:ParseColors(scriptTable.config.bgColor)\n        unitFrame.spitefulTexture:SetColorTexture(r, g, b, a)\n        unitFrame.spitefulTexture:SetSize(scriptTable.config.bgWidth, unitFrame.healthBar:GetHeight())   \n        Plater:SetFontSize(unitFrame.spitefulText, scriptTable.config.textSize)\n        Plater:SetFontColor(unitFrame.spitefulText, scriptTable.config.textColor)\n        \n        local currentHealth = unitFrame.healthBar.CurrentHealth\n        local maxHealth = unitFrame.healthBar.CurrentHealthMax\n        \n        local healthPercent = currentHealth / maxHealth * 100\n        local timeToDie = format(\"%.1fs\", healthPercent / 8)\n        unitFrame.spitefulText:SetText(timeToDie)\n        \n        unitFrame.spitefulText:Show()\n        unitFrame.spitefulTexture:Show()\n        \n        if scriptTable.config.switchTargetName then\n            local plateFrame = unitFrame.PlateFrame\n            \n            local target = UnitName(unitFrame.namePlateUnitToken .. \"target\") or UnitName(unitFrame.namePlateUnitToken)\n            \n            if (target and target ~= \"\") then\n                local _, class = UnitClass(unitFrame.namePlateUnitToken .. \"target\")\n                if (class) then\n                    target = DetailsFramework:AddClassColorToText(target, class)\n                end\n                \n                local role = UnitGroupRolesAssigned(unitFrame.namePlateUnitToken .. \"target\")\n                if (role and role ~= \"NONE\") then\n                    target = DetailsFramework:AddRoleIconToText(target, role)\n                end\n                \n                plateFrame.namePlateUnitName = target\n                Plater.UpdateUnitName(plateFrame)\n            end\n        end\n        \n        if scriptTable.config.useTargetingColor then\n            local targeted = UnitIsUnit(unitFrame.namePlateUnitToken .. \"target\", \"player\")\n            if targeted then\n                Plater.SetNameplateColor (unitFrame, scriptTable.config.targetingColor)\n            else\n                Plater.RefreshNameplateColor(unitFrame)\n            end\n        end\n    end\nend",
@@ -5120,13 +5126,13 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    envTable.UpdateSpitefulWidget(unitFrame)\nend\n\n\n",
 ["Icon"] = 135945,
-["Name"] = "M+ Spiteful",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Time to die Spiteful affix",
 ["SpellIds"] = {
 },
-["version"] = -1,
+["Name"] = "M+ Spiteful",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --castbar color (when can be interrupted)\n    envTable.CastbarColor = scriptTable.config.castbarColor\n    \n    --flash duration\n    local CONFIG_BACKGROUND_FLASH_DURATION = scriptTable.config.flashDuration\n    \n    --add this value to the cast bar height\n    envTable.CastBarHeightAdd = scriptTable.config.castBarHeight\n    \n    --create a fast flash above the cast bar\n    envTable.FullBarFlash = envTable.FullBarFlash or Plater.CreateFlash (self, 0.05, 1, \"white\")\n    \n    --create a camera shake for the nameplate\n    envTable.FrameShake = Plater:CreateFrameShake (unitFrame, scriptTable.config.shakeDuration, scriptTable.config.shakeAmplitude, scriptTable.config.shakeFrequency, false, false, 0, 1, 0.05, 0.1, Plater.GetPoints (unitFrame))\n    \n    --create a texture to use for a flash behind the cast bar\n    local backGroundFlashTexture = Plater:CreateImage (self, [[Interface\\ACHIEVEMENTFRAME\\UI-Achievement-Alert-Glow]], self:GetWidth()+60, self:GetHeight()+50, \"background\", {0, 400/512, 0, 170/256})\n    backGroundFlashTexture:SetBlendMode (\"ADD\", 7)\n    backGroundFlashTexture:SetDrawLayer(\"OVERLAY\", 7)\n    backGroundFlashTexture:SetPoint (\"center\", self, \"center\")\n    backGroundFlashTexture:Hide()\n    \n    --create the animation hub to hold the flash animation sequence\n    envTable.BackgroundFlash = envTable.BackgroundFlash or Plater:CreateAnimationHub (backGroundFlashTexture, \n        function()\n            backGroundFlashTexture:Show()\n        end,\n        function()\n            backGroundFlashTexture:Hide()\n        end\n    )\n    \n    --create the flash animation sequence\n    envTable.BackgroundFlash.fadeIn = envTable.BackgroundFlash.fadeIn or Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 1, CONFIG_BACKGROUND_FLASH_DURATION/2, 0, .75)\n    envTable.BackgroundFlash.fadeIn:SetDuration(CONFIG_BACKGROUND_FLASH_DURATION/2)\n    \n    envTable.BackgroundFlash.fadeOut = envTable.BackgroundFlash.fadeOut or Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 2, CONFIG_BACKGROUND_FLASH_DURATION/2, 1, 0)    \n    envTable.BackgroundFlash.fadeOut:SetDuration(CONFIG_BACKGROUND_FLASH_DURATION/2)\n    \n    --envTable.BackgroundFlash:Play() --envTable.BackgroundFlash:Stop()    \n    \n    \n    \n    \n    \nend\n\n\n\n\n",
@@ -5261,7 +5267,7 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --don't execute on battlegrounds and arenas\n    if (not Plater.IsShowingCastBarTest) then\n        if (Plater.ZoneInstanceType == \"arena\" or Plater.ZoneInstanceType == \"pvp\" or Plater.ZoneInstanceType == \"none\") then\n            return\n        end\n    end\n    \n    --play flash animations\n    envTable.FullBarFlash:Play()\n    \n    --envTable.currentHeight = unitFrame.castBar:GetHeight()\n    \n    --restoring the default size (not required since it already restore in the hide script)\n    if (envTable.OriginalHeight) then\n        self:SetHeight (envTable.OriginalHeight)\n    end\n    \n    --increase the cast bar size\n    local height = self:GetHeight()\n    envTable.OriginalHeight = height\n    \n    self:SetHeight (height + envTable.CastBarHeightAdd)\n    \n    Plater.SetCastBarBorderColor (self, 1, .2, .2, 0.4)\n    \n    unitFrame:PlayFrameShake (envTable.FrameShake)\n    \n    --set the color of the cast bar to dark orange (only if can be interrupted)\n    --Plater auto set this color to default when a new cast starts, no need to reset this value at OnHide.    \n    if (envTable._CanInterrupt) then\n        if (scriptTable.config.useCastbarColor) then\n            self:SetStatusBarColor (Plater:ParseColors (envTable.CastbarColor))\n        end\n    end\n    \n    Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, scriptTable.config.castbarColor, envTable)\n    \n    envTable.BackgroundFlash:Play()\n    \n    unitFrame.castBar.Spark:SetHeight(unitFrame.castBar:GetHeight())\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\cast_bar_healalert.png",
-["Name"] = "Cast - Heal Cut [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Flash, Bounce and Red Color the CastBar border when when an important cast is happening. Add spell in the Add Trigger field.",
@@ -5292,7 +5298,7 @@ PlaterDB = {
 424419,
 423051,
 },
-["version"] = -1,
+["Name"] = "Cast - Heal Cut [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    envTable.EnergyAmount = Plater:CreateLabel (unitFrame, \"\", 16, \"silver\");\n    envTable.EnergyAmount:SetPoint (\"bottom\", unitFrame, \"top\", 0, 18);    \n    \n    envTable.EnergyAmount.fontsize = scriptTable.config.fontSize\n    envTable.EnergyAmount.fontcolor = scriptTable.config.fontColor\n    envTable.EnergyAmount.outline = scriptTable.config.outline\n    \n    \nend\n\n--[=[\n\n164406 = Shriekwing\n164407 = Sludgefist\n162100 = kryxis the voracious\n162099 = general kaal - sanguine depths\n162329 = Xav the Unfallen - threater of pain\n--]=]",
@@ -5397,13 +5403,13 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    envTable.EnergyAmount:Show()\nend\n\n\n",
 ["Icon"] = 136048,
-["Name"] = "Unit - Show Energy [Plater]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Show the energy amount above the nameplate.",
 ["SpellIds"] = {
 },
-["version"] = -1,
+["Name"] = "Unit - Show Energy [Plater]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \n    --check for marks\n    function  envTable.CheckMark (unitId, unitFrame)\n        if (not GetRaidTargetIndex(unitId)) then\n            if (scriptTable.config.onlyInCombat) then\n                if (not UnitAffectingCombat(unitId)) then\n                    return\n                end                \n            end\n            \n            SetRaidTarget(unitId, 8)\n        end       \n    end\nend\n\n\n--163520 - forsworn squad-leader\n--163618 - zolramus necromancer - The Necrotic Wake\n--164506 - anciet captain - theater of pain\n\n\n",
@@ -5449,13 +5455,13 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    envTable.CheckMark (unitId, unitFrame)\nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
 ["Icon"] = "Interface\\Worldmap\\GlowSkull_64Grey",
-["Name"] = "Auto Set Skull",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Auto set skull marker",
 ["SpellIds"] = {
 },
-["version"] = -1,
+["Name"] = "Auto Set Skull",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable)\n    \n    envTable.FixateTarget = Plater:CreateLabel (unitFrame);\n    envTable.FixateTarget:SetPoint (\"bottom\", unitFrame.BuffFrame, \"top\", 0, 10);    \n    \n    envTable.FixateIcon = Plater:CreateImage (unitFrame, 236188, 16, 16, \"overlay\");\n    envTable.FixateIcon:SetPoint (\"bottom\", envTable.FixateTarget, \"top\", 0, 4);    \n    \n    envTable.FixateTarget:Hide()\n    envTable.FixateIcon:Hide()\nend\n\n--165560 = Gormling Larva - MTS\n\n\n\n\n\n\n",
@@ -5475,13 +5481,13 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n\n\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable)\n    \nend\n\n\n",
 ["Icon"] = 1029718,
-["Name"] = "Fixate [Plater]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Show above the nameplate who is the player fixated",
 ["SpellIds"] = {
 },
-["version"] = -1,
+["Name"] = "Fixate [Plater]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n\n--Scorchling 194622\n--Scorchling 190205\n--197398  Hungry Lasher\n--77006 corpse skitterling\n\n\n\n\n\n\n\n\n",
@@ -5552,13 +5558,13 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    if (scriptTable.config.useNameplateColor) then\n        envTable.NameplateColor = Plater.GetColorByPriority(unitFrame, scriptTable.config.nameplateColor)\n        Plater.DenyColorChange(unitFrame, true)\n    end    \n    \n    unitFrame.healthBar._savedOriginalScale = unitFrame.healthBar:GetScale()\n    \n    if (scriptTable.config.useNameplateScale) then\n        unitFrame.healthBar:SetScale(scriptTable.config.scale)\n    end\n    \nend\n\n\n\n\n",
 ["Icon"] = "interface/addons/plater/media/duck_64",
-["Name"] = "Add - Non Elite Trash [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "",
 ["SpellIds"] = {
 },
-["version"] = -1,
+["Name"] = "Add - Non Elite Trash [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    local castBar = unitFrame.castBar\n    local castBarPortion = castBar:GetWidth()/scriptTable.config.segmentsAmount\n    local castBarHeight = castBar:GetHeight()\n    \n    unitFrame.felAnimation = unitFrame.felAnimation or {}\n    \n    if (not unitFrame.felAnimation.textureStretched) then\n        unitFrame.felAnimation.textureStretched = castBar:CreateTexture(nil, \"overlay\", nil, 5)\n    end\n    \n    if (not unitFrame.stopCastingX) then\n        unitFrame.stopCastingX = castBar.FrameOverlay:CreateTexture(nil, \"overlay\", nil, 7)\n        unitFrame.stopCastingX:SetPoint(\"center\", unitFrame.castBar.Spark, \"center\", 0, 0)\n        unitFrame.stopCastingX:SetTexture([[Interface\\AddOns\\Plater\\Media\\stop_64]])\n        unitFrame.stopCastingX:SetSize(16, 16)\n        unitFrame.stopCastingX:Hide()\n    end\n    \n    if (not unitFrame.felAnimation.Textures) then\n        unitFrame.felAnimation.Textures = {}\n        \n        for i = 1, 20 do\n            local texture = castBar:CreateTexture(nil, \"overlay\", nil, 6)\n            unitFrame.felAnimation.Textures[i] = texture            \n            \n            texture.animGroup = texture.animGroup or texture:CreateAnimationGroup()\n            local animationGroup = texture.animGroup\n            animationGroup:SetToFinalAlpha(true)            \n            animationGroup:SetLooping(\"NONE\")\n            \n            texture:SetTexture([[Interface\\COMMON\\XPBarAnim]])\n            texture:SetTexCoord(0.2990, 0.0010, 0.0010, 0.4159)\n            texture:SetBlendMode(\"ADD\")\n            \n            texture.scale = animationGroup:CreateAnimation(\"SCALE\")\n            texture.scale:SetTarget(texture)\n            \n            texture.alpha = animationGroup:CreateAnimation(\"ALPHA\")\n            texture.alpha:SetTarget(texture)\n            \n            texture.alpha2 = animationGroup:CreateAnimation(\"ALPHA\")\n            texture.alpha2:SetTarget(texture)\n        end\n    end\n    \n    \n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
@@ -5614,7 +5620,7 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    local castBar = unitFrame.castBar\n    envTable.castBarWidth = castBar:GetWidth()\n    castBar.Spark:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.sparkColor))\n    \n    local textureStretched = unitFrame.felAnimation.textureStretched\n    textureStretched:Show()\n    textureStretched:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.glowColor))\n    textureStretched:SetAtlas(\"XPBarAnim-OrangeTrail\")\n    textureStretched:ClearAllPoints()\n    textureStretched:SetPoint(\"right\", castBar.Spark, \"center\", 0, 0)\n    textureStretched:SetHeight(castBar:GetHeight())\n    textureStretched:SetBlendMode(\"ADD\") \n    textureStretched:SetAlpha(0.5)\n    textureStretched:SetDrawLayer(\"overlay\", 7)\n    \n    for i = 1, scriptTable.config.segmentsAmount  do\n        local texture = unitFrame.felAnimation.Textures[i]\n        texture:SetVertexColor(1, 1, 1, 1)\n        texture:SetDesaturated(true)\n        \n        local castBarPortion = castBar:GetWidth()/scriptTable.config.segmentsAmount\n        \n        texture:SetSize(castBarPortion+5, castBar:GetHeight())\n        texture:SetDrawLayer(\"overlay\", 6)\n        \n        texture:ClearAllPoints()\n        if (i == scriptTable.config.segmentsAmount) then\n            texture:SetPoint(\"right\", castBar, \"right\", 0, 0)\n        else\n            texture:SetPoint(\"left\", castBar, \"left\", (i-1)*castBarPortion, 2)\n        end\n        \n        texture:SetAlpha(0)\n        texture:Hide()\n        \n        texture.scale:SetOrder(1)\n        texture.scale:SetDuration(0.5)\n        texture.scale:SetScaleFrom(0.2, 1)\n        texture.scale:SetScaleTo(1, 1.5)\n        texture.scale:SetOrigin(\"right\", 0, 0)\n        \n        local durationTime = DetailsFramework:GetBezierPoint(i / scriptTable.config.segmentsAmount, 0.2, 0.01, 0.6)\n        local duration = abs(durationTime-0.6)\n        --local duration = 0.6 --debug\n        \n        texture.alpha:SetOrder(1)\n        texture.alpha:SetDuration(0.05)\n        texture.alpha:SetFromAlpha(0)\n        texture.alpha:SetToAlpha(0.4)\n        \n        texture.alpha2:SetOrder(1)\n        texture.alpha2:SetDuration(duration) --0.6\n        texture.alpha2:SetStartDelay(duration)\n        texture.alpha2:SetFromAlpha(0.5)\n        texture.alpha2:SetToAlpha(0)\n    end\n    \n    unitFrame.stopCastingX:Show()\n    \n    envTable.CurrentTexture = 1\n    envTable.NextPercent  = 100  / scriptTable.config.segmentsAmount\n    \n    self.Text:SetDrawLayer(\"artwork\", 7)\n    self.Spark:SetDrawLayer(\"artwork\", 7)\n    self.Spark:Hide()\nend\n\n\n\n\n\n\n\n\n",
 ["Icon"] = "Interface\\AddOns\\Plater\\media\\stop_64",
-["Name"] = "Cast - Stop Casting [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Just stop casting",
@@ -5626,7 +5632,7 @@ PlaterDB = {
 200291,
 268202,
 },
-["version"] = -1,
+["Name"] = "Cast - Stop Casting [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \n    local GetSpellInfo = GetSpellInfo or function(spellID) if not spellID then return nil end local si = C_Spell.GetSpellInfo(spellID) if si then return si.name, nil, si.iconID, si.castTime, si.minRange, si.maxRange, si.spellID, si.originalIconID end end --compatibility\n    \n    envTable.npcInfo = {\n        [164427] = {secondCastBar = true, timer = 20, timerId = 321247, altCastId = \"1\", name = \"Boom!\"}, --reanimated warrior - plaguefall\n        \n        [164414] = {secondCastBar = true, timer = 20, timerId = 321247, altCastId = \"2\", name = \"Boom!\"}, --reanimated mage - plaguefall\n        \n        [164185] = {secondCastBar = true, timer = 20, timerId = 319941, altCastId = \"3\", remaining = 5, name = GetSpellInfo(319941)}, --Echelon - Halls of Atonement\n        \n        [164567] = {secondCastBar = true, altCastId = \"dromanswrath\", debuffTimer = 323059, name = GetSpellInfo(323059), spellIcon = 323059}, --Ingra Maloch -- tirna scythe\n        \n        [165408] = {secondCastBar = true, timer = 20, timerId = 322711, altCastId = \"4\", remaining = 5, name = GetSpellInfo(322711)}, --Halkias - Refracted Sinlight - Halls of Atonement\n        \n        --[225976] = {secondCastBar = true, altCastId = \"Uber Strike\",  debuffTimer = 167385, name = GetSpellInfo(167385), spellIcon = 167385}, --tank dummy        \n        --[154564] = {secondCastBar = true, timerId = \"Test Bar\", altCastId = \"debugcast\", remaining = 5, name = GetSpellInfo(319941), spellIcon = 319941}, --debug \"Test (1)\" BW \"Test Bar\" DBM --DEBUG\n        --[154580] = {secondCastBar = true, altCastId = \"debugcast\", debuffTimer = 204242, name = GetSpellInfo(81297), spellIcon = 81297}, --debug \"Test (1)\" BW \"Test Bar\" DBM --DEBUG\n    }\n    \n    --set the castbar config\n    local config = {\n        iconTexture = \"\",\n        iconTexcoord = {0.1, 0.9, 0.1, 0.9},\n        iconAlpha = 1,\n        iconSize = 14,\n        \n        text = \"Boom!\",\n        textSize = 9,\n        \n        texture = [[Interface\\AddOns\\Plater\\images\\bar_background]],\n        color = \"silver\",\n        \n        isChanneling = false,\n        canInterrupt = false,\n        \n        height = 2,\n        width = Plater.db.profile.plate_config.enemynpc.health_incombat[1],\n        \n        spellNameAnchor = {side = 3, x = 0, y = -2},\n        timerAnchor = {side = 5, x = 0, y = -2},\n    }    \n    \n    function envTable.ShowAltCastBar(npcInfo, unitFrame, unitId, customTime, customStart)\n        --show the cast bar\n        config.text = npcInfo.name\n        if (npcInfo.timerId) then\n            local barObject = Plater.GetBossTimer(npcInfo.timerId)\n            if (barObject) then\n                if (npcInfo.remaining) then\n                    local timeLeft = barObject.timer + barObject.start - GetTime()\n                    if (timeLeft > npcInfo.remaining) then\n                        return\n                    end\n                end\n                \n                if (npcInfo.spellIcon) then\n                    local _, _, iconTexture = GetSpellInfo(npcInfo.spellIcon)\n                    config.iconTexture = iconTexture\n                else\n                    config.iconTexture = \"\"\n                end\n                \n                Plater.SetAltCastBar(unitFrame.PlateFrame, config, barObject.timer, customStart or barObject.start, npcInfo.altCastId)\n            end\n        else\n            Plater.SetAltCastBar(unitFrame.PlateFrame, config, customTime or npcInfo.timer, customStart, npcInfo.altCastId)            \n        end\n        \n        DetailsFramework:TruncateText(unitFrame.castBar2.Text, unitFrame.castBar2:GetWidth() - 16)\n    end\nend",
@@ -5650,13 +5656,13 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    local npcInfo = envTable.npcInfo[envTable._NpcID]\n    \n    if (npcInfo and npcInfo.secondCastBar) then\n        if (npcInfo.debuffTimer) then\n            if (Plater.NameplateHasAura (unitFrame, npcInfo.debuffTimer)) then\n                \n                local name = npcInfo.name\n                --get the debuff timeleft\n                local name = npcInfo.name\n                local auras = Plater.GetUnitAuras(unitFrame)\n                local duration, expirationTime\n                for _, aura in pairs(auras) do\n                    if aura.name == name then\n                        duration = aura.duration\n                        expirationTime = aura.expirationTime\n                        break\n                    end\n                end\n                \n                envTable.ShowAltCastBar(npcInfo, unitFrame, unitId, duration, expirationTime-duration)\n            else\n                if (unitFrame.castBar2:IsShown()) then\n                    local altCastId = Plater.GetAltCastBarAltId(unitFrame.PlateFrame)\n                    if (altCastId == npcInfo.altCastId) then\n                        Plater.ClearAltCastBar(unitFrame.PlateFrame)\n                    end                   \n                end                              \n            end\n        else\n            envTable.ShowAltCastBar(npcInfo, unitFrame, unitId)\n        end\n    end\nend",
 ["Icon"] = "Interface\\AddOns\\Plater\\Images\\countdown_bar_icon",
-["Name"] = "Countdown",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Some units has special events without a clear way to show. This script adds a second cast bar to inform the user about it.",
 ["SpellIds"] = {
 },
-["version"] = -1,
+["Name"] = "Countdown",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \n    if (not unitFrame.TextureWatchStep) then\n        \n        unitFrame.TextureWatchStep = true\n        \n        local animationFrame = CreateFrame(\"frame\", nil, unitFrame)\n        \n        \n        --> single animation group\n        local bearTrapAnimation = animationFrame:CreateAnimationGroup(\"beartrapAnimationGroup\")\n        bearTrapAnimation:SetLooping(\"NONE\")\n        \n        --> widgets:\n        \n        ----------------------------------------------\n        \n        local leftTrap  = animationFrame:CreateTexture(\"$parentleftTrapTexture\", \"ARTWORK\")\n        leftTrap:SetTexture([[Interface\\AddOns\\Plater\\images\\icon_beartrap_2.png]])\n        leftTrap:SetDrawLayer(\"ARTWORK\", 0)\n        leftTrap:SetPoint(\"center\", animationFrame, \"center\", -48, 0)\n        leftTrap:SetSize(100, 100)\n        leftTrap:SetTexCoord(1, 0.0010000000149012, 0.0010000000149012, 1)\n        \n        --> animations for leftTrap\n        \n        leftTrap.rotation = bearTrapAnimation:CreateAnimation(\"ROTATION\")\n        leftTrap.rotation:SetTarget(leftTrap)\n        leftTrap.rotation:SetOrder(1)\n        leftTrap.rotation:SetDuration(0.195999994874)\n        leftTrap.rotation:SetStartDelay(0.39999997615814)\n        leftTrap.rotation:SetDegrees(-90)\n        leftTrap.rotation:SetOrigin(\"bottom\", 0, 0)\n        leftTrap.rotation = bearTrapAnimation:CreateAnimation(\"ROTATION\")\n        leftTrap.rotation:SetTarget(leftTrap)\n        leftTrap.rotation:SetOrder(6)\n        leftTrap.rotation:SetDuration(0.195999994874)\n        leftTrap.rotation:SetDegrees(90)\n        leftTrap.rotation:SetOrigin(\"bottom\", 0, 0)\n        leftTrap.alpha = bearTrapAnimation:CreateAnimation(\"ALPHA\")\n        leftTrap.alpha:SetTarget(leftTrap)\n        leftTrap.alpha:SetOrder(6)\n        leftTrap.alpha:SetDuration(0.195999994874)\n        leftTrap.alpha:SetFromAlpha(1)\n        leftTrap.alpha:SetToAlpha(0)\n        \n        ----------------------------------------------\n        \n        local rightTrap  = animationFrame:CreateTexture(\"$parentrightTrapTexture\", \"ARTWORK\")\n        rightTrap:SetTexture([[Interface\\AddOns\\Plater\\images\\icon_beartrap_2.png]])\n        rightTrap:SetDrawLayer(\"ARTWORK\", 0)\n        rightTrap:SetPoint(\"center\", animationFrame, \"center\", 0, 0)\n        rightTrap:SetSize(100, 100)\n        \n        --> animations for rightTrap\n        \n        rightTrap.rotation = bearTrapAnimation:CreateAnimation(\"ROTATION\")\n        rightTrap.rotation:SetTarget(rightTrap)\n        rightTrap.rotation:SetOrder(1)\n        rightTrap.rotation:SetDuration(0.195999994874)\n        rightTrap.rotation:SetStartDelay(0.39999997615814)\n        rightTrap.rotation:SetDegrees(90)\n        rightTrap.rotation:SetOrigin(\"bottom\", 0, 0)\n        rightTrap.rotation = bearTrapAnimation:CreateAnimation(\"ROTATION\")\n        rightTrap.rotation:SetTarget(rightTrap)\n        rightTrap.rotation:SetOrder(6)\n        rightTrap.rotation:SetDuration(0.195999994874)\n        rightTrap.rotation:SetDegrees(-90)\n        rightTrap.rotation:SetOrigin(\"bottom\", 0, 0)\n        rightTrap.alpha = bearTrapAnimation:CreateAnimation(\"ALPHA\")\n        rightTrap.alpha:SetTarget(rightTrap)\n        rightTrap.alpha:SetOrder(6)\n        rightTrap.alpha:SetDuration(0.195999994874)\n        rightTrap.alpha:SetFromAlpha(1)\n        rightTrap.alpha:SetToAlpha(0)\n        \n        ----------------------------------------------\n        \n        local boots  = animationFrame:CreateTexture(\"$parentbootsTexture\", \"BORDER\")\n        boots:SetTexture([[Interface\\AddOns\\Plater\\images\\icon_shoes.png]])\n        boots:SetDrawLayer(\"BORDER\", 0)\n        boots:SetPoint(\"center\", animationFrame, \"center\", -88, 35)\n        boots:SetSize(50, 50)\n        \n        --> animations for boots\n        \n        boots.alpha = bearTrapAnimation:CreateAnimation(\"ALPHA\")\n        boots.alpha:SetTarget(boots)\n        boots.alpha:SetOrder(1)\n        boots.alpha:SetDuration(0.31599998474121)\n        boots.alpha:SetFromAlpha(0)\n        boots.alpha:SetToAlpha(1)\n        boots.rotation = bearTrapAnimation:CreateAnimation(\"ROTATION\")\n        boots.rotation:SetTarget(boots)\n        boots.rotation:SetOrder(1)\n        boots.rotation:SetDuration(0.2960000038147)\n        boots.rotation:SetStartDelay(0.19999998807907)\n        boots.rotation:SetDegrees(40)\n        boots.rotation:SetOrigin(\"center\", 0, 0)\n        boots.translation = bearTrapAnimation:CreateAnimation(\"TRANSLATION\")\n        boots.translation:SetTarget(boots)\n        boots.translation:SetOrder(1)\n        boots.translation:SetDuration(0.59599995613098)\n        boots.translation:SetOffset(63, -33)\n        boots.translation = bearTrapAnimation:CreateAnimation(\"TRANSLATION\")\n        boots.translation:SetTarget(boots)\n        boots.translation:SetOrder(2)\n        boots.translation:SetDuration(0.046000000089407)\n        boots.translation:SetOffset(3, 3)\n        boots.translation = bearTrapAnimation:CreateAnimation(\"TRANSLATION\")\n        boots.translation:SetTarget(boots)\n        boots.translation:SetOrder(3)\n        boots.translation:SetDuration(0.046000000089407)\n        boots.translation:SetOffset(-3, -3)\n        boots.translation = bearTrapAnimation:CreateAnimation(\"TRANSLATION\")\n        boots.translation:SetTarget(boots)\n        boots.translation:SetOrder(4)\n        boots.translation:SetDuration(0.046000000089407)\n        boots.translation:SetOffset(3, 3)\n        boots.translation = bearTrapAnimation:CreateAnimation(\"TRANSLATION\")\n        boots.translation:SetTarget(boots)\n        boots.translation:SetOrder(5)\n        boots.translation:SetDuration(0.046000000089407)\n        boots.translation:SetOffset(-3, -3)\n        boots.alpha = bearTrapAnimation:CreateAnimation(\"ALPHA\")\n        boots.alpha:SetTarget(boots)\n        boots.alpha:SetOrder(6)\n        boots.alpha:SetDuration(0.39599999785423)\n        boots.alpha:SetFromAlpha(1)\n        boots.alpha:SetToAlpha(0)\n        \n        ----------------------------------------------\n        \n        unitFrame.BearTrapTextures = {leftTrap, rightTrap, boots}\n        unitFrame.BearTrapAnimationFrame = animationFrame\n        unitFrame.BearTrapAnimation = bearTrapAnimation\n        \n        \n        bearTrapAnimation:SetScript(\"OnPlay\", function()\n                boots:SetAlpha(0)\n                boots:Show()\n                leftTrap:Show()\n                rightTrap:Show()            \n        end)\n        \n        bearTrapAnimation:SetScript(\"OnFinished\", function()\n                boots:Hide()\n                leftTrap:Hide()\n                rightTrap:Hide()\n        end)       \n        \n        bearTrapAnimation:SetScript(\"OnStop\", function()\n                boots:Hide()\n                leftTrap:Hide()\n                rightTrap:Hide()\n        end)           \n        \n        \n    end\n    \nend\n\n\n\n\n",
@@ -5683,7 +5689,7 @@ PlaterDB = {
 ["Initialization"] = "		function (scriptTable)\n			--insert code here\n			\n		end\n	",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    unitFrame.BearTrapAnimationFrame:SetSize(1, 1)\n    unitFrame.BearTrapAnimationFrame:ClearAllPoints()\n    unitFrame.BearTrapAnimationFrame:SetPoint(\"center\", unitFrame, \"center\", 30, 63)\n    unitFrame.BearTrapAnimationFrame:SetScale(0.5)\n    \n    unitFrame.BearTrapAnimation:Play()\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\cast_bar_voidzone.png",
-["Name"] = "Cast - Voidzone [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Play an animation when the cast creates small zones in the ground that will damage if the player doesn't move.",
@@ -5729,7 +5735,7 @@ PlaterDB = {
 424429,
 423062,
 },
-["version"] = -1,
+["Name"] = "Cast - Voidzone [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    function envTable.PlaySwipeAnimation(unitFrame)\n        unitFrame.CastSwipeTexture:Show()\n        unitFrame.CastSwipeAnimation:Play()\n        unitFrame.StartSwipeAnimation:Play()\n    end\n    \n    function envTable.StopSwipeAnimation(unitFrame)\n        unitFrame.EndSwipeAnimation:Play()\n        C_Timer.After(0.21, function()\n                unitFrame.CastSwipeAnimation:Stop()\n                unitFrame.CastSwipeTexture:Hide()\n        end)\n    end\n    \n    function envTable.CreateSwipeTextureAndAnimations(unitFrame)\n        if (unitFrame.CastSwipeTexture) then\n            return\n        end\n        \n        local swipeTexture = unitFrame:CreateTexture(nil, \"overlay\")\n        swipeTexture:SetTexture([[Interface\\AddOns\\Plater\\images\\circular_swipe.png]])\n        swipeTexture:SetPoint(\"center\", 0, 0)\n        swipeTexture:SetSize(64, 64)\n        swipeTexture:Hide()\n        \n        unitFrame.CastSwipeTexture = swipeTexture\n        \n        --rotation animation\n        unitFrame.CastSwipeAnimation = Plater:CreateAnimationHub(swipeTexture)\n        unitFrame.CastSwipeAnimation:SetLooping(\"repeat\")\n        unitFrame.CastSwipeAnimation.Rotation = Plater:CreateAnimation(unitFrame.CastSwipeAnimation, \"rotation\", 1, 1, 360)\n        \n        --starting animation\n        unitFrame.StartSwipeAnimation = Plater:CreateAnimationHub(swipeTexture, function()swipeTexture:Show() end)\n        unitFrame.StartSwipeAnimation.Alpha = Plater:CreateAnimation(unitFrame.StartSwipeAnimation, \"alpha\", 1, 0.2, 0, 1)\n        unitFrame.StartSwipeAnimation.Scale = Plater:CreateAnimation(unitFrame.StartSwipeAnimation, \"scale\", 1, 0.2, 1.3, 1.3, 1, 1)        \n        \n        --finished animation\n        unitFrame.EndSwipeAnimation = Plater:CreateAnimationHub(swipeTexture, nil, function()swipeTexture:Hide() end)\n        unitFrame.EndSwipeAnimation.Alpha = Plater:CreateAnimation(unitFrame.EndSwipeAnimation, \"alpha\", 1, 0.2, 1, 0)\n        unitFrame.EndSwipeAnimation.Scale = Plater:CreateAnimation(unitFrame.EndSwipeAnimation, \"scale\", 1, 0.2, 1, 1, 1.3, 1.3)\n    end\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
@@ -5832,7 +5838,7 @@ PlaterDB = {
 ["Initialization"] = "		function (scriptTable)\n			--insert code here\n			\n		end\n	",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    envTable.CreateSwipeTextureAndAnimations(unitFrame)\n    \n    local options = scriptTable.config\n    local targetScale = scriptTable.config.textureScale\n    \n    --swipe rotation duration    \n    unitFrame.CastSwipeAnimation.Rotation:SetDuration(scriptTable.config.rotationDuration)\n    \n    unitFrame.CastSwipeTexture:SetTexture([[Interface\\AddOns\\Plater\\images\\circular_swipe.png]])\n    \n    --swipe texture settings\n    unitFrame.CastSwipeTexture:SetVertexColor(Plater:ParseColors(scriptTable.config.textureColor))\n    unitFrame.CastSwipeTexture:SetScale(targetScale)\n    unitFrame.CastSwipeTexture:SetAlpha(scriptTable.config.textureAlpha)  \n    \n    unitFrame.StartSwipeAnimation.Alpha:SetDuration(scriptTable.config.animStartDuration)\n    unitFrame.StartSwipeAnimation.Alpha:SetFromAlpha(scriptTable.config.textureStartAlpha)\n    unitFrame.StartSwipeAnimation.Alpha:SetToAlpha(scriptTable.config.textureAlpha)\n    \n    unitFrame.StartSwipeAnimation.Scale:SetDuration(scriptTable.config.animStartDuration)\n    \n    unitFrame.StartSwipeAnimation.Scale:SetScaleFrom(1.05, 1.05)\n    unitFrame.StartSwipeAnimation.Scale:SetScaleTo(1, 1)    \n    \n    unitFrame.EndSwipeAnimation.Scale:SetDuration(0.1)\n    unitFrame.EndSwipeAnimation.Alpha:SetDuration(0.1)\n    \n    --start playing\n    envTable.PlaySwipeAnimation(unitFrame)    \n    \nend\n\n\n",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\circular_swipe",
-["Name"] = "Cast - AoE With Range [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Play a animation when the spell effect is an circular AoE around the caster.",
@@ -5871,7 +5877,7 @@ PlaterDB = {
 440652,
 424621,
 },
-["version"] = -1,
+["Name"] = "Cast - AoE With Range [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --get the reference of the arrow texture\n    local movingArrowTexture = unitFrame._movingArrowTexture\n    \n    --if it doesn't exists yet, create now\n    if (not movingArrowTexture) then\n        movingArrowTexture = self:CreateTexture(nil, \"artwork\", nil, 6)\n        unitFrame._movingArrowTexture = movingArrowTexture\n    end\n    \n    local mAT = movingArrowTexture\n    \n    if (not mAT.movingAnimation) then\n        local onPlay = function()\n            mAT:Show() \n        end\n        \n        local onStop =  function()\n            mAT:Hide() \n        end\n        \n        mAT.movingAnimation = Plater:CreateAnimationHub( mAT, onPlay, onStop )\n        mAT.movingAnimation:SetLooping( \"REPEAT\" )\n    end\n    \n    if (not mAT.arrowAnimation) then\n        local arrowAnimation = Plater:CreateAnimation (mAT.movingAnimation, \"translation\", 1, 0.20, self:GetWidth()-16, 0)\n        mAT.arrowAnimation = arrowAnimation\n    end\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n",
@@ -5976,7 +5982,7 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    local mAT = unitFrame._movingArrowTexture\n    \n    mAT:SetTexture([[Interface\\PETBATTLES\\PetBattle-StatIcons]])\n    mAT:SetSize(16, self:GetHeight())\n    mAT:SetTexCoord(unpack({0, 15/32, 18/32, 30/32}))\n    mAT:SetParent(self.FrameOverlay)\n    mAT:SetDrawLayer(\"overlay\",  7)\n    mAT:SetAlpha(scriptTable.config.arrowAlpha)\n    mAT:SetDesaturated(scriptTable.config.desaturateArrow)        \n    \n    mAT:ClearAllPoints()\n    mAT:SetPoint(\"left\", self, \"left\", -16, 0)\n    \n    local arrowAnimation = mAT.arrowAnimation\n    arrowAnimation:SetDuration(scriptTable.config.animSpeed)\n    arrowAnimation:SetOffset(self:GetWidth(), 0)\n    \n    mAT.movingAnimation:Play()\n    \n    if (scriptTable.config.bChangeSpellName) then\n        self.Text:SetText(scriptTable.config.spellNameText)\n    end\n    \n    --DetailsFramework:DebugVisibility(mAT)\n\nend\n\n\n\n\n",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\cast_bar_frontal",
-["Name"] = "Cast - Frontal Cone [Plater]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Does an animation for casts that affect the frontal area of the enemy. Add spell in the Add Trigger field.",
@@ -6121,7 +6127,7 @@ PlaterDB = {
 445457,
 447270,
 },
-["version"] = -1,
+["Name"] = "Cast - Frontal Cone [Plater]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    function envTable.CreateWidgets()\n        --create a camera shake for the nameplate\n        if (not unitFrame.AddExplosionOnDieShake) then\n            unitFrame.AddExplosionOnDieShake = Plater:CreateFrameShake (unitFrame, scriptTable.config.shakeDuration, scriptTable.config.shakeAmplitude, scriptTable.config.shakeFrequency, false, false, 0, 1, 0.05, 0.1, Plater.GetPoints (unitFrame))\n        end\n        \n        if (not unitFrame.AddExplosionOnDieBackground) then\n            unitFrame.AddExplosionOnDieBackground = unitFrame.healthBar:CreateTexture(nil, \"background\")\n            unitFrame.AddExplosionOnDieBackground:SetAllPoints(unitFrame.healthBar)\n            unitFrame.AddExplosionOnDieBackground:SetColorTexture(1, 0, 0, 1)\n        end\n    end\n    \nend\n\n--194895 = unstable squall\n--105703 = mana wyrm\n--59598 = lesser sha\n--58319 = lesser sha\n\n\n\n\n\n\n\n\n\n\n\n",
@@ -6212,13 +6218,13 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \n    local healthBar = unitFrame.healthBar\n    \n    if (scriptTable.config.useReverse) then\n        healthBar:SetReverseFill(true)\n    end\n    \n    --unitFrame.AddExplosionOnDieShake\n    \n    envTable.CreateWidgets()\n    \n    unitFrame.AddExplosionOnDieShake.OriginalAmplitude = scriptTable.config.shakeAmplitude\n    unitFrame.AddExplosionOnDieShake.OriginalDuration = 0.120\n    unitFrame.AddExplosionOnDieShake.OriginalFrequency = scriptTable.config.shakeFrequency\n    \n    if (scriptTable.config.useBackground) then\n        unitFrame.AddExplosionOnDieBackground:Show()\n        unitFrame.AddExplosionOnDieBackground:SetAlpha(0)\n    else\n        unitFrame.AddExplosionOnDieBackground:Hide()\n    end\nend\n\n\n\n\n\n\n",
 ["Icon"] = "interface/addons/plater/media/radio_64",
-["Name"] = "Add - Explode on Die [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "",
 ["SpellIds"] = {
 },
-["version"] = -1,
+["Name"] = "Add - Explode on Die [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n",
@@ -6237,7 +6243,7 @@ PlaterDB = {
 ["Initialization"] = "		function (scriptTable)\n			--insert code here\n			\n		end\n	",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    local auraDuration = envTable._Duration\n    local altCastId = 1\n    \n    ---@class plater_altcastbarconfig : table\n    ---@field iconTexture string\n    ---@field iconTexcoord table\n    ---@field iconAlpha number\n    ---@field text string\n    ---@field texture any\n    ---@field color any\n    ---@field isChanneling boolean\n    ---@field canInterrupt boolean\n    ---@field height number\n    ---@field iconSize number\n    ---@field textSize number\n    ---@field spellNameAnchor df_anchor\n    ---@field timerAnchor df_anchor\n    ---@field iconAnchor df_anchor\n    \n    local configTable = {\n        iconTexture = envTable._Texture,\n        text = envTable._SpellName,\n        color = \"gray\",\n        isChanneling = true,\n        canInterrupt = false,\n        texture = [[Interface\\AddOns\\Plater\\images\\bar_background]],\n        \n    }\n    \n    Plater.SetAltCastBar(unitFrame.PlateFrame, configTable, auraDuration, envTable._StartTime, altCastId)\n    \nend\n\n\n",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\aura_castbar.png",
-["Name"] = "Aura - Is Cast Bar [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Show a castbar for the aura duration.",
@@ -6245,7 +6251,7 @@ PlaterDB = {
 438494,
 335141,
 },
-["version"] = -1,
+["Name"] = "Aura - Is Cast Bar [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n",
@@ -6277,7 +6283,7 @@ PlaterDB = {
 ["Initialization"] = "		function (scriptTable)\n			--insert code here\n			\n		end\n	",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["Icon"] = "Interface\\ICONS\\Ability_Fixated_State_Red",
-["Name"] = "Fixate by Unit Buff [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Alert about a unit fixated on the player by using a buff on the enemy unit.",
@@ -6285,7 +6291,7 @@ PlaterDB = {
 426662,
 426663,
 },
-["version"] = -1,
+["Name"] = "Fixate by Unit Buff [P]",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    local castBar = unitFrame.castBar\n    local castBarPortion = castBar:GetWidth()/scriptTable.config.segmentsAmount\n    local castBarHeight = castBar:GetHeight()\n    \n    unitFrame.felAnimation = unitFrame.felAnimation or {}\n    \n    if (not unitFrame.felAnimation.textureStretched) then\n        unitFrame.felAnimation.textureStretched = castBar.FrameOverlay:CreateTexture(nil, \"overlay\", nil, 5)\n    end\n    \n    if (not unitFrame.felAnimation.Textures) then\n        unitFrame.felAnimation.Textures = {}\n        \n        for i = 1, 20 do --max amount of segments is 20\n            local texture = castBar:CreateTexture(nil, \"overlay\", nil, 6)\n            unitFrame.felAnimation.Textures[i] = texture            \n            \n            texture.animGroup = texture.animGroup or texture:CreateAnimationGroup()\n            local animationGroup = texture.animGroup\n            animationGroup:SetToFinalAlpha(true)            \n            animationGroup:SetLooping(\"NONE\")\n            \n            texture:SetTexture([[Interface\\COMMON\\XPBarAnim]])\n            texture:SetTexCoord(0.2990, 0.0010, 0.0010, 0.4159)\n            texture:SetBlendMode(\"ADD\")\n            \n            texture.scale = animationGroup:CreateAnimation(\"SCALE\")\n            texture.scale:SetTarget(texture)\n            \n            texture.alpha = animationGroup:CreateAnimation(\"ALPHA\")\n            texture.alpha:SetTarget(texture)\n            \n            texture.alpha2 = animationGroup:CreateAnimation(\"ALPHA\")\n            texture.alpha2:SetTarget(texture)\n        end\n    end\n    \n    \n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
@@ -6341,7 +6347,7 @@ PlaterDB = {
 ["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    if (self.channeling) then\n        return \n    end\n    \n    if (IsInRaid()) then\n        return\n    end\n    \n    local castBar = unitFrame.castBar\n    envTable.castBarWidth = castBar:GetWidth()\n    castBar.Spark:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.sparkColor))\n    \n    \n    local textureStretched = unitFrame.felAnimation.textureStretched\n    textureStretched:Show()\n    textureStretched:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.glowColor))\n    --textureStretched:SetAtlas(\"XPBarAnim-OrangeTrail\")\n    textureStretched:SetTexture([[Interface\\AddOns\\Plater\\images\\tail_rounded_white.png]])\n    textureStretched:SetHeight(castBar:GetHeight() + 2)\n    textureStretched:SetBlendMode(\"ADD\") \n    textureStretched:SetAlpha(0.5)\n    textureStretched:SetDrawLayer(\"overlay\", 7)\n    \n    textureStretched:ClearAllPoints()\n    textureStretched:SetPoint(\"right\", castBar.Spark, \"center\", 0, 0)\n    \n    --trail\n    for i = 1, scriptTable.config.segmentsAmount  do\n        local texture = unitFrame.felAnimation.Textures[i]\n        --texture:SetVertexColor(DetailsFramework:ParseColors(scriptTable.config.trailColor))\n        texture:SetVertexColor(1, 1, 1, 1)\n        texture:SetDesaturated(true)\n        \n        local castBarPortion = castBar:GetWidth()/scriptTable.config.segmentsAmount\n        \n        texture:SetSize(castBarPortion+5, castBar:GetHeight())\n        texture:SetDrawLayer(\"overlay\", 6)\n        \n        texture:ClearAllPoints()\n        if (i == scriptTable.config.segmentsAmount) then\n            texture:SetPoint(\"right\", castBar, \"right\", 0, 0)\n        else\n            texture:SetPoint(\"left\", castBar, \"left\", (i-1)*castBarPortion, 2)\n        end\n        \n        texture:SetAlpha(0)\n        texture:Hide()\n        \n        texture.scale:SetOrder(1)\n        texture.scale:SetDuration(0.5)\n        texture.scale:SetScaleFrom(0.2, 1)\n        texture.scale:SetScaleTo(1, 1.5)\n        texture.scale:SetOrigin(\"right\", 0, 0)\n        \n        local durationTime = DetailsFramework:GetBezierPoint(i / scriptTable.config.segmentsAmount, 0.2, 0.01, 0.6)\n        local duration = abs(durationTime-0.6)\n        \n        texture.alpha:SetOrder(1)\n        texture.alpha:SetDuration(0.05)\n        texture.alpha:SetFromAlpha(0)\n        texture.alpha:SetToAlpha(0.4)\n        \n        texture.alpha2:SetOrder(1)\n        texture.alpha2:SetDuration(duration) --0.6\n        texture.alpha2:SetStartDelay(duration)\n        texture.alpha2:SetFromAlpha(0.5)\n        texture.alpha2:SetToAlpha(0)\n    end\n    \n    envTable.CurrentTexture = 1\n    envTable.NextPercent  = 100  / scriptTable.config.segmentsAmount\n    \n    --local customColor = scriptTable.config.castColor[tostring(envTable._SpellID)]\n    --Plater.SetCastBarColorForScript(self, true, customColor or scriptTable.config.castBarColor, envTable)\nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\cast_bar_debuff.png",
-["Name"] = "Cast - Debuff [P]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "Show a different animation for the cast bar.",
@@ -6371,7 +6377,7 @@ PlaterDB = {
 449153,
 427461,
 },
-["version"] = -1,
+["Name"] = "Cast - Debuff [P]",
 },
 {
 ["ConstructorCode"] = "--todo: add npc ids for multilanguage support\n\nfunction (self, unitId, unitFrame, envTable)\n    \n    --settings\n    envTable.TextAboveNameplate = \"** On You **\"\n    envTable.NameplateColor = \"green\"\n    \n    --label to show the text above the nameplate\n    envTable.FixateTarget = Plater:CreateLabel (unitFrame);\n    envTable.FixateTarget:SetPoint (\"bottom\", unitFrame.healthBar, \"top\", 0, 30);\n    \n    --compat\n    local GetSpellInfo = GetSpellInfo or function(spellID) if not spellID then return nil end local si = C_Spell.GetSpellInfo(spellID) if si then return si.name, nil, si.iconID, si.castTime, si.minRange, si.maxRange, si.spellID, si.originalIconID end end\n    \n    --the spell casted by the npc in the trigger list needs to be in the list below as well\n    local spellList = {\n        [321891] = \"Freeze Tag Fixation\", --Illusionary Vulpin - MTS\n        --[167385] = \"Uber Strike\", --tank dummy\n    }\n    \n    --build the list with localized spell names\n    envTable.FixateDebuffs = {}\n    for spellID, enUSSpellName in pairs (spellList) do\n        local localizedSpellName = GetSpellInfo (spellID)\n        envTable.FixateDebuffs [localizedSpellName or enUSSpellName] = true\n    end\n    \n    --debug - smuggled crawg\n    envTable.FixateDebuffs [\"Jagged Maw\"] = true\n    \nend\n\n--[=[\nNpcIDs:\n136461: Spawn of G'huun (mythic uldir G'huun)\n\n--]=]\n\n\n\n\n",
@@ -6394,7 +6400,7 @@ PlaterDB = {
 ["Author"] = "Tecno-Azralon",
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable)\n    \nend\n\n\n",
 ["Icon"] = 841383,
-["Name"] = "Fixate On You [Plater]",
+["version"] = -1,
 ["PlaterCore"] = 1,
 ["semver"] = "",
 ["Desc"] = "When an enemy places a debuff and starts to chase you. This script changes the nameplate color and place your name above the nameplate as well.",
@@ -6409,7 +6415,7 @@ PlaterDB = {
 "crawler mine",
 "rezan",
 },
-["version"] = -1,
+["Name"] = "Fixate On You [Plater]",
 },
 },
 ["aura2_x_offset"] = 0,
@@ -6428,7 +6434,7 @@ PlaterDB = {
 ["Constructor"] = "function (self, unitId, unitFrame, envTable)\n    \n    --list of npcs and their colors, can be inserted:\n    --name of the unit\n    --name of the unit in lower case\n    --npcID of the unit\n    \n    --color can be added as:\n    --color names: \"red\", \"yellow\"\n    --color hex: \"#FF0000\", \"#FFFF00\"\n    --color table: {1, 0, 0}, {1, 1, 0}    \n    \n    envTable.NpcColors = {\n        \n        --examples, using the unit name in lower case, regular unit name and the unitID:\n        \n        [\"Thunderlord Windreader\"] = \"red\", --using regular mob name and color it as red\n        [\"thunderlord crag-leaper\"] = {1, 1, 0}, --using lower case and coloring it yellow\n        [75790] = \"#00FF00\", --using the ID of the unit and using green as color\n        \n        --insert the new mobs here:\n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n    } --close custom color bracket\n    \nend\n\n\n\n\n",
 },
 ["version"] = -1,
-["Time"] = 1547392935,
+["Name"] = "Color Automation [Plater]",
 ["PlaterCore"] = 1,
 ["LoadConditions"] = {
 ["talent"] = {
@@ -6454,7 +6460,7 @@ PlaterDB = {
 },
 ["url"] = "",
 ["Icon"] = "Interface\\AddOns\\Plater\\images\\color_bar",
-["Name"] = "Color Automation [Plater]",
+["Time"] = 1547392935,
 },
 {
 ["Enabled"] = false,
@@ -6616,15 +6622,15 @@ PlaterDB = {
 },
 ["LastHookEdited"] = "",
 ["Author"] = "Ditador-Azralon",
-["Time"] = 1597097268,
+["Name"] = "Cast Bar Icon Settings [P]",
 ["Desc"] = "Move the icon of the spell cast to the left or right side of the nameplate.",
 ["Hooks"] = {
 ["Cast Update"] = "function (self, unitId, unitFrame, envTable)\n    \n    envTable.UpdateIconPosition (unitFrame)\n    self.ThrottleUpdate = -1\n    \nend\n\n\n",
 ["Cast Start"] = "function (self, unitId, unitFrame, envTable)\n    \n    unitFrame.castBar.BorderShield:SetDrawLayer(\"artwork\")\n    envTable.UpdateIconPosition (unitFrame)\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
 ["Constructor"] = "function (self, unitId, unitFrame, envTable, modTable)\n    \n    --private:\n    function envTable.UpdateIconPosition (unitFrame)\n        local castBar = unitFrame.castBar\n        local icon = castBar.Icon\n        local noInterruptTexture = castBar.BorderShield\n        \n        if (modTable.config.showIcon) then\n            icon:ClearAllPoints()\n            \n            if (modTable.config.iconOnLeftSide) then\n                if (modTable.config.useFullSize) then\n                    icon:SetPoint (\"topright\", unitFrame.healthBar, \"topleft\", modTable.config.iconPadding, modTable.config.iconSizeOffset)\n                    icon:SetPoint (\"bottomright\", unitFrame.castBar, \"bottomleft\", modTable.config.iconPadding, -modTable.config.iconSizeOffset)\n                    \n                else\n                    \n                    icon:SetPoint (\"topright\", unitFrame.castBar, \"topleft\", modTable.config.iconPadding, modTable.config.iconSizeOffset)\n                    icon:SetPoint (\"bottomright\", unitFrame.castBar, \"bottomleft\", modTable.config.iconPadding, -modTable.config.iconSizeOffset)\n                end\n                \n            else\n                if (modTable.config.useFullSize) then\n                    icon:SetPoint (\"topleft\", unitFrame.healthBar, \"topright\", modTable.config.iconPadding, modTable.config.iconSizeOffset)\n                    icon:SetPoint (\"bottomleft\", unitFrame.castBar, \"bottomright\", modTable.config.iconPadding, -modTable.config.iconSizeOffset)\n                    \n                else\n                    \n                    icon:SetPoint (\"topleft\", unitFrame.castBar, \"topright\", modTable.config.iconPadding, modTable.config.iconSizeOffset)\n                    icon:SetPoint (\"bottomleft\", unitFrame.castBar, \"bottomright\", modTable.config.iconPadding, -modTable.config.iconSizeOffset)\n                end\n            end\n            \n            icon:SetWidth (icon:GetHeight())\n            icon:Show()\n        else\n            icon:Hide()\n        end\n        \n        if (modTable.config.showTexture and not castBar.canInterrupt) then\n            noInterruptTexture:Show()\n            \n            local texturePath = modTable.config.iconTexturePath\n            texturePath = texturePath:gsub(\"//\", \"/\")\n            texturePath = texturePath:gsub(\"\\\\\", \"/\")\n            \n            noInterruptTexture:SetTexture (texturePath)\n            noInterruptTexture:SetTexCoord (0, 1, 0, 1)\n            \n            if (modTable.config.desaturatedTexture) then\n                noInterruptTexture:SetDesaturated (modTable.config.desaturatedTexture)\n            else\n                noInterruptTexture:SetVertexColor (DetailsFramework:ParseColors (modTable.config.textureColor))\n            end\n            \n            noInterruptTexture:SetSize (modTable.config.textureWidth, castBar:GetHeight() + modTable.config.textureHeightMod)\n            noInterruptTexture:ClearAllPoints()\n            noInterruptTexture:SetPoint (\"center\", castBar, \"left\", modTable.config.texturePosition, 0)\n            noInterruptTexture:SetAlpha (modTable.config.textureAlpha)\n        else\n            noInterruptTexture:Hide()\n        end\n    end\nend",
 },
+["Time"] = 1597097268,
 ["version"] = -1,
-["Name"] = "Cast Bar Icon Settings [P]",
 ["LoadConditions"] = {
 ["talent"] = {
 },
@@ -6698,14 +6704,14 @@ PlaterDB = {
 },
 ["LastHookEdited"] = "",
 ["Author"] = "Kastfall-Azralon",
-["Time"] = 1620377377,
+["Name"] = "Attacking Specific Unit [Plater]",
 ["Desc"] = "Change the nameplate color if the unit is attacking a specific unit like Monk's Ox Statue or Druid's Treants. You may edit which units it track in the constructor script.",
 ["Hooks"] = {
 ["Initialization"] = "function (modTable)\n    --list of npcs and their colors, can be inserted:\n    --name of the unit\n    --name of the unit in lower case\n    --npcID of the unit\n    \n    --color can be added as:\n    --color names: \"red\", \"yellow\"\n    --color hex: \"#FF0000\", \"#FFFF00\"\n    --color table: {1, 0, 0}, {1, 1, 0}    \n    \n    modTable.changeBarColor = modTable.config.changeBarColor\n    modTable.changeBorderColor = modTable.config.changeBorderColor\n    modTable.resetColors = modTable.config.resetColors\n    \n    modTable.ListOfNpcs = {\n        [61146] = modTable.config.color, --\"olive\", --monk statue npcID\n        [103822] = modTable.config.color, --\"olive\", --druid treant npcID\n        [15352] = modTable.config.color, --\"olive\", --shaman elemental\n        [95072] = modTable.config.color, --\"olive\", --shaman greater earth elemental npcID\n        [61056] = modTable.config.color, --\"olive\", --shaman primal earth elemental npcID\n        \n    }\nend\n\n\n",
 ["Nameplate Updated"] = "function (self, unitId, unitFrame, envTable, modTable)\n    if not unitId then\n        return\n    end\n    --get the GUID of the target of the unit\n    local targetGUID = UnitGUID (unitId .. \"target\")\n    \n    if (targetGUID) then\n        \n        --get the npcID of the target\n        local npcID = Plater.GetNpcIDFromGUID (targetGUID)\n        local unitName = UnitName (unitId .. \"target\")\n        local unitNameLower = string.lower (unitName)\n        \n        --check if the npcID of this unit is in the npc list \n        local color = modTable.ListOfNpcs [npcID] or modTable.ListOfNpcs [unitName] or modTable.ListOfNpcs [unitNameLower]\n        \n        if color then\n            if modTable.changeBarColor then\n                Plater.SetNameplateColor (unitFrame, color)\n            end\n            if modTable.changeBorderColor then\n                Plater.SetBorderColor (unitFrame, color)\n            end\n            unitFrame.attackingSpecificUnitFromMod = true\n        elseif unitFrame.attackingSpecificUnitFromMod and modTable.resetColors then\n            if modTable.changeBorderColor then\n                Plater.SetBorderColor (unitFrame)\n            end\n            if modTable.changeBarColor then\n                Plater.RefreshNameplateColor (unitFrame)\n            end\n            unitFrame.attackingSpecificUnitFromMod = false\n        end\n    end\nend",
 },
+["Time"] = 1620377377,
 ["version"] = -1,
-["Name"] = "Attacking Specific Unit [Plater]",
 ["LoadConditions"] = {
 ["talent"] = {
 },
@@ -6752,7 +6758,7 @@ PlaterDB = {
 ["Constructor"] = "function (self, unitId, unitFrame, envTable)\n    \n    --settings\n    envTable.OnlyInOpenWorld = true;\n    envTable.ShowInCombat = true;\n    \n    --consts\n    envTable.REACTION_NEUTRAL = 4;\n    \n    --functions to hide and show the healthBar\n    function envTable.HideNameplate (unitFrame)\n        Plater.HideHealthBar (unitFrame)\n        Plater.DisableHighlight (unitFrame)\n        envTable.IsHidden = true\n    end\n    \n    function envTable.ShowNameplate (unitFrame)\n        Plater.ShowHealthBar (unitFrame)\n        Plater.EnableHighlight (unitFrame)\n        envTable.IsHidden = false\n    end\n    \nend\n\n\n\n\n",
 },
 ["version"] = -1,
-["Time"] = 1541606242,
+["Name"] = "Hide Neutral Units [Plater]",
 ["PlaterCore"] = 1,
 ["LoadConditions"] = {
 ["talent"] = {
@@ -6778,7 +6784,7 @@ PlaterDB = {
 },
 ["url"] = "",
 ["Icon"] = 1990989,
-["Name"] = "Hide Neutral Units [Plater]",
+["Time"] = 1541606242,
 },
 {
 ["Enabled"] = false,
@@ -6794,7 +6800,7 @@ PlaterDB = {
 ["Constructor"] = "function (self, unitId, unitFrame, envTable)\n    \n    --execute detection, if true the script will handle the execute percent\n    --while false Plater will automatically trigger the execute range\n    --you only want to set this to true in case of Plater not detecting the execute range correctly\n    envTable.UseCustomExecutePercent = false\n    --execute percent, if not detecting automatic, this is the percent to active the execute range\n    --use from zero to one, 0.20 is equal to 20% of the unit life\n    envTable.ExecutePercent = 0.20\n    \n    --allow this script to change the nameplate color when the unit is in execute range\n    envTable.CanChangeColor = true\n    --change the health bar color to this color when the unit is in execute range\n    --color can be set as:\n    --color names: \"red\", \"yellow\"\n    --color hex: \"#FF0000\", \"#FFFF00\"\n    --color table: {1, 0, 0}, {1, 1, 0}\n    envTable.ExecuteColor = \"green\"\n    \n    --border color\n    envTable.CanChangeBorderColor = false\n    envTable.BorderColor = \"red\"\n    \n    --hide the default health divisor and the health execute indicator\n    envTable.HideHealthDivisor = false\n    --if not hidden, adjust the health divisor settings and the health execute indicator\n    envTable.HealthDivisorAlpha = 0.5\n    envTable.HealthDivisorColor = \"white\"\n    envTable.HealthExecuteIndicatorAlpha = 0.15\n    envTable.HealthExecuteIndicatorColor = \"darkred\"\n    \n    \n    --private (internal functions)\n    do\n        function envTable.UnitInExecuteRange (unitFrame)\n            --check if can change the execute color\n            if (envTable.CanChangeColor) then\n                Plater.SetNameplateColor (unitFrame, envTable.ExecuteColor)\n            end\n            \n            if (envTable.CanChangeBorderColor) then\n                Plater.SetBorderColor (unitFrame, envTable.BorderColor)\n            end\n            \n            if (envTable.HideHealthDivisor) then\n                unitFrame.healthBar.healthCutOff:Hide() \n                unitFrame.healthBar.executeRange:Hide()\n                \n            else\n                envTable.UpdateHealthDivisor (unitFrame)\n                \n            end\n        end\n        \n        function envTable.UpdateHealthDivisor (unitFrame)\n            local healthBar = unitFrame.healthBar\n            \n            healthBar.healthCutOff:Show()\n            healthBar.healthCutOff:SetVertexColor (DetailsFramework:ParseColors (envTable.HealthDivisorColor))\n            healthBar.healthCutOff:SetAlpha (envTable.HealthDivisorAlpha)\n            \n            healthBar.executeRange:Show()\n            healthBar.executeRange:SetVertexColor (DetailsFramework:ParseColors (envTable.HealthExecuteIndicatorColor))\n            healthBar.executeRange:SetAlpha (envTable.HealthExecuteIndicatorAlpha)\n            \n            if (envTable.UseCustomExecutePercent) then\n                healthBar.healthCutOff:ClearAllPoints()\n                healthBar.executeRange:ClearAllPoints()\n                \n                healthBar.healthCutOff:SetSize (healthBar:GetHeight(), healthBar:GetHeight())\n                healthBar.healthCutOff:SetPoint (\"center\", healthBar, \"left\", healthBar:GetWidth() * envTable.ExecutePercent, 0)\n                \n                healthBar.executeRange:SetTexCoord (0, envTable.ExecutePercent, 0, 1)\n                healthBar.executeRange:SetHeight (healthBar:GetHeight())\n                healthBar.executeRange:SetPoint (\"left\", healthBar, \"left\", 0, 0)\n                healthBar.executeRange:SetPoint (\"right\", healthBar.healthCutOff, \"center\")\n            end\n            \n        end\n    end\n    \nend",
 },
 ["version"] = -1,
-["Time"] = 1547406548,
+["Name"] = "Execute Range [Plater]",
 ["PlaterCore"] = 1,
 ["LoadConditions"] = {
 ["talent"] = {
@@ -6820,7 +6826,7 @@ PlaterDB = {
 },
 ["url"] = "",
 ["Icon"] = 135358,
-["Name"] = "Execute Range [Plater]",
+["Time"] = 1547406548,
 },
 {
 ["Enabled"] = false,
@@ -6831,13 +6837,13 @@ PlaterDB = {
 },
 ["LastHookEdited"] = "",
 ["Author"] = "Kastfall-Azralon",
-["Time"] = 1596791840,
+["Name"] = "Reorder Nameplate [Plater]",
 ["Desc"] = "Function Plater.UpdatePlateSize from Plater.lua exported to scritps.",
 ["Hooks"] = {
 ["Nameplate Added"] = "\n\n-- exported function Plater.UpdatePlateSize() from Plater.lua\n--this is for advanced users which wants to reorder the nameplate frame at their desire\n\n\n\nfunction (self, unitId, unitFrame, envTable)\n    \n    --check if there's a type of unit on this nameplate\n    local plateFrame = unitFrame:GetParent()\n    if (not plateFrame.actorType) then\n        return\n    end\n    \n    --get all the frames and cache some variables\n    local ACTORTYPE_ENEMY_PLAYER = \"enemyplayer\"\n    local profile = Plater.db.profile\n    local DB_PLATE_CONFIG = profile.plate_config\n    local isInCombat = Plater.IsInCombat()\n    local actorType = plateFrame.actorType\n    \n    local unitFrame = plateFrame.unitFrame\n    local healthBar = unitFrame.healthBar\n    local castBar = unitFrame.castBar\n    local powerBar = unitFrame.powerBar\n    local buffFrame1 = unitFrame.BuffFrame\n    local buffFrame2 = unitFrame.BuffFrame2\n    \n    --use in combat bars when in pvp\n    if (plateFrame.actorType == ACTORTYPE_ENEMY_PLAYER) then\n        if ((Plater.ZoneInstanceType == \"pvp\" or Plater.ZoneInstanceType == \"arena\") and DB_PLATE_CONFIG.player.pvp_always_incombat) then\n            isInCombat = true\n        end\n    end\n    \n    --get the config for this actor type\n    local plateConfigs = DB_PLATE_CONFIG [actorType]\n    --get the config key based if the player is in combat\n    local castBarConfigKey, healthBarConfigKey, manaConfigKey = Plater.GetHashKey (isInCombat)\n    \n    --get the width and height from what the user set in the options panel\n    local healthBarWidth, healthBarHeight = unitFrame.customHealthBarWidth or plateConfigs [healthBarConfigKey][1], unitFrame.customHealthBarHeight or plateConfigs [healthBarConfigKey][2]\n    local castBarWidth, castBarHeight = unitFrame.customCastBarWidth or plateConfigs [castBarConfigKey][1], unitFrame.customCastBarHeight or plateConfigs [castBarConfigKey][2]\n    local powerBarWidth, powerBarHeight = unitFrame.customPowerBarHeight or plateConfigs [manaConfigKey][1], unitFrame.customPowerBarHeight or plateConfigs [manaConfigKey][2]\n    \n    --calculate the offset for the cast bar, this is done due to the cast bar be anchored to topleft and topright\n    local castBarOffSetX = (healthBarWidth - castBarWidth) / 2\n    local castBarOffSetY = plateConfigs.castbar_offset\n    \n    --calculate offsets for the power bar\n    local powerBarOffSetX = (healthBarWidth - powerBarWidth) / 2\n    local powerBarOffSetY = 0\n    \n    --calculate the size deviation for pets\n    local unitType = Plater.GetUnitType (plateFrame)\n    if (unitType == \"pet\") then\n        healthBarHeight = healthBarHeight * Plater.db.profile.pet_height_scale\n        healthBarWidth = healthBarWidth * Plater.db.profile.pet_width_scale\n        \n    elseif (unitType == \"minus\") then\n        healthBarHeight = healthBarHeight * Plater.db.profile.minor_height_scale\n        healthBarWidth = healthBarWidth * Plater.db.profile.minor_width_scale\n    end\n    \n    --unit frame - is set to be the same size as the plateFrame\n    unitFrame:ClearAllPoints()\n    unitFrame:SetAllPoints()\n    \n    --calculates the health bar anchor points\n    --it will always be placed in the center of the nameplate area (where it accepts mouse clicks) \n    local xOffSet = (plateFrame:GetWidth() - healthBarWidth) / 2\n    local yOffSet = (plateFrame:GetHeight() - healthBarHeight) / 2\n    \n    --set the health bar point\n    healthBar:ClearAllPoints()\n    PixelUtil.SetPoint (healthBar, \"topleft\", unitFrame, \"topleft\", xOffSet + profile.global_offset_x, -yOffSet + profile.global_offset_y)\n    PixelUtil.SetPoint (healthBar, \"bottomright\", unitFrame, \"bottomright\", -xOffSet + profile.global_offset_x, yOffSet + profile.global_offset_y)\n    \n    --set the cast bar point and size\n    castBar:ClearAllPoints()\n    PixelUtil.SetPoint (castBar, \"topleft\", healthBar, \"bottomleft\", castBarOffSetX, castBarOffSetY)\n    PixelUtil.SetPoint (castBar, \"topright\", healthBar, \"bottomright\", -castBarOffSetX, castBarOffSetY)\n    PixelUtil.SetHeight (castBar, castBarHeight)\n    PixelUtil.SetSize (castBar.Icon, castBarHeight, castBarHeight)\n    PixelUtil.SetSize (castBar.BorderShield, castBarHeight * 1.4, castBarHeight * 1.4)\n    \n    --set the power bar point and size\n    powerBar:ClearAllPoints()\n    PixelUtil.SetPoint (powerBar, \"topleft\", healthBar, \"bottomleft\", powerBarOffSetX, powerBarOffSetY)\n    PixelUtil.SetPoint (powerBar, \"topright\", healthBar, \"bottomright\", -powerBarOffSetX, powerBarOffSetY)\n    PixelUtil.SetHeight (powerBar, powerBarHeight)\n    \n    --power bar are hidden by default, show it if there's a custom size for it\n    if (unitFrame.customPowerBarWidth and unitFrame.customPowerBarHeight) then\n        powerBar:SetUnit (unitFrame.unit)\n    end\n    \n    --aura frames\n    local bf1Anchor = Plater.db.profile.aura_frame1_anchor\n    Plater.SetAnchor (buffFrame1, {side = bf1Anchor.side, x = bf1Anchor.x, y = bf1Anchor.y + plateConfigs.buff_frame_y_offset}, unitFrame.healthBar, (Plater.db.profile.aura_grow_direction or 2) == 2)\n    \n    local bf2Anchor = Plater.db.profile.aura_frame2_anchor\n    Plater.SetAnchor (buffFrame2, {side = bf2Anchor.side, x = bf2Anchor.x, y = bf2Anchor.y + plateConfigs.buff_frame_y_offset}, unitFrame.healthBar, (Plater.db.profile.aura2_grow_direction or 2) == 2)\n    \nend\n\n\n",
 },
+["Time"] = 1596791840,
 ["version"] = -1,
-["Name"] = "Reorder Nameplate [Plater]",
 ["LoadConditions"] = {
 ["talent"] = {
 },
@@ -6879,7 +6885,7 @@ PlaterDB = {
 ["Constructor"] = "function (self, unitId, unitFrame, envTable)\n    --Important: lines starting with double dashes are comments and are not part of the script\n    \n    --set this to true if you are not using threat colors in the health bar\n    envTable.ForceRefreshNameplateColor = true\n    \n    --if the unit does not have any of the following auras, it will be painted with the color listed below\n    --list of spells to track, can be the spell name (case-sensitive) or the spellID\n    envTable.TrackingAuras = {\n        --[\"Nightblade\"] = true, --this is an example using the spell name\n        --[195452] = true, --this is an example using the spellID\n        \n    }\n    \n    --which color the nameplate wil be changed\n    --color can be added as:\n    --color names: \"red\", \"yellow\"\n    --color hex: \"#FF0000\", \"#FFFF00\"\n    --color table: {1, 0, 0}, {1, 1, 0}    \n    --you may also use /plater colors\n    envTable.NameplateColor = \"pink\"\n    \nend",
 },
 ["version"] = -1,
-["Time"] = 1554138845,
+["Name"] = "Don't Have Aura [Plater]",
 ["PlaterCore"] = 1,
 ["LoadConditions"] = {
 ["talent"] = {
@@ -6905,7 +6911,7 @@ PlaterDB = {
 },
 ["url"] = "",
 ["Icon"] = 136207,
-["Name"] = "Don't Have Aura [Plater]",
+["Time"] = 1554138845,
 },
 {
 ["Enabled"] = false,
@@ -6924,7 +6930,7 @@ PlaterDB = {
 ["Constructor"] = "function (self, unitId, unitFrame, envTable)\n    \n    --border color\n    local borderColor = \"yellow\"\n    \n    --size of the border\n    local borderSize = 1\n    \n    --transparency\n    local borderAlpha = 1\n    \n    --enabled (set to false it you only want to use the extra border in other scripts)\n    local isEnabled = true\n    \n    --export border (allow the border to be used by other scripts)\n    --other scripts can use:\n    --unitFrame.healthBar.extraBorder:Show()\n    --unitFrame.healthBar.extraBorder:SetVertexColor (r, g, b)\n    --unitFrame.healthBar.extraBorder:SetBorderSizes (borderSize)\n    local canExportBorder = true\n    \n    --do not add the border to personal bar\n    local noPersonalBar = true\n    \n    --private\n    do\n        \n        local newBorder = CreateFrame (\"frame\", nil, unitFrame.healthBar, \"NamePlateFullBorderTemplate\")\n        envTable.BorderFrame = newBorder\n        \n        newBorder:SetBorderSizes (borderSize, borderSize, borderSize, borderSize)\n        newBorder:UpdateSizes()\n        \n        local r, g, b = DetailsFramework:ParseColors (borderColor)\n        newBorder:SetVertexColor (r, g, b, borderAlpha)\n        \n        envTable.ShowOnPersonalBar = not noPersonalBar\n        \n        if (canExportBorder) then\n            unitFrame.healthBar.extraBorder = newBorder\n        end\n        \n        if (not isEnabled) then\n            envTable.IsEnabled = false\n        else\n            envTable.IsEnabled = true\n        end\n    end\n    \nend\n\n\n",
 },
 ["version"] = -1,
-["Time"] = 1547409079,
+["Name"] = "Extra Border [Plater]",
 ["PlaterCore"] = 1,
 ["LoadConditions"] = {
 ["talent"] = {
@@ -6950,7 +6956,7 @@ PlaterDB = {
 },
 ["url"] = "",
 ["Icon"] = 133689,
-["Name"] = "Extra Border [Plater]",
+["Time"] = 1547409079,
 },
 {
 ["Enabled"] = false,
@@ -6961,7 +6967,7 @@ PlaterDB = {
 },
 ["LastHookEdited"] = "",
 ["Author"] = "Izimode-Azralon",
-["Time"] = 1621935143,
+["Name"] = "Combo Points [Plater]",
 ["Desc"] = "Show combo points above the nameplate for Druid Feral and Rogues.",
 ["Hooks"] = {
 ["Nameplate Created"] = "function (self, unitId, unitFrame, envTable)\n    \n    --run constructor!\n    --constructor is executed only once when any script of the hook runs.\n    \nend\n\n\n",
@@ -6973,8 +6979,8 @@ PlaterDB = {
 ["Player Talent Update"] = "function (self, unitId, unitFrame, envTable)\n    \n    --update the amount of comboo points shown when the player changes talents or specialization\n    envTable.UpdateComboPointAmount()\n    \n    --save the time of the last talent change\n    envTable.LastPlayerTalentUpdate = GetTime()\n    \n    \nend\n\n\n",
 ["Constructor"] = "function (self, unitId, unitFrame, envTable)\n    --settings\n    local anchors = {\n        {\"bottom\", unitFrame.healthBar, \"top\", 0, 24},\n    }\n    \n    local sizes = {\n        width = 12,\n        height = 12,\n        scale = 1,\n    }\n    \n    local textures = {\n        backgroundTexture = [[Interface\\PLAYERFRAME\\ClassOverlayComboPoints]],\n        backgroundTexCoords = {0/128, 21/128, 101/128, 122/128},\n        \n        comboPointTexture = [[Interface\\PLAYERFRAME\\ClassOverlayComboPoints]],\n        comboPointTexCoords = {3/128, 18/128, 81/128, 96/128},\n    }\n    if WOW_PROJECT_ID ~= WOW_PROJECT_MAINLINE then\n        textures = {\n            backgroundTexture = [[Interface\\PLAYERFRAME\\ClassOverlayComboPoints]],\n            backgroundTexCoords = {78/128, 98/128, 21/64, 41/64},\n            \n            comboPointTexture = [[Interface\\PLAYERFRAME\\ClassOverlayComboPoints]],\n            comboPointTexCoords = {100/128, 120/128, 21/64, 41/64},\n        }\n    end\n    \n    local frameLevel = 1000\n    local frameStrata = \"high\"    \n    \n    --private\n    do\n        --store combo points frames on this table\n        envTable.ComboPoints = {}\n        --save when the player changed talents or spec\n        envTable.LastPlayerTalentUpdate = GetTime()\n        --save when this nameplate got a combo point amount and alignment update        \n        \n        --build combo points frame anchor (combo point are anchored to this)\n        if (not unitFrame.PlaterComboPointFrame) then\n            local hostFrame = CreateFrame (\"frame\", nil, unitFrame)\n            hostFrame.ComboPointFramesPool = {}\n            unitFrame.PlaterComboPointFrame = hostFrame\n            envTable.ComboPointFrame = hostFrame\n            envTable.ComboPointFrame:SetScale (sizes.scale)\n            \n            --DetailsFramework:ApplyStandardBackdrop (envTable.ComboPointFrame) --debug anchor size\n            \n            --animations\n            local onPlayShowAnimation = function (animation)\n                --stop the hide animation if it's playing\n                if (animation:GetParent():GetParent().HideAnimation:IsPlaying()) then\n                    animation:GetParent():GetParent().HideAnimation:Stop()\n                end\n                \n                animation:GetParent():Show()\n            end\n            \n            local onPlayHideAnimation = function (animation)\n                --stop the show animation if it's playing\n                if (animation:GetParent():GetParent().ShowAnimation:IsPlaying()) then\n                    animation:GetParent():GetParent().ShowAnimation:Stop()\n                end\n            end        \n            local onStopHideAnimation = function (animation)\n                animation:GetParent():Hide()       \n            end\n            \n            local createAnimations = function (comboPoint)\n                --on show\n                comboPoint.ShowAnimation = Plater:CreateAnimationHub (comboPoint.comboPointTexture, onPlayShowAnimation, nil)\n                Plater:CreateAnimation (comboPoint.ShowAnimation, \"scale\", 1, 0.1, 0, 0, 1, 1)\n                Plater:CreateAnimation (comboPoint.ShowAnimation, \"alpha\", 1, 0.1, .5, 1)\n                Plater:CreateAnimation (comboPoint.ShowAnimation, \"scale\", 2, 0.1, 1.2, 1.2, 1, 1)\n                \n                --on hide\n                comboPoint.HideAnimation = Plater:CreateAnimationHub (comboPoint.comboPointTexture, onPlayHideAnimation, onStopHideAnimation)\n                Plater:CreateAnimation (comboPoint.HideAnimation, \"scale\", 1, 0.1, 1, 1, 0, 0)\n                Plater:CreateAnimation (comboPoint.HideAnimation, \"alpha\", 1, 0.1, 1, 0)\n            end\n            \n            --build combo point frame        \n            for i =1, 10 do \n                local f = CreateFrame (\"frame\", nil, envTable.ComboPointFrame)\n                f:SetSize (sizes.width, sizes.height)\n                tinsert (envTable.ComboPoints, f)\n                tinsert (unitFrame.PlaterComboPointFrame.ComboPointFramesPool, f)\n                \n                local backgroundTexture = f:CreateTexture (nil, \"background\")\n                backgroundTexture:SetTexture (textures.backgroundTexture)\n                backgroundTexture:SetTexCoord (unpack (textures.backgroundTexCoords))\n                backgroundTexture:SetSize (sizes.width, sizes.height)\n                backgroundTexture:SetPoint (\"center\")\n                \n                local comboPointTexture = f:CreateTexture (nil, \"artwork\")\n                comboPointTexture:SetTexture (textures.comboPointTexture)\n                comboPointTexture:SetTexCoord (unpack (textures.comboPointTexCoords))\n                \n                comboPointTexture:SetSize (sizes.width, sizes.height)\n                comboPointTexture:SetPoint (\"center\")\n                comboPointTexture:Hide()            \n                \n                f.IsActive = false\n                \n                f.backgroundTexture = backgroundTexture\n                f.comboPointTexture = comboPointTexture\n                \n                createAnimations (f)\n            end\n            \n        else\n            envTable.ComboPointFrame = unitFrame.PlaterComboPointFrame\n            envTable.ComboPointFrame:SetScale (sizes.scale)\n            envTable.ComboPoints = unitFrame.PlaterComboPointFrame.ComboPointFramesPool\n            \n        end            \n        \n        envTable.ComboPointFrame:SetFrameLevel (frameLevel)\n        envTable.ComboPointFrame:SetFrameStrata (frameStrata)\n        \n        function envTable.UpdateComboPoints()\n            local comboPoints = GetComboPoints(\"player\", \"target\")\n            --UnitPower (\"player\", Enum.PowerType.ComboPoints)\n            \n            for i = 1, envTable.TotalComboPoints do\n                local thisComboPoint = envTable.ComboPoints [i]\n                \n                if (i <= comboPoints ) then\n                    --combo point enabled\n                    if (not thisComboPoint.IsActive) then\n                        thisComboPoint.ShowAnimation:Play()\n                        thisComboPoint.IsActive = true\n                        \n                    end\n                    \n                else\n                    --combo point disabled\n                    if (thisComboPoint.IsActive) then\n                        thisComboPoint.HideAnimation:Play()\n                        thisComboPoint.IsActive = false\n                        \n                    end\n                end\n            end\n            \n            \n        end\n        \n        function envTable.UpdateComboPointAmount()\n            local namePlateWidth = Plater.db.profile.plate_config.enemynpc.health_incombat[1]\n            local comboPoints = UnitPowerMax (\"player\", Enum.PowerType.ComboPoints)\n            local reservedSpace = (namePlateWidth - sizes.width * comboPoints)  / comboPoints \n            \n            --store the total amount of combo points\n            envTable.TotalComboPoints = comboPoints\n            \n            --update anchor frame\n            envTable.ComboPointFrame:SetWidth (namePlateWidth)\n            envTable.ComboPointFrame:SetHeight (20)\n            envTable.ComboPointFrame:ClearAllPoints()\n            for i = 1, #anchors do\n                local anchor = anchors[i]\n                envTable.ComboPointFrame:SetPoint (unpack (anchor))\n            end        \n            \n            --\n            for i = 1, #envTable.ComboPoints do\n                envTable.ComboPoints[i]:Hide()\n                envTable.ComboPoints[i]:ClearAllPoints()\n            end\n            \n            for i = 1, comboPoints do\n                local comboPoint = envTable.ComboPoints[i]\n                if i == 1 then\n                    comboPoint:SetPoint (\"left\", envTable.ComboPointFrame, \"left\", reservedSpace/2, 0)\n                else\n                    comboPoint:SetPoint (\"left\", envTable.ComboPoints[i-1], \"right\", reservedSpace, 0)\n                end\n                \n                comboPoint:Show()\n            end\n            \n            envTable.LastUpdate = GetTime()\n            \n            envTable.UpdateComboPoints()\n        end\n        \n        --initialize\n        envTable.UpdateComboPointAmount()\n        envTable.ComboPointFrame:Hide()\n    end\n    \n    \nend",
 },
+["Time"] = 1621935143,
 ["version"] = -1,
-["Name"] = "Combo Points [Plater]",
 ["LoadConditions"] = {
 ["talent"] = {
 },
@@ -7025,7 +7031,7 @@ PlaterDB = {
 ["Constructor"] = "--all gray text like this are comments and do not run as code\n--build the settings and basic functions for the hook\n\nfunction (self, unitId, unitFrame, envTable)\n    \n    --declare setting variables:\n    local textColor = \"orange\";\n    local textSize = 12;\n    \n    local showInRaid = true;\n    local showInDungeon = true;\n    local showInArena = false;\n    local showInBattleground = false;\n    local showInOpenWorld = true;\n    \n    envTable.UpdateInterval = 2; --each 2 updates in the nameplate it'll update the amount of targets\n    \n    local anchor = {\n        side = 6, --1 = topleft 2 = left 3 = bottomleft 4 = bottom 5 = bottom right 6 = right 7 = topright 8 = top\n        x = 4, --x offset\n        y = 0, --y offset\n    };\n    \n    \n    ---------------------------------------------------------------------------------------------------------------------------------------------\n    \n    \n    --frames:\n    \n    --create the text that will show the amount of people targeting the unit\n    if (not  unitFrame.healthBar.TargetAmount) then\n        envTable.TargetAmount = Plater:CreateLabel (unitFrame.healthBar, \"\", textSize, textColor);\n        Plater.SetAnchor (envTable.TargetAmount, anchor);\n        unitFrame.healthBar.TargetAmount = envTable.TargetAmount\n    end\n    \n    --in case Plater wipes the envTable\n    envTable.TargetAmount = unitFrame.healthBar.TargetAmount\n    \n    ---------------------------------------------------------------------------------------------------------------------------------------------           \n    --private variables (they will be used in the other scripts within this hook)\n    envTable.CanShow = false;\n    envTable.UpdateCooldown = 0;\n    envTable.InRaid = false;\n    envTable.InParty = false;\n    \n    ---------------------------------------------------------------------------------------------------------------------------------------------           \n    --functions\n    \n    --update the InRaid or InParty proprieties\n    function envTable.UpdateGroupType()\n        if (IsInRaid()) then\n            envTable.InRaid = true;\n            envTable.InParty = false;     \n            \n        elseif (IsInGroup()) then\n            envTable.InRaid = false;\n            envTable.InParty = true;   \n            \n        else\n            envTable.InRaid = false;            \n            envTable.InParty = false;\n        end\n    end\n    \n    --this function controls if the amount of targets can show following the settings in the top of this script\n    function envTable.CanShowTargetAmount()\n        \n        local _, instanceType, difficultyID, _, _, _, _, instanceMapID, instanceGroupSize = GetInstanceInfo()\n        \n        if (showInRaid and instanceType == \"raid\") then\n            envTable.UpdateGroupType()\n            return true\n        end\n        \n        if (showInDungeon and instanceType == \"party\") then\n            envTable.UpdateGroupType()\n            return true\n        end\n        \n        if (showInArena and instanceType == \"arena\") then\n            envTable.UpdateGroupType()\n            return true\n        end\n        \n        if (showInBattleground and instanceType == \"pvp\") then\n            envTable.UpdateGroupType()\n            return true\n        end\n        \n        if (showInOpenWorld and instanceType == \"none\") then\n            envTable.UpdateGroupType()\n            if (envTable.InRaid or envTable.InParty) then\n                return true\n            end\n        end\n        \n        return false\n    end\n    \n    --get the amount of player targetting the unit in raid or party\n    function envTable.NumTargetsInRaid (unitFrame)\n        local amount = 0\n        for i = 1, GetNumGroupMembers() do\n            local unit = \"raid\" .. i .. \"target\"\n            if (UnitGUID (unit) == unitFrame.namePlateUnitGUID) then\n                amount = amount + 1\n            end\n        end\n        \n        return amount\n    end\n    \n    function envTable.NumTargetsInParty()\n        local amount = 0\n        for i = 1, GetNumGroupMembers() - 1 do\n            local unit = \"party\" .. i .. \"target\"\n            if (UnitGUID (unit) == unitFrame.namePlateUnitGUID) then\n                amount = amount + 1\n            end\n        end\n        \n        local unit = \"playertarget\"\n        if (UnitGUID (unit) == unitFrame.namePlateUnitGUID) then\n            amount = amount + 1\n        end        \n        \n        return amount\n    end\n    \nend",
 },
 ["version"] = -1,
-["Time"] = 1548278227,
+["Name"] = "Players Targeting a Target [Plater]",
 ["PlaterCore"] = 1,
 ["LoadConditions"] = {
 ["talent"] = {
@@ -7051,7 +7057,7 @@ PlaterDB = {
 },
 ["url"] = "",
 ["Icon"] = 1966587,
-["Name"] = "Players Targeting a Target [Plater]",
+["Time"] = 1548278227,
 },
 {
 ["Enabled"] = false,
@@ -7062,13 +7068,13 @@ PlaterDB = {
 },
 ["LastHookEdited"] = "",
 ["Author"] = "Ditador-Azralon",
-["Time"] = 1741092085,
+["Name"] = "Aura Reorder [Plater]",
 ["Desc"] = "Reorder buffs and debuffs following the settings set in the constructor.",
 ["Hooks"] = {
 ["Initialization"] = "function (modTable)\n    \n    local sortByTime = true\n    local invertSort = true\n    local npcSeparatedFromPlayer = true\n    \n    --which auras goes first, assign a value (any number), bigger value goes first\n    local priority = {\n        [\"Vampiric Touch\"] = 50,\n        [\"Shadow Word: Pain\"] = 22,\n        [\"Mind Flay\"] = 5,\n        [\"Pistol Shot\"] = 50,\n        [\"Marked for Death\"] = 99,\n        [\"Garrote\"] = 95,\n        [\"Rupture\"] = 90,\n        [\"Sigil of Flame\"] = 50,\n    }\n    \n    -- Sort function - do not touch\n    Plater.db.profile.aura_sort = true\n    \n    \n    function Plater.AuraIconsSortFunction (aura1, aura2)\n        local p1 = priority[aura1.SpellId] or priority[aura1.SpellName] or aura1.layoutIndex or 1\n        local p2 = priority[aura2.SpellId] or priority[aura2.SpellName] or aura2.layoutIndex or 1\n        \n        if npcSeparatedFromPlayer then\n            if aura1.IsFromPlayer and not aura2.IsFromPlayer then\n                return false\n            elseif not aura1.IsFromPlayer and aura2.IsFromPlayer then\n                return true\n            end\n        end\n        \n        if sortByTime and p1 == p2 then\n            if invertSort then\n                return (aura1.Duration == 0 and 99999999 or aura1.RemainingTime or 0) > (aura2.Duration == 0 and 99999999 or aura2.RemainingTime or 0)\n            else\n                return (aura1.Duration == 0 and 99999999 or aura1.RemainingTime or 0) < (aura2.Duration == 0 and 99999999 or aura2.RemainingTime or 0)\n            end\n        else\n            if invertSort then\n                return p1 < p2\n            else\n                return p1 > p2\n            end\n        end\n    end\n    \nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
 },
+["Time"] = 1741092085,
 ["version"] = -1,
-["Name"] = "Aura Reorder [Plater]",
 ["LoadConditions"] = {
 ["talent"] = {
 },
@@ -7112,7 +7118,7 @@ PlaterDB = {
 ["Constructor"] = "function (self, unitId, unitFrame, envTable)\n    \n    --usage: color name e.g \"red\" \"yellow\"; color table e.g {1, 0, 0} {1, 1, 0}; hex string e.g. \"#FF0000\" \"FFFF00\"\n    \n    envTable.TargetColor = \"purple\"\n    --envTable.TargetColor = \"#FF00FF\"\n    --envTable.TargetColor = {252/255, 0/255, 254/255}\n    \n    function envTable.UpdateColor (unitFrame)\n        --do not change the color of the personal bar\n        if (not unitFrame.IsSelf) then\n            \n            --if this nameplate the current target of the player?\n            if (unitFrame.namePlateIsTarget) then\n                Plater.SetNameplateColor (unitFrame, envTable.TargetColor)  --rgb\n            else\n                --refresh the nameplate color\n                Plater.RefreshNameplateColor (unitFrame)\n            end\n        end\n    end\n    \nend\n\n\n\n\n",
 },
 ["version"] = -1,
-["Time"] = 1552354619,
+["Name"] = "Current Target Color [Plater]",
 ["PlaterCore"] = 1,
 ["LoadConditions"] = {
 ["talent"] = {
@@ -7138,7 +7144,7 @@ PlaterDB = {
 },
 ["url"] = "",
 ["Icon"] = 878211,
-["Name"] = "Current Target Color [Plater]",
+["Time"] = 1552354619,
 },
 },
 ["aura_x_offset"] = 0,
@@ -7187,8 +7193,7 @@ PlaterDB = {
 ["Desc"] = "Player an animation when the cast start. Start a timer when the cast finishes. Set the time in the options.",
 ["__TrashAt"] = 1756679652,
 ["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    \n    --play flash animations\n    envTable.FullBarFlash:Play()\n    \n    --envTable.currentHeight = unitFrame.castBar:GetHeight()\n    \n    --restoring the default size (not required since it already restore in the hide script)\n    if (envTable.OriginalHeight) then\n        self:SetHeight (envTable.OriginalHeight)\n    end\n    \n    --increase the cast bar size\n    local height = self:GetHeight()\n    envTable.OriginalHeight = height\n    \n    self:SetHeight (height + envTable.CastBarHeightAdd)\n    \n    Plater.SetCastBarBorderColor (self, 1, .2, .2, 0.4)\n    \n    unitFrame:PlayFrameShake (envTable.FrameShake)\n    \n    Plater.SetCastBarColorForScript(self, scriptTable.config.useCastbarColor, scriptTable.config.castbarColor, envTable)\n    \n    envTable.BackgroundFlash:Play()\n    \n    unitFrame.castBar.Spark:SetHeight(unitFrame.castBar:GetHeight())\n    \nend\n\n\n\n\n\n\n\n\n\n\n",
-["SpellIds"] = {
-},
+["Name"] = "Cast - Alert + Timer [P]",
 ["PlaterCore"] = 1,
 ["Options"] = {
 {
@@ -7310,7 +7315,8 @@ PlaterDB = {
 },
 },
 ["version"] = -1,
-["Name"] = "Cast - Alert + Timer [P]",
+["SpellIds"] = {
+},
 ["NpcNames"] = {
 },
 },
@@ -7330,14 +7336,14 @@ PlaterDB = {
 ["Dont Have Aura"] = 1,
 ["Players Targetting Amount"] = 4,
 ["Color Automation"] = 1,
-["Extra Border"] = 2,
+["Hide Neutral Units"] = 1,
 ["Cast Bar Icon Config"] = 2,
 ["Aura Reorder"] = 3,
-["Hide Neutral Units"] = 1,
+["Extra Border"] = 2,
 ["Combo Points"] = 6,
 ["Target Color"] = 3,
-["Execute Range"] = 1,
 ["Attacking Specific Unit"] = 2,
+["Execute Range"] = 1,
 },
 ["aura_y_offset"] = 5,
 },
@@ -9152,25 +9158,9 @@ PlaterDB = {
 ["Temp_Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
 ["url"] = "",
 ["Icon"] = 135945,
-["Enabled"] = true,
 ["Temp_OnHideCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    if (unitFrame.spitefulTexture) then\n        unitFrame.spitefulText:Hide()\n        unitFrame.spitefulTexture:Hide()    \n        unitFrame.roleIcon:Hide()\n        unitFrame.targetName:Hide()\n    end\nend\n\n\n\n\n\n",
+["Enabled"] = true,
 ["Revision"] = 187,
-["semver"] = "",
-["Temp_ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \n    if (not unitFrame.spitefulTexture) then\n        unitFrame.spitefulTexture = unitFrame.healthBar:CreateTexture(nil, \"overlay\", nil, 6)\n        unitFrame.spitefulTexture:SetPoint('right', 0, 0)\n        unitFrame.spitefulTexture:SetSize(27, 14)\n        unitFrame.spitefulTexture:SetColorTexture(.3, .3, 1, .7)\n        \n        unitFrame.spitefulText = unitFrame.healthBar:CreateFontString(nil, \"overlay\", \"GameFontNormal\", 6)\n        DetailsFramework:SetFontFace (unitFrame.spitefulText, \"2002\")\n        unitFrame.spitefulText:SetPoint(\"right\", unitFrame.spitefulTexture, \"right\", -2, 0)\n        unitFrame.spitefulText:SetJustifyH(\"right\")\n        \n        unitFrame.roleIcon = unitFrame:CreateTexture(nil, \"overlay\")\n        unitFrame.roleIcon:SetPoint(\"left\", unitFrame.healthBar, \"left\", 2, 0)\n        unitFrame.targetName = unitFrame:CreateFontString(nil, \"overlay\", \"GameFontNormal\")\n        unitFrame.targetName:SetPoint(\"left\", unitFrame.roleIcon, \"right\", 2, 0)\n        \n        unitFrame.spitefulTexture:Hide()\n        unitFrame.spitefulText:Hide()\n    end\n    \n    function envTable.UpdateSpitefulWidget(unitFrame)\n        \n        local r, g, b, a = Plater:ParseColors(scriptTable.config.bgColor)\n        unitFrame.spitefulTexture:SetColorTexture(r, g, b, a)\n        unitFrame.spitefulTexture:SetSize(scriptTable.config.bgWidth, unitFrame.healthBar:GetHeight())   \n        Plater:SetFontSize(unitFrame.spitefulText, scriptTable.config.textSize)\n        Plater:SetFontColor(unitFrame.spitefulText, scriptTable.config.textColor)\n        \n        local currentHealth = unitFrame.healthBar.CurrentHealth\n        local maxHealth = unitFrame.healthBar.CurrentHealthMax\n        \n        local healthPercent = currentHealth / maxHealth * 100\n        local timeToDie = format(\"%.1fs\", healthPercent / 8)\n        unitFrame.spitefulText:SetText(timeToDie)\n        \n        unitFrame.spitefulText:Show()\n        unitFrame.spitefulTexture:Show()\n        \n        if scriptTable.config.switchTargetName then\n            local plateFrame = unitFrame.PlateFrame\n            \n            local target = UnitName(unitFrame.namePlateUnitToken .. \"target\") or UnitName(unitFrame.namePlateUnitToken)\n            \n            if (target and target ~= \"\") then\n                local _, class = UnitClass(unitFrame.namePlateUnitToken .. \"target\")\n                if (class) then\n                    target = DetailsFramework:AddClassColorToText(target, class)\n                end\n                \n                local role = UnitGroupRolesAssigned(unitFrame.namePlateUnitToken .. \"target\")\n                if (role and role ~= \"NONE\") then\n                    target = DetailsFramework:AddRoleIconToText(target, role)\n                end\n                \n                plateFrame.namePlateUnitName = target\n                Plater.UpdateUnitName(plateFrame)\n            end\n        end\n        \n        if scriptTable.config.useTargetingColor then\n            local targeted = UnitIsUnit(unitFrame.namePlateUnitToken .. \"target\", \"player\")\n            if targeted then\n                Plater.SetNameplateColor (unitFrame, scriptTable.config.targetingColor)\n            else\n                Plater.RefreshNameplateColor(unitFrame)\n            end\n        end\n    end\nend",
-["NpcNames"] = {
-"174773",
-},
-["Author"] = "Symantec-Azralon",
-["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
-["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    envTable.UpdateSpitefulWidget(unitFrame)\nend\n\n\n",
-["SpellIds"] = {
-},
-["Temp_UpdateCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    envTable.UpdateSpitefulWidget(unitFrame)\nend\n\n\n",
-["version"] = -1,
-["PlaterCore"] = 1,
-["Prio"] = 99,
-["Name"] = "M+ Spiteful",
-["Desc"] = "Time to die Spiteful affix",
 ["Options"] = {
 {
 ["Type"] = 5,
@@ -9282,6 +9272,22 @@ PlaterDB = {
 ["Desc"] = "",
 },
 },
+["Temp_ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    \n    if (not unitFrame.spitefulTexture) then\n        unitFrame.spitefulTexture = unitFrame.healthBar:CreateTexture(nil, \"overlay\", nil, 6)\n        unitFrame.spitefulTexture:SetPoint('right', 0, 0)\n        unitFrame.spitefulTexture:SetSize(27, 14)\n        unitFrame.spitefulTexture:SetColorTexture(.3, .3, 1, .7)\n        \n        unitFrame.spitefulText = unitFrame.healthBar:CreateFontString(nil, \"overlay\", \"GameFontNormal\", 6)\n        DetailsFramework:SetFontFace (unitFrame.spitefulText, \"2002\")\n        unitFrame.spitefulText:SetPoint(\"right\", unitFrame.spitefulTexture, \"right\", -2, 0)\n        unitFrame.spitefulText:SetJustifyH(\"right\")\n        \n        unitFrame.roleIcon = unitFrame:CreateTexture(nil, \"overlay\")\n        unitFrame.roleIcon:SetPoint(\"left\", unitFrame.healthBar, \"left\", 2, 0)\n        unitFrame.targetName = unitFrame:CreateFontString(nil, \"overlay\", \"GameFontNormal\")\n        unitFrame.targetName:SetPoint(\"left\", unitFrame.roleIcon, \"right\", 2, 0)\n        \n        unitFrame.spitefulTexture:Hide()\n        unitFrame.spitefulText:Hide()\n    end\n    \n    function envTable.UpdateSpitefulWidget(unitFrame)\n        \n        local r, g, b, a = Plater:ParseColors(scriptTable.config.bgColor)\n        unitFrame.spitefulTexture:SetColorTexture(r, g, b, a)\n        unitFrame.spitefulTexture:SetSize(scriptTable.config.bgWidth, unitFrame.healthBar:GetHeight())   \n        Plater:SetFontSize(unitFrame.spitefulText, scriptTable.config.textSize)\n        Plater:SetFontColor(unitFrame.spitefulText, scriptTable.config.textColor)\n        \n        local currentHealth = unitFrame.healthBar.CurrentHealth\n        local maxHealth = unitFrame.healthBar.CurrentHealthMax\n        \n        local healthPercent = currentHealth / maxHealth * 100\n        local timeToDie = format(\"%.1fs\", healthPercent / 8)\n        unitFrame.spitefulText:SetText(timeToDie)\n        \n        unitFrame.spitefulText:Show()\n        unitFrame.spitefulTexture:Show()\n        \n        if scriptTable.config.switchTargetName then\n            local plateFrame = unitFrame.PlateFrame\n            \n            local target = UnitName(unitFrame.namePlateUnitToken .. \"target\") or UnitName(unitFrame.namePlateUnitToken)\n            \n            if (target and target ~= \"\") then\n                local _, class = UnitClass(unitFrame.namePlateUnitToken .. \"target\")\n                if (class) then\n                    target = DetailsFramework:AddClassColorToText(target, class)\n                end\n                \n                local role = UnitGroupRolesAssigned(unitFrame.namePlateUnitToken .. \"target\")\n                if (role and role ~= \"NONE\") then\n                    target = DetailsFramework:AddRoleIconToText(target, role)\n                end\n                \n                plateFrame.namePlateUnitName = target\n                Plater.UpdateUnitName(plateFrame)\n            end\n        end\n        \n        if scriptTable.config.useTargetingColor then\n            local targeted = UnitIsUnit(unitFrame.namePlateUnitToken .. \"target\", \"player\")\n            if targeted then\n                Plater.SetNameplateColor (unitFrame, scriptTable.config.targetingColor)\n            else\n                Plater.RefreshNameplateColor(unitFrame)\n            end\n        end\n    end\nend",
+["NpcNames"] = {
+"174773",
+},
+["Author"] = "Symantec-Azralon",
+["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
+["Desc"] = "Time to die Spiteful affix",
+["SpellIds"] = {
+},
+["Prio"] = 99,
+["Name"] = "M+ Spiteful",
+["PlaterCore"] = 1,
+["Temp_UpdateCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    envTable.UpdateSpitefulWidget(unitFrame)\nend\n\n\n",
+["version"] = -1,
+["OnShowCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --insert code here\n    envTable.UpdateSpitefulWidget(unitFrame)\nend\n\n\n",
+["semver"] = "",
 },
 {
 ["ConstructorCode"] = "function (self, unitId, unitFrame, envTable, scriptTable)\n    --castbar color (when can be interrupted)\n    envTable.CastbarColor = scriptTable.config.castbarColor\n    \n    --flash duration\n    local CONFIG_BACKGROUND_FLASH_DURATION = scriptTable.config.flashDuration\n    \n    --add this value to the cast bar height\n    envTable.CastBarHeightAdd = scriptTable.config.castBarHeight\n    \n    --create a fast flash above the cast bar\n    envTable.FullBarFlash = envTable.FullBarFlash or Plater.CreateFlash (self, 0.05, 1, \"white\")\n    \n    --create a camera shake for the nameplate\n    envTable.FrameShake = Plater:CreateFrameShake (unitFrame, scriptTable.config.shakeDuration, scriptTable.config.shakeAmplitude, scriptTable.config.shakeFrequency, false, false, 0, 1, 0.05, 0.1, Plater.GetPoints (unitFrame))\n    \n    --create a texture to use for a flash behind the cast bar\n    local backGroundFlashTexture = Plater:CreateImage (self, [[Interface\\ACHIEVEMENTFRAME\\UI-Achievement-Alert-Glow]], self:GetWidth()+60, self:GetHeight()+50, \"background\", {0, 400/512, 0, 170/256})\n    backGroundFlashTexture:SetBlendMode (\"ADD\", 7)\n    backGroundFlashTexture:SetDrawLayer(\"OVERLAY\", 7)\n    backGroundFlashTexture:SetPoint (\"center\", self, \"center\")\n    backGroundFlashTexture:Hide()\n    \n    --create the animation hub to hold the flash animation sequence\n    envTable.BackgroundFlash = envTable.BackgroundFlash or Plater:CreateAnimationHub (backGroundFlashTexture, \n        function()\n            backGroundFlashTexture:Show()\n        end,\n        function()\n            backGroundFlashTexture:Hide()\n        end\n    )\n    \n    --create the flash animation sequence\n    envTable.BackgroundFlash.fadeIn = envTable.BackgroundFlash.fadeIn or Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 1, CONFIG_BACKGROUND_FLASH_DURATION/2, 0, .75)\n    envTable.BackgroundFlash.fadeIn:SetDuration(CONFIG_BACKGROUND_FLASH_DURATION/2)\n    \n    envTable.BackgroundFlash.fadeOut = envTable.BackgroundFlash.fadeOut or Plater:CreateAnimation (envTable.BackgroundFlash, \"ALPHA\", 2, CONFIG_BACKGROUND_FLASH_DURATION/2, 1, 0)    \n    envTable.BackgroundFlash.fadeOut:SetDuration(CONFIG_BACKGROUND_FLASH_DURATION/2)\n    \n    --envTable.BackgroundFlash:Play() --envTable.BackgroundFlash:Stop()    \n    \n    \n    \n    \n    \nend\n\n\n\n\n",
@@ -13122,22 +13128,22 @@ PlaterDB = {
 ["ScriptType"] = 1,
 ["UpdateCode"] = "function (self, unitId, unitFrame, envTable)\n    \n    local timeLeft = envTable._RemainingTime\n    \n    if (timeLeft < (envTable.pandemicTime[self.spellId..unitId] or (envTable._Duration*0.3))) then\n        if not self.glowStarted then\n            self.glowStarted = true\n            Plater.StartPixelGlow(self.Cooldown, nil, envTable.options, envTable.options.key)\n        end\n    else\n        if self.glowStarted then\n            self.glowStarted = false\n            Plater.StopPixelGlow(self.Cooldown, envTable.options.key)\n        end\n    end\n    \nend\n\n\n\n\n\n\n\n\n",
 ["Time"] = 1741902205,
+["Icon"] = 413591,
+["url"] = "https://wago.io/JcByzfZtU/5",
 ["NpcNames"] = {
 },
-["url"] = "https://wago.io/JcByzfZtU/5",
-["Icon"] = 413591,
-["Options"] = {
-},
+["semver"] = "1.0.4",
 ["Temp_OnHideCode"] = "function (self, unitId, unitFrame, envTable)\n    \n    Plater.StopPixelGlow(self.Cooldown, envTable.options.key)\n    self.glowStarted = false\n    \n    envTable.pandemicTime[self.spellId..unitId] = nil\n    \nend\n\n\n",
 ["Revision"] = 201,
-["semver"] = "1.0.4",
-["version"] = 5,
-["Prio"] = 99,
-["Author"] = "Viash-Thrall",
-["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
-["OnShowCode"] = "function (self, unitId, unitFrame, envTable)\n    --insert code here\n    envTable.pandemicTime = envTable.pandemicTime or {}\n    envTable.pandemicTime[self.spellId..unitId] = envTable.pandemicTime[self.spellId..unitId] or envTable._Duration * 0.3\nend",
+["Options"] = {
+},
 ["Name"] = "Pandemic Glow (Pixel)",
 ["Temp_UpdateCode"] = "function (self, unitId, unitFrame, envTable)\n    \n    local timeLeft = envTable._RemainingTime\n    \n    if (timeLeft < (envTable.pandemicTime[self.spellId..unitId] or (envTable._Duration*0.3))) then\n        if not self.glowStarted then\n            self.glowStarted = true\n            Plater.StartPixelGlow(self.Cooldown, nil, envTable.options, envTable.options.key)\n        end\n    else\n        if self.glowStarted then\n            self.glowStarted = false\n            Plater.StopPixelGlow(self.Cooldown, envTable.options.key)\n        end\n    end\n    \nend\n\n\n\n\n\n\n\n\n",
+["Author"] = "Viash-Thrall",
+["Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
+["Desc"] = "Adds a configurable pixel border glow to the buff/debuff if the remaining duration is less than 30% of its total duration.",
+["version"] = 5,
+["Prio"] = 99,
 ["SpellIds"] = {
 292711,
 278946,
@@ -13150,7 +13156,7 @@ PlaterDB = {
 980,
 },
 ["PlaterCore"] = 1,
-["Desc"] = "Adds a configurable pixel border glow to the buff/debuff if the remaining duration is less than 30% of its total duration.",
+["OnShowCode"] = "function (self, unitId, unitFrame, envTable)\n    --insert code here\n    envTable.pandemicTime = envTable.pandemicTime or {}\n    envTable.pandemicTime[self.spellId..unitId] = envTable.pandemicTime[self.spellId..unitId] or envTable._Duration * 0.3\nend",
 ["Enabled"] = true,
 ["Temp_ConstructorCode"] = "function (self, unitId, unitFrame, envTable)\n    \n    envTable.options = {\n        color = \"yellow\", -- all plater color types accepted, from lib: {r,g,b,a}, color of lines and opacity, from 0 to 1.\n        N = 6, -- number of lines. Defaul value is 8;\n        frequency = 0.5, -- frequency, set to negative to inverse direction of rotation. Default value is 0.25;\n        length = 4, -- length of lines. Default value depends on region size and number of lines;\n        th = 2, -- thickness of lines. Default value is 2;\n        xOffset = 1,\n        yOffset = 1, -- offset of glow relative to region border;\n        border = false, -- set to true to create border under lines;\n        key = \"pandemicGlow\",\n    }\n    \nend",
 ["Temp_Initialization"] = "function (scriptTable)\n    --insert code here\n    \nend\n\n\n",
@@ -13187,16 +13193,16 @@ PlaterDB = {
 ["nameplateMinAlphaDistance"] = "...ace/AddOns/ElvUI_ToxiUI/Modules/Installer/Dialog.lua:365",
 ["nameplateMotion"] = "...ace/AddOns/ElvUI_ToxiUI/Modules/Installer/Dialog.lua:365",
 ["nameplateMinScale"] = "...ace/AddOns/ElvUI_ToxiUI/Modules/Installer/Dialog.lua:365",
-["nameplateSelfAlpha"] = "...ace/AddOns/ElvUI_ToxiUI/Modules/Installer/Dialog.lua:365",
-["nameplateOtherTopInset"] = "...ace/AddOns/ElvUI_ToxiUI/Modules/Installer/Dialog.lua:365",
 ["nameplatePersonalShowAlways"] = "...ace/AddOns/ElvUI_ToxiUI/Modules/Installer/Dialog.lua:365",
-["nameplateSelfBottomInset"] = "...ace/AddOns/ElvUI_ToxiUI/Modules/Installer/Dialog.lua:365",
+["nameplateOtherTopInset"] = "...ace/AddOns/ElvUI_ToxiUI/Modules/Installer/Dialog.lua:365",
 ["NamePlateHorizontalScale"] = "...ace/AddOns/ElvUI_ToxiUI/Modules/Installer/Dialog.lua:365",
-["nameplateShowFriendlyGuardians"] = "...ace/AddOns/ElvUI_ToxiUI/Modules/Installer/Dialog.lua:365",
+["nameplateSelfBottomInset"] = "...ace/AddOns/ElvUI_ToxiUI/Modules/Installer/Dialog.lua:365",
 ["nameplateOccludedAlphaMult"] = "...ace/AddOns/ElvUI_ToxiUI/Modules/Installer/Dialog.lua:365",
+["nameplateShowFriendlyGuardians"] = "...ace/AddOns/ElvUI_ToxiUI/Modules/Installer/Dialog.lua:365",
+["nameplateSelfAlpha"] = "...ace/AddOns/ElvUI_ToxiUI/Modules/Installer/Dialog.lua:365",
 ["ShowNamePlateLoseAggroFlash"] = "...ace/AddOns/ElvUI_ToxiUI/Modules/Installer/Dialog.lua:365",
 ["nameplateTargetRadialPosition"] = "...ace/AddOns/ElvUI_ToxiUI/Modules/Installer/Dialog.lua:365",
-["nameplateShowFriends"] = "Interface/AddOns/Plater/Plater.lua:4142",
+["nameplateShowFriends"] = "Interface/AddOns/Plater/Plater.lua:4140",
 ["ShowClassColorInNameplate"] = "...ace/AddOns/ElvUI_ToxiUI/Modules/Installer/Dialog.lua:365",
 },
 ["aura_cache_by_name"] = {
@@ -14986,13 +14992,13 @@ PlaterDB = {
 "Ashvane Sniper",
 "Siege of Boralus",
 },
-[186284] = {
-"Gutchewer Bear",
-"Brackenhide Hollow",
+[229250] = {
+"Venture Co. Contractor",
+"Operation: Floodgate",
 },
-[164929] = {
-"Tirnenn Villager",
-"Mists of Tirna Scithe",
+[167998] = {
+"Portal Guardian",
+"Theater of Pain",
 },
 [189265] = {
 "Qalashi Bonetender",
@@ -15014,13 +15020,13 @@ PlaterDB = {
 "Flavor Scientist",
 "Cinderbrew Meadery",
 },
-[234037] = {
-"Vez'okk the Lightless",
-"Horrific Vision of Orgrimmar",
-},
 [229251] = {
 "Venture Co. Architect",
 "Operation: Floodgate",
+},
+[190377] = {
+"Primalist Icecaller",
+"Halls of Infusion",
 },
 [135263] = {
 "Ashvane Spotter",
@@ -15030,21 +15036,21 @@ PlaterDB = {
 "Mechagon Mechanic",
 "Operation: Mechagon",
 },
-[102094] = {
-"Risen Swordsman",
-"Black Rook Hold",
+[195876] = {
+"Desecrated Ohuna",
+"The Nokhud Offensive",
 },
 [84767] = {
 "Twisted Abomination",
 "The Everbloom",
 },
-[195877] = {
-"Risen Mystic",
-"The Nokhud Offensive",
-},
 [212835] = {
 "Risen Footman",
 "Priory of the Sacred Flame",
+},
+[208456] = {
+"Shuffling Horror",
+"Darkflame Cleft",
 },
 [189227] = {
 "Qalashi Hunter",
@@ -15058,29 +15064,25 @@ PlaterDB = {
 "Sureki Webmage",
 "The Dawnbreaker",
 },
-[208456] = {
-"Shuffling Horror",
-"Darkflame Cleft",
-},
 [223498] = {
 "Bee-let",
 "Cinderbrew Meadery",
+},
+[195877] = {
+"Risen Mystic",
+"The Nokhud Offensive",
 },
 [214419] = {
 "Void-Cursed Crusher",
 "The Rookery",
 },
-[102095] = {
-"Risen Lancer",
-"Black Rook Hold",
-},
-[98706] = {
-"Commander Shemdah'sohn",
-"Black Rook Hold",
-},
 [186229] = {
 "Wilted Oak",
 "Brackenhide Hollow",
+},
+[131812] = {
+"Heartsbane Soulcharmer",
+"Waycrest Manor",
 },
 [216293] = {
 "Trilling Attendant",
@@ -15090,13 +15092,17 @@ PlaterDB = {
 "Waste Processing Unit",
 "Operation: Mechagon",
 },
+[216338] = {
+"Hulking Bloodguard",
+"Ara-Kara, City of Echoes",
+},
 [129788] = {
 "Irontide Bonesaw",
 "Freehold",
 },
-[216338] = {
-"Hulking Bloodguard",
-"Ara-Kara, City of Echoes",
+[195878] = {
+"Ukhel Beastcaller",
+"The Nokhud Offensive",
 },
 [223497] = {
 "Worker Bee",
@@ -15142,9 +15148,9 @@ PlaterDB = {
 "Blazing Fiend",
 "Darkflame Cleft",
 },
-[104270] = {
-"Guardian Construct",
-"Court of Stars",
+[45915] = {
+"Armored Mistral",
+"The Vortex Pinnacle",
 },
 [95766] = {
 "Crazed Razorbeak",
@@ -15162,13 +15168,13 @@ PlaterDB = {
 "Sentry Stagshell",
 "Ara-Kara, City of Echoes",
 },
-[45915] = {
-"Armored Mistral",
-"The Vortex Pinnacle",
-},
 [127799] = {
 "Dazar'ai Honor Guard",
 "Atal'Dazar",
+},
+[236033] = {
+"Metal Gunk",
+"Operation: Mechagon",
 },
 [160061] = {
 "Crawling Corruption",
@@ -15186,9 +15192,9 @@ PlaterDB = {
 "Nokhud Defender",
 "The Nokhud Offensive",
 },
-[133990] = {
-"Scrimshaw Gutter",
-"Siege of Boralus",
+[240675] = {
+"Barkeep Morag",
+"Horrific Vision of Orgrimmar",
 },
 [216341] = {
 "Jabbing Flyer",
@@ -15198,9 +15204,9 @@ PlaterDB = {
 "Forge-Guard Hurrul",
 "Horrific Vision of Stormwind",
 },
-[240675] = {
-"Barkeep Morag",
-"Horrific Vision of Orgrimmar",
+[133990] = {
+"Scrimshaw Gutter",
+"Siege of Boralus",
 },
 [170690] = {
 "Diseased Horror",
@@ -15226,25 +15232,25 @@ PlaterDB = {
 "Skittering Assistant",
 "City of Threads",
 },
-[213913] = {
-"Kobold Flametender",
-"Darkflame Cleft",
+[162763] = {
+"Soulforged Bonereaver",
+"Theater of Pain",
 },
 [224271] = {
 "Twilight Warlock",
 "Grim Batol",
 },
-[193462] = {
-"Batak",
-"The Nokhud Offensive",
+[220060] = {
+"Taste Tester",
+"Cinderbrew Meadery",
 },
 [220946] = {
 "Venture Co. Honey Harvester",
 "Cinderbrew Meadery",
 },
-[162763] = {
-"Soulforged Bonereaver",
-"Theater of Pain",
+[213913] = {
+"Kobold Flametender",
+"Darkflame Cleft",
 },
 [186420] = {
 "Earthen Weaver",
@@ -15254,13 +15260,13 @@ PlaterDB = {
 "Spinemaw Staghorn",
 "Mists of Tirna Scithe",
 },
-[211228] = {
-"Blazing Fiend",
-"Darkflame Cleft",
+[136549] = {
+"Ashvane Cannoneer",
+"Siege of Boralus",
 },
-[220060] = {
-"Taste Tester",
-"Cinderbrew Meadery",
+[193462] = {
+"Batak",
+"The Nokhud Offensive",
 },
 [187315] = {
 "Disease Slasher",
@@ -15302,9 +15308,9 @@ PlaterDB = {
 "Weapons Tester",
 "The MOTHERLODE!!",
 },
-[189235] = {
-"Overseer Lahar",
-"Neltharus",
+[212764] = {
+"Engine Speaker",
+"The Stonevault",
 },
 [187160] = {
 "Crystal Fury",
@@ -15314,9 +15320,9 @@ PlaterDB = {
 "Fallen Voidspeaker",
 "Horrific Vision of Stormwind",
 },
-[95769] = {
-"Mindshattered Screecher",
-"Darkheart Thicket",
+[169927] = {
+"Putrid Butcher",
+"Theater of Pain",
 },
 [153942] = {
 "Annihilator Lak'hal",
@@ -15338,9 +15344,9 @@ PlaterDB = {
 "Void Bound Despoiler",
 "The Stonevault",
 },
-[169927] = {
-"Putrid Butcher",
-"Theater of Pain",
+[95769] = {
+"Mindshattered Screecher",
+"Darkheart Thicket",
 },
 [229686] = {
 "Venture Co. Surveyor",
@@ -15406,9 +15412,9 @@ PlaterDB = {
 "Blacktooth Scrapper",
 "Freehold",
 },
-[223253] = {
-"Bloodstained Webmage",
-"Ara-Kara, City of Echoes",
+[95834] = {
+"Valarjar Mystic",
+"Halls of Valor",
 },
 [45935] = {
 "Temple Adept",
@@ -15470,9 +15476,9 @@ PlaterDB = {
 "Dreadsoul Ruiner",
 "Darkheart Thicket",
 },
-[95834] = {
-"Valarjar Mystic",
-"Halls of Valor",
+[223253] = {
+"Bloodstained Webmage",
+"Ara-Kara, City of Echoes",
 },
 [151773] = {
 "Junkyard D.0.G.",
@@ -15506,9 +15512,9 @@ PlaterDB = {
 "Void Globule",
 "Horrific Vision of Stormwind",
 },
-[212764] = {
-"Engine Speaker",
-"The Stonevault",
+[189235] = {
+"Overseer Lahar",
+"Neltharus",
 },
 [222564] = {
 "Rupturing Ooze",
@@ -15534,9 +15540,9 @@ PlaterDB = {
 "Twilight Brute",
 "Grim Batol",
 },
-[136549] = {
-"Ashvane Cannoneer",
-"Siege of Boralus",
+[211228] = {
+"Blazing Fiend",
+"Darkflame Cleft",
 },
 [185534] = {
 "Bonebolt Hunter",
@@ -15574,9 +15580,9 @@ PlaterDB = {
 "Lightspawn",
 "Priory of the Sacred Flame",
 },
-[236033] = {
-"Metal Gunk",
-"Operation: Mechagon",
+[104270] = {
+"Guardian Construct",
+"Court of Stars",
 },
 [212389] = {
 "Cursedheart Invader",
@@ -15614,9 +15620,9 @@ PlaterDB = {
 "Inconspicuous Plant",
 "Operation: Mechagon",
 },
-[195878] = {
-"Ukhel Beastcaller",
-"The Nokhud Offensive",
+[102095] = {
+"Risen Lancer",
+"Black Rook Hold",
 },
 [102295] = {
 "Emberhusk Dominator",
@@ -15626,9 +15632,9 @@ PlaterDB = {
 "Earthen Custodian",
 "Uldaman: Legacy of Tyr",
 },
-[131812] = {
-"Heartsbane Soulcharmer",
-"Waycrest Manor",
+[98706] = {
+"Commander Shemdah'sohn",
+"Black Rook Hold",
 },
 [193293] = {
 "Qalashi Warden",
@@ -15642,17 +15648,17 @@ PlaterDB = {
 "Wild Vortex",
 "The Vortex Pinnacle",
 },
-[195876] = {
-"Desecrated Ohuna",
-"The Nokhud Offensive",
+[102094] = {
+"Risen Swordsman",
+"Black Rook Hold",
 },
 [223772] = {
 "Blazing Fiend",
 "Darkflame Cleft",
 },
-[190377] = {
-"Primalist Icecaller",
-"Halls of Infusion",
+[234037] = {
+"Vez'okk the Lightless",
+"Horrific Vision of Orgrimmar",
 },
 [184131] = {
 "Earthen Guardian",
@@ -15666,13 +15672,13 @@ PlaterDB = {
 "Decayed Elder",
 "Brackenhide Hollow",
 },
-[167998] = {
-"Portal Guardian",
-"Theater of Pain",
+[164929] = {
+"Tirnenn Villager",
+"Mists of Tirna Scithe",
 },
-[229250] = {
-"Venture Co. Contractor",
-"Operation: Floodgate",
+[186284] = {
+"Gutchewer Bear",
+"Brackenhide Hollow",
 },
 [157150] = {
 "Thomas Westmill",
@@ -15945,14 +15951,14 @@ PlaterDB = {
 ["Dont Have Aura"] = 1,
 ["Players Targetting Amount"] = 4,
 ["Color Automation"] = 1,
-["Execute Range"] = 1,
-["Cast Bar Icon Config"] = 2,
 ["Attacking Specific Unit"] = 2,
-["Hide Neutral Units"] = 1,
+["Cast Bar Icon Config"] = 2,
+["Execute Range"] = 1,
+["Extra Border"] = 2,
 ["Combo Points"] = 6,
 ["Target Color"] = 3,
 ["Aura Reorder"] = 3,
-["Extra Border"] = 2,
+["Hide Neutral Units"] = 1,
 },
 ["castbar_target_text_size"] = 6,
 ["aura_frame1_anchor"] = {
@@ -15963,7 +15969,7 @@ PlaterDB = {
 ["aura_height"] = 24,
 ["non_targeted_alpha_enabled"] = true,
 ["cast_statusbar_bgtexture"] = "- ToxiUI",
-["plater_resources_personal_bar"] = false,
+["aura2_x_offset"] = 0,
 ["target_indicator"] = "ToxiUI",
 ["extra_icon_stack_size"] = 12,
 ["aura_show_buff_by_the_unit"] = false,
@@ -16005,15 +16011,15 @@ PlaterDB = {
 ["nameplateOtherTopInset"] = "0.085",
 ["nameplateMinAlphaDistance"] = "-158489.31924611",
 ["nameplateSelfBottomInset"] = "0.2",
-["nameplateSelfAlpha"] = "1",
-["nameplateShowFriendlyGuardians"] = "0",
 ["NamePlateHorizontalScale"] = "1",
+["nameplateShowFriendlyGuardians"] = "0",
 ["nameplateOccludedAlphaMult"] = "0.099999994039536",
+["nameplateSelfAlpha"] = "1",
 ["nameplateSelfTopInset"] = "0.5",
 ["nameplateLargeTopInset"] = "0.085",
 ["nameplateTargetRadialPosition"] = "1",
 },
-["login_counter"] = 6559,
+["login_counter"] = 6561,
 ["bossmod_aura_height"] = 32,
 ["aura_stack_font"] = "- M 900",
 ["blizzard_nameplate_font"] = "- ToxiUI",
@@ -16096,10 +16102,7 @@ nil,
 },
 ["big_actortitle_text_font"] = "- ToxiUI",
 ["spellpercent_text_size"] = 15,
-["mana"] = {
-nil,
-4,
-},
+["percent_text_size"] = 18,
 ["big_actorname_text_color"] = {
 0.5,
 1,
@@ -16140,13 +16143,16 @@ nil,
 0,
 1,
 },
-["actorname_text_size"] = 15,
+["mana"] = {
+nil,
+4,
+},
 ["percent_text_enabled"] = true,
 ["percent_text_ooc"] = true,
 ["quest_color_enabled"] = true,
 ["level_text_alpha"] = 0.699999988079071,
-["percent_text_size"] = 18,
 ["spellpercent_text_enabled"] = true,
+["relevance_state"] = 4,
 ["percent_text_font"] = "- ToxiUI",
 ["buff_frame_y_offset"] = 0,
 ["quest_enabled"] = true,
@@ -16155,18 +16161,18 @@ nil,
 ["side"] = 1,
 },
 ["follow_blizzard_npc_option"] = false,
-["spellname_text_size"] = 12,
-["health"] = {
-156,
-12,
-},
-["relevance_state"] = 4,
-["big_actorname_text_font"] = "- ToxiUI",
-["big_actorname_text_outline"] = "OUTLINE",
 ["health_incombat"] = {
 156,
 12,
 },
+["health"] = {
+156,
+12,
+},
+["actorname_text_size"] = 15,
+["big_actorname_text_font"] = "- ToxiUI",
+["big_actorname_text_outline"] = "OUTLINE",
+["spellname_text_size"] = 12,
 },
 ["friendlynpc"] = {
 ["spellpercent_text_font"] = "- ToxiUI",
@@ -16353,7 +16359,10 @@ nil,
 ["percent_text_font"] = "- ToxiUI",
 ["quest_enabled"] = true,
 ["quest_color_enabled"] = true,
-["spellname_text_size"] = 12,
+["health_incombat"] = {
+156,
+12,
+},
 ["health"] = {
 156,
 },
@@ -16367,10 +16376,7 @@ nil,
 ["y"] = 1,
 ["side"] = 1,
 },
-["health_incombat"] = {
-156,
-12,
-},
+["spellname_text_size"] = 12,
 ["level_text_enabled"] = false,
 },
 ["global_health_width"] = 120,
@@ -18602,22 +18608,22 @@ true,
 false,
 "WARRIOR",
 },
-[167998] = {
-true,
-false,
-"cyan",
-},
 [213934] = {
 true,
 false,
 "WARRIOR",
 },
-[229250] = {
+[164929] = {
 true,
 false,
-"dimgrey",
+"cyan",
 },
-[164929] = {
+[186284] = {
+true,
+false,
+"WARRIOR",
+},
+[167998] = {
 true,
 false,
 "cyan",
@@ -18647,15 +18653,15 @@ true,
 false,
 "PALADIN",
 },
-[227300] = {
-true,
-false,
-"magenta",
-},
 [229251] = {
 true,
 false,
 "cyan",
+},
+[190377] = {
+true,
+false,
+"lime",
 },
 [135263] = {
 true,
@@ -18667,7 +18673,7 @@ true,
 false,
 "PALADIN",
 },
-[223497] = {
+[102094] = {
 true,
 false,
 "WARRIOR",
@@ -18677,15 +18683,15 @@ true,
 false,
 "WARRIOR",
 },
-[195877] = {
-true,
-false,
-"magenta",
-},
 [144296] = {
 true,
 false,
 "cyan",
+},
+[224219] = {
+true,
+false,
+"magenta",
 },
 [189227] = {
 true,
@@ -18702,15 +18708,15 @@ true,
 false,
 "PALADIN",
 },
-[224219] = {
-true,
-false,
-"magenta",
-},
 [223498] = {
 true,
 false,
 "WARRIOR",
+},
+[195877] = {
+true,
+false,
+"magenta",
 },
 [214419] = {
 true,
@@ -18727,17 +18733,17 @@ true,
 false,
 "magenta",
 },
-[216338] = {
-true,
-false,
-"cyan",
-},
-[195878] = {
-true,
-false,
-"magenta",
-},
 [206699] = {
+true,
+false,
+"lime",
+},
+[129374] = {
+true,
+false,
+"WARRIOR",
+},
+[102095] = {
 true,
 false,
 "lime",
@@ -18747,10 +18753,10 @@ true,
 false,
 "lime",
 },
-[102095] = {
+[195878] = {
 true,
 false,
-"lime",
+"magenta",
 },
 [174197] = {
 true,
@@ -18807,10 +18813,10 @@ true,
 false,
 "magenta",
 },
-[206697] = {
+[104270] = {
 true,
 false,
-"PALADIN",
+"magenta",
 },
 [95766] = {
 true,
@@ -18837,10 +18843,10 @@ true,
 false,
 "DRUID",
 },
-[236033] = {
+[127799] = {
 true,
 false,
-"lime",
+"WARRIOR",
 },
 [97788] = {
 true,
@@ -18897,45 +18903,45 @@ true,
 false,
 "WARRIOR",
 },
-[162763] = {
-true,
-false,
-"cyan",
-},
 [211290] = {
 true,
 false,
 "cyan",
-},
-[216342] = {
-true,
-false,
-"DRUID",
 },
 [187315] = {
 true,
 false,
 "WARRIOR",
 },
+[216342] = {
+true,
+false,
+"DRUID",
+},
+[213913] = {
+true,
+false,
+"PALADIN",
+},
 [224271] = {
 true,
 false,
 "PALADIN",
 },
-[224152] = {
+[220060] = {
 true,
 false,
-"WARRIOR",
+"magenta",
 },
 [220946] = {
 true,
 false,
 "cyan",
 },
-[213913] = {
+[162763] = {
 true,
 false,
-"PALADIN",
+"cyan",
 },
 [186420] = {
 true,
@@ -18947,15 +18953,15 @@ true,
 false,
 "magenta",
 },
-[136549] = {
-true,
-false,
-"cyan",
-},
-[220060] = {
+[211228] = {
 true,
 false,
 "magenta",
+},
+[224152] = {
+true,
+false,
+"WARRIOR",
 },
 [166275] = {
 true,
@@ -18997,20 +19003,20 @@ true,
 false,
 "cyan",
 },
-[189235] = {
+[212764] = {
 true,
 false,
-"cyan",
+"WARRIOR",
 },
 [136934] = {
 true,
 false,
 "WARRIOR",
 },
-[212764] = {
+[189235] = {
 true,
 false,
-"WARRIOR",
+"cyan",
 },
 [187160] = {
 true,
@@ -19052,10 +19058,10 @@ true,
 false,
 "cyan",
 },
-[169927] = {
+[95769] = {
 true,
 false,
-"WARRIOR",
+"magenta",
 },
 [200126] = {
 true,
@@ -19122,7 +19128,7 @@ true,
 false,
 "WARRIOR",
 },
-[223253] = {
+[95834] = {
 true,
 false,
 "magenta",
@@ -19137,7 +19143,7 @@ true,
 false,
 "lime",
 },
-[95834] = {
+[223253] = {
 true,
 false,
 "magenta",
@@ -19247,10 +19253,10 @@ true,
 false,
 "lime",
 },
-[95769] = {
+[169927] = {
 true,
 false,
-"magenta",
+"WARRIOR",
 },
 [231312] = {
 true,
@@ -19297,10 +19303,10 @@ true,
 false,
 "magenta",
 },
-[211228] = {
+[136549] = {
 true,
 false,
-"magenta",
+"cyan",
 },
 [185534] = {
 true,
@@ -19347,10 +19353,10 @@ true,
 false,
 "cyan",
 },
-[104270] = {
+[236033] = {
 true,
 false,
-"magenta",
+"lime",
 },
 [59555] = {
 true,
@@ -19362,12 +19368,12 @@ true,
 false,
 "magenta",
 },
-[154524] = {
+[206697] = {
 true,
 false,
-"WARRIOR",
+"PALADIN",
 },
-[127799] = {
+[154524] = {
 true,
 false,
 "WARRIOR",
@@ -19397,10 +19403,10 @@ true,
 false,
 "PALADIN",
 },
-[129374] = {
+[216338] = {
 true,
 false,
-"WARRIOR",
+"cyan",
 },
 [102295] = {
 true,
@@ -19432,7 +19438,7 @@ true,
 false,
 "magenta",
 },
-[102094] = {
+[223497] = {
 true,
 false,
 "WARRIOR",
@@ -19442,10 +19448,10 @@ true,
 false,
 "magenta",
 },
-[190377] = {
+[227300] = {
 true,
 false,
-"lime",
+"magenta",
 },
 [212775] = {
 true,
@@ -19462,15 +19468,15 @@ true,
 false,
 "WARRIOR",
 },
+[229250] = {
+true,
+false,
+"dimgrey",
+},
 [195696] = {
 true,
 false,
 "magenta",
-},
-[186284] = {
-true,
-false,
-"WARRIOR",
 },
 [157150] = {
 true,
@@ -19733,7 +19739,7 @@ false,
 "cyan",
 },
 },
-["patch_version"] = 39,
+["plater_resources_show"] = false,
 ["hook_data"] = {
 {
 ["OptionsValues"] = {
@@ -21253,7 +21259,7 @@ false,
 },
 },
 },
-["cast_statusbar_texture"] = "- ToxiUI",
+["bossmod_aura_glow_expiring"] = true,
 ["auras_experimental_update_classic_era"] = true,
 ["extra_icon_caster_outline"] = "OUTLINE",
 ["disable_omnicc_on_auras"] = true,
@@ -21349,9 +21355,9 @@ false,
 [327655] = true,
 [163689] = true,
 [227931] = true,
-[297133] = true,
-[327332] = true,
 [328288] = true,
+[327332] = true,
+[297133] = true,
 [343502] = true,
 [233210] = true,
 [209859] = true,
@@ -21368,7 +21374,6 @@ nil,
 ["tocversion"] = 110107,
 ["extra_icon_timer_font"] = "- ToxiUI",
 ["not_affecting_combat_alpha"] = 0.5999999642372131,
-["health_selection_overlay_alpha"] = 0.09999999403953552,
 ["plater_resources_anchor"] = {
 ["y"] = 40,
 ["x"] = 0,
@@ -21384,17 +21389,17 @@ nil,
 ["x"] = 0,
 ["side"] = 8,
 },
-["plater_resources_show"] = false,
-["blizzard_nameplate_font_size"] = 12,
-["extra_icon_auras_mine"] = {
-[204490] = false,
-},
-["indicator_raidmark_scale"] = 0.9999999403953552,
 ["cast_statusbar_color_interrupted"] = {
 nil,
 0.1019607843137255,
 0.1019607843137255,
 },
+["blizzard_nameplate_font_size"] = 12,
+["extra_icon_auras_mine"] = {
+[204490] = false,
+},
+["indicator_raidmark_scale"] = 0.9999999403953552,
+["patch_version"] = 39,
 ["range_check_in_range_or_target_alpha"] = 0.8999999761581421,
 ["aura_timer_text_size"] = 16,
 ["health_selection_overlay"] = "- ToxiUI",
@@ -21417,6 +21422,7 @@ nil,
 },
 },
 ["plater_resources_grow_direction"] = "center",
+["health_selection_overlay_alpha"] = 0.09999999403953552,
 ["aura_height2"] = 24,
 ["ghost_auras"] = {
 ["auras"] = {
@@ -21438,7 +21444,6 @@ nil,
 },
 },
 },
-["extra_icon_timer_outline"] = "OUTLINE",
 ["dps"] = {
 ["colors"] = {
 ["aggro"] = {
@@ -21458,7 +21463,8 @@ nil,
 },
 },
 },
-["bossmod_aura_glow_expiring"] = true,
+["extra_icon_timer_outline"] = "OUTLINE",
+["cast_statusbar_texture"] = "- ToxiUI",
 ["extra_icon_height"] = 28,
 ["script_auto_imported"] = {
 ["Cast - Important by Color [P]"] = 2,
@@ -21474,12 +21480,12 @@ nil,
 ["Unit - Show Energy"] = 11,
 ["Unit - Main Target"] = 11,
 ["Aura - Blink Time Left"] = 13,
-["Cast - Tank Interrupt"] = 12,
+["Cast - Heroic Leap [P]"] = 3,
 ["Add - Tag Number [P]"] = 2,
 ["Unit - Health Markers"] = 12,
-["Cast - Heroic Leap [P]"] = 3,
-["Cast - Special Ability [P]"] = 3,
 ["Cast - Glowing [P]"] = 10,
+["Cast - Special Ability [P]"] = 3,
+["Cast - Tank Interrupt"] = 12,
 ["Cast - Circular Swipe"] = 4,
 ["Cast - Spark Color [P]"] = 2,
 ["Cast - Heal Stun [P]"] = 2,
@@ -21494,29 +21500,29 @@ nil,
 ["Aura - Is Cast Bar [P]"] = 1,
 ["Cast - Quick Flash"] = 2,
 ["Aura is Shield [P]"] = 5,
-["Cast - Debuff [P]"] = 2,
+["Add - Warning [P]"] = 5,
 ["Cast - Simple Interrupt [P]"] = 2,
 ["Aura While Casting [P]"] = 1,
 ["Cast - Big Alert"] = 14,
 ["Cast - Ongoing Cast [P]"] = 4,
 ["Cast - Important Target [P]"] = 2,
 ["Cast - Heal Cut [P]"] = 3,
-["Auto Set Skull"] = 11,
 ["Spiteful Affix"] = 3,
+["Auto Set Skull"] = 11,
 ["Cast - Alert + Timer [P]"] = 4,
 ["Add - Non Elite Trash [P]"] = 4,
-["Add - Warning [P]"] = 5,
+["Cast - Debuff [P]"] = 2,
 ["Cast - Stop Casting"] = 4,
-["Cast - On Going Cast [P]"] = 2,
+["Countdown"] = 12,
 ["Cast - AoE With Range [P]"] = 2,
 ["Cast - Frontal Cone"] = 17,
 ["Add - Explode on Die [P]"] = 1,
-["Countdown"] = 12,
+["Cast - On Going Cast [P]"] = 2,
 ["Aura - Buff Alert"] = 15,
 ["Cast - Shining Green [P]"] = 3,
 ["Fixate On You"] = 12,
 },
-["aura2_x_offset"] = 0,
+["plater_resources_personal_bar"] = false,
 ["auto_toggle_friendly_enabled"] = true,
 },
 },
@@ -21584,6 +21590,8 @@ PlaterLanguage = {
 }
 PlaterLogs = {
 ["_general_logs"] = {
+"2025-09-13 11:39:10 | INIT | Plater-v615-Retail | Framework v619 | 11.2.0 | enUS | Xamuul",
+"2025-09-13 11:37:25 | INIT | Plater-v615-Retail | Framework v619 | 11.2.0 | enUS | Xamuul",
 "2025-08-31 16:50:55 | INIT | Plater-v614-Retail | Framework v617 | 11.2.0 | enUS | Xamuul",
 "2025-08-31 16:36:59 | INIT | Plater-v614-Retail | Framework v617 | 11.2.0 | enUS | Xamuul",
 "2025-08-31 16:36:09 | INIT | Plater-v614-Retail | Framework v617 | 11.2.0 | enUS | Xamuul",

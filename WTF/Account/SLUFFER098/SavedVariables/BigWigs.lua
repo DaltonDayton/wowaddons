@@ -137,7 +137,7 @@ nil,
 ["realm"] = "Ner'zhul",
 },
 },
-["prevWeeklyReset"] = 1756220400,
+["prevWeeklyReset"] = 1757430000,
 ["profiles"] = {
 ["Default"] = {
 },

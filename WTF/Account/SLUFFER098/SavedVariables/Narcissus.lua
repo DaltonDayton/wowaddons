@@ -51,20 +51,15 @@ NarcissusDB = {
 ["TranslateName"] = false,
 ["TalentTreeUseClassBackground"] = false,
 ["DressingRoomShowSlot"] = true,
-["SearchRelativesHotkey"] = "TAB",
-["PerksProgramDB"] = {
-["MonthNames"] = {
-},
-["VendorItems"] = {
-},
-["CurrentMonthData"] = {
-},
-},
+["Version"] = 10000,
+["EnableDoubleTap"] = false,
 ["AutoPlayAnimation"] = false,
 ["AFKScreen"] = false,
-["installTime"] = 1756680657,
+["FontHeightItemName"] = 10,
 ["AKFScreenDelay"] = false,
-["Version"] = 10000,
+["SearchRelativesHotkey"] = "TAB",
+["installTime"] = 1756680657,
+["GlobalScale"] = 0.8,
 ["Tutorials"] = {
 ["ExitConfirmation"] = true,
 ["Movement"] = true,
@@ -73,12 +68,17 @@ NarcissusDB = {
 ["WeaponBrowser"] = true,
 ["NPCBrowser"] = true,
 },
-["EnableDoubleTap"] = false,
-["FontHeightItemName"] = 10,
 ["TalentTreeForEquipmentManager"] = true,
-["GlobalScale"] = 0.8,
 ["IndependentMinimapButton"] = false,
 ["NamePlateNameOffset"] = 0,
+["PerksProgramDB"] = {
+["MonthNames"] = {
+},
+["VendorItems"] = {
+},
+["CurrentMonthData"] = {
+},
+},
 ["AnchorToMinimap"] = true,
 ["TooltipLanguages"] = {
 },
@@ -119,7 +119,7 @@ NarciCharacterProfiles = {
 ["name"] = "Xamuul",
 ["birth"] = 1756680668,
 ["serverID"] = "1168",
-["lastVisit"] = 1756680668,
+["lastVisit"] = 1757785161,
 ["outfits"] = {
 {
 ["s"] = "36724,36727,45116,36655,20511,0,41771,36642,66904,36701,36666,12036:0:1898,67870",
