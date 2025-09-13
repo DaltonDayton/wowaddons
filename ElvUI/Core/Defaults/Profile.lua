@@ -1,7 +1,6 @@
 local E, L, V, P, G = unpack(ElvUI)
 
 local CopyTable = CopyTable -- Our function doesn't exist yet.
-local strfind = strfind
 local next = next
 
 P.gridSize = 64
@@ -587,6 +586,18 @@ for id = 12, 16 do
 	P.bags.split['warband'..id] = false
 end
 
+local NP_AuraSourceText = {
+	enable = false,
+	class = true,
+	xOffset = 0,
+	yOffset = 0,
+	length = 0, -- max 12, 0 is off
+	position = 'TOP',
+	font = 'PT Sans Narrow',
+	fontOutline = 'OUTLINE',
+	fontSize = 10,
+}
+
 local NP_Auras = {
 	enable = true,
 	desaturate = true,
@@ -619,6 +630,10 @@ local NP_Auras = {
 	durationPosition = 'CENTER',
 	minDuration = 0,
 	maxDuration = 0,
+	tooltipAnchorType = 'ANCHOR_BOTTOMRIGHT',
+	tooltipAnchorX = 5,
+	tooltipAnchorY = -5,
+	sourceText = CopyTable(NP_AuraSourceText),
 	priority = ''
 }
 
@@ -651,6 +666,7 @@ local NP_Power = {
 	height = 8,
 	xOffset = 0,
 	yOffset = -10,
+	anchorPoint = 'CENTER',
 	displayAltPower = false,
 	useAtlas = false,
 	text = {
@@ -730,7 +746,17 @@ local NP_Castbar = {
 	enable = true,
 	width = 150,
 	height = 8,
+	nameLength = 0,
 	displayTarget = false,
+	displayTargetClass = true,
+	targetStyle = 'APPEND',
+	targetAnchorPoint = 'CENTER',
+	targetJustifyH = 'LEFT',
+	targetXOffset = 0,
+	targetYOffset = 0,
+	targetFont = 'PT Sans Narrow',
+	targetFontOutline = 'OUTLINE',
+	targetFontSize = 11,
 	hideSpellName = false,
 	hideTime = false,
 	smoothbars = false,
@@ -740,6 +766,7 @@ local NP_Castbar = {
 	castTimeFormat = 'CURRENT',
 	channelTimeFormat = 'CURRENT',
 	timeToHold = 0,
+	anchorPoint = 'CENTER',
 	textPosition = 'BELOW',
 	iconPosition = 'RIGHT',
 	iconSize = 30,
@@ -850,6 +877,7 @@ P.nameplates = {
 		badScale = 1,
 		useThreatColor = true,
 		indicator = false,
+		useSoloColor = false,
 	},
 	filters = {
 		ElvUI_Boss = {triggers = {enable = false}},
@@ -889,13 +917,14 @@ P.nameplates = {
 			--overhealabsorbs = {r = 1, g = 0, b = 0, a = 0.25},
 		},
 		threat = {
-			goodColor = {r = 0.20, g = 0.71, b = 0.00},
-			badColor = {r = 1.00, g = 0.18, b = 0.18},
-			goodTransition = {r = 1.00, g = 0.85, b = 0.20},
-			badTransition ={r = 1.00, g = 0.51, b = 0.20},
-			offTankColor = {r = 0.73, g = 0.20, b = 1.00},
-			offTankColorGoodTransition = {r = .31, g = .45, b = .63},
-			offTankColorBadTransition = {r = 0.71, g = 0.43, b = 0.27},
+			goodColor = {r = 0.20, g = 0.86, b = 0.20},
+			badColor = {r = 1.00, g = 0.20, b = 0.20},
+			goodTransition = {r = 1.00, g = 0.86, b = 0.20},
+			badTransition ={r = 1.00, g = 0.60, b = 0.20},
+			offTankColor = {r = 0.80, g = 0.20, b = 0.80},
+			offTankColorGoodTransition = {r = 0.20, g = 0.40, b = 0.80},
+			offTankColorBadTransition = {r = 0.40, g = 0.20, b = 0.80},
+			soloColor = {r = 0.20, g = 0.86, b = 0.60},
 		},
 		power = {
 			ENERGY = {r = 1, g = 0.96, b = 0.41},
@@ -1126,13 +1155,17 @@ for unit, data in next, P.nameplates.units do
 		data.privateAuras = CopyTable(NP_PrivateAuras)
 		data.title = CopyTable(NP_Title)
 
-		local enemyNPC = unit == 'ENEMY_NPC'
-		data.auras.enable = enemyNPC
-		data.nameOnly = unit == 'FRIENDLY_NPC'
+		local npcFriendly = unit == 'FRIENDLY_NPC'
+		local npcEnemy = unit == 'ENEMY_NPC'
+
+		data.nameOnly = npcFriendly
 		data.smartAuraPosition = 'DISABLED'
 		data.showTitle = true
 
-		if enemyNPC then
+		local useCCDebuffs = npcEnemy or (unit == 'ENEMY_PLAYER' or unit == 'FRIENDLY_PLAYER')
+		data.auras.enable = useCCDebuffs -- enemy npc and players
+
+		if useCCDebuffs then
 			data.auras.priority = 'Blacklist,CCDebuffs'
 			data.auras.anchorPoint = 'RIGHT'
 			data.auras.filter = 'HARMFUL'
@@ -1141,7 +1174,7 @@ for unit, data in next, P.nameplates.units do
 			data.auras.yOffset = 0
 		end
 
-		if strfind(unit, '_NPC') then
+		if npcFriendly or npcEnemy then -- npcs
 			data.eliteIcon = CopyTable(NP_EliteIcon)
 			data.questIcon = CopyTable(NP_QuestIcon)
 		else
@@ -1168,7 +1201,7 @@ P.nameplates.units.FRIENDLY_PLAYER.debuffs.anchorPoint = 'TOPRIGHT'
 P.nameplates.units.FRIENDLY_PLAYER.debuffs.growthX = 'LEFT'
 P.nameplates.units.FRIENDLY_PLAYER.debuffs.growthY = 'UP'
 P.nameplates.units.FRIENDLY_PLAYER.debuffs.yOffset = 35
-P.nameplates.units.FRIENDLY_PLAYER.debuffs.priority = 'Blacklist,Dispellable,blockNoDuration,CCDebuffs'
+P.nameplates.units.FRIENDLY_PLAYER.debuffs.priority = 'Blacklist,Dispellable'
 
 P.nameplates.units.ENEMY_PLAYER.buffs.priority = 'Blacklist,Whitelist,Dispellable,TurtleBuffs'
 P.nameplates.units.ENEMY_PLAYER.buffs.maxDuration = 300
@@ -1176,7 +1209,7 @@ P.nameplates.units.ENEMY_PLAYER.debuffs.anchorPoint = 'TOPRIGHT'
 P.nameplates.units.ENEMY_PLAYER.debuffs.growthX = 'LEFT'
 P.nameplates.units.ENEMY_PLAYER.debuffs.growthY = 'UP'
 P.nameplates.units.ENEMY_PLAYER.debuffs.yOffset = 35
-P.nameplates.units.ENEMY_PLAYER.debuffs.priority = 'Blacklist,blockNoDuration,Personal,CCDebuffs'
+P.nameplates.units.ENEMY_PLAYER.debuffs.priority = 'Blacklist,blockNoDuration,Personal'
 P.nameplates.units.ENEMY_PLAYER.name.format = '[classcolor][name:abbrev:long]'
 
 P.nameplates.units.FRIENDLY_NPC.buffs.priority = 'Blacklist,Whitelist,blockNoDuration,Personal'
@@ -1193,7 +1226,7 @@ P.nameplates.units.ENEMY_NPC.debuffs.anchorPoint = 'TOPRIGHT'
 P.nameplates.units.ENEMY_NPC.debuffs.growthX = 'LEFT'
 P.nameplates.units.ENEMY_NPC.debuffs.growthY = 'UP'
 P.nameplates.units.ENEMY_NPC.debuffs.yOffset = 35
-P.nameplates.units.ENEMY_NPC.debuffs.priority = 'Blacklist,blockNoDuration,Personal,CCDebuffs'
+P.nameplates.units.ENEMY_NPC.debuffs.priority = 'Blacklist,blockNoDuration,Personal'
 P.nameplates.units.ENEMY_NPC.level.format = '[difficultycolor][level][shortclassification]'
 P.nameplates.units.ENEMY_NPC.title.format = '[npctitle]'
 P.nameplates.units.ENEMY_NPC.name.format = '[name]'
@@ -1231,6 +1264,9 @@ local TopAuras = {
 	verticalSpacing = 16,
 	wrapAfter = 12,
 	smoothbars = false,
+	tooltipAnchorType = 'ANCHOR_BOTTOMLEFT',
+	tooltipAnchorX = -5,
+	tooltipAnchorY = -5
 }
 
 --Auras
@@ -1494,7 +1530,11 @@ local UF_Auras = {
 	keepSizeRatio = true,
 	height = 30,
 	spacing = 1,
+	tooltipAnchorType = 'ANCHOR_BOTTOMRIGHT',
+	tooltipAnchorX = 5,
+	tooltipAnchorY = -5,
 	strataAndLevel = CopyTable(UF_StrataAndLevel),
+	sourceText = CopyTable(NP_AuraSourceText)
 }
 
 local UF_DebuffHighlight = {
@@ -1517,6 +1557,9 @@ local UF_AuraBars = {
 	priority = '',
 	spacing = 0,
 	yOffset = 0,
+	tooltipAnchorType = 'ANCHOR_BOTTOMRIGHT',
+	tooltipAnchorX = 5,
+	tooltipAnchorY = -5,
 	clickThrough = false,
 	reverseFill = false,
 	abbrevName = false,
@@ -1574,6 +1617,8 @@ local UF_Castbar = {
 	insideInfoPanel = true,
 	overlayOnFrame = 'None',
 	displayTarget = false,
+	displayTargetClass = true,
+	nameLength = 0,
 	smoothbars = false,
 	reverse = false,
 	spark = true,
@@ -2419,9 +2464,9 @@ P.unitframe.units.player.aurabar.friendlyAuraType = 'HELPFUL'
 P.unitframe.units.player.aurabar.maxDuration = 120
 P.unitframe.units.player.aurabar.priority = 'Blacklist,blockNoDuration,Personal,RaidDebuffs'
 P.unitframe.units.player.buffs.attachTo = 'DEBUFFS'
-P.unitframe.units.player.buffs.priority = 'Blacklist,Whitelist,blockNoDuration,Personal,nonPersonal'
+P.unitframe.units.player.buffs.priority = 'Blacklist,Whitelist,blockNoDuration,Personal,NonPersonal'
 P.unitframe.units.player.debuffs.enable = true
-P.unitframe.units.player.debuffs.priority = 'Blacklist,Personal,nonPersonal'
+P.unitframe.units.player.debuffs.priority = 'Blacklist,Personal,NonPersonal'
 P.unitframe.units.player.castbar.latency = true
 
 P.unitframe.units.player.fader.enable = false
@@ -2458,14 +2503,14 @@ P.unitframe.units.target.buffs.enable = true
 P.unitframe.units.target.buffs.anchorPoint = 'TOPRIGHT'
 P.unitframe.units.target.buffs.growthX = 'LEFT'
 P.unitframe.units.target.buffs.growthY = 'UP'
-P.unitframe.units.target.buffs.priority = 'Blacklist,Personal,nonPersonal'
+P.unitframe.units.target.buffs.priority = 'Blacklist,Personal,NonPersonal'
 P.unitframe.units.target.debuffs.enable = true
 P.unitframe.units.target.debuffs.anchorPoint = 'TOPRIGHT'
 P.unitframe.units.target.debuffs.growthX = 'LEFT'
 P.unitframe.units.target.debuffs.growthY = 'UP'
 P.unitframe.units.target.debuffs.attachTo = 'BUFFS'
 P.unitframe.units.target.debuffs.maxDuration = 300
-P.unitframe.units.target.debuffs.priority = 'Blacklist,Friendly:Dispellable,Personal,CCDebuffs'
+P.unitframe.units.target.debuffs.priority = 'Blacklist,Friendly:Dispellable,Personal'
 P.unitframe.units.target.healPrediction.enable = true
 P.unitframe.units.target.health.text_format = '[healthcolor][health:current-percent:shortvalue]'
 P.unitframe.units.target.name.text_format = '[classcolor][name:medium] [difficultycolor][smartlevel] [shortclassification]'
@@ -2490,9 +2535,9 @@ P.unitframe.units.targettarget.power.text_format = ''
 
 P.unitframe.units.targettargettarget = CopyTable(P.unitframe.units.targettarget)
 P.unitframe.units.targettargettarget.enable = false
-P.unitframe.units.targettargettarget.buffs.priority = 'Blacklist,Personal,nonPersonal'
+P.unitframe.units.targettargettarget.buffs.priority = 'Blacklist,Personal,NonPersonal'
 P.unitframe.units.targettargettarget.debuffs.attachTo = 'FRAME'
-P.unitframe.units.targettargettarget.debuffs.priority = 'Blacklist,Personal,nonPersonal'
+P.unitframe.units.targettargettarget.debuffs.priority = 'Blacklist,Personal,NonPersonal'
 P.unitframe.units.targettargettarget.infoPanel.height = 12
 
 P.unitframe.units.focus.aurabar.enable = false
@@ -2504,7 +2549,7 @@ P.unitframe.units.focus.buffs.anchorPoint = 'BOTTOMLEFT'
 P.unitframe.units.focus.buffs.maxDuration = 300
 P.unitframe.units.focus.buffs.numrows = 1
 P.unitframe.units.focus.buffs.perrow = 7
-P.unitframe.units.focus.buffs.priority = 'Blacklist,Personal,nonPersonal'
+P.unitframe.units.focus.buffs.priority = 'Blacklist,Personal,NonPersonal'
 P.unitframe.units.focus.castbar.width = 190
 P.unitframe.units.focus.debuffs.enable = true
 P.unitframe.units.focus.debuffs.anchorPoint = 'TOPRIGHT'
@@ -2520,7 +2565,7 @@ P.unitframe.units.focus.name.text_format = '[classcolor][name:medium]'
 
 P.unitframe.units.focustarget = CopyTable(P.unitframe.units.focus)
 P.unitframe.units.focustarget.enable = false
-P.unitframe.units.focustarget.buffs.priority = 'Blacklist,Personal,nonPersonal'
+P.unitframe.units.focustarget.buffs.priority = 'Blacklist,Personal,NonPersonal'
 P.unitframe.units.focustarget.debuffs.enable = false
 P.unitframe.units.focustarget.debuffs.anchorPoint = 'BOTTOMRIGHT'
 P.unitframe.units.focustarget.debuffs.growthX = 'LEFT'
@@ -2560,7 +2605,7 @@ P.unitframe.units.pet.name.text_format = '[classcolor][name:medium]'
 P.unitframe.units.pettarget = CopyTable(P.unitframe.units.pet)
 P.unitframe.units.pettarget.enable = false
 P.unitframe.units.pettarget.buffs.maxDuration = 300
-P.unitframe.units.pettarget.buffs.priority = 'Blacklist,Personal,nonPersonal'
+P.unitframe.units.pettarget.buffs.priority = 'Blacklist,Personal,NonPersonal'
 P.unitframe.units.pettarget.debuffs.maxDuration = 300
 P.unitframe.units.pettarget.debuffs.priority = 'Blacklist,Dispellable,RaidDebuffs'
 P.unitframe.units.pettarget.height = 26
@@ -3143,5 +3188,112 @@ E.LayoutMoverPositions = {
 		ElvUF_Raid1Mover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,202,373',
 		LootFrameMover = 'TOPLEFT,ElvUIParent,TOPLEFT,250,-104',
 		VOICECHAT = 'TOPLEFT,ElvUIParent,TOPLEFT,250,-82'
+	},
+	anniversary = {
+		AdditionalPowerMover = 'BOTTOM,ElvUIParent,BOTTOM,-136,229',
+		AlertFrameMover = 'TOP,ElvUIParent,TOP,0,-95',
+		AltPowerBarMover = 'TOP,ElvUIParent,TOP,0,-19',
+		ArenaHeaderMover = 'TOPRIGHT,ElvUIParent,TOPRIGHT,-365,-252',
+		ArtifactBarMover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,463,21',
+		AutoButtonBar1Mover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-127,211',
+		AutoButtonBar2Mover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-127,248',
+		AutoButtonBar3Mover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-127,286',
+		AutoButtonBar4Mover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-279,286',
+		AutoButtonBar5Mover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-279,328',
+		AzeriteBarMover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,2,12',
+		BNETMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,279',
+		BagsMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,17',
+		BelowMinimapContainerMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-43,17',
+		BossButton = 'BOTTOM,ElvUIParent,BOTTOM,0,91',
+		BossHeaderMover = 'TOPRIGHT,ElvUIParent,TOPRIGHT,-365,-252',
+		BuffsMover = 'TOPRIGHT,ElvUIParent,TOPRIGHT,-4,-4',
+		ClassBarMover = 'BOTTOM,ElvUIParent,BOTTOM,0,80',
+		DTPanelBottomMiddlePanelMover = 'BOTTOM,ElvUIParent,BOTTOM,0,0',
+		DTPanelQuickJoinMover = 'BOTTOMLEFT,UIParent,BOTTOMLEFT,318,250',
+		DebuffsMover = 'TOPLEFT,ElvUIParent,TOPLEFT,4,-4',
+		DigSiteProgressBarMover = 'BOTTOM,ElvUIParent,BOTTOM,0,315',
+		DurabilityFrameMover = 'TOPRIGHT,ElvUIParent,TOPRIGHT,-167,-215',
+		ElvAB_1 = 'BOTTOM,ElvUIParent,BOTTOM,0,44',
+		ElvAB_2 = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-522,49',
+		ElvAB_3 = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,433,47',
+		ElvAB_4 = 'TOPLEFT,ElvUIParent,TOPLEFT,564,-334',
+		ElvAB_5 = 'TOPRIGHT,ElvUIParent,TOPRIGHT,-4,-294',
+		ElvAB_6 = 'BOTTOM,ElvUIParent,BOTTOM,-271,431',
+		ElvUF_AssistMover = 'TOPLEFT,ElvUIParent,TOPLEFT,4,-260',
+		ElvUF_BodyGuardMover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,444',
+		ElvUF_FocusCastbarMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-572,357',
+		ElvUF_FocusMover = 'BOTTOMRIGHT,UIParent,BOTTOMRIGHT,-572,369',
+		ElvUF_FocusTargetMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-513,277',
+		ElvUF_PartyMover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,279',
+		ElvUF_PetCastbarMover = 'BOTTOM,ElvUIParent,BOTTOM,-187,113',
+		ElvUF_PetMover = 'BOTTOM,ElvUIParent,BOTTOM,-187,123',
+		ElvUF_PlayerCastbarMover = 'BOTTOM,ElvUIParent,BOTTOM,-136,176',
+		ElvUF_PlayerMover = 'BOTTOM,ElvUIParent,BOTTOM,-136,187',
+		ElvUF_Raid1Mover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,279',
+		ElvUF_Raid2Mover = 'TOPLEFT,ElvUIParent,TOPLEFT,192,-295',
+		ElvUF_Raid3Mover = 'TOPLEFT,ElvUIParent,TOPLEFT,129,-276',
+		ElvUF_RaidpetMover = 'TOPLEFT,ElvUIParent,BOTTOMLEFT,0,808',
+		ElvUF_TankMover = 'TOPLEFT,ElvUIParent,TOPLEFT,4,-186',
+		ElvUF_TargetCastbarMover = 'BOTTOM,ElvUIParent,BOTTOM,136,176',
+		ElvUF_TargetMover = 'BOTTOM,ElvUIParent,BOTTOM,136,187',
+		ElvUF_TargetTargetMover = 'BOTTOM,ElvUIParent,BOTTOM,187,123',
+		ElvUIBagMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,49',
+		ElvUIBankMover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,47',
+		EnhancedVehicleBar_Mover = 'BOTTOM,ElvUIParent,BOTTOM,0,245',
+		EquipmentSetsBarMover = 'TOPLEFT,ElvUIParent,TOPLEFT,62,-522',
+		ExperienceBarMover = 'TOP,ElvUIParent,TOP,0,-4',
+		GMMover = 'TOP,ElvUIParent,TOP,-303,-4',
+		HonorBarMover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,4',
+		LeftChatMover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,47',
+		LevelUpBossBannerMover = 'TOP,ElvUIParent,TOP,-1,-157',
+		LocationLiteMover = 'TOP,ElvUIParent,TOP,0,-7',
+		LocationMover = 'TOP,ElvUIParent,TOP,0,-7',
+		LootFrameMover = 'TOPLEFT,ElvUIParent,TOPLEFT,487,-312',
+		LossControlMover = 'BOTTOM,ElvUIParent,BOTTOM,0,382',
+		MawBuffsBelowMinimapMover = 'TOPRIGHT,ElvUIParent,TOPRIGHT,-427,-8',
+		MicroBarAnchor = 'TOP,ElvUIParent,TOP,1,-19',
+		MicrobarMover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,18',
+		MinimapClusterMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,254',
+		MinimapMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,49',
+		MirrorTimer1Mover = 'TOPRIGHT,ElvUIParent,TOPRIGHT,-310,-229',
+		MirrorTimer2Mover = 'TOPRIGHT,ElvUIParent,TOPRIGHT,-310,-247',
+		MirrorTimer3Mover = 'TOPRIGHT,ElvUIParent,TOPRIGHT,-310,-265',
+		NotificationMover = 'TOP,ElvUIParent,TOP,0,-96',
+		ObjectiveFrameMover = 'TOPRIGHT,ElvUIParent,TOPRIGHT,-79,-293',
+		PetAB = 'BOTTOM,ElvUIParent,BOTTOM,0,17',
+		PlayerNameplate = 'BOTTOM,ElvUIParent,BOTTOM,0,359',
+		PlayerPortraitMover = 'BOTTOM,ElvUIParent,BOTTOM,-365,163',
+		PlayerPowerBarMover = 'BOTTOM,ElvUIParent,BOTTOM,0,209',
+		PowerBarContainerMover = 'TOP,ElvUIParent,TOP,0,-46',
+		PrivateAurasMover = 'TOPRIGHT,ElvUIParent,TOPRIGHT,-4,-177',
+		PrivateRaidWarningMover = 'TOP,ElvUIParent,TOP,0,-240',
+		ProfessionsMover = 'TOPRIGHT,ElvUIParent,TOPRIGHT,-3,-184',
+		PvPMover = 'TOP,ElvUIParent,TOP,0,-28',
+		QueueStatusMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-201,49',
+		RaidBuffReminderMover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,353,16',
+		RaidMarkerBarAnchor = 'BOTTOM,ElvUIParent,BOTTOM,0,57',
+		ReputationBarMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,4',
+		RequestStopButton = 'TOP,ElvUIParent,TOP,0,-161',
+		RightChatMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-233,26',
+		SalvageCrateMover = 'TOPLEFT,ElvUIParent,TOPLEFT,2,-483',
+		ShiftAB = 'BOTTOM,ElvUIParent,BOTTOM,0,17',
+		SquareMinimapBar = 'TOPRIGHT,ElvUIParent,TOPRIGHT,-2,-185',
+		SquareMinimapButtonBarMover = 'TOPRIGHT,ElvUIParent,TOPRIGHT,-4,-280',
+		TalkingHeadFrameMover = 'TOP,ElvUIParent,TOP,0,-107',
+		TargetPortraitMover = 'BOTTOM,ElvUIParent,BOTTOM,365,163',
+		TargetPowerBarMover = 'BOTTOM,ElvUIParent,BOTTOM,231,215',
+		ThreatBarMover = 'BOTTOM,ElvUIParent,BOTTOM,0,4',
+		TooltipMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-4,255',
+		TopCenterContainerMover = 'TOP,ElvUIParent,TOP,0,-72',
+		TorghastChoiceToggle = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-419,4',
+		TotemBarMover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,560,31',
+		TotemTrackerMover = 'BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,534,4',
+		UIErrorsFrameMover = 'TOP,ElvUIParent,TOP,0,-195',
+		VOICECHAT = 'TOPLEFT,ElvUIParent,TOPLEFT,487,-290',
+		VehicleLeaveButton = 'BOTTOM,ElvUIParent,BOTTOM,0,145',
+		VehicleSeatMover = 'BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-587,23',
+		WatchFrameMover = 'TOPRIGHT,ElvUIParent,TOPRIGHT,-122,-292',
+		ZoneAbility = 'BOTTOM,ElvUIParent,BOTTOM,-323,139',
+		tokenHolderMover = 'TOPRIGHT,ElvUIParent,TOPRIGHT,-3,-164'
 	}
 }

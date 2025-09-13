@@ -7,8 +7,10 @@ local ACH = E.Libs.ACH
 local _G = _G
 local wipe, next, pairs, ipairs, gsub = wipe, next, pairs, ipairs, gsub
 local format, strmatch, strsplit, ceil = format, strmatch, strsplit, ceil
-local tinsert, tonumber, tostring = tinsert, tonumber, tostring
+local strfind, tinsert, tonumber, tostring = strfind, tinsert, tonumber, tostring
 
+local IsShiftKeyDown = IsShiftKeyDown
+local IsControlKeyDown = IsControlKeyDown
 local GetSpellTexture = C_Spell.GetSpellTexture
 local CopyTable = CopyTable
 
@@ -123,6 +125,11 @@ local function GetOptionsTable_AuraBars(updateFunc, groupName)
 	local config = ACH:Group(L["Aura Bars"], nil, 3, nil, function(info) return E.db.unitframe.units[groupName].aurabar[info[#info]] end, function(info, value) E.db.unitframe.units[groupName].aurabar[info[#info]] = value updateFunc(UF, groupName) end)
 	config.args.enable = ACH:Toggle(L["Enable"], nil, 0)
 
+	config.args.tooltip = ACH:Group(L["Tooltip"], nil, 5)
+	config.args.tooltip.args.tooltipAnchorType = ACH:Select(L["Anchor Type"], nil, 1, C.Values.TooltipAnchors)
+	config.args.tooltip.args.tooltipAnchorX = ACH:Range(L["Anchor Offset X"], nil, 2, { min = -300, max = 300, step = 1 })
+	config.args.tooltip.args.tooltipAnchorY = ACH:Range(L["Anchor Offset Y"], nil, 3, { min = -300, max = 300, step = 1 })
+
 	config.args.generalGroup = ACH:Group(L["General"], nil, 10)
 	config.args.generalGroup.args.reverseFill = ACH:Toggle(L["Reverse Fill"], nil, 1)
 	config.args.generalGroup.args.abbrevName = ACH:Toggle(L["Abbreviate Name"], nil, 2)
@@ -152,14 +159,14 @@ local function GetOptionsTable_AuraBars(updateFunc, groupName)
 
 	config.args.filtersGroup.args.filterPriority = ACH:MultiSelect(L["Filter Priority"], nil, 8, function() local str = E.db.unitframe.units[groupName].aurabar.priority if str == '' then return {} end return {strsplit(',', str)} end, nil, nil, function(_, value) local str = E.db.unitframe.units[groupName].aurabar.priority if str == '' then return end local tbl = {strsplit(',', str)} return tbl[value] end, function() updateFunc(UF, groupName) end)
 	config.args.filtersGroup.args.filterPriority.dragdrop = true
+	config.args.filtersGroup.args.filterPriority.dragGetTitle = C.DragGetTitle
+	config.args.filtersGroup.args.filterPriority.dragGetDesc = C.DragGetDesc
 	config.args.filtersGroup.args.filterPriority.dragOnLeave = E.noop -- keep it here
 	config.args.filtersGroup.args.filterPriority.dragOnEnter = function(info) carryFilterTo = info.obj.value end
 	config.args.filtersGroup.args.filterPriority.dragOnMouseDown = function(info) carryFilterFrom, carryFilterTo = info.obj.value, nil end
 	config.args.filtersGroup.args.filterPriority.dragOnMouseUp = function() C.SetFilterPriority(E.db.unitframe.units, groupName, 'aurabar', carryFilterTo, nil, carryFilterFrom) carryFilterFrom, carryFilterTo = nil, nil end
-	config.args.filtersGroup.args.filterPriority.dragOnClick = function() C.SetFilterPriority(E.db.unitframe.units, groupName, 'aurabar', carryFilterFrom, true) end
-	config.args.filtersGroup.args.filterPriority.stateSwitchGetText = C.StateSwitchGetText
-	config.args.filtersGroup.args.filterPriority.stateSwitchOnClick = function() C.SetFilterPriority(E.db.unitframe.units, groupName, 'aurabar', carryFilterFrom, nil, nil, true) end
-	config.args.filtersGroup.args.spacer1 = ACH:Description(L["Use drag and drop to rearrange filter priority or right click to remove a filter."] ..'\n'..L["Use Shift+LeftClick to toggle between friendly or enemy or normal state. Normal state will allow the filter to be checked on all units. Friendly state is for friendly units only and enemy state is for enemy units."], 9)
+	config.args.filtersGroup.args.filterPriority.dragOnClick = function(_, button) C.SetFilterPriority(E.db.unitframe.units, groupName, 'aurabar', carryFilterFrom, button == 'RightButton', nil, button == 'LeftButton' and IsShiftKeyDown(), button == 'LeftButton' and IsControlKeyDown()) end
+	config.args.filtersGroup.args.spacer1 = ACH:Description(L["FILTER_PRIORITY_DESC"], 9)
 
 	if groupName == 'target' then
 		config.args.generalGroup.args.attachTo.values.PLAYER_AURABARS = L["Player Frame Aura Bars"]
@@ -207,7 +214,7 @@ local function GetOptionsTable_Auras(auraType, updateFunc, groupName, numUnits)
 	config.args.generalGroup.args.xOffset = ACH:Range(L["X-Offset"], nil, 8, offsetShort)
 	config.args.generalGroup.args.yOffset = ACH:Range(L["Y-Offset"], nil, 9, offsetShort)
 	config.args.generalGroup.args.spacing = ACH:Range(L["Spacing"], nil, 10, spacingNormal)
-	config.args.generalGroup.args.attachTo = ACH:Select(L["Attach To"], L["What to attach the anchor frame to."], 11, { FRAME = L["Frame"], DEBUFFS = L["Debuffs"], HEALTH = L["Health"], POWER = L["Power"] }, nil, nil, nil, nil, function() if auraType ~= 'auras' then local position = E.db.unitframe.units[groupName].smartAuraPosition return position == 'BUFFS_ON_DEBUFFS' or position == 'FLUID_BUFFS_ON_DEBUFFS' end end)
+	config.args.generalGroup.args.attachTo = ACH:Select(L["Attach To"], L["What to attach the anchor frame to."], 11, { FRAME = L["Frame"], AURAS = auraType ~= 'auras' and L["Auras"] or nil, BUFFS = auraType ~= 'buffs' and L["Buffs"] or nil, DEBUFFS = auraType ~= 'debuffs' and L["Debuffs"] or nil, HEALTH = L["Health"], POWER = L["Power"] }, nil, nil, nil, nil, function() if auraType ~= 'auras' then local position = E.db.unitframe.units[groupName].smartAuraPosition return position == 'BUFFS_ON_DEBUFFS' or position == 'FLUID_BUFFS_ON_DEBUFFS' end end)
 
 	config.args.generalGroup.args.anchorPoint = ACH:Select(L["Anchor Point"], L["What point to anchor to the frame you set to attach to."], 12, C.Values.Anchors)
 	config.args.generalGroup.args.growthX = ACH:Select(L["Growth X-Direction"], nil, 13, { LEFT = L["Left"], RIGHT = L["Right"] }, nil, nil, nil, nil, function() local point = E.db.unitframe.units[groupName][auraType].anchorPoint return point == 'LEFT' or point == 'RIGHT' end)
@@ -217,11 +224,13 @@ local function GetOptionsTable_Auras(auraType, updateFunc, groupName, numUnits)
 	config.args.generalGroup.args.filter = ACH:Select(L["Aura Filter"], nil, 17, { RAID = L["Raid"], HELPFUL = L["Buffs"], HARMFUL = L["Debuffs"], ["HELPFUL|HARMFUL"] = L["Buffs and Debuffs"] }, nil, nil, nil, nil, nil, auraType ~= 'auras')
 	config.args.generalGroup.args.clickThrough = ACH:Toggle(L["Click Through"], L["Ignore mouse events."], 18)
 
-	config.args.strataAndLevel = GetOptionsTable_StrataAndFrameLevel(updateFunc, groupName, numUnits, auraType)
-	config.args.strataAndLevel.inline = nil
+	config.args.tooltip = ACH:Group(L["Tooltip"], nil, 20)
+	config.args.tooltip.args.tooltipAnchorType = ACH:Select(L["Anchor Type"], nil, 1, C.Values.TooltipAnchors)
+	config.args.tooltip.args.tooltipAnchorX = ACH:Range(L["Anchor Offset X"], nil, 2, { min = -300, max = 300, step = 1 })
+	config.args.tooltip.args.tooltipAnchorY = ACH:Range(L["Anchor Offset Y"], nil, 3, { min = -300, max = 300, step = 1 })
 
-	config.args.textGroup = ACH:Group(L["Text"], nil, 15)
-	config.args.textGroup.args.stacks = ACH:Group(L["Stack Counter"], nil, 20, nil, function(info) return E.db.unitframe.units[groupName][auraType][info[#info]] end, function(info, value) E.db.unitframe.units[groupName][auraType][info[#info]] = value updateFunc(UF, groupName, numUnits) end)
+	config.args.textGroup = ACH:Group(L["Text"], nil, 30)
+	config.args.textGroup.args.stacks = ACH:Group(L["Stack Counter"], nil, 1, nil, function(info) return E.db.unitframe.units[groupName][auraType][info[#info]] end, function(info, value) E.db.unitframe.units[groupName][auraType][info[#info]] = value updateFunc(UF, groupName, numUnits) end)
 	config.args.textGroup.args.stacks.args.countFont = ACH:SharedMediaFont(L["Font"], nil, 1)
 	config.args.textGroup.args.stacks.args.countFontSize = ACH:Range(L["Font Size"], nil, 2, C.Values.FontSize)
 	config.args.textGroup.args.stacks.args.countFontOutline = ACH:FontFlags(L["Font Outline"], L["Set the font outline."], 3)
@@ -230,12 +239,27 @@ local function GetOptionsTable_Auras(auraType, updateFunc, groupName, numUnits)
 	config.args.textGroup.args.stacks.args.countPosition = ACH:Select(L["Position"], nil, 6, C.Values.AllPoints)
 	config.args.textGroup.args.stacks.inline = true
 
-	config.args.textGroup.args.duration = ACH:Group(L["Duration"], nil, 25, nil, function(info) return E.db.unitframe.units[groupName][auraType][info[#info]] end, function(info, value) E.db.unitframe.units[groupName][auraType][info[#info]] = value updateFunc(UF, groupName, numUnits) end)
+	config.args.textGroup.args.duration = ACH:Group(L["Duration"], nil, 2, nil, function(info) return E.db.unitframe.units[groupName][auraType][info[#info]] end, function(info, value) E.db.unitframe.units[groupName][auraType][info[#info]] = value updateFunc(UF, groupName, numUnits) end)
 	config.args.textGroup.args.duration.args.cooldownShortcut = ACH:Execute(L["Cooldowns"], nil, 1, function() ACD:SelectGroup('ElvUI', 'cooldown', 'unitframe') end)
 	config.args.textGroup.args.duration.args.durationPosition = ACH:Select(L["Position"], nil, 2, C.Values.AllPoints)
 	config.args.textGroup.args.duration.inline = true
 
-	config.args.filtersGroup = ACH:Group(L["Filters"], nil, 30)
+	config.args.sourceGroup = ACH:Group(E.NewSign..L["Source Text"], nil, 40, nil, function(info) return E.db.unitframe.units[groupName][auraType].sourceText[info[#info]] end, function(info, value) E.db.unitframe.units[groupName][auraType].sourceText[info[#info]] = value updateFunc(UF, groupName, numUnits) end)
+	config.args.sourceGroup.args.enable = ACH:Toggle(L["Enable"], nil, 1)
+	config.args.sourceGroup.args.class = ACH:Toggle(L["Use Class Color"], nil, 2)
+	config.args.sourceGroup.args.position = ACH:Select(L["Position"], nil, 4, C.Values.AllPoints)
+	config.args.sourceGroup.args.length = ACH:Range(L["Length"], nil, 5, { min = 0, max = 12, step = 1 })
+	config.args.sourceGroup.args.xOffset = ACH:Range(L["X-Offset"], nil, 5, { min = -80, max = 80, step = 1 })
+	config.args.sourceGroup.args.yOffset = ACH:Range(L["Y-Offset"], nil, 6, { min = -80, max = 80, step = 1 })
+	config.args.sourceGroup.args.font = ACH:SharedMediaFont(L["Font"], nil, 10)
+	config.args.sourceGroup.args.fontSize = ACH:Range(L["Font Size"], nil, 11, C.Values.FontSize)
+	config.args.sourceGroup.args.fontOutline = ACH:FontFlags(L["Font Outline"], L["Set the font outline."], 12)
+
+	config.args.strataAndLevel = GetOptionsTable_StrataAndFrameLevel(updateFunc, groupName, numUnits, auraType)
+	config.args.strataAndLevel.inline = nil
+	config.args.strataAndLevel.order = 35
+
+	config.args.filtersGroup = ACH:Group(L["Filters"], nil, 50)
 	config.args.filtersGroup.args.minDuration = ACH:Range(L["Minimum Duration"], L["Don't display auras that are shorter than this duration (in seconds). Set to zero to disable."], 1, { min = 0, max = 10800, step = 1 })
 	config.args.filtersGroup.args.maxDuration = ACH:Range(L["Maximum Duration"], L["Don't display auras that are longer than this duration (in seconds). Set to zero to disable."], 1, { min = 0, max = 10800, step = 1 })
 	config.args.filtersGroup.args.jumpToFilter = ACH:Execute(L["Filters Page"], L["Shortcut to global filters."], 3, function() ACD:SelectGroup('ElvUI', 'filters') end)
@@ -245,14 +269,14 @@ local function GetOptionsTable_Auras(auraType, updateFunc, groupName, numUnits)
 
 	config.args.filtersGroup.args.filterPriority = ACH:MultiSelect(L["Filter Priority"], nil, 8, function() local str = E.db.unitframe.units[groupName][auraType].priority if str == '' then return {} end return {strsplit(',', str)} end, nil, nil, function(_, value) local str = E.db.unitframe.units[groupName][auraType].priority if str == '' then return end local tbl = {strsplit(',', str)} return tbl[value] end, function() updateFunc(UF, groupName, numUnits) end)
 	config.args.filtersGroup.args.filterPriority.dragdrop = true
+	config.args.filtersGroup.args.filterPriority.dragGetTitle = C.DragGetTitle
+	config.args.filtersGroup.args.filterPriority.dragGetDesc = C.DragGetDesc
 	config.args.filtersGroup.args.filterPriority.dragOnLeave = E.noop -- keep it here
 	config.args.filtersGroup.args.filterPriority.dragOnEnter = function(info) carryFilterTo = info.obj.value end
 	config.args.filtersGroup.args.filterPriority.dragOnMouseDown = function(info) carryFilterFrom, carryFilterTo = info.obj.value, nil end
 	config.args.filtersGroup.args.filterPriority.dragOnMouseUp = function() C.SetFilterPriority(E.db.unitframe.units, groupName, auraType, carryFilterTo, nil, carryFilterFrom) carryFilterFrom, carryFilterTo = nil, nil end
-	config.args.filtersGroup.args.filterPriority.dragOnClick = function() C.SetFilterPriority(E.db.unitframe.units, groupName, auraType, carryFilterFrom, true) end
-	config.args.filtersGroup.args.filterPriority.stateSwitchGetText = C.StateSwitchGetText
-	config.args.filtersGroup.args.filterPriority.stateSwitchOnClick = function() C.SetFilterPriority(E.db.unitframe.units, groupName, auraType, carryFilterFrom, nil, nil, true) end
-	config.args.filtersGroup.args.spacer1 = ACH:Description(L["Use drag and drop to rearrange filter priority or right click to remove a filter."] ..'\n'..L["Use Shift+LeftClick to toggle between friendly or enemy or normal state. Normal state will allow the filter to be checked on all units. Friendly state is for friendly units only and enemy state is for enemy units."], 9)
+	config.args.filtersGroup.args.filterPriority.dragOnClick = function(_, button) C.SetFilterPriority(E.db.unitframe.units, groupName, auraType, carryFilterFrom, button == 'RightButton', nil, button == 'LeftButton' and IsShiftKeyDown(), button == 'LeftButton' and IsControlKeyDown()) end
+	config.args.filtersGroup.args.spacer1 = ACH:Description(L["FILTER_PRIORITY_DESC"], 9)
 
 	if auraType == 'debuffs' then
 		config.args.desaturate = ACH:Toggle(L["Desaturate Icon"], L["Set auras that are not from you to desaturated."], 3)
@@ -406,6 +430,7 @@ local function GetOptionsTable_Castbar(updateFunc, groupName, numUnits)
 	config.args.textGroup.args.textSettings.args.fontStyle = ACH:FontFlags(L["Font Outline"], L["Set the font outline."], 4)
 	config.args.textGroup.args.textSettings.args.xOffsetText = ACH:Range(L["X-Offset"], nil, 5, { min = -500, max = 500, step = 1 }, nil, function(info) return E.db.unitframe.units[groupName].castbar[info[#info]] end, function(info, value) E.db.unitframe.units[groupName].castbar[info[#info]] = value updateFunc(UF, groupName, numUnits) end, false)
 	config.args.textGroup.args.textSettings.args.yOffsetText = ACH:Range(L["Y-Offset"], nil, 6, { min = -500, max = 500, step = 1 }, nil, function(info) return E.db.unitframe.units[groupName].castbar[info[#info]] end, function(info, value) E.db.unitframe.units[groupName].castbar[info[#info]] = value updateFunc(UF, groupName, numUnits) end, false)
+	config.args.textGroup.args.textSettings.args.nameLength = ACH:Range(L["Name Length"], nil, 7, { min = 0, max = 100, step = 1 }, nil, function(info) return E.db.unitframe.units[groupName].castbar[info[#info]] end, function(info, value) E.db.unitframe.units[groupName].castbar[info[#info]] = value updateFunc(UF, groupName, numUnits) end, false)
 
 	config.args.textGroup.args.timeSettings = ACH:Group(L["Time Options"], nil, 20, nil, function(info) return E.db.unitframe.units[groupName].castbar.customTimeFont[info[#info]] end, function(info, value) E.db.unitframe.units[groupName].castbar.customTimeFont[info[#info]] = value updateFunc(UF, groupName, numUnits) end, function() return not E.db.unitframe.units[groupName].castbar.customTimeFont.enable end)
 	config.args.textGroup.args.timeSettings.inline = true
@@ -446,7 +471,8 @@ local function GetOptionsTable_Castbar(updateFunc, groupName, numUnits)
 
 	if groupName == 'player' then
 		config.args.displayTarget = ACH:Toggle(L["Display Target"], L["Display the target of current cast."], 17)
-		config.args.latency = ACH:Toggle(L["Latency"], nil, 18)
+		config.args.displayTargetClass = ACH:Toggle(L["Target Class Color"], nil, 18)
+		config.args.latency = ACH:Toggle(L["Latency"], nil, 19)
 
 		config.args.generalGroup.args.ticks = ACH:Group(L["Ticks"], nil, 20)
 		config.args.generalGroup.args.ticks.args.ticks = ACH:Toggle(L["Ticks"], L["Display tick marks on the castbar for channelled spells. This will adjust automatically for spells like Drain Soul and add additional ticks based on haste."], 1)
@@ -455,6 +481,7 @@ local function GetOptionsTable_Castbar(updateFunc, groupName, numUnits)
 		config.args.generalGroup.args.ticks.inline = true
 	elseif groupName == 'pet' or groupName == 'boss' then
 		config.args.displayTarget = ACH:Toggle(L["Display Target"], L["Display the target of current cast."], 17)
+		config.args.displayTargetClass = ACH:Toggle(L["Target Class Color"], nil, 18)
 	end
 
 	if groupName == 'party' or groupName == 'arena' or groupName == 'boss' then
@@ -506,7 +533,7 @@ local function UpdateCustomTextFrame(frame)
 end
 
 local function UpdateCustomTextGroup(unit)
-	if unit == 'party' or unit:find('raid') then
+	if unit == 'party' or strfind(unit, 'raid') then
 		for _, child in next, { UF[unit]:GetChildren() } do
 			for _, subchild in next, { child:GetChildren() } do
 				UpdateCustomTextFrame(subchild)
@@ -1380,7 +1407,7 @@ Colors.classResourceGroup.args.class.inline = true
 Colors.classResourceGroup.args.class.args.ARCANE_CHARGES = ACH:Color(L["POWER_TYPE_ARCANE_CHARGES"], nil, 11, nil, nil, function(info) local t, d = E.db.unitframe.colors.classResources.MAGE[info[#info]], P.unitframe.colors.classResources.MAGE[info[#info]] return t.r, t.g, t.b, t.a, d.r, d.g, d.b end, function(info, r, g, b) local t = E.db.unitframe.colors.classResources.MAGE[info[#info]] t.r, t.g, t.b = r, g, b UF:Update_AllFrames() end)
 Colors.classResourceGroup.args.class.args.FROST_ICICLES = ACH:Color(L["FROST_ICICLES"], nil, 12, nil, nil, function(info) local t, d = E.db.unitframe.colors.classResources.MAGE[info[#info]], P.unitframe.colors.classResources.MAGE[info[#info]] return t.r, t.g, t.b, t.a, d.r, d.g, d.b end, function(info, r, g, b) local t = E.db.unitframe.colors.classResources.MAGE[info[#info]] t.r, t.g, t.b = r, g, b UF:Update_AllFrames() end, nil, not E.Retail)
 Colors.classResourceGroup.args.class.args.MAELSTROM = ACH:Color(L["MAELSTROM_WEAPON"], nil, 11, nil, nil, function(info) local t, d = E.db.unitframe.colors.classResources.SHAMAN[info[#info]], P.unitframe.colors.classResources.SHAMAN[info[#info]] return t.r, t.g, t.b, t.a, d.r, d.g, d.b end, function(info, r, g, b) local t = E.db.unitframe.colors.classResources.SHAMAN[info[#info]] t.r, t.g, t.b = r, g, b UF:Update_AllFrames() end, nil, not E.Retail)
-Colors.classResourceGroup.args.class.args.SOUL_SHARDS = ACH:Color(L["SOUL_SHARDS"], nil, 13, nil, nil, function(info) local t, d = E.db.unitframe.colors.classResources.WARLOCK[info[#info]], P.unitframe.colors.classResources.WARLOCK[info[#info]] return t.r, t.g, t.b, t.a, d.r, d.g, d.b end, function(info, r, g, b) local t = E.db.unitframe.colors.classResources.WARLOCK[info[#info]] t.r, t.g, t.b = r, g, b UF:Update_AllFrames() end, nil, not E.Mists)
+Colors.classResourceGroup.args.class.args.SOUL_SHARDS = ACH:Color(L["SOUL_SHARDS"], nil, 13, nil, nil, function(info) local t, d = E.db.unitframe.colors.classResources.WARLOCK[info[#info]], P.unitframe.colors.classResources.WARLOCK[info[#info]] return t.r, t.g, t.b, t.a, d.r, d.g, d.b end, function(info, r, g, b) local t = E.db.unitframe.colors.classResources.WARLOCK[info[#info]] t.r, t.g, t.b = r, g, b UF:Update_AllFrames() end, nil, E.Classic)
 Colors.classResourceGroup.args.class.args.DEMONIC_FURY = ACH:Color(L["DEMONIC_FURY"], nil, 14, nil, nil, function(info) local t, d = E.db.unitframe.colors.classResources.WARLOCK[info[#info]], P.unitframe.colors.classResources.WARLOCK[info[#info]] return t.r, t.g, t.b, t.a, d.r, d.g, d.b end, function(info, r, g, b) local t = E.db.unitframe.colors.classResources.WARLOCK[info[#info]] t.r, t.g, t.b = r, g, b UF:Update_AllFrames() end, nil, not E.Mists)
 
 Colors.classResourceGroup.args.BURNING_EMBERS = ACH:Group(L["BURNING_EMBERS"], nil, 25, nil, function(info) local i = tonumber(info[#info]); local t, d = E.db.unitframe.colors.classResources.WARLOCK.BURNING_EMBERS[i], P.unitframe.colors.classResources.WARLOCK.BURNING_EMBERS[i] return t.r, t.g, t.b, t.a, d.r, d.g, d.b end, function(info, r, g, b) local t = E.db.unitframe.colors.classResources.WARLOCK.BURNING_EMBERS[tonumber(info[#info])] t.r, t.g, t.b = r, g, b UF:Update_AllFrames() end, nil, not E.Mists)

@@ -13,6 +13,7 @@ local GetBuildInfo = GetBuildInfo
 local GetLocale = GetLocale
 local GetTime = GetTime
 local ReloadUI = ReloadUI
+local WorldFrame = WorldFrame
 local UIParent = UIParent
 local UnitGUID = UnitGUID
 
@@ -363,7 +364,7 @@ function E:GetAddOnEnableState(addon, character)
 end
 
 function E:IsAddOnEnabled(addon)
-	return E:GetAddOnEnableState(addon, E.myname) == 2
+	return E:GetAddOnEnableState(addon, E.myguid) == 2
 end
 
 function E:SetEasyMenuAnchor(menu, frame)
@@ -457,12 +458,14 @@ function E:OnInitialize()
 
 	E.SpellBookTooltip = CreateFrame('GameTooltip', 'ElvUI_SpellBookTooltip', UIParent, 'GameTooltipTemplate')
 	E.ConfigTooltip = CreateFrame('GameTooltip', 'ElvUI_ConfigTooltip', UIParent, 'GameTooltipTemplate')
-	E.ScanTooltip = CreateFrame('GameTooltip', 'ElvUI_ScanTooltip', UIParent, 'GameTooltipTemplate')
+	E.ScanTooltip = CreateFrame('GameTooltip', 'ElvUI_ScanTooltip', WorldFrame, 'GameTooltipTemplate')
 	E.EasyMenu = CreateFrame('Frame', 'ElvUI_EasyMenu', UIParent, 'UIDropDownMenuTemplate')
 
 	E.PixelMode = E.twoPixelsPlease or E.private.general.pixelPerfect -- keep this over `UIScale`
 	E.Border = (E.PixelMode and not E.twoPixelsPlease) and 1 or 2
 	E.Spacing = E.PixelMode and 0 or 1
+
+	E.myClassColor = E:ClassColor(E.myclass, true)
 	E.loadedtime = GetTime()
 
 	local playerGUID = UnitGUID('player')
