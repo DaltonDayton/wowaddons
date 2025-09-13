@@ -35,29 +35,31 @@ function NP:ThreatIndicator_PostUpdate(unit, status)
 	local styleFilter = NP:StyleFilterChanges(nameplate)
 	local styleScale = styleFilter.general and styleFilter.general.scale
 
+	nameplate.ThreatStatus = status
+
 	if not status and not styleScale then
 		nameplate.threatScale = 1
 		NP:ScalePlate(nameplate, 1)
 	elseif status and db.enable and db.useThreatColor and not UnitIsTapDenied(unit) then
 		NP:Health_SetColors(nameplate, true)
-		nameplate.ThreatStatus = status
 
 		local Color, Scale
 		if status == 3 then -- securely tanking
-			Color = self.offTank and colors.offTankColor or self.isTank and colors.goodColor or colors.badColor
-			Scale = self.isTank and db.goodScale or db.badScale
+			local solo = db.useSoloColor and not NP.IsInGroup
+			Color = (solo and colors.soloColor) or (self.offTank and colors.offTankColor) or (self.isTank and colors.goodColor) or colors.badColor
+			Scale = (self.isTank and db.goodScale) or db.badScale
 		elseif status == 2 then -- insecurely tanking
-			Color = self.offTank and colors.offTankColorBadTransition or self.isTank and colors.badTransition or colors.goodTransition
+			Color = (self.offTank and colors.offTankColorBadTransition) or (self.isTank and colors.badTransition) or colors.goodTransition
 			Scale = 1
 		elseif status == 1 then -- not tanking but threat higher than tank
-			Color = self.offTank and colors.offTankColorGoodTransition or self.isTank and colors.goodTransition or colors.badTransition
+			Color = (self.offTank and colors.offTankColorGoodTransition) or (self.isTank and colors.goodTransition) or colors.badTransition
 			Scale = 1
 		else -- not tanking at all
-			Color = self.isTank and colors.badColor or colors.goodColor
-			Scale = self.isTank and db.badScale or db.goodScale
+			Color = (self.isTank and colors.badColor) or colors.goodColor
+			Scale = (self.isTank and db.badScale) or db.goodScale
 		end
 
-		if styleFilter.health and styleFilter.health.colors then
+		if styleFilter.health and styleFilter.health.color then
 			self.r, self.g, self.b = Color.r, Color.g, Color.b
 		else
 			nameplate.Health:SetStatusBarColor(Color.r, Color.g, Color.b)

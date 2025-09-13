@@ -32,6 +32,7 @@ local IsVeteranTrialAccount = IsVeteranTrialAccount
 local IsWargame = IsWargame
 local IsXPUserDisabled = IsXPUserDisabled
 local RequestBattlefieldScoreData = RequestBattlefieldScoreData
+local WorldFrame = WorldFrame
 local UIParent = UIParent
 local UIParentLoadAddOn = UIParentLoadAddOn
 local UnitFactionGroup = UnitFactionGroup
@@ -305,11 +306,11 @@ end
 function E:GetUnitSpecInfo(unit)
 	if not UnitIsPlayer(unit) then return end
 
-	E.ScanTooltip:SetOwner(UIParent, 'ANCHOR_NONE')
+	E.ScanTooltip:SetOwner(WorldFrame, 'ANCHOR_NONE')
 	E.ScanTooltip:SetUnit(unit)
-	E.ScanTooltip:Show()
 
 	local _, specLine = TT:GetLevelLine(E.ScanTooltip, 1, true)
+
 	local specText = specLine and specLine.leftText
 	if specText then
 		return E.SpecInfoBySpecClass[specText]
@@ -638,6 +639,10 @@ do
 			color.colorStr = E:RGBToHex(r, g, b, 'ff')
 		end
 
+		if classTag == E.myclass then
+			E.myClassColor = E:ClassColor(E.myclass, true)
+		end
+
 		local db = E.db.general.classColors[classTag]
 		if db then
 			db.r, db.g, db.b = r, g, b
@@ -657,6 +662,10 @@ do
 			if color and (color.r ~= r or color.g ~= g or color.b ~= b) then
 				color.r, color.g, color.b = r, g, b
 				color.colorStr = E:RGBToHex(r, g, b, 'ff')
+
+				if classTag == E.myclass then
+					E.myClassColor = E:ClassColor(E.myclass, true)
+				end
 
 				changed = true
 			end
@@ -1132,18 +1141,16 @@ end
 function E:CompatibleTooltip(tt) -- knock off compatibility
 	if tt.GetTooltipData then return end -- real support exists
 
-	local info = { name = tt:GetName(), lines = {} }
-	info.leftTextName = info.name .. 'TextLeft'
-	info.rightTextName = info.name .. 'TextRight'
+	local info = { lines = {}, name = tt:GetName() }
 
 	tt.GetTooltipData = function()
 		wipe(info.lines)
 
 		for i = 1, tt:NumLines() do
-			local left = _G[info.leftTextName..i]
+			local left = info.name and _G[info.name..'TextLeft'..i]
 			local leftText = left and left:GetText() or nil
 
-			local right = _G[info.rightTextName..i]
+			local right = info.name and _G[info.name..'TextRight'..i]
 			local rightText = right and right:GetText() or nil
 
 			tinsert(info.lines, i, { lineIndex = i, leftText = leftText, rightText = rightText })
@@ -1191,9 +1198,8 @@ function E:ScanTooltip_UnitInfo(unit)
 	if C_TooltipInfo_GetUnit then
 		return C_TooltipInfo_GetUnit(unit)
 	else
-		E.ScanTooltip:SetOwner(UIParent, 'ANCHOR_NONE')
+		E.ScanTooltip:SetOwner(WorldFrame, 'ANCHOR_NONE')
 		E.ScanTooltip:SetUnit(unit)
-		E.ScanTooltip:Show()
 
 		return E.ScanTooltip:GetTooltipData()
 	end
@@ -1203,9 +1209,8 @@ function E:ScanTooltip_InventoryInfo(unit, slot)
 	if C_TooltipInfo_GetInventoryItem then
 		return C_TooltipInfo_GetInventoryItem(unit, slot)
 	else
-		E.ScanTooltip:SetOwner(UIParent, 'ANCHOR_NONE')
+		E.ScanTooltip:SetOwner(WorldFrame, 'ANCHOR_NONE')
 		E.ScanTooltip:SetInventoryItem(unit, slot)
-		E.ScanTooltip:Show()
 
 		return E.ScanTooltip:GetTooltipData()
 	end
@@ -1215,9 +1220,8 @@ function E:ScanTooltip_HyperlinkInfo(link)
 	if C_TooltipInfo_GetHyperlink then
 		return C_TooltipInfo_GetHyperlink(link)
 	else
-		E.ScanTooltip:SetOwner(UIParent, 'ANCHOR_NONE')
+		E.ScanTooltip:SetOwner(WorldFrame, 'ANCHOR_NONE')
 		E.ScanTooltip:SetHyperlink(link)
-		E.ScanTooltip:Show()
 
 		return E.ScanTooltip:GetTooltipData()
 	end

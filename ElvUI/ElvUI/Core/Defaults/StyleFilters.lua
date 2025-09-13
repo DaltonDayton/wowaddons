@@ -76,6 +76,39 @@ G.nameplates.filters = {
 		actions = {
 			alpha = 50
 		}
+	},
+	ElvUI_Below20 = {
+		triggers = {
+			healthThreshold = true,
+			underHealthThreshold = 0.2,
+			nameplateType = {
+				enable = true,
+				enemyNPC = true,
+				friendlyNPC = true
+			}
+		},
+		actions = {
+			tags = {
+				name = '[healthcolor][name][ || >perhp<%]'
+			}
+		}
+	},
+	ElvUI_Below20_Players = {
+		triggers = {
+			healthThreshold = true,
+			underHealthThreshold = 0.2,
+			nameplateType = {
+				enable = true,
+				enemyPlayer = true,
+				friendlyPlayer = true,
+				player = true
+			}
+		},
+		actions = {
+			tags = {
+				name = '[spec:icon< ][healthcolor][name][ || >perhp<%]'
+			}
+		}
 	}
 }
 
@@ -92,6 +125,7 @@ E.StyleFilterDefaults = {
 		sound = {
 			enable = false,
 			overlap = false,
+			channel = 'Master',
 			soundFile = ''
 		},
 		tags = {

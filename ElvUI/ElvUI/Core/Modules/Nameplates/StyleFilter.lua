@@ -18,6 +18,8 @@ local GetTime = GetTime
 local UnitAffectingCombat = UnitAffectingCombat
 local UnitCanAttack = UnitCanAttack
 local UnitExists = UnitExists
+local UnitChannelInfo = UnitChannelInfo
+local UnitCastingInfo = UnitCastingInfo
 local UnitGroupRolesAssigned = UnitGroupRolesAssigned
 local UnitHasIncomingResurrection = UnitHasIncomingResurrection
 local UnitHealth = UnitHealth
@@ -542,9 +544,11 @@ do
 	end
 end
 
-function NP:StyleFilterSetChangesOnElement(frame, event, actions, changes, bar, cutaway)
-	if changes.colors then
+function NP:StyleFilterSetChangesOnElement(frame, event, actions, temp, changes, bar, cutaway)
+	if temp.colors then
 		local hc = (actions.colors.playerClass and E.myClassColor) or (actions.colors.unitClass and frame.classColor) or actions.colors.color
+
+		changes.color = hc
 
 		bar:SetStatusBarColor(hc.r, hc.g, hc.b, hc.a or 1)
 
@@ -553,21 +557,25 @@ function NP:StyleFilterSetChangesOnElement(frame, event, actions, changes, bar, 
 		end
 	end
 
-	if changes.border then
+	if temp.border then
 		local bc = (actions.border.playerClass and E.myClassColor) or (actions.border.unitClass and frame.classColor) or actions.border.color
+
+		changes.border = bc
 
 		NP:StyleFilterBorderLock(bar.backdrop, bc.r, bc.g, bc.b, bc.a or 1)
 	end
 
-	if changes.glow then
+	if temp.glow then
 		bar.glowStyle = actions.glow.style
+
+		changes.glow = actions.glow
 
 		LCG.ShowOverlayGlow(bar, actions.glow)
 	end
 
 	local flashTexture = bar.flashTexture
-	if changes.flash and flashTexture then
-		if not changes.texture then
+	if temp.flash and flashTexture then
+		if not temp.texture then
 			flashTexture:SetTexture(LSM:Fetch('statusbar', NP.db.statusbar))
 		end
 
@@ -577,6 +585,8 @@ function NP:StyleFilterSetChangesOnElement(frame, event, actions, changes, bar, 
 			anim.Fade.customValue = fc.a or 1
 			anim.Fade:SetDuration(actions.flash.speed * 0.1)
 			anim.Fade:SetChange(anim.Fade.customValue)
+
+			changes.flash = fc
 
 			flashTexture:Show()
 			flashTexture:SetVertexColor(fc.r, fc.g, fc.b)
@@ -588,8 +598,10 @@ function NP:StyleFilterSetChangesOnElement(frame, event, actions, changes, bar, 
 		end
 	end
 
-	if changes.texture then
+	if temp.texture then
 		local tx = LSM:Fetch('statusbar', actions.texture.texture)
+
+		changes.texture = actions.texture.texture
 
 		if bar.barTexture then
 			bar.barTexture:SetTexture(tx)
@@ -601,20 +613,15 @@ function NP:StyleFilterSetChangesOnElement(frame, event, actions, changes, bar, 
 	end
 end
 
-function NP:StyleFilterSetChanges(frame, event, actions, general, tags, health, power, castbar)
+function NP:StyleFilterSetChanges(frame, event, filter, temp)
 	local changes = frame.StyleFilterChanges
-	if not changes then
-		return
-	end
-
-	changes.actions = actions
-	changes.general = general
-	changes.tags = tags
-	changes.health = health
-	changes.power = power
-	changes.castbar = castbar
+	local actions = filter.actions
+	local general = temp.general
 
 	if general.visibility or general.nameOnly then
+		changes.general.visibility = general.visibility
+		changes.general.nameOnly = general.nameOnly
+
 		if general.nameOnly then -- only allow name only for the secure plate
 			NP:DisablePlate(frame, general.nameOnly and 1 or nil)
 		end
@@ -628,35 +635,44 @@ function NP:StyleFilterSetChanges(frame, event, actions, general, tags, health, 
 	end
 
 	-- Keeps Tag changes after NameOnly
+	local tags = temp.tags
 	if tags.name then
+		changes.tags.name = actions.tags.name
 		frame:Tag(frame.Name, actions.tags.name)
 		frame.Name:UpdateTag()
 	end
 	if tags.power then
+		changes.tags.power = actions.tags.power
 		frame:Tag(frame.Power.Text, actions.tags.power)
 		frame.Power.Text:UpdateTag()
 	end
 	if tags.health then
+		changes.tags.health = actions.tags.health
 		frame:Tag(frame.Health.Text, actions.tags.health)
 		frame.Health.Text:UpdateTag()
 	end
 	if tags.title then
+		changes.tags.title = actions.tags.title
 		frame:Tag(frame.Title, actions.tags.title)
 		frame.Title:UpdateTag()
 	end
 	if tags.level then
+		changes.tags.level = actions.tags.level
 		frame:Tag(frame.Level, actions.tags.level)
 		frame.Level:UpdateTag()
 	end
 
 	-- generic stuff
 	if general.scale then
+		changes.general.scale = actions.scale
 		NP:ScalePlate(frame, actions.scale)
 	end
 	if general.alpha then
+		changes.general.scale = actions.alpha
 		NP:PlateFade(frame, NP.db.fadeIn and 1 or 0, frame:GetAlpha(), actions.alpha * 0.01)
 	end
 	if general.portrait then
+		changes.general.portrait = general.portrait
 		NP:Update_Portrait(frame)
 		frame.Portrait:ForceUpdate()
 	end
@@ -673,7 +689,7 @@ function NP:StyleFilterSetChanges(frame, event, actions, general, tags, health, 
 		else
 			local exists = NP.SoundHandlers[sound]
 			if not exists or not C_Sound_IsPlaying(exists) then
-				local willPlay, soundHandle = PlaySoundFile(sound)
+				local willPlay, soundHandle = PlaySoundFile(sound, actions.sound.channel)
 				if willPlay then -- we can play it, add it to handlers
 					NP.SoundHandlers[sound] = soundHandle
 				end
@@ -681,12 +697,12 @@ function NP:StyleFilterSetChanges(frame, event, actions, general, tags, health, 
 		end
 	end
 
-	NP:StyleFilterSetChangesOnElement(frame, event, actions.health, health, frame.Health, frame.Cutaway.Health)
-	NP:StyleFilterSetChangesOnElement(frame, event, actions.power, power, frame.Power, frame.Cutaway.Power)
-	NP:StyleFilterSetChangesOnElement(frame, event, actions.castbar, castbar, frame.Castbar)
+	NP:StyleFilterSetChangesOnElement(frame, event, actions.health, temp.health, changes.health, frame.Health, frame.Cutaway.Health)
+	NP:StyleFilterSetChangesOnElement(frame, event, actions.power, temp.power, changes.power, frame.Power, frame.Cutaway.Power)
+	NP:StyleFilterSetChangesOnElement(frame, event, actions.castbar, temp.castbar, changes.castbar, frame.Castbar)
 end
 
-function NP:StyleFilterClearVisibility(frame, previous)
+function NP:StyleFilterClearVisibility(frame, event, previous)
 	local state = NP:StyleFilterHiddenState(frame.StyleFilterChanges)
 
 	if (previous == 1 or previous == 3) and (state ~= 1 and state ~= 3) then
@@ -699,12 +715,14 @@ function NP:StyleFilterClearVisibility(frame, previous)
 		end
 	end
 
-	if previous and not state then
+	if previous and not state and event ~= 'NAME_PLATE_UNIT_REMOVED' then
 		NP:StyleFilterBaseUpdate(frame, state == 1)
 	end
 end
 
-function NP:StyleFilterClearChangesOnElement(frame, db, changes, bar, cutaway)
+function NP:StyleFilterClearChangesOnElement(frame, changes, bar, cutaway)
+	local db = NP:PlateDB(frame)
+
 	if changes.colors then
 		if bar.r and bar.g and bar.b then
 			bar:SetStatusBarColor(bar.r, bar.g, bar.b)
@@ -745,7 +763,8 @@ function NP:StyleFilterClearChangesOnElement(frame, db, changes, bar, cutaway)
 	end
 end
 
-function NP:StyleFilterClearChanges(frame, changes)
+function NP:StyleFilterClearChanges(frame)
+	local changes = frame.StyleFilterChanges
 	local db = NP:PlateDB(frame)
 
 	if not changes.general.nameOnly then -- Only update these if it wasn't NameOnly. Otherwise, it leads to `Update_Tags` which does the job.
@@ -769,9 +788,11 @@ function NP:StyleFilterClearChanges(frame, changes)
 		NP:Update_Portrait(frame)
 	end
 
-	NP:StyleFilterClearChangesOnElement(frame, db, changes.health, frame.Health, frame.Cutaway.Health)
-	NP:StyleFilterClearChangesOnElement(frame, db, changes.power, frame.Power, frame.Cutaway.Power)
-	NP:StyleFilterClearChangesOnElement(frame, db, changes.castbar, frame.Castbar)
+	NP:StyleFilterClearChangesOnElement(frame, changes.health, frame.Health, frame.Cutaway.Health)
+	NP:StyleFilterClearChangesOnElement(frame, changes.power, frame.Power, frame.Cutaway.Power)
+	NP:StyleFilterClearChangesOnElement(frame, changes.castbar, frame.Castbar)
+
+	wipe(changes) -- farewell
 end
 
 function NP:StyleFilterThreatUpdate(frame, unit)
@@ -786,7 +807,7 @@ function NP:StyleFilterThreatUpdate(frame, unit)
 end
 
 function NP:StyleFilterConditionCheck(frame, event, arg1, arg2, filter, trigger)
-	local passed -- skip StyleFilterPass when triggers are empty
+	local passed -- value we will return at the end
 
 	-- Class and Specialization
 	if trigger.class and next(trigger.class) then
@@ -1191,7 +1212,7 @@ function NP:StyleFilterConditionCheck(frame, event, arg1, arg2, filter, trigger)
 		if cast.spells then
 			for _, value in next, cast.spells do
 				if value then -- only run if at least one is selected
-					local castingSpell = (frame.castingSpellID and cast.spells[tostring(frame.castingSpellID)]) or cast.spells[frame.spellName]
+					local castingSpell = (frame.castSpellID and cast.spells[tostring(frame.castSpellID)]) or cast.spells[frame.spellName]
 					if allow and ((cast.notSpell and not castingSpell) or (castingSpell and not cast.notSpell)) then passed = true else return end
 					break -- we can execute this once on the first enabled option then kill the loop
 				end
@@ -1201,19 +1222,19 @@ function NP:StyleFilterConditionCheck(frame, event, arg1, arg2, filter, trigger)
 		-- Not Status
 		if cast.notCasting or cast.notChanneling then
 			if cast.notCasting and cast.notChanneling then
-				if allow and (not frame.casting and not frame.channeling) then passed = true else return end
-			elseif allow and ((cast.notCasting and not frame.casting) or (cast.notChanneling and not frame.channeling)) then passed = true else return end
+				if allow and (not frame.castCasting and not frame.castChanneling) then passed = true else return end
+			elseif allow and ((cast.notCasting and not frame.castCasting) or (cast.notChanneling and not frame.castChanneling)) then passed = true else return end
 		end
 
 		-- Is Status
 		if cast.isCasting or cast.isChanneling then
-			if allow and ((cast.isCasting and frame.casting) or (cast.isChanneling and frame.channeling)) then passed = true else return end
+			if allow and ((cast.isCasting and frame.castCasting) or (cast.isChanneling and frame.castChanneling)) then passed = true else return end
 		end
 
 		-- Interruptible
 		if cast.interruptible or cast.notInterruptible then
-			if (frame.casting or frame.channeling) and ((cast.interruptible and not frame.notInterruptible)
-			or allow and ((cast.notInterruptible and frame.notInterruptible))) then passed = true else return end
+			if (frame.castCasting or frame.castChanneling) and ((cast.interruptible and frame.castInterruptible)
+			or allow and ((cast.notInterruptible and not frame.castInterruptible))) then passed = true else return end
 		end
 	end
 
@@ -1292,78 +1313,61 @@ function NP:StyleFilterConditionCheck(frame, event, arg1, arg2, filter, trigger)
 	end
 
 	-- Pass it along
-	if passed then
-		NP:StyleFilterPass(frame, event, filter.actions)
-	end
+	return passed
 end
 
-function NP:StyleFilterGetElement(object, actions)
-	if not actions then
-		return wipe(object)
-	end
+function NP:StyleFilterTempElement(object, actions)
+	if not actions then return wipe(object) end
 
-	object.glow = actions.glow and actions.glow.enable
-	object.colors = actions.colors and actions.colors.enable
-	object.border = actions.border and actions.border.enable
-	object.texture = actions.texture and actions.texture.enable
-	object.flash = actions.flash and actions.flash.enable
+	object.glow = actions.glow and actions.glow.enable or nil
+	object.colors = actions.colors and actions.colors.enable or nil
+	object.border = actions.border and actions.border.enable or nil
+	object.texture = actions.texture and actions.texture.enable or nil
+	object.flash = actions.flash and actions.flash.enable or nil
 
 	return object
 end
 
-function NP:StyleFilterGetGeneral(object, actions)
-	if not actions then
-		return wipe(object)
-	end
+function NP:StyleFilterTempGeneral(object, actions)
+	if not actions then return wipe(object) end
 
-	object.visibility = actions.hide
-	object.nameOnly = actions.nameOnly
-	object.portrait = actions.usePortrait
-	object.scale = actions.scale ~= 1
-	object.alpha = actions.alpha ~= -1
-	object.sound = actions.sound and actions.sound.enable and actions.sound.soundFile ~= ''
+	object.visibility = actions.hide or nil
+	object.nameOnly = actions.nameOnly or nil
+	object.portrait = actions.usePortrait or nil
+	object.scale = actions.scale ~= 1 or nil
+	object.alpha = actions.alpha ~= -1 or nil
+	object.sound = actions.sound and actions.sound.enable and actions.sound.soundFile ~= '' or nil
 
 	return object
 end
 
-function NP:StyleFilterGetTags(object, actions)
-	if not actions or not actions.tags then
-		wipe(object)
-	end
+function NP:StyleFilterTempTags(object, actions)
+	if not actions or not actions.tags then return wipe(object) end
 
-	object.name = actions.tags.name and actions.tags.name ~= ''
-	object.power = actions.tags.power and actions.tags.power ~= ''
-	object.health = actions.tags.health and actions.tags.health ~= ''
-	object.title = actions.tags.title and actions.tags.title ~= ''
-	object.level = actions.tags.level and actions.tags.level ~= ''
+	object.name = actions.tags.name and actions.tags.name ~= '' or nil
+	object.power = actions.tags.power and actions.tags.power ~= '' or nil
+	object.health = actions.tags.health and actions.tags.health ~= '' or nil
+	object.title = actions.tags.title and actions.tags.title ~= '' or nil
+	object.level = actions.tags.level and actions.tags.level ~= '' or nil
 
 	return object
 end
 
-function NP:StyleFilterPass(frame, event, actions)
+function NP:StyleFilterPass(frame, event, filter, temp)
 	local db = NP:PlateDB(frame)
 
-	local health = NP:StyleFilterGetElement(frame.changesHealth, db.health.enable and actions.health)
-	local power = NP:StyleFilterGetElement(frame.changesPower, db.power.enable and actions.power)
-	local castbar = NP:StyleFilterGetElement(frame.changesCastbar, db.castbar.enable and actions.castbar)
-	local general = NP:StyleFilterGetGeneral(frame.changesGeneral, actions)
-	local tags = NP:StyleFilterGetTags(frame.changesTags, actions)
+	-- populate the temporary tables for StyleFilterChanges
+	NP:StyleFilterTempElement(temp.health, db.health.enable and filter.actions.health)
+	NP:StyleFilterTempElement(temp.power, db.power.enable and filter.actions.power)
+	NP:StyleFilterTempElement(temp.castbar, db.castbar.enable and filter.actions.castbar)
+	NP:StyleFilterTempGeneral(temp.general, filter.actions)
+	NP:StyleFilterTempTags(temp.tags, filter.actions)
 
-	NP:StyleFilterSetChanges(frame, event, actions, general, tags, health, power, castbar)
-end
+	-- use this to export what is changed
+	E:CopyTable(frame.StyleFilterChanges, temp)
 
-function NP:StyleFilterClear(frame)
-	if frame == NP.TestFrame then return end
-
-	wipe(frame.changesChanged) -- lets get a fresh table
-
-	local changes = E:CopyTable(frame.changesChanged, frame.StyleFilterChanges, true) -- store the changes
-
-	wipe(frame.StyleFilterChanges) -- clean out the table
-
-	if next(changes) then -- lets restore what was changed
-		NP:StyleFilterClearChanges(frame, changes)
-	end
+	-- execute some changes
+	NP:StyleFilterSetChanges(frame, event, filter, temp)
 end
 
 function NP:StyleFilterSort(place)
@@ -1383,13 +1387,41 @@ function NP:StyleFilterTargetFunction(_, unit)
 end
 
 function NP:StyleFilterCastingFunction(event, unit, guid, spellID)
-	self.channeling = event == 'UNIT_SPELLCAST_CHANNEL_START' or nil
-	self.casting = event == 'UNIT_SPELLCAST_START' or nil
+	if event == 'UNIT_SPELLCAST_INTERRUPTIBLE' then
+		self.castInterruptible = true
+	elseif event == 'UNIT_SPELLCAST_NOT_INTERRUPTIBLE' then
+		self.castInterruptible = nil
+	else
+		self.castEmpowering = event == 'UNIT_SPELLCAST_EMPOWER_START' or nil
+		self.castChanneling = event == 'UNIT_SPELLCAST_CHANNEL_START' or nil
+		self.castCasting = event == 'UNIT_SPELLCAST_START' or nil
 
-	local active = self.channeling or self.casting
-	self.castingSpellID = (active and spellID) or nil
-	self.castingGUID = (active and guid) or nil
+		local _, notInterruptible
+		if self.castChanneling or self.castEmpowering then
+			_, _, _, _, _, _, notInterruptible = UnitChannelInfo(unit)
+		elseif self.castCasting then
+			_, _, _, _, _, _, _, notInterruptible = UnitCastingInfo(unit)
+		end
+
+		local active = self.castChanneling or self.castCasting or self.castEmpowering
+		self.castSpellID = (active and spellID) or nil
+		self.castGUID = (active and guid) or nil
+		self.castInterruptible = (active and not notInterruptible) or nil
+	end
 end
+
+NP.StyleFilterCastEvents = {
+	UNIT_SPELLCAST_START = 1,			-- start
+	UNIT_SPELLCAST_CHANNEL_START = 1,
+	UNIT_SPELLCAST_STOP = 1,			-- stop
+	UNIT_SPELLCAST_CHANNEL_STOP = 1,
+	UNIT_SPELLCAST_FAILED = 1,			-- fail
+	UNIT_SPELLCAST_INTERRUPTED = 1,
+	UNIT_SPELLCAST_INTERRUPTIBLE = 1,
+	UNIT_SPELLCAST_NOT_INTERRUPTIBLE = 1,
+	UNIT_SPELLCAST_EMPOWER_START = E.Retail and 1 or nil,
+	UNIT_SPELLCAST_EMPOWER_STOP = E.Retail and 1 or nil
+}
 
 NP.StyleFilterEventFunctions = { -- a prefunction to the injected ouf watch
 	PLAYER_TARGET_CHANGED = function(self)
@@ -1410,14 +1442,11 @@ NP.StyleFilterEventFunctions = { -- a prefunction to the injected ouf watch
 	VEHICLE_UPDATE = NP.StyleFilterVehicleFunction,
 	UNIT_ENTERED_VEHICLE = NP.StyleFilterVehicleFunction,
 	UNIT_EXITED_VEHICLE = NP.StyleFilterVehicleFunction,
-
-	UNIT_SPELLCAST_START = NP.StyleFilterCastingFunction,
-	UNIT_SPELLCAST_CHANNEL_START = NP.StyleFilterCastingFunction,
-	UNIT_SPELLCAST_STOP = NP.StyleFilterCastingFunction,
-	UNIT_SPELLCAST_CHANNEL_STOP = NP.StyleFilterCastingFunction,
-	UNIT_SPELLCAST_FAILED = NP.StyleFilterCastingFunction,
-	UNIT_SPELLCAST_INTERRUPTED = NP.StyleFilterCastingFunction
 }
+
+for event in next, NP.StyleFilterCastEvents do
+	NP.StyleFilterEventFunctions[event] = NP.StyleFilterCastingFunction
+end
 
 NP.StyleFilterSetVariablesAllowed = {
 	UNIT_TARGET = true,
@@ -1448,10 +1477,14 @@ function NP:StyleFilterClearVariables(nameplate)
 	nameplate.isTargetingMe = nil
 	nameplate.raidTargetIndex = nil
 	nameplate.threatScale = nil
-	nameplate.isCasting = nil
-	nameplate.isChanneling = nil
-	nameplate.castingSpellID = nil
-	nameplate.castingGUID = nil
+
+	-- casting stuff
+	nameplate.castInterruptible = nil
+	nameplate.castCasting = nil
+	nameplate.castChanneling = nil
+	nameplate.castEmpowering = nil
+	nameplate.castSpellID = nil
+	nameplate.castGUID = nil
 end
 
 NP.StyleFilterTriggerList = {} -- configured filters enabled with sorted priority
@@ -1501,15 +1534,6 @@ if E.Classic then
 	NP.StyleFilterDefaultEvents.UNIT_HEALTH_FREQUENT = false
 end
 
-NP.StyleFilterCastEvents = {
-	UNIT_SPELLCAST_START = 1,			-- start
-	UNIT_SPELLCAST_CHANNEL_START = 1,
-	UNIT_SPELLCAST_STOP = 1,			-- stop
-	UNIT_SPELLCAST_CHANNEL_STOP = 1,
-	UNIT_SPELLCAST_FAILED = 1,			-- fail
-	UNIT_SPELLCAST_INTERRUPTED = 1
-}
-
 for event in next, NP.StyleFilterCastEvents do
 	NP.StyleFilterDefaultEvents[event] = false
 end
@@ -1535,6 +1559,7 @@ function NP:StyleFilterConfigure()
 				-- NOTE: -1 is force, 0 for fake events, 1 is real events, 2 has a unitToken but cant use RegisterUnitEvent
 				events.PLAYER_TARGET_CHANGED = 1
 				events.NAME_PLATE_UNIT_ADDED = 2
+				events.NAME_PLATE_UNIT_REMOVED = 2
 				events.UNIT_FACTION = 1 -- frameType can change here
 				events.FAKE_AuraWaitTimer = 0 -- for minTimeLeft and maxTimeLeft aura trigger
 				events.FAKE_BossModAuras = 0 -- support to trigger filters based on Boss Mod Auras
@@ -1569,10 +1594,6 @@ function NP:StyleFilterConfigure()
 
 				if t.raidTarget and (t.raidTarget.star or t.raidTarget.circle or t.raidTarget.diamond or t.raidTarget.triangle or t.raidTarget.moon or t.raidTarget.square or t.raidTarget.cross or t.raidTarget.skull) then
 					events.RAID_TARGET_UPDATE = 1
-				end
-
-				if (t.amountBelow or 0) > 0 or (t.amountAbove or 0) > 0 then
-					events.NAME_PLATE_UNIT_REMOVED = 2
 				end
 
 				if t.unitInVehicle then
@@ -1706,21 +1727,31 @@ function NP:StyleFilterHiddenState(changes)
 	return general and ((general.nameOnly and general.visibility and 3) or (general.nameOnly and 2) or (general.visibility and 1))
 end
 
-function NP:StyleFilterUpdate(frame, event, arg1, arg2)
-	if frame == NP.TestFrame or not frame.StyleFilterChanges or not NP.StyleFilterTriggerEvents[event] then return end
+do
+	local temp = { general = {}, tags = {}, health = {}, power = {}, castbar = {} } -- states
 
-	local state = NP:StyleFilterHiddenState(frame.StyleFilterChanges)
+	function NP:StyleFilterUpdate(frame, event, arg1, arg2)
+		if frame == NP.TestFrame or not frame.StyleFilterChanges or not NP.StyleFilterTriggerEvents[event] then return end
 
-	NP:StyleFilterClear(frame)
+		-- store the previous visibility state
+		local state = NP:StyleFilterHiddenState(frame.StyleFilterChanges)
 
-	for filterNum in next, NP.StyleFilterTriggerList do
-		local filter = E.global.nameplates.filters[NP.StyleFilterTriggerList[filterNum][1]]
-		if filter then
-			NP:StyleFilterConditionCheck(frame, event, arg1, arg2, filter, filter.triggers)
+		-- reset the plate back
+		if next(frame.StyleFilterChanges) then
+			NP:StyleFilterClearChanges(frame)
 		end
-	end
 
-	NP:StyleFilterClearVisibility(frame, state)
+		if event ~= 'NAME_PLATE_UNIT_REMOVED' then
+			for filterNum in next, NP.StyleFilterTriggerList do
+				local filter = E.global.nameplates.filters[NP.StyleFilterTriggerList[filterNum][1]]
+				if filter and NP:StyleFilterConditionCheck(frame, event, arg1, arg2, filter, filter.triggers) then
+					NP:StyleFilterPass(frame, event, filter, temp)
+				end
+			end
+		end
+
+		NP:StyleFilterClearVisibility(frame, event, state)
+	end
 end
 
 do -- oUF style filter inject watch functions without actually registering any events
@@ -1735,6 +1766,8 @@ do -- oUF style filter inject watch functions without actually registering any e
 
 		local verifyUnit = (trigger ~= 2 and NP.StyleFilterDefaultEvents[event]) or (arg1 and arg1 == self.unit)
 		if not verifyUnit then return end -- this event doesnt match the unit, this checks unitless
+
+		-- REMOVED does not make it here, so we call inside of NamePlateCallBack
 
 		local allowUpdate = not NP.StyleFilterAuraEvents[event] or not ElvUF:ShouldSkipAuraUpdate(self, event, arg1, arg2)
 		if not allowUpdate then return end -- should we allow the update, aura events that can help populate cache
@@ -1826,14 +1859,6 @@ function NP:StyleFilterEvents(nameplate)
 	nameplate.StyleFilterChanges = {}
 	nameplate.DebuffTickers = {}
 	nameplate.BuffTickers = {}
-
-	-- tables for handling changes
-	nameplate.changesChanged = {}
-	nameplate.changesGeneral = {}
-	nameplate.changesTags = {}
-	nameplate.changesHealth = {}
-	nameplate.changesPower = {}
-	nameplate.changesCastbar = {}
 
 	-- we may fire events before having any aura data for the unit
 	-- populate an empty table because not all events update the cache
