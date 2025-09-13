@@ -161,10 +161,11 @@ end
 
 do
 	local slashTable = {}
-	local sub = string.sub
+	local slashNoUpdatesTable = {}
+	local strsub = string.sub
 	-- Registers a slash command
-	function API.RegisterSlashCommand(rawSlashName, slashFunc)
-		local slashName = sub(rawSlashName, 2)
+	function API.RegisterSlashCommand(rawSlashName, slashFunc, noUpdates)
+		local slashName = strsub(rawSlashName, 2)
 		if not slashTable[slashName] then
 			_G["SLASH_"..slashName.."1"] = rawSlashName
 			SlashCmdList[slashName] = function(text)
@@ -175,7 +176,12 @@ do
 				end
 			end
 		end
-		slashTable[slashName] = slashFunc
+		if not slashNoUpdatesTable[slashName] then
+			slashTable[slashName] = slashFunc
+			if noUpdates then
+				slashNoUpdatesTable[slashName] = true
+			end
+		end
 	end
 end
 
@@ -197,7 +203,7 @@ do
 end
 
 --------------------------------------------------------------------------------
--- Tools option tables
+-- Tools/Plugins option tables
 --
 
 do
@@ -212,16 +218,35 @@ do
 		end
 		return copy
 	end
-	local tbl = {}
-	-- Get all AceGUI option tables under the "Tools" category
-	function API.GetToolOptionTables()
-		return CopyTable(tbl)
+
+	-- Tools
+	do
+		local tbl = {}
+		-- Get all AceGUI option tables under the "Tools" category
+		function API.GetToolOptions()
+			return CopyTable(tbl)
+		end
+		-- Register an AceGUI options table for a module under the "Tools" category
+		function API.RegisterToolOptions(key, settingsTable)
+			if type(key) ~= "string" then error("The key needs to be a string.") end
+			if type(settingsTable) ~= "table" then error("The settings table needs to be a table.") end
+			tbl[key] = settingsTable
+		end
 	end
-	-- Register an AceGUI options table for a module under the "Tools" category
-	function API.SetToolOptionsTable(key, settingsTable)
-		if type(key) ~= "string" then error("The key needs to be a string.") end
-		if type(settingsTable) ~= "table" then error("The settings table needs to be a table.") end
-		tbl[key] = settingsTable
+
+	-- Plugins
+	do
+		local tbl = {}
+		-- Get all AceGUI option tables under the "Tools" category
+		function API.GetPluginOptions()
+			return CopyTable(tbl)
+		end
+		-- Register an AceGUI options table for a module under the "Tools" category
+		function API.RegisterPluginOptions(key, settingsTable)
+			if type(key) ~= "string" then error("The key needs to be a string.") end
+			if type(settingsTable) ~= "table" then error("The settings table needs to be a table.") end
+			tbl[key] = settingsTable
+		end
 	end
 end
 

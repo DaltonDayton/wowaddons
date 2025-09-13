@@ -1,8 +1,8 @@
-local W, F, E, L = unpack((select(2, ...)))
+local W, F, E, L = unpack((select(2, ...))) ---@type WindTools, Functions, ElvUI, table
 local KI = W:GetModule("KeystoneInfo")
-local S = W.Modules.Skins
-local MF = W.Modules.MoveFrames
-local LL = W:NewModule("LFGList", "AceHook-3.0", "AceEvent-3.0")
+local S = W.Modules.Skins ---@type Skins
+local MF = W.Modules.MoveFrames ---@type MoveFrames
+local LL = W:NewModule("LFGList", "AceHook-3.0", "AceEvent-3.0") ---@class LFGList : AceModule, AceHook-3.0, AceEvent-3.0
 local LFGPI = W.Utilities.LFGPlayerInfo
 local C = W.Utilities.Color
 local LSM = E.Libs.LSM
@@ -34,9 +34,9 @@ local GroupFinderFrameGroupButton_OnClick = GroupFinderFrameGroupButton_OnClick
 local InCombatLockdown = InCombatLockdown
 local IsInGroup = IsInGroup
 local IsShiftKeyDown = IsShiftKeyDown
-local LFGListCategorySelectionButton_OnClick = LFGListCategorySelectionButton_OnClick
-local LFGListCategorySelection_StartFindGroup = LFGListCategorySelection_StartFindGroup
-local PVEFrame_ShowFrame = PVEFrame_ShowFrame
+local LFGListSearchPanel_Clear = LFGListSearchPanel_Clear
+local LFGListSearchPanel_DoSearch = LFGListSearchPanel_DoSearch
+local LFGListSearchPanel_SetCategory = LFGListSearchPanel_SetCategory
 local UnitClassBase = UnitClassBase
 local UnitGroupRolesAssigned = UnitGroupRolesAssigned
 local UnitName = UnitName
@@ -59,9 +59,12 @@ local C_MythicPlus_GetRewardLevelForDifficultyLevel = C_MythicPlus.GetRewardLeve
 local C_MythicPlus_GetRunHistory = C_MythicPlus.GetRunHistory
 local C_SpecializationInfo_GetSpecialization = C_SpecializationInfo.GetSpecialization
 local C_SpecializationInfo_GetSpecializationInfo = C_SpecializationInfo.GetSpecializationInfo
+local C_Timer_After = C_Timer.After
 local Enum_LFGListFilter = Enum.LFGListFilter
 
 local GROUP_FINDER_CATEGORY_ID_DUNGEONS = GROUP_FINDER_CATEGORY_ID_DUNGEONS
+local GROUP_FINDER_CUSTOM_CATEGORY = GROUP_FINDER_CUSTOM_CATEGORY
+local LE_PARTY_CATEGORY_INSTANCE = LE_PARTY_CATEGORY_INSTANCE
 
 local seasonGroups = C_LFGList_GetAvailableActivityGroups(
 	GROUP_FINDER_CATEGORY_ID_DUNGEONS,
@@ -154,7 +157,7 @@ function LL:GetPlayerDB(key)
 	local globalDB = E.global.WT.misc.lfgList
 
 	if not globalDB then
-		return
+		return {}
 	end
 
 	if not globalDB[E.myrealm] then
@@ -169,7 +172,7 @@ function LL:GetPlayerDB(key)
 		globalDB[E.myrealm][E.myname][key] = {}
 	end
 
-	return globalDB[E.myrealm][E.myname][key]
+	return globalDB[E.myrealm][E.myname][key] --[[@as table]]
 end
 
 function LL:UpdateAdditionalText(button, score, best)
@@ -255,7 +258,7 @@ function LL:ReskinIcon(parent, icon, role, data)
 				local leader = parent:CreateTexture(nil, "OVERLAY")
 				leader:SetTexture(W.Media.Icons.leader)
 				leader:Size(10, 8)
-				leader:SetPoint("BOTTOM", icon, "TOP", 0, 1)
+				leader:Point("BOTTOM", icon, "TOP", 0, 1)
 				icon.leader = leader
 			end
 
@@ -295,17 +298,14 @@ function LL:UpdateEnumerate(Enumerate)
 		return
 	end
 
-	local cache = {
-		TANK = {},
-		HEALER = {},
-		DAMAGER = {},
-	}
+	local cache = { TANK = {}, HEALER = {}, DAMAGER = {} }
 
 	for i = 1, result.numMembers do
-		local info = C_LFGList_GetSearchResultPlayerInfo(button.resultID, i)
-		if info then
-			local role, class, spec = info.assignedRole, info.classFilename, info.specName
-			tinsert(cache[role], { class, spec, i == 1 })
+		local playerInfo = C_LFGList_GetSearchResultPlayerInfo(button.resultID, i)
+		if playerInfo then
+			local role, class, spec, isLeader =
+				playerInfo.assignedRole, playerInfo.classFilename, playerInfo.specName, playerInfo.isLeader
+			tinsert(cache[role], { class, spec, isLeader })
 		end
 	end
 
@@ -345,7 +345,7 @@ function LL:UpdateEnumerate(Enumerate)
 			and result.leaderDungeonScoreInfo[1]
 			and result.leaderDungeonScoreInfo[1].bestRunLevel
 		if bestRun then
-			local template = result.leaderDungeonScoreInfo[1].finishedSuccess and "success" or "greyLight"
+			local template = result.leaderDungeonScoreInfo[1].finishedSuccess and "green-400" or "gray-400"
 			bestText = C.StringByTemplate("+" .. bestRun, template)
 		end
 
@@ -373,28 +373,27 @@ end
 
 function LL:InitializePartyKeystoneFrame()
 	local frame = CreateFrame("Frame", "WTPartyKeystoneFrame", _G.ChallengesFrame)
-	frame:SetSize(200, 150)
+	frame:Size(200, 150)
 	frame:SetTemplate("Transparent")
-
-	frame:SetPoint("BOTTOMRIGHT", _G.ChallengesFrame, "BOTTOMRIGHT", -8, 85)
+	frame:Point("BOTTOMRIGHT", _G.ChallengesFrame, "BOTTOMRIGHT", -8, 85)
 
 	frame.lines = {}
 
 	frame.title = frame:CreateFontString(nil, "OVERLAY")
 	F.SetFontWithDB(frame.title, self.db.partyKeystone.font)
-	frame.title:SetPoint("TOPLEFT", frame, "TOPLEFT", 8, -10)
+	frame.title:Point("TOPLEFT", frame, "TOPLEFT", 8, -10)
 	frame.title:SetJustifyH("LEFT")
 	frame.title:SetText(F.GetWindStyleText(L["Party Keystone"]))
 
-	frame.button = CreateFrame("Button", nil, frame, "UIPanelButtonTemplate")
-	frame.button:SetSize(60, self.db.partyKeystone.font.size + 4)
-	F.SetFontWithDB(frame.button.Text, self.db.partyKeystone.font)
-	F.SetFontOutline(frame.button.Text, nil, "-2")
-	frame.button:SetText(L["More"])
-	frame.button:SetPoint("TOPRIGHT", frame, "TOPRIGHT", -8, -8)
-	S:Proxy("HandleButton", frame.button)
+	frame.detailsButton = CreateFrame("Button", nil, frame, "UIPanelButtonTemplate")
+	frame.detailsButton:Size(40, self.db.partyKeystone.font.size + 4)
+	F.SetFontWithDB(frame.detailsButton.Text, self.db.partyKeystone.font)
+	F.SetFontOutline(frame.detailsButton.Text, nil, "-2")
+	frame.detailsButton:SetText(L["More"])
+	frame.detailsButton:Point("TOPRIGHT", frame, "TOPRIGHT", -8, -8)
+	S:Proxy("HandleButton", frame.detailsButton)
 
-	frame.button:SetScript("OnClick", function()
+	frame.detailsButton:SetScript("OnClick", function()
 		if _G.SlashCmdList["KEYSTONE"] then
 			_G.SlashCmdList["KEYSTONE"]("", FakeChatEditBox)
 		else
@@ -402,25 +401,69 @@ function LL:InitializePartyKeystoneFrame()
 		end
 	end)
 
+	frame.detailsButton:SetScript("OnEnter", function(s)
+		_G.GameTooltip:SetOwner(s, "ANCHOR_TOP", 0, 3)
+		_G.GameTooltip:ClearLines()
+		_G.GameTooltip:AddLine(L["Click to open Details! keystone info window."])
+		_G.GameTooltip:Show()
+	end)
+
+	frame.detailsButton:SetScript("OnLeave", function()
+		_G.GameTooltip:Hide()
+	end)
+
+	frame.sendToPartyChat = CreateFrame("Button", nil, frame, "UIPanelButtonTemplate")
+	frame.sendToPartyChat:Size(40, self.db.partyKeystone.font.size + 4)
+	F.SetFontWithDB(frame.sendToPartyChat.Text, self.db.partyKeystone.font)
+	F.SetFontOutline(frame.sendToPartyChat.Text, nil, "-2")
+	frame.sendToPartyChat:SetText(L["Send"])
+	frame.sendToPartyChat:Point("RIGHT", frame.detailsButton, "LEFT", -5, 0)
+	S:Proxy("HandleButton", frame.sendToPartyChat)
+
+	frame.sendToPartyChat:SetScript("OnClick", function()
+		if not IsInGroup() then
+			F.Print(L["You are not in a party."])
+			return
+		end
+
+		if not frame.partyMessages or #frame.partyMessages == 0 then
+			return
+		end
+
+		for i, msg in ipairs(frame.partyMessages) do
+			E:Delay((i - 1) * 0.5, function()
+				_G.SendChatMessage(msg, IsInGroup(LE_PARTY_CATEGORY_INSTANCE) and "INSTANCE_CHAT" or "PARTY")
+			end)
+		end
+	end)
+
+	frame.sendToPartyChat:SetScript("OnEnter", function(s)
+		_G.GameTooltip:SetOwner(s, "ANCHOR_TOP", 0, 3)
+		_G.GameTooltip:ClearLines()
+		_G.GameTooltip:AddLine(L["Click to send keystone info to party chat."])
+		_G.GameTooltip:Show()
+	end)
+
+	frame.sendToPartyChat:SetScript("OnLeave", function()
+		_G.GameTooltip:Hide()
+	end)
+
 	for i = 1, 5 do
 		local yOffset = (2 + self.db.partyKeystone.font.size) * (i - 1) + 5
 
 		local rightText = frame:CreateFontString(nil, "OVERLAY")
 		F.SetFontWithDB(rightText, self.db.partyKeystone.font)
-		rightText:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -10, yOffset)
+		rightText:Point("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -10, yOffset)
 		rightText:SetJustifyH("RIGHT")
 		rightText:SetWidth(90)
 
 		local leftText = frame:CreateFontString(nil, "OVERLAY")
 		F.SetFontWithDB(leftText, self.db.partyKeystone.font)
-		leftText:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -100, yOffset)
+		leftText:Point("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -100, yOffset)
 		leftText:SetJustifyH("LEFT")
 		leftText:SetWidth(90)
 
-		frame.lines[i] = {
-			left = leftText,
-			right = rightText,
-		}
+		frame.lines[i] = { left = leftText, right = rightText }
 	end
 
 	LL.partyKeystoneFrame = frame
@@ -445,6 +488,8 @@ function LL:UpdatePartyKeystoneFrame()
 	local blockWidth = floor(95 * scale)
 	local cache = {}
 
+	frame.partyMessages = {}
+
 	for i = 1, 5 do
 		local unit = i == 1 and "player" or "party" .. i - 1
 		local data = KI:UnitData(unit)
@@ -458,27 +503,34 @@ function LL:UpdatePartyKeystoneFrame()
 				player = F.CreateClassColorString(UnitName(unit), UnitClassBase(unit)),
 				icon = mapData.tex,
 			})
+
+			tinsert(frame.partyMessages, format("%s: %s (+%d)", UnitName(unit), mapData.name, data.level))
 		end
 	end
 
 	F.SetFontWithDB(frame.title, self.db.partyKeystone.font)
 
-	frame.button:SetSize(floor(60 * scale), self.db.partyKeystone.font.size + 4)
-	F.SetFontWithDB(frame.button.Text, self.db.partyKeystone.font)
-	F.SetFontOutline(frame.button.Text, nil, "-2")
+	frame.detailsButton:Size(floor(40 * scale), self.db.partyKeystone.font.size + 4)
+	F.SetFontWithDB(frame.detailsButton.Text, self.db.partyKeystone.font)
+	F.SetFontOutline(frame.detailsButton.Text, nil, "-2")
+
+	frame.sendToPartyChat:SetEnabled(#frame.partyMessages ~= 0)
+	frame.sendToPartyChat:Size(floor(40 * scale), self.db.partyKeystone.font.size + 4)
+	F.SetFontWithDB(frame.sendToPartyChat.Text, self.db.partyKeystone.font)
+	F.SetFontOutline(frame.sendToPartyChat.Text, nil, "-2")
 
 	for i = 1, 5 do
 		local yOffset = (heightIncrement + self.db.partyKeystone.font.size) * (i - 1) + 10
 
 		F.SetFontWithDB(frame.lines[i].right, self.db.partyKeystone.font)
 		frame.lines[i].right:ClearAllPoints()
-		frame.lines[i].right:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -10, yOffset)
+		frame.lines[i].right:Point("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -10, yOffset)
 		frame.lines[i].right:SetJustifyH("RIGHT")
 		frame.lines[i].right:SetWidth(blockWidth)
 
 		F.SetFontWithDB(frame.lines[i].left, self.db.partyKeystone.font)
 		frame.lines[i].left:ClearAllPoints()
-		frame.lines[i].left:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -blockWidth - 9, yOffset)
+		frame.lines[i].left:Point("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -blockWidth - 9, yOffset)
 		frame.lines[i].left:SetWidth(blockWidth)
 
 		if cache[i] then
@@ -494,7 +546,7 @@ function LL:UpdatePartyKeystoneFrame()
 		end
 	end
 
-	frame:SetSize(
+	frame:Size(
 		blockWidth * 2 + 20,
 		20 + (heightIncrement + self.db.partyKeystone.font.size) * #cache + self.db.partyKeystone.font.size
 	)
@@ -514,6 +566,28 @@ function LL:RefreshSearch()
 	_G.LFGListSearchPanel_DoSearch(_G.LFGListFrame.SearchPanel)
 end
 
+function LL:RepositionRaiderIOProfileTooltip(frame)
+	local anchor = _G.RaiderIO_ProfileTooltipAnchor
+	if not anchor then
+		return
+	end
+
+	if not self:IsHooked(anchor, "SetPoint") then
+		self:RawHook(anchor, "SetPoint", function(_, arg1, arg2, arg3, arg4, arg5)
+			if arg2 and (arg2 == _G.PVEFrame or arg2 == frame) then
+				arg2 = frame:IsShown() and frame or _G.PVEFrame
+			end
+			self.hooks[anchor]["SetPoint"](anchor, arg1, arg2, arg3, arg4, arg5)
+		end, true)
+	end
+
+	local point = { anchor:GetPoint(1) }
+	if #point > 0 then
+		anchor:ClearAllPoints()
+		anchor:Point(unpack(point))
+	end
+end
+
 function LL:InitializeRightPanel()
 	if self.rightPanel then
 		return
@@ -521,70 +595,47 @@ function LL:InitializeRightPanel()
 
 	local frame = CreateFrame("Frame", nil, _G.PVEFrame)
 	frame:SetWidth(W.ChineseLocale and 190 or 220)
-	frame:SetPoint("TOPLEFT", _G.PVEFrame, "TOPRIGHT", 4, 0)
-	frame:SetPoint("BOTTOMLEFT", _G.PVEFrame, "BOTTOMRIGHT", 4, 0)
+	frame:Point("TOPLEFT", _G.PVEFrame, "TOPRIGHT", 4, 0)
+	frame:Point("BOTTOMLEFT", _G.PVEFrame, "BOTTOMRIGHT", 4, 0)
 	frame:SetTemplate("Transparent")
 	S:CreateShadowModule(frame)
 	MF:InternalHandle(frame, "PVEFrame")
 
-	hooksecurefunc(frame, "Show", function(f)
-		if _G.RaiderIO_ProfileTooltipAnchor then
-			local point = { _G.RaiderIO_ProfileTooltipAnchor:GetPoint(1) }
+	self:SecureHook(frame, "Show", "RepositionRaiderIOProfileTooltip")
+	self:SecureHook(frame, "Hide", "RepositionRaiderIOProfileTooltip")
 
-			if not _G.RaiderIO_ProfileTooltipAnchor.__SetPoint then
-				_G.RaiderIO_ProfileTooltipAnchor.__SetPoint = _G.RaiderIO_ProfileTooltipAnchor.SetPoint
-				_G.RaiderIO_ProfileTooltipAnchor.SetPoint = function(_, arg1, arg2, arg3, arg4, arg5)
-					if arg2 and (arg2 == _G.PVEFrame or arg2 == f) then
-						arg2 = f:IsShown() and f or _G.PVEFrame
-					end
-					_G.RaiderIO_ProfileTooltipAnchor:__SetPoint(arg1, arg2, arg3, arg4, arg5)
-				end
-			end
-
-			if #point > 0 then
-				_G.RaiderIO_ProfileTooltipAnchor:ClearAllPoints()
-				_G.RaiderIO_ProfileTooltipAnchor:SetPoint(unpack(point))
-			end
+	local function HandleAutoJoin(module, resultID, button)
+		if not module.db.rightPanel.autoJoin then
+			return
 		end
-	end)
 
-	hooksecurefunc(frame, "Hide", function(f)
-		if _G.RaiderIO_ProfileTooltipAnchor then
-			local point = { _G.RaiderIO_ProfileTooltipAnchor:GetPoint(1) }
-
-			if not _G.RaiderIO_ProfileTooltipAnchor.__SetPoint then
-				_G.RaiderIO_ProfileTooltipAnchor.__SetPoint = _G.RaiderIO_ProfileTooltipAnchor.SetPoint
-				_G.RaiderIO_ProfileTooltipAnchor.SetPoint = function(_, arg1, arg2, arg3, arg4, arg5)
-					if arg2 and (arg2 == _G.PVEFrame or arg2 == f) then
-						arg2 = f:IsShown() and f or _G.PVEFrame
-					end
-					_G.RaiderIO_ProfileTooltipAnchor:__SetPoint(arg1, arg2, arg3, arg4, arg5)
-				end
-			end
-
-			if #point > 0 then
-				_G.RaiderIO_ProfileTooltipAnchor:ClearAllPoints()
-				_G.RaiderIO_ProfileTooltipAnchor:SetPoint(unpack(point))
-			end
-		end
-	end)
-
-	hooksecurefunc("LFGListSearchEntry_OnClick", function(s, button)
-		if not self.db.rightPanel.autoJoin then
+		if button == "RightButton" then
 			return
 		end
 
 		local panel = _G.LFGListFrame.SearchPanel
-		if
-			button ~= "RightButton"
-			and _G.LFGListSearchPanelUtil_CanSelectResult(s.resultID)
-			and panel.SignUpButton:IsEnabled()
-		then
-			if panel.selectedResult ~= s.resultID then
-				_G.LFGListSearchPanel_SelectResult(panel, s.resultID)
+		if _G.LFGListSearchPanelUtil_CanSelectResult(resultID) and panel.SignUpButton:IsEnabled() then
+			if panel.selectedResult ~= resultID then
+				_G.LFGListSearchPanel_SelectResult(panel, resultID)
 			end
 			_G.LFGListSearchPanel_SignUp(panel)
 		end
+	end
+
+	hooksecurefunc("LFGListSearchEntry_Update", function(entry)
+		if entry.autoJoinHandled then
+			return
+		end
+
+		entry:HookScript("OnClick", function(f, button)
+			if button == "LeftButton" then
+				C_Timer_After(0.01, function()
+					HandleAutoJoin(LL, f.resultID, button)
+				end)
+			end
+		end)
+
+		entry.autoJoinHandled = true
 	end)
 
 	_G.LFGListApplicationDialog:HookScript("OnShow", function(s)
@@ -599,8 +650,8 @@ function LL:InitializeRightPanel()
 
 	local affixes = C_MythicPlus_GetCurrentAffixes()
 	frame.affix = CreateFrame("Frame", nil, frame)
-	frame.affix:SetPoint("TOPLEFT", frame, "TOPLEFT", 10, -10)
-	frame.affix:SetPoint("TOPRIGHT", frame, "TOPRIGHT", -10, -10)
+	frame.affix:Point("TOPLEFT", frame, "TOPLEFT", 10, -10)
+	frame.affix:Point("TOPRIGHT", frame, "TOPRIGHT", -10, -10)
 	frame.affix:SetHeight(32)
 
 	local buttonSize = 32
@@ -610,8 +661,8 @@ function LL:InitializeRightPanel()
 	for i = 1, #affixes do
 		local affix = frame.affix:CreateTexture(nil, "ARTWORK")
 		affix:CreateBackdrop()
-		affix:SetSize(buttonSize, buttonSize)
-		affix:SetPoint("LEFT", frame.affix, "LEFT", 2 + (i - 1) * (buttonSize + space), 0)
+		affix:Size(buttonSize, buttonSize)
+		affix:Point("LEFT", frame.affix, "LEFT", 2 + (i - 1) * (buttonSize + space), 0)
 		local fileDataID = select(3, C_ChallengeMode_GetAffixInfo(affixes[i].id))
 		affix:SetTexture(fileDataID)
 		affix:SetTexCoord(unpack(E.TexCoords))
@@ -638,11 +689,11 @@ function LL:InitializeRightPanel()
 
 	local filters = CreateFrame("Frame", nil, frame)
 	if frame.affix then
-		filters:SetPoint("TOPLEFT", frame.affix, "BOTTOMLEFT", 0, -10)
-		filters:SetPoint("TOPRIGHT", frame.affix, "BOTTOMRIGHT", 0, -10)
+		filters:Point("TOPLEFT", frame.affix, "BOTTOMLEFT", 0, -10)
+		filters:Point("TOPRIGHT", frame.affix, "BOTTOMRIGHT", 0, -10)
 	else
-		filters:SetPoint("TOPLEFT", frame, "TOPLEFT", 10, -10)
-		filters:SetPoint("TOPRIGHT", frame, "TOPRIGHT", -10, -10)
+		filters:Point("TOPLEFT", frame, "TOPLEFT", 10, -10)
+		filters:Point("TOPRIGHT", frame, "TOPRIGHT", -10, -10)
 	end
 
 	filters:SetHeight(6 * 8 + 28 * 4 + 32 * 3)
@@ -676,19 +727,19 @@ function LL:InitializeRightPanel()
 	for i, mapID in ipairs(mapIDs) do
 		local filterButton = CreateFrame("Frame", nil, filters)
 		filterButton:SetTemplate()
-		filterButton:SetSize(filterButtonWidth, 28)
+		filterButton:Size(filterButtonWidth, 28)
 		local yOffset = -6 * floor((i + 1) / 2) - 28 * floor((i - 1) / 2)
 		local anchorPoint = i % 2 == 1 and "TOPLEFT" or "TOPRIGHT"
-		filterButton:SetPoint(anchorPoint, filters, anchorPoint, 0, yOffset)
+		filterButton:Point(anchorPoint, filters, anchorPoint, 0, yOffset)
 
 		filterButton.tex = filterButton:CreateTexture(nil, "ARTWORK")
-		filterButton.tex:SetSize(20, 20)
-		filterButton.tex:SetPoint("LEFT", filterButton, "LEFT", 4, 0)
+		filterButton.tex:Size(20, 20)
+		filterButton.tex:Point("LEFT", filterButton, "LEFT", 4, 0)
 		filterButton.tex:SetTexture(W.MythicPlusMapData[mapID].tex)
 
 		filterButton.name = filterButton:CreateFontString(nil, "OVERLAY")
-		filterButton.name:SetFont(E.media.normFont, 12, "OUTLINE")
-		filterButton.name:SetPoint("LEFT", filterButton.tex, "RIGHT", 8, 0)
+		filterButton.name:SetFont(E.media.normFont, 12 + self.db.rightPanel.adjustFontSize, "OUTLINE")
+		filterButton.name:Point("LEFT", filterButton.tex, "RIGHT", 8, 0)
 		filterButton.name:SetText(W.MythicPlusMapData[mapID].abbr)
 
 		addSetActive(filterButton)
@@ -708,20 +759,20 @@ function LL:InitializeRightPanel()
 
 	-- Leader Overall Score
 	local leaderScore = CreateFrame("Frame", nil, filters)
-	leaderScore:SetSize(filters:GetWidth(), 32)
-	leaderScore:SetPoint("TOP", filters, "TOP", 0, -6 * 5 - 28 * 4)
+	leaderScore:Size(filters:GetWidth(), 32)
+	leaderScore:Point("TOP", filters, "TOP", 0, -6 * 5 - 28 * 4)
 	leaderScore:SetTemplate()
 
 	leaderScore.text = leaderScore:CreateFontString(nil, "OVERLAY")
-	leaderScore.text:SetFont(E.media.normFont, 11, "OUTLINE")
-	leaderScore.text:SetPoint("LEFT", leaderScore, "LEFT", 8, 0)
+	leaderScore.text:SetFont(E.media.normFont, 11 + self.db.rightPanel.adjustFontSize, "OUTLINE")
+	leaderScore.text:Point("LEFT", leaderScore, "LEFT", 8, 0)
 	leaderScore.text:SetText(L["Leader Score Over"])
 
 	leaderScore.editBox = CreateFrame("EditBox", nil, leaderScore)
-	leaderScore.editBox:SetFont(E.media.normFont, 12, "OUTLINE")
-	leaderScore.editBox:SetSize(40, 20)
+	leaderScore.editBox:SetFont(E.media.normFont, 12 + self.db.rightPanel.adjustFontSize, "OUTLINE")
+	leaderScore.editBox:Size(40, 20)
 	leaderScore.editBox:SetJustifyH("CENTER")
-	leaderScore.editBox:SetPoint("RIGHT", -10, 0)
+	leaderScore.editBox:Point("RIGHT", leaderScore, "RIGHT", -10, 0)
 	leaderScore.editBox:SetAutoFocus(false)
 	leaderScore.editBox:SetScript("OnEscapePressed", function(editBox)
 		editBox:ClearFocus()
@@ -771,20 +822,20 @@ function LL:InitializeRightPanel()
 
 	-- Leader Dungeon Score
 	local leaderDungeonScore = CreateFrame("Frame", nil, filters)
-	leaderDungeonScore:SetSize(filters:GetWidth(), 32)
-	leaderDungeonScore:SetPoint("TOP", filters, "TOP", 0, -6 * 6 - 28 * 4 - 32)
+	leaderDungeonScore:Size(filters:GetWidth(), 32)
+	leaderDungeonScore:Point("TOP", filters, "TOP", 0, -6 * 6 - 28 * 4 - 32)
 	leaderDungeonScore:SetTemplate()
 
 	leaderDungeonScore.text = leaderDungeonScore:CreateFontString(nil, "OVERLAY")
-	leaderDungeonScore.text:SetFont(E.media.normFont, 11, "OUTLINE")
-	leaderDungeonScore.text:SetPoint("LEFT", leaderDungeonScore, "LEFT", 8, 0)
+	leaderDungeonScore.text:SetFont(E.media.normFont, 11 + self.db.rightPanel.adjustFontSize, "OUTLINE")
+	leaderDungeonScore.text:Point("LEFT", leaderDungeonScore, "LEFT", 8, 0)
 	leaderDungeonScore.text:SetText(L["Dungeon Score Over"])
 
 	leaderDungeonScore.editBox = CreateFrame("EditBox", nil, leaderDungeonScore)
-	leaderDungeonScore.editBox:SetFont(E.media.normFont, 12, "OUTLINE")
-	leaderDungeonScore.editBox:SetSize(40, 20)
+	leaderDungeonScore.editBox:SetFont(E.media.normFont, 12 + self.db.rightPanel.adjustFontSize, "OUTLINE")
+	leaderDungeonScore.editBox:Size(40, 20)
 	leaderDungeonScore.editBox:SetJustifyH("CENTER")
-	leaderDungeonScore.editBox:SetPoint("RIGHT", -10, 0)
+	leaderDungeonScore.editBox:Point("RIGHT", leaderDungeonScore, "RIGHT", -10, 0)
 	leaderDungeonScore.editBox:SetAutoFocus(false)
 	leaderDungeonScore.editBox:SetScript("OnEscapePressed", function(editBox)
 		editBox:ClearFocus()
@@ -833,37 +884,37 @@ function LL:InitializeRightPanel()
 
 	-- Role Available
 	local roleAvailable = CreateFrame("Frame", nil, filters)
-	roleAvailable:SetSize(filters:GetWidth(), 32)
-	roleAvailable:SetPoint("TOP", filters, "TOP", 0, -6 * 7 - 28 * 4 - 32 * 2)
+	roleAvailable:Size(filters:GetWidth(), 32)
+	roleAvailable:Point("TOP", filters, "TOP", 0, -6 * 7 - 28 * 4 - 32 * 2)
 	roleAvailable:SetTemplate()
 
 	roleAvailable.text = roleAvailable:CreateFontString(nil, "OVERLAY")
-	roleAvailable.text:SetFont(E.media.normFont, 11, "OUTLINE")
-	roleAvailable.text:SetPoint("CENTER", roleAvailable, "CENTER", 0, 0)
+	roleAvailable.text:SetFont(E.media.normFont, 11 + self.db.rightPanel.adjustFontSize, "OUTLINE")
+	roleAvailable.text:Point("CENTER", roleAvailable, "CENTER", 0, 0)
 	roleAvailable.text:SetText(L["Role Available"])
 	roleAvailable.text:SetJustifyH("CENTER")
 
 	-- Need Tank
 	local needTank = CreateFrame("Frame", nil, filters)
-	needTank:SetSize(filters:GetWidth() / 2 - 6, 28)
-	needTank:SetPoint("TOPLEFT", filters, "TOPLEFT", 0, -6 * 8 - 28 * 4 - 32 * 3)
+	needTank:Size(filters:GetWidth() / 2 - 6, 28)
+	needTank:Point("TOPLEFT", filters, "TOPLEFT", 0, -6 * 8 - 28 * 4 - 32 * 3)
 	needTank:SetTemplate()
 
 	needTank.text = needTank:CreateFontString(nil, "OVERLAY")
-	needTank.text:SetFont(E.media.normFont, 11, "OUTLINE")
-	needTank.text:SetPoint("CENTER", needTank, "CENTER", 0, 0)
+	needTank.text:SetFont(E.media.normFont, 11 + self.db.rightPanel.adjustFontSize, "OUTLINE")
+	needTank.text:Point("CENTER", needTank, "CENTER", 0, 0)
 	needTank.text:SetText(L["Has Tank"])
 	needTank.text:SetJustifyH("CENTER")
 
 	-- Need Healer
 	local needHealer = CreateFrame("Frame", nil, filters)
-	needHealer:SetSize(filters:GetWidth() / 2 - 6, 28)
-	needHealer:SetPoint("TOPRIGHT", filters, "TOPRIGHT", 0, -6 * 8 - 28 * 4 - 32 * 3)
+	needHealer:Size(filters:GetWidth() / 2 - 6, 28)
+	needHealer:Point("TOPRIGHT", filters, "TOPRIGHT", 0, -6 * 8 - 28 * 4 - 32 * 3)
 	needHealer:SetTemplate()
 
 	needHealer.text = needHealer:CreateFontString(nil, "OVERLAY")
-	needHealer.text:SetFont(E.media.normFont, 11, "OUTLINE")
-	needHealer.text:SetPoint("CENTER", needHealer, "CENTER", 0, 0)
+	needHealer.text:SetFont(E.media.normFont, 11 + self.db.rightPanel.adjustFontSize, "OUTLINE")
+	needHealer.text:Point("CENTER", needHealer, "CENTER", 0, 0)
 	needHealer.text:SetText(L["Has Healer"])
 	needHealer.text:SetJustifyH("CENTER")
 
@@ -892,20 +943,21 @@ function LL:InitializeRightPanel()
 	addSetActive(roleAvailable)
 
 	roleAvailable:SetScript("OnMouseDown", function(btn, button)
-		if button == "LeftButton" then
-			local dfDB = self:GetPlayerDB("dungeonFilter")
-			btn:SetActive(not btn.active)
-			if not self.db.rightPanel.disableSafeFilters and btn.active then
-				needTank:SetActive(false)
-				needHealer:SetActive(false)
-				dfDB.needTankEnable = false
-				dfDB.needHealerEnable = false
-			end
-
-			dfDB.roleAvailableEnable = btn.active
-			self:UpdateAdvancedFilters()
-			LL:RefreshSearch()
+		if button ~= "LeftButton" then
+			return
 		end
+		local dfDB = self:GetPlayerDB("dungeonFilter")
+		btn:SetActive(not btn.active)
+		if not self.db.rightPanel.disableSafeFilters and btn.active then
+			needTank:SetActive(false)
+			needHealer:SetActive(false)
+			dfDB.needTankEnable = false
+			dfDB.needHealerEnable = false
+		end
+
+		dfDB.roleAvailableEnable = btn.active
+		self:UpdateAdvancedFilters()
+		self:RefreshSearch()
 	end)
 
 	filters.roleAvailable = roleAvailable
@@ -991,16 +1043,16 @@ function LL:InitializeRightPanel()
 	frame.filters = filters
 
 	local vaultStatus = CreateFrame("Frame", nil, frame)
-	vaultStatus:SetPoint("BOTTOMLEFT", frame, "BOTTOMLEFT", 10, 10)
-	vaultStatus:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -10, 10)
+	vaultStatus:Point("BOTTOMLEFT", frame, "BOTTOMLEFT", 10, 10)
+	vaultStatus:Point("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -10, 10)
 	vaultStatus:SetHeight(32)
 	vaultStatus:SetTemplate()
 
 	addSetActive(vaultStatus)
 
 	vaultStatus.text = vaultStatus:CreateFontString(nil, "OVERLAY")
-	vaultStatus.text:SetFont(E.media.normFont, 13, "OUTLINE")
-	vaultStatus.text:SetPoint("CENTER", vaultStatus, "CENTER", 0, 0)
+	vaultStatus.text:SetFont(E.media.normFont, 13 + self.db.rightPanel.adjustFontSize, "OUTLINE")
+	vaultStatus.text:Point("CENTER", vaultStatus, "CENTER", 0, 0)
 	vaultStatus.text:SetJustifyH("CENTER")
 
 	vaultStatus:SetScript("OnEnter", function(btn)
@@ -1080,7 +1132,7 @@ function LL:InitializeRightPanel()
 			})
 		end
 
-		local vaultItemString = "|cff666666" .. L["No Mythic+ Runs"] .. "|r"
+		local vaultItemString = C.StringByTemplate(L["No Mythic+ Runs"], "gray-400")
 
 		if #vaultStatusCache > 0 then
 			vaultItemString = C.StringWithKeystoneLevel(tostring(vaultStatusCache[1].level), vaultStatusCache[1].level)
@@ -1105,17 +1157,17 @@ function LL:InitializeRightPanel()
 	frame.vaultStatus = vaultStatus
 
 	local sortPanel = CreateFrame("Frame", nil, frame)
-	sortPanel:SetPoint("BOTTOMLEFT", vaultStatus, "TOPLEFT", 0, 8)
-	sortPanel:SetPoint("BOTTOMRIGHT", vaultStatus, "TOPRIGHT", 0, 8)
+	sortPanel:Point("BOTTOMLEFT", vaultStatus, "TOPLEFT", 0, 8)
+	sortPanel:Point("BOTTOMRIGHT", vaultStatus, "TOPRIGHT", 0, 8)
 	sortPanel:SetHeight(32)
 
 	local sortModeButton = CreateFrame("Frame", nil, sortPanel)
-	sortModeButton:SetPoint("RIGHT", sortPanel, "RIGHT", 0, 0)
-	sortModeButton:SetSize(32, 32)
+	sortModeButton:Point("RIGHT", sortPanel, "RIGHT", 0, 0)
+	sortModeButton:Size(32, 32)
 	sortModeButton:SetTemplate()
 	sortModeButton.tex = sortModeButton:CreateTexture(nil, "OVERLAY")
-	sortModeButton.tex:SetSize(24, 24)
-	sortModeButton.tex:SetPoint("CENTER", sortModeButton, "CENTER", 0, 0)
+	sortModeButton.tex:Size(24, 24)
+	sortModeButton.tex:Point("CENTER", sortModeButton, "CENTER", 0, 0)
 	sortModeButton.tex:SetTexture(W.Media.Textures.arrowDown)
 	sortModeButton.tex:SetTexCoord(0, 1, 0, 1)
 	sortModeButton.tex:SetVertexColor(1, 1, 1)
@@ -1154,20 +1206,20 @@ function LL:InitializeRightPanel()
 	sortPanel.sortModeButton = sortModeButton
 
 	local sortByButton = CreateFrame("Frame", nil, sortPanel)
-	sortByButton:SetPoint("LEFT", sortPanel, "LEFT", 0, 0)
-	sortByButton:SetPoint("RIGHT", sortModeButton, "LEFT", -6, 0)
+	sortByButton:Point("LEFT", sortPanel, "LEFT", 0, 0)
+	sortByButton:Point("RIGHT", sortModeButton, "LEFT", -6, 0)
 	sortByButton:SetHeight(32)
 	sortByButton:SetTemplate()
 
 	addSetActive(sortByButton)
 
 	sortByButton.text = sortByButton:CreateFontString(nil, "OVERLAY")
-	sortByButton.text:SetFont(E.media.normFont, 12, "OUTLINE")
-	sortByButton.text:SetPoint("CENTER", sortByButton, "CENTER", 0, 0)
+	sortByButton.text:SetFont(E.media.normFont, 12 + self.db.rightPanel.adjustFontSize, "OUTLINE")
+	sortByButton.text:Point("CENTER", sortByButton, "CENTER", 0, 0)
 
 	sortByButton.title = sortByButton:CreateFontString(nil, "OVERLAY")
-	sortByButton.title:SetFont(E.media.normFont, 12, "OUTLINE")
-	sortByButton.title:SetPoint("CENTER", sortByButton, "TOP", 0, 0)
+	sortByButton.title:SetFont(E.media.normFont, 12 + self.db.rightPanel.adjustFontSize, "OUTLINE")
+	sortByButton.title:Point("CENTER", sortByButton, "TOP", 0, 0)
 	sortByButton.title:SetText(F.GetWindStyleText(L["Sort by"]))
 	sortByButton.title:Hide()
 
@@ -1221,13 +1273,13 @@ function LL:InitializeRightPanel()
 		if sortByButton.sortBy == "DEFAULT" then
 			sortModeButton:Hide()
 			sortByButton:ClearAllPoints()
-			sortByButton:SetPoint("LEFT", sortPanel, "LEFT", 0, 0)
-			sortByButton:SetPoint("RIGHT", sortPanel, "RIGHT", 0, 0)
+			sortByButton:Point("LEFT", sortPanel, "LEFT", 0, 0)
+			sortByButton:Point("RIGHT", sortPanel, "RIGHT", 0, 0)
 		else
 			sortModeButton:Show()
 			sortByButton:ClearAllPoints()
-			sortByButton:SetPoint("LEFT", sortPanel, "LEFT", 0, 0)
-			sortByButton:SetPoint("RIGHT", sortModeButton, "LEFT", -6, 0)
+			sortByButton:Point("LEFT", sortPanel, "LEFT", 0, 0)
+			sortByButton:Point("RIGHT", sortModeButton, "LEFT", -6, 0)
 		end
 	end
 
@@ -1237,44 +1289,49 @@ function LL:InitializeRightPanel()
 	-- Quick Access Panel
 	local quickAccessPanel = CreateFrame("Frame", nil, frame)
 	if frame.affix then
-		quickAccessPanel:SetPoint("TOPLEFT", frame.affix, "BOTTOMLEFT", 0, -20)
-		quickAccessPanel:SetPoint("TOPRIGHT", frame.affix, "BOTTOMRIGHT", 0, -20)
+		quickAccessPanel:Point("TOPLEFT", frame.affix, "BOTTOMLEFT", 0, -20)
+		quickAccessPanel:Point("TOPRIGHT", frame.affix, "BOTTOMRIGHT", 0, -20)
 	else
-		quickAccessPanel:SetPoint("TOPLEFT", frame, "TOPLEFT", 10, -20)
-		quickAccessPanel:SetPoint("TOPRIGHT", frame, "TOPRIGHT", -10, -20)
+		quickAccessPanel:Point("TOPLEFT", frame, "TOPLEFT", 10, -20)
+		quickAccessPanel:Point("TOPRIGHT", frame, "TOPRIGHT", -10, -20)
 	end
 	quickAccessPanel:SetHeight(32 + 8 + 4 * 32 + 3 * 6) -- title + spacing + 4 buttons + gaps
 
 	-- Quick Access Title
 	local quickAccessTitle = quickAccessPanel:CreateFontString(nil, "OVERLAY")
-	F.SetFontOutline(quickAccessTitle, nil, 16)
-	quickAccessTitle:SetPoint("TOP", quickAccessPanel, "TOP", 0, 0)
+	F.SetFontOutline(quickAccessTitle, nil, 16 + self.db.rightPanel.adjustFontSize)
+	quickAccessTitle:Point("TOP", quickAccessPanel, "TOP", 0, 0)
 	quickAccessTitle:SetText(F.GetWindStyleText(L["Quick Access"]))
 
 	local quickAccessButtons = {}
+
+	-- Find the categoryID and filters when click the category button
+	-- hooksecurefunc("LFGListSearchPanel_SetCategory", function(searchPanel, categoryID, filters, baseFilters)
+	-- 	print(categoryID, filters, baseFilters)
+	-- end)
 	local buttonData = {
-		{ text = L["Mythic+"], categoryID = 2, filters = 0 },
+		{ text = L["Mythic+"], categoryID = GROUP_FINDER_CATEGORY_ID_DUNGEONS, filters = 0 },
 		{ text = L["Raids"], categoryID = 3, filters = 1 },
 		{ text = L["Delves"], categoryID = 121, filters = 0 },
 		{ text = L["Quest"], categoryID = 1, filters = 0 },
-		{ text = L["Custom"], categoryID = 6, filters = 0 },
+		{ text = L["Custom"], categoryID = GROUP_FINDER_CUSTOM_CATEGORY, filters = 0 },
 	}
 
 	for i, data in ipairs(buttonData) do
 		local button = CreateFrame("Frame", nil, quickAccessPanel)
-		button:SetSize(quickAccessPanel:GetWidth(), i == 1 and 64 or 32)
+		button:Size(quickAccessPanel:GetWidth(), i == 1 and 64 or 32)
 		if i == 1 then
-			button:SetPoint("TOP", quickAccessTitle, "BOTTOM", 0, -20)
+			button:Point("TOP", quickAccessTitle, "BOTTOM", 0, -20)
 		else
-			button:SetPoint("TOP", quickAccessButtons[i - 1], "BOTTOM", 0, -8)
+			button:Point("TOP", quickAccessButtons[i - 1], "BOTTOM", 0, -8)
 		end
 		button:SetTemplate()
 
 		addSetActive(button)
 
 		button.text = button:CreateFontString(nil, "OVERLAY")
-		button.text:SetFont(E.media.normFont, 12, "OUTLINE")
-		button.text:SetPoint("CENTER", button, "CENTER", 0, 0)
+		button.text:SetFont(E.media.normFont, 12 + self.db.rightPanel.adjustFontSize, "OUTLINE")
+		button.text:Point("CENTER", button, "CENTER", 0, 0)
 		button.text:SetText(data.text)
 
 		button.categoryID = data.categoryID
@@ -1287,13 +1344,13 @@ function LL:InitializeRightPanel()
 			btn:SetActive(false)
 		end)
 
-		button:SetScript("OnMouseDown", function(btn, mouseButton)
+		button:SetScript("OnMouseDown", function(_, mouseButton)
 			if mouseButton ~= "LeftButton" then
 				return
 			end
 
 			if _G.PVEFrame.activeTabIndex ~= 1 then
-				PVEFrame_ShowFrame("GroupFinderFrame")
+				_G.PVEFrame_ShowFrame("GroupFinderFrame")
 			end
 
 			if not _G.LFGListFrame.SearchPanel:IsShown() or _G.GroupFinderFrame.selection ~= _G.LFGListPVEStub then
@@ -1302,17 +1359,37 @@ function LL:InitializeRightPanel()
 				GroupFinderFrameGroupButton_OnClick(PremadeGroupButton)
 			end
 
-			local selection = _G.LFGListFrame.CategorySelection
-			if not selection then
+			local searchPanel, selection = _G.LFGListFrame.SearchPanel, _G.LFGListFrame.CategorySelection
+			if not selection or not searchPanel then
 				return
 			end
-			for _, button in ipairs(selection.CategoryButtons) do
-				if button.categoryID == data.categoryID and button.filters == data.filters then
-					LFGListCategorySelectionButton_OnClick(button)
-					LFGListCategorySelection_StartFindGroup(selection)
+
+			for _, categoryButton in ipairs(selection.CategoryButtons) do
+				if categoryButton.categoryID == data.categoryID and categoryButton.filters == data.filters then
+					local baseFilters = _G.LFGListFrame.baseFilters
+
+					-- Set the selectedCategory and selectedFilters to a not nil value will cause taint, needs cleanup later
+					self.needTaintCleanup = true
+					selection.selectedCategory = data.categoryID
+					selection.selectedFilters = data.filters
+
+					LFGListSearchPanel_Clear(searchPanel)
+					LFGListSearchPanel_SetCategory(searchPanel, data.categoryID, data.filters, baseFilters)
+					LFGListSearchPanel_DoSearch(searchPanel)
+					_G.LFGListFrame_SetActivePanel(_G.LFGListFrame, searchPanel)
 					return
 				end
 			end
+		end)
+
+		-- Prehook the back button to clear the selectedCategory and selectedFilters to avoid taint
+		local backButtonOnClick = _G.LFGListFrame.SearchPanel.BackButton:GetScript("OnClick")
+		_G.LFGListFrame.SearchPanel.BackButton:SetScript("OnClick", function(...)
+			if self.needTaintCleanup then
+				_G.LFGListFrame.CategorySelection.selectedCategory = nil
+				_G.LFGListFrame.CategorySelection.selectedFilters = nil
+			end
+			backButtonOnClick(...)
 		end)
 
 		button:SetActive(false)
@@ -1360,9 +1437,9 @@ function LL:UpdateRightPanel()
 	end
 
 	self.rightPanel.filters.leaderScore:SetActive(dfDB.leaderScoreEnable)
-	self.rightPanel.filters.leaderScore.editBox:SetText(dfDB.leaderScore or 0)
+	self.rightPanel.filters.leaderScore.editBox:SetText(tostring(dfDB.leaderScore or 0))
 	self.rightPanel.filters.leaderDungeonScore:SetActive(dfDB.leaderDungeonScoreEnable)
-	self.rightPanel.filters.leaderDungeonScore.editBox:SetText(dfDB.leaderDungeonScore or 0)
+	self.rightPanel.filters.leaderDungeonScore.editBox:SetText(tostring(dfDB.leaderDungeonScore or 0))
 	self.rightPanel.filters.roleAvailable:SetActive(dfDB.roleAvailableEnable)
 	self.rightPanel.filters.needTank:SetActive(dfDB.needTankEnable)
 	self.rightPanel.filters.needHealer:SetActive(dfDB.needHealerEnable)
@@ -1400,11 +1477,7 @@ function LL:LFGListEventHandler(event)
 end
 
 function LL:GetPartyRoles()
-	local partyMember = {
-		TANK = 0,
-		HEALER = 0,
-		DAMAGER = 0,
-	}
+	local partyMember = { TANK = 0, HEALER = 0, DAMAGER = 0 }
 
 	if IsInGroup() then
 		local playerRole = UnitGroupRolesAssigned("player")
@@ -1573,11 +1646,9 @@ function LL:GROUP_ROSTER_UPDATE(...)
 	self:LFGListEventHandler(...)
 end
 
-LL.GROUP_ROSTER_UPDATE = F.DelvesEventFix(LL.GROUP_ROSTER_UPDATE)
-
 function LL:Initialize()
 	if C_AddOns_IsAddOnLoaded("PremadeGroupsFilter") then
-		self.StopRunning = "PremadeGroupsFilter"
+		self.StopRunning = "Premade Groups Filter"
 		return
 	end
 

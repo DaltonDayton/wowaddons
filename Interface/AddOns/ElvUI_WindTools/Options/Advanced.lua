@@ -1,20 +1,11 @@
-local W, F, E, L, V, P, G = unpack((select(2, ...)))
+local W, F, E, L, V, P, G = unpack((select(2, ...))) ---@type WindTools, Functions, ElvUI, table, PrivateDB, ProfileDB, GlobalDB
 local options = W.options.advanced.args
 local C = W.Utilities.Color
 
 local _G = _G
 local format = format
-local tostring = tostring
-local type = type
 
 local C_UI_Reload = C_UI.Reload
-
-local function blue(string)
-	if type(string) ~= "string" then
-		string = tostring(string)
-	end
-	return F.CreateColorString(string, { r = 0.204, g = 0.596, b = 0.859 })
-end
 
 options.core = {
 	order = 1,
@@ -70,27 +61,6 @@ options.core = {
 				E:StaticPopup_Show("PRIVATE_RL")
 			end,
 		},
-		logLevel = {
-			order = 5,
-			type = "select",
-			name = L["Log Level"],
-			desc = L["Only display log message that the level is higher than you choose."]
-				.. "\n|cffff3860"
-				.. L["Set to 2 if you do not understand the meaning of log level."]
-				.. "|r",
-			get = function(info)
-				return E.global.WT.core.logLevel
-			end,
-			set = function(info, value)
-				E.global.WT.core.logLevel = value
-			end,
-			values = {
-				[1] = "1 - |cffff3860[ERROR]|r",
-				[2] = "2 - |cffffdd57[WARNING]|r",
-				[3] = "3 - |cff209cee[INFO]|r",
-				[4] = "4 - |cff00d1b2[DEBUG]|r",
-			},
-		},
 	},
 }
 
@@ -129,6 +99,75 @@ options.gameFix = {
 				E:StaticPopup_Show("PRIVATE_RL")
 			end,
 			width = "full",
+		},
+	},
+}
+
+options.developer = {
+	order = 3,
+	type = "group",
+	name = L["Developer"],
+	args = {
+		logLevel = {
+			order = 1,
+			type = "select",
+			name = L["Log Level"],
+			desc = L["Only display log message that the level is higher than you choose."]
+				.. "\n"
+				.. C.StringByTemplate(L["Set to 2 if you do not understand the meaning of log level."], "rose-500"),
+			get = function(info)
+				return E.global.WT.developer.logLevel
+			end,
+			set = function(info, value)
+				E.global.WT.developer.logLevel = value
+			end,
+			values = {
+				[1] = "1 - |cffff2457[ERROR]|r",
+				[2] = "2 - |cfffdc600[WARNING]|r",
+				[3] = "3 - |cff00a4f3[INFO]|r",
+				[4] = "4 - |cff00d3bc[DEBUG]|r",
+			},
+		},
+		tableAttributeDisplay = {
+			order = 2,
+			type = "group",
+			name = L["Table Attribute Display"],
+			inline = true,
+			get = function(info)
+				return E.global.WT.developer.tableAttributeDisplay[info[#info]]
+			end,
+			set = function(info, value)
+				E.global.WT.developer.tableAttributeDisplay[info[#info]] = value
+				E:StaticPopup_Show("PRIVATE_RL")
+			end,
+			args = {
+				desc = {
+					order = 1,
+					type = "description",
+					name = L["Modify the debug tool that displays table attributes."],
+				},
+				enable = {
+					order = 2,
+					type = "toggle",
+					name = L["Enable"],
+				},
+				width = {
+					order = 3,
+					type = "range",
+					name = L["Width"],
+					min = 0,
+					max = 2000,
+					step = 10,
+				},
+				height = {
+					order = 4,
+					type = "range",
+					name = L["Height"],
+					min = 0,
+					max = 2000,
+					step = 10,
+				},
+			},
 		},
 	},
 }
@@ -174,7 +213,7 @@ E.PopupDialogs.WINDTOOLS_IMPORT_SETTING = {
 }
 
 options.reset = {
-	order = 3,
+	order = 4,
 	type = "group",
 	name = L["Reset"],
 	args = {
@@ -182,7 +221,7 @@ options.reset = {
 			order = 1,
 			type = "group",
 			inline = true,
-			name = blue(L["Announcement"]),
+			name = C.StringByTemplate(L["Announcement"], "blue-500"),
 			args = {
 				combatResurrection = {
 					order = 1,
@@ -280,7 +319,7 @@ options.reset = {
 			order = 2,
 			type = "group",
 			inline = true,
-			name = blue(L["Combat"]),
+			name = C.StringByTemplate(L["Combat"], "blue-500"),
 			args = {
 				combatAlert = {
 					order = 1,
@@ -328,7 +367,7 @@ options.reset = {
 			order = 3,
 			type = "group",
 			inline = true,
-			name = blue(L["Item"]),
+			name = C.StringByTemplate(L["Item"], "blue-500"),
 			args = {
 				extraItemsBar = {
 					order = 1,
@@ -427,7 +466,7 @@ options.reset = {
 			order = 4,
 			type = "group",
 			inline = true,
-			name = blue(L["Maps"]),
+			name = C.StringByTemplate(L["Maps"], "blue-500"),
 			args = {
 				superTracker = {
 					order = 1,
@@ -505,7 +544,7 @@ options.reset = {
 			order = 5,
 			type = "group",
 			inline = true,
-			name = blue(L["Quest"]),
+			name = C.StringByTemplate(L["Quest"], "blue-500"),
 			args = {
 				objectiveTracker = {
 					order = 1,
@@ -543,7 +582,7 @@ options.reset = {
 			order = 6,
 			type = "group",
 			inline = true,
-			name = blue(L["Social"]),
+			name = C.StringByTemplate(L["Social"], "blue-500"),
 			args = {
 				chatBar = {
 					order = 1,
@@ -621,7 +660,7 @@ options.reset = {
 			order = 7,
 			type = "group",
 			inline = true,
-			name = blue(L["Tooltips"]),
+			name = C.StringByTemplate(L["Tooltips"], "blue-500"),
 			args = {
 				general = {
 					order = 1,
@@ -694,7 +733,7 @@ options.reset = {
 			order = 8,
 			type = "group",
 			inline = true,
-			name = blue(L["UnitFrames"]),
+			name = C.StringByTemplate(L["Unit Frames"], "blue-500"),
 			args = {
 				quickFocus = {
 					order = 1,
@@ -732,7 +771,7 @@ options.reset = {
 			order = 9,
 			type = "group",
 			inline = true,
-			name = blue(L["Skins"]),
+			name = C.StringByTemplate(L["Skins"], "blue-500"),
 			args = {
 				general = {
 					order = 1,
@@ -758,7 +797,6 @@ options.reset = {
 						E:StaticPopup_Show("WINDTOOLS_RESET_MODULE", L["Font"], nil, function()
 							E.private.WT.skins.ime = V.skins.ime
 							E.private.WT.skins.errorMessage = V.skins.errorMessage
-							E.private.WT.skins.rollResult = V.skins.rollResult
 						end)
 					end,
 				},
@@ -818,7 +856,7 @@ options.reset = {
 			order = 10,
 			type = "group",
 			inline = true,
-			name = blue(L["Misc"]),
+			name = C.StringByTemplate(L["Misc"], "blue-500"),
 			args = {
 				general = {
 					order = 1,
@@ -968,7 +1006,7 @@ do
 	}
 
 	options.profiles = {
-		order = 4,
+		order = 5,
 		type = "group",
 		name = L["Profiles"],
 		args = {
@@ -1054,7 +1092,7 @@ do
 						type = "description",
 						name = format(
 							"%s\n%s\n%s\n%s\n%s",
-							C.StringByTemplate(L["I want to sync setting of WindTools!"], "info"),
+							C.StringByTemplate(L["I want to sync setting of WindTools!"], "blue-500"),
 							L["WindTools saves all data in ElvUI Profile and Private database."],
 							L["So if you set ElvUI Profile and Private these |cffff0000TWO|r databases to the same across multiple character, the setting of WindTools will be synced."],
 							L["Sharing ElvUI Profile is a very common thing nowadays, but actually ElvUI Private database is also exist for saving configuration of General, Skins, etc."],

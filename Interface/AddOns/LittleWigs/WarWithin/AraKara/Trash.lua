@@ -88,10 +88,22 @@ function mod:GetOptions()
 		{433845, "NAMEPLATE"}, -- Erupting Webs
 		{433841, "NAMEPLATE"}, -- Venom Volley
 		-- Reinforced Drone
-		{1241785, "DISPEL"}, -- Tainted Blood
+		{1241785, "DISPEL", "EMPHASIZE"}, -- Tainted Blood
 		-- Winged Carrier
 		{433821, "NAMEPLATE", "OFF"}, -- Dashing Strike
 	}, {
+		{
+			tabName = self:BossName(2583), -- Avanoxx
+			{434830, 436614, "custom_on_autotalk", 439208, 438618, 434793, 434824, 434802, 438877, 438826},
+		},
+		{
+			tabName = self:BossName(2584), -- Anub'zekt
+			{"custom_on_autotalk", 439208, 453161, 1241693, 432967, 433002, 448248},
+		},
+		{
+			tabName = self:BossName(2585), -- Ki'katal the Harvester
+			{433845, 433841, 1241785, 433821, 453161, 1241693},
+		},
 		[434830] = L.vile_webbing,
 		["custom_on_autotalk"] = L.discordant_attendant,
 		[438618] = L.engorged_crawler,
@@ -132,6 +144,7 @@ function mod:OnBossEnable()
 	-- Trilling Attendant
 	self:RegisterEngageMob("TrillingAttendantEngaged", 216293)
 	self:Log("SPELL_CAST_SUCCESS", "ResonantBarrage", 434793)
+	self:Log("SPELL_INTERRUPT", "ResonantBarrageInterrupt", 434793)
 	self:Death("TrillingAttendantDeath", 216293)
 
 	-- Ixin, Nakt, Atik
@@ -254,13 +267,13 @@ end
 
 function mod:EngorgedCrawlerEngaged(guid)
 	if self:Dispeller("poison", nil, 438618) then
-		self:Nameplate(438618, 5.6, guid) -- Venomous Spit
+		self:Nameplate(438618, 5.4, guid) -- Venomous Spit
 	end
 end
 
 function mod:VenomousSpit(args)
 	if self:Dispeller("poison", nil, args.spellId) then
-		self:Nameplate(args.spellId, 10.9, args.sourceGUID)
+		self:Nameplate(args.spellId, 17.0, args.sourceGUID)
 	end
 end
 
@@ -285,20 +298,23 @@ end
 -- Trilling Attendant
 
 function mod:TrillingAttendantEngaged(guid)
-	self:Nameplate(434793, 2.5, guid) -- Resonant Barrage
+	self:Nameplate(434793, 8.5, guid) -- Resonant Barrage
 end
 
 do
 	local prev = 0
 	function mod:ResonantBarrage(args)
-		self:Nameplate(args.spellId, 17.0, args.sourceGUID)
-		local t = args.time
-		if t - prev > 1.5 then
-			prev = t
+		self:Nameplate(args.spellId, 25.3, args.sourceGUID)
+		if args.time - prev > 1.5 then
+			prev = args.time
 			self:Message(args.spellId, "red", CL.casting:format(args.spellName))
 			self:PlaySound(args.spellId, "alert")
 		end
 	end
+end
+
+function mod:ResonantBarrageInterrupt(args)
+	self:Nameplate(434793, 25.3, args.destGUID)
 end
 
 function mod:TrillingAttendantDeath(args)
@@ -496,9 +512,8 @@ end
 do
 	local prev = 0
 	function mod:AlarmShrill(args)
-		local t = args.time
-		if t - prev > 3 then
-			prev = t
+		if args.time - prev > 3 then
+			prev = args.time
 			self:Message(args.spellId, "cyan", CL.casting:format(args.spellName))
 			self:PlaySound(args.spellId, "info")
 		end
@@ -613,6 +628,7 @@ end
 
 function mod:TaintedBloodApplied(args)
 	if (self:Me(args.destGUID) or self:Dispeller("magic", nil, args.spellId) or self:Dispeller("movement", nil, args.spellId)) and args.amount % 5 == 0 then
+		-- 4% movement speed reduction per stack
 		self:StackMessage(args.spellId, "purple", args.destName, args.amount, 10)
 		self:PlaySound(args.spellId, "alert", nil, args.destName)
 	end

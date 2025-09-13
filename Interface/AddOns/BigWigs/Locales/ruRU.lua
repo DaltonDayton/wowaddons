@@ -237,6 +237,9 @@ L.imported_nameplate_settings = "Настройки полос здоровья"
 --L.imported_mythicplus_settings = "Mythic+ Settings"
 --L.mythicplus_settings_import_desc = "Import all Mythic+ settings."
 --L.mythicplus_settings_export_desc = "Export all Mythic+ settings."
+--L.imported_battleres_settings = "Battle Res Settings"
+--L.battleres_settings_import_desc = "Import all Battle Res settings."
+--L.battleres_settings_export_desc = "Export all Battle Res settings."
 
 -- Statistics
 L.statistics = "Статистика"
@@ -275,7 +278,7 @@ L.H25 = "Героик 25"
 -----------------------------------------------------------------------
 
 L.tools = "Инструменты"
-L.toolsDesc = "BigWigs предоставляет различные инструменты или \"упрощающие жизнь\" функции для ускорения и упрощения процесса убийства боссов. Нажмите значок |cFF33FF99+|r для просмотра возможных инструментов."
+L.toolsDesc = "BigWigs предоставляет различные инструменты или \"упрощающие жизнь\" функции для ускорения и упрощения процесса убийства боссов."
 
 -----------------------------------------------------------------------
 -- AutoRole.lua
@@ -283,6 +286,26 @@ L.toolsDesc = "BigWigs предоставляет различные инстр�
 
 L.autoRoleTitle = "Автовыбор роли"
 L.autoRoleExplainer = "При вступлении в группу или изменении специализации, BigWigs будет автоматически менять вашу роль в группе (Танк, Лекарь, Боец).\n\n"
+
+-----------------------------------------------------------------------
+-- BattleRes.lua
+--
+
+--L.battleResTitle = "Battle Res"
+--L.battleResDesc = "An icon that shows how many battle resurrection charges are available and the time until another charge is gained."
+--L.battleResDesc2 = "\nYour |cFF33FF99Battle Resurrection History|r can be viewed in the tooltip when you mouse over the icon.\n\n"
+--L.battleResHistory = "Battle Res History:"
+--L.battleResResetAll = "Reset all the Battle Resurrection settings to their default values."
+--L.battleResDurationText = "Duration Text"
+--L.battleResChargesText = "Charges Text"
+--L.battleResNoCharges = "0 charges available"
+--L.battleResHasCharges = "1 or more charges available"
+--L.battleResPlaySound = "Play a sound when a new charge is gained"
+--L.iconTextureSpellID = "|T%d:0:0:0:0:64:64:4:60:4:60|t Icon Texture (Spell ID)"
+--L.iconTextureSpellIDError = "You must type a valid spell ID to use as the icon texture."
+--L.battleResModeIcon = "Mode: Icon"
+--L.battleResModeText = "Mode: Text Only"
+--L.battleResModeTextTooltip = "Showing a temporary background to help you move the Battle Res feature and to see where the mouseover area is."
 
 -----------------------------------------------------------------------
 -- Keystones.lua
@@ -315,6 +338,7 @@ L.keystoneExplainer = "Инструменты, которые помогут э�
 L.keystoneAutoSlot = "Автоматически вставлять ключ"
 L.keystoneAutoSlotDesc = "Автоматически вставляет эпохальный+ ключ в чашу силы при открытии её интерфейса."
 L.keystoneAutoSlotMessage = "%s автоматически вставлен в слот чаши силы."
+--L.keystoneAutoSlotFrame = "|TInterface\\AddOns\\BigWigs\\Media\\Icons\\minimap_raid:14:14|t Keystone Auto Inserted"
 L.keystoneModuleName = "Эпохальные+ подземелья"
 L.keystoneStartBar = "%s +%d" -- Format is SHORT_DUNGEON_NAME +KEYSTONE_LEVEL e.g. "ROOK +12"
 L.keystoneStartMessage = "%s +%d начался!" -- Format is LONG_DUNGEON_NAME +KEYSTONE_LEVEL e.g. "The Rookery +12 begins now!"
@@ -344,7 +368,7 @@ L.keystoneHistoryScoreThisWeekTooltip = "Общее количество рей�
 L.keystoneHistoryScoreOlderTooltip = "Общее количество рейтинга полученное до этой недели: |cFFFFFFFF+%d|r"
 L.keystoneTimeUnder = "|cFF33FF99-%02d:%02d|r"
 L.keystoneTimeOver = "|cFFFF4411+%02d:%02d|r"
---L.keystoneTeleportTip = "TIP: Click the dungeon name below to teleport directly to the dungeon entrance."
+--L.keystoneTeleportTip = "Click the dungeon name below to |cFF33FF99TELEPORT|r directly to the dungeon entrance."
 
 -- It doesn't really matter what you call it as long as it's recognizable and limited to ~6 characters
 L.keystoneShortName_TheRookery = "ROOK"
@@ -391,6 +415,8 @@ L.instanceKeysShowAllDesc = "При включении данной опции �
 L.instanceKeysOtherDungeonColor = "Цвет ключей от других подземелий"
 L.instanceKeysOtherDungeonColorDesc = "Выберите цвет текста для игроков, ключи которых не подходят к текущему подземелью."
 L.instanceKeysEndOfRunDesc = "По умолчанию список отображается при входе в подземелье. При включении данной опции список будет отображаться и при завершении эпохального+ подземелья."
+--L.instanceKeysHideTitle = "Hide title"
+--L.instanceKeysHideTitleDesc = "Hide the \"Who has a key?\" title."
 
 -----------------------------------------------------------------------
 -- LFGTimer.lua
@@ -411,6 +437,10 @@ L.comma = ", "
 L.reset = "Сброс"
 L.resetDesc = "Сбросить настройки выше к их стандартным значениям."
 L.resetAll = "Сбросить все"
+--L.startTest = "Start Test"
+--L.stopTest = "Stop Test"
+--L.always = "Always"
+--L.never = "Never"
 
 L.positionX = "Позиция X"
 L.positionY = "Позиция Y"
@@ -425,6 +455,7 @@ L.disabled = "Отключить"
 L.disableDesc = "Вы собираетесь отключить функцию '%s', делать это |cffff4411не рекомендуется|r.\n\nВы уверены, что хотите этого?"
 L.keybinding = "Назначение клавиш"
 L.dragToResize = "Тяните для изменения размера"
+--L.cannotMoveInCombat = "You cannot move this whilst you're in combat."
 
 -- Anchor Points
 L.UP = "Верх"
@@ -842,6 +873,7 @@ L.combatLogDesc = "Лог боя будет автоматически запу�
 L.pull = "Атака"
 L.engageSoundTitle = "Воспроизвести звук, когда начинается бой с боссом"
 L.pullStartedSoundTitle = "Воспроизвести звук, когда запускается таймер атаки"
+--L.pullStartedMessageTitle = "Show a message when the pull timer is started"
 L.pullFinishedSoundTitle = "Воспроизвести звук, когда завершается таймер атаки"
 L.pullStartedBy = "Пулл таймер начат: %s."
 L.pullStopped = "%s отменил таймер атаки."

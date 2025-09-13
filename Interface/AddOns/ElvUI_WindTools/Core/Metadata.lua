@@ -1,4 +1,7 @@
-local W, F, E, L, V, P, G = unpack((select(2, ...)))
+local W ---@class WindTools
+local F ---@type Functions
+local E, L ---@type table, table
+W, F, E, L = unpack((select(2, ...)))
 
 local pairs = pairs
 local tinsert = tinsert
@@ -15,6 +18,8 @@ local GetSpecializationInfoForClassID = GetSpecializationInfoForClassID
 local C_ChallengeMode_GetMapUIInfo = C_ChallengeMode.GetMapUIInfo
 local C_CVar_GetCVarBool = C_CVar.GetCVarBool
 
+E.myClassColor = E.myClassColor or E:ClassColor(E.myclass, true)
+
 -- WindTools
 W.Title = L["WindTools"]
 W.PlainTitle = gsub(W.Title, "|c........([^|]+)|r", "%1")
@@ -22,12 +27,12 @@ W.PlainTitle = gsub(W.Title, "|c........([^|]+)|r", "%1")
 -- Environment
 W.Locale = GetLocale()
 W.ChineseLocale = strsub(W.Locale, 0, 2) == "zh"
+W.AsianLocale = W.ChineseLocale or W.Locale == "koKR"
 W.SupportElvUIVersion = 13.97
 W.UseKeyDown = C_CVar_GetCVarBool("ActionButtonUseKeyDown")
 
 -- Game
 W.MaxLevelForPlayerExpansion = GetMaxLevelForPlayerExpansion()
-W.ClassColor = _G.RAID_CLASS_COLORS[E.myclass]
 
 -- Mythic+
 W.MythicPlusMapData = {

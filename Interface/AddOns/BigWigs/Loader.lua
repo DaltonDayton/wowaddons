@@ -12,14 +12,14 @@ local strfind = string.find
 -- Generate our version variables
 --
 
-local BIGWIGS_VERSION = 397
+local BIGWIGS_VERSION = 399
 local CONTENT_PACK_VERSIONS = {
-	["LittleWigs"] = {11, 2, 25},
+	["LittleWigs"] = {11, 2, 28},
 	["BigWigs_Classic"] = {11, 2, 0},
 	["BigWigs_BurningCrusade"] = {11, 1, 4},
 	["BigWigs_WrathOfTheLichKing"] = {11, 1, 7},
 	["BigWigs_Cataclysm"] = {11, 1, 7},
-	["BigWigs_MistsOfPandaria"] = {11, 2, 0},
+	["BigWigs_MistsOfPandaria"] = {11, 2, 1},
 	["BigWigs_WarlordsOfDraenor"] = {11, 1, 1},
 	["BigWigs_Legion"] = {11, 1, 1},
 	["BigWigs_BattleForAzeroth"] = {11, 1, 1},
@@ -56,7 +56,7 @@ do
 	local ALPHA = "ALPHA"
 
 	local releaseType
-	local myGitHash = "f7f4676" -- The ZIP packager will replace this with the Git hash.
+	local myGitHash = "25260c8" -- The ZIP packager will replace this with the Git hash.
 	local releaseString
 	--[=[@alpha@
 	-- The following code will only be present in alpha ZIPs.
@@ -1490,7 +1490,7 @@ do
 		--[1384] = locales.esES, [1385] = locales.esES, [1386] = locales.esES, [1387] = locales.esES, [1395] = locales.esES, -- esES
 	}
 	local criticalList = {
-		--[locales.esMX] = true,
+		[locales.itIT] = true,
 	}
 
 	local language = locales[myLocale]
@@ -1502,7 +1502,7 @@ do
 		delayedMessages[#delayedMessages+1] = msg1
 		delayedMessages[#delayedMessages+1] = msg2
 		delayedMessages[#delayedMessages+1] = msg3
-		if criticalList[language or realmLanguage] then
+		if myLocale == "enUS" and criticalList[realmLanguage] then
 			Popup(msg1.. "\n" ..msg2.. "\n" ..msg3, true)
 		end
 	end
@@ -1606,9 +1606,9 @@ end
 --
 
 do
-	local DBMdotRevision = "20250825161927" -- The changing version of the local client, changes with every new zip using the project-date-integer packager replacement.
-	local DBMdotDisplayVersion = "11.2.12" -- "N.N.N" for a release and "N.N.N alpha" for the alpha duration.
-	local DBMdotReleaseRevision = "20250824000000" -- Hardcoded time, manually changed every release, they use it to track the highest release version, a new DBM release is the only time it will change.
+	local DBMdotRevision = "20250906110503" -- The changing version of the local client, changes with every new zip using the project-date-integer packager replacement.
+	local DBMdotDisplayVersion = "11.2.13" -- "N.N.N" for a release and "N.N.N alpha" for the alpha duration.
+	local DBMdotReleaseRevision = "20250906000000" -- Hardcoded time, manually changed every release, they use it to track the highest release version, a new DBM release is the only time it will change.
 	local protocol = 3
 	local versionPrefix = "V"
 	local PForceDisable = 19
@@ -1621,7 +1621,7 @@ do
 			local msg = myName.. "-" ..normalizedPlayerRealm.."\t"..protocol.."\t".. versionPrefix .."\t".. DBMdotRevision.."\t"..DBMdotReleaseRevision.."\t"..DBMdotDisplayVersion.."\t"..myLocale.."\ttrue\t"..PForceDisable.."\t0\t0"
 			local result = SendAddonMessage(dbmPrefix, msg, IsInGroup(2) and "INSTANCE_CHAT" or "RAID") -- LE_PARTY_CATEGORY_INSTANCE = 2
 			if type(result) == "number" and result ~= 0 then
-				if result == 9 then
+				if result == 3 or result == 8 or result == 9 then
 					timer = CTimerNewTimer(3, sendDBMMsg)
 					return
 				else
@@ -1700,7 +1700,7 @@ do
 		if IsInGroup() then
 			local result = SendAddonMessage("BigWigs", versionResponseString, IsInGroup(2) and "INSTANCE_CHAT" or "RAID") -- LE_PARTY_CATEGORY_INSTANCE = 2
 			if type(result) == "number" and result ~= 0 then
-				if result == 9 then
+				if result == 3 or result == 8 or result == 9 then
 					timer = CTimerNewTimer(3, sendMsg)
 					return
 				else

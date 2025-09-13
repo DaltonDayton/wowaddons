@@ -1,4 +1,4 @@
-local W, F, E, L, V, P, G = unpack((select(2, ...)))
+local W, F, E, L, V, P, G = unpack((select(2, ...))) ---@type WindTools, Functions, ElvUI, table, PrivateDB, ProfileDB, GlobalDB
 local C = W.Utilities.Color
 local options = W.options.quest.args
 local LSM = E.Libs.LSM
@@ -60,7 +60,7 @@ options.objectiveTracker = {
 			type = "description",
 			name = C.StringByTemplate(
 				L["This module may prevent clicking quest items in the objective tracker due to taint."],
-				"danger"
+				"rose-500"
 			),
 		},
 		progress = {

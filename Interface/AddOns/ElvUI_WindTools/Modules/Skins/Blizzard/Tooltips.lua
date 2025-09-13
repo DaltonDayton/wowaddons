@@ -1,14 +1,11 @@
-local W, F, E, L = unpack((select(2, ...)))
+local W, F, E, L = unpack((select(2, ...))) ---@type WindTools, Functions, ElvUI, table
 local TT = E:GetModule("Tooltip")
-local S = W.Modules.Skins
+local DT = E:GetModule("DataTexts")
+local S = W.Modules.Skins ---@type Skins
 
 local _G = _G
-local format = format
-local gsub = gsub
 local hooksecurefunc = hooksecurefunc
 local pairs = pairs
-local strfind = strfind
-local strsub = strsub
 
 local function styleIconsInLine(line, text)
 	if not line then
@@ -18,7 +15,7 @@ local function styleIconsInLine(line, text)
 	text = text or line:GetText()
 	local styledText = S:StyleTextureString(text)
 	if styledText and styledText ~= text then
-		(line.__SetText or line.SetText)(line, styledText)
+		F.CallMethod(line, "SetText", styledText)
 	end
 end
 
@@ -34,7 +31,7 @@ local function StyleTooltipWidgetContainer(tt)
 	for frame in tt.widgetContainer.widgetPools:EnumerateActive() do
 		if not frame.__windSkin then
 			if frame.Text then
-				frame.Text.__SetText = frame.Text.SetText
+				F.InternalizeMethod(frame.Text, "SetText")
 				hooksecurefunc(frame.Text, "SetText", styleIconsInLine)
 				F.SetFontOutline(frame.Text)
 				frame.Text:SetText(frame.Text:GetText())
@@ -52,6 +49,15 @@ function S:StyleIconsInTooltip(tt)
 	for i = 2, tt:NumLines() do
 		styleIconsInLine(_G[tt:GetName() .. "TextLeft" .. i])
 		styleIconsInLine(_G[tt:GetName() .. "TextRight" .. i])
+	end
+
+	for i = 1, 30 do
+		local texture = _G[tt:GetName() .. "Texture" .. i] ---@type Texture?
+		if texture and texture:IsShown() then
+			self:TryCropTexture(texture)
+		else
+			break
+		end
 	end
 end
 
@@ -97,13 +103,14 @@ function S:TooltipFrames()
 		-- ours
 		E.ConfigTooltip,
 		E.SpellBookTooltip,
+		DT.tooltip,
 		-- libs
 		_G.LibDBIconTooltip,
 		_G.SettingsTooltip,
 	}
 
 	for _, tt in pairs(tooltips) do
-		if tt and tt ~= E.ScanTooltip and not tt.IsEmbedded and not tt:IsForbidden() then
+		if tt and not tt.IsEmbedded and not tt:IsForbidden() then
 			self:ReskinTooltip(tt)
 		end
 	end

@@ -1,7 +1,7 @@
-local W, F, E, L = unpack((select(2, ...)))
+local W, F, E, L = unpack((select(2, ...))) ---@type WindTools, Functions, ElvUI, table
 local IL = W:NewModule("Inspect", "AceEvent-3.0", "AceHook-3.0") -- Modified from TinyInspect
-local S = W.Modules.Skins
-local MF = W.Modules.MoveFrames
+local S = W.Modules.Skins ---@type Skins
+local MF = W.Modules.MoveFrames ---@type MoveFrames
 
 local LibEvent = LibStub:GetLibrary("LibEvent.7000")
 local LibItemEnchant = LibStub:GetLibrary("LibItemEnchant.7000")
@@ -344,7 +344,7 @@ local function ShowInspectItemStatsFrame(frame, unit)
 	if not frame.expandButton then
 		local expandButton = CreateFrame("Button", nil, frame)
 		expandButton:Size(12, 12)
-		expandButton:Point("TOPRIGHT", -5, -5)
+		expandButton:Point("TOPRIGHT", frame, "TOPRIGHT", -5, -5)
 		expandButton:SetNormalTexture("Interface\\Cursor\\Item")
 		expandButton:GetNormalTexture():SetTexCoord(12 / 32, 0, 0, 12 / 32)
 		expandButton:SetScript("OnClick", function(self)

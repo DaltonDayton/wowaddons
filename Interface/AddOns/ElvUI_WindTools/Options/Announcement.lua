@@ -1,4 +1,4 @@
-local W, F, E, L, V, P, G = unpack((select(2, ...)))
+local W, F, E, L, V, P, G = unpack((select(2, ...))) ---@type WindTools, Functions, ElvUI, table, PrivateDB, ProfileDB, GlobalDB
 local options = W.options.announcement.args
 local A = W:GetModule("Announcement")
 local SB = W:GetModule("SwitchButtons")
@@ -190,7 +190,7 @@ options.quest = {
 					get = function(info)
 						local colordb = E.db.WT.announcement.quest[info[#info - 1]].color
 						local default = P.announcement.quest[info[#info - 1]].color
-						return colordb.r, colordb.g, colordb.b, colordb.a, default.r, default.g, default.b, default.a
+						return colordb.r, colordb.g, colordb.b, nil, default.r, default.g, default.b, nil
 					end,
 					set = function(info, r, g, b, a)
 						E.db.WT.announcement.quest[info[#info - 1]].color = {
@@ -228,7 +228,7 @@ options.quest = {
 					get = function(info)
 						local colordb = E.db.WT.announcement.quest[info[#info - 1]].color
 						local default = P.announcement.quest[info[#info - 1]].color
-						return colordb.r, colordb.g, colordb.b, colordb.a, default.r, default.g, default.b, default.a
+						return colordb.r, colordb.g, colordb.b, nil, default.r, default.g, default.b, nil
 					end,
 					set = function(info, r, g, b, a)
 						E.db.WT.announcement.quest[info[#info - 1]].color = {
@@ -266,7 +266,7 @@ options.quest = {
 					get = function(info)
 						local colordb = E.db.WT.announcement.quest[info[#info - 1]].color
 						local default = P.announcement.quest[info[#info - 1]].color
-						return colordb.r, colordb.g, colordb.b, colordb.a, default.r, default.g, default.b, default.a
+						return colordb.r, colordb.g, colordb.b, nil, default.r, default.g, default.b, nil
 					end,
 					set = function(info, r, g, b, a)
 						E.db.WT.announcement.quest[info[#info - 1]].color = {
@@ -310,7 +310,7 @@ options.quest = {
 					get = function(info)
 						local colordb = E.db.WT.announcement.quest[info[#info - 1]].color
 						local default = P.announcement.quest[info[#info - 1]].color
-						return colordb.r, colordb.g, colordb.b, colordb.a, default.r, default.g, default.b, default.a
+						return colordb.r, colordb.g, colordb.b, nil, default.r, default.g, default.b, nil
 					end,
 					set = function(info, r, g, b, a)
 						E.db.WT.announcement.quest[info[#info - 1]].color = {
@@ -348,7 +348,7 @@ options.quest = {
 					get = function(info)
 						local colordb = E.db.WT.announcement.quest[info[#info - 1]].color
 						local default = P.announcement.quest[info[#info - 1]].color
-						return colordb.r, colordb.g, colordb.b, colordb.a, default.r, default.g, default.b, default.a
+						return colordb.r, colordb.g, colordb.b, nil, default.r, default.g, default.b, nil
 					end,
 					set = function(info, r, g, b, a)
 						E.db.WT.announcement.quest[info[#info - 1]].color = {
@@ -2740,7 +2740,7 @@ options.general = {
 			name = L["Emote Format"],
 			desc = L["The text template used in emote channel."]
 				.. "\n"
-				.. format(L["Default is %s."], W.Utilities.Color.StringByTemplate(": %s", "info")),
+				.. format(L["Default is %s."], W.Utilities.Color.StringByTemplate(": %s", "blue-500")),
 			width = 2,
 		},
 		betterAlign = {

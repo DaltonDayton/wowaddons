@@ -97,6 +97,14 @@ local function SetPersonalData(dbKey, value, userInput)
 end
 addon.SetPersonalData = SetPersonalData;
 
+local function GetValidOptionChoice(optionsTbl, dbKey)
+    local index = GetDBValue(dbKey);
+    if not (index and optionsTbl[index]) then
+        index = 1;
+    end
+    return optionsTbl[index]
+end
+addon.GetValidOptionChoice = GetValidOptionChoice;
 
 
 local DefaultValues = {
@@ -135,9 +143,14 @@ local DefaultValues = {
     EditModeShowPlumberUI = true,
     LandingPageSwitch = true,           --Right click on ExpansionLandingPageMinimapButton to open a menu to access mission report
     SoftTargetName = false,             --Show object's name on SoftTargetFrame
-
+        SoftTarget_TextOutline = false,
+        SoftTarget_FontSize = 2,
+        SoftTarget_IconSize = 2,
+        SoftTarget_CastBar = true,
+        SoftTarget_Objectives = false,
     AppearanceTab = false,              --Adjust Appearance Tab models to reduce GPU usage spike
         AppearanceTab_ModelCount = 1,
+    ItemUpgradeUI = true,
 
 
     --Tooltip
@@ -178,6 +191,7 @@ local DefaultValues = {
         LootUI_HotkeyName = "E",
         LootUI_ReplaceDefaultAlert = false,
         LootUI_UseStockUI = false,
+        LootUI_CombineItems = false,
 
 
     --Unified Map Pin System

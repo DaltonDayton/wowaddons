@@ -201,6 +201,7 @@ L["Can Create Multiple Item Format"] = "You have the resources to create |cfffff
 --Tooltip DelvesItem
 L["ModuleName TooltipDelvesItem"] = "Delves Items";
 L["ModuleDescription TooltipDelvesItem"] = "Show how many Coffer Keys and Shards you have earned from weekly caches.";
+L["You Have Received Weekly Item Format"] = "You have received %s this week.";
 
 
 --Plunderstore
@@ -359,6 +360,13 @@ L["ModuleDescription SoftTargetName"] = "Display the soft target object's name."
 L["SoftTargetName Req Title"] = "|cffd4641cYou need to manually change these settings to make it work:|r";
 L["SoftTargetName Req 1"] = "|cffffd100Enable Interact Key|r in Game Options> Gameplay> Controls.";
 L["SoftTargetName Req 2"] = "Set CVar |cffffd100SoftTargetIconGameObject|r to |cffffffff1|r";
+L["SoftTargetName CastBar"] = "Show Cast Bar";
+L["SoftTargetName CastBar Tooltip"] = "Show a radial cast bar on the nameplate.\n\n|cffff4800The addon will not be able to tell which object is your spell's target.|r"
+L["SoftTargetName QuestObjective"] = QUEST_LOG_SHOW_OBJECTIVES or "Show Quest Objectives";
+L["SoftTargetName QuestObjective Tooltip"] = "Show quest objectives (if any) below the name.";
+L["SoftTargetName QuestObjective Alert"] = "This feature requires enabling |cffffffffShow Target Tooltip|r in Game Options> Accessibility> General.";   --See globals: TARGET_TOOLTIP_OPTION
+L["SoftTargetName ShowNPC"] = "Include NPC";
+L["SoftTargetName ShowNPC Tooltip"] = "If disabled, the name will only appear on interactable Game Objects";
 
 
 --LegionRemix
@@ -370,6 +378,11 @@ L["Until Next Upgrade Format"] = "%s until next upgrade";
 L["New Trait Available"] = "New trait available.";
 L["Rank Increased"] = "Rank Increased";
 L["Infinite Knowledge Tooltip"] = "You can obtain Inifite Knowledge by earning certain Legion Remix achievements.";
+
+
+--ItemUpgradeUI
+L["ModuleName ItemUpgradeUI"] = "Item Upgrades: Show Character Pane";
+L["ModuleDescription ItemUpgradeUI"] = "Automatically open Character Pane when you interact with an Item Upgrades NPC.";
 
 
 --Loot UI
@@ -407,6 +420,9 @@ L["LootUI Option Custom Quality Color Tooltip"] = "Use the colors you set in Gam
 L["LootUI Option Grow Direction"] = "Grow Upwards";
 L["LootUI Option Grow Direction Tooltip 1"] = "When enabled: the bottom left of the window remains still, and new notifications will appear on top of the old ones.";
 L["LootUI Option Grow Direction Tooltip 2"] = "When disabled: the top left of the window remains still, and new notifications will appear on bottom of the old ones.";
+L["Junk Items"] = "Junk Items";
+L["LootUI Option Combine Items"] = "Combine Similar Items";
+L["LootUI Option Combine Items Tooltip"] = "Display similar items on a single row. Supported Categories:\n\n- Junk Items\n- Epoch Mementos (Legion Remix)";
 
 
 --Quick Slot For Third-party Dev
@@ -517,6 +533,7 @@ L["Reposition Button Horizontal"] = "Move Horizontally";   --Move the window hor
 L["Reposition Button Vertical"] = "Move Vertically";
 L["Reposition Button Tooltip"] = "Left click and drag to move the window";
 L["Font Size"] = FONT_SIZE or "Font Size";
+L["Icon Size"] = "Icon Size";
 L["Reset To Default Position"] = HUD_EDIT_MODE_RESET_POSITION or "Reset To Default Position";
 L["Renown Level Label"] = "Renown ";  --There is a space
 L["Paragon Reputation"] = "Paragon";
@@ -556,6 +573,7 @@ L["Completed CHETT List"] = "Completed C.H.E.T.T. List";
 L["Devourer Attack"] = "Devourer Attack";
 L["Restored Coffer Key"] = "Restored Coffer Key";
 L["Coffer Key Shard"] = "Coffer Key Shard";
+L["Epoch Mementos"] = "Epoch Mementos";     --See currency:3293
 
 
 --Map Pin Filter Name (name should be plural)

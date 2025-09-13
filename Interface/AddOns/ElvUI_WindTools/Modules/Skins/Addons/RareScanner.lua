@@ -1,5 +1,6 @@
-local W, F, E, L = unpack((select(2, ...)))
-local S = W.Modules.Skins
+local W, F, E, L = unpack((select(2, ...))) ---@type WindTools, Functions, ElvUI, table
+local C = W.Utilities.Color
+local S = W.Modules.Skins ---@type Skins
 local TT = E:GetModule("Tooltip")
 local T = W.Modules.Tooltips
 
@@ -76,7 +77,7 @@ function S:RareScanner()
 
 	if scannerButton.LootBar then
 		if scannerButton.LootBar.LootBarToolTip then
-			hooksecurefunc(scannerButton.LootBar.LootBarToolTip, "Show", function(self)
+			hooksecurefunc(scannerButton.LootBar.LootBarToolTip, "Show", function(tooltip)
 				TT:SetStyle(_G.LootBarToolTip)
 
 				if scannerButton.LootBar.LootBarToolTipComp1 and scannerButton.LootBar.LootBarToolTipComp1.Show then
@@ -136,7 +137,7 @@ function S:RareScanner()
 				child:Point("LEFT", ST.WorldMapInput, "RIGHT", 12, 0)
 				local placeholder = child.EditBox:CreateFontString(nil, "ARTWORK")
 				placeholder:FontTemplate(nil, nil, "OUTLINE")
-				placeholder:SetText("|cff666666RareScanner|r")
+				placeholder:SetText(C.StringByTemplate(L["RareScanner"], "gray-300"))
 				placeholder:Point("CENTER", child, "CENTER", 0, 0)
 
 				child.EditBox:HookScript("OnEditFocusGained", function()

@@ -1,13 +1,18 @@
-local W, F, E, L, V, P, G = unpack((select(2, ...)))
+local V ---@class PrivateDB
+local W, F, E, L, P, G ---@type WindTools, Functions, ElvUI, table, ProfileDB, GlobalDB
+W, F, E, L, V, P, G = unpack((select(2, ...)))
+
+---@cast W WindTools
+
+local C = W.Utilities.Color
 
 local pairs = pairs
-
 local GetLocale = GetLocale
 
-local norm = format("|cff1eff00%s|r", L["[ABBR] Normal"])
-local hero = format("|cff0070dd%s|r", L["[ABBR] Heroic"])
-local myth = format("|cffa335ee%s|r", L["[ABBR] Mythic"])
-local lfr = format("|cffff8000%s|r", L["[ABBR] Looking for raid"])
+local norm = C.StringByTemplate(L["[ABBR] Normal"], "green-500")
+local hero = C.StringByTemplate(L["[ABBR] Heroic"], "blue-500")
+local myth = C.StringByTemplate(L["[ABBR] Mythic"], "purple-500")
+local lfr = C.StringByTemplate(L["[ABBR] Looking for raid"], "orange-500")
 
 -- The helper function for progression data.
 local function configTable(t, sourceMetadata)
@@ -213,6 +218,9 @@ V.misc = {
 		rightPanel = {
 			enable = true,
 			autoRefresh = true,
+			autoJoin = false,
+			skipConfirmation = false,
+			adjustFontSize = W.ChineseLocale and 1 or 0,
 		},
 	},
 }
@@ -301,11 +309,6 @@ V.skins = {
 	shadow = true,
 	weakAurasShadow = true,
 	increasedSize = 0,
-	rollResult = {
-		name = F.GetCompatibleFont("Accidental Presidency"),
-		size = 13,
-		style = "OUTLINE",
-	},
 	bigWigsSkin = {
 		queueTimer = {
 			smooth = true,
@@ -342,9 +345,9 @@ V.skins = {
 	},
 	uiErrors = {
 		normalTextClassColor = false,
-		normalTextColor = { r = 0.976, g = 0.980, b = 0.984 },
-		redTextColor = { r = 1.000, g = 0.388, b = 0.494 },
-		yellowTextColor = { r = 1.000, g = 0.875, b = 0.125 },
+		normalTextColor = C.GetRGBFromTemplate("neutral-50"),
+		redTextColor = C.GetRGBFromTemplate("red-500"),
+		yellowTextColor = C.GetRGBFromTemplate("yellow-300"),
 	},
 	ime = {
 		label = {
@@ -487,27 +490,29 @@ V.skins = {
 		},
 	},
 	addons = {
-		ace3 = true,
-		ace3DropdownBackdrop = true,
 		angryKeystones = true,
 		auctionator = true,
 		bigWigs = true,
 		bigWigsQueueTimer = true,
+		btWQuests = true,
 		bugSack = true,
 		hekili = true,
 		immersion = true,
+		manuscriptsJournal = true,
 		mountRoutePlanner = true,
+		multiLanguage = true,
 		myslot = true,
 		mythicDungeonTools = true,
 		omniCD = true,
+		omniCDExtraBar = true,
 		omniCDIcon = true,
 		omniCDStatusBar = true,
-		omniCDExtraBar = true,
+		paragonReputation = true,
 		postal = true,
 		premadeGroupsFilter = true,
 		raiderIO = true,
 		rareScanner = true,
-		rematch = true,
+		rematch = false,
 		silverDragon = true,
 		simpleAddonManager = true,
 		simulationcraft = true,
@@ -517,8 +522,14 @@ V.skins = {
 		warpDeplete = true,
 		weakAuras = true,
 		weakAurasOptions = true,
+		whisperPop = true,
 		worldQuestTab = true,
-		btWQuests = true,
+	},
+	libraries = {
+		ace3 = true,
+		ace3Dropdown = true,
+		libQTip = true,
+		secureTabs = true,
 	},
 	blizzard = {
 		enable = true,
@@ -534,6 +545,7 @@ V.skins = {
 		azeriteRespec = true,
 		bags = true,
 		barberShop = true,
+		battlefieldMap = true,
 		binding = true,
 		blackMarket = true,
 		calendar = true,

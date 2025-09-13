@@ -651,6 +651,42 @@ do  -- Tooltip Parser
         end
     end
     API.GetCreatureName = GetCreatureName;
+
+
+    function API.LoadCreatureNameWithCallback(creatures, callback, fromRequery)
+        local failedCreatures;
+
+        if type(creatures) == "table" then
+            local name;
+            local n = 0;
+            for _, creatureID in ipairs(creatures) do
+                name = GetCreatureName(creatureID);
+                if name and name ~= "" then
+                    callback(creatureID, name);
+                else
+                    if not failedCreatures then
+                        failedCreatures = {};
+                    end
+                    n = n + 1;
+                    failedCreatures[n] = creatureID;
+                end
+            end
+        else
+            --when creatures is creatureID (number)
+            local name = GetCreatureName(creatures);
+            if name and name ~= "" then
+                callback(creatures, name);
+            else
+                failedCreatures = creatures;
+            end
+        end
+
+        if (not fromRequery) and failedCreatures then
+            C_Timer.After(1, function()
+                API.LoadCreatureNameWithCallback(failedCreatures, callback, true);
+            end);
+        end
+    end
 end
 
 do  -- Holiday
@@ -1879,31 +1915,35 @@ do  -- Reputation
                 isCapped = C_MajorFactions.HasMaximumRenown(factionID);
                 barValue = isCapped and majorFactionData.renownLevelThreshold or majorFactionData.renownReputationEarned or 0;
                 factionStandingtext = L["Renown Level Label"] .. majorFactionData.renownLevel;
-
-                if isParagon then
-                    local totalEarned, threshold, rewardQuestID, hasRewardPending = GetFactionParagonInfo(factionID);
-                    if totalEarned and threshold and threshold ~= 0 then
-                        local paragonLevel = floor(totalEarned / threshold);
-                        local currentValue = totalEarned - paragonLevel * threshold;
-                        factionStandingtext = ("|cff00ccff"..L["Paragon Reputation"].."|r %d/%d"):format(currentValue, threshold);
-                    end
-
-                    if hasRewardPending then
-                        cappedAlert = "|cffff4800"..L["Unclaimed Reward Alert"].."|r";
-                    end
-                else
-                    if isCapped then
-                        factionStandingtext = factionStandingtext.." "..L["Level Maxed"];
-                    end
-                end
             end
         elseif (standingID and standingID > 0) then
             isCapped = standingID == 8;  --MAX_REPUTATION_REACTION
 		    factionStandingtext = GetReputationStandingText(standingID);
         end
 
+        if isParagon then
+            local totalEarned, threshold, rewardQuestID, hasRewardPending = GetFactionParagonInfo(factionID);
+            if totalEarned and threshold and threshold ~= 0 then
+                local paragonLevel = floor(totalEarned / threshold);
+                local currentValue = totalEarned - paragonLevel * threshold;
+                --factionStandingtext = ("|cff00ccff"..L["Paragon Reputation"].."|r %d/%d"):format(currentValue, threshold);
+                factionStandingtext = "|cff00ccff"..L["Paragon Reputation"].."|r";
+                barMin = 0;
+                barValue = currentValue;
+                barMax = threshold;
+            end
+
+            if hasRewardPending then
+                cappedAlert = "|cffff4800"..L["Unclaimed Reward Alert"].."|r";
+            end
+        else
+            if isCapped and factionStandingtext then
+                factionStandingtext = factionStandingtext.." "..L["Level Maxed"];
+            end
+        end
+
         local rolloverText; --(0/24000)
-        if barMin and barValue and barMax and (not isCapped) then
+        if barMin and barValue and barMax and (isParagon or (not isCapped)) then
             rolloverText = format("(%s/%s)", barValue - barMin, barMax - barMin);
             if simplified then
                 factionStandingtext = isFriendship and repInfo.reaction or factionStandingtext or "";
@@ -2270,6 +2310,10 @@ do  -- ObjectPool
         tinsert(self.activeObjects, obj);
         obj:Show();
 
+        if self.onAcquiredFunc then
+            self.onAcquiredFunc(obj);
+        end
+
         return obj
     end
 
@@ -2309,7 +2353,7 @@ do  -- ObjectPool
         return self.activeObjects
     end
 
-    local function CreateObjectPool(createObjectFunc, onRemovedFunc)
+    local function CreateObjectPool(createObjectFunc, onRemovedFunc, onAcquiredFunc)
         local pool = {};
         API.Mixin(pool, ObjectPoolMixin);
 
@@ -2324,6 +2368,7 @@ do  -- ObjectPool
         pool.numUnused = 0;
         pool.createObjectFunc = createObjectFunc;
         pool.onRemovedFunc = onRemovedFunc;
+        pool.onAcquiredFunc = onAcquiredFunc;
 
         return pool
     end
@@ -3780,6 +3825,15 @@ do  --Locale-dependent API
     elseif locale == "zhCN" or locale == "zhTW" then
         function API.GetItemCountFromText(text)
             local count = match(text, "r%s*x(%d+)");
+            if count then
+                return tonumber(count)
+            else
+                return 1
+            end
+        end
+    elseif locale == "frFR" then
+        function API.GetItemCountFromText(text)
+            local count = match(text, "|r[%s ]*x(%d+)");
             if count then
                 return tonumber(count)
             else

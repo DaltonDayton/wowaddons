@@ -1,6 +1,7 @@
 
 Blizzard_Console_SavedVars = {
 ["version"] = 3,
+["height"] = 299.9999694824219,
 ["messageHistory"] = {
 {
 "Sorting particles normally.",
@@ -1670,10 +1671,13 @@ Blizzard_Console_SavedVars = {
 "Outline mode changed to 2",
 0,
 },
+{
+"-------------------------------------------------- Previous Session --------------------------------------------------",
+0,
 },
-["height"] = 299.9999694824219,
-["fontHeight"] = 14,
+},
 ["isShown"] = false,
+["fontHeight"] = 14,
 ["commandHistory"] = {
 },
 }

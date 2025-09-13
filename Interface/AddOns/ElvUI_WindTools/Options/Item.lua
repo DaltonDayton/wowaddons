@@ -1,4 +1,4 @@
-local W, F, E, L, V, P, G = unpack((select(2, ...)))
+local W, F, E, L, V, P, G = unpack((select(2, ...))) ---@type WindTools, Functions, ElvUI, table, PrivateDB, ProfileDB, GlobalDB
 local C = W.Utilities.Color
 local options = W.options.item.args
 local async = W.Utilities.Async
@@ -28,7 +28,7 @@ local unpack = unpack
 local customListSelected1, customListSelected2
 
 local function desc(code, helpText)
-	return C.StringByTemplate(code, "primary") .. " = " .. helpText
+	return C.StringByTemplate(code, "teal-400") .. " = " .. helpText
 end
 
 local slotNames = {

@@ -1,31 +1,32 @@
-local L, BigWigsLoader, BigWigsAPI, db
-
---------------------------------------------------------------------------------
--- Saved Settings
---
-
-local ProfileUtils = {}
+local L, BigWigsLoader, BigWigsAPI
 do
 	local _, tbl = ...
 	BigWigsAPI = tbl.API
 	L = BigWigsAPI:GetLocale("BigWigs")
 	BigWigsLoader = tbl.loaderPublic
+end
 
+--------------------------------------------------------------------------------
+-- Saved Settings
+--
+
+local ProfileUtils, db = {}
+do
 	local defaultVoice = "English: Amy"
+	local fontName = "Noto Sans Regular"
 	do
 		local locale = GetLocale()
 		if locale ~= "enUS" then
 			defaultVoice = ("%s: Default (Female)"):format(locale)
+			if locale == "koKR" or locale == "zhCN" or locale == "zhTW" then
+				fontName = LibStub("LibSharedMedia-3.0"):GetDefault("font")
+			end
 		end
 	end
 	local validFramePoints = {
 		["TOPLEFT"] = true, ["TOPRIGHT"] = true, ["BOTTOMLEFT"] = true, ["BOTTOMRIGHT"] = true,
 		["TOP"] = true, ["BOTTOM"] = true, ["LEFT"] = true, ["RIGHT"] = true, ["CENTER"] = true,
 	}
-
-	local loc = GetLocale()
-	local isWest = loc ~= "koKR" and loc ~= "zhCN" and loc ~= "zhTW" and true
-	local fontName = isWest and "Noto Sans Regular" or LibStub("LibSharedMedia-3.0"):GetDefault("font")
 
 	local defaults = {
 		autoSlotKeystone = true,
@@ -34,6 +35,7 @@ do
 		countStartSound = "BigWigs: Long",
 		countEndSound = "BigWigs: Alarm",
 		showViewerDungeonEnd = true,
+		showViewerTeleportTip = true,
 		hideFromGuild = false,
 		viewerKeybind = "",
 		windowHeight = 320,
@@ -49,6 +51,7 @@ do
 		instanceKeysOtherDungeonColor = {1, 1, 1, 0.5},
 		instanceKeysShowAllPlayers = false,
 		instanceKeysShowDungeonEnd = false,
+		instanceKeysHideTitle = false,
 	}
 	db = BigWigsLoader.db:RegisterNamespace("MythicPlus", {profile = defaults})
 
@@ -329,6 +332,10 @@ local LibKeystone = LibStub("LibKeystone")
 local LibSpec = LibStub("LibSpecialization")
 local LibSharedMedia = LibStub("LibSharedMedia-3.0")
 
+local LibKeystoneRequest = LibKeystone.Request
+local LibKeystoneRegister = LibKeystone.Register
+local LibKeystoneUnregister = LibKeystone.Unregister
+
 local guildList, partyList = {}, {}
 local WIDTH_NAME, WIDTH_LEVEL, WIDTH_MAP, WIDTH_RATING = 150, 24, 74, 42
 
@@ -422,6 +429,24 @@ do
 	text:SetSize(50, 30)
 	text:SetTextColor(0.65, 0.65, 0.65)
 	text:SetPoint("RIGHT", -26, 0)
+
+	local teleportBar = mainPanel:CreateTexture(nil, nil, nil, 5)
+	teleportBar:Hide()
+	mainPanel.teleportBar = teleportBar
+
+	local tip = CreateFrame("Frame", nil, mainPanel, "GlowBoxTemplate")
+	tip:Hide()
+	mainPanel.tip = tip
+	tip:SetSize(200, 60)
+	tip:SetPoint("BOTTOM", mainPanel, "TOP", 45, 20)
+	local arrow = CreateFrame("Frame", nil, tip, "GlowBoxArrowTemplate")
+	arrow:SetPoint("TOP", tip, "BOTTOM", 20, 5)
+	local tipText = tip:CreateFontString(nil, "OVERLAY", "GameFontHighlightLeft")
+	tipText:SetJustifyH("LEFT")
+	tipText:SetJustifyV("TOP")
+	tipText:SetSize(180, 0)
+	tipText:SetPoint("CENTER")
+	tipText:SetText(L.keystoneTeleportTip)
 end
 
 local UpdateMyKeystone
@@ -493,10 +518,16 @@ local function WipeCells()
 	for cell in next, cellsCurrentlyShowing do
 		cell:Hide()
 		cell:ClearAttributes()
+		cell:SetScript("PostClick", nil)
+		cell:SetScript("OnUpdate", nil)
 		cell.tooltip = nil
+		cell.playerName = nil
 		cell:ClearAllPoints()
 		cellsAvailable[#cellsAvailable+1] = cell
 	end
+	mainPanel.teleportBar:ClearAllPoints()
+	mainPanel.teleportBar:SetParent(mainPanel)
+	mainPanel.teleportBar:Hide()
 	cellsCurrentlyShowing = {}
 end
 local headersAvailable = {}
@@ -542,7 +573,7 @@ partyRefreshButton:SetPushedTexture("Interface\\Buttons\\UI-RefreshButton-Down")
 partyRefreshButton:SetHighlightTexture("Interface\\Buttons\\UI-RefreshButton")
 partyRefreshButton:SetScript("OnClick", function()
 	partyList = {}
-	LibKeystone.Request("PARTY")
+	LibKeystoneRequest("PARTY")
 end)
 partyRefreshButton:SetScript("OnEnter", function(self)
 	GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
@@ -561,7 +592,7 @@ guildRefreshButton:SetHighlightTexture("Interface\\Buttons\\UI-RefreshButton")
 guildRefreshButton:SetScript("OnClick", function()
 	guildList = {}
 	LibSpec.RequestGuildSpecialization()
-	C_Timer.After(0.1, function() LibKeystone.Request("GUILD") end)
+	C_Timer.After(0.1, function() LibKeystoneRequest("GUILD") end)
 end)
 guildRefreshButton:SetScript("OnEnter", function(self)
 	GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
@@ -593,7 +624,7 @@ local function CreateCell()
 		cell.text:SetAllPoints(cell)
 		cell.text:SetJustifyH("CENTER")
 
-		local bg = cell:CreateTexture()
+		local bg = cell:CreateTexture(nil, nil, nil, -5)
 		bg:SetAllPoints(cell)
 		bg:SetColorTexture(0, 0, 0, 0.6)
 		cell.bg = bg
@@ -602,6 +633,12 @@ local function CreateCell()
 		return cell
 	end
 end
+
+for i = 1, 100 do -- XXX temp (hopefully)
+	CreateCell()
+end
+WipeCells()
+
 local function CreateHeader()
 	local header = headersAvailable[#headersAvailable]
 	if header then
@@ -741,6 +778,8 @@ do
 		tab.MiddleActive:Show()
 		tab.RightActive:Show()
 
+		mainPanel.tip:Hide()
+
 		PlaySound(841) -- SOUNDKIT.IG_CHARACTER_INFO_TAB
 	end
 	local function DeselectTab(tab)
@@ -771,7 +810,15 @@ do
 		local HasSlottedKeystone, SlotKeystone = C_ChallengeMode.HasSlottedKeystone, C_ChallengeMode.SlotKeystone
 		local GetOwnedKeystoneMapID = C_MythicPlus.GetOwnedKeystoneMapID
 		local GetContainerNumSlots, GetContainerItemLink, PickupContainerItem = C_Container.GetContainerNumSlots, C_Container.GetContainerItemLink, C_Container.PickupContainerItem
+		local text
 		tab1:SetScript("OnEvent", function()
+			if not text then
+				text = ChallengesKeystoneFrame:CreateFontString(nil, nil, "Fancy14Font")
+				text:SetPoint("BOTTOM", ChallengesKeystoneFrame, "BOTTOM", 0, 180)
+				text:SetSize(300, 30)
+				text:SetJustifyH("CENTER")
+			end
+			text:SetText("")
 			if db.profile.autoSlotKeystone and not HasSlottedKeystone() then
 				local _, _, _, _, _, _, _, instanceID = BigWigsLoader.GetInstanceInfo()
 				if GetOwnedKeystoneMapID() == instanceID then
@@ -780,6 +827,7 @@ do
 						for currentSlot = 1, slots do
 							local itemLink = GetContainerItemLink(currentBag, currentSlot)
 							if itemLink and itemLink:find("Hkeystone", nil, true) then
+								text:SetText(L.keystoneAutoSlotFrame)
 								PickupContainerItem(currentBag, currentSlot)
 								SlotKeystone()
 								BigWigsLoader.Print(L.keystoneAutoSlotMessage:format(itemLink))
@@ -796,6 +844,15 @@ do
 		DeselectTab(tab2)
 		DeselectTab(tab3)
 		DeselectTab(tab4)
+
+		if db.profile.showViewerTeleportTip then
+			for _, teleportSpellID in next, teleportList[1] do
+				if BigWigsLoader.IsSpellKnownOrInSpellBook(teleportSpellID) then
+					mainPanel.tip:Show() -- Don't show tip unless we know 1 teleport spell
+					break
+				end
+			end
+		end
 
 		local partyHeader = CreateHeader()
 		partyHeader:SetText(L.keystoneHeaderParty)
@@ -816,8 +873,8 @@ do
 		guildList = {}
 		RegisterLibKeystone()
 		LibSpec.RequestGuildSpecialization()
-		LibKeystone.Request("PARTY")
-		C_Timer.After(0.2, function() LibKeystone.Request("GUILD") end)
+		LibKeystoneRequest("PARTY")
+		C_Timer.After(0.2, function() LibKeystoneRequest("GUILD") end)
 	end)
 
 	-- Tab 2 (Teleports)
@@ -852,7 +909,7 @@ do
 					if soundName ~= "None" then
 						local sound = LibSharedMedia:Fetch("sound", soundName, true)
 						if sound then
-							BigWigsLoader.PlaySoundFile(sound)
+							BigWigsLoader.PlaySoundFile(sound, "Master")
 						end
 					end
 				end)
@@ -861,7 +918,7 @@ do
 				if soundName ~= "None" then
 					local sound = LibSharedMedia:Fetch("sound", soundName, true)
 					if sound then
-						BigWigsLoader.PlaySoundFile(sound)
+						BigWigsLoader.PlaySoundFile(sound, "Master")
 					end
 				end
 			else -- CHALLENGE_MODE_RESET
@@ -975,10 +1032,26 @@ do
 	tab3:RegisterEvent("CHALLENGE_MODE_COMPLETED")
 	-- Tab 3 Event Handler (Used for automatically showing the window when the dungeon ends)
 	do
-		local function Open() mainPanel:Show() tab1:Click() end
-		tab3:SetScript("OnEvent", function()
-			if db.profile.showViewerDungeonEnd and not BigWigsLoader.isTestBuild then
-				BigWigsLoader.CTimerAfter(5, Open)
+		local function Open()
+			if InCombatLockdown() then
+				tab3:RegisterEvent("PLAYER_REGEN_ENABLED")
+				return
+			end
+
+			local _, _, diffID = BigWigsLoader.GetInstanceInfo()
+			if diffID == 8 then -- Mythic+
+				mainPanel:Show()
+				tab1:Click()
+			end
+		end
+		tab3:SetScript("OnEvent", function(self, event)
+			if event == "PLAYER_REGEN_ENABLED" then
+				self:UnregisterEvent(event)
+				Open()
+			else -- CHALLENGE_MODE_COMPLETED
+				if db.profile.showViewerDungeonEnd and not BigWigsLoader.isTestBuild then
+					BigWigsLoader.CTimerAfter(5, Open)
+				end
 			end
 		end)
 	end
@@ -1246,7 +1319,6 @@ do
 		if spellID == 0 then
 			return ""
 		else
-			local spellName = BigWigsLoader.GetSpellName(spellID)
 			if not BigWigsLoader.IsSpellKnownOrInSpellBook(spellID) then
 				return L.keystoneClickToTeleportNotLearned
 			else
@@ -1270,6 +1342,47 @@ do
 				return a.rating > b.rating
 			else
 				return a.name < b.name
+			end
+		end
+	end
+
+	local ClickTeleportButton
+	do
+		local UnitCastingInfo = UnitCastingInfo
+		local function OnUpdateCheckTeleportCastStatus(self)
+			local _, _, _, startTimeMs, endTimeMs, _, _, _, spellId = UnitCastingInfo("player")
+			if spellId then
+				local teleportSpellID = self:GetAttribute("spell")
+				if spellId == teleportSpellID and mainPanel.teleportBar:GetParent() == self then
+					local startTimeSec = startTimeMs / 1000
+					local endTimeSec = endTimeMs / 1000
+					local castDuration = endTimeSec - startTimeSec
+					if castDuration > 0 then
+						local percentage = (GetTime() - startTimeSec) / castDuration
+						if percentage > 1 then percentage = 1 elseif percentage < 0 then percentage = 0 end
+						mainPanel.teleportBar:SetColorTexture(0, 0, 1, 0.6)
+						mainPanel.teleportBar:Show()
+						mainPanel.teleportBar:SetWidth(percentage * self:GetWidth())
+					end
+				end
+			elseif mainPanel.teleportBar:GetParent() == self then
+				mainPanel.teleportBar:Hide()
+			end
+		end
+
+		function ClickTeleportButton(self)
+			if not InCombatLockdown() then
+				mainPanel.teleportBar:ClearAllPoints()
+				mainPanel.teleportBar:SetParent(self)
+				mainPanel.teleportBar:SetPoint("TOPLEFT")
+				mainPanel.teleportBar:SetPoint("BOTTOMLEFT")
+				mainPanel.teleportBar:Hide()
+				mainPanel.teleportBar.name = self.playerName
+				self:SetScript("OnUpdate", OnUpdateCheckTeleportCastStatus)
+				if db.profile.showViewerTeleportTip then
+					db.profile.showViewerTeleportTip = false
+					mainPanel.tip:Hide()
+				end
 			end
 		end
 	end
@@ -1322,17 +1435,24 @@ do
 				cellRating:SetPoint("TOP", prevRating, "BOTTOM", 0, -6)
 			end
 			cellName:SetWidth(WIDTH_NAME)
-			cellName.text:SetText(sortedplayerList[i].decoratedName or sortedplayerList[i].name)
+			local playerName = sortedplayerList[i].name
+			cellName.text:SetText(sortedplayerList[i].decoratedName or playerName)
 			cellName.tooltip = sortedplayerList[i].nameTooltip
 			cellName:SetAttribute("type", "macro")
-			cellName:SetAttribute("macrotext", "/run ChatFrame_SendTell(\"".. sortedplayerList[i].name .."\")")
+			cellName:SetAttribute("macrotext", "/run ChatFrame_SendTell(\"".. playerName .."\")")
 			cellLevel:SetWidth(WIDTH_LEVEL)
 			cellLevel.text:SetText(sortedplayerList[i].level == -1 and hiddenIcon or sortedplayerList[i].level)
 			cellLevel.tooltip = sortedplayerList[i].levelTooltip
 			cellMap:SetWidth(WIDTH_MAP)
-			if sortedplayerList[i].mapID then
+			local teleportSpellID = teleportList[1][sortedplayerList[i].mapID]
+			if teleportSpellID and BigWigsLoader.IsSpellKnownOrInSpellBook(teleportSpellID) then
 				cellMap:SetAttribute("type", "spell")
-				cellMap:SetAttribute("spell", teleportList[1][sortedplayerList[i].mapID])
+				cellMap:SetAttribute("spell", teleportSpellID)
+				cellMap.playerName = playerName
+				cellMap:SetScript("PostClick", ClickTeleportButton)
+				if mainPanel.teleportBar.name == playerName then
+					ClickTeleportButton(cellMap)
+				end
 			end
 			cellMap.text:SetText(sortedplayerList[i].map)
 			cellMap.tooltip = sortedplayerList[i].mapTooltip
@@ -1364,7 +1484,11 @@ do
 		for i = 1, #guildCellsCurrentlyShowing do
 			local cell = guildCellsCurrentlyShowing[i]
 			cell:Hide()
+			cell:ClearAttributes()
+			cell:SetScript("PostClick", nil)
+			cell:SetScript("OnUpdate", nil)
 			cell.tooltip = nil
+			cell.playerName = nil
 			cell:ClearAllPoints()
 			cellsCurrentlyShowing[cell] = nil
 			cellsAvailable[#cellsAvailable+1] = cell
@@ -1397,10 +1521,10 @@ do
 	end
 	local LibKeystoneTable = {}
 	function RegisterLibKeystone()
-		LibKeystone.Register(LibKeystoneTable, LibKeystoneFunction)
+		LibKeystoneRegister(LibKeystoneTable, LibKeystoneFunction)
 	end
 	function UnregisterLibKeystone()
-		LibKeystone.Unregister(LibKeystoneTable)
+		LibKeystoneUnregister(LibKeystoneTable)
 	end
 end
 
@@ -1460,6 +1584,11 @@ do
 	header:SetFont(LibSharedMedia:Fetch("font", db.profile.instanceKeysFontName), db.profile.instanceKeysFontSize, flags)
 	header:SetFormattedText("|TInterface\\AddOns\\BigWigs\\Media\\Icons\\minimap_raid:0:0|t%s", L.instanceKeysTitle)
 	header:SetTextColor(db.profile.instanceKeysColor[1], db.profile.instanceKeysColor[2], db.profile.instanceKeysColor[3], db.profile.instanceKeysColor[4])
+	if db.profile.instanceKeysHideTitle then
+		header:Hide()
+	else
+		header:Show()
+	end
 	instanceKeysWidgets.header = header
 
 	for i = 1, 5 do
@@ -1517,7 +1646,8 @@ do
 					if inCurrentDungeon or db.profile.instanceKeysShowAllPlayers then
 						main:RegisterEvent("PLAYER_LEAVING_WORLD") -- Hide when changing zone
 						main:RegisterEvent("CHALLENGE_MODE_START") -- Hide when starting Mythic+
-						main:RegisterEvent("PLAYER_REGEN_DISABLED") -- Hide when you enter combat
+						main:RegisterEvent("ENCOUNTER_START") -- Hide when you enter combat with a boss
+						main:RegisterEvent("PLAYER_REGEN_DISABLED") -- Temporarily hide when you enter combat
 						main:Show()
 						sortedPlayerList[#sortedPlayerList+1] = {name = pName, decoratedName = pData[3], level = pData[1], inCurrentDungeon = inCurrentDungeon}
 					end
@@ -1574,8 +1704,8 @@ do
 		for i = 1, 5 do
 			instanceKeysWidgets.playerListText[i]:SetFont(LibSharedMedia:Fetch("font", db.profile.instanceKeysFontName), db.profile.instanceKeysFontSize, fontFlags)
 		end
-		LibKeystone.Register(whosKeyTable, ReceivePartyData)
-		LibKeystone.Request("PARTY")
+		LibKeystoneRegister(whosKeyTable, ReceivePartyData)
+		LibKeystoneRequest("PARTY")
 		main:RegisterEvent("UNIT_CONNECTION")
 	end
 	local function DelayStartOfDungeon() -- Difficulty info isn't accurate until 1 frame after PEW
@@ -1591,6 +1721,7 @@ do
 			RequestPartyData(instanceID)
 		end
 	end
+	local combatHideCount, combatDelayTimer = 1, nil
 	main:SetScript("OnEvent", function(self, event, unit, isConnected)
 		if instanceKeysWidgets.testing and event ~= "UNIT_CONNECTION" then
 			instanceKeysWidgets.testing = false
@@ -1608,17 +1739,38 @@ do
 			end
 		elseif event == "UNIT_CONNECTION" then -- Someone new joined the group, or they just logged on after being offline (maybe they were offline when you joined the group)
 			if isConnected then
-				BigWigsLoader.CTimerAfter(1, function() LibKeystone.Request("PARTY") end)
+				BigWigsLoader.CTimerAfter(1, function() LibKeystoneRequest("PARTY") end)
 			end
-		else
-			LibKeystone.Unregister(whosKeyTable)
+		elseif event == "PLAYER_REGEN_DISABLED" and combatHideCount < 3 then -- You can enter combat twice and it will re-show, kill it after that
+			combatHideCount = combatHideCount + 1
 			self:Hide()
+			self:RegisterEvent("PLAYER_REGEN_ENABLED")
+			if combatDelayTimer then
+				combatDelayTimer:Cancel()
+				combatDelayTimer = nil
+			end
+		elseif event == "PLAYER_REGEN_ENABLED" then
+			self:UnregisterEvent(event)
+			if combatDelayTimer then combatDelayTimer:Cancel() end
+			combatDelayTimer = BigWigsLoader.CTimerNewTimer(10, function()
+				combatDelayTimer = nil
+				self:Show()
+			end)
+		else
+			combatHideCount = 1
+			LibKeystoneUnregister(whosKeyTable)
+			self:Hide()
+			if combatDelayTimer then
+				combatDelayTimer:Cancel()
+				combatDelayTimer = nil
+			end
 			instanceKeysWidgets.nameList = {}
 			instanceKeysWidgets.namesToShow = nil
 			instanceKeysWidgets.otherDungeons = nil
 			self:UnregisterEvent("PLAYER_LEAVING_WORLD")
 			self:UnregisterEvent("CHALLENGE_MODE_START")
 			self:UnregisterEvent("PLAYER_REGEN_DISABLED")
+			self:UnregisterEvent("PLAYER_REGEN_ENABLED")
 			self:UnregisterEvent("UNIT_CONNECTION")
 		end
 	end)
@@ -1680,6 +1832,11 @@ do
 				instanceKeysWidgets.playerListText[i]:SetTextColor(db.profile.instanceKeysOtherDungeonColor[1], db.profile.instanceKeysOtherDungeonColor[2], db.profile.instanceKeysOtherDungeonColor[3], db.profile.instanceKeysOtherDungeonColor[4])
 			end
 		end
+		if db.profile.instanceKeysHideTitle then
+			instanceKeysWidgets.header:Hide()
+		else
+			instanceKeysWidgets.header:Show()
+		end
 
 		instanceKeysWidgets.main:ClearAllPoints()
 		do
@@ -1740,14 +1897,14 @@ do
 		end
 	end
 
-	BigWigsLoader:RegisterMessage("BigWigs_ProfileUpdate", function()
+	BigWigsLoader.RegisterMessage({}, "BigWigs_ProfileUpdate", function()
 		ProfileUtils.ValidateMainSettings()
 		ProfileUtils.ValidateMediaSettings()
 		UpdateWidgets()
 	end)
 
-	BigWigsAPI.RegisterSlashCommand("/key", ShowViewer)
-	BigWigsAPI.RegisterSlashCommand("/bwkey", ShowViewer)
+	BigWigsAPI.RegisterSlashCommand("/key", ShowViewer, true)
+	BigWigsAPI.RegisterSlashCommand("/bwkey", ShowViewer, true)
 
 	viewerKeybindFrame:SetScript("OnClick", ShowViewer)
 	if db.profile.viewerKeybind ~= "" then
@@ -1782,7 +1939,7 @@ do
 		db.profile[key] = {r, g, b, a < 0.3 and 0.3 or a}
 		UpdateWidgets()
 	end
-	BigWigsAPI.SetToolOptionsTable("MythicPlus", {
+	BigWigsAPI.RegisterToolOptions("MythicPlus", {
 		type = "group",
 		childGroups = "tab",
 		name = L.keystoneModuleName,
@@ -1796,143 +1953,10 @@ do
 				width = "full",
 				fontSize = "large",
 			},
-			general = {
-				type = "group",
-				name = L.general,
-				order = 1,
-				args = {
-					autoSlotKeystone = {
-						type = "toggle",
-						name = L.keystoneAutoSlot,
-						desc = L.keystoneAutoSlotDesc,
-						order = 1,
-						width = "full",
-					},
-					spacer = {
-						type = "description",
-						name = "\n\n",
-						order = 2,
-						width = "full",
-					},
-					countdown = {
-						type = "group",
-						name = L.countdown,
-						order = 3,
-						inline = true,
-						width = "full",
-						args = {
-							countdownExplainer = {
-								type = "description",
-								name = L.keystoneCountdownExplainer,
-								order = 1,
-								width = "full",
-							},
-							countBegin = {
-								name = L.countdownBegins,
-								desc = L.keystoneCountdownBeginsDesc,
-								type = "range", min = 3, max = 9, step = 1,
-								order = 2,
-								width = 1
-							},
-							countVoice = {
-								name = L.countdownVoice,
-								type = "select",
-								values = BigWigsAPI.GetCountdownList,
-								sorting = voiceSorting,
-								order = 3,
-								width = 2,
-							},
-							countStartSound = {
-								type = "select",
-								name = L.keystoneCountdownBeginsSound,
-								order = 4,
-								get = soundGet,
-								set = soundSet,
-								values = LibSharedMedia:List("sound"),
-								width = 2.5,
-								itemControl = "DDI-Sound",
-							},
-							countEndSound = {
-								type = "select",
-								name = L.keystoneCountdownEndsSound,
-								order = 5,
-								get = soundGet,
-								set = soundSet,
-								values = LibSharedMedia:List("sound"),
-								width = 2.5,
-								itemControl = "DDI-Sound",
-							},
-						},
-					},
-				},
-			},
-			keystoneViewer = {
-				type = "group",
-				name = L.keystoneViewerTitle,
-				order = 2,
-				args = {
-					explainViewer = {
-						type = "description",
-						name = L.keystoneViewerExplainer,
-						order = 1,
-						width = "full",
-					},
-					openViewer = {
-						type = "execute",
-						name = L.keystoneViewerOpen,
-						func = ShowViewer,
-						order = 2,
-						width = 1.5,
-					},
-					spacerViewer = {
-						type = "description",
-						name = "\n\n",
-						order = 3,
-						width = "full",
-					},
-					showViewerDungeonEnd = {
-						type = "toggle",
-						name = L.keystoneAutoShowEndOfRun,
-						desc = L.keystoneAutoShowEndOfRunDesc,
-						order = 4,
-						width = "full",
-					},
-					hideFromGuild = {
-						type = "toggle",
-						name = L.keystoneHideGuildTitle,
-						desc = L.keystoneHideGuildDesc,
-						order = 5,
-						width = "full",
-						set = function(info, value)
-							local key = info[#info]
-							db.profile[key] = value
-							LibKeystone.SetGuildHidden(value)
-						end,
-						confirm = function(_, value)
-							if value then
-								return L.keystoneHideGuildWarning
-							end
-						end,
-					},
-					explainViewerKeybinding = {
-						type = "description",
-						name = L.keystoneViewerKeybindingExplainer,
-						order = 6,
-						width = "full",
-					},
-					viewerKeybind = {
-						type = "keybinding",
-						name = L.keybinding,
-						desc = L.keystoneViewerKeybindingDesc,
-						order = 7,
-						set = UpdateSettingsAndWidgets,
-					},
-				},
-			},
 			instanceKeys = {
 				type = "group",
 				name = L.instanceKeysTitle,
-				order = 3,
+				order = 1,
 				get = GetSettings,
 				set = UpdateSettingsAndWidgets,
 				args = {
@@ -2085,7 +2109,7 @@ do
 							local key = info[#info]
 							db.profile[key] = value
 							instanceKeysWidgets.nameList = {}
-							LibKeystone.Request("PARTY")
+							LibKeystoneRequest("PARTY")
 						end,
 						confirm = function(_, value)
 							if value then
@@ -2107,14 +2131,21 @@ do
 						type = "toggle",
 						name = L.keystoneAutoShowEndOfRun,
 						desc = L.instanceKeysEndOfRunDesc,
-						set = UpdateSettings,
 						order = 13,
+						width = "full",
+					},
+					instanceKeysHideTitle = {
+						type = "toggle",
+						name = L.instanceKeysHideTitle,
+						desc = L.instanceKeysHideTitleDesc,
+						set = UpdateSettingsAndWidgets,
+						order = 14,
 						width = "full",
 					},
 					resetHeader = {
 						type = "header",
 						name = "",
-						order = 14,
+						order = 15,
 					},
 					reset = {
 						type = "execute",
@@ -2125,10 +2156,143 @@ do
 							UpdateWidgets()
 							if not instanceKeysWidgets.testing then
 								instanceKeysWidgets.nameList = {}
-								LibKeystone.Request("PARTY")
+								LibKeystoneRequest("PARTY")
 							end
 						end,
-						order = 15,
+						order = 16,
+					},
+				},
+			},
+			keystoneViewer = {
+				type = "group",
+				name = L.keystoneViewerTitle,
+				order = 2,
+				args = {
+					explainViewer = {
+						type = "description",
+						name = L.keystoneViewerExplainer,
+						order = 1,
+						width = "full",
+					},
+					openViewer = {
+						type = "execute",
+						name = L.keystoneViewerOpen,
+						func = ShowViewer,
+						order = 2,
+						width = 1.5,
+					},
+					spacerViewer = {
+						type = "description",
+						name = "\n\n",
+						order = 3,
+						width = "full",
+					},
+					showViewerDungeonEnd = {
+						type = "toggle",
+						name = L.keystoneAutoShowEndOfRun,
+						desc = L.keystoneAutoShowEndOfRunDesc,
+						order = 4,
+						width = "full",
+					},
+					hideFromGuild = {
+						type = "toggle",
+						name = L.keystoneHideGuildTitle,
+						desc = L.keystoneHideGuildDesc,
+						order = 5,
+						width = "full",
+						set = function(info, value)
+							local key = info[#info]
+							db.profile[key] = value
+							LibKeystone.SetGuildHidden(value)
+						end,
+						confirm = function(_, value)
+							if value then
+								return L.keystoneHideGuildWarning
+							end
+						end,
+					},
+					explainViewerKeybinding = {
+						type = "description",
+						name = L.keystoneViewerKeybindingExplainer,
+						order = 6,
+						width = "full",
+					},
+					viewerKeybind = {
+						type = "keybinding",
+						name = L.keybinding,
+						desc = L.keystoneViewerKeybindingDesc,
+						order = 7,
+						set = UpdateSettingsAndWidgets,
+					},
+				},
+			},
+			general = {
+				type = "group",
+				name = L.general,
+				order = 3,
+				args = {
+					autoSlotKeystone = {
+						type = "toggle",
+						name = L.keystoneAutoSlot,
+						desc = L.keystoneAutoSlotDesc,
+						order = 1,
+						width = "full",
+					},
+					spacer = {
+						type = "description",
+						name = "\n\n",
+						order = 2,
+						width = "full",
+					},
+					countdown = {
+						type = "group",
+						name = L.countdown,
+						order = 3,
+						inline = true,
+						width = "full",
+						args = {
+							countdownExplainer = {
+								type = "description",
+								name = L.keystoneCountdownExplainer,
+								order = 1,
+								width = "full",
+							},
+							countBegin = {
+								name = L.countdownBegins,
+								desc = L.keystoneCountdownBeginsDesc,
+								type = "range", min = 3, max = 9, step = 1,
+								order = 2,
+								width = 1
+							},
+							countVoice = {
+								name = L.countdownVoice,
+								type = "select",
+								values = BigWigsAPI.GetCountdownList,
+								sorting = voiceSorting,
+								order = 3,
+								width = 2,
+							},
+							countStartSound = {
+								type = "select",
+								name = L.keystoneCountdownBeginsSound,
+								order = 4,
+								get = soundGet,
+								set = soundSet,
+								values = LibSharedMedia:List("sound"),
+								width = 2.5,
+								itemControl = "DDI-Sound",
+							},
+							countEndSound = {
+								type = "select",
+								name = L.keystoneCountdownEndsSound,
+								order = 5,
+								get = soundGet,
+								set = soundSet,
+								values = LibSharedMedia:List("sound"),
+								width = 2.5,
+								itemControl = "DDI-Sound",
+							},
+						},
 					},
 				},
 			},

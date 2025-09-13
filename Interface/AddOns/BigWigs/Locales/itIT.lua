@@ -237,6 +237,9 @@ L.imported_nameplate_settings = "Impostazioni barre delle unità"
 --L.imported_mythicplus_settings = "Mythic+ Settings"
 --L.mythicplus_settings_import_desc = "Import all Mythic+ settings."
 --L.mythicplus_settings_export_desc = "Export all Mythic+ settings."
+--L.imported_battleres_settings = "Battle Res Settings"
+--L.battleres_settings_import_desc = "Import all Battle Res settings."
+--L.battleres_settings_export_desc = "Export all Battle Res settings."
 
 -- Statistics
 L.statistics = "Statistiche"
@@ -275,7 +278,7 @@ L.H25 = "Eroico 25"
 -----------------------------------------------------------------------
 
 --L.tools = "Tools"
---L.toolsDesc = "BigWigs provides various tools or \"quality of life\" features to speed up and simplify the process of fighting bosses. Expand the menu by clicking the |cFF33FF99+|r icon to see them all."
+--L.toolsDesc = "BigWigs provides various tools or \"quality of life\" features to speed up and simplify the process of fighting bosses."
 
 -----------------------------------------------------------------------
 -- AutoRole.lua
@@ -283,6 +286,26 @@ L.H25 = "Eroico 25"
 
 --L.autoRoleTitle = "Auto Role"
 --L.autoRoleExplainer = "Whenever you join a group, or you change your talent specialization whilst being in a group, BigWigs will automatically adjust your group role (Tank, Healer, Damager) accordingly.\n\n"
+
+-----------------------------------------------------------------------
+-- BattleRes.lua
+--
+
+--L.battleResTitle = "Battle Res"
+--L.battleResDesc = "An icon that shows how many battle resurrection charges are available and the time until another charge is gained."
+--L.battleResDesc2 = "\nYour |cFF33FF99Battle Resurrection History|r can be viewed in the tooltip when you mouse over the icon.\n\n"
+--L.battleResHistory = "Battle Res History:"
+--L.battleResResetAll = "Reset all the Battle Resurrection settings to their default values."
+--L.battleResDurationText = "Duration Text"
+--L.battleResChargesText = "Charges Text"
+--L.battleResNoCharges = "0 charges available"
+--L.battleResHasCharges = "1 or more charges available"
+--L.battleResPlaySound = "Play a sound when a new charge is gained"
+--L.iconTextureSpellID = "|T%d:0:0:0:0:64:64:4:60:4:60|t Icon Texture (Spell ID)"
+--L.iconTextureSpellIDError = "You must type a valid spell ID to use as the icon texture."
+--L.battleResModeIcon = "Mode: Icon"
+--L.battleResModeText = "Mode: Text Only"
+--L.battleResModeTextTooltip = "Showing a temporary background to help you move the Battle Res feature and to see where the mouseover area is."
 
 -----------------------------------------------------------------------
 -- Keystones.lua
@@ -312,9 +335,10 @@ L.H25 = "Eroico 25"
 --L.keystoneCompletedTooltip = "Completed in time: |cFFFFFFFF%d min %d sec|r\nTime Limit: |cFFFFFFFF%d min %d sec|r"
 --L.keystoneFailedTooltip = "Failed to complete in time: |cFFFFFFFF%d min %d sec|r\nTime Limit: |cFFFFFFFF%d min %d sec|r"
 --L.keystoneExplainer = "A collection of various tools to improve the Mythic+ experience."
---L.keystoneAutoSlot = "Auto slot keystone"
---L.keystoneAutoSlotDesc = "Automatically place your keystone into the slot when opening the keystone holder."
---L.keystoneAutoSlotMessage = "Automatically placed %s into the keystone slot."
+--L.keystoneAutoSlot = "Auto insert keystone"
+--L.keystoneAutoSlotDesc = "Automatically insert your keystone into the slot when opening the keystone holder."
+--L.keystoneAutoSlotMessage = "Automatically inserted %s into the keystone slot."
+--L.keystoneAutoSlotFrame = "|TInterface\\AddOns\\BigWigs\\Media\\Icons\\minimap_raid:14:14|t Keystone Auto Inserted"
 --L.keystoneModuleName = "Mythic+"
 --L.keystoneStartBar = "%s +%d" -- Format is SHORT_DUNGEON_NAME +KEYSTONE_LEVEL e.g. "ROOK +12"
 --L.keystoneStartMessage = "%s +%d begins now!" -- Format is LONG_DUNGEON_NAME +KEYSTONE_LEVEL e.g. "The Rookery +12 begins now!"
@@ -344,7 +368,7 @@ L.H25 = "Eroico 25"
 --L.keystoneHistoryScoreOlderTooltip = "Total score gained before this week: |cFFFFFFFF+%d|r"
 L.keystoneTimeUnder = "|cFF33FF99-%02d:%02d|r"
 L.keystoneTimeOver = "|cFFFF4411+%02d:%02d|r"
---L.keystoneTeleportTip = "TIP: Click the dungeon name below to teleport directly to the dungeon entrance."
+--L.keystoneTeleportTip = "Click the dungeon name below to |cFF33FF99TELEPORT|r directly to the dungeon entrance."
 
 -- It doesn't really matter what you call it as long as it's recognizable and limited to ~6 characters
 --L.keystoneShortName_TheRookery = "ROOK"
@@ -391,6 +415,8 @@ L.keystoneTimeOver = "|cFFFF4411+%02d:%02d|r"
 --L.instanceKeysOtherDungeonColor = "Other dungeon color"
 --L.instanceKeysOtherDungeonColorDesc = "Choose the font color for players that have keystones that don't belong to the dungeon you are in."
 --L.instanceKeysEndOfRunDesc = "By default the list will only show when you enter a mythic dungeon. Enabling this option will also show the list when the Mythic+ is over."
+--L.instanceKeysHideTitle = "Hide title"
+--L.instanceKeysHideTitleDesc = "Hide the \"Who has a key?\" title."
 
 -----------------------------------------------------------------------
 -- LFGTimer.lua
@@ -411,6 +437,10 @@ L.comma = ", "
 L.reset = "Reimposta"
 --L.resetDesc = "Reset the above settings to their default values."
 L.resetAll = "Reimposta tutto"
+--L.startTest = "Start Test"
+--L.stopTest = "Stop Test"
+--L.always = "Always"
+--L.never = "Never"
 
 L.positionX = "Posizione X"
 L.positionY = "Posizione Y"
@@ -425,6 +455,7 @@ L.disabled = "Disabilitato"
 L.disableDesc = "Stai per disabilitare la funzionalità '%s' che |cffff4411non è consigliata|r.\n\nSei sicuro di questo?"
 --L.keybinding = "Keybinding"
 --L.dragToResize = "Drag to resize"
+--L.cannotMoveInCombat = "You cannot move this whilst you're in combat."
 
 -- Anchor Points
 L.UP = "Su"
@@ -842,6 +873,7 @@ L.combatLogDesc = "Inizia a registrare il combattimento automaticamente quando p
 L.pull = "Ingaggio"
 L.engageSoundTitle = "Riproduci un suono quando inizia il combattimento con un boss"
 L.pullStartedSoundTitle = "Riproduci un suono quando comincia il timer di ingaggio"
+--L.pullStartedMessageTitle = "Show a message when the pull timer is started"
 L.pullFinishedSoundTitle = "Riproduci un suono quando termina il timer di ingaggio"
 L.pullStartedBy = "Time di ingaggio iniziato da %s."
 L.pullStopped = "Timer ingaggio cancellato da %s."

@@ -1,15 +1,15 @@
-local W, F, E, L = unpack((select(2, ...)))
-local M = W.Modules.Misc
+local W, F, E, L = unpack((select(2, ...))) ---@type WindTools, Functions, ElvUI, table
+local M = W.Modules.Misc ---@class Misc
 
 local hooksecurefunc = hooksecurefunc
 
 function M:PauseToSlash()
 	if E.private.WT.misc.pauseToSlash then
-		hooksecurefunc("ChatEdit_OnTextChanged", function(self, userInput)
-			local text = self:GetText()
+		hooksecurefunc("ChatEdit_OnTextChanged", function(editBox, userInput)
+			local text = editBox:GetText()
 			if userInput then
 				if text == "、" then
-					self:SetText("/")
+					editBox:SetText("/")
 				end
 			end
 		end)

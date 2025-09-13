@@ -88,6 +88,7 @@ L["ModuleDescription GossipFrameMedal Format"] = "将默认图标 %s 替换为�
 --DruidModelFix (Disabled after 10.2.0)
 L["ModuleName DruidModelFix"] = "德鲁伊模型修复";
 L["ModuleDescription DruidModelFix"] = "修复使用群星雕文导致人物界面模型变白的问题。\n\n暴雪将在10.2.0版本修复这个问题。";
+L["Model Layout"] = "模型布局";
 
 
 --PlayerChoiceFrameToken (PlayerChoiceFrame)
@@ -200,6 +201,7 @@ L["Can Create Multiple Item Format"] = "你拥有的材料能够合成|cffffffff
 --Tooltip DelvesItem
 L["ModuleName TooltipDelvesItem"] = "地下堡宝匣钥匙";
 L["ModuleDescription TooltipDelvesItem"] = "在周常宝箱的鼠标提示上显示你本CD已获得的宝匣钥匙及碎片数量。";
+L["You Have Received Weekly Item Format"] = "你本周已获得%s。";
 
 
 --Plunderstore
@@ -358,6 +360,29 @@ L["ModuleDescription SoftTargetName"] = "显示软目标物体的名字。";
 L["SoftTargetName Req Title"] = "|cffd4641c你还需要手动更改以下设置来使此功能生效：|r";
 L["SoftTargetName Req 1"] = "前往游戏选项> 游戏功能> 控制，|cffffd100开启交互按键|r";
 L["SoftTargetName Req 2"] = "将CVar |cffffd100SoftTargetIconGameObject|r 的值设为 |cffffffff1|r";
+L["SoftTargetName CastBar"] = "显示施法条";
+L["SoftTargetName CastBar Tooltip"] = "在姓名版上显示环形施法条。\n\n|cffff4800此插件无法辨别你的软目标是否为当前施法目标。|r"
+L["SoftTargetName QuestObjective"] = "显示任务目标";
+L["SoftTargetName QuestObjective Tooltip"] = "在名字下方显示任务目标（如果存在的话）。";
+L["SoftTargetName QuestObjective Alert"] = "此功能需要你前往游戏选项> 辅助功能> 综合，并勾选|cffffffff动作瞄准提示信息|r。";   --See globals: TARGET_TOOLTIP_OPTION
+L["SoftTargetName ShowNPC"] = "包括NPC";
+L["SoftTargetName ShowNPC Tooltip"] = "若禁用此选项，我们将只显示可互动物体（Game Objects）的名字。";
+
+
+--LegionRemix
+L["ModuleName LegionRemix"] = "军团再临：幻境新生";
+L["ModuleDescription LegionRemix"] = "军团再临：幻境新生";
+L["Artifact Weapon"] = "神器武器";
+L["Earn X To Upgrade Y Format"] = "还差 |cffffffff%s|r %s 即可升级%s"; --Example: Earn another 100 Infinite Power to upgrade Artifact Weapon
+L["Until Next Upgrade Format"] = "距下一级还差 %s";
+L["New Trait Available"] = "有新特质可用。";
+L["Rank Increased"] = "等级已提升";
+L["Infinite Knowledge Tooltip"] = "某些军团再临成就会奖励你永恒知识。";
+
+
+--ItemUpgradeUI
+L["ModuleName ItemUpgradeUI"] = "物品升级：自动打开装备栏";
+L["ModuleDescription ItemUpgradeUI"] = "当你与物品升级NPC交互时自动打开角色面板。";
 
 
 --Loot UI
@@ -395,6 +420,9 @@ L["LootUI Option Custom Quality Color Tooltip"] = "使用你在 游戏设置> �
 L["LootUI Option Grow Direction"] = "向上生长";
 L["LootUI Option Grow Direction Tooltip 1"] = "勾选时：窗口左下角位置保持不变，新提示出现在旧提示的上方。";
 L["LootUI Option Grow Direction Tooltip 2"] = "未勾选时：窗口左上角位置保持不变，新提示出现在旧提示的下方。";
+L["Junk Items"] = "垃圾物品";
+L["LootUI Option Combine Items"] = "合并相似物品";
+L["LootUI Option Combine Items Tooltip"] = "在同一行显示相似物品。目前支持的分类为：\n\n- 垃圾物品\n- 纪元纪念品（军团再临：幻境新生）";
 
 
 --Quick Slot For Third-party Dev
@@ -473,6 +501,7 @@ L["Reposition Button Horizontal"] = "水平方向移动";   --Move the window ho
 L["Reposition Button Vertical"] = "竖直方向移动";
 L["Reposition Button Tooltip"] = "左键点击并拖拉来移动这个窗口。";
 L["Font Size"] = "字体大小";
+L["Icon Size"] = "图标大小";
 L["Reset To Default Position"] = "重置到默认位置";
 L["Renown Level Label"] = "名望 ";  --There is a space
 L["Paragon Reputation"] = "巅峰";
@@ -512,6 +541,7 @@ L["Completed CHETT List"] = "完成的C.H.E.T.T.清单";
 L["Devourer Attack"] = "吞噬者入侵";
 L["Restored Coffer Key"] = "修复的宝匣钥匙";
 L["Coffer Key Shard"] = "宝匣钥匙碎片";
+L["Epoch Mementos"] = "纪元纪念品";
 
 
 --Map Pin Filter Name (name should be plural)

@@ -237,6 +237,9 @@ L.imported_nameplate_settings = "Namensplaketten Einstellungen"
 L.imported_mythicplus_settings = "Mythisch+ Einstellungen"
 L.mythicplus_settings_import_desc = "Alle Mythisch+ Einstellungen importieren."
 L.mythicplus_settings_export_desc = "Alle Mythisch+ Einstellungen exportieren."
+L.imported_battleres_settings = "Battle Res Einstellungen"
+L.battleres_settings_import_desc = "Alle Battle Res Einstellungen importieren."
+L.battleres_settings_export_desc = "Alle Battle Res Einstellungen exportieren."
 
 -- Statistics
 L.statistics = "Statistiken"
@@ -275,7 +278,7 @@ L.H25 = "Heroisch 25"
 -----------------------------------------------------------------------
 
 L.tools = "Werkzeuge"
-L.toolsDesc = "BigWigs bietet verschiedene Werkzeuge oder Features der \"Lebensqualität\" zur Beschleunigung und Vereinfachung von Bossbegegnungen. Menü durch Klicken des |cFF33FF99+|r Symbols erweitern, um alle zu sehen."
+L.toolsDesc = "BigWigs bietet verschiedene Werkzeuge oder Features der \"Lebensqualität\" zur Beschleunigung und Vereinfachung von Bossbegegnungen."
 
 -----------------------------------------------------------------------
 -- AutoRole.lua
@@ -283,6 +286,26 @@ L.toolsDesc = "BigWigs bietet verschiedene Werkzeuge oder Features der \"Lebensq
 
 L.autoRoleTitle = "Automatische Rollenwahl"
 L.autoRoleExplainer = "Jedes mal, wenn einer Gruppe beigetreten wird, oder die Talentspezialisierung in einer Gruppe geändert wird, passt BigWigs automatisch die Gruppenrolle (Tank, Heiler, Schaden) entsprechend an.\n\n"
+
+-----------------------------------------------------------------------
+-- BattleRes.lua
+--
+
+L.battleResTitle = "Battle Res"
+L.battleResDesc = "Zeigt ein Symbol an, welches die Anzahl der verfügbaren Battle Res Aufladungen sowie die Zeit bis zur nächsten Aufladung anzeigt."
+L.battleResDesc2 = "\nDer |cFF33FF99Battle Res Verlauf|r wird im Tooltip beim Überfahren des Symbols mit der Maus angezeigt.\n\n"
+L.battleResHistory = "Battle Res Verlauf:"
+L.battleResResetAll = "Alle Battle Res Einstellungen auf ihre Standardwerte zurücksetzen."
+L.battleResDurationText = "Dauer Text"
+L.battleResChargesText = "Aufladungen Text"
+L.battleResNoCharges = "0 Aufladungen verfügbar"
+L.battleResHasCharges = "1 oder mehr Aufladungen verfügbar"
+L.battleResPlaySound = "Einen Sound wiedergeben wenn eine neue Aufladung verfügbar ist"
+L.iconTextureSpellID = "|T%d:0:0:0:0:64:64:4:60:4:60|t Symbol Textur (Zauber ID)"
+L.iconTextureSpellIDError = "Es muss eine gültige Zauber ID zur Nutzung der Symbol Textur genutzt werden."
+L.battleResModeIcon = "Modus: Symbol"
+L.battleResModeText = "Modus: Nur Text"
+L.battleResModeTextTooltip = "Es wird vorübergehend ein Hintergrund angezeigt, um beim Bewegen der Battle Res Funktion behilflich zu sein und den Mouseover Bereich anzuzeigen."
 
 -----------------------------------------------------------------------
 -- Keystones.lua
@@ -315,6 +338,7 @@ L.keystoneExplainer = "Eine Sammlung verschiedener Werkzeuge zur Verbesserung de
 L.keystoneAutoSlot = "Schlüsselstein automatisch einsetzen"
 L.keystoneAutoSlotDesc = "Setzt den Schlüsselstein automatisch beim Öffnen des Borns der Macht ein."
 L.keystoneAutoSlotMessage = "%s wurde automatisch in den Born der Macht eingesetzt."
+L.keystoneAutoSlotFrame = "|TInterface\\AddOns\\BigWigs\\Media\\Icons\\minimap_raid:14:14|t Schlüsselstein automatisch eingesetzt"
 L.keystoneModuleName = "Mythisch+"
 L.keystoneStartBar = "%s +%d" -- Format is SHORT_DUNGEON_NAME +KEYSTONE_LEVEL e.g. "ROOK +12"
 L.keystoneStartMessage = "%s +%d beginnt jetzt!" -- Format is LONG_DUNGEON_NAME +KEYSTONE_LEVEL e.g. "The Rookery +12 begins now!"
@@ -344,7 +368,7 @@ L.keystoneHistoryScoreThisWeekTooltip = "Gesamte diese Woche erhaltene Wertung: 
 L.keystoneHistoryScoreOlderTooltip = "Gesamte vor dieser Woche erhaltene Wertung: |cFFFFFFFF+%d|r"
 L.keystoneTimeUnder = "|cFF33FF99-%02d:%02d|r"
 L.keystoneTimeOver = "|cFFFF4411+%02d:%02d|r"
-L.keystoneTeleportTip = "TIPP: Dungeonnamen unten anklicken um direkt zum Dungeoneingang zu teleportieren."
+L.keystoneTeleportTip = "Dungeonnamen unten anklicken um direkt zum Dungeoneingang zu |cFF33FF99TELEPORTIEREN|r."
 
 -- It doesn't really matter what you call it as long as it's recognizable and limited to ~6 characters
 L.keystoneShortName_TheRookery = "ROOK"
@@ -391,6 +415,8 @@ L.instanceKeysShowAllDesc = "Durch Aktivierung dieser Option werden alle Spieler
 L.instanceKeysOtherDungeonColor = "Farbe anderer Dungeons"
 L.instanceKeysOtherDungeonColorDesc = "Schriftfarbe für Spieler wählen, deren Schlüsselstein nicht zum aktuellen Dungeon passt."
 L.instanceKeysEndOfRunDesc = "Standardmäßig wird die Liste nur beim Betreten eines mythischen Dungeons angezeigt. Durch Aktivierung dieser Option wird die Liste auch nach Abschluss von Mythisch+ Dungeons angezeigt."
+L.instanceKeysHideTitle = "Titel verstecken"
+L.instanceKeysHideTitleDesc = "Versteckt den \"Wer hat einen Schlüsselstein?\" Titel."
 
 -----------------------------------------------------------------------
 -- LFGTimer.lua
@@ -411,6 +437,10 @@ L.comma = ", "
 L.reset = "Zurücksetzen"
 L.resetDesc = "Die obigen Einstellungen auf Standardwerte zurücksetzen."
 L.resetAll = "Alle zurücksetzen"
+L.startTest = "Test starten"
+L.stopTest = "Test beenden"
+L.always = "Immer"
+L.never = "Nie"
 
 L.positionX = "X-Position"
 L.positionY = "Y-Position"
@@ -425,6 +455,7 @@ L.disabled = "Deaktivieren"
 L.disableDesc = "Du bist dabei, das Feature '%s' zu deaktivieren, was |cffff4411nicht empfohlen|r wird.\n\nBist Du sicher, dass Du das tun willst?"
 L.keybinding = "Tastenbelegung"
 L.dragToResize = "Zum Anpassen ziehen"
+L.cannotMoveInCombat = "Verschieben im Kampf nicht möglich."
 
 -- Anchor Points
 L.UP = "Hoch"
@@ -842,6 +873,7 @@ L.combatLogDesc = "Startet automatisch die Aufzeichnung des Kampfes, wenn ein Pu
 L.pull = "Pull"
 L.engageSoundTitle = "Spiele  einen Sound ab, sobald ein Bosskampf beginnt"
 L.pullStartedSoundTitle = "Spiele einen Sound ab, sobald ein Pull-Timer gestartet wurde"
+L.pullStartedMessageTitle = "Eine Nachricht anzeigen, sobald ein Pull-Timer gestartet wurde"
 L.pullFinishedSoundTitle = "Spiele einen Sound ab, sobald ein Pull-Timer abgelaufen ist"
 L.pullStartedBy = "Pull-Timer gestartet von %s."
 L.pullStopped = "Pull-Timer von %s abgebrochen."

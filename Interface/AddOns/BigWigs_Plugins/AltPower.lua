@@ -198,10 +198,20 @@ do
 					},
 					test = {
 						type = "execute",
-						name = L.test,
+						name = function()
+							if inTestMode then
+								return L.stopTest
+							else
+								return L.startTest
+							end
+						end,
 						desc = L.altPowerTestDesc,
 						func = function()
-							plugin:Test()
+							if inTestMode then
+								plugin:Close()
+							else
+								plugin:Test()
+							end
 						end,
 						width = 1.5,
 						order = 2,
@@ -773,7 +783,7 @@ do
 		local newPowerMax = UnitPowerMax("player", 10) -- Enum.PowerType.Alternate = 10
 		if newPower ~= power then
 			power = newPower
-			plugin:Sync("AltPower", newPower)
+			plugin:Sync("AltPower", newPower, true)
 		end
 		if newPowerMax ~= powerMax then
 			powerMax = newPowerMax

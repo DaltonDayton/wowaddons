@@ -1,4 +1,4 @@
-local W = unpack((select(2, ...)))
+local W = unpack((select(2, ...))) ---@type WindTools
 
 W.Changelog[202] = {
 	RELEASE_DATE = "2020/10/20",
@@ -69,7 +69,7 @@ W.Changelog[202] = {
 			"[Skins] Immersion Skin will not hide the number anymore.",
 			"[Paragon Reputation] Fix the API usage for 9.0.",
 			"[Chat Text] Add Lyn UI icon pack.",
-			"[UnitFrames] Add Lyn UI icon pack.",
+			"[Unit Frames] Add Lyn UI icon pack.",
 		},
 	},
 }

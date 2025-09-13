@@ -148,7 +148,7 @@ BigWigs:AddColors("The Soul Hunters", {
 	[1227355] = "cyan",
 	[1227685] = "blue",
 	[1227809] = {"blue","orange"},
-	[1233105] = {"blue","yellow"},
+	[1233105] = {"blue","green"},
 	[1233381] = "blue",
 	[1233672] = "red",
 	[1233968] = "blue",
@@ -269,7 +269,7 @@ BigWigs:AddSounds("Nexus-King Salhadaar", {
 })
 
 BigWigs:AddColors("Dimensius, the All-Devouring", {
-	[1228206] = "green",
+	[1228206] = "blue",
 	[1228207] = "blue",
 	[1229038] = "red",
 	[1230087] = "purple",
@@ -283,7 +283,7 @@ BigWigs:AddColors("Dimensius, the All-Devouring", {
 	[1233292] = "blue",
 	[1233539] = "red",
 	[1234044] = "yellow",
-	[1234054] = "blue",
+	[1234054] = {"blue","green"},
 	[1234243] = "blue",
 	[1234244] = "blue",
 	[1234263] = "purple",
@@ -328,7 +328,7 @@ BigWigs:AddSounds("Dimensius, the All-Devouring", {
 	[1233292] = "underyou",
 	[1233539] = "warning",
 	[1234044] = "alert",
-	[1234054] = {"info","warning"},
+	[1234054] = {"alarm","info"},
 	[1234243] = "alarm",
 	[1234244] = "warning",
 	[1234263] = "alert",

@@ -1127,6 +1127,8 @@ L["Festerhide Grizzly"] = "Grizzly Putrescente"
 L["Fetid Maggot"] = "Camola Fetida"
 L["Fetid Rotsinger"] = "Cantamarcio Fetida"
 L["Feugen"] = "Feugen"
+--[[Translation missing --]]
+L["ffAbandonTip"] = "Use the /ff slash command to start the M+ abandon vote"
 L["Field of the Eternal Hunt"] = "Campi della Caccia Eterna"
 L["Filth Caller"] = "Invocatrice del Sudiciume"
 L["Finger Food"] = "Stuzzichino"
@@ -3640,6 +3642,8 @@ L["Warlord Parjesh"] = "Signore della Guerra Parjesh"
 L["Warlord Sargha"] = "Signora della Guerra Sargha"
 --[[Translation missing --]]
 L["Warning"] = "Warning"
+--[[Translation missing --]]
+L["WARNING_OLD_DUNGEON_IMPORT"] = "This route is from a dungeon that is not available in the current version of MDT. Install MDT Legacy to import this route."
 L["Warp Shade"] = "Ombra Distorcente"
 L["Warp Stalker"] = "Segugio Distorcente"
 L["Waste Pipes"] = "Tubature di Scarico"

@@ -1,5 +1,5 @@
-local W, F, E, L = unpack((select(2, ...)))
-local S = W.Modules.Skins
+local W, F, E, L = unpack((select(2, ...))) ---@type WindTools, Functions, ElvUI, table
+local S = W.Modules.Skins ---@type Skins
 local ES = E.Skins
 
 local _G = _G
@@ -39,8 +39,8 @@ local function ReskinUIWidgetContainer(container)
 		end
 	end
 
-	hooksecurefunc(container, "ProcessWidget", function(container)
-		for _, widget in pairs(container.widgetFrames) do
+	hooksecurefunc(container, "ProcessWidget", function(widgetContainer)
+		for _, widget in pairs(widgetContainer.widgetFrames) do
 			if not widget.__windSkin then
 				ReskinText(widget.Text)
 				ReskinBar(widget.Bar)

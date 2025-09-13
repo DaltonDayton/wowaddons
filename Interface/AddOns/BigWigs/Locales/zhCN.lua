@@ -235,8 +235,11 @@ L.imported_countdown_settings = "倒数设置"
 L.imported_countdown_color = "倒数颜色"
 L.imported_nameplate_settings = "姓名板设置"
 L.imported_mythicplus_settings = "史诗钥石设置"
-L.mythicplus_settings_import_desc = "导入全部史诗钥石设置。"
-L.mythicplus_settings_export_desc = "导出全部史诗钥石设置。"
+L.mythicplus_settings_import_desc = "导入所有史诗钥石设置。"
+L.mythicplus_settings_export_desc = "导出所有史诗钥石设置。"
+L.imported_battleres_settings = "战复设置"
+L.battleres_settings_import_desc = "导入所有战复设置。"
+L.battleres_settings_export_desc = "导入所有战复设置。"
 
 -- Statistics
 L.statistics = "统计"
@@ -275,7 +278,7 @@ L.H25 = "25人英雄"
 -----------------------------------------------------------------------
 
 L.tools = "工具"
-L.toolsDesc = "BigWigs 提供多种工具和\"便利功能\"，让你可以轻松的简化首领战斗流程。点击 |cFF33FF99+|r 图标展开菜单可查看所有功能。"
+L.toolsDesc = "BigWigs 提供多种工具和\"便利功能\"，让你可以轻松的简化首领战斗流程。"
 
 -----------------------------------------------------------------------
 -- AutoRole.lua
@@ -283,6 +286,26 @@ L.toolsDesc = "BigWigs 提供多种工具和\"便利功能\"，让你可以轻�
 
 L.autoRoleTitle = "自动分配职责"
 L.autoRoleExplainer = "当你加入一个队伍，或者在队伍中切换你的天赋专精时，BigWigs 将自动调整你在队伍中的职责（坦克、治疗者、伤害输出者）。\n\n"
+
+-----------------------------------------------------------------------
+-- BattleRes.lua
+--
+
+L.battleResTitle = "战复"
+L.battleResDesc = "新建一个图标，显示可用战复次数及下次获得额外次数所需时间。"
+L.battleResDesc2 = "\n你的 |cFF33FF99战复|r 使用记录可以通过将鼠标悬停在图标上时查看。\n\n"
+L.battleResHistory = "战复："
+L.battleResResetAll = "将所有战复设置重置为默认。"
+L.battleResDurationText = "时间文本"
+L.battleResChargesText = "次数文本"
+L.battleResNoCharges = "0 次可用"
+L.battleResHasCharges = "1 次或多次可用"
+L.battleResPlaySound = "获得新额外次数时播放音效"
+L.iconTextureSpellID = "|T%d:0:0:0:0:64:64:4:60:4:60|t 技能图标（Spell ID）"
+L.iconTextureSpellIDError = "你必须输入一个有效的法术ID来作为显示的图标。"
+L.battleResModeIcon = "显示模式：图标"
+L.battleResModeText = "显示模式：仅文字"
+L.battleResModeTextTooltip = "显示临时背景以便调整战复功能的位置，并查看鼠标悬停提示位置。"
 
 -----------------------------------------------------------------------
 -- Keystones.lua
@@ -309,12 +332,13 @@ L.keystoneTabHistory = "历史记录"
 L.keystoneHeaderThisWeek = "本周"
 L.keystoneHeaderOlder = "更早"
 L.keystoneScoreGainedTooltip = "获得评分：|cFFFFFFFF+%d|r\n史诗钥石评分：|cFFFFFFFF%d|r"
---L.keystoneCompletedTooltip = "限时完成: |cFFFFFFFF%d min %d sec|r\nTime Limit: |cFFFFFFFF%d min %d sec|r"
---L.keystoneFailedTooltip = "超时: |cFFFFFFFF%d min %d sec|r\nTime Limit: |cFFFFFFFF%d min %d sec|r"
+L.keystoneCompletedTooltip = "限时完成: |cFFFFFFFF%d分%d秒|r\n时限：|cFFFFFFFF%d分%d秒|r"
+L.keystoneFailedTooltip = "超时: |cFFFFFFFF%d分%d秒|r\n时限：|cFFFFFFFF%d分%d秒|r"
 L.keystoneExplainer = "一个包含多种工具的集合，旨在提升史诗钥石地下城的游戏体验。"
 L.keystoneAutoSlot = "自动插入史诗钥石"
 L.keystoneAutoSlotDesc = "打开能量之泉时，自动将你的史诗钥石插入。"
 L.keystoneAutoSlotMessage = "已将 %s 自动插入能量之泉。"
+L.keystoneAutoSlotFrame = "|TInterface\\AddOns\\BigWigs\\Media\\Icons\\minimap_raid:14:14|t 史诗钥石已自动插入"
 L.keystoneModuleName = "史诗钥石地下城"
 L.keystoneStartBar = "%s +%d" -- Format is SHORT_DUNGEON_NAME +KEYSTONE_LEVEL e.g. "ROOK +12"
 L.keystoneStartMessage = "%s +%d 挑战开始！" -- Format is LONG_DUNGEON_NAME +KEYSTONE_LEVEL e.g. "The Rookery +12 begins now!"
@@ -344,7 +368,7 @@ L.keystoneHistoryScoreThisWeekTooltip = "本周获得的分数：|cFFFFFFFF+%d|r
 L.keystoneHistoryScoreOlderTooltip = "本周之前获得的总分数：|cFFFFFFFF+%d|r"
 L.keystoneTimeUnder = "|cFF33FF99-%02d:%02d|r"
 L.keystoneTimeOver = "|cFFFF4411+%02d:%02d|r"
---L.keystoneTeleportTip = "TIP: Click the dungeon name below to teleport directly to the dungeon entrance."
+L.keystoneTeleportTip = "点击下方地下城名称可直接|cFF33FF99传送|r至地下城入口。"
 
 -- It doesn't really matter what you call it as long as it's recognizable and limited to ~6 characters
 L.keystoneShortName_TheRookery = "驭雷栖巢"
@@ -391,6 +415,8 @@ L.instanceKeysShowAllDesc = "启用此选项将显示列表中的所有玩家，
 L.instanceKeysOtherDungeonColor = "其他地下城颜色"
 L.instanceKeysOtherDungeonColorDesc = "为持有非当前地下城钥石选择字体颜色。"
 L.instanceKeysEndOfRunDesc = "默认情况下，列表仅在你进入史诗钥石地下城时显示。启用此选项后，还将在史诗钥石结束后继续显示列表。"
+L.instanceKeysHideTitle = "隐藏标题"
+L.instanceKeysHideTitleDesc = "隐藏 \"谁拥有钥石？\" 标题。"
 
 -----------------------------------------------------------------------
 -- LFGTimer.lua
@@ -409,8 +435,12 @@ L.general = "一般"
 L.advanced = "高级"
 L.comma = "，"
 L.reset = "重置"
-L.resetDesc = "将上述设置重置为默认值。"
+L.resetDesc = "将上述设置重置为默认。"
 L.resetAll = "重置所有"
+L.startTest = "开始测试"
+L.stopTest = "停止测试"
+L.always = "总是" -- ALWAYS
+L.never = "从不" -- NEVER
 
 L.positionX = "横向位置"
 L.positionY = "纵向位置"
@@ -425,6 +455,7 @@ L.disabled = "禁用"
 L.disableDesc = "将禁用“%s”功能，但|cffff4411不建议|r这么做。\n\n你确定要这么做吗？"
 L.keybinding = "按键设置"
 L.dragToResize = "拖动调整尺寸"
+L.cannotMoveInCombat = "你在战斗中时无法移动此框体。"
 
 -- Anchor Points
 L.UP = "向上"
@@ -842,6 +873,7 @@ L.combatLogDesc = "当开怪倒数计时器开始到战斗结束时自动开始�
 L.pull = "开怪"
 L.engageSoundTitle = "当首领战斗开始时播放音效"
 L.pullStartedSoundTitle = "当开怪倒数计时器开始时播放音效"
+L.pullStartedMessageTitle = "当开怪倒数计时器开始时显示消息"
 L.pullFinishedSoundTitle = "当开怪倒数计时器结束时播放音效"
 L.pullStartedBy = "%s 发起开怪倒数计时。"
 L.pullStopped = "%s 取消了开怪倒数计时。"

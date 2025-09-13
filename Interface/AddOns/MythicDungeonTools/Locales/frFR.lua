@@ -1030,6 +1030,8 @@ L["Festerhide Grizzly"] = "Grizzly peau-putride"
 L["Fetid Maggot"] = "Ver fétide"
 L["Fetid Rotsinger"] = "Chante-pourriture fétide"
 L["Feugen"] = "Feugen"
+--[[Translation missing --]]
+L["ffAbandonTip"] = "Use the /ff slash command to start the M+ abandon vote"
 L["Field of the Eternal Hunt"] = "Champs de la chasse éternelle"
 L["Filth Caller"] = "Invoque-pourriture"
 L["Finger Food"] = "Amuse-gueules"
@@ -3391,6 +3393,8 @@ L["Warlord Parjesh"] = "Seigneur de guerre Parjesh"
 L["Warlord Sargha"] = "Dame de guerre Sargha"
 --[[Translation missing --]]
 L["Warning"] = "Warning"
+--[[Translation missing --]]
+L["WARNING_OLD_DUNGEON_IMPORT"] = "This route is from a dungeon that is not available in the current version of MDT. Install MDT Legacy to import this route."
 L["Warp Shade"] = "Ombre dimensionnelle"
 L["Warp Stalker"] = "Traqueur dimensionnel"
 L["Waste Pipes"] = "Conduits d'évacuations "

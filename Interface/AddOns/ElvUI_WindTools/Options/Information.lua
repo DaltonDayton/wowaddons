@@ -1,4 +1,4 @@
-local W, F, E, L, V, P, G = unpack((select(2, ...)))
+local W, F, E, L, V, P, G = unpack((select(2, ...))) ---@type WindTools, Functions, ElvUI, table, PrivateDB, ProfileDB, GlobalDB
 local C = W.Utilities.Color
 
 local options = W.options.information.args
@@ -7,31 +7,22 @@ local format = format
 local gsub = gsub
 local ipairs = ipairs
 local pairs = pairs
+local tconcat = table.concat
 local tonumber = tonumber
 local tostring = tostring
-local type = type
 local unpack = unpack
 
-local tconcat = table.concat
-
-local function blue(string)
-	if type(string) ~= "string" then
-		string = tostring(string)
-	end
-	return F.CreateColorString(string, { r = 0.204, g = 0.596, b = 0.859 })
-end
-
 local donators = {
-	cdkeys = blue(L["CDKey"] .. ": ") .. tconcat({
+	cdkeys = C.StringByTemplate(L["CDKey"] .. ": ", "blue-500") .. tconcat({
 		"DakJaniels",
 	}, ", "),
-	patreon = blue("Ko-fi / Patreon" .. ": ") .. tconcat({
+	patreon = C.StringByTemplate("Ko-fi / Patreon" .. ": ", "blue-500") .. tconcat({
 		"Dlarge",
 		"KK",
 		"paroxp",
 		"Constrained",
 	}, ", "),
-	aifadian = blue(L["AiFaDian"] .. ": ") .. tconcat({
+	aifadian = C.StringByTemplate(L["AiFaDian"] .. ": ", "blue-500") .. tconcat({
 		"LuckyAres",
 		"喵仙人Meowcactus",
 		"Fakewings",
@@ -193,9 +184,8 @@ options.help = {
 					order = 1,
 					type = "description",
 					name = format(
-						"%s: %s | %s",
+						"%s | %s",
 						"fang2hou",
-						E.InfoColor .. "houshuu" .. "|r",
 						F.CreateClassColorString("Tabimonk @ " .. L["Shadowmoon"] .. "(TW)", "MONK")
 					),
 				},
@@ -208,13 +198,18 @@ options.help = {
 						F.CreateClassColorString("青楓殘月 @ " .. L["Lights Hope"] .. " (TW)", "MAGE")
 					),
 				},
-				["someblu"] = {
+				["DakJaniels"] = {
 					order = 3,
+					type = "description",
+					name = "DakJaniels",
+				},
+				["someblu"] = {
+					order = 4,
 					type = "description",
 					name = "someblu",
 				},
 				["keludechu"] = {
-					order = 4,
+					order = 5,
 					type = "description",
 					name = format(
 						"%s: %s | %s",
@@ -224,12 +219,12 @@ options.help = {
 					),
 				},
 				["LiangYuxuan"] = {
-					order = 5,
+					order = 6,
 					type = "description",
 					name = "LiangYuxuan",
 				},
 				["asdf12303116"] = {
-					order = 6,
+					order = 7,
 					type = "description",
 					name = format(
 						"%s: %s | %s",
@@ -239,42 +234,42 @@ options.help = {
 					),
 				},
 				["KurtzPT"] = {
-					order = 7,
+					order = 8,
 					type = "description",
 					name = "KurtzPT",
 				},
 				["404Polaris"] = {
-					order = 8,
+					order = 9,
 					type = "description",
 					name = "404Polaris",
 				},
 				["fubaWoW"] = {
-					order = 9,
+					order = 10,
 					type = "description",
 					name = "fubaWoW",
 				},
 				["ryanfys"] = {
-					order = 10,
+					order = 11,
 					type = "description",
 					name = format("%s: %s", "ryanfys", "阿尔托利亜 @ " .. L["Demon Fall Canyon"] .. " (CN)"),
 				},
 				["MouJiaoZi"] = {
-					order = 11,
+					order = 12,
 					type = "description",
 					name = format("%s: %s", "MouJiaoZi", E.InfoColor .. "某餃子" .. "|r"),
 				},
 				["Jaenichen"] = {
-					order = 12,
+					order = 13,
 					type = "description",
 					name = format("%s: %s", "Jaenichen", E.InfoColor .. "beejayjayn" .. "|r"),
 				},
 				["mattiagraziani-it"] = {
-					order = 13,
+					order = 14,
 					type = "description",
 					name = "mattiagraziani-it",
 				},
 				["ylt"] = {
-					order = 14,
+					order = 15,
 					type = "description",
 					name = format(
 						"%s: %s | %s",
@@ -284,14 +279,9 @@ options.help = {
 					),
 				},
 				["AngelosNaoumis"] = {
-					order = 15,
-					type = "description",
-					name = "AngelosNaoumis",
-				},
-				["DakJaniels"] = {
 					order = 16,
 					type = "description",
-					name = "DakJaniels",
+					name = "AngelosNaoumis",
 				},
 				["LvWind"] = {
 					order = 17,
@@ -301,6 +291,11 @@ options.help = {
 						"LvWind",
 						F.CreateClassColorString("Stellagosa @ " .. L["Bleeding Hollow"] .. " (CN)", "HUNTER")
 					),
+				},
+				["DaguDuiyuan"] = {
+					order = 18,
+					type = "description",
+					name = "DaguDuiyuan",
 				},
 			},
 		},
@@ -313,17 +308,19 @@ options.help = {
 				elvui = {
 					order = 1,
 					type = "description",
-					name = "ElvUI: " .. blue(E.versionString),
+					name = "ElvUI: " .. C.StringByTemplate(E.versionString, "blue-500"),
 				},
 				windtools = {
 					order = 2,
 					type = "description",
-					name = W.Title .. ": " .. blue(W.DisplayVersion),
+					name = W.Title .. ": " .. C.StringByTemplate(W.DisplayVersion, "blue-500"),
 				},
 				build = {
 					order = 3,
 					type = "description",
-					name = L["WoW Build"] .. ": " .. blue(format("%s (%s)", E.wowpatch, E.wowbuild)),
+					name = L["WoW Build"]
+						.. ": "
+						.. C.StringByTemplate(format("%s (%s)", E.wowpatch, E.wowbuild), "blue-500"),
 				},
 			},
 		},
@@ -427,6 +424,7 @@ do -- 本地化
 			"Reim @ Discord",
 			"와우하는아저씨 @ Discord",
 			"BlueSea-jun @ GitHub",
+			"Crazyyoungs @ GitHub",
 		},
 		["français (frFR)"] = {
 			"PodVibe @ CurseForge",
@@ -456,7 +454,7 @@ do -- 本地化
 		options.credits.args.localization.args[tostring(configOrder)] = {
 			order = configOrder,
 			type = "description",
-			name = blue(langName),
+			name = C.StringByTemplate(langName, "blue-500"),
 		}
 		configOrder = configOrder + 1
 
@@ -558,7 +556,7 @@ do -- 插件代码
 		options.credits.args.codes.args[tostring(configOrder)] = {
 			order = configOrder,
 			type = "description",
-			name = blue(moduleName) .. " " .. L["Module"],
+			name = C.StringByTemplate(moduleName, "blue-500") .. " " .. L["Module"],
 		}
 		configOrder = configOrder + 1
 
@@ -651,7 +649,7 @@ do -- 媒体文件
 		options.credits.args.mediaFiles.args[tostring(configOrder)] = {
 			order = configOrder,
 			type = "description",
-			name = blue(author),
+			name = C.StringByTemplate(author, "blue-500"),
 		}
 		configOrder = configOrder + 1
 
@@ -675,7 +673,9 @@ options.changelog = {
 }
 
 local function renderChangeLogLine(line)
-	line = gsub(line, "%[[^%[]+%]", blue)
+	line = gsub(line, "%[[^%[]+%]", function(text)
+		return C.StringByTemplate(text, "blue-500")
+	end)
 	return line
 end
 
@@ -711,7 +711,7 @@ for version, data in pairs(W.Changelog) do
 	page.version = {
 		order = 2,
 		type = "description",
-		name = L["Version"] .. " " .. blue(versionString),
+		name = L["Version"] .. " " .. C.StringByTemplate(versionString, "blue-500"),
 		fontSize = "large",
 	}
 
@@ -720,7 +720,7 @@ for version, data in pairs(W.Changelog) do
 		page.importantHeader = {
 			order = 3,
 			type = "header",
-			name = blue(L["Important"]),
+			name = C.StringByTemplate(L["Important"], "blue-500"),
 		}
 		page.important = {
 			order = 4,
@@ -741,7 +741,7 @@ for version, data in pairs(W.Changelog) do
 		page.newHeader = {
 			order = 5,
 			type = "header",
-			name = blue(L["New"]),
+			name = C.StringByTemplate(L["New"], "blue-500"),
 		}
 		page.new = {
 			order = 6,
@@ -762,7 +762,7 @@ for version, data in pairs(W.Changelog) do
 		page.improvementHeader = {
 			order = 7,
 			type = "header",
-			name = blue(L["Improvement"]),
+			name = C.StringByTemplate(L["Improvement"], "blue-500"),
 		}
 		page.improvement = {
 			order = 8,
@@ -803,7 +803,7 @@ for version, data in pairs(W.Changelog) do
 	page.confirm = {
 		order = 11,
 		type = "execute",
-		name = C.StringByTemplate(L["I got it!"], "primary"),
+		name = C.StringByTemplate(L["I got it!"], "teal-400"),
 		desc = L["Mark as read, the changelog message will be hidden when you login next time."],
 		width = "full",
 		hidden = function()

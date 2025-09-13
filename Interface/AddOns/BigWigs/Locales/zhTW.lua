@@ -237,6 +237,9 @@ L.imported_nameplate_settings = "名條選項設定"
 --L.imported_mythicplus_settings = "Mythic+ Settings"
 --L.mythicplus_settings_import_desc = "Import all Mythic+ settings."
 --L.mythicplus_settings_export_desc = "Export all Mythic+ settings."
+--L.imported_battleres_settings = "Battle Res Settings"
+--L.battleres_settings_import_desc = "Import all Battle Res settings."
+--L.battleres_settings_export_desc = "Export all Battle Res settings."
 
 -- Statistics
 L.statistics = "統計"
@@ -275,7 +278,7 @@ L.H25 = "25人英雄"
 -----------------------------------------------------------------------
 
 L.tools = "工具"
-L.toolsDesc = "BigWigs 提供了多種實用工具或便利功能，讓你可以輕鬆寫意地擊敗首領。點擊 |cFF33FF99+|r 圖示以展開選單，查看所有功能。"
+L.toolsDesc = "BigWigs 提供了多種實用工具或便利功能，讓你可以輕鬆寫意地擊敗首領。"
 
 -----------------------------------------------------------------------
 -- AutoRole.lua
@@ -283,6 +286,26 @@ L.toolsDesc = "BigWigs 提供了多種實用工具或便利功能，讓你可以
 
 L.autoRoleTitle = "自動設定職責"
 L.autoRoleExplainer = "當你加入隊伍或是在隊伍中更換專精時，BigWigs 會自動根據你的專精調整你的隊伍職責（坦克、治療者、傷害輸出）。\n\n"
+
+-----------------------------------------------------------------------
+-- BattleRes.lua
+--
+
+--L.battleResTitle = "Battle Res"
+--L.battleResDesc = "An icon that shows how many battle resurrection charges are available and the time until another charge is gained."
+--L.battleResDesc2 = "\nYour |cFF33FF99Battle Resurrection History|r can be viewed in the tooltip when you mouse over the icon.\n\n"
+--L.battleResHistory = "Battle Res History:"
+--L.battleResResetAll = "Reset all the Battle Resurrection settings to their default values."
+--L.battleResDurationText = "Duration Text"
+--L.battleResChargesText = "Charges Text"
+--L.battleResNoCharges = "0 charges available"
+--L.battleResHasCharges = "1 or more charges available"
+--L.battleResPlaySound = "Play a sound when a new charge is gained"
+--L.iconTextureSpellID = "|T%d:0:0:0:0:64:64:4:60:4:60|t Icon Texture (Spell ID)"
+--L.iconTextureSpellIDError = "You must type a valid spell ID to use as the icon texture."
+--L.battleResModeIcon = "Mode: Icon"
+--L.battleResModeText = "Mode: Text Only"
+--L.battleResModeTextTooltip = "Showing a temporary background to help you move the Battle Res feature and to see where the mouseover area is."
 
 -----------------------------------------------------------------------
 -- Keystones.lua
@@ -315,6 +338,7 @@ L.keystoneExplainer = "傳奇+工具合集，提升你進行傳奇+副本時的�
 L.keystoneAutoSlot = "自動插鑰石"
 L.keystoneAutoSlotDesc = "打開能量之泉時，自動插入鑰石。"
 L.keystoneAutoSlotMessage = "已將 %s 插入能量之泉。"
+--L.keystoneAutoSlotFrame = "|TInterface\\AddOns\\BigWigs\\Media\\Icons\\minimap_raid:14:14|t Keystone Auto Inserted"
 L.keystoneModuleName = "傳奇+"
 L.keystoneStartBar = "%s +%d" -- Format is SHORT_DUNGEON_NAME +KEYSTONE_LEVEL e.g. "ROOK +12"
 L.keystoneStartMessage = "%s +%d 戰鬥開始！" -- Format is LONG_DUNGEON_NAME +KEYSTONE_LEVEL e.g. "The Rookery +12 begins now!"
@@ -344,7 +368,7 @@ L.keystoneHistoryScoreThisWeekTooltip = "本周獲得分數：cFFFFFFFF+%d|r"
 L.keystoneHistoryScoreOlderTooltip = "上周分數：|cFFFFFFFF+%d|r"
 L.keystoneTimeUnder = "|cFF33FF99-%02d:%02d|r"
 L.keystoneTimeOver = "|cFFFF4411+%02d:%02d|r"
---L.keystoneTeleportTip = "TIP: Click the dungeon name below to teleport directly to the dungeon entrance."
+--L.keystoneTeleportTip = "Click the dungeon name below to |cFF33FF99TELEPORT|r directly to the dungeon entrance."
 
 -- It doesn't really matter what you call it as long as it's recognizable and limited to ~6 characters
 L.keystoneShortName_TheRookery = "培育所" --培育
@@ -391,6 +415,8 @@ L.instanceKeysShowAllDesc = "啟用此選項會顯示所有玩家的鑰石，即
 L.instanceKeysOtherDungeonColor = "其他地城顏色"
 L.instanceKeysOtherDungeonColorDesc = "替非當前地城的鑰石設定不同的文字顏色。"
 L.instanceKeysEndOfRunDesc = "預設只在進入傳奇地城時顯示鑰石列表。啟用此選項後，完成傳奇+地城時也會顯示鑰石列表。"
+--L.instanceKeysHideTitle = "Hide title"
+--L.instanceKeysHideTitleDesc = "Hide the \"Who has a key?\" title."
 
 -----------------------------------------------------------------------
 -- LFGTimer.lua
@@ -411,6 +437,10 @@ L.comma = "，"
 L.reset = "重置"
 L.resetDesc = "將上方設定重設為預設值。"
 L.resetAll = "重置所有"
+--L.startTest = "Start Test"
+--L.stopTest = "Stop Test"
+--L.always = "Always"
+--L.never = "Never"
 
 L.positionX = "X 座標"
 L.positionY = "Y 座標"
@@ -425,6 +455,7 @@ L.disabled = "停用"
 L.disableDesc = "即將禁用「%s」的功能，但|cffff4411不建議|r這麼做。\n\n你確定要這麼做嗎？"
 L.keybinding = "按鍵綁定"
 L.dragToResize = "拖曳調整大小"
+--L.cannotMoveInCombat = "You cannot move this whilst you're in combat."
 
 -- Anchor Points
 L.UP = "向上"
@@ -842,6 +873,7 @@ L.combatLogDesc = "從拉怪計時器開始時自動開始戰鬥記錄，戰鬥�
 L.pull = "開怪倒數"
 L.engageSoundTitle = "首領戰開始時播放音效"
 L.pullStartedSoundTitle = "開怪倒數計時器開始時播放音效"
+--L.pullStartedMessageTitle = "Show a message when the pull timer is started"
 L.pullFinishedSoundTitle = "開怪倒數計時器結束時播放音效"
 L.pullStartedBy = "%s發起開怪倒數。"
 L.pullStopped = "%s取消了開怪倒數。"

@@ -1,4 +1,9 @@
-local W, F, E, L, V, P, G = unpack((select(2, ...)))
+local P ---@class ProfileDB
+local W, F, E, L, V, G ---@type WindTools, Functions, ElvUI, table, PrivateDB, GlobalDB
+W, F, E, L, V, P, G = unpack((select(2, ...)))
+
+---@cast W WindTools
+local C = W.Utilities.Color
 
 local tinsert = tinsert
 
@@ -86,24 +91,24 @@ P.announcement = {
 		},
 		tag = {
 			enable = true,
-			color = { r = 0.992, g = 0.780, b = 0.000 },
+			color = C.GetRGBFromTemplate("yellow-300"),
 		},
 		suggestedGroup = {
 			enable = true,
-			color = { r = 1.000, g = 0.125, b = 0.337 },
+			color = C.GetRGBFromTemplate("rose-500"),
 		},
 		level = {
 			enable = true,
-			color = { r = 0.000, g = 0.831, b = 0.573 },
+			color = C.GetRGBFromTemplate("emerald-400"),
 			hideOnMax = true,
 		},
 		daily = {
 			enable = true,
-			color = { r = 0.557, g = 0.773, b = 1.000 },
+			color = C.GetRGBFromTemplate("cyan-500"),
 		},
 		weekly = {
 			enable = true,
-			color = { r = 0.000, g = 0.651, b = 0.957 },
+			color = C.GetRGBFromTemplate("blue-500"),
 		},
 	},
 	resetInstance = {
@@ -725,11 +730,11 @@ P.maps = {
 			scale = 1,
 			outline = "OUTLINE",
 		},
-		twwProfessions = {
+		professionsWeeklyTWW = {
 			enable = true,
 			desaturate = true,
 		},
-		khazAlgarEmissary = {
+		weeklyTWW = {
 			enable = true,
 			desaturate = true,
 		},
@@ -1162,8 +1167,9 @@ P.tooltips = {
 	},
 	groupInfo = {
 		enable = true,
-		title = true,
-		excludeDungeon = true,
+		excludeDungeon = false,
+		hideBlizzard = true,
+		title = false,
 		mode = "NORMAL",
 		classIconStyle = "flat",
 		template = "{{classIcon:18}} {{specIcon:14,18}} {{classColorStart}}{{className}} ({{specName}}){{classColorEnd}}{{amountStart}} x {{amount}}{{amountEnd}}",
@@ -1223,6 +1229,7 @@ P.misc = {
 			flash = true,
 			interval = 10,
 			alwaysSystemInfo = false,
+			avoidReloadInCombat = true,
 			font = {
 				name = F.GetCompatibleFont("Montserrat"),
 				size = 25,

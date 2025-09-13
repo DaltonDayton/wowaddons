@@ -1,10 +1,9 @@
 # LittleWigs
 
-## [v11.2.25](https://github.com/BigWigsMods/LittleWigs/tree/v11.2.25) (2025-08-30)
-[Full Changelog](https://github.com/BigWigsMods/LittleWigs/compare/v11.2.24...v11.2.25) [Previous Releases](https://github.com/BigWigsMods/LittleWigs/releases)
+## [v11.2.29](https://github.com/BigWigsMods/LittleWigs/tree/v11.2.29) (2025-09-10)
+[Full Changelog](https://github.com/BigWigsMods/LittleWigs/compare/v11.2.28...v11.2.29) [Previous Releases](https://github.com/BigWigsMods/LittleWigs/releases)
 
-- Shadowlands/Tazavesh/Trash: Frantic Leap  
-- WarWithin/AraKara/Trash: Venomous Spit  
-- Delves/Trash/Nerubian: Crazed Nerubian Lord, additional gossip ID  
-- Update esMX (#1425)  
-- Delves/Trash/Nerubian: Additional gossip NPC  
+- Delves/Trash/KyvezaRares: Timer update  
+- Delves/Trash/KyvezaRares: Shrieking Quartz  
+- WarWithin/TheDawnbreaker/Trash: Bursting Cocoon say countdown  
+- WarWithin/AraKara/Trash: Timer updates due to hotfix  

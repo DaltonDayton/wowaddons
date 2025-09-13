@@ -1,4 +1,4 @@
-local W, F, E, L = unpack((select(2, ...)))
+local W, F, E, L = unpack((select(2, ...))) ---@type WindTools, Functions, ElvUI, table
 local FL = W:NewModule("FriendList", "AceHook-3.0")
 
 local pairs = pairs
@@ -35,8 +35,7 @@ local MediaPath = "Interface\\Addons\\ElvUI_WindTools\\Media\\FriendList\\"
 
 local cache = {}
 
--- Manully code the atlas "battlenetclienticon"
--- note: Destiny 2 is not included
+-- Manually code the atlas "battlenetclienticon"
 local projectCodes = {
 	["ANBS"] = "Diablo Immortal",
 	["Hero"] = "Heroes of the Storm",
@@ -384,18 +383,18 @@ function FL:UpdateFriendButton(button)
 
 	-- font style hack
 	if not cache.name then
-		local name, size, style = button.name:GetFont()
+		local fontName, size, style = button.name:GetFont()
 		cache.name = {
-			name = name,
+			name = fontName,
 			size = size,
 			style = style,
 		}
 	end
 
 	if not cache.info then
-		local name, size, style = button.info:GetFont()
+		local fontName, size, style = button.info:GetFont()
 		cache.info = {
-			name = name,
+			name = fontName,
 			size = size,
 			style = style,
 		}
