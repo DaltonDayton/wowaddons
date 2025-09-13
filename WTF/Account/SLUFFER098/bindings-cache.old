@@ -1,0 +1,4 @@
+bind A STRAFELEFT
+bind D STRAFERIGHT
+bind Q NONE
+bind E NONE

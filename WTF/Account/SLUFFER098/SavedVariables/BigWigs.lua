@@ -2,6 +2,7 @@
 BigWigs3DB = {
 ["profileKeys"] = {
 ["Xamuul - Ner'zhul"] = "ToxiUI",
+["Xavaat - Ner'zhul"] = "ToxiUI",
 },
 ["namespaces"] = {
 ["BigWigs_Plugins_Colors"] = {
@@ -58,11 +59,6 @@ BigWigs3DB = {
 ["barStyle"] = "ElvUI",
 ["growup"] = true,
 ["fontSizeEmph"] = 16,
-["fontName"] = "- M 700",
-["alignText"] = "RIGHT",
-["spacing"] = 5,
-["texture"] = "- Tx Left",
-["visibleBarLimitEmph"] = 4,
 ["expPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -70,9 +66,14 @@ nil,
 130,
 "ElvUF_Target",
 },
-["emphasizeTime"] = 10,
-["normalWidth"] = 354,
+["alignText"] = "RIGHT",
+["spacing"] = 5,
 ["normalHeight"] = 26,
+["visibleBarLimitEmph"] = 4,
+["normalWidth"] = 354,
+["emphasizeTime"] = 10,
+["fontName"] = "- M 700",
+["texture"] = "- Tx Left",
 ["normalPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -130,9 +131,17 @@ nil,
 ["myKeystones"] = {
 ["Player-1168-09F208D4"] = {
 ["playerRating"] = 0,
-["specId"] = 103,
+["specId"] = 105,
 ["keyMap"] = 0,
 ["name"] = "Xamuul",
+["keyLevel"] = 0,
+["realm"] = "Ner'zhul",
+},
+["Player-1168-09F927BE"] = {
+["playerRating"] = 0,
+["specId"] = 258,
+["keyMap"] = 0,
+["name"] = "Xavaat",
 ["keyLevel"] = 0,
 ["realm"] = "Ner'zhul",
 },

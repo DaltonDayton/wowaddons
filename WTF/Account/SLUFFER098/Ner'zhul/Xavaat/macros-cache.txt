@@ -1,0 +1,68 @@
+VER 3 010000000000001F "Apo/Sal" "134400"
+#showtooltip
+/use [known:200183]Apotheosis;[known:265202]Holy Word: Salvation
+END
+VER 3 010000000000000E "Dispersion" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use Dispersion
+/cancelaura Dispersion
+END
+VER 3 0100000000000017 "Evang/Vamp" "134400"
+#showtooltip
+/use [known:Evangelism]Evangelism
+/use [known:15286]Vampiric Embrace
+END
+VER 3 0100000000000010 "Harm Penance" "237545"
+#showtooltip
+/use [harm]Penance;[mod:ctrl]Penance
+END
+VER 3 0100000000000021 "HSmite/Fire" "INV_Misc_QuestionMark"
+#showtooltip
+/use [nomod]Smite;[mod:ctrl]Holy FIre
+END
+VER 3 0100000000000004 "Levitate" "INV_MISC_QUESTIONMARK"
+#showtooltip 
+/use [@mouseover,help,nodead][help,nodead][@player]Levitate
+/cancelaura [mod:ctrl]Levitate
+END
+VER 3 0100000000000018 "Mind Control/Dom" "134400"
+#showtooltip [known:Mind Control]Mind Control;[known:Dominate Mind]Dominate Mind
+/cast [known:Mind Control]Mind Control;[known:Dominate Mind]Dominate Mind
+END
+VER 3 0100000000000013 "Mind Sear/Torren" "134400"
+#showtooltip [known:Mind Sear]Mind Sear;[known:Void Torrent]Void Torrent
+/cast [known:Mind Sear][harm]Mind Sear;[known:Mind Sear][mod:ctrl]Mind Sear;
+/cast [known:Void Torrent]Void Torrent
+END
+VER 3 0100000000000015 "Rad/Nova" "134400"
+#showtooltip
+/use [nomod]Power Word: Radiance;[mod:ctrl]Holy Nova
+END
+VER 3 0100000000000022 "Rapture+PI" "INV_Misc_QuestionMark"
+#showtooltip Rapture
+/use [@mouseover,help,nodead][help,nodead][@player] Power Infusion
+/use Rapture
+END
+VER 3 0100000000000011 "Smite" "134400"
+#showtooltip Smite
+/cast [nochanneling:Penance] Smite
+END
+VER 3 0100000000000016 "Star/Halo" "134400"
+#showtooltip
+/use [known:Divine Star]Divine Star;[known:Halo]Halo
+END
+VER 3 0100000000000023 "Treasure Goblin" "INV_Misc_QuestionMark"
+#showtooltip
+/tar Treasure Goblin
+/cast Shadow Word: Pain
+END
+VER 3 0100000000000014 "Vamp w/ shadow" "134400"
+#showtooltip
+/use [noform]Shadowform
+/use Vampiric Touch
+END
+VER 3 0100000000000012 "Void/DA + PI" "134400"
+#showtooltip [known:Void Eruption]Void Eruption;[known:Dark Ascension]Dark Ascension
+/cast Power Infusion
+/cast [known:Void Eruption]Void Eruption;[known:Dark Ascension]Dark Ascension
+END

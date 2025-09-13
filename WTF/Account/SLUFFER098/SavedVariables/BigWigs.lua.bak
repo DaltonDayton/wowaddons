@@ -2,6 +2,7 @@
 BigWigs3DB = {
 ["profileKeys"] = {
 ["Xamuul - Ner'zhul"] = "ToxiUI",
+["Xavaat - Ner'zhul"] = "ToxiUI",
 },
 ["namespaces"] = {
 ["BigWigs_Plugins_Colors"] = {
@@ -38,8 +39,8 @@ BigWigs3DB = {
 ["textOutline"] = "OUTLINE",
 ["textOffsetY"] = 5,
 ["iconOffsetX"] = 10,
-["iconSpacing"] = 2,
 ["iconGlowPixelLines"] = 6,
+["iconSpacing"] = 2,
 },
 },
 },
@@ -58,11 +59,6 @@ BigWigs3DB = {
 ["barStyle"] = "ElvUI",
 ["growup"] = true,
 ["fontSizeEmph"] = 16,
-["fontName"] = "- M 700",
-["alignText"] = "RIGHT",
-["spacing"] = 5,
-["texture"] = "- Tx Left",
-["visibleBarLimitEmph"] = 4,
 ["expPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -70,6 +66,11 @@ nil,
 130,
 "ElvUF_Target",
 },
+["alignText"] = "RIGHT",
+["spacing"] = 5,
+["texture"] = "- Tx Left",
+["visibleBarLimitEmph"] = 4,
+["fontName"] = "- M 700",
 ["emphasizeTime"] = 10,
 ["normalWidth"] = 354,
 ["normalHeight"] = 26,
@@ -128,6 +129,14 @@ nil,
 },
 },
 ["myKeystones"] = {
+["Player-1168-09F927BE"] = {
+["playerRating"] = 0,
+["specId"] = 258,
+["keyMap"] = 0,
+["name"] = "Xavaat",
+["keyLevel"] = 0,
+["realm"] = "Ner'zhul",
+},
 ["Player-1168-09F208D4"] = {
 ["playerRating"] = 0,
 ["specId"] = 103,

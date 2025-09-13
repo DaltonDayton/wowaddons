@@ -1,10 +1,11 @@
 
 WarpDepleteDB = {
-["global"] = {
-["mdtAlertShown"] = true,
-},
 ["profileKeys"] = {
 ["Xamuul - Ner'zhul"] = "ToxiUI",
+["Xavaat - Ner'zhul"] = "ToxiUI",
+},
+["global"] = {
+["mdtAlertShown"] = true,
 },
 ["profiles"] = {
 ["Default"] = {
@@ -16,7 +17,7 @@ WarpDepleteDB = {
 ["barPadding"] = 4,
 ["frameX"] = -5,
 ["completedObjectivesColor"] = "ff00ff9e",
-["timerFont"] = "- M 900",
+["keyColor"] = "ffffb35f",
 ["bar3Font"] = "- ToxiUI",
 ["bar1Texture"] = "- Tx Left",
 ["bar3TextureColor"] = "ff00e5f6",
@@ -24,9 +25,9 @@ WarpDepleteDB = {
 ["keyDetailsColor"] = "ff61c2ff",
 ["bar2Texture"] = "- Tx Left",
 ["keyDetailsFont"] = "- ToxiUI",
-["keyColor"] = "ffffb35f",
-["deathsFont"] = "- ToxiUI",
+["timerFont"] = "- M 900",
 ["frameY"] = 288,
+["deathsFont"] = "- ToxiUI",
 ["deathsColor"] = "ffff0064",
 ["forcesOverlayTexture"] = "- Tx Left",
 ["timingsImprovedTimeColor"] = "ff00e5f6",
