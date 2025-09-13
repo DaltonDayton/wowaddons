@@ -1,7 +1,7 @@
 # WoW Addon Installation Script
 # Clones git repos and creates symlinks for two-way sync
 
-param([string]$WoWPath = "$env:ProgramFiles(x86)\World of Warcraft\_retail_")
+param([string]$WoWPath = "${env:ProgramFiles(x86)}\World of Warcraft\_retail_")
 
 # Check admin privileges (required for symlinks)
 if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
