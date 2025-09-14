@@ -3,6 +3,20 @@ WeakAurasSaved = {
 ["dynamicIconCache"] = {
 },
 ["editor_tab_spaces"] = 4,
+["login_squelch_time"] = 10,
+["lastArchiveClear"] = 1756679656,
+["minimap"] = {
+["hide"] = false,
+},
+["lastUpgrade"] = 1756679666,
+["dbVersion"] = 85,
+["migrationCutoff"] = 730,
+["registered"] = {
+},
+["editor_font_size"] = 12,
+["historyCutoff"] = 730,
+["features"] = {
+},
 ["displays"] = {
 ["Gathering Moonlight (Guardian - S3 - 2-Pieces)"] = {
 ["iconSource"] = -1,
@@ -176,8 +190,6 @@ WeakAurasSaved = {
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -185,6 +197,13 @@ WeakAurasSaved = {
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -255,12 +274,7 @@ WeakAurasSaved = {
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Angelic Bulwark"] = {
 ["iconSource"] = -1,
@@ -405,6 +419,10 @@ WeakAurasSaved = {
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -412,21 +430,6 @@ WeakAurasSaved = {
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -448,6 +451,17 @@ WeakAurasSaved = {
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Maintenance - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "V(cOlXE)3Th",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -535,7 +549,7 @@ WeakAurasSaved = {
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Maintenance - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Skull Bash"] = {
 ["iconSource"] = -1,
@@ -690,19 +704,40 @@ WeakAurasSaved = {
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Utilities - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -755,10 +790,7 @@ WeakAurasSaved = {
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["config"] = {
 ["utility"] = {
 ["behavior"] = 2,
@@ -775,29 +807,15 @@ WeakAurasSaved = {
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "oQ4pIIVjh9O",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -896,13 +914,9 @@ WeakAurasSaved = {
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Rip (Guardian)"] = {
@@ -1026,37 +1040,20 @@ WeakAurasSaved = {
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Dynamic Effects - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Rip (Guardian)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["type"] = "preset",
@@ -1079,19 +1076,36 @@ WeakAurasSaved = {
 ["preset"] = "shrink",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Dynamic Effects - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Rip (Guardian)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "zzdxpJH3MFZ",
 ["inverse"] = false,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Voidwraith (Discipline)"] = {
@@ -1113,14 +1127,14 @@ WeakAurasSaved = {
 ["spellId"] = "49206",
 ["auranames"] = {
 },
-["unit"] = "player",
+["use_unit"] = true,
 ["use_totemName"] = true,
 ["genericShowOn"] = "showOnCooldown",
-["names"] = {
-},
+["subeventPrefix"] = "SPELL",
 ["use_genericShowOn"] = true,
-["events"] = "PLAYER_TOTEM_UPDATE",
 ["custom"] = "function(event, arg1)\n    if event == \"PLAYER_TOTEM_UPDATE\" and arg1 then\n        local haveTotem, name, startTime, duration, icon = GetTotemInfo(arg1)\n        if haveTotem and icon == aura_env.texture then\n            aura_env.haveTotem, aura_env.name, aura_env.startTime, aura_env.duration, aura_env.icon = haveTotem, name, startTime, duration, icon\n            aura_env.index = arg1\n            return true\n        elseif aura_env.index == arg1 then\n            aura_env.index = 0\n            aura_env.startTime, aura_env.duration = nil, nil\n        end\n    end\nend",
+["spellIds"] = {
+},
 ["use_spellName"] = true,
 ["realSpellName"] = 0,
 ["duration"] = "35",
@@ -1129,20 +1143,20 @@ WeakAurasSaved = {
 ["type"] = "custom",
 ["useName"] = true,
 ["debuffType"] = "HELPFUL",
-["subeventSuffix"] = "_CAST_SUCCESS",
 ["custom_type"] = "status",
 ["unevent"] = "auto",
+["subeventSuffix"] = "_CAST_SUCCESS",
 ["event"] = "Cooldown Progress (Spell)",
 ["totemName"] = "27829",
 ["customDuration"] = "function()\n    if aura_env.startTime then\n        return aura_env.duration, aura_env.startTime + aura_env.duration\n    end\nend",
 ["use_spellId"] = true,
-["spellIds"] = {
-},
+["events"] = "PLAYER_TOTEM_UPDATE",
 ["use_sourceUnit"] = true,
 ["check"] = "event",
-["subeventPrefix"] = "SPELL",
+["names"] = {
+},
 ["use_track"] = true,
-["use_unit"] = true,
+["unit"] = "player",
 },
 ["untrigger"] = {
 ["custom"] = "function()\n    return aura_env.index == 0\nend",
@@ -1293,8 +1307,11 @@ WeakAurasSaved = {
 ["useAdjustededMax"] = false,
 ["width"] = 48,
 ["source"] = "import",
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 ["parent"] = "Core - LWA - Priest",
+["progressSource"] = {
+-1,
+"",
+},
 ["cooldown"] = true,
 ["displayIcon"] = "615099",
 ["useAdjustededMin"] = false,
@@ -1464,10 +1481,7 @@ WeakAurasSaved = {
 ["information"] = {
 ["forceEvents"] = true,
 },
-["progressSource"] = {
--1,
-"",
-},
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Energy Bar - LWA - Druid"] = {
 ["sparkWidth"] = 10,
@@ -1480,9 +1494,9 @@ WeakAurasSaved = {
 ["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["actions"] = {
 ["start"] = {
+["do_custom"] = false,
 ["custom"] = "",
 ["do_message"] = false,
-["do_custom"] = false,
 },
 ["finish"] = {
 },
@@ -2012,7 +2026,29 @@ true,
 ["anchorFrameFrame"] = "WeakAuras:General Options - LWA - Priest",
 ["hybridPosition"] = "hybridFirst",
 ["limit"] = 5,
+["borderSize"] = 2,
+["config"] = {
+},
+["xOffset"] = -6.103515625e-05,
+["anchorFrameParent"] = false,
 ["gridType"] = "RD",
+["stepAngle"] = 15,
+["rowSpace"] = 1,
+["semver"] = "11.2.2",
+["radius"] = 200,
+["id"] = "Dynamic Effects - LWA - Priest",
+["borderEdge"] = "Square Full White",
+["frameStrata"] = 1,
+["anchorFrameType"] = "SELECTFRAME",
+["gridWidth"] = 5,
+["sort"] = "none",
+["rotation"] = 0,
+["uid"] = "QF43Uob3R8J",
+["conditions"] = {
+},
+["information"] = {
+["forceEvents"] = true,
+},
 ["animation"] = {
 ["start"] = {
 ["type"] = "none",
@@ -2033,28 +2069,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["xOffset"] = -6.103515625e-05,
-["stepAngle"] = 15,
-["rowSpace"] = 1,
-["semver"] = "11.2.2",
-["radius"] = 200,
-["id"] = "Dynamic Effects - LWA - Priest",
-["borderEdge"] = "Square Full White",
-["frameStrata"] = 1,
-["anchorFrameType"] = "SELECTFRAME",
-["gridWidth"] = 5,
-["sort"] = "none",
-["rotation"] = 0,
-["uid"] = "QF43Uob3R8J",
-["conditions"] = {
-},
-["information"] = {
-["forceEvents"] = true,
-},
-["borderSize"] = 2,
 },
 ["Words of the Pious (Discipline)"] = {
 ["iconSource"] = -1,
@@ -2220,8 +2234,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -2229,6 +2241,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -2282,12 +2301,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Owlkin Frenzy"] = {
 ["iconSource"] = -1,
@@ -2449,8 +2463,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -2458,6 +2470,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -2541,12 +2560,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Ravage Rampage (Guardian - S3 - 2-Pieces)"] = {
 ["iconSource"] = -1,
@@ -2719,8 +2733,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -2728,6 +2740,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -2798,12 +2817,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Voidheart"] = {
 ["iconSource"] = -1,
@@ -2937,8 +2951,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -2946,6 +2958,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -3015,12 +3034,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Holy Word: Chastise"] = {
 ["iconSource"] = -1,
@@ -3185,6 +3199,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -3192,21 +3210,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -3228,6 +3231,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "IDADMoeiuai",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -3404,7 +3418,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Reforrestation"] = {
 ["iconSource"] = -1,
@@ -3563,8 +3577,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -3572,6 +3584,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -3625,12 +3644,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Surge of Light (Shadow)"] = {
 ["iconSource"] = -1,
@@ -3758,8 +3772,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -3767,6 +3779,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -3836,12 +3855,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Power Word: Radiance"] = {
 ["iconSource"] = -1,
@@ -4025,8 +4039,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -4034,6 +4046,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -4219,12 +4238,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Swiftmend (Balance, Feral & Guardian)"] = {
 ["iconSource"] = -1,
@@ -4378,19 +4392,42 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Utilities - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+["custom"] = "aura_env.region.extraZoom = 0.2",
+["do_custom"] = true,
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -4443,10 +4480,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["config"] = {
 ["utility"] = {
 ["behavior"] = 2,
@@ -4463,29 +4497,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "UYqyTsZ(Tn9",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -4584,15 +4604,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-["custom"] = "aura_env.region.extraZoom = 0.2",
-["do_custom"] = true,
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Rhapsody"] = {
@@ -4762,8 +4776,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -4771,6 +4783,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -4824,12 +4843,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Symbol of Hope"] = {
 ["iconSource"] = -1,
@@ -5007,6 +5021,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -5014,21 +5032,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -5050,6 +5053,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Utilities - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "A1a0UxQvdqB",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -5240,7 +5254,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Symbiotic Relationship"] = {
 ["iconSource"] = -1,
@@ -5457,19 +5471,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Maintenance - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -5532,10 +5567,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Maintenance - LWA - Druid",
 ["config"] = {
 ["maintenance"] = {
 ["symbiotic"] = {
@@ -5553,29 +5585,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "4RxYQt24OEk",
 ["inverse"] = false,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -5608,13 +5626,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Premonition of Solace (Holy)"] = {
@@ -5748,8 +5762,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -5757,6 +5769,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -5826,12 +5845,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Holy Word: Sanctify 1"] = {
 ["sparkWidth"] = 10,
@@ -5942,12 +5956,12 @@ true,
 ["powertype"] = 19,
 ["duration"] = "1",
 ["unit"] = "player",
-["type"] = "spell",
-["useName"] = true,
+["charges"] = "1",
+["trackcharge"] = "1",
 ["use_trackcharge"] = true,
 ["debuffType"] = "HELPFUL",
 ["charges_operator"] = ">",
-["charges"] = "1",
+["type"] = "spell",
 ["unevent"] = "auto",
 ["power"] = "1",
 ["track"] = "auto",
@@ -5958,7 +5972,7 @@ true,
 ["use_spellName"] = true,
 ["spellIds"] = {
 },
-["trackcharge"] = "1",
+["useName"] = true,
 ["names"] = {
 },
 ["stacks"] = "1",
@@ -6321,19 +6335,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Utilities - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -6386,10 +6421,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["config"] = {
 ["utility"] = {
 ["behavior"] = 2,
@@ -6406,29 +6438,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "F52(Orus7d0",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -6549,13 +6567,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Utilities - LWA - Priest"] = {
@@ -6706,7 +6720,29 @@ true,
 ["anchorFrameFrame"] = "WeakAuras:General Options - LWA - Priest",
 ["hybridPosition"] = "hybridFirst",
 ["limit"] = 5,
+["borderSize"] = 2,
+["config"] = {
+},
+["xOffset"] = -6.103515625e-05,
+["anchorFrameParent"] = false,
 ["gridType"] = "RD",
+["stepAngle"] = 15,
+["rowSpace"] = 1,
+["semver"] = "11.2.2",
+["radius"] = 200,
+["id"] = "Utilities - LWA - Priest",
+["borderEdge"] = "Square Full White",
+["frameStrata"] = 1,
+["anchorFrameType"] = "SELECTFRAME",
+["gridWidth"] = 5,
+["sort"] = "none",
+["rotation"] = 0,
+["uid"] = "KlcHi6M6HLA",
+["conditions"] = {
+},
+["information"] = {
+["forceEvents"] = true,
+},
 ["animation"] = {
 ["start"] = {
 ["type"] = "none",
@@ -6727,28 +6763,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["xOffset"] = -6.103515625e-05,
-["stepAngle"] = 15,
-["rowSpace"] = 1,
-["semver"] = "11.2.2",
-["radius"] = 200,
-["id"] = "Utilities - LWA - Priest",
-["borderEdge"] = "Square Full White",
-["frameStrata"] = 1,
-["anchorFrameType"] = "SELECTFRAME",
-["gridWidth"] = 5,
-["sort"] = "none",
-["rotation"] = 0,
-["uid"] = "KlcHi6M6HLA",
-["conditions"] = {
-},
-["information"] = {
-["forceEvents"] = true,
-},
-["borderSize"] = 2,
 },
 ["Lightwell"] = {
 ["iconSource"] = -1,
@@ -6939,8 +6953,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -6948,6 +6960,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -7103,12 +7122,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Survival Instincts (Feral)"] = {
 ["iconSource"] = -1,
@@ -7284,19 +7298,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Utilities - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -7349,10 +7384,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["config"] = {
 ["utility"] = {
 ["behavior"] = 2,
@@ -7369,29 +7401,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "1z3nYdgY4Vz",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -7509,13 +7527,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Force of Nature"] = {
@@ -7686,8 +7700,11 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["parent"] = "Core - LWA - Druid",
+["progressSource"] = {
+-1,
+"",
+},
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -7798,10 +7815,7 @@ true,
 },
 ["displayIcon"] = 132129,
 ["cooldown"] = true,
-["progressSource"] = {
--1,
-"",
-},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 },
 ["Faerie Swarm (PvP Talent)"] = {
 ["iconSource"] = -1,
@@ -7977,19 +7991,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Utilities - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -8042,10 +8077,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["config"] = {
 ["utility"] = {
 ["behavior"] = 2,
@@ -8062,29 +8094,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "oPz)jl(pULs",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -8234,13 +8252,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Void Eruption"] = {
@@ -8398,7 +8412,7 @@ true,
 1,
 },
 ["text_selfPoint"] = "CENTER",
-["text_text_format_3.p_time_mod_rate"] = true,
+["text_shadowYOffset"] = 0,
 ["type"] = "subtext",
 ["text_visible"] = true,
 ["text_color"] = {
@@ -8408,8 +8422,8 @@ true,
 1,
 },
 ["text_font"] = "Friz Quadrata TT",
-["text_shadowYOffset"] = 0,
 ["text_anchorYOffset"] = -4,
+["text_text_format_3.p_time_mod_rate"] = true,
 ["text_text_format_3.p_time_dynamic_threshold"] = 5,
 ["text_wordWrap"] = "WordWrap",
 ["text_fontType"] = "OUTLINE",
@@ -8463,8 +8477,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -8472,6 +8484,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -8652,12 +8671,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Coiled to Spring"] = {
 ["iconSource"] = -1,
@@ -8819,8 +8833,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -8828,6 +8840,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -8898,12 +8917,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Starsurge"] = {
 ["iconSource"] = 0,
@@ -9071,8 +9085,11 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["parent"] = "Core - LWA - Druid",
+["progressSource"] = {
+-1,
+"",
+},
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -9255,10 +9272,7 @@ true,
 },
 ["displayIcon"] = 135730,
 ["cooldown"] = true,
-["progressSource"] = {
--1,
-"",
-},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 },
 ["Psyfiend (PvP Talent)"] = {
 ["iconSource"] = 0,
@@ -9429,8 +9443,11 @@ true,
 ["useAdjustededMax"] = false,
 ["width"] = 48,
 ["source"] = "import",
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 ["parent"] = "Core - LWA - Priest",
+["progressSource"] = {
+-1,
+"",
+},
 ["cooldown"] = true,
 ["displayIcon"] = 537021,
 ["useAdjustededMin"] = false,
@@ -9598,10 +9615,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["progressSource"] = {
--1,
-"",
-},
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Maintenance - LWA - Priest"] = {
 ["arcLength"] = 360,
@@ -9771,7 +9785,7 @@ true,
 ["wagoID"] = "ryBp05DHX",
 ["xOffset"] = 0,
 ["preferToUpdate"] = false,
-["frameStrata"] = 4,
+["alpha"] = 1,
 ["yOffset"] = 0,
 ["sortHybridTable"] = {
 ["Wrath 2"] = false,
@@ -9781,7 +9795,7 @@ true,
 ["Solar Eclipse"] = false,
 ["Lunar Eclipse"] = false,
 },
-["regionType"] = "dynamicgroup",
+["limit"] = 6,
 ["sharedFrameLevel"] = true,
 ["borderColor"] = {
 0,
@@ -9819,33 +9833,14 @@ true,
 },
 ["columnSpace"] = 1,
 ["internalVersion"] = 85,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["selfPoint"] = "TOP",
+["gridType"] = "RD",
+["useLimit"] = false,
 ["align"] = "LEFT",
 ["growOn"] = "show",
-["useLimit"] = false,
 ["anchorPoint"] = "CENTER",
-["rotation"] = 0,
 ["radius"] = 200,
+["rotation"] = 0,
+["selfPoint"] = "TOP",
 ["version"] = 124,
 ["subRegions"] = {
 },
@@ -9877,7 +9872,7 @@ true,
 0.5,
 },
 ["borderInset"] = 1,
-["animate"] = false,
+["source"] = "import",
 ["customGrow"] = "function(newPositions, activeRegions)\n    local LWA = LWA and LWA[\"Druid\"] or {}\n    \n    if LWA and LWA.GrowDynamicResource then\n        LWA.GrowDynamicResource(newPositions, activeRegions)\n    end\nend",
 ["scale"] = 1,
 ["centerType"] = "LR",
@@ -9885,17 +9880,17 @@ true,
 ["borderEdge"] = "Square Full White",
 ["stepAngle"] = 15,
 ["borderSize"] = 2,
-["limit"] = 6,
-["source"] = "import",
-["alpha"] = 1,
+["sort"] = "none",
+["regionType"] = "dynamicgroup",
+["gridWidth"] = 5,
 ["constantFactor"] = "RADIUS",
 ["space"] = 2,
 ["borderOffset"] = 4,
 ["semver"] = "11.2.2",
 ["tocversion"] = 110200,
 ["id"] = "Wrath & Starfire - LWA - Druid",
-["sort"] = "none",
-["gridWidth"] = 5,
+["animate"] = false,
+["frameStrata"] = 4,
 ["anchorFrameType"] = "SCREEN",
 ["fullCircle"] = true,
 ["config"] = {
@@ -9908,7 +9903,26 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["gridType"] = "RD",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 },
 ["Halo (Holy)"] = {
 ["iconSource"] = -1,
@@ -10042,6 +10056,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -10049,21 +10067,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -10085,6 +10088,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "WOjWfL3zvcI",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -10181,7 +10195,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Halo (Shadow)"] = {
 ["iconSource"] = -1,
@@ -10315,6 +10329,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -10322,21 +10340,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -10358,6 +10361,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "l1r)yKWtL0Q",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -10454,7 +10468,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Shadow Word: Death (Discipline)"] = {
 ["iconSource"] = -1,
@@ -10609,6 +10623,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -10616,21 +10634,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -10652,6 +10655,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "mYpriadzKOZ",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -10798,7 +10812,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Wild Mushroom (Debuff)"] = {
 ["iconSource"] = -1,
@@ -10931,8 +10945,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -10940,6 +10952,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -11009,12 +11028,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Combot Point 2 - Druid"] = {
 ["sparkWidth"] = 10,
@@ -11676,8 +11690,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -11685,6 +11697,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -11861,12 +11880,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Overflowing Power (Optional)"] = {
 ["iconSource"] = -1,
@@ -12028,8 +12042,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -12037,6 +12049,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -12107,12 +12126,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Dark Ascension"] = {
 ["iconSource"] = -1,
@@ -12267,8 +12281,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -12276,6 +12288,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -12396,12 +12415,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Darkness from Light (S1 - 4-Pieces)"] = {
 ["iconSource"] = -1,
@@ -12570,8 +12584,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -12579,6 +12591,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -12632,12 +12651,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Dream of Cenarius"] = {
 ["iconSource"] = 0,
@@ -12781,8 +12795,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -12790,6 +12802,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -12890,12 +12909,7 @@ true,
 },
 ["displayIcon"] = 136085,
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Moonlight Suffusion (Balance - S3 - 4-Pieces)"] = {
 ["iconSource"] = -1,
@@ -13068,8 +13082,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -13077,6 +13089,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -13147,12 +13166,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Dryad's Favor (Balance - S3 - 4-Pieces)"] = {
 ["iconSource"] = -1,
@@ -13338,8 +13352,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -13347,6 +13359,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -13434,12 +13453,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Gathering Moonlight (Balance- S3 - 2-Pieces)"] = {
 ["iconSource"] = -1,
@@ -13613,8 +13627,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -13622,6 +13634,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -13692,12 +13711,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Emerald Slumber (PvP Talent)"] = {
 ["iconSource"] = -1,
@@ -13873,19 +13887,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Utilities - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -13938,10 +13973,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["config"] = {
 ["utility"] = {
 ["behavior"] = 2,
@@ -13958,29 +13990,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "Mwa83HlTcOk",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -14098,13 +14116,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Rake (Guardian)"] = {
@@ -14228,37 +14242,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Dynamic Effects - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Rake (Guardian)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["type"] = "preset",
@@ -14281,19 +14278,36 @@ true,
 ["preset"] = "shrink",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Dynamic Effects - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Rake (Guardian)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "ptgOTEcvf50",
 ["inverse"] = false,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Premonition of Insight (Disicipline)"] = {
@@ -14464,8 +14478,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -14473,6 +14485,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -14543,12 +14562,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Convoke the Spirits (Guardian)"] = {
 ["iconSource"] = -1,
@@ -14699,37 +14713,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Core - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Convoke the Spirits (Guardian)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -14750,9 +14747,30 @@ true,
 ["easeType"] = "none",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Core - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Convoke the Spirits (Guardian)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "2OkZoyk9x6F",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -14825,13 +14843,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Bloodtalons"] = {
@@ -14994,8 +15008,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -15003,6 +15015,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -15073,12 +15092,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Combot Point 4 - Druid"] = {
 ["sparkWidth"] = 10,
@@ -15682,6 +15696,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -15689,21 +15707,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -15725,6 +15728,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Utilities - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "pnkoEx7aVfv",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -15947,7 +15961,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Sunfire Bar"] = {
 ["sparkWidth"] = 10,
@@ -16052,18 +16066,17 @@ true,
 ["rune"] = 1,
 ["use_track"] = true,
 ["useStacks"] = false,
-["use_unit"] = true,
+["subeventPrefix"] = "SPELL",
 ["powertype"] = 19,
 ["use_absorbMode"] = true,
 ["genericShowOn"] = "showAlways",
-["names"] = {
-},
+["use_unit"] = true,
 ["unitExists"] = true,
 ["stacks"] = "2",
-["useName"] = true,
-["type"] = "aura2",
-["use_trackcharge"] = true,
 ["trackcharge"] = "2",
+["useName"] = true,
+["use_trackcharge"] = true,
+["type"] = "aura2",
 ["use_powertype"] = true,
 ["debuffType"] = "HARMFUL",
 ["charges_operator"] = "==",
@@ -16081,7 +16094,8 @@ true,
 ["matchesShowOn"] = "showAlways",
 ["unit"] = "target",
 ["duration"] = "1",
-["subeventPrefix"] = "SPELL",
+["names"] = {
+},
 ["ownOnly"] = true,
 },
 ["untrigger"] = {
@@ -16451,8 +16465,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -16460,6 +16472,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -16530,12 +16549,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Lunar Eclipse"] = {
 ["sparkWidth"] = 10,
@@ -17025,10 +17039,10 @@ true,
 ["text_font"] = "Friz Quadrata TT",
 ["text_shadowYOffset"] = 0,
 ["text_anchorYOffset"] = -4,
-["text_fontType"] = "OUTLINE",
-["text_wordWrap"] = "WordWrap",
-["text_text_format_3.s_format"] = "none",
 ["text_visible"] = true,
+["text_wordWrap"] = "WordWrap",
+["text_fontType"] = "OUTLINE",
+["text_text_format_3.s_format"] = "none",
 ["text_text_format_2.s_format"] = "none",
 ["anchor_point"] = "OUTER_TOP",
 ["text_fontSize"] = 18,
@@ -17077,8 +17091,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -17086,6 +17098,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -17327,12 +17346,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Guardian Spirit"] = {
 ["iconSource"] = -1,
@@ -17487,6 +17501,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -17494,21 +17512,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -17530,6 +17533,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "XBO5czMCw8q",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -17656,7 +17670,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Ironbark"] = {
 ["iconSource"] = -1,
@@ -17804,37 +17818,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Core - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Ironbark",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -17855,9 +17852,30 @@ true,
 ["easeType"] = "none",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Core - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Ironbark",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "ZgXqcfoQaXs",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -17930,13 +17948,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Cenarion Ward"] = {
@@ -18088,37 +18102,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Core - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Cenarion Ward",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -18139,9 +18136,30 @@ true,
 ["easeType"] = "none",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Core - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Cenarion Ward",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "FmBKCt4xpBn",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -18249,13 +18267,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Shadowfiend (Discipline)"] = {
@@ -18277,14 +18291,14 @@ true,
 ["spellId"] = "49206",
 ["auranames"] = {
 },
-["unit"] = "player",
+["use_unit"] = true,
 ["use_totemName"] = true,
 ["genericShowOn"] = "showOnCooldown",
-["names"] = {
-},
+["subeventPrefix"] = "SPELL",
 ["use_genericShowOn"] = true,
-["events"] = "PLAYER_TOTEM_UPDATE",
 ["custom"] = "function(event, arg1)\n    if event == \"PLAYER_TOTEM_UPDATE\" and arg1 then\n        local haveTotem, name, startTime, duration, icon = GetTotemInfo(arg1)\n        if haveTotem and icon == aura_env.texture then\n            aura_env.haveTotem, aura_env.name, aura_env.startTime, aura_env.duration, aura_env.icon = haveTotem, name, startTime, duration, icon\n            aura_env.index = arg1\n            return true\n        elseif aura_env.index == arg1 then\n            aura_env.index = 0\n            aura_env.startTime, aura_env.duration = nil, nil\n        end\n    end\nend",
+["spellIds"] = {
+},
 ["use_spellName"] = true,
 ["realSpellName"] = 0,
 ["duration"] = "35",
@@ -18293,20 +18307,20 @@ true,
 ["type"] = "custom",
 ["useName"] = true,
 ["debuffType"] = "HELPFUL",
-["subeventSuffix"] = "_CAST_SUCCESS",
 ["custom_type"] = "status",
 ["unevent"] = "auto",
+["subeventSuffix"] = "_CAST_SUCCESS",
 ["event"] = "Cooldown Progress (Spell)",
 ["totemName"] = "27829",
 ["customDuration"] = "function()\n    if aura_env.startTime then\n        return aura_env.duration, aura_env.startTime + aura_env.duration\n    end\nend",
 ["use_spellId"] = true,
-["spellIds"] = {
-},
+["events"] = "PLAYER_TOTEM_UPDATE",
 ["use_sourceUnit"] = true,
 ["check"] = "event",
-["subeventPrefix"] = "SPELL",
+["names"] = {
+},
 ["use_track"] = true,
-["use_unit"] = true,
+["unit"] = "player",
 },
 ["untrigger"] = {
 ["custom"] = "function()\n    return aura_env.index == 0\nend",
@@ -18463,8 +18477,11 @@ true,
 ["useAdjustededMax"] = false,
 ["width"] = 48,
 ["source"] = "import",
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 ["parent"] = "Core - LWA - Priest",
+["progressSource"] = {
+-1,
+"",
+},
 ["cooldown"] = true,
 ["displayIcon"] = 136199,
 ["useAdjustededMin"] = false,
@@ -18634,10 +18651,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["progressSource"] = {
--1,
-"",
-},
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Moonfire (Guardian)"] = {
 ["iconSource"] = -1,
@@ -18795,37 +18809,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Core - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Moonfire (Guardian)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -18846,9 +18843,30 @@ true,
 ["easeType"] = "none",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Core - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Moonfire (Guardian)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "p0DniecoBM7",
 ["inverse"] = false,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -18993,13 +19011,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Twist of Fate (Optional - Holy)"] = {
@@ -19128,8 +19142,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -19137,6 +19149,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -19189,12 +19208,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Greater Heal (PvP Talent)"] = {
 ["iconSource"] = -1,
@@ -19322,6 +19336,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -19329,21 +19347,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -19365,6 +19368,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "Rki1HIvUfbj",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -19461,7 +19475,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Moonfire Bar"] = {
 ["sparkWidth"] = 10,
@@ -19565,18 +19579,17 @@ true,
 ["rune"] = 1,
 ["use_track"] = true,
 ["useStacks"] = false,
-["use_unit"] = true,
+["subeventPrefix"] = "SPELL",
 ["powertype"] = 19,
 ["use_absorbMode"] = true,
 ["genericShowOn"] = "showAlways",
-["names"] = {
-},
+["use_unit"] = true,
 ["unitExists"] = true,
 ["stacks"] = "2",
-["useName"] = true,
-["type"] = "aura2",
-["use_trackcharge"] = true,
 ["trackcharge"] = "2",
+["useName"] = true,
+["use_trackcharge"] = true,
+["type"] = "aura2",
 ["use_powertype"] = true,
 ["debuffType"] = "HARMFUL",
 ["charges_operator"] = "==",
@@ -19594,7 +19607,8 @@ true,
 ["matchesShowOn"] = "showAlways",
 ["unit"] = "target",
 ["duration"] = "1",
-["subeventPrefix"] = "SPELL",
+["names"] = {
+},
 ["ownOnly"] = true,
 },
 ["untrigger"] = {
@@ -19965,8 +19979,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -19974,6 +19986,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -20044,12 +20063,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Mangle"] = {
 ["iconSource"] = -1,
@@ -20254,8 +20268,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -20263,6 +20275,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -20435,12 +20454,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Nature's Grace"] = {
 ["iconSource"] = -1,
@@ -20603,8 +20617,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -20612,6 +20624,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -20678,12 +20697,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Barkskin (Guardian)"] = {
 ["iconSource"] = -1,
@@ -20830,37 +20844,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Core - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Barkskin (Guardian)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -20881,9 +20878,30 @@ true,
 ["easeType"] = "none",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Core - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Barkskin (Guardian)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "f8PseE49Fc1",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -20956,13 +20974,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Holy Ward (PvP Talent)"] = {
@@ -21167,8 +21181,11 @@ true,
 ["useAdjustededMax"] = false,
 ["width"] = 48,
 ["source"] = "import",
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 ["parent"] = "Utilities - LWA - Priest",
+["progressSource"] = {
+-1,
+"",
+},
 ["cooldown"] = true,
 ["displayIcon"] = "",
 ["useAdjustededMin"] = false,
@@ -21442,10 +21459,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["progressSource"] = {
--1,
-"",
-},
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Starfire"] = {
 ["iconSource"] = 0,
@@ -21634,8 +21648,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -21643,6 +21655,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -21788,12 +21807,7 @@ true,
 },
 ["displayIcon"] = 135753,
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Shadow Covenant (Optional)"] = {
 ["iconSource"] = -1,
@@ -21921,8 +21935,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -21930,6 +21942,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -21999,12 +22018,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Remove Corruption"] = {
 ["iconSource"] = -1,
@@ -22158,19 +22172,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Utilities - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -22223,10 +22258,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["config"] = {
 ["utility"] = {
 ["behavior"] = 2,
@@ -22243,29 +22275,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "aPdXI4u2reX",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -22342,13 +22360,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Divine Word"] = {
@@ -22541,6 +22555,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -22548,21 +22566,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -22584,6 +22587,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "fqgoTKr4e(K",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -22691,7 +22705,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Rage Bar - LWA - Druid"] = {
 ["sparkWidth"] = 10,
@@ -22704,9 +22718,9 @@ true,
 ["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["actions"] = {
 ["start"] = {
+["do_custom"] = false,
 ["custom"] = "",
 ["do_message"] = false,
-["do_custom"] = false,
 },
 ["finish"] = {
 },
@@ -23160,37 +23174,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Core - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Feral Frenzy",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -23211,9 +23208,30 @@ true,
 ["easeType"] = "none",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Core - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Feral Frenzy",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "hl(2XWa6(f5",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -23343,13 +23361,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Insanity Bar - LWA - Priest"] = {
@@ -23584,12 +23598,12 @@ true,
 ["text_text_format_p_time_precision"] = 1,
 ["anchorXOffset"] = 0,
 ["text_text_format_prediction_format"] = "none",
-["text_text_format_p_time_legacy_floor"] = true,
+["text_text_format_c_format"] = "none",
 ["text_selfPoint"] = "RIGHT",
 ["text_automaticWidth"] = "Auto",
 ["text_fixedWidth"] = 64,
-["text_text_format_c_format"] = "none",
 ["anchorYOffset"] = 0,
+["text_text_format_p_time_legacy_floor"] = true,
 ["text_justify"] = "CENTER",
 ["rotateText"] = "NONE",
 ["text_shadowXOffset"] = 1,
@@ -23638,9 +23652,9 @@ true,
 ["icon_side"] = "RIGHT",
 ["actions"] = {
 ["start"] = {
+["do_custom"] = false,
 ["custom"] = "",
 ["do_message"] = false,
-["do_custom"] = false,
 },
 ["init"] = {
 ["custom"] = "aura_env.region.configGroup = \"insanity_bar\"\n\naura_env.power = {}\naura_env.power.unmodified = false\naura_env.spells = {\n    \n    --[[PRIEST]]--\n    [8092] = { --Mind Blast\n        power = 6,\n        type = Enum.PowerType.Insanity,\n    },\n    [120644] = { --Halo\n        power = 10,\n        type = Enum.PowerType.Insanity,\n    },\n    [375901] = { --Mindgames\n        power = 10,\n        type = Enum.PowerType.Insanity,\n    },\n    [15407] = { --Mind Flay\n        power = 12,\n        type = Enum.PowerType.Insanity,\n    },\n    [34914] = { --Vampiric Touch\n        power = 4,\n        type = Enum.PowerType.Insanity,\n    },\n    [391109] = { --Dark Ascension\n        power = 30,\n        type = Enum.PowerType.Insanity,\n    },\n    \n}\naura_env.events = {\n    \"UNIT_SPELLCAST_START\",\n    \"UNIT_SPELLCAST_STOP\" ,\n    \"UNIT_POWER_FREQUENT\",\n    \"OPTIONS\",\n    \"PLAYER_SPECIALIZATION_CHANGED\",\n}\n\n--Accepts a table and returns all indices as keypairs with value true\nlocal function Set(list)\n    local set = {}\n    for _,v in ipairs(list) do set[v] = true end\n    return set\nend\naura_env.events = Set(aura_env.events)\n\naura_env.power.PowerTypes = Enum.PowerType.Insanity\n\naura_env.GetCurrentSpecializationID = function()\n    return GetSpecializationInfo(GetSpecialization())\nend\n\naura_env.findAndReplaceOrNew = function(tMain, tNew)\n    for k,v in pairs(tNew) do\n        tMain[v.id] = v\n    end    \n    return tMain\nend\n\naura_env.getPowerModifierAmounts = function(spellID)\n    local spell = aura_env.spells[spellID]\n    if not spell or spell and not spell.mods then return 0,nil end\n    local modAmounts = {}\n    \n    for i,mod in pairs(spell.mods) do\n        local modStates = {}\n        \n        --Check modifier conditions\n        for i,condition in pairs(mod.conditions) do\n            modStates[i] = false\n            \n            if condition.type == 1 then --Buff\n                local name, _, _, _, _, expirationTime = GetPlayerAuraBySpellID(condition.id)\n                local endTimeMS = select(5, UnitCastingInfo(\"player\"))\n                if name and expirationTime and endTimeMS \n                and (endTimeMS/1000) <= expirationTime then modStates[i] = true end\n                \n            elseif condition.type == 2 then --Talent\n                if IsPlayerSpell(condition.id) then modStates[i] = true end\n            end            \n        end\n        \n        --Check if modifier passes its Any/All requirement\n        local requirements = false\n        if mod.requirement == 1 then --Any\n            for _,modState in pairs(modStates) do\n                if modState then requirements = true end\n            end     \n        elseif mod.requirement == 2 then --All\n            requirements = true\n            for _,modState in pairs(modStates) do\n                if not modState then requirements = false end\n            end\n        end \n        \n        --Calculate modifier amounts\n        if requirements then\n            local total = mod.modType == 1 and spell.power+mod.modAmount or mod.modType == 2 and spell.power*mod.modAmount or spell.power   \n            local change = total-spell.power\n            tinsert(modAmounts, {total=total,change=change})\n        end        \n    end\n    \n    --Calculate total power change of all modifiers\n    local totalChange = 0\n    if #modAmounts > 0 then\n        for _,v in pairs(modAmounts) do totalChange = totalChange+v.change end\n    end\n    \n    return totalChange, modAmounts\nend\n\naura_env.isDestruction = function()\n    return GetSpecializationInfo(GetSpecialization()) == 267\nend",
@@ -23862,6 +23876,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -23869,21 +23887,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -23905,6 +23908,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Utilities - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "KL6JyFbth8W",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -24066,7 +24080,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Power Word: Fortitude"] = {
 ["iconSource"] = -1,
@@ -24278,6 +24292,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -24287,21 +24305,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -24323,6 +24326,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Maintenance - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = ")sOwmMtK22m",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -24439,7 +24453,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Maintenance - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Wild Attunement (PvP Talent)"] = {
 ["iconSource"] = -1,
@@ -24600,8 +24614,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -24609,6 +24621,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -24692,12 +24711,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Premonition of Insight (Holy)"] = {
 ["iconSource"] = -1,
@@ -24867,8 +24881,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -24876,6 +24888,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -24946,12 +24965,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Premonition of Solace (Disicipline)"] = {
 ["iconSource"] = -1,
@@ -25084,8 +25098,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -25093,6 +25105,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -25162,12 +25181,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Berserk (Guardian)"] = {
 ["iconSource"] = -1,
@@ -25316,37 +25330,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Core - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Berserk (Guardian)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -25367,9 +25364,30 @@ true,
 ["easeType"] = "none",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Core - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Berserk (Guardian)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "JdmyBaG2Lz0",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -25442,13 +25460,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Holy Word: Serenity 1"] = {
@@ -25560,12 +25574,12 @@ true,
 ["powertype"] = 19,
 ["duration"] = "1",
 ["unit"] = "player",
-["type"] = "spell",
-["useName"] = true,
+["charges"] = "2",
+["trackcharge"] = "1",
 ["use_trackcharge"] = true,
 ["debuffType"] = "HELPFUL",
 ["charges_operator"] = "==",
-["charges"] = "2",
+["type"] = "spell",
 ["unevent"] = "auto",
 ["power"] = "1",
 ["track"] = "auto",
@@ -25576,7 +25590,7 @@ true,
 ["use_spellName"] = true,
 ["spellIds"] = {
 },
-["trackcharge"] = "1",
+["useName"] = true,
 ["names"] = {
 },
 ["stacks"] = "2",
@@ -25909,37 +25923,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Core - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Overgrowth",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -25960,9 +25957,30 @@ true,
 ["easeType"] = "none",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Core - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Overgrowth",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "5m43colFL8P",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -26040,13 +26058,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Mass Dispel"] = {
@@ -26204,6 +26218,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -26211,21 +26229,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -26247,6 +26250,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Utilities - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "vLApyO6knVx",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -26440,7 +26454,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Invigorate"] = {
 ["iconSource"] = -1,
@@ -26566,37 +26580,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Core - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Invigorate",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -26617,9 +26614,30 @@ true,
 ["easeType"] = "none",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Core - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Invigorate",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "wESiDTKWKSX",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -26697,13 +26715,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Shadow Word: Pain (Holy)"] = {
@@ -26829,6 +26843,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -26836,21 +26854,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -26874,6 +26877,17 @@ true,
 ["duration_type"] = "seconds",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Dynamic Effects - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "y2vJCKPBRyS",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -26896,7 +26910,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Dynamic Effects - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Halo Archon (Holy)"] = {
 ["iconSource"] = -1,
@@ -27063,6 +27077,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -27070,21 +27088,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -27106,6 +27109,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "Km4KAuB8mop",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -27232,7 +27246,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Shadowfiend (Shadow)"] = {
 ["iconSource"] = 0,
@@ -27253,14 +27267,14 @@ true,
 ["spellId"] = "49206",
 ["auranames"] = {
 },
-["unit"] = "player",
+["use_unit"] = true,
 ["use_totemName"] = true,
 ["genericShowOn"] = "showOnCooldown",
-["names"] = {
-},
+["subeventPrefix"] = "SPELL",
 ["use_genericShowOn"] = true,
-["events"] = "PLAYER_TOTEM_UPDATE",
 ["custom"] = "function(event, arg1)\n    if event == \"PLAYER_TOTEM_UPDATE\" and arg1 then\n        local haveTotem, name, startTime, duration, icon = GetTotemInfo(arg1)\n        if haveTotem and icon == aura_env.texture then\n            aura_env.haveTotem, aura_env.name, aura_env.startTime, aura_env.duration, aura_env.icon = haveTotem, name, startTime, duration, icon\n            aura_env.index = arg1\n            return true\n        elseif aura_env.index == arg1 then\n            aura_env.index = 0\n            aura_env.startTime, aura_env.duration = nil, nil\n        end\n    end\nend",
+["spellIds"] = {
+},
 ["use_spellName"] = true,
 ["realSpellName"] = 0,
 ["duration"] = "35",
@@ -27269,20 +27283,20 @@ true,
 ["type"] = "custom",
 ["useName"] = true,
 ["debuffType"] = "HELPFUL",
-["subeventSuffix"] = "_CAST_SUCCESS",
 ["custom_type"] = "status",
 ["unevent"] = "auto",
+["subeventSuffix"] = "_CAST_SUCCESS",
 ["event"] = "Cooldown Progress (Spell)",
 ["totemName"] = "27829",
 ["customDuration"] = "function()\n    if aura_env.startTime then\n        return aura_env.duration, aura_env.startTime + aura_env.duration\n    end\nend",
 ["use_spellId"] = true,
-["spellIds"] = {
-},
+["events"] = "PLAYER_TOTEM_UPDATE",
 ["use_sourceUnit"] = true,
 ["check"] = "event",
-["subeventPrefix"] = "SPELL",
+["names"] = {
+},
 ["use_track"] = true,
-["use_unit"] = true,
+["unit"] = "player",
 },
 ["untrigger"] = {
 ["custom"] = "function()\n    return aura_env.index == 0\nend",
@@ -27435,8 +27449,11 @@ true,
 ["useAdjustededMax"] = false,
 ["width"] = 48,
 ["source"] = "import",
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 ["parent"] = "Core - LWA - Priest",
+["progressSource"] = {
+-1,
+"",
+},
 ["cooldown"] = true,
 ["displayIcon"] = 136199,
 ["useAdjustededMin"] = false,
@@ -27606,10 +27623,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["progressSource"] = {
--1,
-"",
-},
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Rake"] = {
 ["iconSource"] = -1,
@@ -28088,6 +28102,26 @@ true,
 -1,
 "",
 },
+["authorOptions"] = {
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["uid"] = "UC(DURzFNVU",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["width"] = 48,
+["frameStrata"] = 1,
+["anchorFrameParent"] = false,
+["zoom"] = 0.3,
+["auto"] = true,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Rake",
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -28108,39 +28142,19 @@ true,
 ["easeType"] = "none",
 },
 },
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["uid"] = "UC(DURzFNVU",
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["width"] = 48,
-["frameStrata"] = 1,
-["anchorFrameParent"] = false,
-["zoom"] = 0.3,
-["auto"] = true,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Rake",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["useCooldownModRate"] = true,
 ["anchorFrameType"] = "SCREEN",
-["customText"] = "",
+["parent"] = "Core - LWA - Druid",
 ["config"] = {
 },
 ["inverse"] = false,
-["parent"] = "Core - LWA - Druid",
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["displayIcon"] = "",
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["authorOptions"] = {
-},
+["customText"] = "",
 },
 ["Rip"] = {
 ["iconSource"] = -1,
@@ -28593,6 +28607,26 @@ true,
 -1,
 "",
 },
+["authorOptions"] = {
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["uid"] = "vnCg)FY7cSH",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["width"] = 48,
+["frameStrata"] = 1,
+["anchorFrameParent"] = false,
+["zoom"] = 0.3,
+["auto"] = true,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Rip",
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -28613,39 +28647,19 @@ true,
 ["easeType"] = "none",
 },
 },
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["uid"] = "vnCg)FY7cSH",
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["width"] = 48,
-["frameStrata"] = 1,
-["anchorFrameParent"] = false,
-["zoom"] = 0.3,
-["auto"] = true,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Rip",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["useCooldownModRate"] = true,
 ["anchorFrameType"] = "SCREEN",
-["customText"] = "",
+["parent"] = "Core - LWA - Druid",
 ["config"] = {
 },
 ["inverse"] = false,
-["parent"] = "Core - LWA - Druid",
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["displayIcon"] = "",
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["authorOptions"] = {
-},
+["customText"] = "",
 },
 ["Core - LWA - Priest"] = {
 ["arcLength"] = 360,
@@ -29064,6 +29078,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -29071,21 +29089,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -29107,6 +29110,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "YM18lTXCG)n",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -29233,7 +29247,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Wrath 1"] = {
 ["sparkWidth"] = 10,
@@ -29345,21 +29359,20 @@ true,
 ["duration"] = "1",
 ["useStacks"] = true,
 ["use_rune"] = true,
-["names"] = {
-},
+["unit"] = "player",
 ["use_absorbMode"] = true,
 ["genericShowOn"] = "showAlways",
-["subeventPrefix"] = "SPELL",
+["use_unit"] = true,
 ["powertype"] = 19,
 ["stacks"] = "2",
-["useName"] = true,
-["charges"] = "2",
-["use_trackcharge"] = false,
+["type"] = "spell",
 ["trackcharge"] = "1",
+["use_trackcharge"] = false,
+["charges"] = "2",
 ["use_powertype"] = true,
 ["debuffType"] = "HELPFUL",
 ["charges_operator"] = "==",
-["type"] = "spell",
+["useName"] = true,
 ["use_charges"] = false,
 ["power"] = "1",
 ["use_spellCount"] = false,
@@ -29372,8 +29385,9 @@ true,
 },
 ["spellCount_operator"] = "==",
 ["matchesShowOn"] = "showOnActive",
-["use_unit"] = true,
-["unit"] = "player",
+["subeventPrefix"] = "SPELL",
+["names"] = {
+},
 ["use_genericShowOn"] = true,
 },
 ["untrigger"] = {
@@ -29740,13 +29754,13 @@ true,
 {
 ["trigger"] = {
 ["type"] = "unit",
-["names"] = {
-},
-["unevent"] = "auto",
 ["use_unit"] = true,
+["unevent"] = "auto",
+["subeventPrefix"] = "SPELL",
 ["duration"] = "1",
 ["use_showCost"] = true,
-["subeventPrefix"] = "SPELL",
+["names"] = {
+},
 ["subeventSuffix"] = "_CAST_START",
 ["powertype"] = 0,
 ["spellIds"] = {
@@ -29902,9 +29916,9 @@ true,
 ["id"] = "Mana Bar - LWA - Druid",
 ["actions"] = {
 ["start"] = {
+["do_custom"] = false,
 ["custom"] = "",
 ["do_message"] = false,
-["do_custom"] = false,
 },
 ["finish"] = {
 },
@@ -29941,13 +29955,13 @@ true,
 ["wagoID"] = "ryBp05DHX",
 ["xOffset"] = 0,
 ["preferToUpdate"] = false,
-["frameStrata"] = 3,
+["alpha"] = 1,
 ["yOffset"] = 0,
 ["sortHybridTable"] = {
 ["Moonfire Bar"] = false,
 ["Sunfire Bar"] = false,
 },
-["regionType"] = "dynamicgroup",
+["limit"] = 6,
 ["sharedFrameLevel"] = true,
 ["borderColor"] = {
 0,
@@ -29985,33 +29999,14 @@ true,
 },
 ["columnSpace"] = 1,
 ["internalVersion"] = 85,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["selfPoint"] = "TOP",
+["gridType"] = "RD",
+["useLimit"] = false,
 ["align"] = "LEFT",
 ["growOn"] = "show",
-["useLimit"] = false,
 ["anchorPoint"] = "CENTER",
-["rotation"] = 0,
 ["radius"] = 200,
+["rotation"] = 0,
+["selfPoint"] = "TOP",
 ["version"] = 124,
 ["subRegions"] = {
 },
@@ -30043,7 +30038,7 @@ true,
 0.5,
 },
 ["borderInset"] = 1,
-["animate"] = false,
+["source"] = "import",
 ["customGrow"] = "function(newPositions, activeRegions)\n    local LWA = LWA and LWA[\"Druid\"] or {}\n    \n    if LWA and LWA.GrowDynamicResource then\n        LWA.GrowDynamicResource(newPositions, activeRegions)\n    end\nend",
 ["scale"] = 1,
 ["centerType"] = "LR",
@@ -30051,17 +30046,17 @@ true,
 ["borderEdge"] = "Square Full White",
 ["stepAngle"] = 15,
 ["borderSize"] = 2,
-["limit"] = 6,
-["source"] = "import",
-["alpha"] = 1,
+["sort"] = "none",
+["regionType"] = "dynamicgroup",
+["gridWidth"] = 5,
 ["constantFactor"] = "RADIUS",
 ["space"] = 2,
 ["borderOffset"] = 4,
 ["semver"] = "11.2.2",
 ["tocversion"] = 110200,
 ["id"] = "Moonfire & Sunfire (Restoration) - LWA - Druid",
-["sort"] = "none",
-["gridWidth"] = 5,
+["animate"] = false,
+["frameStrata"] = 3,
 ["anchorFrameType"] = "SCREEN",
 ["fullCircle"] = true,
 ["config"] = {
@@ -30074,7 +30069,26 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["gridType"] = "RD",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 },
 ["Luck of the Draw! (Druid - S2 - 2-Pieces)"] = {
 ["iconSource"] = -1,
@@ -30241,8 +30255,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -30250,6 +30262,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -30303,12 +30322,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Left Side - LWA - Druid"] = {
 ["arcLength"] = 360,
@@ -30470,10 +30484,8 @@ true,
 ["trigger"] = {
 ["type"] = "aura2",
 ["useName"] = true,
+["subeventSuffix"] = "_CAST_START",
 ["match_countOperator"] = ">",
-["auranames"] = {
-"1079",
-},
 ["unit"] = "target",
 ["ownOnly"] = true,
 ["event"] = "Health",
@@ -30486,7 +30498,9 @@ true,
 ["subeventPrefix"] = "SPELL",
 ["match_count"] = "0",
 ["matchesShowOn"] = "showOnActive",
-["subeventSuffix"] = "_CAST_START",
+["auranames"] = {
+"1079",
+},
 ["debuffType"] = "HARMFUL",
 },
 ["untrigger"] = {
@@ -30579,37 +30593,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Dynamic Effects - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Rip (Restoration)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["type"] = "preset",
@@ -30632,19 +30629,36 @@ true,
 ["preset"] = "shrink",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Dynamic Effects - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Rip (Restoration)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "XtT0H8cGUlh",
 ["inverse"] = false,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Thrash (Guardian)"] = {
@@ -30861,8 +30875,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -30870,6 +30882,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -31043,12 +31062,7 @@ true,
 },
 ["displayIcon"] = 451161,
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Solar Beam"] = {
 ["iconSource"] = -1,
@@ -31246,8 +31260,11 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["parent"] = "Utilities - LWA - Druid",
+["progressSource"] = {
+-1,
+"",
+},
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -31489,10 +31506,7 @@ true,
 },
 ["displayIcon"] = 252188,
 ["cooldown"] = true,
-["progressSource"] = {
--1,
-"",
-},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 },
 ["Starlord"] = {
 ["iconSource"] = -1,
@@ -31654,8 +31668,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -31663,6 +31675,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -31716,12 +31735,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Stampeding Roar"] = {
 ["iconSource"] = -1,
@@ -31897,19 +31911,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Utilities - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -31962,10 +31997,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["config"] = {
 ["utility"] = {
 ["behavior"] = 2,
@@ -31982,29 +32014,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "BANE7xsfMbl",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -32122,13 +32140,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Ironfur Bar - LWA - Druid"] = {
@@ -32224,13 +32238,13 @@ true,
 ["unit"] = "player",
 ["names"] = {
 },
+["spellIds"] = {
+},
 ["custom"] = "function(allstates, _, _, _, _, sourceGUID, _, _, _, _, _, _, _, spellID)    \n    if sourceGUID == WeakAuras.myGUID and spellID == 192081 then\n        local auraData = C_UnitAuras.GetPlayerAuraBySpellID(192081)\n        \n        if auraData then\n            local expirationTime = auraData.expirationTime\n            local duration = auraData.duration\n            local applicationTime = expirationTime - duration\n            \n            allstates[applicationTime] = {\n                show = true,\n                changed = true,\n                progressType = \"timed\",\n                duration = duration,\n                expirationTime = expirationTime,\n                autoHide = true\n            }\n            \n            return true\n        end\n    end\nend",
-["events"] = "CLEU:SPELL_AURA_APPLIED:SPELL_AURA_APPLIED_DOSE",
 ["custom_type"] = "stateupdate",
 ["check"] = "event",
 ["subeventPrefix"] = "SPELL",
-["spellIds"] = {
-},
+["events"] = "CLEU:SPELL_AURA_APPLIED:SPELL_AURA_APPLIED_DOSE",
 ["debuffType"] = "HELPFUL",
 },
 ["untrigger"] = {
@@ -32745,19 +32759,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Utilities - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -32810,10 +32845,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["config"] = {
 ["utility"] = {
 ["behavior"] = 2,
@@ -32830,29 +32862,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "NO6KeuWrgPX",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -32970,13 +32988,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Omen of Clarity (Feral)"] = {
@@ -33139,8 +33153,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -33148,6 +33160,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -33232,12 +33251,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Energy Bar (Off-Spec) - LWA - Druid"] = {
 ["sparkWidth"] = 10,
@@ -33250,9 +33264,9 @@ true,
 ["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["actions"] = {
 ["start"] = {
+["do_custom"] = false,
 ["custom"] = "",
 ["do_message"] = false,
-["do_custom"] = false,
 },
 ["finish"] = {
 },
@@ -33590,14 +33604,14 @@ true,
 ["spellId"] = "49206",
 ["auranames"] = {
 },
-["unit"] = "player",
+["use_unit"] = true,
 ["use_totemName"] = true,
 ["genericShowOn"] = "showOnCooldown",
-["names"] = {
-},
+["subeventPrefix"] = "SPELL",
 ["use_genericShowOn"] = true,
-["events"] = "PLAYER_TOTEM_UPDATE",
 ["custom"] = "function(event, arg1)\n    if event == \"PLAYER_TOTEM_UPDATE\" and arg1 then\n        local haveTotem, name, startTime, duration, icon = GetTotemInfo(arg1)\n        if haveTotem and icon == aura_env.texture then\n            aura_env.haveTotem, aura_env.name, aura_env.startTime, aura_env.duration, aura_env.icon = haveTotem, name, startTime, duration, icon\n            aura_env.index = arg1\n            return true\n        elseif aura_env.index == arg1 then\n            aura_env.index = 0\n            aura_env.startTime, aura_env.duration = nil, nil\n        end\n    end\nend",
+["spellIds"] = {
+},
 ["use_spellName"] = true,
 ["realSpellName"] = 0,
 ["duration"] = "35",
@@ -33606,20 +33620,20 @@ true,
 ["type"] = "custom",
 ["useName"] = true,
 ["debuffType"] = "HELPFUL",
-["subeventSuffix"] = "_CAST_SUCCESS",
 ["custom_type"] = "status",
 ["unevent"] = "auto",
+["subeventSuffix"] = "_CAST_SUCCESS",
 ["event"] = "Cooldown Progress (Spell)",
 ["totemName"] = "27829",
 ["customDuration"] = "function()\n    if aura_env.startTime then\n        return aura_env.duration, aura_env.startTime + aura_env.duration\n    end\nend",
 ["use_spellId"] = true,
-["spellIds"] = {
-},
+["events"] = "PLAYER_TOTEM_UPDATE",
 ["use_sourceUnit"] = true,
 ["check"] = "event",
-["subeventPrefix"] = "SPELL",
+["names"] = {
+},
 ["use_track"] = true,
-["use_unit"] = true,
+["unit"] = "player",
 },
 ["untrigger"] = {
 ["custom"] = "function()\n    return aura_env.index == 0\nend",
@@ -33770,8 +33784,11 @@ true,
 ["useAdjustededMax"] = false,
 ["width"] = 48,
 ["source"] = "import",
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 ["parent"] = "Core - LWA - Priest",
+["progressSource"] = {
+-1,
+"",
+},
 ["cooldown"] = true,
 ["displayIcon"] = "615099",
 ["useAdjustededMin"] = false,
@@ -33941,10 +33958,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["progressSource"] = {
--1,
-"",
-},
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Wrath 2"] = {
 ["sparkWidth"] = 10,
@@ -34055,21 +34069,20 @@ true,
 ["duration"] = "1",
 ["useStacks"] = true,
 ["use_rune"] = true,
-["names"] = {
-},
+["unit"] = "player",
 ["use_absorbMode"] = true,
 ["genericShowOn"] = "showAlways",
-["subeventPrefix"] = "SPELL",
+["use_unit"] = true,
 ["powertype"] = 19,
 ["stacks"] = "2",
-["useName"] = true,
-["charges"] = "2",
-["use_trackcharge"] = false,
+["type"] = "spell",
 ["trackcharge"] = "2",
+["use_trackcharge"] = false,
+["charges"] = "2",
 ["use_powertype"] = true,
 ["debuffType"] = "HELPFUL",
 ["charges_operator"] = "==",
-["type"] = "spell",
+["useName"] = true,
 ["use_charges"] = false,
 ["power"] = "1",
 ["use_spellCount"] = false,
@@ -34082,8 +34095,9 @@ true,
 },
 ["spellCount_operator"] = "==",
 ["matchesShowOn"] = "showOnActive",
-["use_unit"] = true,
-["unit"] = "player",
+["subeventPrefix"] = "SPELL",
+["names"] = {
+},
 ["use_genericShowOn"] = true,
 },
 ["untrigger"] = {
@@ -34524,8 +34538,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -34535,6 +34547,13 @@ true,
 ["custom"] = "aura_env.region.extraZoom = 0.2",
 ["do_custom"] = true,
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -34717,12 +34736,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Answered Prayers"] = {
 ["iconSource"] = -1,
@@ -34889,8 +34903,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -34898,6 +34910,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -34951,12 +34970,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Combot Point 1 - Druid"] = {
 ["sparkWidth"] = 10,
@@ -35451,10 +35465,8 @@ true,
 ["trigger"] = {
 ["type"] = "aura2",
 ["useName"] = true,
+["subeventSuffix"] = "_CAST_START",
 ["match_countOperator"] = ">",
-["auranames"] = {
-"106830",
-},
 ["unit"] = "target",
 ["ownOnly"] = true,
 ["event"] = "Health",
@@ -35467,7 +35479,9 @@ true,
 ["subeventPrefix"] = "SPELL",
 ["match_count"] = "0",
 ["matchesShowOn"] = "showOnActive",
-["subeventSuffix"] = "_CAST_START",
+["auranames"] = {
+"106830",
+},
 ["debuffType"] = "HARMFUL",
 },
 ["untrigger"] = {
@@ -35599,8 +35613,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -35608,6 +35620,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -35661,12 +35680,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Divinity"] = {
 ["iconSource"] = -1,
@@ -35831,8 +35845,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -35840,6 +35852,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -35910,12 +35929,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Rebirth"] = {
 ["iconSource"] = -1,
@@ -36110,8 +36124,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -36121,6 +36133,13 @@ true,
 ["custom"] = "aura_env.region.extraZoom = 0.19",
 ["do_custom"] = true,
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -36372,12 +36391,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Ironfur"] = {
 ["iconSource"] = -1,
@@ -36565,8 +36579,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -36574,6 +36586,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -36726,12 +36745,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Prowl"] = {
 ["iconSource"] = -1,
@@ -36883,37 +36897,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Maintenance - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Prowl",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -36934,9 +36931,30 @@ true,
 ["easeType"] = "none",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Maintenance - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Prowl",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "EOg6FdKsjmG",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -37009,13 +37027,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Tranquility"] = {
@@ -37193,8 +37207,11 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["parent"] = "Core - LWA - Druid",
+["progressSource"] = {
+-1,
+"",
+},
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -37342,10 +37359,7 @@ true,
 },
 ["displayIcon"] = 136107,
 ["cooldown"] = true,
-["progressSource"] = {
--1,
-"",
-},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 },
 ["Bloodseeker Vines (Feral)"] = {
 ["iconSource"] = -1,
@@ -37515,8 +37529,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -37524,6 +37536,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -37608,12 +37627,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Moonlight Suffusion (Guardian - S3 - 4-Pieces)"] = {
 ["iconSource"] = -1,
@@ -37786,8 +37800,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -37795,6 +37807,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -37865,12 +37884,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Luxthos - Priest"] = {
 ["controlledChildren"] = {
@@ -38457,6 +38471,26 @@ true,
 -1,
 "",
 },
+["authorOptions"] = {
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["uid"] = "n(0JuQBu)h1",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["width"] = 48,
+["frameStrata"] = 1,
+["anchorFrameParent"] = false,
+["zoom"] = 0.3,
+["auto"] = true,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Thrash (Feral)",
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -38477,39 +38511,19 @@ true,
 ["easeType"] = "none",
 },
 },
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["uid"] = "n(0JuQBu)h1",
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["width"] = 48,
-["frameStrata"] = 1,
-["anchorFrameParent"] = false,
-["zoom"] = 0.3,
-["auto"] = true,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Thrash (Feral)",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["useCooldownModRate"] = true,
 ["anchorFrameType"] = "SCREEN",
-["customText"] = "",
+["parent"] = "Core - LWA - Druid",
 ["config"] = {
 },
 ["inverse"] = false,
-["parent"] = "Core - LWA - Druid",
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["displayIcon"] = "",
 ["information"] = {
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["authorOptions"] = {
-},
+["customText"] = "",
 },
 ["Mindgames (Holy - PvP Talent)"] = {
 ["iconSource"] = -1,
@@ -38661,6 +38675,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -38668,21 +38686,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -38704,6 +38707,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "wcAKCrjFEqo",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -38852,7 +38866,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Blooming Infusion (Restoration)"] = {
 ["iconSource"] = -1,
@@ -38985,8 +38999,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = true,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -38994,6 +39006,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -39064,12 +39083,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Health Bar (Optional) - LWA - Druid"] = {
 ["sparkWidth"] = 10,
@@ -39082,9 +39096,9 @@ true,
 ["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["actions"] = {
 ["start"] = {
+["do_custom"] = false,
 ["custom"] = "",
 ["do_message"] = false,
-["do_custom"] = false,
 },
 ["finish"] = {
 },
@@ -39568,9 +39582,9 @@ true,
 ["sparkHidden"] = "NEVER",
 ["actions"] = {
 ["start"] = {
+["do_custom"] = false,
 ["custom"] = "",
 ["do_message"] = false,
-["do_custom"] = false,
 },
 ["finish"] = {
 },
@@ -39801,6 +39815,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -39808,21 +39826,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -39844,6 +39847,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Utilities - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "WGelHw4qcYM",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -40034,7 +40048,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Precognition (Balance & Restoration - PvP Talent)"] = {
 ["iconSource"] = -1,
@@ -40159,8 +40173,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -40168,6 +40180,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -40237,12 +40256,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Berserk (Feral)"] = {
 ["iconSource"] = -1,
@@ -40396,37 +40410,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Core - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Berserk (Feral)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -40447,9 +40444,30 @@ true,
 ["easeType"] = "none",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Core - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Berserk (Feral)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "65MfCaRSxpi",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -40522,13 +40540,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Renewal"] = {
@@ -40684,19 +40698,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Utilities - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -40749,10 +40784,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["config"] = {
 ["utility"] = {
 ["behavior"] = 2,
@@ -40769,29 +40801,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "kKX7Kidocdz",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -40868,13 +40886,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Barkskin (Balance, Feral & Restoration)"] = {
@@ -41050,19 +41064,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Utilities - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -41115,10 +41150,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["config"] = {
 ["utility"] = {
 ["behavior"] = 2,
@@ -41135,29 +41167,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "dPgxYlnaftx",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -41275,13 +41293,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Mighty Bash"] = {
@@ -41458,19 +41472,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Utilities - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -41523,10 +41558,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["config"] = {
 ["utility"] = {
 ["behavior"] = 2,
@@ -41543,29 +41575,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "vMsgIv0YZS2",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -41715,13 +41733,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Combo Points (Off-Spec) - LWA - Druid"] = {
@@ -41737,7 +41751,7 @@ true,
 ["wagoID"] = "ryBp05DHX",
 ["xOffset"] = 0,
 ["preferToUpdate"] = false,
-["frameStrata"] = 1,
+["alpha"] = 1,
 ["yOffset"] = 0,
 ["sortHybridTable"] = {
 ["Combot Point 1 (Off-Spec) - Druid"] = false,
@@ -41746,7 +41760,7 @@ true,
 ["Combot Point 4 (Off-Spec) - Druid"] = false,
 ["Combot Point 5 (Off-Spec) - Druid"] = false,
 },
-["regionType"] = "dynamicgroup",
+["limit"] = 6,
 ["sharedFrameLevel"] = true,
 ["borderColor"] = {
 0,
@@ -41784,33 +41798,14 @@ true,
 },
 ["columnSpace"] = 1,
 ["internalVersion"] = 85,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["selfPoint"] = "TOP",
+["gridType"] = "RD",
+["useLimit"] = false,
 ["align"] = "LEFT",
 ["growOn"] = "show",
-["useLimit"] = false,
 ["anchorPoint"] = "CENTER",
-["rotation"] = 0,
 ["radius"] = 200,
+["rotation"] = 0,
+["selfPoint"] = "TOP",
 ["version"] = 124,
 ["subRegions"] = {
 },
@@ -41842,7 +41837,7 @@ true,
 0.5,
 },
 ["borderInset"] = 1,
-["animate"] = false,
+["source"] = "import",
 ["customGrow"] = "function(newPositions, activeRegions)\n    local LWA = LWA and LWA[\"Druid\"] or {}\n    \n    if LWA and LWA.GrowDynamicResource then\n        LWA.GrowDynamicResource(newPositions, activeRegions)\n    end\nend",
 ["scale"] = 1,
 ["centerType"] = "LR",
@@ -41850,17 +41845,17 @@ true,
 ["borderEdge"] = "Square Full White",
 ["stepAngle"] = 15,
 ["borderSize"] = 2,
-["limit"] = 6,
-["source"] = "import",
-["alpha"] = 1,
+["sort"] = "none",
+["regionType"] = "dynamicgroup",
+["gridWidth"] = 5,
 ["constantFactor"] = "RADIUS",
 ["space"] = 2,
 ["borderOffset"] = 4,
 ["semver"] = "11.2.2",
 ["tocversion"] = 110200,
 ["id"] = "Combo Points (Off-Spec) - LWA - Druid",
-["sort"] = "none",
-["gridWidth"] = 5,
+["animate"] = false,
+["frameStrata"] = 1,
 ["anchorFrameType"] = "SCREEN",
 ["fullCircle"] = true,
 ["config"] = {
@@ -41873,7 +41868,26 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["gridType"] = "RD",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 },
 ["Dash"] = {
 ["iconSource"] = -1,
@@ -42050,19 +42064,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Utilities - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -42115,10 +42150,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["config"] = {
 ["utility"] = {
 ["behavior"] = 2,
@@ -42135,29 +42167,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = ")kizAEysL9F",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -42275,13 +42293,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Incarnation: Tree of Life"] = {
@@ -42431,37 +42445,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Core - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Incarnation: Tree of Life",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -42482,9 +42479,30 @@ true,
 ["easeType"] = "none",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Core - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Incarnation: Tree of Life",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "GstKuUrDQl7",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -42557,13 +42575,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Adaptive Swarm (Feral)"] = {
@@ -42715,37 +42729,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Core - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Adaptive Swarm (Feral)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -42766,9 +42763,30 @@ true,
 ["easeType"] = "none",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Core - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Adaptive Swarm (Feral)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "2f3zmwr9rp3",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -42888,13 +42906,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Mark of the Wild"] = {
@@ -43105,19 +43119,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Maintenance - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -43180,10 +43215,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Maintenance - LWA - Druid",
 ["config"] = {
 ["maintenance"] = {
 ["mark_of_the_wild"] = {
@@ -43201,29 +43233,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "SG0uvMlfCqO",
 ["inverse"] = false,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -43256,13 +43274,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Voidwraith - Temporary Fix (Shadow)"] = {
@@ -43284,14 +43298,14 @@ true,
 ["spellId"] = "49206",
 ["auranames"] = {
 },
-["unit"] = "player",
+["use_unit"] = true,
 ["use_totemName"] = true,
 ["genericShowOn"] = "showOnCooldown",
-["names"] = {
-},
+["subeventPrefix"] = "SPELL",
 ["use_genericShowOn"] = true,
-["events"] = "PLAYER_TOTEM_UPDATE",
 ["custom"] = "function(event, arg1)\n    if event == \"PLAYER_TOTEM_UPDATE\" and arg1 then\n        local haveTotem, name, startTime, duration, icon = GetTotemInfo(arg1)\n        if haveTotem and icon == aura_env.texture then\n            aura_env.haveTotem, aura_env.name, aura_env.startTime, aura_env.duration, aura_env.icon = haveTotem, name, startTime, duration, icon\n            aura_env.index = arg1\n            return true\n        elseif aura_env.index == arg1 then\n            aura_env.index = 0\n            aura_env.startTime, aura_env.duration = nil, nil\n        end\n    end\nend",
+["spellIds"] = {
+},
 ["use_spellName"] = true,
 ["realSpellName"] = 0,
 ["duration"] = "35",
@@ -43300,20 +43314,20 @@ true,
 ["type"] = "custom",
 ["useName"] = true,
 ["debuffType"] = "HELPFUL",
-["subeventSuffix"] = "_CAST_SUCCESS",
 ["custom_type"] = "status",
 ["unevent"] = "auto",
+["subeventSuffix"] = "_CAST_SUCCESS",
 ["event"] = "Cooldown Progress (Spell)",
 ["totemName"] = "27829",
 ["customDuration"] = "function()\n    if aura_env.startTime then\n        return aura_env.duration, aura_env.startTime + aura_env.duration\n    end\nend",
 ["use_spellId"] = true,
-["spellIds"] = {
-},
+["events"] = "PLAYER_TOTEM_UPDATE",
 ["use_sourceUnit"] = true,
 ["check"] = "event",
-["subeventPrefix"] = "SPELL",
+["names"] = {
+},
 ["use_track"] = true,
-["use_unit"] = true,
+["unit"] = "player",
 },
 ["untrigger"] = {
 ["custom"] = "function()\n    return aura_env.index == 0\nend",
@@ -43464,8 +43478,11 @@ true,
 ["useAdjustededMax"] = false,
 ["width"] = 48,
 ["source"] = "import",
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 ["parent"] = "Core - LWA - Priest",
+["progressSource"] = {
+-1,
+"",
+},
 ["cooldown"] = true,
 ["displayIcon"] = "615099",
 ["useAdjustededMin"] = false,
@@ -43635,10 +43652,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["progressSource"] = {
--1,
-"",
-},
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Nature's Cure"] = {
 ["iconSource"] = -1,
@@ -43793,19 +43807,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Utilities - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -43858,10 +43893,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["config"] = {
 ["utility"] = {
 ["behavior"] = 2,
@@ -43878,29 +43910,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "m3mtTA70ktQ",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -43977,13 +43995,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Holy Word: Serenity"] = {
@@ -44168,8 +44182,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -44177,6 +44189,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -44373,12 +44392,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Parting Skies (Optional)"] = {
 ["iconSource"] = -1,
@@ -44503,8 +44517,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -44512,6 +44524,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -44581,12 +44600,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Convoke the Spirits (Balance)"] = {
 ["iconSource"] = -1,
@@ -44737,37 +44751,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Core - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Convoke the Spirits (Balance)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -44788,9 +44785,30 @@ true,
 ["easeType"] = "none",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Core - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Convoke the Spirits (Balance)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "8q5MgG)2E4N",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -44863,13 +44881,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["New Moon"] = {
@@ -45036,8 +45050,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -45045,6 +45057,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -45190,12 +45209,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Bristling Fur"] = {
 ["iconSource"] = -1,
@@ -45343,37 +45357,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Core - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Bristling Fur",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -45394,9 +45391,30 @@ true,
 ["easeType"] = "none",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Core - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Bristling Fur",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "8j6B2JKvvBK",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -45469,13 +45487,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Waste No Time (Disc)"] = {
@@ -45609,8 +45623,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -45618,6 +45630,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -45688,12 +45707,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Twist of Fate (Optional - Shadow)"] = {
 ["iconSource"] = -1,
@@ -45821,8 +45835,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -45830,6 +45842,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -45899,12 +45918,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Mindgames (Shadow - PvP Talent)"] = {
 ["iconSource"] = -1,
@@ -46056,6 +46070,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -46063,21 +46081,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -46099,6 +46102,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "dc9BXDHEaAa",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -46247,7 +46261,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Resources - LWA - Druid"] = {
 ["controlledChildren"] = {
@@ -46532,37 +46546,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Core - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Rage of the Sleeper",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -46583,9 +46580,30 @@ true,
 ["easeType"] = "none",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Core - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Rage of the Sleeper",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "MoRia5Yasoj",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -46658,13 +46676,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Mana Bar (Discipline & Holy) - LWA - Priest"] = {
@@ -46756,13 +46770,13 @@ true,
 {
 ["trigger"] = {
 ["type"] = "unit",
-["names"] = {
-},
-["unevent"] = "auto",
 ["use_unit"] = true,
+["unevent"] = "auto",
+["subeventPrefix"] = "SPELL",
 ["duration"] = "1",
 ["use_showCost"] = true,
-["subeventPrefix"] = "SPELL",
+["names"] = {
+},
 ["use_absorbMode"] = true,
 ["powertype"] = 0,
 ["spellIds"] = {
@@ -46848,20 +46862,20 @@ true,
 ["text_selfPoint"] = "BOTTOM",
 ["text_automaticWidth"] = "Auto",
 ["text_fixedWidth"] = 64,
-["text_anchorYOffset"] = -5,
 ["text_text_format_p_time_legacy_floor"] = true,
+["text_text_format_c_format"] = "none",
 ["text_justify"] = "CENTER",
 ["rotateText"] = "NONE",
-["text_text_format_c_format"] = "none",
 ["anchorXOffset"] = 0,
 ["text_text_format_p_time_precision"] = 1,
-["type"] = "subtext",
 ["text_shadowColor"] = {
 0,
 0,
 0,
 1,
 },
+["type"] = "subtext",
+["text_text_format_p_time_format"] = 0,
 ["text_color"] = {
 1,
 1,
@@ -46869,13 +46883,13 @@ true,
 1,
 },
 ["text_font"] = "Friz Quadrata TT",
-["text_text_format_p_time_format"] = 0,
+["text_anchorYOffset"] = -5,
 ["text_shadowYOffset"] = -1,
 ["text_text_format_1.percentpower_format"] = "none",
 ["text_wordWrap"] = "WordWrap",
 ["text_fontType"] = "OUTLINE",
-["anchorYOffset"] = 0,
 ["text_visible"] = true,
+["anchorYOffset"] = 0,
 ["anchor_point"] = "INNER_TOP",
 ["text_fontSize"] = 16,
 ["text_text_format_p_time_dynamic_threshold"] = 60,
@@ -46908,9 +46922,9 @@ true,
 ["customText"] = "function()\n    local s = aura_env.state\n    local LWA = LWA and LWA[\"Priest\"] or {}\n    \n    if LWA and LWA.UpdateBarText then\n        local format = LWA.GetConfig(\"resources\").mana_bar.format\n        \n        return LWA.UpdateBarText(s.value, s.percentpower, format)\n    end\n    \n    return s.percentpower \nend",
 ["actions"] = {
 ["start"] = {
+["do_custom"] = false,
 ["custom"] = "",
 ["do_message"] = false,
-["do_custom"] = false,
 },
 ["init"] = {
 ["custom"] = "aura_env.region.configGroup = \"mana_bar\"",
@@ -47142,8 +47156,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -47151,6 +47163,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -47230,12 +47249,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Solar Eclipse"] = {
 ["sparkWidth"] = 10,
@@ -47586,14 +47600,14 @@ true,
 ["event"] = "GTFO",
 ["unit"] = "player",
 ["custom_hide"] = "custom",
+["spellIds"] = {
+},
 ["custom"] = "function ()\n    WeakAuras.ScanEvents(\"LWA_OPTIONS\")\nend",
-["events"] = "OPTIONS",
 ["subeventPrefix"] = "SPELL",
 ["names"] = {
 },
 ["custom_type"] = "event",
-["spellIds"] = {
-},
+["events"] = "OPTIONS",
 ["debuffType"] = "HELPFUL",
 },
 ["untrigger"] = {
@@ -47675,12 +47689,6 @@ true,
 ["useAdjustededMax"] = false,
 ["width"] = 1.0000950098038,
 ["source"] = "import",
-["color"] = {
-0,
-0,
-0,
-0,
-},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -48859,6 +48867,7 @@ true,
 ["size"] = 10,
 },
 },
+["desc"] = "Made by Luxthos - twitch.tv/luxthos",
 ["cooldown"] = false,
 ["displayIcon"] = 134520,
 ["useAdjustededMin"] = false,
@@ -49102,7 +49111,12 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["desc"] = "Made by Luxthos - twitch.tv/luxthos",
+["color"] = {
+0,
+0,
+0,
+0,
+},
 },
 ["Wildshape Mastery (Guardian)"] = {
 ["iconSource"] = -1,
@@ -49236,8 +49250,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -49245,6 +49257,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -49315,12 +49334,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Shadowform"] = {
 ["iconSource"] = -1,
@@ -50268,8 +50282,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -50277,6 +50289,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -50364,12 +50383,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Shadow Word: Pain (Discipline)"] = {
 ["iconSource"] = -1,
@@ -50494,6 +50508,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -50501,21 +50519,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -50539,6 +50542,17 @@ true,
 ["duration_type"] = "seconds",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Dynamic Effects - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "TeSu8C2r90H",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -50561,7 +50575,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Dynamic Effects - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Overrun (PvP Talent)"] = {
 ["iconSource"] = -1,
@@ -50737,19 +50751,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Utilities - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -50802,10 +50837,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["config"] = {
 ["utility"] = {
 ["behavior"] = 2,
@@ -50822,29 +50854,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "qS0lFHnD74y",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -50997,13 +51015,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Spirit of Redemption"] = {
@@ -51132,8 +51146,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -51141,6 +51153,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -51208,12 +51227,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Pulverize"] = {
 ["iconSource"] = -1,
@@ -51361,37 +51375,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Core - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Pulverize",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -51412,9 +51409,30 @@ true,
 ["easeType"] = "none",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Core - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Pulverize",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "jsm5gDj2ZH8",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -51536,13 +51554,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Maim"] = {
@@ -51719,19 +51733,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Utilities - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -51784,10 +51819,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["config"] = {
 ["utility"] = {
 ["behavior"] = 2,
@@ -51804,29 +51836,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "nL6a(iejF(B",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -52008,13 +52026,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Lightweaver"] = {
@@ -52180,8 +52194,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -52189,6 +52201,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -52259,12 +52278,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Utilities - LWA - Druid"] = {
 ["arcLength"] = 360,
@@ -52371,13 +52385,13 @@ true,
 ["Frenzied Regeneration (Balance, Feral & Restoration)"] = false,
 ["Ursol's Vortex"] = false,
 ["Survival Instincts (Feral)"] = false,
-["Maim"] = false,
+["Soothe"] = false,
 ["Nature's Vigil"] = false,
 ["Wild Growth (Balance, Feral & Guardian)"] = false,
 ["Faerie Swarm (PvP Talent)"] = false,
-["Soothe"] = false,
-["Emerald Slumber (PvP Talent)"] = false,
 ["Remove Corruption"] = false,
+["Emerald Slumber (PvP Talent)"] = false,
+["Maim"] = false,
 ["Rebirth"] = false,
 ["Overrun (PvP Talent)"] = false,
 ["Renewal"] = false,
@@ -52428,7 +52442,29 @@ true,
 ["anchorFrameFrame"] = "WeakAuras:General Options - LWA - Druid",
 ["hybridPosition"] = "hybridFirst",
 ["limit"] = 5,
+["borderSize"] = 2,
+["config"] = {
+},
+["xOffset"] = -6.103515625e-05,
+["anchorFrameParent"] = false,
 ["gridType"] = "RD",
+["uid"] = "rlWlpgFmuW3",
+["rotation"] = 0,
+["semver"] = "11.2.2",
+["sort"] = "none",
+["id"] = "Utilities - LWA - Druid",
+["frameStrata"] = 1,
+["gridWidth"] = 5,
+["anchorFrameType"] = "SELECTFRAME",
+["borderEdge"] = "Square Full White",
+["radius"] = 200,
+["rowSpace"] = 1,
+["stepAngle"] = 15,
+["conditions"] = {
+},
+["information"] = {
+["forceEvents"] = true,
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -52449,28 +52485,6 @@ true,
 ["easeType"] = "none",
 },
 },
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["xOffset"] = -6.103515625e-05,
-["uid"] = "rlWlpgFmuW3",
-["rotation"] = 0,
-["semver"] = "11.2.2",
-["sort"] = "none",
-["id"] = "Utilities - LWA - Druid",
-["frameStrata"] = 1,
-["gridWidth"] = 5,
-["anchorFrameType"] = "SELECTFRAME",
-["borderEdge"] = "Square Full White",
-["radius"] = 200,
-["rowSpace"] = 1,
-["stepAngle"] = 15,
-["conditions"] = {
-},
-["information"] = {
-["forceEvents"] = true,
-},
-["borderSize"] = 2,
 },
 ["Fury of Elune"] = {
 ["iconSource"] = 0,
@@ -52640,8 +52654,11 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["parent"] = "Core - LWA - Druid",
+["progressSource"] = {
+-1,
+"",
+},
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -52777,10 +52794,7 @@ true,
 },
 ["displayIcon"] = 132123,
 ["cooldown"] = true,
-["progressSource"] = {
--1,
-"",
-},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 },
 ["Weal and Woe (Optional)"] = {
 ["iconSource"] = -1,
@@ -52946,8 +52960,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -52955,6 +52967,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -53008,12 +53027,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Mass Entanglement"] = {
 ["iconSource"] = -1,
@@ -53189,19 +53203,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Utilities - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -53254,10 +53289,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["config"] = {
 ["utility"] = {
 ["behavior"] = 2,
@@ -53274,29 +53306,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "5jp67dDIyc6",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -53446,13 +53464,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Right Side - LWA - Priest"] = {
@@ -53874,8 +53888,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -53883,6 +53895,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -53952,12 +53971,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Left Side - LWA - Priest"] = {
 ["arcLength"] = 360,
@@ -54364,8 +54378,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -54373,6 +54385,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -54443,12 +54462,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Insanity"] = {
 ["iconSource"] = -1,
@@ -54613,8 +54627,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -54622,6 +54634,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -54705,12 +54724,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Cast Bar - LWA - Priest"] = {
 ["sparkWidth"] = 10,
@@ -55302,8 +55316,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -55311,6 +55323,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -55381,12 +55400,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Words of the Pious (Optional - Holy)"] = {
 ["iconSource"] = -1,
@@ -55552,8 +55566,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -55561,6 +55573,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -55614,12 +55633,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Power Word: Radiance 1"] = {
 ["sparkWidth"] = 10,
@@ -55730,12 +55744,12 @@ true,
 ["powertype"] = 19,
 ["duration"] = "1",
 ["unit"] = "player",
-["type"] = "spell",
-["useName"] = true,
+["charges"] = "2",
+["trackcharge"] = "1",
 ["use_trackcharge"] = true,
 ["debuffType"] = "HELPFUL",
 ["charges_operator"] = "==",
-["charges"] = "2",
+["type"] = "spell",
 ["unevent"] = "auto",
 ["power"] = "1",
 ["track"] = "auto",
@@ -55746,7 +55760,7 @@ true,
 ["use_spellName"] = true,
 ["spellIds"] = {
 },
-["trackcharge"] = "1",
+["useName"] = true,
 ["names"] = {
 },
 ["stacks"] = "2",
@@ -56133,8 +56147,11 @@ true,
 ["useAdjustededMax"] = false,
 ["width"] = 48,
 ["source"] = "import",
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 ["parent"] = "Utilities - LWA - Priest",
+["progressSource"] = {
+-1,
+"",
+},
 ["cooldown"] = true,
 ["displayIcon"] = "",
 ["useAdjustededMin"] = false,
@@ -56408,10 +56425,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["progressSource"] = {
--1,
-"",
-},
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Power Infusion (Discipline)"] = {
 ["iconSource"] = -1,
@@ -56565,6 +56579,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -56572,21 +56590,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -56608,6 +56611,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "94vBkgHZl0r",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -56699,7 +56713,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Survival Instincts (Guardian)"] = {
 ["iconSource"] = -1,
@@ -56887,8 +56901,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -56896,6 +56908,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -57081,12 +57100,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Winning Streak! (Druid - S2 - 2-Pieces)"] = {
 ["iconSource"] = -1,
@@ -57254,8 +57268,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -57263,6 +57275,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -57316,12 +57335,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Power Word: Radiance 2"] = {
 ["sparkWidth"] = 10,
@@ -57432,12 +57446,12 @@ true,
 ["powertype"] = 19,
 ["duration"] = "1",
 ["unit"] = "player",
-["type"] = "spell",
-["useName"] = true,
+["charges"] = "1",
+["trackcharge"] = "2",
 ["use_trackcharge"] = true,
 ["debuffType"] = "HELPFUL",
 ["charges_operator"] = ">",
-["charges"] = "1",
+["type"] = "spell",
 ["unevent"] = "auto",
 ["power"] = "1",
 ["track"] = "auto",
@@ -57448,7 +57462,7 @@ true,
 ["use_spellName"] = true,
 ["spellIds"] = {
 },
-["trackcharge"] = "2",
+["useName"] = true,
 ["names"] = {
 },
 ["stacks"] = "1",
@@ -57831,8 +57845,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -57840,6 +57852,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -57924,12 +57943,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Starfire 1"] = {
 ["sparkWidth"] = 10,
@@ -58047,21 +58061,20 @@ true,
 ["duration"] = "1",
 ["useStacks"] = true,
 ["use_rune"] = true,
-["names"] = {
-},
+["unit"] = "player",
 ["use_absorbMode"] = true,
 ["genericShowOn"] = "showAlways",
-["subeventPrefix"] = "SPELL",
+["use_unit"] = true,
 ["powertype"] = 19,
 ["stacks"] = "1",
-["useName"] = true,
-["charges"] = "1",
-["use_trackcharge"] = false,
+["type"] = "spell",
 ["trackcharge"] = "1",
+["use_trackcharge"] = false,
+["charges"] = "1",
 ["use_powertype"] = true,
 ["debuffType"] = "HELPFUL",
 ["charges_operator"] = ">",
-["type"] = "spell",
+["useName"] = true,
 ["use_charges"] = false,
 ["power"] = "1",
 ["use_spellCount"] = false,
@@ -58074,8 +58087,9 @@ true,
 },
 ["spellCount_operator"] = "==",
 ["matchesShowOn"] = "showOnActive",
-["use_unit"] = true,
-["unit"] = "player",
+["subeventPrefix"] = "SPELL",
+["names"] = {
+},
 ["use_genericShowOn"] = true,
 },
 ["untrigger"] = {
@@ -58494,12 +58508,12 @@ true,
 ["powertype"] = 19,
 ["duration"] = "1",
 ["unit"] = "player",
-["type"] = "spell",
-["useName"] = true,
+["charges"] = "1",
+["trackcharge"] = "1",
 ["use_trackcharge"] = true,
 ["debuffType"] = "HELPFUL",
 ["charges_operator"] = ">",
-["charges"] = "1",
+["type"] = "spell",
 ["unevent"] = "auto",
 ["power"] = "1",
 ["track"] = "auto",
@@ -58510,7 +58524,7 @@ true,
 ["use_spellName"] = true,
 ["spellIds"] = {
 },
-["trackcharge"] = "1",
+["useName"] = true,
 ["names"] = {
 },
 ["stacks"] = "1",
@@ -58753,9 +58767,9 @@ true,
 ["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 ["actions"] = {
 ["start"] = {
+["do_custom"] = false,
 ["custom"] = "",
 ["do_message"] = false,
-["do_custom"] = false,
 },
 ["init"] = {
 ["custom"] = "aura_env.region.configGroup = \"health_bar\"\n",
@@ -59042,13 +59056,13 @@ true,
 ["wagoID"] = "BJu2WDqBX",
 ["xOffset"] = 0,
 ["preferToUpdate"] = false,
-["frameStrata"] = 1,
+["alpha"] = 1,
 ["yOffset"] = 0,
 ["sortHybridTable"] = {
 ["Mind Blast 1"] = false,
 ["Mind Blast 2"] = false,
 },
-["stepAngle"] = 15,
+["sort"] = "none",
 ["sharedFrameLevel"] = true,
 ["borderColor"] = {
 0,
@@ -59086,33 +59100,14 @@ true,
 },
 ["columnSpace"] = 1,
 ["internalVersion"] = 85,
-["animation"] = {
-["start"] = {
-["type"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["type"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["type"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["selfPoint"] = "TOP",
+["gridType"] = "RD",
+["useLimit"] = false,
 ["align"] = "LEFT",
 ["growOn"] = "show",
-["useLimit"] = false,
 ["anchorPoint"] = "CENTER",
-["rotation"] = 0,
 ["radius"] = 200,
+["rotation"] = 0,
+["selfPoint"] = "TOP",
 ["version"] = 87,
 ["subRegions"] = {
 },
@@ -59146,7 +59141,7 @@ true,
 0.5,
 },
 ["fullCircle"] = true,
-["source"] = "import",
+["animate"] = false,
 ["customGrow"] = "function(newPositions, activeRegions)\n    local LWA = LWA and LWA[\"Priest\"] or {}\n    \n    if LWA and LWA.GrowDynamicResource then\n        LWA.GrowDynamicResource(newPositions, activeRegions)\n    end\nend",
 ["scale"] = 1,
 ["centerType"] = "LR",
@@ -59154,17 +59149,17 @@ true,
 ["borderEdge"] = "Square Full White",
 ["regionType"] = "dynamicgroup",
 ["borderSize"] = 2,
-["sort"] = "none",
-["animate"] = false,
-["alpha"] = 1,
+["limit"] = 6,
+["stepAngle"] = 15,
+["gridWidth"] = 5,
 ["constantFactor"] = "RADIUS",
 ["space"] = 2,
 ["borderOffset"] = 4,
 ["semver"] = "11.2.2",
 ["tocversion"] = 110200,
 ["id"] = "Mind Blast (Shadow) - LWA - Priest",
-["limit"] = 6,
-["gridWidth"] = 5,
+["source"] = "import",
+["frameStrata"] = 1,
 ["anchorFrameType"] = "SCREEN",
 ["borderInset"] = 1,
 ["uid"] = "6yPdiSK5MmX",
@@ -59175,7 +59170,26 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["gridType"] = "RD",
+["animation"] = {
+["start"] = {
+["type"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["type"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["type"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 },
 ["Moonkin Form"] = {
 ["iconSource"] = -1,
@@ -59193,10 +59207,8 @@ true,
 ["trigger"] = {
 ["type"] = "aura2",
 ["useName"] = true,
+["subeventSuffix"] = "_CAST_START",
 ["match_countOperator"] = ">",
-["auranames"] = {
-"24858",
-},
 ["unit"] = "player",
 ["ownOnly"] = true,
 ["event"] = "Health",
@@ -59209,7 +59221,9 @@ true,
 ["subeventPrefix"] = "SPELL",
 ["match_count"] = "0",
 ["matchesShowOn"] = "showOnActive",
-["subeventSuffix"] = "_CAST_START",
+["auranames"] = {
+"24858",
+},
 ["debuffType"] = "HELPFUL",
 },
 ["untrigger"] = {
@@ -59357,19 +59371,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Maintenance - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -59432,10 +59467,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Maintenance - LWA - Druid",
 ["config"] = {
 ["maintenance"] = {
 ["moonkin_form"] = {
@@ -59453,29 +59485,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "UdMVzUGaaT7",
 ["inverse"] = false,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -59508,13 +59526,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["General Options - LWA - Druid"] = {
@@ -59536,14 +59550,14 @@ true,
 ["event"] = "GTFO",
 ["unit"] = "player",
 ["debuffType"] = "HELPFUL",
+["spellIds"] = {
+},
 ["custom"] = "function(event, ...)\n    local arg1, arg2 = ...\n    local this = aura_env\n    \n    if \"LWA_INIT\" == event and not arg1 then\n        this.Init()\n        \n    elseif \"LWA_UPDATE_BAR\" == event and arg1 then\n        this.UpdateBar(...)\n        \n    elseif \"LWA_UPDATE_RESOURCES\" == event then\n        this.UpdateResources()\n        \n    elseif \"PLAYER_ENTERING_WORLD\" == event then\n        if arg1 or arg2 then\n            this.ThrottledInit()\n            \n            C_Timer.After(2, function()\n                    WeakAuras.ScanEvents(\"LWA_INIT\", true)\n            end)\n        end\n    else\n        this.ThrottledInit()\n    end\n    \n    return true\nend",
-["events"] = "OPTIONS LWA_OPTIONS LWA_INIT LWA_UPDATE_RESOURCES LWA_UPDATE_BAR PLAYER_ENTERING_WORLD LOADING_SCREEN_DISABLED PLAYER_SPECIALIZATION_CHANGED PLAYER_TALENT_UPDATE PLAYER_PVP_TALENT_UPDATE PLAYER_LEVEL_UP TRAIT_CONFIG_CREATED TRAIT_CONFIG_UPDATED CINEMATIC_STOP STOP_MOVIE CLIENT_SCENE_CLOSED PET_BATTLE_CLOSE",
 ["custom_type"] = "event",
 ["names"] = {
 },
 ["subeventPrefix"] = "SPELL",
-["spellIds"] = {
-},
+["events"] = "OPTIONS LWA_OPTIONS LWA_INIT LWA_UPDATE_RESOURCES LWA_UPDATE_BAR PLAYER_ENTERING_WORLD LOADING_SCREEN_DISABLED PLAYER_SPECIALIZATION_CHANGED PLAYER_TALENT_UPDATE PLAYER_PVP_TALENT_UPDATE PLAYER_LEVEL_UP TRAIT_CONFIG_CREATED TRAIT_CONFIG_UPDATED CINEMATIC_STOP STOP_MOVIE CLIENT_SCENE_CLOSED PET_BATTLE_CLOSE",
 ["custom_hide"] = "custom",
 },
 ["untrigger"] = {
@@ -59556,14 +59570,14 @@ true,
 ["event"] = "GTFO",
 ["unit"] = "player",
 ["debuffType"] = "HELPFUL",
+["spellIds"] = {
+},
 ["custom"] = "function(event, ...)\n    if not aura_env.parentFrame then\n        aura_env.parentFrame = WeakAuras.GetRegion(aura_env.parent)\n    end\n    \n    local frame = aura_env.parentFrame\n    \n    if frame then\n        local arg1 = select(1, ...)\n        local cfg = aura_env.config.alpha\n        local alpha = cfg.global\n        local hasSpecialUI = false\n        \n        if \"CLIENT_SCENE_OPENED\" == event then\n            aura_env.currentScene = arg1\n            \n        elseif \"CLIENT_SCENE_CLOSED\" == event then\n            aura_env.currentScene = nil\n        end\n        \n        if aura_env.currentScene == 1 then\n            hasSpecialUI = true\n        end\n        \n        hasSpecialUI = hasSpecialUI or UnitHasVehicleUI(\"player\") or HasOverrideActionBar() or HasVehicleActionBar() or false\n        \n        if \"STATUS\" == event or WeakAuras.IsOptionsOpen() then\n            frame:SetAlpha(1)\n            \n        elseif \"BARBER_SHOP_OPEN\" == event or hasSpecialUI then\n            frame:SetAlpha(0)\n            \n        elseif \"LWA_ALPHA\" == event then\n            local class = UnitClassBase(\"player\")\n            local isMounted = IsMounted() or (\"DRUID\" == class and tContains({3, 4, 27, 29}, GetShapeshiftFormID()))\n            local isSkyriding = WeakAuras.IsRetail() and isMounted and select(2, C_PlayerInfo.GetGlidingInfo())\n            \n            if not UnitAffectingCombat(\"player\") then\n                alpha = min(alpha, cfg.ooc)\n            end\n            \n            if (isSkyriding or (isMounted and (not cfg.skyriding_only or (HasBonusActionBar() and (11 == GetBonusBarIndex() or (\"EVOKER\" == class and 7 == GetBonusBarIndex()))))))\n            then\n                alpha = min(alpha, cfg.mounted)\n            else\n                if UnitExists(\"target\") then\n                    local isEnemy = UnitCanAttack(\"player\", \"target\") or UnitIsEnemy(\"player\", \"target\")\n                    \n                    if (not isEnemy and cfg.ignore_friendly) or (isEnemy and cfg.ignore_enemy) then\n                        alpha = cfg.global\n                    end\n                end\n            end\n            \n            frame:SetAlpha(alpha / 100)\n        else\n            C_Timer.After(0.05, function()\n                    WeakAuras.ScanEvents(\"LWA_ALPHA\")\n            end)\n        end\n        \n        return true\n    end\nend",
-["events"] = "OPTIONS LWA_INIT PLAYER_ENTERING_WORLD PLAYER_REGEN_ENABLED PLAYER_REGEN_DISABLED PLAYER_TARGET_CHANGED PLAYER_ALIVE PLAYER_DEAD PLAYER_UNGHOST BARBER_SHOP_OPEN BARBER_SHOP_CLOSE CLIENT_SCENE_OPENED CLIENT_SCENE_CLOSED PLAYER_MOUNT_DISPLAY_CHANGED LWA_UPDATE_SHAPESHIFT_FORM STATUS LWA_ALPHA UPDATE_VEHICLE_ACTIONBAR UPDATE_OVERRIDE_ACTIONBAR UPDATE_BONUS_ACTIONBAR",
 ["custom_type"] = "event",
 ["names"] = {
 },
 ["subeventPrefix"] = "SPELL",
-["spellIds"] = {
-},
+["events"] = "OPTIONS LWA_INIT PLAYER_ENTERING_WORLD PLAYER_REGEN_ENABLED PLAYER_REGEN_DISABLED PLAYER_TARGET_CHANGED PLAYER_ALIVE PLAYER_DEAD PLAYER_UNGHOST BARBER_SHOP_OPEN BARBER_SHOP_CLOSE CLIENT_SCENE_OPENED CLIENT_SCENE_CLOSED PLAYER_MOUNT_DISPLAY_CHANGED LWA_UPDATE_SHAPESHIFT_FORM STATUS LWA_ALPHA UPDATE_VEHICLE_ACTIONBAR UPDATE_OVERRIDE_ACTIONBAR UPDATE_BONUS_ACTIONBAR",
 ["custom_hide"] = "custom",
 },
 ["untrigger"] = {
@@ -59666,12 +59680,6 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["color"] = {
-0,
-0,
-0,
-0,
-},
 ["authorOptions"] = {
 {
 ["text"] = "Global Settings",
@@ -61127,6 +61135,7 @@ true,
 ["width"] = 2,
 },
 },
+["desc"] = "Made by Luxthos - twitch.tv/luxthos",
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -61182,11 +61191,11 @@ true,
 ["border_size"] = 1,
 },
 ["core"] = {
-["width"] = 48,
+["nb_min"] = 5,
 ["nb_max"] = 8,
 ["resources_position"] = 1,
-["nb_min"] = 5,
 ["spacing2"] = 2,
+["width"] = 48,
 ["font_size"] = 18,
 ["font"] = "- ToxiUI",
 ["height"] = 36,
@@ -61303,7 +61312,12 @@ true,
 },
 ["displayIcon"] = 134520,
 ["cooldown"] = false,
-["desc"] = "Made by Luxthos - twitch.tv/luxthos",
+["color"] = {
+0,
+0,
+0,
+0,
+},
 },
 ["Ray of Hope (PvP Talent)"] = {
 ["iconSource"] = -1,
@@ -61457,6 +61471,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -61464,21 +61482,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -61500,6 +61503,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "n8GTQDgkEEN",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -61626,7 +61640,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Lunar Beam"] = {
 ["iconSource"] = -1,
@@ -61775,37 +61789,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Core - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Lunar Beam",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -61826,9 +61823,30 @@ true,
 ["easeType"] = "none",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Core - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Lunar Beam",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "dy8whjFMCN)",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -61901,13 +61919,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Celestial Alignment (Orbital Strike)"] = {
@@ -62101,8 +62115,11 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["parent"] = "Core - LWA - Druid",
+["progressSource"] = {
+-1,
+"",
+},
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -62224,10 +62241,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["progressSource"] = {
--1,
-"",
-},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 },
 ["Heart of the Wild"] = {
 ["iconSource"] = -1,
@@ -62403,19 +62417,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Utilities - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -62468,10 +62503,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["config"] = {
 ["utility"] = {
 ["behavior"] = 2,
@@ -62488,29 +62520,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "Gf2c9nRgpmO",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -62628,13 +62646,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Purify"] = {
@@ -62832,8 +62846,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -62841,6 +62853,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -63063,12 +63082,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Power Word: LIfe (Shadow)"] = {
 ["iconSource"] = -1,
@@ -63225,6 +63239,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -63232,21 +63250,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -63268,6 +63271,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Utilities - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "oYa(Bv6IJDF",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -63429,7 +63443,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Sunfire (Balance)"] = {
 ["iconSource"] = -1,
@@ -63566,37 +63580,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Core - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Sunfire (Balance)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -63617,9 +63614,30 @@ true,
 ["easeType"] = "none",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Core - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Sunfire (Balance)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "VRKawSEjN1B",
 ["inverse"] = false,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -63719,13 +63737,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Mindgames (Discipline - PvP Talent)"] = {
@@ -63878,6 +63892,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -63885,21 +63903,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -63921,6 +63924,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "OWwwkZQyUie",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -64069,7 +64083,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Twist of Fate (Optional - Discipline)"] = {
 ["iconSource"] = -1,
@@ -64197,8 +64211,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -64206,6 +64218,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -64258,36 +64277,29 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
+["preferToUpdate"] = false,
 },
-},
-["Resonant Words"] = {
+["Void Torrent"] = {
 ["iconSource"] = -1,
 ["wagoID"] = "BJu2WDqBX",
-["parent"] = "Dynamic Effects - LWA - Priest",
+["xOffset"] = 0,
 ["adjustedMax"] = "",
 ["adjustedMin"] = "",
 ["yOffset"] = 0,
 ["anchorPoint"] = "CENTER",
 ["cooldownSwipe"] = true,
-["cooldownEdge"] = true,
+["cooldownEdge"] = false,
 ["icon"] = true,
 ["triggers"] = {
 {
 ["trigger"] = {
 ["type"] = "aura2",
 ["auranames"] = {
-"372313",
+"1242173",
 },
-["matchesShowOn"] = "showOnActive",
+["ownOnly"] = true,
 ["event"] = "Health",
 ["unit"] = "player",
-["unitExists"] = true,
-["ownOnly"] = true,
 ["spellIds"] = {
 },
 ["names"] = {
@@ -64300,15 +64312,109 @@ true,
 ["untrigger"] = {
 },
 },
+{
+["trigger"] = {
+["type"] = "aura2",
+["auranames"] = {
+"449887",
+},
+["ownOnly"] = true,
+["event"] = "Health",
+["unit"] = "player",
+["spellIds"] = {
+},
+["names"] = {
+},
+["useName"] = true,
+["subeventPrefix"] = "SPELL",
+["subeventSuffix"] = "_CAST_START",
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["spellNames"] = {
+263165,
+},
+["use_genericShowOn"] = true,
+["genericShowOn"] = "showOnCooldown",
+["names"] = {
+},
+["debuffType"] = "HELPFUL",
+["type"] = "unit",
+["use_absorbHealMode"] = true,
+["subeventSuffix"] = "_CAST_START",
+["ownOnly"] = true,
+["event"] = "Cast",
+["use_spellNames"] = true,
+["use_unit"] = true,
+["realSpellName"] = 0,
+["use_spellName"] = true,
+["spellIds"] = {
+},
+["use_absorbMode"] = true,
+["spellName"] = 0,
+["unit"] = "player",
+["use_track"] = true,
+["subeventPrefix"] = "SPELL",
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["track"] = "auto",
+["use_genericShowOn"] = true,
+["genericShowOn"] = "showAlways",
+["names"] = {
+},
+["use_showgcd"] = true,
+["debuffType"] = "HELPFUL",
+["type"] = "spell",
+["use_absorbHealMode"] = true,
+["subeventSuffix"] = "_CAST_START",
+["event"] = "Cooldown Progress (Spell)",
+["spellName"] = 263165,
+["realSpellName"] = "Void Torrent",
+["use_spellName"] = true,
+["spellIds"] = {
+},
+["use_unit"] = true,
+["unit"] = "player",
+["use_absorbMode"] = true,
+["use_track"] = true,
+["subeventPrefix"] = "SPELL",
+},
+["untrigger"] = {
+},
+},
 ["disjunctive"] = "any",
 ["activeTriggerMode"] = -10,
 },
 ["internalVersion"] = 85,
-["progressSource"] = {
--1,
-"",
+["keepAspectRatio"] = true,
+["animation"] = {
+["start"] = {
+["type"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["easeType"] = "none",
 },
-["selfPoint"] = "CENTER",
+["main"] = {
+["type"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["type"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["desaturate"] = false,
 ["version"] = 87,
 ["subRegions"] = {
@@ -64354,7 +64460,7 @@ true,
 ["load"] = {
 ["use_petbattle"] = false,
 ["class_and_spec"] = {
-["single"] = 257,
+["single"] = 258,
 ["multi"] = {
 [257] = true,
 [258] = true,
@@ -64383,16 +64489,24 @@ true,
 },
 },
 ["use_spellknown"] = true,
-["spellknown"] = 372309,
+["spellknown"] = 263165,
 ["size"] = {
 ["multi"] = {
 },
 },
 },
-["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
+["width"] = 48,
 ["source"] = "import",
+["parent"] = "Core - LWA - Priest",
+["progressSource"] = {
+-1,
+"",
+},
+["cooldown"] = true,
+["displayIcon"] = 1386551,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
 ["actions"] = {
 ["start"] = {
 },
@@ -64401,58 +64515,111 @@ true,
 ["finish"] = {
 },
 },
-["cooldown"] = true,
-["displayIcon"] = "",
-["animation"] = {
-["start"] = {
-["type"] = "preset",
-["easeType"] = "none",
-["easeStrength"] = 3,
-["preset"] = "shrink",
-["duration_type"] = "seconds",
-},
-["main"] = {
-["type"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["type"] = "preset",
-["easeType"] = "none",
-["easeStrength"] = 3,
-["preset"] = "shrink",
-["duration_type"] = "seconds",
-},
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["xOffset"] = 0,
+["preferToUpdate"] = false,
 ["config"] = {
 },
-["keepAspectRatio"] = true,
-["width"] = 48,
+["authorOptions"] = {
+},
 ["anchorFrameParent"] = false,
 ["useCooldownModRate"] = true,
-["auto"] = true,
-["zoom"] = 0.3,
+["selfPoint"] = "CENTER",
+["cooldownTextDisabled"] = false,
 ["semver"] = "11.2.2",
 ["tocversion"] = 110200,
-["id"] = "Resonant Words",
-["cooldownTextDisabled"] = false,
+["id"] = "Void Torrent",
+["zoom"] = 0.3,
 ["alpha"] = 1,
 ["anchorFrameType"] = "SCREEN",
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["uid"] = "m7lQoCamfOP",
-["inverse"] = false,
-["authorOptions"] = {
+["frameStrata"] = 1,
+["uid"] = "QCZdUQ66SbB",
+["inverse"] = true,
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["conditions"] = {
 {
 ["check"] = {
-["trigger"] = 1,
+["trigger"] = 4,
+["variable"] = "onCooldown",
+["value"] = 0,
+},
+["changes"] = {
+{
+["value"] = false,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Proc",
+["property"] = "sub.3.glowType",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -1,
+["variable"] = "incombat",
+["value"] = 0,
+},
+["changes"] = {
+{
+["property"] = "sub.3.glow",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 4,
+["variable"] = "onCooldown",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 4,
+["variable"] = "spellInRange",
+["value"] = 0,
+},
+["changes"] = {
+{
+["value"] = {
+0.87450980392157,
+0.34117647058824,
+0.32941176470588,
+1,
+},
+["property"] = "color",
+},
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -2,
+["variable"] = "OR",
+["checks"] = {
+{
+["trigger"] = 2,
 ["variable"] = "show",
 ["value"] = 1,
+},
+{
+["trigger"] = 3,
+["variable"] = "show",
+["value"] = 1,
+},
+},
 },
 ["changes"] = {
 {
@@ -64463,18 +64630,68 @@ true,
 ["value"] = "Pixel",
 ["property"] = "sub.3.glowType",
 },
+{
+["property"] = "desaturate",
+},
+{
+["property"] = "inverse",
+},
+{
+["value"] = true,
+["property"] = "cooldownEdge",
+},
+{
+["property"] = "color",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 1,
+["variable"] = "show",
+["value"] = 1,
+["checks"] = {
+{
+["trigger"] = 2,
+["variable"] = "show",
+["value"] = 1,
+},
+{
+["trigger"] = 3,
+["variable"] = "show",
+["value"] = 1,
+},
+},
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Proc",
+["property"] = "sub.3.glowType",
+},
+{
+["property"] = "desaturate",
+},
+{
+["property"] = "inverse",
+},
+{
+["value"] = true,
+["property"] = "cooldownEdge",
+},
+{
+["property"] = "color",
+},
 },
 },
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Maul"] = {
 ["iconSource"] = 3,
@@ -64693,8 +64910,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -64702,6 +64917,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -64912,12 +65134,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Shadowfiend (Holy)"] = {
 ["iconSource"] = 0,
@@ -64938,14 +65155,14 @@ true,
 ["spellId"] = "49206",
 ["auranames"] = {
 },
-["unit"] = "player",
+["use_unit"] = true,
 ["use_totemName"] = true,
 ["genericShowOn"] = "showOnCooldown",
-["names"] = {
-},
+["subeventPrefix"] = "SPELL",
 ["use_genericShowOn"] = true,
-["events"] = "PLAYER_TOTEM_UPDATE",
 ["custom"] = "function(event, arg1)\n    if event == \"PLAYER_TOTEM_UPDATE\" and arg1 then\n        local haveTotem, name, startTime, duration, icon = GetTotemInfo(arg1)\n        if haveTotem and icon == aura_env.texture then\n            aura_env.haveTotem, aura_env.name, aura_env.startTime, aura_env.duration, aura_env.icon = haveTotem, name, startTime, duration, icon\n            aura_env.index = arg1\n            return true\n        elseif aura_env.index == arg1 then\n            aura_env.index = 0\n            aura_env.startTime, aura_env.duration = nil, nil\n        end\n    end\nend",
+["spellIds"] = {
+},
 ["use_spellName"] = true,
 ["realSpellName"] = 0,
 ["duration"] = "35",
@@ -64954,20 +65171,20 @@ true,
 ["type"] = "custom",
 ["useName"] = true,
 ["debuffType"] = "HELPFUL",
-["subeventSuffix"] = "_CAST_SUCCESS",
 ["custom_type"] = "status",
 ["unevent"] = "auto",
+["subeventSuffix"] = "_CAST_SUCCESS",
 ["event"] = "Cooldown Progress (Spell)",
 ["totemName"] = "27829",
 ["customDuration"] = "function()\n    if aura_env.startTime then\n        return aura_env.duration, aura_env.startTime + aura_env.duration\n    end\nend",
 ["use_spellId"] = true,
-["spellIds"] = {
-},
+["events"] = "PLAYER_TOTEM_UPDATE",
 ["use_sourceUnit"] = true,
 ["check"] = "event",
-["subeventPrefix"] = "SPELL",
+["names"] = {
+},
 ["use_track"] = true,
-["use_unit"] = true,
+["unit"] = "player",
 },
 ["untrigger"] = {
 ["custom"] = "function()\n    return aura_env.index == 0\nend",
@@ -65144,8 +65361,11 @@ true,
 ["useAdjustededMax"] = false,
 ["width"] = 48,
 ["source"] = "import",
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 ["parent"] = "Utilities - LWA - Priest",
+["progressSource"] = {
+-1,
+"",
+},
 ["cooldown"] = true,
 ["displayIcon"] = 136199,
 ["useAdjustededMin"] = false,
@@ -65421,10 +65641,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["progressSource"] = {
--1,
-"",
-},
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Mind Blast (Discipline)"] = {
 ["iconSource"] = -1,
@@ -65616,8 +65833,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -65625,6 +65840,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -65845,34 +66067,31 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
+["preferToUpdate"] = false,
 },
-},
-["Void Torrent"] = {
+["Resonant Words"] = {
 ["iconSource"] = -1,
 ["wagoID"] = "BJu2WDqBX",
-["xOffset"] = 0,
+["parent"] = "Dynamic Effects - LWA - Priest",
 ["adjustedMax"] = "",
 ["adjustedMin"] = "",
 ["yOffset"] = 0,
 ["anchorPoint"] = "CENTER",
 ["cooldownSwipe"] = true,
-["cooldownEdge"] = false,
+["cooldownEdge"] = true,
 ["icon"] = true,
 ["triggers"] = {
 {
 ["trigger"] = {
 ["type"] = "aura2",
 ["auranames"] = {
-"1242173",
+"372313",
 },
-["ownOnly"] = true,
+["matchesShowOn"] = "showOnActive",
 ["event"] = "Health",
 ["unit"] = "player",
+["unitExists"] = true,
+["ownOnly"] = true,
 ["spellIds"] = {
 },
 ["names"] = {
@@ -65881,84 +66100,6 @@ true,
 ["subeventPrefix"] = "SPELL",
 ["subeventSuffix"] = "_CAST_START",
 ["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["type"] = "aura2",
-["auranames"] = {
-"449887",
-},
-["ownOnly"] = true,
-["event"] = "Health",
-["unit"] = "player",
-["spellIds"] = {
-},
-["names"] = {
-},
-["useName"] = true,
-["subeventPrefix"] = "SPELL",
-["subeventSuffix"] = "_CAST_START",
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["spellNames"] = {
-263165,
-},
-["use_genericShowOn"] = true,
-["genericShowOn"] = "showOnCooldown",
-["names"] = {
-},
-["debuffType"] = "HELPFUL",
-["type"] = "unit",
-["use_absorbHealMode"] = true,
-["subeventSuffix"] = "_CAST_START",
-["ownOnly"] = true,
-["event"] = "Cast",
-["use_spellNames"] = true,
-["use_unit"] = true,
-["realSpellName"] = 0,
-["use_spellName"] = true,
-["spellIds"] = {
-},
-["use_absorbMode"] = true,
-["spellName"] = 0,
-["unit"] = "player",
-["use_track"] = true,
-["subeventPrefix"] = "SPELL",
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["track"] = "auto",
-["use_genericShowOn"] = true,
-["genericShowOn"] = "showAlways",
-["names"] = {
-},
-["use_showgcd"] = true,
-["debuffType"] = "HELPFUL",
-["type"] = "spell",
-["use_absorbHealMode"] = true,
-["subeventSuffix"] = "_CAST_START",
-["event"] = "Cooldown Progress (Spell)",
-["spellName"] = 263165,
-["realSpellName"] = "Void Torrent",
-["use_spellName"] = true,
-["spellIds"] = {
-},
-["use_unit"] = true,
-["unit"] = "player",
-["use_absorbMode"] = true,
-["use_track"] = true,
-["subeventPrefix"] = "SPELL",
 },
 ["untrigger"] = {
 },
@@ -65967,27 +66108,11 @@ true,
 ["activeTriggerMode"] = -10,
 },
 ["internalVersion"] = 85,
-["keepAspectRatio"] = true,
-["animation"] = {
-["start"] = {
-["type"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["easeType"] = "none",
+["progressSource"] = {
+-1,
+"",
 },
-["main"] = {
-["type"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["type"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["selfPoint"] = "CENTER",
 ["desaturate"] = false,
 ["version"] = 87,
 ["subRegions"] = {
@@ -66033,7 +66158,7 @@ true,
 ["load"] = {
 ["use_petbattle"] = false,
 ["class_and_spec"] = {
-["single"] = 258,
+["single"] = 257,
 ["multi"] = {
 [257] = true,
 [258] = true,
@@ -66062,21 +66187,14 @@ true,
 },
 },
 ["use_spellknown"] = true,
-["spellknown"] = 263165,
+["spellknown"] = 372309,
 ["size"] = {
 ["multi"] = {
 },
 },
 },
+["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["width"] = 48,
-["source"] = "import",
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["parent"] = "Core - LWA - Priest",
-["cooldown"] = true,
-["displayIcon"] = 1386551,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
 ["actions"] = {
 ["start"] = {
 },
@@ -66085,111 +66203,65 @@ true,
 ["finish"] = {
 },
 },
-["preferToUpdate"] = false,
-["config"] = {
-},
-["authorOptions"] = {
-},
-["anchorFrameParent"] = false,
-["useCooldownModRate"] = true,
-["selfPoint"] = "CENTER",
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Void Torrent",
-["zoom"] = 0.3,
-["alpha"] = 1,
-["anchorFrameType"] = "SCREEN",
-["frameStrata"] = 1,
-["uid"] = "QCZdUQ66SbB",
-["inverse"] = true,
+["source"] = "import",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["cooldown"] = true,
+["displayIcon"] = "",
+["animation"] = {
+["start"] = {
+["type"] = "preset",
+["easeType"] = "none",
+["easeStrength"] = 3,
+["preset"] = "shrink",
+["duration_type"] = "seconds",
+},
+["main"] = {
+["type"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["type"] = "preset",
+["easeType"] = "none",
+["easeStrength"] = 3,
+["preset"] = "shrink",
+["duration_type"] = "seconds",
+},
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["xOffset"] = 0,
+["config"] = {
+},
+["keepAspectRatio"] = true,
+["width"] = 48,
+["anchorFrameParent"] = false,
+["useCooldownModRate"] = true,
+["auto"] = true,
+["zoom"] = 0.3,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Resonant Words",
+["cooldownTextDisabled"] = false,
+["alpha"] = 1,
+["anchorFrameType"] = "SCREEN",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
+["uid"] = "m7lQoCamfOP",
+["inverse"] = false,
+["authorOptions"] = {
+},
 ["conditions"] = {
 {
 ["check"] = {
-["trigger"] = 4,
-["variable"] = "onCooldown",
-["value"] = 0,
-},
-["changes"] = {
-{
-["value"] = false,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Proc",
-["property"] = "sub.3.glowType",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -1,
-["variable"] = "incombat",
-["value"] = 0,
-},
-["changes"] = {
-{
-["property"] = "sub.3.glow",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 4,
-["variable"] = "onCooldown",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 4,
-["variable"] = "spellInRange",
-["value"] = 0,
-},
-["changes"] = {
-{
-["value"] = {
-0.87450980392157,
-0.34117647058824,
-0.32941176470588,
-1,
-},
-["property"] = "color",
-},
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -2,
-["variable"] = "OR",
-["checks"] = {
-{
-["trigger"] = 2,
+["trigger"] = 1,
 ["variable"] = "show",
 ["value"] = 1,
-},
-{
-["trigger"] = 3,
-["variable"] = "show",
-["value"] = 1,
-},
-},
 },
 ["changes"] = {
 {
@@ -66200,71 +66272,13 @@ true,
 ["value"] = "Pixel",
 ["property"] = "sub.3.glowType",
 },
-{
-["property"] = "desaturate",
-},
-{
-["property"] = "inverse",
-},
-{
-["value"] = true,
-["property"] = "cooldownEdge",
-},
-{
-["property"] = "color",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 1,
-["variable"] = "show",
-["value"] = 1,
-["checks"] = {
-{
-["trigger"] = 2,
-["variable"] = "show",
-["value"] = 1,
-},
-{
-["trigger"] = 3,
-["variable"] = "show",
-["value"] = 1,
-},
-},
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Proc",
-["property"] = "sub.3.glowType",
-},
-{
-["property"] = "desaturate",
-},
-{
-["property"] = "inverse",
-},
-{
-["value"] = true,
-["property"] = "cooldownEdge",
-},
-{
-["property"] = "color",
-},
 },
 },
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
-["progressSource"] = {
--1,
-"",
-},
+["preferToUpdate"] = false,
 },
 ["Desperate Prayer"] = {
 ["iconSource"] = -1,
@@ -66442,6 +66456,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -66449,21 +66467,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -66485,6 +66488,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Utilities - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "xETWwJEFojL",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -66675,7 +66689,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Wild Growth (Balance, Feral & Guardian)"] = {
 ["iconSource"] = -1,
@@ -66829,19 +66843,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Utilities - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -66894,10 +66929,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["config"] = {
 ["utility"] = {
 ["behavior"] = 2,
@@ -66914,29 +66946,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "nqX9v)6djt5",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -67035,13 +67053,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Ursine Vigor (Feral)"] = {
@@ -67176,8 +67190,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -67185,6 +67197,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -67255,420 +67274,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
-},
-["Demoralizing Roar (PvP Talent)"] = {
-["iconSource"] = -1,
-["wagoID"] = "ryBp05DHX",
-["xOffset"] = 0,
-["adjustedMax"] = "",
-["adjustedMin"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["cooldownSwipe"] = true,
-["cooldownEdge"] = false,
-["icon"] = true,
-["triggers"] = {
-{
-["trigger"] = {
-["type"] = "aura2",
-["auranames"] = {
-"201664",
-},
-["ownOnly"] = true,
-["event"] = "Health",
-["unit"] = "target",
-["spellIds"] = {
-},
-["names"] = {
-},
-["subeventSuffix"] = "_CAST_START",
-["subeventPrefix"] = "SPELL",
-["useName"] = true,
-["debuffType"] = "HARMFUL",
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["track"] = "auto",
-["use_genericShowOn"] = true,
-["genericShowOn"] = "showAlways",
-["names"] = {
-},
-["use_showgcd"] = true,
-["debuffType"] = "HELPFUL",
-["type"] = "spell",
-["use_absorbHealMode"] = true,
-["subeventSuffix"] = "_CAST_START",
-["event"] = "Cooldown Progress (Spell)",
-["subeventPrefix"] = "SPELL",
-["realSpellName"] = "Demoralizing Roar",
-["use_spellName"] = true,
-["spellIds"] = {
-},
-["use_unit"] = true,
-["use_absorbMode"] = true,
-["unit"] = "player",
-["use_track"] = true,
-["spellName"] = 201664,
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["track"] = "auto",
-["use_genericShowOn"] = true,
-["genericShowOn"] = "showOnCooldown",
-["names"] = {
-},
-["use_showgcd"] = true,
-["debuffType"] = "HELPFUL",
-["type"] = "spell",
-["use_absorbHealMode"] = true,
-["subeventSuffix"] = "_CAST_START",
-["event"] = "Cooldown Progress (Spell)",
-["subeventPrefix"] = "SPELL",
-["realSpellName"] = "Demoralizing Roar",
-["use_spellName"] = true,
-["spellIds"] = {
-},
-["use_unit"] = true,
-["use_absorbMode"] = true,
-["unit"] = "player",
-["use_track"] = true,
-["spellName"] = 201664,
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "custom",
-["customTriggerLogic"] = "function(t)\n    if aura_env.config.utility.behavior == 1 then -- Show Only on Cooldown\n        return t[1] or t[3]\n    else\n        return t[2] -- Default: Always Show\n    end\nend\n\n",
-["activeTriggerMode"] = -10,
-},
-["internalVersion"] = 85,
-["keepAspectRatio"] = true,
-["selfPoint"] = "CENTER",
-["desaturate"] = false,
-["version"] = 124,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["border_size"] = 2,
-["type"] = "subborder",
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["border_offset"] = 0,
-},
-{
-["glowFrequency"] = 0.25,
-["type"] = "subglow",
-["glowDuration"] = 1,
-["glowType"] = "Proc",
-["glowThickness"] = 1,
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["useGlowColor"] = false,
-["glowXOffset"] = 0,
-["glowScale"] = 1,
-["glow"] = false,
-["glowLength"] = 10,
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-},
-["height"] = 48,
-["load"] = {
-["use_petbattle"] = false,
-["class_and_spec"] = {
-["single"] = 104,
-["multi"] = {
-[103] = true,
-[104] = true,
-[102] = true,
-[105] = true,
-},
-},
-["talent"] = {
-["multi"] = {
-},
-},
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["MAGE"] = true,
-},
-},
-["use_class"] = true,
-["use_spellknown"] = true,
-["use_class_and_spec"] = true,
-["use_never"] = false,
-["spec"] = {
-["multi"] = {
-},
-},
-["spellknown"] = 201664,
-["size"] = {
-["multi"] = {
-},
-},
-},
-["useAdjustededMax"] = false,
-["source"] = "import",
-["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["parent"] = "Utilities - LWA - Druid",
-["information"] = {
-["forceEvents"] = true,
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-{
-["subOptions"] = {
-{
-["useName"] = true,
-["type"] = "header",
-["text"] = "Behavior",
-["noMerge"] = false,
-["width"] = 1,
-},
-{
-["type"] = "select",
-["default"] = 2,
-["values"] = {
-"Show on Cooldown",
-"Always Show",
-},
-["name"] = "Display Behavior",
-["useDesc"] = false,
-["key"] = "behavior",
-["width"] = 1,
-},
-{
-["softMin"] = 0,
-["type"] = "range",
-["bigStep"] = 1,
-["max"] = 100,
-["step"] = 1,
-["width"] = 1,
-["min"] = 0,
-["key"] = "alpha",
-["softMax"] = 100,
-["default"] = 30,
-["name"] = "Always Show Alpha",
-["useDesc"] = false,
-},
-},
-["hideReorder"] = true,
-["useDesc"] = false,
-["nameSource"] = 0,
-["name"] = "Utility Icons",
-["width"] = 1,
-["useCollapse"] = true,
-["noMerge"] = false,
-["collapse"] = true,
-["type"] = "group",
-["limitType"] = "none",
-["groupType"] = "simple",
-["key"] = "utility",
-["size"] = 10,
-},
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-["utility"] = {
-["behavior"] = 2,
-["alpha"] = 30,
-},
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Demoralizing Roar (PvP Talent)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["uid"] = "lPfEyKFr(nh",
-["inverse"] = true,
 ["preferToUpdate"] = false,
-["conditions"] = {
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 0,
-},
-["changes"] = {
-{
-["value"] = false,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Proc",
-["property"] = "sub.3.glowType",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -1,
-["variable"] = "incombat",
-["value"] = 0,
-},
-["changes"] = {
-{
-["property"] = "sub.3.glow",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 1,
-["variable"] = "show",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Pixel",
-["property"] = "sub.3.glowType",
-},
-{
-["property"] = "desaturate",
-},
-{
-["property"] = "inverse",
-},
-{
-["value"] = true,
-["property"] = "cooldownEdge",
-},
-{
-["property"] = "color",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -2,
-["variable"] = "AND",
-["checks"] = {
-{
-["trigger"] = 1,
-["variable"] = "show",
-["value"] = 0,
-},
-{
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 0,
-},
-},
-},
-["linked"] = false,
-["changes"] = {
-{
-["value"] = {
-["custom"] = "aura_env.region:SetAlpha(aura_env.config.utility.alpha /100)",
-},
-["property"] = "customcode",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -1,
-["variable"] = "alwaystrue",
-},
-["linked"] = true,
-["changes"] = {
-{
-["value"] = {
-["custom"] = "aura_env.region:SetAlpha(1)",
-},
-["property"] = "customcode",
-},
-},
-},
-},
-["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
 },
 ["Mind Devourer (Optional)"] = {
 ["iconSource"] = -1,
@@ -67796,8 +67402,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -67805,6 +67409,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -67874,12 +67485,419 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
+["preferToUpdate"] = false,
+},
+["Ursol's Vortex"] = {
+["iconSource"] = -1,
+["wagoID"] = "ryBp05DHX",
+["xOffset"] = 0,
+["adjustedMax"] = "",
+["adjustedMin"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["cooldownSwipe"] = true,
+["cooldownEdge"] = false,
+["icon"] = true,
+["triggers"] = {
+{
+["trigger"] = {
+["type"] = "combatlog",
+["spellId"] = {
+"102793",
+},
+["subeventSuffix"] = "_CAST_SUCCESS",
+["duration"] = "10",
+["event"] = "Combat Log",
+["unit"] = "player",
+["ownOnly"] = true,
+["use_spellId"] = true,
+["spellIds"] = {
+},
+["use_sourceUnit"] = true,
+["subeventPrefix"] = "SPELL",
+["names"] = {
+},
+["sourceUnit"] = "player",
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["track"] = "auto",
+["use_genericShowOn"] = true,
+["genericShowOn"] = "showAlways",
+["names"] = {
+},
+["use_showgcd"] = true,
+["debuffType"] = "HELPFUL",
+["type"] = "spell",
+["use_absorbHealMode"] = true,
+["subeventSuffix"] = "_CAST_START",
+["event"] = "Cooldown Progress (Spell)",
+["subeventPrefix"] = "SPELL",
+["realSpellName"] = "Ursol's Vortex",
+["use_spellName"] = true,
+["spellIds"] = {
+},
+["use_unit"] = true,
+["use_absorbMode"] = true,
+["unit"] = "player",
+["use_track"] = true,
+["spellName"] = 102793,
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["track"] = "auto",
+["use_genericShowOn"] = true,
+["genericShowOn"] = "showOnCooldown",
+["names"] = {
+},
+["use_showgcd"] = true,
+["debuffType"] = "HELPFUL",
+["type"] = "spell",
+["use_absorbHealMode"] = true,
+["subeventSuffix"] = "_CAST_START",
+["event"] = "Cooldown Progress (Spell)",
+["subeventPrefix"] = "SPELL",
+["realSpellName"] = "Ursol's Vortex",
+["use_spellName"] = true,
+["spellIds"] = {
+},
+["use_unit"] = true,
+["use_absorbMode"] = true,
+["unit"] = "player",
+["use_track"] = true,
+["spellName"] = 102793,
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "custom",
+["customTriggerLogic"] = "function(t)\n    if aura_env.config.utility.behavior == 1 then -- Show Only on Cooldown\n        return t[1] or t[3]\n    else\n        return t[2] -- Default: Always Show\n    end\nend\n\n",
+["activeTriggerMode"] = -10,
+},
+["internalVersion"] = 85,
+["keepAspectRatio"] = true,
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
+["desaturate"] = false,
+["version"] = 124,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["border_size"] = 2,
+["type"] = "subborder",
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["border_offset"] = 0,
+},
+{
+["glowFrequency"] = 0.25,
+["type"] = "subglow",
+["glowDuration"] = 1,
+["glowType"] = "Proc",
+["glowThickness"] = 1,
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["useGlowColor"] = false,
+["glowXOffset"] = 0,
+["glowScale"] = 1,
+["glow"] = false,
+["glowLength"] = 10,
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+},
+["height"] = 48,
+["load"] = {
+["use_petbattle"] = false,
+["class_and_spec"] = {
+["single"] = 64,
+["multi"] = {
+[103] = true,
+[104] = true,
+[102] = true,
+[105] = true,
+},
+},
+["talent"] = {
+["multi"] = {
+},
+},
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["MAGE"] = true,
+},
+},
+["use_class"] = true,
+["use_spellknown"] = true,
+["use_class_and_spec"] = false,
+["use_never"] = false,
+["spec"] = {
+["multi"] = {
+},
+},
+["spellknown"] = 102793,
+["size"] = {
+["multi"] = {
+},
+},
+},
+["useAdjustededMax"] = false,
+["anchorFrameType"] = "SCREEN",
+["source"] = "import",
+["parent"] = "Utilities - LWA - Druid",
+["progressSource"] = {
+-1,
+"",
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["conditions"] = {
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 0,
+},
+["changes"] = {
+{
+["value"] = false,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Proc",
+["property"] = "sub.3.glowType",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -1,
+["variable"] = "incombat",
+["value"] = 0,
+},
+["changes"] = {
+{
+["property"] = "sub.3.glow",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 1,
+["variable"] = "show",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Pixel",
+["property"] = "sub.3.glowType",
+},
+{
+["property"] = "desaturate",
+},
+{
+["property"] = "inverse",
+},
+{
+["value"] = true,
+["property"] = "cooldownEdge",
+},
+{
+["property"] = "color",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -2,
+["variable"] = "AND",
+["checks"] = {
+{
+["trigger"] = 1,
+["variable"] = "show",
+["value"] = 0,
+},
+{
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 0,
+},
+},
+},
+["linked"] = false,
+["changes"] = {
+{
+["value"] = {
+["custom"] = "aura_env.region:SetAlpha(aura_env.config.utility.alpha /100)",
+},
+["property"] = "customcode",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -1,
+["variable"] = "alwaystrue",
+},
+["linked"] = true,
+["changes"] = {
+{
+["value"] = {
+["custom"] = "aura_env.region:SetAlpha(1)",
+},
+["property"] = "customcode",
+},
+},
+},
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["preferToUpdate"] = false,
+["uid"] = "fcFKj7GeK(X",
+["alpha"] = 1,
+["anchorFrameParent"] = false,
+["frameStrata"] = 1,
+["cooldownTextDisabled"] = false,
+["zoom"] = 0.3,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Ursol's Vortex",
+["selfPoint"] = "CENTER",
+["useCooldownModRate"] = true,
+["width"] = 48,
+["authorOptions"] = {
+{
+["subOptions"] = {
+{
+["useName"] = true,
+["type"] = "header",
+["text"] = "Behavior",
+["noMerge"] = false,
+["width"] = 1,
+},
+{
+["type"] = "select",
+["default"] = 2,
+["values"] = {
+"Show on Cooldown",
+"Always Show",
+},
+["name"] = "Display Behavior",
+["useDesc"] = false,
+["key"] = "behavior",
+["width"] = 1,
+},
+{
+["softMin"] = 0,
+["type"] = "range",
+["bigStep"] = 1,
+["max"] = 100,
+["step"] = 1,
+["width"] = 1,
+["min"] = 0,
+["key"] = "alpha",
+["softMax"] = 100,
+["default"] = 30,
+["name"] = "Always Show Alpha",
+["useDesc"] = false,
+},
+},
+["hideReorder"] = true,
+["useDesc"] = false,
+["nameSource"] = 0,
+["name"] = "Utility Icons",
+["width"] = 1,
+["useCollapse"] = true,
+["noMerge"] = false,
+["collapse"] = true,
+["type"] = "group",
+["limitType"] = "none",
+["groupType"] = "simple",
+["key"] = "utility",
+["size"] = 10,
+},
+},
+["config"] = {
+["utility"] = {
+["behavior"] = 2,
+["alpha"] = 30,
+},
+},
+["inverse"] = true,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
+["displayIcon"] = 571588,
+["cooldown"] = true,
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 },
 ["Balance of All Things (Optional)"] = {
 ["iconSource"] = -1,
@@ -68041,8 +68059,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -68050,6 +68066,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -68120,12 +68143,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Psychic Scream"] = {
 ["iconSource"] = -1,
@@ -68303,6 +68321,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -68310,21 +68332,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -68346,6 +68353,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Utilities - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "iYbISKYE5Oh",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -68536,7 +68554,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Mindbender (Shadow)"] = {
 ["iconSource"] = 0,
@@ -68557,14 +68575,14 @@ true,
 ["spellId"] = "49206",
 ["auranames"] = {
 },
-["unit"] = "player",
+["use_unit"] = true,
 ["use_totemName"] = true,
 ["genericShowOn"] = "showOnCooldown",
-["names"] = {
-},
+["subeventPrefix"] = "SPELL",
 ["use_genericShowOn"] = true,
-["events"] = "PLAYER_TOTEM_UPDATE",
 ["custom"] = "function(event, arg1)\n    if event == \"PLAYER_TOTEM_UPDATE\" and arg1 then\n        local haveTotem, name, startTime, duration, icon = GetTotemInfo(arg1)\n        if haveTotem and icon == aura_env.texture then\n            aura_env.haveTotem, aura_env.name, aura_env.startTime, aura_env.duration, aura_env.icon = haveTotem, name, startTime, duration, icon\n            aura_env.index = arg1\n            return true\n        elseif aura_env.index == arg1 then\n            aura_env.index = 0\n            aura_env.startTime, aura_env.duration = nil, nil\n        end\n    end\nend",
+["spellIds"] = {
+},
 ["use_spellName"] = true,
 ["realSpellName"] = 0,
 ["duration"] = "35",
@@ -68573,20 +68591,20 @@ true,
 ["type"] = "custom",
 ["useName"] = true,
 ["debuffType"] = "HELPFUL",
-["subeventSuffix"] = "_CAST_SUCCESS",
 ["custom_type"] = "status",
 ["unevent"] = "auto",
+["subeventSuffix"] = "_CAST_SUCCESS",
 ["event"] = "Cooldown Progress (Spell)",
 ["totemName"] = "27829",
 ["customDuration"] = "function()\n    if aura_env.startTime then\n        return aura_env.duration, aura_env.startTime + aura_env.duration\n    end\nend",
 ["use_spellId"] = true,
-["spellIds"] = {
-},
+["events"] = "PLAYER_TOTEM_UPDATE",
 ["use_sourceUnit"] = true,
 ["check"] = "event",
-["subeventPrefix"] = "SPELL",
+["names"] = {
+},
 ["use_track"] = true,
-["use_unit"] = true,
+["unit"] = "player",
 },
 ["untrigger"] = {
 ["custom"] = "function()\n    return aura_env.index == 0\nend",
@@ -68737,8 +68755,11 @@ true,
 ["useAdjustededMax"] = false,
 ["width"] = 48,
 ["source"] = "import",
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 ["parent"] = "Core - LWA - Priest",
+["progressSource"] = {
+-1,
+"",
+},
 ["cooldown"] = true,
 ["displayIcon"] = 136214,
 ["useAdjustededMin"] = false,
@@ -68908,10 +68929,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["progressSource"] = {
--1,
-"",
-},
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Moonfire (Balance)"] = {
 ["iconSource"] = -1,
@@ -69048,37 +69066,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Core - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Moonfire (Balance)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -69099,9 +69100,30 @@ true,
 ["easeType"] = "none",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Core - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Moonfire (Balance)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "Xff0DT4zxkL",
 ["inverse"] = false,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -69201,13 +69223,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Warrior of Elune"] = {
@@ -69397,8 +69415,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -69406,6 +69422,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -69526,12 +69549,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Holy Words - LWA - Priest"] = {
 ["arcLength"] = 360,
@@ -69545,7 +69563,7 @@ true,
 ["wagoID"] = "BJu2WDqBX",
 ["xOffset"] = 0,
 ["preferToUpdate"] = false,
-["gridWidth"] = 5,
+["frameStrata"] = 1,
 ["yOffset"] = 0,
 ["sortHybridTable"] = {
 ["Holy Word: Serenity 1"] = false,
@@ -69553,7 +69571,7 @@ true,
 ["Holy Word: Sanctify 2"] = false,
 ["Holy Word: Serenity 2"] = false,
 },
-["stepAngle"] = 15,
+["sort"] = "none",
 ["sharedFrameLevel"] = true,
 ["fullCircle"] = true,
 ["rowSpace"] = 1,
@@ -69586,7 +69604,11 @@ true,
 },
 ["columnSpace"] = 1,
 ["radius"] = 200,
-["space"] = 2,
+["gridType"] = "RD",
+["useLimit"] = false,
+["align"] = "LEFT",
+["growOn"] = "show",
+["internalVersion"] = 85,
 ["animation"] = {
 ["start"] = {
 ["type"] = "none",
@@ -69607,12 +69629,8 @@ true,
 ["easeType"] = "none",
 },
 },
-["align"] = "LEFT",
-["growOn"] = "show",
-["grow"] = "CUSTOM",
-["internalVersion"] = 85,
 ["rotation"] = 0,
-["useLimit"] = false,
+["space"] = 2,
 ["version"] = 87,
 ["subRegions"] = {
 },
@@ -69649,7 +69667,7 @@ true,
 0,
 1,
 },
-["source"] = "import",
+["animate"] = false,
 ["customGrow"] = "function(newPositions, activeRegions)\n    local LWA = LWA and LWA[\"Priest\"] or {}\n    \n    if LWA and LWA.GrowDynamicResource then\n        LWA.GrowDynamicResource(newPositions, activeRegions)\n    end\nend",
 ["scale"] = 1,
 ["centerType"] = "LR",
@@ -69657,17 +69675,17 @@ true,
 ["borderEdge"] = "Square Full White",
 ["regionType"] = "dynamicgroup",
 ["borderSize"] = 2,
-["sort"] = "none",
-["animate"] = false,
-["frameStrata"] = 1,
+["limit"] = 6,
+["stepAngle"] = 15,
+["alpha"] = 1,
 ["constantFactor"] = "RADIUS",
 ["stagger"] = 0,
 ["borderOffset"] = 4,
 ["semver"] = "11.2.2",
 ["tocversion"] = 110200,
 ["id"] = "Holy Words - LWA - Priest",
-["limit"] = 6,
-["alpha"] = 1,
+["source"] = "import",
+["gridWidth"] = 5,
 ["anchorFrameType"] = "SCREEN",
 ["config"] = {
 },
@@ -69680,7 +69698,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["gridType"] = "RD",
+["grow"] = "CUSTOM",
 },
 ["Surge of Light (Holy)"] = {
 ["iconSource"] = -1,
@@ -69845,8 +69863,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -69854,6 +69870,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -69937,12 +69960,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Dream Surge (Restoration)"] = {
 ["iconSource"] = -1,
@@ -70112,8 +70130,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -70121,6 +70137,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -70205,12 +70228,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Innervate"] = {
 ["iconSource"] = -1,
@@ -70386,19 +70404,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Utilities - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -70451,10 +70490,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["config"] = {
 ["utility"] = {
 ["behavior"] = 2,
@@ -70471,29 +70507,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "6CF4mYRvxCC",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -70611,13 +70633,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Divine Star (Discipline)"] = {
@@ -70749,6 +70767,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -70756,21 +70778,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -70792,6 +70799,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "gwA0bFEo7Ss",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -70888,7 +70906,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Prayer of Mending (Holy)"] = {
 ["iconSource"] = -1,
@@ -71031,6 +71049,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -71038,21 +71060,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -71074,6 +71081,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "pCG2)r80zWQ",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -71199,7 +71217,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Prayer of Mending (Shadow)"] = {
 ["iconSource"] = -1,
@@ -71442,8 +71460,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -71451,6 +71467,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -71711,12 +71734,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Twilight Equilibrium"] = {
 ["iconSource"] = -1,
@@ -71845,8 +71863,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -71854,6 +71870,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -71906,12 +71929,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["General Options - LWA - Priest"] = {
 ["iconSource"] = 0,
@@ -71932,14 +71950,14 @@ true,
 ["event"] = "GTFO",
 ["unit"] = "player",
 ["custom_hide"] = "custom",
+["spellIds"] = {
+},
 ["custom"] = "function(event, ...)\n    local arg1, arg2 = ...\n    local this = aura_env\n    \n    if \"LWA_INIT\" == event and not arg1 then\n        this.Init()\n        \n    elseif \"LWA_UPDATE_BAR\" == event and arg1 then\n        this.UpdateBar(...)\n        \n    elseif \"LWA_UPDATE_RESOURCES\" == event then\n        this.UpdateResources()\n        \n    elseif \"PLAYER_ENTERING_WORLD\" == event then\n        if arg1 or arg2 then\n            this.ThrottledInit()\n            \n            C_Timer.After(2, function()\n                    WeakAuras.ScanEvents(\"LWA_INIT\", true)\n            end)\n        end\n    else\n        this.ThrottledInit()\n    end\n    \n    return true\nend",
-["events"] = "OPTIONS LWA_OPTIONS LWA_INIT LWA_UPDATE_RESOURCES LWA_UPDATE_BAR PLAYER_ENTERING_WORLD LOADING_SCREEN_DISABLED PLAYER_SPECIALIZATION_CHANGED PLAYER_TALENT_UPDATE PLAYER_PVP_TALENT_UPDATE PLAYER_LEVEL_UP TRAIT_CONFIG_CREATED TRAIT_CONFIG_UPDATED CINEMATIC_STOP STOP_MOVIE CLIENT_SCENE_CLOSED PET_BATTLE_CLOSE",
 ["subeventPrefix"] = "SPELL",
 ["names"] = {
 },
 ["custom_type"] = "event",
-["spellIds"] = {
-},
+["events"] = "OPTIONS LWA_OPTIONS LWA_INIT LWA_UPDATE_RESOURCES LWA_UPDATE_BAR PLAYER_ENTERING_WORLD LOADING_SCREEN_DISABLED PLAYER_SPECIALIZATION_CHANGED PLAYER_TALENT_UPDATE PLAYER_PVP_TALENT_UPDATE PLAYER_LEVEL_UP TRAIT_CONFIG_CREATED TRAIT_CONFIG_UPDATED CINEMATIC_STOP STOP_MOVIE CLIENT_SCENE_CLOSED PET_BATTLE_CLOSE",
 ["debuffType"] = "HELPFUL",
 },
 ["untrigger"] = {
@@ -71952,14 +71970,14 @@ true,
 ["event"] = "GTFO",
 ["unit"] = "player",
 ["custom_hide"] = "custom",
+["spellIds"] = {
+},
 ["custom"] = "function(event, ...)\n    if not aura_env.parentFrame then\n        aura_env.parentFrame = WeakAuras.GetRegion(aura_env.parent)\n    end\n    \n    local frame = aura_env.parentFrame\n    \n    if frame then\n        local arg1 = select(1, ...)\n        local cfg = aura_env.config.alpha\n        local alpha = cfg.global\n        local hasSpecialUI = false\n        \n        if \"CLIENT_SCENE_OPENED\" == event then\n            aura_env.currentScene = arg1\n            \n        elseif \"CLIENT_SCENE_CLOSED\" == event then\n            aura_env.currentScene = nil\n        end\n        \n        if aura_env.currentScene == 1 then\n            hasSpecialUI = true\n        end\n        \n        hasSpecialUI = hasSpecialUI or UnitHasVehicleUI(\"player\") or HasOverrideActionBar() or HasVehicleActionBar() or false\n        \n        if \"STATUS\" == event or WeakAuras.IsOptionsOpen() then\n            frame:SetAlpha(1)\n            \n        elseif \"BARBER_SHOP_OPEN\" == event or hasSpecialUI then\n            frame:SetAlpha(0)\n            \n        elseif \"LWA_ALPHA\" == event then\n            local class = UnitClassBase(\"player\")\n            local isMounted = IsMounted() or (\"DRUID\" == class and tContains({3, 4, 27, 29}, GetShapeshiftFormID()))\n            local isSkyriding = WeakAuras.IsRetail() and isMounted and select(2, C_PlayerInfo.GetGlidingInfo())\n            \n            if not UnitAffectingCombat(\"player\") then\n                alpha = min(alpha, cfg.ooc)\n            end\n            \n            if (isSkyriding or (isMounted and (not cfg.skyriding_only or (HasBonusActionBar() and (11 == GetBonusBarIndex() or (\"EVOKER\" == class and 7 == GetBonusBarIndex()))))))\n            then\n                alpha = min(alpha, cfg.mounted)\n            else\n                if UnitExists(\"target\") then\n                    local isEnemy = UnitCanAttack(\"player\", \"target\") or UnitIsEnemy(\"player\", \"target\")\n                    \n                    if (not isEnemy and cfg.ignore_friendly) or (isEnemy and cfg.ignore_enemy) then\n                        alpha = cfg.global\n                    end\n                end\n            end\n            \n            frame:SetAlpha(alpha / 100)\n        else\n            C_Timer.After(0.05, function()\n                    WeakAuras.ScanEvents(\"LWA_ALPHA\")\n            end)\n        end\n        \n        return true\n    end\nend",
-["events"] = "OPTIONS LWA_INIT PLAYER_ENTERING_WORLD PLAYER_REGEN_ENABLED PLAYER_REGEN_DISABLED PLAYER_TARGET_CHANGED PLAYER_ALIVE PLAYER_DEAD PLAYER_UNGHOST BARBER_SHOP_OPEN BARBER_SHOP_CLOSE CLIENT_SCENE_OPENED CLIENT_SCENE_CLOSED PLAYER_MOUNT_DISPLAY_CHANGED LWA_UPDATE_SHAPESHIFT_FORM STATUS LWA_ALPHA UPDATE_VEHICLE_ACTIONBAR UPDATE_OVERRIDE_ACTIONBAR UPDATE_BONUS_ACTIONBAR",
 ["subeventPrefix"] = "SPELL",
 ["names"] = {
 },
 ["custom_type"] = "event",
-["spellIds"] = {
-},
+["events"] = "OPTIONS LWA_INIT PLAYER_ENTERING_WORLD PLAYER_REGEN_ENABLED PLAYER_REGEN_DISABLED PLAYER_TARGET_CHANGED PLAYER_ALIVE PLAYER_DEAD PLAYER_UNGHOST BARBER_SHOP_OPEN BARBER_SHOP_CLOSE CLIENT_SCENE_OPENED CLIENT_SCENE_CLOSED PLAYER_MOUNT_DISPLAY_CHANGED LWA_UPDATE_SHAPESHIFT_FORM STATUS LWA_ALPHA UPDATE_VEHICLE_ACTIONBAR UPDATE_OVERRIDE_ACTIONBAR UPDATE_BONUS_ACTIONBAR",
 ["debuffType"] = "HELPFUL",
 },
 ["untrigger"] = {
@@ -72061,12 +72079,6 @@ true,
 ["useAdjustededMax"] = false,
 ["width"] = 405,
 ["source"] = "import",
-["color"] = {
-0,
-0,
-0,
-0,
-},
 ["authorOptions"] = {
 {
 ["type"] = "header",
@@ -73522,6 +73534,7 @@ true,
 ["width"] = 2,
 },
 },
+["desc"] = "Made by Luxthos - twitch.tv/luxthos",
 ["cooldown"] = false,
 ["displayIcon"] = 134520,
 ["useAdjustededMin"] = false,
@@ -73571,11 +73584,11 @@ true,
 ["border_resources"] = true,
 },
 ["core"] = {
-["width"] = 48,
+["nb_min"] = 5,
 ["nb_max"] = 8,
 ["resources_position"] = 1,
-["nb_min"] = 5,
 ["spacing2"] = 2,
+["width"] = 48,
 ["font_size"] = 18,
 ["font"] = "- ToxiUI",
 ["height"] = 36,
@@ -73698,7 +73711,12 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["desc"] = "Made by Luxthos - twitch.tv/luxthos",
+["color"] = {
+0,
+0,
+0,
+0,
+},
 },
 ["Stellar Flare"] = {
 ["iconSource"] = -1,
@@ -73835,37 +73853,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Core - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Stellar Flare",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -73886,9 +73887,30 @@ true,
 ["easeType"] = "none",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Core - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Stellar Flare",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "yoUgYJuz)tG",
 ["inverse"] = false,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -73988,13 +74010,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Void Tendrils"] = {
@@ -74173,6 +74191,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -74180,21 +74202,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -74216,6 +74223,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Utilities - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "2BoiEjQKtnB",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -74406,7 +74424,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Apex Predator's Craving (Optional)"] = {
 ["iconSource"] = 0,
@@ -74531,8 +74549,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -74540,6 +74556,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -74609,12 +74632,7 @@ true,
 },
 ["displayIcon"] = 132127,
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Ravage Rampage (Feral - S3 - 2-Pieces)"] = {
 ["iconSource"] = -1,
@@ -74787,8 +74805,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -74796,6 +74812,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -74866,12 +74889,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Thrash Debuff (Optional - Guardian)"] = {
 ["iconSource"] = -1,
@@ -75033,8 +75051,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -75042,6 +75058,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -75095,12 +75118,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Devouring Plague"] = {
 ["iconSource"] = -1,
@@ -75328,8 +75346,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -75337,6 +75353,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -75575,12 +75598,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Grove Protection  (PvP Talent)"] = {
 ["iconSource"] = 0,
@@ -75795,8 +75813,11 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["parent"] = "Utilities - LWA - Druid",
+["progressSource"] = {
+-1,
+"",
+},
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -76006,10 +76027,7 @@ true,
 },
 ["displayIcon"] = 4067364,
 ["cooldown"] = true,
-["progressSource"] = {
--1,
-"",
-},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 },
 ["Premonition of Piety (Holy)"] = {
 ["iconSource"] = -1,
@@ -76142,8 +76160,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -76151,6 +76167,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -76220,12 +76243,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Class Options - LWA - Druid"] = {
 ["iconSource"] = 0,
@@ -76246,14 +76264,14 @@ true,
 ["event"] = "GTFO",
 ["unit"] = "player",
 ["debuffType"] = "HELPFUL",
+["spellIds"] = {
+},
 ["custom"] = "function (event)\n    if \"OPTIONS\" == event then\n        WeakAuras.ScanEvents(\"LWA_OPTIONS\")\n    elseif \"UPDATE_SHAPESHIFT_FORM\" == event then\n        local formId = GetShapeshiftFormID()\n        \n        if aura_env.lastFormId ~= formId then\n            aura_env.lastFormId = formId\n            WeakAuras.ScanEvents(\"LWA_UPDATE_SHAPESHIFT_FORM\")\n            C_Timer.After(0.2, function()\n                    WeakAuras.ScanEvents(\"LWA_UPDATE_RESOURCES\")\n            end)\n        end\n    end\nend\n\n",
-["events"] = "OPTIONS UPDATE_SHAPESHIFT_FORM",
 ["custom_type"] = "event",
 ["names"] = {
 },
 ["subeventPrefix"] = "SPELL",
-["spellIds"] = {
-},
+["events"] = "OPTIONS UPDATE_SHAPESHIFT_FORM",
 ["custom_hide"] = "custom",
 },
 ["untrigger"] = {
@@ -76312,6 +76330,10 @@ true,
 ["multi"] = {
 },
 },
+["spec"] = {
+["multi"] = {
+},
+},
 ["class"] = {
 ["single"] = "MAGE",
 ["multi"] = {
@@ -76319,10 +76341,6 @@ true,
 },
 },
 ["use_class_and_spec"] = false,
-["spec"] = {
-["multi"] = {
-},
-},
 ["size"] = {
 ["multi"] = {
 },
@@ -76332,12 +76350,6 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["color"] = {
-0,
-0,
-0,
-0,
-},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -78692,6 +78704,7 @@ true,
 ["size"] = 10,
 },
 },
+["desc"] = "Made by Luxthos - twitch.tv/luxthos",
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -79131,7 +79144,12 @@ true,
 },
 ["displayIcon"] = 134520,
 ["cooldown"] = false,
-["desc"] = "Made by Luxthos - twitch.tv/luxthos",
+["color"] = {
+0,
+0,
+0,
+0,
+},
 },
 ["Frenzied Regeneration (Balance, Feral & Restoration)"] = {
 ["iconSource"] = -1,
@@ -79306,19 +79324,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Utilities - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -79371,10 +79410,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["config"] = {
 ["utility"] = {
 ["behavior"] = 2,
@@ -79391,29 +79427,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "9CZ52s2rvxX",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -79563,13 +79585,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Blooming Infusion (Balance)"] = {
@@ -79704,8 +79722,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = true,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -79713,6 +79729,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -79796,12 +79819,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Horrific Visions"] = {
 ["iconSource"] = -1,
@@ -79970,8 +79988,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -79979,6 +79995,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -80032,12 +80055,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Divine Star (Holy)"] = {
 ["iconSource"] = -1,
@@ -80167,6 +80185,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -80174,21 +80196,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -80210,6 +80217,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "7oMTm59fIZI",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -80306,7 +80324,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Nature's Vigil"] = {
 ["iconSource"] = -1,
@@ -80482,19 +80500,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Utilities - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -80547,10 +80586,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["config"] = {
 ["utility"] = {
 ["behavior"] = 2,
@@ -80567,29 +80603,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "GRwDmsN5AJw",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -80707,13 +80729,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Flourish"] = {
@@ -80862,37 +80880,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Core - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Flourish",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -80913,9 +80914,30 @@ true,
 ["easeType"] = "none",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Core - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Flourish",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "WixntDhF3ik",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -80988,13 +81010,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Brutal Slash"] = {
@@ -81162,8 +81180,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -81171,6 +81187,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -81347,12 +81370,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Apotheosis"] = {
 ["iconSource"] = -1,
@@ -81503,6 +81521,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -81510,21 +81532,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -81546,6 +81553,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "w3dOH7WpJfB",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -81672,7 +81690,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Tiger's Fury"] = {
 ["iconSource"] = -1,
@@ -81877,8 +81895,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -81886,6 +81902,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -82030,12 +82053,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Dream Burst"] = {
 ["iconSource"] = -1,
@@ -82202,8 +82220,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -82211,6 +82227,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -82281,12 +82304,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Prayer Circle"] = {
 ["iconSource"] = -1,
@@ -82414,8 +82432,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -82423,6 +82439,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -82492,12 +82515,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Divine Image (Optional)"] = {
 ["iconSource"] = -1,
@@ -82662,8 +82680,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -82671,6 +82687,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -82755,12 +82778,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Celestial Alignment"] = {
 ["iconSource"] = -1,
@@ -83115,7 +83133,7 @@ true,
 },
 },
 ["xOffset"] = 0,
-["selfPoint"] = "CENTER",
+["icon"] = true,
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
 ["uid"] = "9s0R9FSrt3W",
@@ -83129,20 +83147,20 @@ true,
 ["semver"] = "11.2.2",
 ["tocversion"] = 110200,
 ["id"] = "Celestial Alignment",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["selfPoint"] = "CENTER",
 ["useCooldownModRate"] = true,
 ["width"] = 48,
+["preferToUpdate"] = false,
+["config"] = {
+},
+["inverse"] = true,
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["displayIcon"] = "",
+["cooldown"] = true,
 ["progressSource"] = {
 -1,
 "",
 },
-["config"] = {
-},
-["inverse"] = true,
-["preferToUpdate"] = false,
-["displayIcon"] = "",
-["cooldown"] = true,
-["icon"] = true,
 },
 ["Guardian of Elune"] = {
 ["iconSource"] = -1,
@@ -83267,8 +83285,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -83276,6 +83292,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -83345,12 +83368,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Power Word: Radiance - LWA - Priest"] = {
 ["grow"] = "CUSTOM",
@@ -83362,13 +83380,13 @@ true,
 ["wagoID"] = "BJu2WDqBX",
 ["xOffset"] = 0,
 ["preferToUpdate"] = false,
-["frameStrata"] = 1,
+["alpha"] = 1,
 ["yOffset"] = 0,
 ["sortHybridTable"] = {
 ["Power Word: Radiance 1"] = false,
 ["Power Word: Radiance 2"] = false,
 },
-["stepAngle"] = 15,
+["sort"] = "none",
 ["sharedFrameLevel"] = true,
 ["borderColor"] = {
 0,
@@ -83406,33 +83424,14 @@ true,
 },
 ["columnSpace"] = 1,
 ["internalVersion"] = 85,
-["animation"] = {
-["start"] = {
-["type"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["type"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["type"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["selfPoint"] = "TOP",
+["gridType"] = "RD",
+["useLimit"] = false,
 ["align"] = "LEFT",
 ["growOn"] = "show",
-["useLimit"] = false,
 ["anchorPoint"] = "CENTER",
-["rotation"] = 0,
 ["radius"] = 200,
+["rotation"] = 0,
+["selfPoint"] = "TOP",
 ["version"] = 87,
 ["subRegions"] = {
 },
@@ -83466,7 +83465,7 @@ true,
 0.5,
 },
 ["fullCircle"] = true,
-["source"] = "import",
+["animate"] = false,
 ["customGrow"] = "function(newPositions, activeRegions)\n    local LWA = LWA and LWA[\"Priest\"] or {}\n    \n    if LWA and LWA.GrowDynamicResource then\n        LWA.GrowDynamicResource(newPositions, activeRegions)\n    end\nend",
 ["scale"] = 1,
 ["centerType"] = "LR",
@@ -83474,17 +83473,17 @@ true,
 ["borderEdge"] = "Square Full White",
 ["regionType"] = "dynamicgroup",
 ["borderSize"] = 2,
-["sort"] = "none",
-["animate"] = false,
-["alpha"] = 1,
+["limit"] = 6,
+["stepAngle"] = 15,
+["gridWidth"] = 5,
 ["constantFactor"] = "RADIUS",
 ["space"] = 2,
 ["borderOffset"] = 4,
 ["semver"] = "11.2.2",
 ["tocversion"] = 110200,
 ["id"] = "Power Word: Radiance - LWA - Priest",
-["limit"] = 6,
-["gridWidth"] = 5,
+["source"] = "import",
+["frameStrata"] = 1,
 ["anchorFrameType"] = "SCREEN",
 ["borderInset"] = 1,
 ["uid"] = "g0kWkYoN)3u",
@@ -83495,7 +83494,26 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["gridType"] = "RD",
+["animation"] = {
+["start"] = {
+["type"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["type"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["type"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 },
 ["Ultimate Penitence"] = {
 ["iconSource"] = -1,
@@ -83660,6 +83678,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -83667,21 +83689,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -83703,6 +83710,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "fVlmN6ZtEzr",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -83829,7 +83847,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Psychic Horror"] = {
 ["iconSource"] = -1,
@@ -84007,6 +84025,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -84014,21 +84036,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -84050,6 +84057,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Utilities - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "qF7ZQMyv7n5",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -84272,7 +84290,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Regrowth (Clearcasting)"] = {
 ["iconSource"] = 0,
@@ -84521,8 +84539,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -84530,6 +84546,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -84771,12 +84794,7 @@ true,
 },
 ["displayIcon"] = 136085,
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Power Word: Barrier"] = {
 ["iconSource"] = -1,
@@ -84944,6 +84962,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -84951,21 +84973,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -84987,6 +84994,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "JL2WGWIECB5",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -85122,7 +85140,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Premonition (Discipline)"] = {
 ["iconSource"] = -1,
@@ -85478,8 +85496,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -85487,6 +85503,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -85680,12 +85703,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Core - LWA - Druid"] = {
 ["arcLength"] = 360,
@@ -85833,7 +85851,7 @@ true,
 ["Sunfire (Balance)"] = false,
 ["Flourish"] = false,
 ["Berserk (Guardian)"] = false,
-["Tranquility"] = false,
+["Lunar Beam"] = false,
 ["Ferocious Bite"] = false,
 ["Lifebloom"] = false,
 ["Starfall"] = false,
@@ -85854,8 +85872,8 @@ true,
 ["Overgrowth"] = false,
 ["Berserk (Feral)"] = false,
 ["Starsurge"] = false,
-["Lunar Beam"] = false,
 ["Convoke the Spirits (Restoration)"] = false,
+["Tranquility"] = false,
 ["Wrath"] = false,
 ["Nature's Swiftness (Druid)"] = false,
 ["Ironbark"] = false,
@@ -86161,8 +86179,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -86170,6 +86186,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -86365,12 +86388,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Pain Suppresion"] = {
 ["iconSource"] = -1,
@@ -86565,8 +86583,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -86574,6 +86590,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -86728,12 +86751,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Convoke the Spirits (Restoration)"] = {
 ["iconSource"] = -1,
@@ -86884,37 +86902,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Core - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Convoke the Spirits (Restoration)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -86935,9 +86936,30 @@ true,
 ["easeType"] = "none",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Core - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Convoke the Spirits (Restoration)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "oeeB8QfRJuy",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -87010,13 +87032,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Wild Mushroom"] = {
@@ -87206,8 +87224,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -87215,6 +87231,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -87397,12 +87420,7 @@ true,
 },
 ["displayIcon"] = 464341,
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Orbit Breaker "] = {
 ["iconSource"] = 0,
@@ -87432,10 +87450,10 @@ true,
 ["debuffType"] = "HELPFUL",
 ["event"] = "Health",
 ["unit"] = "player",
+["events"] = "CLEU:SPELL_ENERGIZE:SPELL_CAST_SUCCESS:SPELL_DAMAGE UNIT_SPELLCAST_CHANNEL_START:player UNIT_SPELLCAST_CHANNEL_STOP:player UAPB_OB_DELAY PLAYER_ENTERING_WORLD WA_DELAYED_PLAYER_ENTERING_WORLD",
 ["custom"] = "function(s, event, ...)\n    \n    if not s[\"\"] then\n        \n        s[\"\"] = {\n            show = true,\n            changed = false,            \n            stacks = aura_env.saved.stacks or 0, -- shooting stars count\n            firstRun = true, -- aura_env.saved.firstRun  or true, -- we need to track our first run, as opening the UI/reload will reset stacks and may be invalid\n            text = aura_env.firstRunTextPrefix,\n            cast = false, -- was full moon hardcast\n            energized = 0, -- full moon energized count\n            convoke = false, \n            \n            total = aura_env.procCount,\n            value = aura_env.saved.stacks or 0, -- shooting stars count\n            progressType = \"static\"\n        }\n        \n        return true \n    end\n    \n    if event == \"PLAYER_ENTERING_WORLD\" or event == \"WA_DELAYED_PLAYER_ENTERING_WORLD\" then\n        \n        local login, _ = ...\n        \n        if login then \n            s[\"\"] = aura_env.handleLogin(s[\"\"])\n            return true\n        end\n        \n    elseif event == \"UNIT_SPELLCAST_CHANNEL_START\" then\n        local _,_,spellId = ...        \n        aura_env.handleSpellChannelStart(s[\"\"], spellId)\n        \n    elseif event == \"UNIT_SPELLCAST_CHANNEL_STOP\" then\n        local _,_,spellId = ...\n        aura_env.handleSpellChannelStop(s[\"\"], spellId)\n        \n    elseif event == \"COMBAT_LOG_EVENT_UNFILTERED\" then\n        \n        local _,subevent,_,sourceGUID,_,_,_,_,_,_,_,spellID = ...\n        \n        if sourceGUID == UnitGUID(\"player\") then\n            \n            if subevent == \"SPELL_DAMAGE\" and \n            (spellID == aura_env.spellIds.shootingStars or \n            spellID == aura_env.spellIds.crashingStar) then\n                s[\"\"] = aura_env.handleSpellDamage(s[\"\"])\n                \n            elseif subevent == \"SPELL_ENERGIZE\" and spellID == aura_env.spellIds.fullMoon then\n                s[\"\"] = aura_env.handleEnergized(s[\"\"])\n                \n            elseif subevent == \"SPELL_CAST_SUCCESS\" and spellID == aura_env.spellIds.fullMoon then\n                s[\"\"] = aura_env.handleSpellCastSuccess(s[\"\"])     \n            end\n            \n            return true\n        end\n        \n    elseif event == \"UAPB_OB_DELAY\" and ... == aura_env.id then\n        s[\"\"] = aura_env.handleDelay(s[\"\"])\n        return true\n    end\n    \nend",
 ["spellIds"] = {
 },
-["events"] = "CLEU:SPELL_ENERGIZE:SPELL_CAST_SUCCESS:SPELL_DAMAGE UNIT_SPELLCAST_CHANNEL_START:player UNIT_SPELLCAST_CHANNEL_STOP:player UAPB_OB_DELAY PLAYER_ENTERING_WORLD WA_DELAYED_PLAYER_ENTERING_WORLD",
 ["names"] = {
 },
 ["check"] = "event",
@@ -87643,7 +87661,7 @@ true,
 },
 },
 ["cooldownEdge"] = true,
-["selfPoint"] = "CENTER",
+["icon"] = true,
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
 ["uid"] = "DL1Z5HVYqSI",
@@ -87657,23 +87675,23 @@ true,
 ["auto"] = true,
 ["tocversion"] = 110200,
 ["id"] = "Orbit Breaker ",
-["authorOptions"] = {
-},
+["selfPoint"] = "CENTER",
 ["useCooldownModRate"] = true,
 ["anchorFrameType"] = "SCREEN",
+["preferToUpdate"] = false,
+["config"] = {
+},
+["inverse"] = false,
+["authorOptions"] = {
+},
+["displayIcon"] = 1392544,
+["cooldown"] = false,
 ["color"] = {
 1,
 1,
 1,
 1,
 },
-["config"] = {
-},
-["inverse"] = false,
-["preferToUpdate"] = false,
-["displayIcon"] = 1392544,
-["cooldown"] = false,
-["icon"] = true,
 },
 ["Halo Archon (Shadow)"] = {
 ["iconSource"] = -1,
@@ -87836,6 +87854,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -87843,21 +87865,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -87879,6 +87886,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "SnYUttm26U2",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -88005,7 +88023,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Shadow Word: Death (Holy)"] = {
 ["iconSource"] = -1,
@@ -88154,6 +88172,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -88161,21 +88183,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -88199,6 +88206,17 @@ true,
 ["duration_type"] = "seconds",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Dynamic Effects - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "NBwANpKYcQl",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -88345,7 +88363,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Dynamic Effects - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Soul of the Forest"] = {
 ["iconSource"] = -1,
@@ -88479,8 +88497,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = true,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -88488,6 +88504,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -88558,12 +88581,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Right Side - LWA - Druid"] = {
 ["arcLength"] = 360,
@@ -88728,14 +88746,14 @@ true,
 ["spellId"] = "49206",
 ["auranames"] = {
 },
-["unit"] = "player",
+["use_unit"] = true,
 ["use_totemName"] = true,
 ["genericShowOn"] = "showOnCooldown",
-["names"] = {
-},
+["subeventPrefix"] = "SPELL",
 ["use_genericShowOn"] = true,
-["events"] = "PLAYER_TOTEM_UPDATE",
 ["custom"] = "function(event, arg1)\n    if event == \"PLAYER_TOTEM_UPDATE\" and arg1 then\n        local haveTotem, name, startTime, duration, icon = GetTotemInfo(arg1)\n        if haveTotem and icon == aura_env.texture then\n            aura_env.haveTotem, aura_env.name, aura_env.startTime, aura_env.duration, aura_env.icon = haveTotem, name, startTime, duration, icon\n            aura_env.index = arg1\n            return true\n        elseif aura_env.index == arg1 then\n            aura_env.index = 0\n            aura_env.startTime, aura_env.duration = nil, nil\n        end\n    end\nend",
+["spellIds"] = {
+},
 ["use_spellName"] = true,
 ["realSpellName"] = 0,
 ["duration"] = "35",
@@ -88744,20 +88762,20 @@ true,
 ["type"] = "custom",
 ["useName"] = true,
 ["debuffType"] = "HELPFUL",
-["subeventSuffix"] = "_CAST_SUCCESS",
 ["custom_type"] = "status",
 ["unevent"] = "auto",
+["subeventSuffix"] = "_CAST_SUCCESS",
 ["event"] = "Cooldown Progress (Spell)",
 ["totemName"] = "27829",
 ["customDuration"] = "function()\n    if aura_env.startTime then\n        return aura_env.duration, aura_env.startTime + aura_env.duration\n    end\nend",
 ["use_spellId"] = true,
-["spellIds"] = {
-},
+["events"] = "PLAYER_TOTEM_UPDATE",
 ["use_sourceUnit"] = true,
 ["check"] = "event",
-["subeventPrefix"] = "SPELL",
+["names"] = {
+},
 ["use_track"] = true,
-["use_unit"] = true,
+["unit"] = "player",
 },
 ["untrigger"] = {
 ["custom"] = "function()\n    return aura_env.index == 0\nend",
@@ -88908,8 +88926,11 @@ true,
 ["useAdjustededMax"] = false,
 ["width"] = 48,
 ["source"] = "import",
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 ["parent"] = "Core - LWA - Priest",
+["progressSource"] = {
+-1,
+"",
+},
 ["cooldown"] = true,
 ["displayIcon"] = 136214,
 ["useAdjustededMin"] = false,
@@ -89079,760 +89100,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["progressSource"] = {
--1,
-"",
-},
-},
-["Shadow Word: Death (Shadow - Deathspeaker)"] = {
-["iconSource"] = -1,
-["wagoID"] = "BJu2WDqBX",
-["xOffset"] = 0,
-["adjustedMax"] = "",
-["adjustedMin"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["cooldownSwipe"] = true,
-["cooldownEdge"] = false,
-["icon"] = true,
-["triggers"] = {
-{
-["trigger"] = {
-["type"] = "aura2",
-["auranames"] = {
-"392511",
-},
-["ownOnly"] = true,
-["event"] = "Health",
-["unit"] = "player",
-["spellIds"] = {
-},
-["names"] = {
-},
-["useName"] = true,
-["subeventPrefix"] = "SPELL",
-["subeventSuffix"] = "_CAST_START",
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["track"] = "auto",
-["use_genericShowOn"] = true,
-["genericShowOn"] = "showAlways",
-["names"] = {
-},
-["use_showgcd"] = true,
-["debuffType"] = "HELPFUL",
-["type"] = "spell",
-["use_absorbHealMode"] = true,
-["subeventSuffix"] = "_CAST_START",
-["event"] = "Cooldown Progress (Spell)",
-["spellName"] = 32379,
-["realSpellName"] = "Shadow Word: Death",
-["use_spellName"] = true,
-["spellIds"] = {
-},
-["use_unit"] = true,
-["unit"] = "player",
-["use_absorbMode"] = true,
-["use_track"] = true,
-["subeventPrefix"] = "SPELL",
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["type"] = "unit",
-["use_absorbHealMode"] = true,
-["use_absorbMode"] = true,
-["event"] = "Health",
-["use_unit"] = true,
-["unit"] = "target",
-["percenthealth"] = {
-"35",
-},
-["use_percenthealth"] = true,
-["percenthealth_operator"] = {
-"<=",
-},
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "any",
-["activeTriggerMode"] = -10,
-},
-["internalVersion"] = 85,
-["keepAspectRatio"] = true,
-["selfPoint"] = "CENTER",
-["desaturate"] = false,
-["version"] = 87,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["border_size"] = 2,
-["border_offset"] = 0,
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["type"] = "subborder",
-},
-{
-["glowFrequency"] = 0.25,
-["type"] = "subglow",
-["glowDuration"] = 1,
-["glowType"] = "Proc",
-["glowThickness"] = 1,
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["useGlowColor"] = false,
-["glowXOffset"] = 0,
-["glowLength"] = 10,
-["glow"] = false,
-["glowScale"] = 1,
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-},
-["height"] = 48,
-["load"] = {
-["use_petbattle"] = false,
-["use_never"] = false,
-["talent"] = {
-["multi"] = {
-[103681] = true,
-},
-},
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["MAGE"] = true,
-},
-},
-["use_talent"] = false,
-["use_class"] = true,
-["role"] = {
-["multi"] = {
-},
-},
-["use_class_and_spec"] = true,
-["class_and_spec"] = {
-["single"] = 258,
-["multi"] = {
-[257] = true,
-[258] = true,
-[256] = true,
-},
-},
-["spec"] = {
-["multi"] = {
-},
-},
-["use_spellknown"] = true,
-["spellknown"] = 32379,
-["size"] = {
-["multi"] = {
-},
-},
-},
-["useAdjustededMax"] = false,
-["source"] = "import",
-["actions"] = {
-["start"] = {
-},
-["init"] = {
-},
-["finish"] = {
-},
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
 ["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
-},
-["animation"] = {
-["start"] = {
-["type"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["type"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["type"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["uid"] = "tAYw3WaZXsH",
-["anchorFrameParent"] = false,
-["width"] = 48,
-["frameStrata"] = 1,
-["zoom"] = 0.3,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Shadow Word: Death (Shadow - Deathspeaker)",
-["useCooldownModRate"] = true,
-["alpha"] = 1,
-["anchorFrameType"] = "SCREEN",
-["cooldownTextDisabled"] = false,
-["config"] = {
-},
-["inverse"] = true,
-["authorOptions"] = {
-},
-["conditions"] = {
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 0,
-},
-["changes"] = {
-{
-["value"] = false,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Proc",
-["property"] = "sub.3.glowType",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -1,
-["variable"] = "incombat",
-["value"] = 0,
-},
-["changes"] = {
-{
-["property"] = "sub.3.glow",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "insufficientResources",
-["value"] = 1,
-["checks"] = {
-{
-["value"] = 1,
-["variable"] = "insufficientResources",
-},
-{
-["trigger"] = -1,
-["variable"] = "incombat",
-},
-},
-},
-["changes"] = {
-{
-["value"] = {
-0.47450980392157,
-0.51372549019608,
-1,
-1,
-},
-["property"] = "color",
-},
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 2,
-["variable"] = "spellInRange",
-["value"] = 0,
-},
-["changes"] = {
-{
-["value"] = {
-0.87450980392157,
-0.34117647058824,
-0.32941176470588,
-1,
-},
-["property"] = "color",
-},
-{
-["value"] = true,
-["property"] = "desaturate",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = 1,
-["variable"] = "show",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Proc",
-["property"] = "sub.3.glowType",
-},
-{
-["property"] = "inverse",
-},
-{
-["property"] = "desaturate",
-},
-{
-["value"] = true,
-["property"] = "cooldownEdge",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -2,
-["variable"] = "AND",
-["checks"] = {
-{
-["trigger"] = 2,
-["variable"] = "onCooldown",
-["value"] = 0,
-},
-{
-["trigger"] = 3,
-["variable"] = "show",
-["value"] = 1,
-},
-},
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Proc",
-["property"] = "sub.3.glowType",
-},
-},
-},
-},
-["information"] = {
-["forceEvents"] = true,
-},
-["parent"] = "Core - LWA - Priest",
-},
-["Voidform"] = {
-["iconSource"] = -1,
-["wagoID"] = "BJu2WDqBX",
-["parent"] = "Dynamic Effects - LWA - Priest",
-["adjustedMax"] = "",
-["adjustedMin"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["cooldownSwipe"] = true,
-["cooldownEdge"] = true,
-["icon"] = true,
-["triggers"] = {
-{
-["trigger"] = {
-["type"] = "aura2",
-["auranames"] = {
-"194249",
-},
-["matchesShowOn"] = "showOnActive",
-["event"] = "Health",
-["unit"] = "player",
-["unitExists"] = true,
-["ownOnly"] = true,
-["spellIds"] = {
-},
-["names"] = {
-},
-["useName"] = true,
-["subeventPrefix"] = "SPELL",
-["subeventSuffix"] = "_CAST_START",
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "any",
-["activeTriggerMode"] = -10,
-},
-["internalVersion"] = 85,
-["progressSource"] = {
--1,
-"",
-},
-["selfPoint"] = "CENTER",
-["desaturate"] = false,
-["version"] = 87,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["border_size"] = 2,
-["border_offset"] = 0,
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["type"] = "subborder",
-},
-{
-["glowFrequency"] = 0.25,
-["type"] = "subglow",
-["glowDuration"] = 1,
-["glowType"] = "Proc",
-["glowThickness"] = 1,
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["useGlowColor"] = false,
-["glowXOffset"] = 0,
-["glowLength"] = 10,
-["glow"] = false,
-["glowScale"] = 1,
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-},
-["height"] = 48,
-["load"] = {
-["use_petbattle"] = false,
-["class_and_spec"] = {
-["single"] = 258,
-["multi"] = {
-[257] = true,
-[258] = true,
-[256] = true,
-},
-},
-["talent"] = {
-["multi"] = {
-},
-},
-["use_class_and_spec"] = true,
-["use_class"] = true,
-["role"] = {
-["multi"] = {
-},
-},
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["MAGE"] = true,
-},
-},
-["use_never"] = false,
-["spec"] = {
-["multi"] = {
-},
-},
-["use_spellknown"] = true,
-["spellknown"] = 228260,
-["size"] = {
-["multi"] = {
-},
-},
-},
-["frameStrata"] = 1,
-["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
-["actions"] = {
-["start"] = {
-},
-["init"] = {
-},
-["finish"] = {
-},
-},
-["cooldown"] = true,
-["displayIcon"] = "",
-["animation"] = {
-["start"] = {
-["type"] = "preset",
-["easeType"] = "none",
-["easeStrength"] = 3,
-["preset"] = "shrink",
-["duration_type"] = "seconds",
-},
-["main"] = {
-["type"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["type"] = "preset",
-["easeType"] = "none",
-["easeStrength"] = 3,
-["preset"] = "shrink",
-["duration_type"] = "seconds",
-},
-},
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["xOffset"] = 0,
-["config"] = {
-},
-["keepAspectRatio"] = true,
-["width"] = 48,
-["anchorFrameParent"] = false,
-["useCooldownModRate"] = true,
-["auto"] = true,
-["zoom"] = 0.3,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Voidform",
-["cooldownTextDisabled"] = false,
-["alpha"] = 1,
-["anchorFrameType"] = "SCREEN",
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["uid"] = "7Lk3F9XssIN",
-["inverse"] = false,
-["authorOptions"] = {
-},
-["conditions"] = {
-{
-["check"] = {
-["trigger"] = 1,
-["variable"] = "show",
-["value"] = 1,
-},
-["changes"] = {
-{
-["value"] = true,
-["property"] = "sub.3.glow",
-},
-{
-["value"] = "Pixel",
-["property"] = "sub.3.glowType",
-},
-},
-},
-},
-["information"] = {
-["forceEvents"] = true,
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-},
-["Combo Points - LWA - Druid"] = {
-["grow"] = "CUSTOM",
-["controlledChildren"] = {
-"Combot Point 1 - Druid",
-"Combot Point 2 - Druid",
-"Combot Point 3 - Druid",
-"Combot Point 4 - Druid",
-"Combot Point 5 - Druid",
-},
-["borderBackdrop"] = "Blizzard Tooltip",
-["wagoID"] = "ryBp05DHX",
-["xOffset"] = 0,
-["preferToUpdate"] = false,
-["frameStrata"] = 1,
-["yOffset"] = 0,
-["sortHybridTable"] = {
-["Combot Point 4 - Druid"] = false,
-["Combot Point 3 - Druid"] = false,
-["Combot Point 2 - Druid"] = false,
-["Combot Point 1 - Druid"] = false,
-["Combot Point 5 - Druid"] = false,
-},
-["regionType"] = "dynamicgroup",
-["sharedFrameLevel"] = true,
-["borderColor"] = {
-0,
-0,
-0,
-1,
-},
-["rowSpace"] = 1,
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["triggers"] = {
-{
-["trigger"] = {
-["names"] = {
-},
-["type"] = "aura2",
-["spellIds"] = {
-},
-["subeventSuffix"] = "_CAST_START",
-["subeventPrefix"] = "SPELL",
-["debuffType"] = "HELPFUL",
-["event"] = "Health",
-["unit"] = "player",
-},
-["untrigger"] = {
-},
-},
-},
-["columnSpace"] = 1,
-["internalVersion"] = 85,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["selfPoint"] = "TOP",
-["align"] = "LEFT",
-["growOn"] = "show",
-["useLimit"] = false,
-["anchorPoint"] = "CENTER",
-["rotation"] = 0,
-["radius"] = 200,
-["version"] = 124,
-["subRegions"] = {
-},
-["parent"] = "Resources - LWA - Druid",
-["arcLength"] = 360,
-["load"] = {
-["size"] = {
-["multi"] = {
-},
-},
-["spec"] = {
-["multi"] = {
-},
-},
-["class"] = {
-["multi"] = {
-},
-},
-["talent"] = {
-["multi"] = {
-},
-},
-},
-["uid"] = "6pmVKMV(T2k",
-["backdropColor"] = {
-1,
-1,
-1,
-0.5,
-},
-["borderInset"] = 1,
-["animate"] = false,
-["customGrow"] = "function(newPositions, activeRegions)\n    local LWA = LWA and LWA[\"Druid\"] or {}\n    \n    if LWA and LWA.GrowDynamicResource then\n        LWA.GrowDynamicResource(newPositions, activeRegions)\n    end\nend",
-["scale"] = 1,
-["centerType"] = "LR",
-["border"] = false,
-["borderEdge"] = "Square Full White",
-["stepAngle"] = 15,
-["borderSize"] = 2,
-["limit"] = 6,
-["source"] = "import",
-["alpha"] = 1,
-["constantFactor"] = "RADIUS",
-["space"] = 2,
-["borderOffset"] = 4,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Combo Points - LWA - Druid",
-["sort"] = "none",
-["gridWidth"] = 5,
-["anchorFrameType"] = "SCREEN",
-["fullCircle"] = true,
-["config"] = {
-},
-["authorOptions"] = {
-},
-["stagger"] = 0,
-["conditions"] = {
-},
-["information"] = {
-["forceEvents"] = true,
-},
-["gridType"] = "RD",
 },
 ["Luxthos - Druid"] = {
 ["controlledChildren"] = {
@@ -89964,6 +89232,368 @@ true,
 },
 ["anchorFrameFrame"] = "ToxiUIWAAnchor",
 },
+["Voidform"] = {
+["iconSource"] = -1,
+["wagoID"] = "BJu2WDqBX",
+["parent"] = "Dynamic Effects - LWA - Priest",
+["adjustedMax"] = "",
+["adjustedMin"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["cooldownSwipe"] = true,
+["cooldownEdge"] = true,
+["icon"] = true,
+["triggers"] = {
+{
+["trigger"] = {
+["type"] = "aura2",
+["auranames"] = {
+"194249",
+},
+["matchesShowOn"] = "showOnActive",
+["event"] = "Health",
+["unit"] = "player",
+["unitExists"] = true,
+["ownOnly"] = true,
+["spellIds"] = {
+},
+["names"] = {
+},
+["useName"] = true,
+["subeventPrefix"] = "SPELL",
+["subeventSuffix"] = "_CAST_START",
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "any",
+["activeTriggerMode"] = -10,
+},
+["internalVersion"] = 85,
+["progressSource"] = {
+-1,
+"",
+},
+["selfPoint"] = "CENTER",
+["desaturate"] = false,
+["version"] = 87,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["border_size"] = 2,
+["border_offset"] = 0,
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["type"] = "subborder",
+},
+{
+["glowFrequency"] = 0.25,
+["type"] = "subglow",
+["glowDuration"] = 1,
+["glowType"] = "Proc",
+["glowThickness"] = 1,
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["useGlowColor"] = false,
+["glowXOffset"] = 0,
+["glowLength"] = 10,
+["glow"] = false,
+["glowScale"] = 1,
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+},
+["height"] = 48,
+["load"] = {
+["use_petbattle"] = false,
+["class_and_spec"] = {
+["single"] = 258,
+["multi"] = {
+[257] = true,
+[258] = true,
+[256] = true,
+},
+},
+["talent"] = {
+["multi"] = {
+},
+},
+["use_class_and_spec"] = true,
+["use_class"] = true,
+["role"] = {
+["multi"] = {
+},
+},
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["MAGE"] = true,
+},
+},
+["use_never"] = false,
+["spec"] = {
+["multi"] = {
+},
+},
+["use_spellknown"] = true,
+["spellknown"] = 228260,
+["size"] = {
+["multi"] = {
+},
+},
+},
+["frameStrata"] = 1,
+["useAdjustededMax"] = false,
+["actions"] = {
+["start"] = {
+},
+["init"] = {
+},
+["finish"] = {
+},
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["cooldown"] = true,
+["displayIcon"] = "",
+["animation"] = {
+["start"] = {
+["type"] = "preset",
+["easeType"] = "none",
+["easeStrength"] = 3,
+["preset"] = "shrink",
+["duration_type"] = "seconds",
+},
+["main"] = {
+["type"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["type"] = "preset",
+["easeType"] = "none",
+["easeStrength"] = 3,
+["preset"] = "shrink",
+["duration_type"] = "seconds",
+},
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["xOffset"] = 0,
+["config"] = {
+},
+["keepAspectRatio"] = true,
+["width"] = 48,
+["anchorFrameParent"] = false,
+["useCooldownModRate"] = true,
+["auto"] = true,
+["zoom"] = 0.3,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Voidform",
+["cooldownTextDisabled"] = false,
+["alpha"] = 1,
+["anchorFrameType"] = "SCREEN",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
+["uid"] = "7Lk3F9XssIN",
+["inverse"] = false,
+["authorOptions"] = {
+},
+["conditions"] = {
+{
+["check"] = {
+["trigger"] = 1,
+["variable"] = "show",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Pixel",
+["property"] = "sub.3.glowType",
+},
+},
+},
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["preferToUpdate"] = false,
+},
+["Combo Points - LWA - Druid"] = {
+["grow"] = "CUSTOM",
+["controlledChildren"] = {
+"Combot Point 1 - Druid",
+"Combot Point 2 - Druid",
+"Combot Point 3 - Druid",
+"Combot Point 4 - Druid",
+"Combot Point 5 - Druid",
+},
+["borderBackdrop"] = "Blizzard Tooltip",
+["wagoID"] = "ryBp05DHX",
+["xOffset"] = 0,
+["preferToUpdate"] = false,
+["alpha"] = 1,
+["yOffset"] = 0,
+["sortHybridTable"] = {
+["Combot Point 4 - Druid"] = false,
+["Combot Point 3 - Druid"] = false,
+["Combot Point 2 - Druid"] = false,
+["Combot Point 1 - Druid"] = false,
+["Combot Point 5 - Druid"] = false,
+},
+["limit"] = 6,
+["sharedFrameLevel"] = true,
+["borderColor"] = {
+0,
+0,
+0,
+1,
+},
+["rowSpace"] = 1,
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
+["triggers"] = {
+{
+["trigger"] = {
+["names"] = {
+},
+["type"] = "aura2",
+["spellIds"] = {
+},
+["subeventSuffix"] = "_CAST_START",
+["subeventPrefix"] = "SPELL",
+["debuffType"] = "HELPFUL",
+["event"] = "Health",
+["unit"] = "player",
+},
+["untrigger"] = {
+},
+},
+},
+["columnSpace"] = 1,
+["internalVersion"] = 85,
+["gridType"] = "RD",
+["useLimit"] = false,
+["align"] = "LEFT",
+["growOn"] = "show",
+["anchorPoint"] = "CENTER",
+["radius"] = 200,
+["rotation"] = 0,
+["selfPoint"] = "TOP",
+["version"] = 124,
+["subRegions"] = {
+},
+["parent"] = "Resources - LWA - Druid",
+["arcLength"] = 360,
+["load"] = {
+["size"] = {
+["multi"] = {
+},
+},
+["spec"] = {
+["multi"] = {
+},
+},
+["class"] = {
+["multi"] = {
+},
+},
+["talent"] = {
+["multi"] = {
+},
+},
+},
+["uid"] = "6pmVKMV(T2k",
+["backdropColor"] = {
+1,
+1,
+1,
+0.5,
+},
+["borderInset"] = 1,
+["source"] = "import",
+["customGrow"] = "function(newPositions, activeRegions)\n    local LWA = LWA and LWA[\"Druid\"] or {}\n    \n    if LWA and LWA.GrowDynamicResource then\n        LWA.GrowDynamicResource(newPositions, activeRegions)\n    end\nend",
+["scale"] = 1,
+["centerType"] = "LR",
+["border"] = false,
+["borderEdge"] = "Square Full White",
+["stepAngle"] = 15,
+["borderSize"] = 2,
+["sort"] = "none",
+["regionType"] = "dynamicgroup",
+["gridWidth"] = 5,
+["constantFactor"] = "RADIUS",
+["space"] = 2,
+["borderOffset"] = 4,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Combo Points - LWA - Druid",
+["animate"] = false,
+["frameStrata"] = 1,
+["anchorFrameType"] = "SCREEN",
+["fullCircle"] = true,
+["config"] = {
+},
+["authorOptions"] = {
+},
+["stagger"] = 0,
+["conditions"] = {
+},
+["information"] = {
+["forceEvents"] = true,
+},
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
+},
 ["Predatory Swiftness"] = {
 ["iconSource"] = -1,
 ["wagoID"] = "ryBp05DHX",
@@ -90087,8 +89717,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -90096,6 +89724,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -90165,12 +89800,207 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
+["preferToUpdate"] = false,
+},
+["Moonfire (Restoration)"] = {
+["iconSource"] = -1,
+["wagoID"] = "ryBp05DHX",
+["xOffset"] = 0,
+["adjustedMax"] = "",
+["adjustedMin"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["cooldownSwipe"] = true,
+["customTextUpdate"] = "event",
+["cooldownEdge"] = true,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
+["triggers"] = {
+{
+["trigger"] = {
+["type"] = "aura2",
+["useName"] = true,
+["subeventSuffix"] = "_CAST_START",
+["match_countOperator"] = ">",
+["unit"] = "target",
+["ownOnly"] = true,
+["event"] = "Health",
+["names"] = {
+},
+["unitExists"] = false,
+["useMatch_count"] = true,
+["spellIds"] = {
+},
+["subeventPrefix"] = "SPELL",
+["match_count"] = "0",
+["matchesShowOn"] = "showOnActive",
+["auranames"] = {
+"164812",
+},
+["debuffType"] = "HARMFUL",
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "any",
+["customTriggerLogic"] = "",
+["activeTriggerMode"] = -10,
+},
+["internalVersion"] = 85,
+["keepAspectRatio"] = true,
+["selfPoint"] = "CENTER",
+["desaturate"] = false,
+["useCooldownModRate"] = true,
+["version"] = 124,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["border_size"] = 2,
+["type"] = "subborder",
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["border_offset"] = 0,
+},
+{
+["glowFrequency"] = 0.25,
+["type"] = "subglow",
+["glowDuration"] = 1,
+["glowType"] = "Proc",
+["glowThickness"] = 1,
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["useGlowColor"] = false,
+["glowXOffset"] = 0,
+["glowScale"] = 1,
+["glow"] = false,
+["glowLength"] = 10,
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+},
+["height"] = 48,
+["icon"] = true,
+["load"] = {
+["use_petbattle"] = false,
+["class_and_spec"] = {
+["single"] = 105,
+["multi"] = {
+[103] = true,
+[104] = true,
+[102] = true,
+[105] = true,
+},
+},
+["talent"] = {
+["multi"] = {
+[103325] = false,
+},
+},
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["MAGE"] = true,
+},
+},
+["use_class"] = true,
+["use_spellknown"] = true,
+["use_class_and_spec"] = true,
+["use_never"] = false,
+["spec"] = {
+["multi"] = {
+},
+},
+["spellknown"] = 8921,
+["size"] = {
+["multi"] = {
+},
+},
+},
+["preferToUpdate"] = false,
+["useAdjustededMax"] = false,
+["cooldown"] = true,
+["source"] = "import",
+["conditions"] = {
+},
+["authorOptions"] = {
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["uid"] = "Feev5s4yEOs",
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["progressSource"] = {
+-1,
+"",
+},
+["anchorFrameType"] = "SCREEN",
+["frameStrata"] = 1,
 ["color"] = {
 1,
 1,
 1,
 1,
 },
+["anchorFrameParent"] = false,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["zoom"] = 0.3,
+["auto"] = true,
+["tocversion"] = 110200,
+["id"] = "Moonfire (Restoration)",
+["desc"] = "Code by KnewOne",
+["alpha"] = 1,
+["width"] = 48,
+["parent"] = "Dynamic Effects - LWA - Druid",
+["config"] = {
+},
+["inverse"] = false,
+["animation"] = {
+["start"] = {
+["type"] = "preset",
+["easeType"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["preset"] = "shrink",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["type"] = "preset",
+["easeType"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["preset"] = "shrink",
+},
+},
+["displayIcon"] = "",
+["information"] = {
+["forceEvents"] = true,
+["ignoreOptionsEventErrors"] = true,
+},
+["customText"] = "",
 },
 ["Effloresence"] = {
 ["iconSource"] = 0,
@@ -90213,10 +90043,10 @@ true,
 ["use_spellId"] = true,
 ["type"] = "aura2",
 ["debuffType"] = "HELPFUL",
-["unevent"] = "auto",
-["useName"] = true,
 ["custom_type"] = "status",
+["useName"] = true,
 ["subeventSuffix"] = "_CAST_SUCCESS",
+["unevent"] = "auto",
 ["unit"] = "player",
 ["duration"] = "35",
 ["event"] = "Cooldown Progress (Spell)",
@@ -90372,13 +90202,8 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
-["color"] = {
-1,
-1,
-1,
-1,
-},
 ["keepAspectRatio"] = true,
+["icon"] = true,
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -90512,7 +90337,12 @@ true,
 ["cooldownEdge"] = false,
 ["displayIcon"] = 134222,
 ["cooldown"] = true,
-["icon"] = true,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 },
 ["Idol of Y’Shaarj"] = {
 ["iconSource"] = -1,
@@ -90682,8 +90512,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -90691,6 +90519,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -90761,12 +90596,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Wild Growth (Restoration)"] = {
 ["iconSource"] = -1,
@@ -90948,8 +90778,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -90957,6 +90785,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -91082,12 +90917,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Voidwraith (Shadow)"] = {
 ["iconSource"] = 0,
@@ -91108,14 +90938,14 @@ true,
 ["spellId"] = "49206",
 ["auranames"] = {
 },
-["unit"] = "player",
+["use_unit"] = true,
 ["use_totemName"] = true,
 ["genericShowOn"] = "showOnCooldown",
-["names"] = {
-},
+["subeventPrefix"] = "SPELL",
 ["use_genericShowOn"] = true,
-["events"] = "PLAYER_TOTEM_UPDATE",
 ["custom"] = "function(event, arg1)\n    if event == \"PLAYER_TOTEM_UPDATE\" and arg1 then\n        local haveTotem, name, startTime, duration, icon = GetTotemInfo(arg1)\n        if haveTotem and icon == aura_env.texture then\n            aura_env.haveTotem, aura_env.name, aura_env.startTime, aura_env.duration, aura_env.icon = haveTotem, name, startTime, duration, icon\n            aura_env.index = arg1\n            return true\n        elseif aura_env.index == arg1 then\n            aura_env.index = 0\n            aura_env.startTime, aura_env.duration = nil, nil\n        end\n    end\nend",
+["spellIds"] = {
+},
 ["use_spellName"] = true,
 ["realSpellName"] = 0,
 ["duration"] = "35",
@@ -91124,20 +90954,20 @@ true,
 ["type"] = "custom",
 ["useName"] = true,
 ["debuffType"] = "HELPFUL",
-["subeventSuffix"] = "_CAST_SUCCESS",
 ["custom_type"] = "status",
 ["unevent"] = "auto",
+["subeventSuffix"] = "_CAST_SUCCESS",
 ["event"] = "Cooldown Progress (Spell)",
 ["totemName"] = "27829",
 ["customDuration"] = "function()\n    if aura_env.startTime then\n        return aura_env.duration, aura_env.startTime + aura_env.duration\n    end\nend",
 ["use_spellId"] = true,
-["spellIds"] = {
-},
+["events"] = "PLAYER_TOTEM_UPDATE",
 ["use_sourceUnit"] = true,
 ["check"] = "event",
-["subeventPrefix"] = "SPELL",
+["names"] = {
+},
 ["use_track"] = true,
-["use_unit"] = true,
+["unit"] = "player",
 },
 ["untrigger"] = {
 ["custom"] = "function()\n    return aura_env.index == 0\nend",
@@ -91288,8 +91118,11 @@ true,
 ["useAdjustededMax"] = false,
 ["width"] = 48,
 ["source"] = "import",
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 ["parent"] = "Core - LWA - Priest",
+["progressSource"] = {
+-1,
+"",
+},
 ["cooldown"] = true,
 ["displayIcon"] = "615099",
 ["useAdjustededMin"] = false,
@@ -91459,16 +91292,13 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["progressSource"] = {
--1,
-"",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
-},
-["Combot Point 1 (Off-Spec) - Druid"] = {
+["Combot Point 3 (Off-Spec) - Druid"] = {
 ["sparkWidth"] = 10,
 ["iconSource"] = -1,
 ["xOffset"] = 0,
-["adjustedMax"] = "1",
+["adjustedMax"] = "3",
 ["yOffset"] = 0,
 ["anchorPoint"] = "CENTER",
 ["sparkRotation"] = 0,
@@ -91556,7 +91386,7 @@ true,
 ["sparkOffsetX"] = 0,
 ["wagoID"] = "ryBp05DHX",
 ["parent"] = "Combo Points (Off-Spec) - LWA - Druid",
-["adjustedMin"] = "0",
+["adjustedMin"] = "2",
 ["sparkRotationMode"] = "AUTO",
 ["triggers"] = {
 {
@@ -91764,7 +91594,6 @@ true,
 ["customText"] = "",
 ["actions"] = {
 ["start"] = {
-["do_custom"] = false,
 },
 ["finish"] = {
 },
@@ -91782,12 +91611,15 @@ true,
 },
 ["overlaysTexture"] = {
 "Solid",
+"Solid",
+"Solid",
+"Solid",
 },
 ["width"] = 65,
 ["semver"] = "11.2.2",
-["id"] = "Combot Point 1 (Off-Spec) - Druid",
+["id"] = "Combot Point 3 (Off-Spec) - Druid",
 ["sparkHidden"] = "NEVER",
-["uid"] = "xWhMk7iU5kW",
+["uid"] = "af58tIkLSHP",
 ["frameStrata"] = 1,
 ["anchorFrameType"] = "SCREEN",
 ["spark"] = false,
@@ -91798,7 +91630,25 @@ true,
 0,
 0,
 0,
-0.40000003576279,
+0,
+},
+{
+0,
+0,
+0,
+0,
+},
+{
+0,
+0,
+0,
+0,
+},
+{
+0,
+0,
+0,
+0,
 },
 },
 ["orientation"] = "HORIZONTAL",
@@ -91819,7 +91669,7 @@ true,
 ["variable"] = "power",
 },
 {
-["trigger"] = 2,
+["trigger"] = 3,
 ["variable"] = "show",
 ["value"] = 0,
 },
@@ -91836,7 +91686,7 @@ true,
 ["variable"] = "power",
 },
 {
-["trigger"] = 2,
+["trigger"] = 3,
 ["variable"] = "show",
 ["value"] = 1,
 },
@@ -91847,6 +91697,7 @@ true,
 ["variable"] = "percentpower",
 ["trigger"] = 1,
 },
+["linked"] = false,
 ["changes"] = {
 {
 ["value"] = {
@@ -91872,7 +91723,7 @@ true,
 ["variable"] = "power",
 },
 {
-["trigger"] = 2,
+["trigger"] = 3,
 ["variable"] = "show",
 ["value"] = 0,
 },
@@ -91889,7 +91740,7 @@ true,
 ["variable"] = "power",
 },
 {
-["trigger"] = 2,
+["trigger"] = 3,
 ["variable"] = "show",
 ["value"] = 1,
 },
@@ -92060,6 +91911,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -92067,21 +91922,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -92103,6 +91943,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "kQ9ybxpbr5b",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -92199,7 +92050,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Holy Word: Sanctify 2"] = {
 ["sparkWidth"] = 10,
@@ -92311,12 +92162,12 @@ true,
 ["powertype"] = 19,
 ["duration"] = "1",
 ["unit"] = "player",
-["type"] = "spell",
-["useName"] = true,
+["charges"] = "1",
+["trackcharge"] = "2",
 ["use_trackcharge"] = true,
 ["debuffType"] = "HELPFUL",
 ["charges_operator"] = ">",
-["charges"] = "1",
+["type"] = "spell",
 ["unevent"] = "auto",
 ["power"] = "1",
 ["track"] = "auto",
@@ -92327,7 +92178,7 @@ true,
 ["use_spellName"] = true,
 ["spellIds"] = {
 },
-["trackcharge"] = "2",
+["useName"] = true,
 ["names"] = {
 },
 ["stacks"] = "1",
@@ -92760,8 +92611,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -92769,6 +92618,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -93029,12 +92885,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Bloodseeker Vines (Restoration)"] = {
 ["iconSource"] = -1,
@@ -93204,8 +93055,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -93213,6 +93062,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -93297,12 +93153,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["After the Wildfire "] = {
 ["iconSource"] = -1,
@@ -93467,8 +93318,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -93476,6 +93325,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -93529,12 +93385,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Wrath"] = {
 ["iconSource"] = 0,
@@ -93722,8 +93573,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -93731,6 +93580,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -93876,18 +93732,13 @@ true,
 },
 ["displayIcon"] = 535045,
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["preferToUpdate"] = false,
 },
-},
-["Combot Point 4 (Off-Spec) - Druid"] = {
+["Combot Point 5 (Off-Spec) - Druid"] = {
 ["sparkWidth"] = 10,
 ["iconSource"] = -1,
 ["xOffset"] = 0,
-["adjustedMax"] = "4",
+["adjustedMax"] = "5",
 ["yOffset"] = 0,
 ["anchorPoint"] = "CENTER",
 ["sparkRotation"] = 0,
@@ -93975,7 +93826,7 @@ true,
 ["sparkOffsetX"] = 0,
 ["wagoID"] = "ryBp05DHX",
 ["parent"] = "Combo Points (Off-Spec) - LWA - Druid",
-["adjustedMin"] = "3",
+["adjustedMin"] = "4",
 ["sparkRotationMode"] = "AUTO",
 ["triggers"] = {
 {
@@ -94206,9 +94057,9 @@ true,
 },
 ["width"] = 65,
 ["semver"] = "11.2.2",
-["id"] = "Combot Point 4 (Off-Spec) - Druid",
+["id"] = "Combot Point 5 (Off-Spec) - Druid",
 ["sparkHidden"] = "NEVER",
-["uid"] = "4lJG4zGisMx",
+["uid"] = "UX6Q4xcArW7",
 ["frameStrata"] = 1,
 ["anchorFrameType"] = "SCREEN",
 ["spark"] = false,
@@ -94726,8 +94577,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -94735,6 +94584,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -94928,12 +94784,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Vampiric Touch"] = {
 ["iconSource"] = -1,
@@ -95155,8 +95006,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -95164,6 +95013,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -95316,12 +95172,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Power Word: Shield (Holy & Shadow)"] = {
 ["iconSource"] = -1,
@@ -95545,8 +95396,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -95554,6 +95403,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -95805,12 +95661,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Mana Bar (Optional - Shadow) - LWA - Priest"] = {
 ["sparkWidth"] = 10,
@@ -95901,13 +95752,13 @@ true,
 {
 ["trigger"] = {
 ["type"] = "unit",
-["names"] = {
-},
-["unevent"] = "auto",
 ["use_unit"] = true,
+["unevent"] = "auto",
+["subeventPrefix"] = "SPELL",
 ["duration"] = "1",
 ["use_showCost"] = true,
-["subeventPrefix"] = "SPELL",
+["names"] = {
+},
 ["use_absorbMode"] = true,
 ["powertype"] = 0,
 ["spellIds"] = {
@@ -96038,9 +95889,9 @@ true,
 ["sparkHidden"] = "NEVER",
 ["actions"] = {
 ["start"] = {
+["do_custom"] = false,
 ["custom"] = "",
 ["do_message"] = false,
-["do_custom"] = false,
 },
 ["init"] = {
 ["custom"] = "aura_env.region.configGroup = \"mana_bar_shadow\"",
@@ -96258,6 +96109,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -96265,21 +96120,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -96301,6 +96141,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Utilities - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "AnD9qDT9o3Q",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -96494,7 +96345,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Incarnation: Chosen of Elune (Orbital Strike)"] = {
 ["iconSource"] = -1,
@@ -96687,8 +96538,11 @@ true,
 ["useAdjustededMax"] = false,
 ["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["parent"] = "Core - LWA - Druid",
+["progressSource"] = {
+-1,
+"",
+},
 ["information"] = {
 ["forceEvents"] = true,
 },
@@ -96810,10 +96664,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["progressSource"] = {
--1,
-"",
-},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 },
 ["Vicious Cycle (Optional)"] = {
 ["iconSource"] = -1,
@@ -96980,8 +96831,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -96989,6 +96838,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -97055,12 +96911,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Shadow Word: Death (Shadow)"] = {
 ["iconSource"] = -1,
@@ -97232,6 +97083,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -97239,21 +97094,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -97275,6 +97115,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "k(RsnWKiJIi",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -97448,7 +97299,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Ursine Vigor (Guardian)"] = {
 ["iconSource"] = -1,
@@ -97582,8 +97433,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -97591,6 +97440,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -97661,12 +97517,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Feline Potential"] = {
 ["iconSource"] = -1,
@@ -97862,8 +97713,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -97871,6 +97720,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -97973,12 +97829,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Power Infusion (Holy)"] = {
 ["iconSource"] = -1,
@@ -98132,6 +97983,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -98139,21 +97994,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -98175,6 +98015,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "DLY6WtxGQ0I",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -98266,7 +98117,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Fade"] = {
 ["iconSource"] = -1,
@@ -98444,6 +98295,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -98451,21 +98306,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -98487,6 +98327,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Utilities - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "a1z8cZuWa20",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -98677,7 +98528,964 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
+},
+["Combot Point 4 (Off-Spec) - Druid"] = {
+["sparkWidth"] = 10,
+["iconSource"] = -1,
+["xOffset"] = 0,
+["adjustedMax"] = "4",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["sparkRotation"] = 0,
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["icon"] = false,
+["icon_color"] = {
+1,
+1,
+1,
+1,
+},
+["enableGradient"] = false,
+["selfPoint"] = "TOP",
+["barColor"] = {
+0.87450987100601,
+0.13725490868092,
+0.13725490868092,
+1,
+},
+["desaturate"] = false,
+["sparkOffsetY"] = 0,
+["gradientOrientation"] = "HORIZONTAL",
+["load"] = {
+["use_petbattle"] = false,
+["class_and_spec"] = {
+["single"] = 102,
+["multi"] = {
+[104] = true,
+[102] = true,
+[105] = true,
+},
+},
+["talent"] = {
+["multi"] = {
+},
+},
+["itemtypeequipped"] = {
+},
+["class"] = {
+["single"] = "MONK",
+["multi"] = {
+["EVOKER"] = true,
+},
+},
+["use_class_and_spec"] = false,
+["use_never"] = false,
+["use_class"] = true,
+["role"] = {
+["multi"] = {
+},
+},
+["use_spellknown"] = false,
+["use_spec"] = true,
+["spec"] = {
+["single"] = 3,
+["multi"] = {
+true,
+true,
+true,
+},
+},
+["zoneIds"] = "",
+["spellknown"] = 1822,
+["size"] = {
+["multi"] = {
+},
+},
+},
+["smoothProgress"] = false,
+["useAdjustededMin"] = true,
+["regionType"] = "aurabar",
+["overlayclip"] = true,
+["texture"] = "Solid",
+["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+["auto"] = true,
+["tocversion"] = 110200,
+["alpha"] = 1,
+["sparkColor"] = {
+1,
+1,
+1,
+1,
+},
+["colorState"] = "",
+["sparkOffsetX"] = 0,
+["wagoID"] = "ryBp05DHX",
+["parent"] = "Combo Points (Off-Spec) - LWA - Druid",
+["adjustedMin"] = "3",
+["sparkRotationMode"] = "AUTO",
+["triggers"] = {
+{
+["trigger"] = {
+["auranames"] = {
+},
+["matchesShowOn"] = "showAlways",
+["use_showCost"] = false,
+["unit"] = "player",
+["powertype"] = 4,
+["use_powertype"] = true,
+["debuffType"] = "HELPFUL",
+["useName"] = true,
+["use_absorbHealMode"] = true,
+["subeventSuffix"] = "_CAST_START",
+["event"] = "Power",
+["use_requirePowerType"] = false,
+["use_percentpower"] = false,
+["subeventPrefix"] = "SPELL",
+["use_showChargedComboPoints"] = false,
+["spellIds"] = {
+},
+["type"] = "unit",
+["ownOnly"] = true,
+["use_absorbMode"] = true,
+["use_unit"] = true,
+["names"] = {
+},
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["type"] = "aura2",
+["auranames"] = {
+"768",
+},
+["debuffType"] = "HELPFUL",
+["ownOnly"] = true,
+["useName"] = true,
+["unit"] = "player",
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["type"] = "spell",
+["use_genericShowOn"] = true,
+["genericShowOn"] = "showOnCooldown",
+["unit"] = "player",
+["use_spellName"] = true,
+["debuffType"] = "HELPFUL",
+["use_petspell"] = false,
+["event"] = "Spell Known",
+["use_track"] = true,
+["spellName"] = 1822,
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["use_specId"] = true,
+["type"] = "unit",
+["use_absorbHealMode"] = true,
+["use_absorbMode"] = true,
+["event"] = "Class/Spec",
+["use_unit"] = true,
+["specId"] = {
+["single"] = 105,
+},
+["unit"] = "player",
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["useName"] = true,
+["unit"] = "player",
+["auranames"] = {
+"5487",
+},
+["ownOnly"] = true,
+["matchesShowOn"] = "showOnMissing",
+["type"] = "aura2",
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "custom",
+["customTriggerLogic"] = "function(t)\n    return t[2] or (t[3] and t[4]) and t[5]\nend",
+["activeTriggerMode"] = 1,
+},
+["internalVersion"] = 85,
+["progressSource"] = {
+-1,
+"",
+},
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["colorR"] = 1,
+["use_rotate"] = false,
+["duration_type"] = "seconds",
+["alphaType"] = "custom",
+["colorA"] = 1,
+["colorG"] = 1,
+["alphaFunc"] = "",
+["use_alpha"] = false,
+["type"] = "none",
+["easeType"] = "none",
+["scaley"] = 1,
+["alpha"] = 0,
+["duration"] = "",
+["y"] = 0,
+["x"] = 0,
+["rotateType"] = "straight",
+["rotate"] = 360,
+["easeStrength"] = 3,
+["rotateFunc"] = "    function(progress, start, delta)\n      return start + (progress * delta)\n    end\n  ",
+["colorB"] = 1,
+["scalex"] = 1,
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
+["isPrimaryResource"] = false,
+["version"] = 124,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["type"] = "subforeground",
+},
+{
+["border_offset"] = 0,
+["type"] = "subborder",
+["anchor_area"] = "bar",
+["border_color"] = {
+0,
+0,
+0,
+0,
+},
+["border_visible"] = false,
+["border_edge"] = "Square Full White",
+["border_size"] = 2,
+},
+{
+["glowFrequency"] = 0.25,
+["glow"] = false,
+["useGlowColor"] = false,
+["glowScale"] = 1,
+["glowThickness"] = 1,
+["glowType"] = "Pixel",
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["glowDuration"] = 1,
+["type"] = "subglow",
+["glowLength"] = 10,
+["glowXOffset"] = 0,
+["anchor_area"] = "bar",
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+},
+["height"] = 20,
+["textureSource"] = "LSM",
+["sparkBlendMode"] = "ADD",
+["useAdjustededMax"] = true,
+["source"] = "import",
+["authorOptions"] = {
+},
+["barColor2"] = {
+1,
+1,
+0,
+1,
+},
+["configGroup"] = "combo_points",
+["config"] = {
+},
+["zoom"] = 0,
+["icon_side"] = "RIGHT",
+["customText"] = "",
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+["custom"] = "aura_env.region.configGroup = \"combo_points_off\"",
+["do_custom"] = true,
+},
+},
+["anchorFrameParent"] = false,
+["backgroundColor"] = {
+0,
+0,
+0,
+0.30000001192093,
+},
+["overlaysTexture"] = {
+"Solid",
+"Solid",
+"Solid",
+"Solid",
+},
+["width"] = 65,
+["semver"] = "11.2.2",
+["id"] = "Combot Point 4 (Off-Spec) - Druid",
+["sparkHidden"] = "NEVER",
+["uid"] = "4lJG4zGisMx",
+["frameStrata"] = 1,
+["anchorFrameType"] = "SCREEN",
+["spark"] = false,
+["sparkHeight"] = 30,
+["inverse"] = false,
+["overlays"] = {
+{
+0,
+0,
+0,
+0,
+},
+{
+0,
+0,
+0,
+0,
+},
+{
+0,
+0,
+0,
+0,
+},
+{
+0,
+0,
+0,
+0,
+},
+},
+["orientation"] = "HORIZONTAL",
+["conditions"] = {
+{
+["check"] = {
+["op"] = "==",
+["checks"] = {
+{
+["trigger"] = -2,
+["op"] = "==",
+["variable"] = "AND",
+["checks"] = {
+{
+["trigger"] = 1,
+["op"] = "==",
+["value"] = "5",
+["variable"] = "power",
+},
+{
+["trigger"] = 3,
+["variable"] = "show",
+["value"] = 0,
+},
+},
+},
+{
+["trigger"] = -2,
+["variable"] = "AND",
+["checks"] = {
+{
+["trigger"] = 1,
+["op"] = "==",
+["value"] = "6",
+["variable"] = "power",
+},
+{
+["trigger"] = 3,
+["variable"] = "show",
+["value"] = 1,
+},
+},
+},
+},
+["value"] = "100",
+["variable"] = "percentpower",
+["trigger"] = 1,
+},
+["linked"] = false,
+["changes"] = {
+{
+["value"] = {
+["custom"] = "aura_env.region.colorState = \"full\"\nWeakAuras.ScanEvents(\"LWA_UPDATE_BAR\", aura_env, 1, aura_env.states[1].total)",
+},
+["property"] = "customcode",
+},
+},
+},
+{
+["check"] = {
+["op"] = "==",
+["checks"] = {
+{
+["trigger"] = -2,
+["op"] = "==",
+["variable"] = "AND",
+["checks"] = {
+{
+["trigger"] = 1,
+["op"] = "==",
+["value"] = "5",
+["variable"] = "power",
+},
+{
+["trigger"] = 3,
+["variable"] = "show",
+["value"] = 0,
+},
+},
+},
+{
+["trigger"] = -2,
+["variable"] = "AND",
+["checks"] = {
+{
+["trigger"] = 1,
+["op"] = "==",
+["value"] = "6",
+["variable"] = "power",
+},
+{
+["trigger"] = 3,
+["variable"] = "show",
+["value"] = 1,
+},
+},
+},
+},
+["value"] = "1",
+["variable"] = "deficit",
+["trigger"] = 1,
+},
+["linked"] = true,
+["changes"] = {
+{
+["value"] = {
+["custom"] = "aura_env.region.colorState = \"high\"\nWeakAuras.ScanEvents(\"LWA_UPDATE_BAR\", aura_env, 1, aura_env.states[1].total)",
+},
+["property"] = "customcode",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -1,
+["variable"] = "alwaystrue",
+},
+["linked"] = true,
+["changes"] = {
+{
+["value"] = {
+["custom"] = "aura_env.region.colorState = \"\"\nWeakAuras.ScanEvents(\"LWA_UPDATE_BAR\", aura_env, 1, aura_env.states[1].total)",
+},
+["property"] = "customcode",
+},
+},
+},
+},
+["information"] = {
+["forceEvents"] = true,
+["ignoreOptionsEventErrors"] = true,
+},
+["preferToUpdate"] = false,
+},
+["Combot Point 1 (Off-Spec) - Druid"] = {
+["sparkWidth"] = 10,
+["iconSource"] = -1,
+["xOffset"] = 0,
+["adjustedMax"] = "1",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["sparkRotation"] = 0,
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["icon"] = false,
+["icon_color"] = {
+1,
+1,
+1,
+1,
+},
+["enableGradient"] = false,
+["selfPoint"] = "TOP",
+["barColor"] = {
+0.87450987100601,
+0.13725490868092,
+0.13725490868092,
+1,
+},
+["desaturate"] = false,
+["sparkOffsetY"] = 0,
+["gradientOrientation"] = "HORIZONTAL",
+["load"] = {
+["use_petbattle"] = false,
+["class_and_spec"] = {
+["single"] = 102,
+["multi"] = {
+[104] = true,
+[102] = true,
+[105] = true,
+},
+},
+["talent"] = {
+["multi"] = {
+},
+},
+["itemtypeequipped"] = {
+},
+["class"] = {
+["single"] = "MONK",
+["multi"] = {
+["EVOKER"] = true,
+},
+},
+["use_class_and_spec"] = false,
+["use_never"] = false,
+["use_class"] = true,
+["role"] = {
+["multi"] = {
+},
+},
+["use_spellknown"] = false,
+["use_spec"] = true,
+["spec"] = {
+["single"] = 3,
+["multi"] = {
+true,
+true,
+true,
+},
+},
+["zoneIds"] = "",
+["spellknown"] = 1822,
+["size"] = {
+["multi"] = {
+},
+},
+},
+["smoothProgress"] = false,
+["useAdjustededMin"] = true,
+["regionType"] = "aurabar",
+["overlayclip"] = true,
+["texture"] = "Solid",
+["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+["auto"] = true,
+["tocversion"] = 110200,
+["alpha"] = 1,
+["sparkColor"] = {
+1,
+1,
+1,
+1,
+},
+["colorState"] = "",
+["sparkOffsetX"] = 0,
+["wagoID"] = "ryBp05DHX",
+["parent"] = "Combo Points (Off-Spec) - LWA - Druid",
+["adjustedMin"] = "0",
+["sparkRotationMode"] = "AUTO",
+["triggers"] = {
+{
+["trigger"] = {
+["auranames"] = {
+},
+["matchesShowOn"] = "showAlways",
+["use_showCost"] = false,
+["unit"] = "player",
+["powertype"] = 4,
+["use_powertype"] = true,
+["debuffType"] = "HELPFUL",
+["useName"] = true,
+["use_absorbHealMode"] = true,
+["subeventSuffix"] = "_CAST_START",
+["event"] = "Power",
+["use_requirePowerType"] = false,
+["use_percentpower"] = false,
+["subeventPrefix"] = "SPELL",
+["use_showChargedComboPoints"] = false,
+["spellIds"] = {
+},
+["type"] = "unit",
+["ownOnly"] = true,
+["use_absorbMode"] = true,
+["use_unit"] = true,
+["names"] = {
+},
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["type"] = "aura2",
+["auranames"] = {
+"768",
+},
+["debuffType"] = "HELPFUL",
+["ownOnly"] = true,
+["useName"] = true,
+["unit"] = "player",
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["type"] = "spell",
+["use_genericShowOn"] = true,
+["genericShowOn"] = "showOnCooldown",
+["unit"] = "player",
+["use_spellName"] = true,
+["debuffType"] = "HELPFUL",
+["use_petspell"] = false,
+["event"] = "Spell Known",
+["use_track"] = true,
+["spellName"] = 1822,
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["use_specId"] = true,
+["type"] = "unit",
+["use_absorbHealMode"] = true,
+["use_absorbMode"] = true,
+["event"] = "Class/Spec",
+["use_unit"] = true,
+["specId"] = {
+["single"] = 105,
+},
+["unit"] = "player",
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["useName"] = true,
+["unit"] = "player",
+["auranames"] = {
+"5487",
+},
+["ownOnly"] = true,
+["matchesShowOn"] = "showOnMissing",
+["type"] = "aura2",
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "custom",
+["customTriggerLogic"] = "function(t)\n    return t[2] or (t[3] and t[4]) and t[5]\nend",
+["activeTriggerMode"] = 1,
+},
+["internalVersion"] = 85,
+["progressSource"] = {
+-1,
+"",
+},
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["colorR"] = 1,
+["use_rotate"] = false,
+["duration_type"] = "seconds",
+["alphaType"] = "custom",
+["colorA"] = 1,
+["colorG"] = 1,
+["alphaFunc"] = "",
+["use_alpha"] = false,
+["type"] = "none",
+["easeType"] = "none",
+["scaley"] = 1,
+["alpha"] = 0,
+["duration"] = "",
+["y"] = 0,
+["x"] = 0,
+["rotateType"] = "straight",
+["rotate"] = 360,
+["easeStrength"] = 3,
+["rotateFunc"] = "    function(progress, start, delta)\n      return start + (progress * delta)\n    end\n  ",
+["colorB"] = 1,
+["scalex"] = 1,
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
+["isPrimaryResource"] = false,
+["version"] = 124,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["type"] = "subforeground",
+},
+{
+["border_offset"] = 0,
+["type"] = "subborder",
+["anchor_area"] = "bar",
+["border_color"] = {
+0,
+0,
+0,
+0,
+},
+["border_visible"] = false,
+["border_edge"] = "Square Full White",
+["border_size"] = 2,
+},
+{
+["glowFrequency"] = 0.25,
+["glow"] = false,
+["useGlowColor"] = false,
+["glowScale"] = 1,
+["glowThickness"] = 1,
+["glowType"] = "Pixel",
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["glowDuration"] = 1,
+["type"] = "subglow",
+["glowLength"] = 10,
+["glowXOffset"] = 0,
+["anchor_area"] = "bar",
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+},
+["height"] = 20,
+["textureSource"] = "LSM",
+["sparkBlendMode"] = "ADD",
+["useAdjustededMax"] = true,
+["source"] = "import",
+["authorOptions"] = {
+},
+["barColor2"] = {
+1,
+1,
+0,
+1,
+},
+["configGroup"] = "combo_points",
+["config"] = {
+},
+["zoom"] = 0,
+["icon_side"] = "RIGHT",
+["customText"] = "",
+["actions"] = {
+["start"] = {
+["do_custom"] = false,
+},
+["finish"] = {
+},
+["init"] = {
+["custom"] = "aura_env.region.configGroup = \"combo_points_off\"",
+["do_custom"] = true,
+},
+},
+["anchorFrameParent"] = false,
+["backgroundColor"] = {
+0,
+0,
+0,
+0.30000001192093,
+},
+["overlaysTexture"] = {
+"Solid",
+},
+["width"] = 65,
+["semver"] = "11.2.2",
+["id"] = "Combot Point 1 (Off-Spec) - Druid",
+["sparkHidden"] = "NEVER",
+["uid"] = "xWhMk7iU5kW",
+["frameStrata"] = 1,
+["anchorFrameType"] = "SCREEN",
+["spark"] = false,
+["sparkHeight"] = 30,
+["inverse"] = false,
+["overlays"] = {
+{
+0,
+0,
+0,
+0.40000003576279,
+},
+},
+["orientation"] = "HORIZONTAL",
+["conditions"] = {
+{
+["check"] = {
+["op"] = "==",
+["checks"] = {
+{
+["trigger"] = -2,
+["op"] = "==",
+["variable"] = "AND",
+["checks"] = {
+{
+["trigger"] = 1,
+["op"] = "==",
+["value"] = "5",
+["variable"] = "power",
+},
+{
+["trigger"] = 2,
+["variable"] = "show",
+["value"] = 0,
+},
+},
+},
+{
+["trigger"] = -2,
+["variable"] = "AND",
+["checks"] = {
+{
+["trigger"] = 1,
+["op"] = "==",
+["value"] = "6",
+["variable"] = "power",
+},
+{
+["trigger"] = 2,
+["variable"] = "show",
+["value"] = 1,
+},
+},
+},
+},
+["value"] = "100",
+["variable"] = "percentpower",
+["trigger"] = 1,
+},
+["changes"] = {
+{
+["value"] = {
+["custom"] = "aura_env.region.colorState = \"full\"\nWeakAuras.ScanEvents(\"LWA_UPDATE_BAR\", aura_env, 1, aura_env.states[1].total)",
+},
+["property"] = "customcode",
+},
+},
+},
+{
+["check"] = {
+["op"] = "==",
+["checks"] = {
+{
+["trigger"] = -2,
+["op"] = "==",
+["variable"] = "AND",
+["checks"] = {
+{
+["trigger"] = 1,
+["op"] = "==",
+["value"] = "5",
+["variable"] = "power",
+},
+{
+["trigger"] = 2,
+["variable"] = "show",
+["value"] = 0,
+},
+},
+},
+{
+["trigger"] = -2,
+["variable"] = "AND",
+["checks"] = {
+{
+["trigger"] = 1,
+["op"] = "==",
+["value"] = "6",
+["variable"] = "power",
+},
+{
+["trigger"] = 2,
+["variable"] = "show",
+["value"] = 1,
+},
+},
+},
+},
+["value"] = "1",
+["variable"] = "deficit",
+["trigger"] = 1,
+},
+["linked"] = true,
+["changes"] = {
+{
+["value"] = {
+["custom"] = "aura_env.region.colorState = \"high\"\nWeakAuras.ScanEvents(\"LWA_UPDATE_BAR\", aura_env, 1, aura_env.states[1].total)",
+},
+["property"] = "customcode",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -1,
+["variable"] = "alwaystrue",
+},
+["linked"] = true,
+["changes"] = {
+{
+["value"] = {
+["custom"] = "aura_env.region.colorState = \"\"\nWeakAuras.ScanEvents(\"LWA_UPDATE_BAR\", aura_env, 1, aura_env.states[1].total)",
+},
+["property"] = "customcode",
+},
+},
+},
+},
+["information"] = {
+["forceEvents"] = true,
+["ignoreOptionsEventErrors"] = true,
+},
+["preferToUpdate"] = false,
 },
 ["Combot Point 2 (Off-Spec) - Druid"] = {
 ["sparkWidth"] = 10,
@@ -99497,7 +100305,7 @@ true,
 },
 },
 ["xOffset"] = 0,
-["selfPoint"] = "CENTER",
+["icon"] = true,
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
 ["uid"] = "A2tqHaNKW3h",
@@ -99511,709 +100319,20 @@ true,
 ["semver"] = "11.2.2",
 ["tocversion"] = 110200,
 ["id"] = "Nature's Swiftness (Druid)",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["selfPoint"] = "CENTER",
 ["useCooldownModRate"] = true,
 ["width"] = 48,
-["progressSource"] = {
--1,
-"",
-},
+["preferToUpdate"] = false,
 ["config"] = {
 },
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["icon"] = true,
-},
-["Combot Point 5 (Off-Spec) - Druid"] = {
-["sparkWidth"] = 10,
-["iconSource"] = -1,
-["xOffset"] = 0,
-["adjustedMax"] = "5",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["sparkRotation"] = 0,
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["icon"] = false,
-["icon_color"] = {
-1,
-1,
-1,
-1,
-},
-["enableGradient"] = false,
-["selfPoint"] = "TOP",
-["barColor"] = {
-0.87450987100601,
-0.13725490868092,
-0.13725490868092,
-1,
-},
-["desaturate"] = false,
-["sparkOffsetY"] = 0,
-["gradientOrientation"] = "HORIZONTAL",
-["load"] = {
-["use_petbattle"] = false,
-["class_and_spec"] = {
-["single"] = 102,
-["multi"] = {
-[104] = true,
-[102] = true,
-[105] = true,
-},
-},
-["talent"] = {
-["multi"] = {
-},
-},
-["itemtypeequipped"] = {
-},
-["class"] = {
-["single"] = "MONK",
-["multi"] = {
-["EVOKER"] = true,
-},
-},
-["use_class_and_spec"] = false,
-["use_never"] = false,
-["use_class"] = true,
-["role"] = {
-["multi"] = {
-},
-},
-["use_spellknown"] = false,
-["use_spec"] = true,
-["spec"] = {
-["single"] = 3,
-["multi"] = {
-true,
-true,
-true,
-},
-},
-["zoneIds"] = "",
-["spellknown"] = 1822,
-["size"] = {
-["multi"] = {
-},
-},
-},
-["smoothProgress"] = false,
-["useAdjustededMin"] = true,
-["regionType"] = "aurabar",
-["overlayclip"] = true,
-["texture"] = "Solid",
-["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-["auto"] = true,
-["tocversion"] = 110200,
-["alpha"] = 1,
-["sparkColor"] = {
-1,
-1,
-1,
-1,
-},
-["colorState"] = "",
-["sparkOffsetX"] = 0,
-["wagoID"] = "ryBp05DHX",
-["parent"] = "Combo Points (Off-Spec) - LWA - Druid",
-["adjustedMin"] = "4",
-["sparkRotationMode"] = "AUTO",
-["triggers"] = {
-{
-["trigger"] = {
-["auranames"] = {
-},
-["matchesShowOn"] = "showAlways",
-["use_showCost"] = false,
-["unit"] = "player",
-["powertype"] = 4,
-["use_powertype"] = true,
-["debuffType"] = "HELPFUL",
-["useName"] = true,
-["use_absorbHealMode"] = true,
-["subeventSuffix"] = "_CAST_START",
-["event"] = "Power",
-["use_requirePowerType"] = false,
-["use_percentpower"] = false,
-["subeventPrefix"] = "SPELL",
-["use_showChargedComboPoints"] = false,
-["spellIds"] = {
-},
-["type"] = "unit",
-["ownOnly"] = true,
-["use_absorbMode"] = true,
-["use_unit"] = true,
-["names"] = {
-},
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["type"] = "aura2",
-["auranames"] = {
-"768",
-},
-["debuffType"] = "HELPFUL",
-["ownOnly"] = true,
-["useName"] = true,
-["unit"] = "player",
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["type"] = "spell",
-["use_genericShowOn"] = true,
-["genericShowOn"] = "showOnCooldown",
-["unit"] = "player",
-["use_spellName"] = true,
-["debuffType"] = "HELPFUL",
-["use_petspell"] = false,
-["event"] = "Spell Known",
-["use_track"] = true,
-["spellName"] = 1822,
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["use_specId"] = true,
-["type"] = "unit",
-["use_absorbHealMode"] = true,
-["use_absorbMode"] = true,
-["event"] = "Class/Spec",
-["use_unit"] = true,
-["specId"] = {
-["single"] = 105,
-},
-["unit"] = "player",
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["useName"] = true,
-["unit"] = "player",
-["auranames"] = {
-"5487",
-},
-["ownOnly"] = true,
-["matchesShowOn"] = "showOnMissing",
-["type"] = "aura2",
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "custom",
-["customTriggerLogic"] = "function(t)\n    return t[2] or (t[3] and t[4]) and t[5]\nend",
-["activeTriggerMode"] = 1,
-},
-["internalVersion"] = 85,
 ["progressSource"] = {
 -1,
 "",
 },
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["colorR"] = 1,
-["use_rotate"] = false,
-["duration_type"] = "seconds",
-["alphaType"] = "custom",
-["colorA"] = 1,
-["colorG"] = 1,
-["alphaFunc"] = "",
-["use_alpha"] = false,
-["type"] = "none",
-["easeType"] = "none",
-["scaley"] = 1,
-["alpha"] = 0,
-["duration"] = "",
-["y"] = 0,
-["x"] = 0,
-["rotateType"] = "straight",
-["rotate"] = 360,
-["easeStrength"] = 3,
-["rotateFunc"] = "    function(progress, start, delta)\n      return start + (progress * delta)\n    end\n  ",
-["colorB"] = 1,
-["scalex"] = 1,
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["isPrimaryResource"] = false,
-["version"] = 124,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["type"] = "subforeground",
-},
-{
-["border_offset"] = 0,
-["type"] = "subborder",
-["anchor_area"] = "bar",
-["border_color"] = {
-0,
-0,
-0,
-0,
-},
-["border_visible"] = false,
-["border_edge"] = "Square Full White",
-["border_size"] = 2,
-},
-{
-["glowFrequency"] = 0.25,
-["glow"] = false,
-["useGlowColor"] = false,
-["glowScale"] = 1,
-["glowThickness"] = 1,
-["glowType"] = "Pixel",
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["glowDuration"] = 1,
-["type"] = "subglow",
-["glowLength"] = 10,
-["glowXOffset"] = 0,
-["anchor_area"] = "bar",
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-},
-["height"] = 20,
-["textureSource"] = "LSM",
-["sparkBlendMode"] = "ADD",
-["useAdjustededMax"] = true,
-["source"] = "import",
-["authorOptions"] = {
-},
-["barColor2"] = {
-1,
-1,
-0,
-1,
-},
-["configGroup"] = "combo_points",
-["config"] = {
-},
-["zoom"] = 0,
-["icon_side"] = "RIGHT",
-["customText"] = "",
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-["custom"] = "aura_env.region.configGroup = \"combo_points_off\"",
-["do_custom"] = true,
-},
-},
-["anchorFrameParent"] = false,
-["backgroundColor"] = {
-0,
-0,
-0,
-0.30000001192093,
-},
-["overlaysTexture"] = {
-"Solid",
-"Solid",
-"Solid",
-"Solid",
-},
-["width"] = 65,
-["semver"] = "11.2.2",
-["id"] = "Combot Point 5 (Off-Spec) - Druid",
-["sparkHidden"] = "NEVER",
-["uid"] = "UX6Q4xcArW7",
-["frameStrata"] = 1,
-["anchorFrameType"] = "SCREEN",
-["spark"] = false,
-["sparkHeight"] = 30,
-["inverse"] = false,
-["overlays"] = {
-{
-0,
-0,
-0,
-0,
-},
-{
-0,
-0,
-0,
-0,
-},
-{
-0,
-0,
-0,
-0,
-},
-{
-0,
-0,
-0,
-0,
-},
-},
-["orientation"] = "HORIZONTAL",
-["conditions"] = {
-{
-["check"] = {
-["op"] = "==",
-["checks"] = {
-{
-["trigger"] = -2,
-["op"] = "==",
-["variable"] = "AND",
-["checks"] = {
-{
-["trigger"] = 1,
-["op"] = "==",
-["value"] = "5",
-["variable"] = "power",
-},
-{
-["trigger"] = 3,
-["variable"] = "show",
-["value"] = 0,
-},
-},
-},
-{
-["trigger"] = -2,
-["variable"] = "AND",
-["checks"] = {
-{
-["trigger"] = 1,
-["op"] = "==",
-["value"] = "6",
-["variable"] = "power",
-},
-{
-["trigger"] = 3,
-["variable"] = "show",
-["value"] = 1,
-},
-},
-},
-},
-["value"] = "100",
-["variable"] = "percentpower",
-["trigger"] = 1,
-},
-["linked"] = false,
-["changes"] = {
-{
-["value"] = {
-["custom"] = "aura_env.region.colorState = \"full\"\nWeakAuras.ScanEvents(\"LWA_UPDATE_BAR\", aura_env, 1, aura_env.states[1].total)",
-},
-["property"] = "customcode",
-},
-},
-},
-{
-["check"] = {
-["op"] = "==",
-["checks"] = {
-{
-["trigger"] = -2,
-["op"] = "==",
-["variable"] = "AND",
-["checks"] = {
-{
-["trigger"] = 1,
-["op"] = "==",
-["value"] = "5",
-["variable"] = "power",
-},
-{
-["trigger"] = 3,
-["variable"] = "show",
-["value"] = 0,
-},
-},
-},
-{
-["trigger"] = -2,
-["variable"] = "AND",
-["checks"] = {
-{
-["trigger"] = 1,
-["op"] = "==",
-["value"] = "6",
-["variable"] = "power",
-},
-{
-["trigger"] = 3,
-["variable"] = "show",
-["value"] = 1,
-},
-},
-},
-},
-["value"] = "1",
-["variable"] = "deficit",
-["trigger"] = 1,
-},
-["linked"] = true,
-["changes"] = {
-{
-["value"] = {
-["custom"] = "aura_env.region.colorState = \"high\"\nWeakAuras.ScanEvents(\"LWA_UPDATE_BAR\", aura_env, 1, aura_env.states[1].total)",
-},
-["property"] = "customcode",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -1,
-["variable"] = "alwaystrue",
-},
-["linked"] = true,
-["changes"] = {
-{
-["value"] = {
-["custom"] = "aura_env.region.colorState = \"\"\nWeakAuras.ScanEvents(\"LWA_UPDATE_BAR\", aura_env, 1, aura_env.states[1].total)",
-},
-["property"] = "customcode",
-},
-},
-},
-},
-["information"] = {
-["forceEvents"] = true,
-["ignoreOptionsEventErrors"] = true,
-},
-["preferToUpdate"] = false,
-},
-["Moonfire (Restoration)"] = {
-["iconSource"] = -1,
-["wagoID"] = "ryBp05DHX",
-["xOffset"] = 0,
-["adjustedMax"] = "",
-["adjustedMin"] = "",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["cooldownSwipe"] = true,
-["customTextUpdate"] = "event",
-["cooldownEdge"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["triggers"] = {
-{
-["trigger"] = {
-["type"] = "aura2",
-["useName"] = true,
-["match_countOperator"] = ">",
-["auranames"] = {
-"164812",
-},
-["unit"] = "target",
-["ownOnly"] = true,
-["event"] = "Health",
-["names"] = {
-},
-["unitExists"] = false,
-["useMatch_count"] = true,
-["spellIds"] = {
-},
-["subeventPrefix"] = "SPELL",
-["match_count"] = "0",
-["matchesShowOn"] = "showOnActive",
-["subeventSuffix"] = "_CAST_START",
-["debuffType"] = "HARMFUL",
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "any",
-["customTriggerLogic"] = "",
-["activeTriggerMode"] = -10,
-},
-["internalVersion"] = 85,
-["keepAspectRatio"] = true,
-["selfPoint"] = "CENTER",
-["desaturate"] = false,
-["authorOptions"] = {
-},
-["version"] = 124,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["border_size"] = 2,
-["type"] = "subborder",
-["border_color"] = {
-1,
-1,
-1,
-0,
-},
-["border_visible"] = true,
-["border_edge"] = "Square Full White",
-["border_offset"] = 0,
-},
-{
-["glowFrequency"] = 0.25,
-["type"] = "subglow",
-["glowDuration"] = 1,
-["glowType"] = "Proc",
-["glowThickness"] = 1,
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["useGlowColor"] = false,
-["glowXOffset"] = 0,
-["glowScale"] = 1,
-["glow"] = false,
-["glowLength"] = 10,
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-},
-["height"] = 48,
-["animation"] = {
-["start"] = {
-["type"] = "preset",
-["easeType"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["preset"] = "shrink",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["type"] = "preset",
-["easeType"] = "none",
-["easeStrength"] = 3,
-["duration_type"] = "seconds",
-["preset"] = "shrink",
-},
-},
-["load"] = {
-["use_petbattle"] = false,
-["class_and_spec"] = {
-["single"] = 105,
-["multi"] = {
-[103] = true,
-[104] = true,
-[102] = true,
-[105] = true,
-},
-},
-["talent"] = {
-["multi"] = {
-[103325] = false,
-},
-},
-["class"] = {
-["single"] = "MAGE",
-["multi"] = {
-["MAGE"] = true,
-},
-},
-["use_class"] = true,
-["use_spellknown"] = true,
-["use_class_and_spec"] = true,
-["use_never"] = false,
-["spec"] = {
-["multi"] = {
-},
-},
-["spellknown"] = 8921,
-["size"] = {
-["multi"] = {
-},
-},
-},
-["parent"] = "Dynamic Effects - LWA - Druid",
-["useAdjustededMax"] = false,
-["cooldown"] = true,
-["source"] = "import",
-["conditions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["uid"] = "Feev5s4yEOs",
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["customText"] = "",
-["anchorFrameType"] = "SCREEN",
-["frameStrata"] = 1,
-["alpha"] = 1,
-["anchorFrameParent"] = false,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["zoom"] = 0.3,
-["auto"] = true,
-["tocversion"] = 110200,
-["id"] = "Moonfire (Restoration)",
-["preferToUpdate"] = false,
-["useCooldownModRate"] = true,
-["width"] = 48,
-["desc"] = "Code by KnewOne",
-["config"] = {
-},
-["inverse"] = false,
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["displayIcon"] = "",
-["information"] = {
-["forceEvents"] = true,
-["ignoreOptionsEventErrors"] = true,
-},
-["icon"] = true,
 },
 ["Surge of Light (Discipline)"] = {
 ["iconSource"] = -1,
@@ -100341,8 +100460,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -100350,6 +100467,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -100419,12 +100543,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Frenzied Regeneration (Guardian)"] = {
 ["iconSource"] = -1,
@@ -100612,8 +100731,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -100621,6 +100738,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -100806,12 +100930,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Call of the Elder Druid"] = {
 ["iconSource"] = -1,
@@ -100968,37 +101087,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Core - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Call of the Elder Druid",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -101019,9 +101121,30 @@ true,
 ["easeType"] = "none",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Core - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Call of the Elder Druid",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "OL5Bvlnh26w",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -101094,13 +101217,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Dynamic Effects - LWA - Druid"] = {
@@ -101232,15 +101351,15 @@ true,
 ["Sudden Ambush"] = false,
 ["Wild Mushroom (Debuff)"] = false,
 ["Ravage (Optional - Feral)"] = false,
-["Winning Streak! (Druid - S2 - 2-Pieces)"] = false,
+["Dream Burst"] = false,
 ["Nature's Grace"] = false,
 ["Parting Skies (Optional)"] = false,
 ["Bloodseeker Vines (Restoration)"] = false,
-["Dryad's Favor (Balance - S3 - 4-Pieces)"] = false,
+["Winning Streak! (Druid - S2 - 2-Pieces)"] = false,
 ["Thrash (Restoration)"] = false,
 ["Overflowing Power (Optional)"] = false,
 ["Rip (Restoration)"] = false,
-["Dream Burst"] = false,
+["Dryad's Favor (Balance - S3 - 4-Pieces)"] = false,
 ["Sunfire (Restoration)"] = false,
 ["Moonlight Suffusion (Balance - S3 - 4-Pieces)"] = false,
 ["Ravage Rampage (Guardian - S3 - 2-Pieces)"] = false,
@@ -101253,13 +101372,13 @@ true,
 ["Blooming Infusion (Balance)"] = false,
 ["Rake (Restoration)"] = false,
 ["Balance of All Things (Optional)"] = false,
-["Moonlight Suffusion (Guardian - S3 - 4-Pieces)"] = false,
+["Wildshape Mastery (Guardian)"] = false,
 ["Umbral Embrace (Optional)"] = false,
 ["Ravage Rampage (Feral - S3 - 2-Pieces)"] = false,
 ["Orbit Breaker "] = false,
-["Soul of the Forest"] = false,
+["Predatory Swiftness"] = false,
 ["Bloodseeker Vines (Feral)"] = false,
-["Wildshape Mastery (Guardian)"] = false,
+["Moonlight Suffusion (Guardian - S3 - 4-Pieces)"] = false,
 ["Moonfire (Restoration)"] = false,
 ["Guardian of Elune"] = false,
 ["Wild Attunement (PvP Talent)"] = false,
@@ -101270,7 +101389,7 @@ true,
 ["Bloodtalons"] = false,
 ["Feline Potential"] = false,
 ["Ursine Vigor (Feral)"] = false,
-["Predatory Swiftness"] = false,
+["Soul of the Forest"] = false,
 ["Wild Synthesis"] = false,
 ["Precognition (Balance & Restoration - PvP Talent)"] = false,
 ["Coiled to Spring"] = false,
@@ -101323,7 +101442,29 @@ true,
 ["anchorFrameFrame"] = "WeakAuras:General Options - LWA - Druid",
 ["hybridPosition"] = "hybridFirst",
 ["limit"] = 5,
+["borderSize"] = 2,
+["config"] = {
+},
+["xOffset"] = -6.103515625e-05,
+["anchorFrameParent"] = false,
 ["gridType"] = "RD",
+["uid"] = "iGDEwE2C3T(",
+["rotation"] = 0,
+["semver"] = "11.2.2",
+["sort"] = "none",
+["id"] = "Dynamic Effects - LWA - Druid",
+["frameStrata"] = 1,
+["gridWidth"] = 5,
+["anchorFrameType"] = "SELECTFRAME",
+["borderEdge"] = "Square Full White",
+["radius"] = 200,
+["rowSpace"] = 1,
+["stepAngle"] = 15,
+["conditions"] = {
+},
+["information"] = {
+["forceEvents"] = true,
+},
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -101344,28 +101485,394 @@ true,
 ["easeType"] = "none",
 },
 },
+},
+["Shadow Word: Death (Shadow - Deathspeaker)"] = {
+["iconSource"] = -1,
+["wagoID"] = "BJu2WDqBX",
+["xOffset"] = 0,
+["adjustedMax"] = "",
+["adjustedMin"] = "",
+["yOffset"] = 0,
+["anchorPoint"] = "CENTER",
+["cooldownSwipe"] = true,
+["cooldownEdge"] = false,
+["icon"] = true,
+["triggers"] = {
+{
+["trigger"] = {
+["type"] = "aura2",
+["auranames"] = {
+"392511",
+},
+["ownOnly"] = true,
+["event"] = "Health",
+["unit"] = "player",
+["spellIds"] = {
+},
+["names"] = {
+},
+["useName"] = true,
+["subeventPrefix"] = "SPELL",
+["subeventSuffix"] = "_CAST_START",
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["track"] = "auto",
+["use_genericShowOn"] = true,
+["genericShowOn"] = "showAlways",
+["names"] = {
+},
+["use_showgcd"] = true,
+["debuffType"] = "HELPFUL",
+["type"] = "spell",
+["use_absorbHealMode"] = true,
+["subeventSuffix"] = "_CAST_START",
+["event"] = "Cooldown Progress (Spell)",
+["spellName"] = 32379,
+["realSpellName"] = "Shadow Word: Death",
+["use_spellName"] = true,
+["spellIds"] = {
+},
+["use_unit"] = true,
+["unit"] = "player",
+["use_absorbMode"] = true,
+["use_track"] = true,
+["subeventPrefix"] = "SPELL",
+},
+["untrigger"] = {
+},
+},
+{
+["trigger"] = {
+["type"] = "unit",
+["use_absorbHealMode"] = true,
+["use_absorbMode"] = true,
+["event"] = "Health",
+["use_unit"] = true,
+["unit"] = "target",
+["percenthealth"] = {
+"35",
+},
+["use_percenthealth"] = true,
+["percenthealth_operator"] = {
+"<=",
+},
+["debuffType"] = "HELPFUL",
+},
+["untrigger"] = {
+},
+},
+["disjunctive"] = "any",
+["activeTriggerMode"] = -10,
+},
+["internalVersion"] = 85,
+["keepAspectRatio"] = true,
+["selfPoint"] = "CENTER",
+["desaturate"] = false,
+["version"] = 87,
+["subRegions"] = {
+{
+["type"] = "subbackground",
+},
+{
+["border_size"] = 2,
+["border_offset"] = 0,
+["border_color"] = {
+1,
+1,
+1,
+0,
+},
+["border_visible"] = true,
+["border_edge"] = "Square Full White",
+["type"] = "subborder",
+},
+{
+["glowFrequency"] = 0.25,
+["type"] = "subglow",
+["glowDuration"] = 1,
+["glowType"] = "Proc",
+["glowThickness"] = 1,
+["glowYOffset"] = 0,
+["glowColor"] = {
+1,
+1,
+1,
+1,
+},
+["useGlowColor"] = false,
+["glowXOffset"] = 0,
+["glowLength"] = 10,
+["glow"] = false,
+["glowScale"] = 1,
+["glowLines"] = 8,
+["glowBorder"] = false,
+},
+},
+["height"] = 48,
+["load"] = {
+["use_petbattle"] = false,
+["use_never"] = false,
+["talent"] = {
+["multi"] = {
+[103681] = true,
+},
+},
+["class"] = {
+["single"] = "MAGE",
+["multi"] = {
+["MAGE"] = true,
+},
+},
+["use_talent"] = false,
+["use_class"] = true,
+["role"] = {
+["multi"] = {
+},
+},
+["use_class_and_spec"] = true,
+["class_and_spec"] = {
+["single"] = 258,
+["multi"] = {
+[257] = true,
+[258] = true,
+[256] = true,
+},
+},
+["spec"] = {
+["multi"] = {
+},
+},
+["use_spellknown"] = true,
+["spellknown"] = 32379,
+["size"] = {
+["multi"] = {
+},
+},
+},
+["useAdjustededMax"] = false,
+["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
+["actions"] = {
+["start"] = {
+},
+["init"] = {
+},
+["finish"] = {
+},
+},
+["animation"] = {
+["start"] = {
+["type"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["type"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["type"] = "none",
+["easeStrength"] = 3,
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
+["uid"] = "tAYw3WaZXsH",
+["anchorFrameParent"] = false,
+["width"] = 48,
+["frameStrata"] = 1,
+["zoom"] = 0.3,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Shadow Word: Death (Shadow - Deathspeaker)",
+["useCooldownModRate"] = true,
+["alpha"] = 1,
+["anchorFrameType"] = "SCREEN",
+["cooldownTextDisabled"] = false,
 ["config"] = {
 },
-["anchorFrameParent"] = false,
-["xOffset"] = -6.103515625e-05,
-["uid"] = "iGDEwE2C3T(",
-["rotation"] = 0,
-["semver"] = "11.2.2",
-["sort"] = "none",
-["id"] = "Dynamic Effects - LWA - Druid",
-["frameStrata"] = 1,
-["gridWidth"] = 5,
-["anchorFrameType"] = "SELECTFRAME",
-["borderEdge"] = "Square Full White",
-["radius"] = 200,
-["rowSpace"] = 1,
-["stepAngle"] = 15,
+["inverse"] = true,
+["authorOptions"] = {
+},
 ["conditions"] = {
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 0,
+},
+["changes"] = {
+{
+["value"] = false,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Proc",
+["property"] = "sub.3.glowType",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -1,
+["variable"] = "incombat",
+["value"] = 0,
+},
+["changes"] = {
+{
+["property"] = "sub.3.glow",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "insufficientResources",
+["value"] = 1,
+["checks"] = {
+{
+["value"] = 1,
+["variable"] = "insufficientResources",
+},
+{
+["trigger"] = -1,
+["variable"] = "incombat",
+},
+},
+},
+["changes"] = {
+{
+["value"] = {
+0.47450980392157,
+0.51372549019608,
+1,
+1,
+},
+["property"] = "color",
+},
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 2,
+["variable"] = "spellInRange",
+["value"] = 0,
+},
+["changes"] = {
+{
+["value"] = {
+0.87450980392157,
+0.34117647058824,
+0.32941176470588,
+1,
+},
+["property"] = "color",
+},
+{
+["value"] = true,
+["property"] = "desaturate",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = 1,
+["variable"] = "show",
+["value"] = 1,
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Proc",
+["property"] = "sub.3.glowType",
+},
+{
+["property"] = "inverse",
+},
+{
+["property"] = "desaturate",
+},
+{
+["value"] = true,
+["property"] = "cooldownEdge",
+},
+},
+},
+{
+["check"] = {
+["trigger"] = -2,
+["variable"] = "AND",
+["checks"] = {
+{
+["trigger"] = 2,
+["variable"] = "onCooldown",
+["value"] = 0,
+},
+{
+["trigger"] = 3,
+["variable"] = "show",
+["value"] = 1,
+},
+},
+},
+["changes"] = {
+{
+["value"] = true,
+["property"] = "sub.3.glow",
+},
+{
+["value"] = "Proc",
+["property"] = "sub.3.glowType",
+},
+},
+},
 },
 ["information"] = {
 ["forceEvents"] = true,
 },
-["borderSize"] = 2,
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Sunfire (Restoration)"] = {
 ["iconSource"] = -1,
@@ -101383,10 +101890,8 @@ true,
 ["trigger"] = {
 ["type"] = "aura2",
 ["useName"] = true,
+["subeventSuffix"] = "_CAST_START",
 ["match_countOperator"] = ">",
-["auranames"] = {
-"164815",
-},
 ["unit"] = "target",
 ["ownOnly"] = true,
 ["event"] = "Health",
@@ -101399,7 +101904,9 @@ true,
 ["subeventPrefix"] = "SPELL",
 ["match_count"] = "0",
 ["matchesShowOn"] = "showOnActive",
-["subeventSuffix"] = "_CAST_START",
+["auranames"] = {
+"164815",
+},
 ["debuffType"] = "HARMFUL",
 },
 ["untrigger"] = {
@@ -101492,37 +101999,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Dynamic Effects - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Sunfire (Restoration)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["type"] = "preset",
@@ -101545,19 +102035,36 @@ true,
 ["preset"] = "shrink",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Dynamic Effects - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Sunfire (Restoration)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "kCawuyOZH6x",
 ["inverse"] = false,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Cast Bar - LWA - Druid"] = {
@@ -102117,8 +102624,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -102126,6 +102631,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -102196,12 +102708,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Evangelism"] = {
 ["iconSource"] = -1,
@@ -102330,6 +102837,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -102337,21 +102848,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -102373,6 +102869,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "1tjUqtEPR9W",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -102463,7 +102970,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Rake (Restoration)"] = {
 ["iconSource"] = -1,
@@ -102481,10 +102988,8 @@ true,
 ["trigger"] = {
 ["type"] = "aura2",
 ["useName"] = true,
+["subeventSuffix"] = "_CAST_START",
 ["match_countOperator"] = ">",
-["auranames"] = {
-"155722",
-},
 ["unit"] = "target",
 ["ownOnly"] = true,
 ["event"] = "Health",
@@ -102497,7 +103002,9 @@ true,
 ["subeventPrefix"] = "SPELL",
 ["match_count"] = "0",
 ["matchesShowOn"] = "showOnActive",
-["subeventSuffix"] = "_CAST_START",
+["auranames"] = {
+"155722",
+},
 ["debuffType"] = "HARMFUL",
 },
 ["untrigger"] = {
@@ -102590,37 +103097,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Dynamic Effects - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Rake (Restoration)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["type"] = "preset",
@@ -102643,19 +103133,36 @@ true,
 ["preset"] = "shrink",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Dynamic Effects - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Rake (Restoration)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "LmsgVsWPxHg",
 ["inverse"] = false,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Starfall"] = {
@@ -102866,8 +103373,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -102877,6 +103382,13 @@ true,
 ["custom"] = "aura_env.region.extraZoom = 0.2",
 ["do_custom"] = true,
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -103070,500 +103582,6 @@ true,
 },
 ["displayIcon"] = 236168,
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
-},
-["Combot Point 3 (Off-Spec) - Druid"] = {
-["sparkWidth"] = 10,
-["iconSource"] = -1,
-["xOffset"] = 0,
-["adjustedMax"] = "3",
-["yOffset"] = 0,
-["anchorPoint"] = "CENTER",
-["sparkRotation"] = 0,
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["icon"] = false,
-["icon_color"] = {
-1,
-1,
-1,
-1,
-},
-["enableGradient"] = false,
-["selfPoint"] = "TOP",
-["barColor"] = {
-0.87450987100601,
-0.13725490868092,
-0.13725490868092,
-1,
-},
-["desaturate"] = false,
-["sparkOffsetY"] = 0,
-["gradientOrientation"] = "HORIZONTAL",
-["load"] = {
-["use_petbattle"] = false,
-["class_and_spec"] = {
-["single"] = 102,
-["multi"] = {
-[104] = true,
-[102] = true,
-[105] = true,
-},
-},
-["talent"] = {
-["multi"] = {
-},
-},
-["itemtypeequipped"] = {
-},
-["class"] = {
-["single"] = "MONK",
-["multi"] = {
-["EVOKER"] = true,
-},
-},
-["use_class_and_spec"] = false,
-["use_never"] = false,
-["use_class"] = true,
-["role"] = {
-["multi"] = {
-},
-},
-["use_spellknown"] = false,
-["use_spec"] = true,
-["spec"] = {
-["single"] = 3,
-["multi"] = {
-true,
-true,
-true,
-},
-},
-["zoneIds"] = "",
-["spellknown"] = 1822,
-["size"] = {
-["multi"] = {
-},
-},
-},
-["smoothProgress"] = false,
-["useAdjustededMin"] = true,
-["regionType"] = "aurabar",
-["overlayclip"] = true,
-["texture"] = "Solid",
-["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-["auto"] = true,
-["tocversion"] = 110200,
-["alpha"] = 1,
-["sparkColor"] = {
-1,
-1,
-1,
-1,
-},
-["colorState"] = "",
-["sparkOffsetX"] = 0,
-["wagoID"] = "ryBp05DHX",
-["parent"] = "Combo Points (Off-Spec) - LWA - Druid",
-["adjustedMin"] = "2",
-["sparkRotationMode"] = "AUTO",
-["triggers"] = {
-{
-["trigger"] = {
-["auranames"] = {
-},
-["matchesShowOn"] = "showAlways",
-["use_showCost"] = false,
-["unit"] = "player",
-["powertype"] = 4,
-["use_powertype"] = true,
-["debuffType"] = "HELPFUL",
-["useName"] = true,
-["use_absorbHealMode"] = true,
-["subeventSuffix"] = "_CAST_START",
-["event"] = "Power",
-["use_requirePowerType"] = false,
-["use_percentpower"] = false,
-["subeventPrefix"] = "SPELL",
-["use_showChargedComboPoints"] = false,
-["spellIds"] = {
-},
-["type"] = "unit",
-["ownOnly"] = true,
-["use_absorbMode"] = true,
-["use_unit"] = true,
-["names"] = {
-},
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["type"] = "aura2",
-["auranames"] = {
-"768",
-},
-["debuffType"] = "HELPFUL",
-["ownOnly"] = true,
-["useName"] = true,
-["unit"] = "player",
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["type"] = "spell",
-["use_genericShowOn"] = true,
-["genericShowOn"] = "showOnCooldown",
-["unit"] = "player",
-["use_spellName"] = true,
-["debuffType"] = "HELPFUL",
-["use_petspell"] = false,
-["event"] = "Spell Known",
-["use_track"] = true,
-["spellName"] = 1822,
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["use_specId"] = true,
-["type"] = "unit",
-["use_absorbHealMode"] = true,
-["use_absorbMode"] = true,
-["event"] = "Class/Spec",
-["use_unit"] = true,
-["specId"] = {
-["single"] = 105,
-},
-["unit"] = "player",
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-{
-["trigger"] = {
-["useName"] = true,
-["unit"] = "player",
-["auranames"] = {
-"5487",
-},
-["ownOnly"] = true,
-["matchesShowOn"] = "showOnMissing",
-["type"] = "aura2",
-["debuffType"] = "HELPFUL",
-},
-["untrigger"] = {
-},
-},
-["disjunctive"] = "custom",
-["customTriggerLogic"] = "function(t)\n    return t[2] or (t[3] and t[4]) and t[5]\nend",
-["activeTriggerMode"] = 1,
-},
-["internalVersion"] = 85,
-["progressSource"] = {
--1,
-"",
-},
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["colorR"] = 1,
-["use_rotate"] = false,
-["duration_type"] = "seconds",
-["alphaType"] = "custom",
-["colorA"] = 1,
-["colorG"] = 1,
-["alphaFunc"] = "",
-["use_alpha"] = false,
-["type"] = "none",
-["easeType"] = "none",
-["scaley"] = 1,
-["alpha"] = 0,
-["duration"] = "",
-["y"] = 0,
-["x"] = 0,
-["rotateType"] = "straight",
-["rotate"] = 360,
-["easeStrength"] = 3,
-["rotateFunc"] = "    function(progress, start, delta)\n      return start + (progress * delta)\n    end\n  ",
-["colorB"] = 1,
-["scalex"] = 1,
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
-["isPrimaryResource"] = false,
-["version"] = 124,
-["subRegions"] = {
-{
-["type"] = "subbackground",
-},
-{
-["type"] = "subforeground",
-},
-{
-["border_offset"] = 0,
-["type"] = "subborder",
-["anchor_area"] = "bar",
-["border_color"] = {
-0,
-0,
-0,
-0,
-},
-["border_visible"] = false,
-["border_edge"] = "Square Full White",
-["border_size"] = 2,
-},
-{
-["glowFrequency"] = 0.25,
-["glow"] = false,
-["useGlowColor"] = false,
-["glowScale"] = 1,
-["glowThickness"] = 1,
-["glowType"] = "Pixel",
-["glowYOffset"] = 0,
-["glowColor"] = {
-1,
-1,
-1,
-1,
-},
-["glowDuration"] = 1,
-["type"] = "subglow",
-["glowLength"] = 10,
-["glowXOffset"] = 0,
-["anchor_area"] = "bar",
-["glowLines"] = 8,
-["glowBorder"] = false,
-},
-},
-["height"] = 20,
-["textureSource"] = "LSM",
-["sparkBlendMode"] = "ADD",
-["useAdjustededMax"] = true,
-["source"] = "import",
-["authorOptions"] = {
-},
-["barColor2"] = {
-1,
-1,
-0,
-1,
-},
-["configGroup"] = "combo_points",
-["config"] = {
-},
-["zoom"] = 0,
-["icon_side"] = "RIGHT",
-["customText"] = "",
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-["custom"] = "aura_env.region.configGroup = \"combo_points_off\"",
-["do_custom"] = true,
-},
-},
-["anchorFrameParent"] = false,
-["backgroundColor"] = {
-0,
-0,
-0,
-0.30000001192093,
-},
-["overlaysTexture"] = {
-"Solid",
-"Solid",
-"Solid",
-"Solid",
-},
-["width"] = 65,
-["semver"] = "11.2.2",
-["id"] = "Combot Point 3 (Off-Spec) - Druid",
-["sparkHidden"] = "NEVER",
-["uid"] = "af58tIkLSHP",
-["frameStrata"] = 1,
-["anchorFrameType"] = "SCREEN",
-["spark"] = false,
-["sparkHeight"] = 30,
-["inverse"] = false,
-["overlays"] = {
-{
-0,
-0,
-0,
-0,
-},
-{
-0,
-0,
-0,
-0,
-},
-{
-0,
-0,
-0,
-0,
-},
-{
-0,
-0,
-0,
-0,
-},
-},
-["orientation"] = "HORIZONTAL",
-["conditions"] = {
-{
-["check"] = {
-["op"] = "==",
-["checks"] = {
-{
-["trigger"] = -2,
-["op"] = "==",
-["variable"] = "AND",
-["checks"] = {
-{
-["trigger"] = 1,
-["op"] = "==",
-["value"] = "5",
-["variable"] = "power",
-},
-{
-["trigger"] = 3,
-["variable"] = "show",
-["value"] = 0,
-},
-},
-},
-{
-["trigger"] = -2,
-["variable"] = "AND",
-["checks"] = {
-{
-["trigger"] = 1,
-["op"] = "==",
-["value"] = "6",
-["variable"] = "power",
-},
-{
-["trigger"] = 3,
-["variable"] = "show",
-["value"] = 1,
-},
-},
-},
-},
-["value"] = "100",
-["variable"] = "percentpower",
-["trigger"] = 1,
-},
-["linked"] = false,
-["changes"] = {
-{
-["value"] = {
-["custom"] = "aura_env.region.colorState = \"full\"\nWeakAuras.ScanEvents(\"LWA_UPDATE_BAR\", aura_env, 1, aura_env.states[1].total)",
-},
-["property"] = "customcode",
-},
-},
-},
-{
-["check"] = {
-["op"] = "==",
-["checks"] = {
-{
-["trigger"] = -2,
-["op"] = "==",
-["variable"] = "AND",
-["checks"] = {
-{
-["trigger"] = 1,
-["op"] = "==",
-["value"] = "5",
-["variable"] = "power",
-},
-{
-["trigger"] = 3,
-["variable"] = "show",
-["value"] = 0,
-},
-},
-},
-{
-["trigger"] = -2,
-["variable"] = "AND",
-["checks"] = {
-{
-["trigger"] = 1,
-["op"] = "==",
-["value"] = "6",
-["variable"] = "power",
-},
-{
-["trigger"] = 3,
-["variable"] = "show",
-["value"] = 1,
-},
-},
-},
-},
-["value"] = "1",
-["variable"] = "deficit",
-["trigger"] = 1,
-},
-["linked"] = true,
-["changes"] = {
-{
-["value"] = {
-["custom"] = "aura_env.region.colorState = \"high\"\nWeakAuras.ScanEvents(\"LWA_UPDATE_BAR\", aura_env, 1, aura_env.states[1].total)",
-},
-["property"] = "customcode",
-},
-},
-},
-{
-["check"] = {
-["trigger"] = -1,
-["variable"] = "alwaystrue",
-},
-["linked"] = true,
-["changes"] = {
-{
-["value"] = {
-["custom"] = "aura_env.region.colorState = \"\"\nWeakAuras.ScanEvents(\"LWA_UPDATE_BAR\", aura_env, 1, aura_env.states[1].total)",
-},
-["property"] = "customcode",
-},
-},
-},
-},
-["information"] = {
-["forceEvents"] = true,
-["ignoreOptionsEventErrors"] = true,
-},
 ["preferToUpdate"] = false,
 },
 ["Holy Word: Sanctify"] = {
@@ -103748,8 +103766,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -103757,6 +103773,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -103953,12 +103976,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Shattered Psyche"] = {
 ["iconSource"] = -1,
@@ -104123,8 +104141,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -104132,6 +104148,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -104203,12 +104226,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Holy Fire"] = {
 ["iconSource"] = 0,
@@ -104397,8 +104415,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -104406,6 +104422,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = 135972,
@@ -104583,12 +104606,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Prayer of Mending (Discipline)"] = {
 ["iconSource"] = -1,
@@ -104717,6 +104735,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -104724,21 +104746,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -104760,6 +104767,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "zgxCCUkvQ7J",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -104856,7 +104874,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Empowered Renew"] = {
 ["iconSource"] = -1,
@@ -105024,8 +105042,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -105033,6 +105049,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -105209,12 +105232,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Power Word: Life (Holy)"] = {
 ["iconSource"] = -1,
@@ -105342,6 +105360,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -105349,21 +105371,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -105385,6 +105392,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "QGMOZdyQqpB",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -105481,7 +105499,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Waste No Time (Holy)"] = {
 ["iconSource"] = -1,
@@ -105614,8 +105632,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -105623,6 +105639,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -105693,12 +105716,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Halo (Discipline)"] = {
 ["iconSource"] = -1,
@@ -105826,6 +105844,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -105833,21 +105855,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -105869,6 +105876,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "HnlBIneghXJ",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -105965,7 +105983,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Moonfire (Feral)"] = {
 ["iconSource"] = -1,
@@ -106621,6 +106639,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -106628,21 +106650,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -106664,6 +106671,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "9mldNNX9rer",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -106790,7 +106808,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Precognition (Priest - PvP Talent)"] = {
 ["iconSource"] = -1,
@@ -106920,8 +106938,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -106929,6 +106945,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -106998,12 +107021,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Abundance"] = {
 ["iconSource"] = -1,
@@ -107161,8 +107179,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -107170,6 +107186,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -107223,12 +107246,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Umbral Embrace (Optional)"] = {
 ["iconSource"] = -1,
@@ -107376,8 +107394,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -107385,6 +107401,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -107465,12 +107488,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Ferocious Bite"] = {
 ["iconSource"] = -1,
@@ -107756,8 +107774,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -107765,6 +107781,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -107995,12 +108018,7 @@ true,
 },
 ["displayIcon"] = 132127,
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Mind Blast (Shadow)"] = {
 ["iconSource"] = 2,
@@ -108191,8 +108209,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -108200,6 +108216,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -108401,12 +108424,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Shadow Crash"] = {
 ["iconSource"] = -1,
@@ -108518,7 +108536,7 @@ true,
 1,
 },
 ["text_selfPoint"] = "CENTER",
-["text_text_format_3.p_time_mod_rate"] = true,
+["text_shadowYOffset"] = 0,
 ["type"] = "subtext",
 ["text_visible"] = true,
 ["text_color"] = {
@@ -108528,8 +108546,8 @@ true,
 1,
 },
 ["text_font"] = "Friz Quadrata TT",
-["text_shadowYOffset"] = 0,
 ["text_anchorYOffset"] = -4,
+["text_text_format_3.p_time_mod_rate"] = true,
 ["text_text_format_3.p_time_dynamic_threshold"] = 5,
 ["text_wordWrap"] = "WordWrap",
 ["text_fontType"] = "OUTLINE",
@@ -108584,8 +108602,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -108593,6 +108609,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -108729,12 +108752,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Growl"] = {
 ["iconSource"] = -1,
@@ -108886,19 +108904,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Utilities - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -108951,10 +108990,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["config"] = {
 ["utility"] = {
 ["behavior"] = 2,
@@ -108971,29 +109007,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "kbw4)0WNE7K",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -109092,13 +109114,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Lifebloom"] = {
@@ -109308,8 +109326,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -109317,6 +109333,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -109485,12 +109508,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Rage Bar (Off-Spec) - LWA - Druid"] = {
 ["sparkWidth"] = 10,
@@ -109503,9 +109521,9 @@ true,
 ["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["actions"] = {
 ["start"] = {
+["do_custom"] = false,
 ["custom"] = "",
 ["do_message"] = false,
-["do_custom"] = false,
 },
 ["finish"] = {
 },
@@ -109962,8 +109980,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -109971,6 +109987,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -110096,12 +110119,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Power Word: Life (Discipline)"] = {
 ["iconSource"] = -1,
@@ -110229,6 +110247,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -110236,21 +110258,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -110272,6 +110279,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "pyx)UoEeyse",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -110368,7 +110386,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Premonition of Piety (Disicipline)"] = {
 ["iconSource"] = -1,
@@ -110501,8 +110519,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -110510,6 +110526,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -110579,14 +110602,9 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
+["preferToUpdate"] = false,
 },
-},
-["Ursol's Vortex"] = {
+["Demoralizing Roar (PvP Talent)"] = {
 ["iconSource"] = -1,
 ["wagoID"] = "ryBp05DHX",
 ["xOffset"] = 0,
@@ -110600,24 +110618,21 @@ true,
 ["triggers"] = {
 {
 ["trigger"] = {
-["type"] = "combatlog",
-["spellId"] = {
-"102793",
+["type"] = "aura2",
+["auranames"] = {
+"201664",
 },
-["subeventSuffix"] = "_CAST_SUCCESS",
-["duration"] = "10",
-["event"] = "Combat Log",
-["unit"] = "player",
 ["ownOnly"] = true,
-["use_spellId"] = true,
+["event"] = "Health",
+["unit"] = "target",
 ["spellIds"] = {
 },
-["use_sourceUnit"] = true,
-["subeventPrefix"] = "SPELL",
 ["names"] = {
 },
-["sourceUnit"] = "player",
-["debuffType"] = "HELPFUL",
+["subeventSuffix"] = "_CAST_START",
+["subeventPrefix"] = "SPELL",
+["useName"] = true,
+["debuffType"] = "HARMFUL",
 },
 ["untrigger"] = {
 },
@@ -110636,7 +110651,7 @@ true,
 ["subeventSuffix"] = "_CAST_START",
 ["event"] = "Cooldown Progress (Spell)",
 ["subeventPrefix"] = "SPELL",
-["realSpellName"] = "Ursol's Vortex",
+["realSpellName"] = "Demoralizing Roar",
 ["use_spellName"] = true,
 ["spellIds"] = {
 },
@@ -110644,7 +110659,7 @@ true,
 ["use_absorbMode"] = true,
 ["unit"] = "player",
 ["use_track"] = true,
-["spellName"] = 102793,
+["spellName"] = 201664,
 },
 ["untrigger"] = {
 },
@@ -110663,7 +110678,7 @@ true,
 ["subeventSuffix"] = "_CAST_START",
 ["event"] = "Cooldown Progress (Spell)",
 ["subeventPrefix"] = "SPELL",
-["realSpellName"] = "Ursol's Vortex",
+["realSpellName"] = "Demoralizing Roar",
 ["use_spellName"] = true,
 ["spellIds"] = {
 },
@@ -110671,7 +110686,7 @@ true,
 ["use_absorbMode"] = true,
 ["unit"] = "player",
 ["use_track"] = true,
-["spellName"] = 102793,
+["spellName"] = 201664,
 },
 ["untrigger"] = {
 },
@@ -110682,26 +110697,7 @@ true,
 },
 ["internalVersion"] = 85,
 ["keepAspectRatio"] = true,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["selfPoint"] = "CENTER",
 ["desaturate"] = false,
 ["version"] = 124,
 ["subRegions"] = {
@@ -110747,7 +110743,7 @@ true,
 ["load"] = {
 ["use_petbattle"] = false,
 ["class_and_spec"] = {
-["single"] = 64,
+["single"] = 104,
 ["multi"] = {
 [103] = true,
 [104] = true,
@@ -110767,25 +110763,132 @@ true,
 },
 ["use_class"] = true,
 ["use_spellknown"] = true,
-["use_class_and_spec"] = false,
+["use_class_and_spec"] = true,
 ["use_never"] = false,
 ["spec"] = {
 ["multi"] = {
 },
 },
-["spellknown"] = 102793,
+["spellknown"] = 201664,
 ["size"] = {
 ["multi"] = {
 },
 },
 },
 ["useAdjustededMax"] = false,
-["anchorFrameType"] = "SCREEN",
 ["source"] = "import",
+["zoom"] = 0.3,
+["actions"] = {
+["start"] = {
+},
+["finish"] = {
+},
+["init"] = {
+},
+},
 ["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["parent"] = "Utilities - LWA - Druid",
 ["information"] = {
 ["forceEvents"] = true,
+},
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
+["authorOptions"] = {
+{
+["subOptions"] = {
+{
+["useName"] = true,
+["type"] = "header",
+["text"] = "Behavior",
+["noMerge"] = false,
+["width"] = 1,
+},
+{
+["type"] = "select",
+["default"] = 2,
+["values"] = {
+"Show on Cooldown",
+"Always Show",
+},
+["name"] = "Display Behavior",
+["useDesc"] = false,
+["key"] = "behavior",
+["width"] = 1,
+},
+{
+["softMin"] = 0,
+["type"] = "range",
+["bigStep"] = 1,
+["max"] = 100,
+["step"] = 1,
+["width"] = 1,
+["min"] = 0,
+["key"] = "alpha",
+["softMax"] = 100,
+["default"] = 30,
+["name"] = "Always Show Alpha",
+["useDesc"] = false,
+},
+},
+["hideReorder"] = true,
+["useDesc"] = false,
+["nameSource"] = 0,
+["name"] = "Utility Icons",
+["width"] = 1,
+["useCollapse"] = true,
+["noMerge"] = false,
+["collapse"] = true,
+["type"] = "group",
+["limitType"] = "none",
+["groupType"] = "simple",
+["key"] = "utility",
+["size"] = 10,
+},
+},
+["parent"] = "Utilities - LWA - Druid",
+["config"] = {
+["utility"] = {
+["behavior"] = 2,
+["alpha"] = 30,
+},
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Demoralizing Roar (PvP Talent)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
+["uid"] = "lPfEyKFr(nh",
+["inverse"] = true,
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["conditions"] = {
 {
@@ -110903,95 +111006,6 @@ true,
 },
 },
 },
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["preferToUpdate"] = false,
-["uid"] = "fcFKj7GeK(X",
-["alpha"] = 1,
-["anchorFrameParent"] = false,
-["frameStrata"] = 1,
-["cooldownTextDisabled"] = false,
-["zoom"] = 0.3,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Ursol's Vortex",
-["selfPoint"] = "CENTER",
-["useCooldownModRate"] = true,
-["width"] = 48,
-["authorOptions"] = {
-{
-["subOptions"] = {
-{
-["useName"] = true,
-["type"] = "header",
-["text"] = "Behavior",
-["noMerge"] = false,
-["width"] = 1,
-},
-{
-["type"] = "select",
-["default"] = 2,
-["values"] = {
-"Show on Cooldown",
-"Always Show",
-},
-["name"] = "Display Behavior",
-["useDesc"] = false,
-["key"] = "behavior",
-["width"] = 1,
-},
-{
-["softMin"] = 0,
-["type"] = "range",
-["bigStep"] = 1,
-["max"] = 100,
-["step"] = 1,
-["width"] = 1,
-["min"] = 0,
-["key"] = "alpha",
-["softMax"] = 100,
-["default"] = 30,
-["name"] = "Always Show Alpha",
-["useDesc"] = false,
-},
-},
-["hideReorder"] = true,
-["useDesc"] = false,
-["nameSource"] = 0,
-["name"] = "Utility Icons",
-["width"] = 1,
-["useCollapse"] = true,
-["noMerge"] = false,
-["collapse"] = true,
-["type"] = "group",
-["limitType"] = "none",
-["groupType"] = "simple",
-["key"] = "utility",
-["size"] = 10,
-},
-},
-["config"] = {
-["utility"] = {
-["behavior"] = 2,
-["alpha"] = 30,
-},
-},
-["inverse"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
-},
-["displayIcon"] = 571588,
 ["cooldown"] = true,
 ["progressSource"] = {
 -1,
@@ -111124,37 +111138,22 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Dynamic Effects - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+["custom"] = "aura_env.region.extraZoom = 0.2",
+["do_custom"] = true,
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Starsuge (Restoration)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["type"] = "preset",
@@ -111177,9 +111176,30 @@ true,
 ["preset"] = "shrink",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Dynamic Effects - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Starsuge (Restoration)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "hjPZhwohi7p",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -111279,15 +111299,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-["custom"] = "aura_env.region.extraZoom = 0.2",
-["do_custom"] = true,
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Dispersion"] = {
@@ -111466,6 +111480,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -111473,21 +111491,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -111509,6 +111512,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Utilities - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "IZZzjerIG(r",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -111699,7 +111713,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Silence"] = {
 ["iconSource"] = -1,
@@ -111877,6 +111891,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -111884,21 +111902,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -111920,6 +111923,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Utilities - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "RjbIeD7vyma",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -112142,7 +112156,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Shadow Crash (Target)"] = {
 ["iconSource"] = -1,
@@ -112254,7 +112268,7 @@ true,
 1,
 },
 ["text_selfPoint"] = "CENTER",
-["text_text_format_3.p_time_mod_rate"] = true,
+["text_shadowYOffset"] = 0,
 ["type"] = "subtext",
 ["text_visible"] = true,
 ["text_color"] = {
@@ -112264,8 +112278,8 @@ true,
 1,
 },
 ["text_font"] = "Friz Quadrata TT",
-["text_shadowYOffset"] = 0,
 ["text_anchorYOffset"] = -4,
+["text_text_format_3.p_time_mod_rate"] = true,
 ["text_text_format_3.p_time_dynamic_threshold"] = 5,
 ["text_wordWrap"] = "WordWrap",
 ["text_fontType"] = "OUTLINE",
@@ -112320,8 +112334,6 @@ true,
 },
 ["frameStrata"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -112329,6 +112341,13 @@ true,
 },
 ["finish"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["cooldown"] = true,
 ["displayIcon"] = "",
@@ -112497,12 +112516,7 @@ true,
 ["forceEvents"] = true,
 ["ignoreOptionsEventErrors"] = true,
 },
-["color"] = {
-1,
-1,
-1,
-1,
-},
+["preferToUpdate"] = false,
 },
 ["Power Infusion (Shadow)"] = {
 ["iconSource"] = -1,
@@ -112656,6 +112670,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -112663,21 +112681,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -112699,6 +112702,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Core - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "JNFSb74)QM2",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -112790,7 +112804,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Core - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Divine Ascension (PvP Talent)"] = {
 ["iconSource"] = 2,
@@ -112991,8 +113005,11 @@ true,
 ["useAdjustededMax"] = false,
 ["width"] = 48,
 ["source"] = "import",
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 ["parent"] = "Utilities - LWA - Priest",
+["progressSource"] = {
+-1,
+"",
+},
 ["cooldown"] = true,
 ["displayIcon"] = "",
 ["useAdjustededMin"] = false,
@@ -113266,10 +113283,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["progressSource"] = {
--1,
-"",
-},
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Ursoc's Fury - LWA - Druid"] = {
 ["sparkWidth"] = 10,
@@ -113714,19 +113728,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Utilities - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -113779,10 +113814,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["config"] = {
 ["utility"] = {
 ["behavior"] = 2,
@@ -113799,29 +113831,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "btdy4tbgSDK",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -113920,13 +113938,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Restitution"] = {
@@ -114046,6 +114060,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -114053,21 +114071,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -114089,6 +114092,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Maintenance - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "5FmEOJR7hmD",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -114141,7 +114155,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Maintenance - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Leap of Faith"] = {
 ["iconSource"] = -1,
@@ -114298,6 +114312,10 @@ true,
 },
 ["useAdjustededMax"] = false,
 ["source"] = "import",
+["progressSource"] = {
+-1,
+"",
+},
 ["actions"] = {
 ["start"] = {
 },
@@ -114305,21 +114323,6 @@ true,
 },
 ["finish"] = {
 },
-},
-["color"] = {
-1,
-1,
-1,
-1,
-},
-["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
-["cooldown"] = true,
-["useAdjustededMin"] = false,
-["regionType"] = "icon",
-["preferToUpdate"] = false,
-["progressSource"] = {
--1,
-"",
 },
 ["animation"] = {
 ["start"] = {
@@ -114341,6 +114344,17 @@ true,
 ["easeType"] = "none",
 },
 },
+["cooldown"] = true,
+["useAdjustededMin"] = false,
+["regionType"] = "icon",
+["color"] = {
+1,
+1,
+1,
+1,
+},
+["parent"] = "Utilities - LWA - Priest",
+["preferToUpdate"] = false,
 ["uid"] = "64NDBDFLj6l",
 ["anchorFrameParent"] = false,
 ["width"] = 48,
@@ -114502,7 +114516,7 @@ true,
 ["information"] = {
 ["forceEvents"] = true,
 },
-["parent"] = "Utilities - LWA - Priest",
+["url"] = "https://wago.io/LuxthosPriestWarWithin/87",
 },
 ["Typhoon"] = {
 ["iconSource"] = -1,
@@ -114657,19 +114671,40 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Utilities - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
+["animation"] = {
+["start"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["main"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+["finish"] = {
+["easeStrength"] = 3,
+["type"] = "none",
+["duration_type"] = "seconds",
+["easeType"] = "none",
+},
+},
 ["authorOptions"] = {
 {
 ["subOptions"] = {
@@ -114722,10 +114757,7 @@ true,
 ["size"] = 10,
 },
 },
-["progressSource"] = {
--1,
-"",
-},
+["parent"] = "Utilities - LWA - Druid",
 ["config"] = {
 ["utility"] = {
 ["behavior"] = 2,
@@ -114742,29 +114774,15 @@ true,
 ["useCooldownModRate"] = true,
 ["frameStrata"] = 1,
 ["width"] = 48,
-["animation"] = {
-["start"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["main"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-["finish"] = {
-["easeStrength"] = 3,
-["type"] = "none",
-["duration_type"] = "seconds",
-["easeType"] = "none",
-},
-},
+["preferToUpdate"] = false,
 ["uid"] = "J4D9Tz4dUZj",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -114853,13 +114871,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Starfire 2"] = {
@@ -114977,21 +114991,20 @@ true,
 ["duration"] = "1",
 ["useStacks"] = true,
 ["use_rune"] = true,
-["names"] = {
-},
+["unit"] = "player",
 ["use_absorbMode"] = true,
 ["genericShowOn"] = "showAlways",
-["subeventPrefix"] = "SPELL",
+["use_unit"] = true,
 ["powertype"] = 19,
 ["stacks"] = "1",
-["useName"] = true,
-["charges"] = "1",
-["use_trackcharge"] = false,
+["type"] = "spell",
 ["trackcharge"] = "2",
+["use_trackcharge"] = false,
+["charges"] = "1",
 ["use_powertype"] = true,
 ["debuffType"] = "HELPFUL",
 ["charges_operator"] = ">",
-["type"] = "spell",
+["useName"] = true,
 ["use_charges"] = false,
 ["power"] = "1",
 ["use_spellCount"] = false,
@@ -115004,8 +115017,9 @@ true,
 },
 ["spellCount_operator"] = "==",
 ["matchesShowOn"] = "showOnActive",
-["use_unit"] = true,
-["unit"] = "player",
+["subeventPrefix"] = "SPELL",
+["names"] = {
+},
 ["use_genericShowOn"] = true,
 },
 ["untrigger"] = {
@@ -115462,37 +115476,20 @@ true,
 ["useAdjustededMax"] = false,
 ["source"] = "import",
 ["zoom"] = 0.3,
-["color"] = {
-1,
-1,
-1,
-1,
+["actions"] = {
+["start"] = {
 },
-["parent"] = "Core - LWA - Druid",
+["finish"] = {
+},
+["init"] = {
+},
+},
+["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
 ["information"] = {
 ["forceEvents"] = true,
 },
 ["useAdjustededMin"] = false,
 ["regionType"] = "icon",
-["url"] = "https://wago.io/LuxthosDruidWarWithin/124",
-["authorOptions"] = {
-},
-["progressSource"] = {
--1,
-"",
-},
-["config"] = {
-},
-["anchorFrameParent"] = false,
-["anchorFrameType"] = "SCREEN",
-["alpha"] = 1,
-["cooldownTextDisabled"] = false,
-["semver"] = "11.2.2",
-["tocversion"] = 110200,
-["id"] = "Convoke the Spirits (Feral)",
-["useCooldownModRate"] = true,
-["frameStrata"] = 1,
-["width"] = 48,
 ["animation"] = {
 ["start"] = {
 ["easeStrength"] = 3,
@@ -115513,9 +115510,30 @@ true,
 ["easeType"] = "none",
 },
 },
+["authorOptions"] = {
+},
+["parent"] = "Core - LWA - Druid",
+["config"] = {
+},
+["anchorFrameParent"] = false,
+["anchorFrameType"] = "SCREEN",
+["alpha"] = 1,
+["cooldownTextDisabled"] = false,
+["semver"] = "11.2.2",
+["tocversion"] = 110200,
+["id"] = "Convoke the Spirits (Feral)",
+["useCooldownModRate"] = true,
+["frameStrata"] = 1,
+["width"] = 48,
+["preferToUpdate"] = false,
 ["uid"] = "01OtqLk(lEo",
 ["inverse"] = true,
-["preferToUpdate"] = false,
+["color"] = {
+1,
+1,
+1,
+1,
+},
 ["conditions"] = {
 {
 ["check"] = {
@@ -115588,13 +115606,9 @@ true,
 },
 },
 ["cooldown"] = true,
-["actions"] = {
-["start"] = {
-},
-["finish"] = {
-},
-["init"] = {
-},
+["progressSource"] = {
+-1,
+"",
 },
 },
 ["Mind Blast 2"] = {
@@ -115706,12 +115720,12 @@ true,
 ["powertype"] = 19,
 ["duration"] = "1",
 ["unit"] = "player",
-["type"] = "spell",
-["useName"] = true,
+["charges"] = "2",
+["trackcharge"] = "2",
 ["use_trackcharge"] = true,
 ["debuffType"] = "HELPFUL",
 ["charges_operator"] = "==",
-["charges"] = "2",
+["type"] = "spell",
 ["unevent"] = "auto",
 ["power"] = "1",
 ["track"] = "auto",
@@ -115722,7 +115736,7 @@ true,
 ["use_spellName"] = true,
 ["spellIds"] = {
 },
-["trackcharge"] = "2",
+["useName"] = true,
 ["names"] = {
 },
 ["stacks"] = "2",
@@ -116288,12 +116302,12 @@ true,
 0,
 1,
 },
-["text_text_format_p_time_legacy_floor"] = true,
+["text_text_format_c_format"] = "none",
 ["text_selfPoint"] = "LEFT",
 ["text_automaticWidth"] = "Auto",
 ["text_fixedWidth"] = 64,
-["text_text_format_c_format"] = "none",
 ["anchorYOffset"] = 0,
+["text_text_format_p_time_legacy_floor"] = true,
 ["text_justify"] = "CENTER",
 ["rotateText"] = "NONE",
 ["text_shadowXOffset"] = 1,
@@ -116435,9 +116449,9 @@ true,
 ["inverse"] = false,
 ["actions"] = {
 ["start"] = {
+["do_custom"] = false,
 ["custom"] = "",
 ["do_message"] = false,
-["do_custom"] = false,
 },
 ["finish"] = {
 },
@@ -117282,12 +117296,12 @@ true,
 ["powertype"] = 19,
 ["duration"] = "1",
 ["unit"] = "player",
-["type"] = "spell",
-["useName"] = true,
+["charges"] = "2",
+["trackcharge"] = "2",
 ["use_trackcharge"] = true,
 ["debuffType"] = "HELPFUL",
 ["charges_operator"] = "==",
-["charges"] = "2",
+["type"] = "spell",
 ["unevent"] = "auto",
 ["power"] = "1",
 ["track"] = "auto",
@@ -117298,7 +117312,7 @@ true,
 ["use_spellName"] = true,
 ["spellIds"] = {
 },
-["trackcharge"] = "2",
+["useName"] = true,
 ["names"] = {
 },
 ["stacks"] = "2",
@@ -117638,8 +117652,6 @@ true,
 },
 ["alpha"] = 1,
 ["useAdjustededMax"] = false,
-["preferToUpdate"] = false,
-["source"] = "import",
 ["actions"] = {
 ["start"] = {
 },
@@ -117647,6 +117659,13 @@ true,
 },
 ["init"] = {
 },
+},
+["source"] = "import",
+["color"] = {
+1,
+1,
+1,
+1,
 },
 ["information"] = {
 ["forceEvents"] = true,
@@ -117716,26 +117735,7 @@ true,
 },
 ["displayIcon"] = "",
 ["cooldown"] = true,
-["color"] = {
-1,
-1,
-1,
-1,
+["preferToUpdate"] = false,
 },
 },
-},
-["editor_font_size"] = 12,
-["lastArchiveClear"] = 1756679656,
-["minimap"] = {
-["hide"] = false,
-},
-["historyCutoff"] = 730,
-["dbVersion"] = 85,
-["migrationCutoff"] = 730,
-["features"] = {
-},
-["lastUpgrade"] = 1756679666,
-["registered"] = {
-},
-["login_squelch_time"] = 10,
 }

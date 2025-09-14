@@ -46,3 +46,4 @@ ElvUI_RatioMinimapAuras: disabled
 kExtraBossFrames: disabled
 WeakAurasCompanion: enabled
 Blizzard_CombatText: enabled
+LittleWigs: enabled
