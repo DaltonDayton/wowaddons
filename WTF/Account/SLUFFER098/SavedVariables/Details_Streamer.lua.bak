@@ -1,8 +1,9 @@
 
 Details_StreamerDB = {
 ["characters"] = {
-["Xamuul - Ner'zhul"] = "Xamuul - Ner'zhul",
 ["Xavaat - Ner'zhul"] = "Xamuul - Ner'zhul",
+["Xamuul - Ner'zhul"] = "Xamuul - Ner'zhul",
+["Xambank - Ner'zhul"] = "Xamuul - Ner'zhul",
 },
 ["profiles"] = {
 ["Xamuul - Ner'zhul"] = {
@@ -64,13 +65,13 @@ Details_StreamerDB = {
 ["x"] = -0.000244140625,
 ["font_face"] = "Friz Quadrata TT",
 ["square_size"] = 32,
-["use_spark"] = true,
 ["row_color"] = {
 0.1,
 0.1,
 0.1,
 0.4,
 },
+["use_spark"] = true,
 ["main_frame_locked"] = false,
 ["arrow_anchor_y"] = 0,
 },

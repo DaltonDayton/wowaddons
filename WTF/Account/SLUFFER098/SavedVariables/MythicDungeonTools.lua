@@ -1,8 +1,9 @@
 
 MythicDungeonToolsDB = {
 ["profileKeys"] = {
-["Xamuul - Ner'zhul"] = "Xamuul - Ner'zhul",
 ["Xavaat - Ner'zhul"] = "Xavaat - Ner'zhul",
+["Xamuul - Ner'zhul"] = "Xamuul - Ner'zhul",
+["Xambank - Ner'zhul"] = "Xambank - Ner'zhul",
 },
 ["global"] = {
 ["minimap"] = {

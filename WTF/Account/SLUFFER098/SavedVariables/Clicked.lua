@@ -2,11 +2,12 @@
 ClickedDB = {
 ["profileKeys"] = {
 ["Xamuul - Ner'zhul"] = "DRUID",
+["Xambank - Ner'zhul"] = "DRUID",
 },
 ["global"] = {
 ["keyVisualizer"] = {
-["lastKeyboardLayout"] = "QWERTY",
 ["lastKeyboardSize"] = 100,
+["lastKeyboardLayout"] = "QWERTY",
 },
 ["version"] = 13,
 },

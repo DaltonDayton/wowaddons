@@ -1,0 +1,24 @@
+
+ClickedDB = {
+["global"] = {
+["keyVisualizer"] = {
+["lastKeyboardSize"] = 100,
+["lastKeyboardLayout"] = "QWERTY",
+},
+["version"] = 13,
+},
+["profileKeys"] = {
+["Xamuul - Ner'zhul"] = "DRUID",
+["Xambank - Ner'zhul"] = "DRUID",
+},
+["profiles"] = {
+["DRUID"] = {
+["version"] = 13,
+["options"] = {
+["minimap"] = {
+["showInCompartment"] = true,
+},
+},
+},
+},
+}

@@ -1,8 +1,9 @@
 
 OmniCDDB = {
 ["profileKeys"] = {
-["Xamuul - Ner'zhul"] = "ToxiUI-Horizontal",
 ["Xavaat - Ner'zhul"] = "ToxiUI-Horizontal",
+["Xamuul - Ner'zhul"] = "ToxiUI-Horizontal",
+["Xambank - Ner'zhul"] = "Default",
 },
 ["namespaces"] = {
 },
@@ -109,9 +110,9 @@ OmniCDDB = {
 ["covenant"] = false,
 ["consumable"] = false,
 ["cc"] = false,
-["raidMovement"] = false,
-["offensive"] = false,
 ["immunity"] = false,
+["offensive"] = false,
+["raidMovement"] = false,
 ["counterCC"] = false,
 ["disarm"] = false,
 },
@@ -150,18 +151,18 @@ OmniCDDB = {
 ["preset"] = "TOPLEFT",
 ["attach"] = "TOPLEFT",
 },
-["frame"] = {
-["immunity"] = 4,
-["defensive"] = 2,
-["cc"] = 3,
-["raidDefensive"] = 0,
-["disarm"] = 3,
-["counterCC"] = 3,
-["externalDefensive"] = 0,
-["aoeCC"] = 3,
-},
 ["priority"] = {
 ["dispel"] = 0,
+},
+["frame"] = {
+["raidDefensive"] = 0,
+["defensive"] = 2,
+["cc"] = 3,
+["immunity"] = 4,
+["disarm"] = 3,
+["counterCC"] = 3,
+["aoeCC"] = 3,
+["externalDefensive"] = 0,
 },
 ["icons"] = {
 ["scale"] = 0.85,
@@ -279,38 +280,28 @@ OmniCDDB = {
 ["Party"] = {
 ["party"] = {
 ["extraBars"] = {
-["raidBar2"] = {
+["raidBar4"] = {
+["truncateIconName"] = 4,
 ["progressBar"] = false,
+["paddingY"] = 1,
 ["enabled"] = true,
 ["paddingX"] = 1,
-["layout"] = "horizontal",
-["name"] = "Defensives",
-["manualPos"] = {
-["raidBar2"] = {
-["y"] = 300,
-["x"] = 432.6666666666666,
-},
-},
-["showName"] = false,
-["scale"] = 0.8,
+["name"] = "Immunes",
+["growUpward"] = true,
+["sortDirection"] = "dsc",
 ["spellType"] = {
-["other"] = false,
-["racial"] = false,
-["custom2"] = false,
-["essence"] = false,
-["trinket"] = false,
-["custom1"] = false,
-["pvptrinket"] = false,
-["covenant"] = false,
-["consumable"] = false,
-["cc"] = false,
-["disarm"] = false,
-["offensive"] = false,
-["raidMovement"] = false,
-["counterCC"] = false,
-["immunity"] = false,
+["other"] = true,
+["raidMovement"] = true,
+["immunity"] = true,
 },
-["columns"] = 21,
+["manualPos"] = {
+["raidBar4"] = {
+["y"] = 510,
+["x"] = 1182.666666666667,
+},
+},
+["scale"] = 0.9199999999999999,
+["columns"] = 3,
 },
 ["raidBar3"] = {
 ["truncateIconName"] = 4,
@@ -353,34 +344,43 @@ OmniCDDB = {
 ["sortBy"] = 1,
 ["reverseFill"] = false,
 },
-["raidBar4"] = {
-["truncateIconName"] = 4,
+["raidBar2"] = {
 ["progressBar"] = false,
-["paddingY"] = 1,
 ["enabled"] = true,
 ["paddingX"] = 1,
-["name"] = "Immunes",
-["growUpward"] = true,
-["sortDirection"] = "dsc",
-["spellType"] = {
-["other"] = true,
-["raidMovement"] = true,
-["immunity"] = true,
-},
-["columns"] = 3,
-["scale"] = 0.9199999999999999,
+["layout"] = "horizontal",
+["name"] = "Defensives",
 ["manualPos"] = {
-["raidBar4"] = {
-["y"] = 510,
-["x"] = 1182.666666666667,
+["raidBar2"] = {
+["y"] = 300,
+["x"] = 432.6666666666666,
 },
 },
+["showName"] = false,
+["scale"] = 0.8,
+["spellType"] = {
+["other"] = false,
+["racial"] = false,
+["custom2"] = false,
+["essence"] = false,
+["trinket"] = false,
+["custom1"] = false,
+["pvptrinket"] = false,
+["covenant"] = false,
+["consumable"] = false,
+["cc"] = false,
+["disarm"] = false,
+["offensive"] = false,
+["immunity"] = false,
+["counterCC"] = false,
+["raidMovement"] = false,
+},
+["columns"] = 21,
 },
 },
-["general"] = {
-["showPlayerEx"] = false,
-["showPlayer"] = true,
-["showRange"] = true,
+["highlight"] = {
+["glow"] = false,
+["glowBuffs"] = false,
 },
 ["icons"] = {
 ["scale"] = 0.85,
@@ -399,22 +399,23 @@ OmniCDDB = {
 ["offsetY"] = 42,
 ["anchorMore"] = "TOPLEFT",
 },
-["priority"] = {
-["dispel"] = 0,
-},
-["highlight"] = {
-["glow"] = false,
-["glowBuffs"] = false,
-},
 ["frame"] = {
 ["disarm"] = 3,
-["cc"] = 3,
-["counterCC"] = 3,
-["externalDefensive"] = 0,
 ["aoeCC"] = 3,
+["cc"] = 3,
+["immunity"] = 4,
+["externalDefensive"] = 0,
 ["defensive"] = 2,
 ["raidDefensive"] = 0,
-["immunity"] = 4,
+["counterCC"] = 3,
+},
+["general"] = {
+["showPlayerEx"] = false,
+["showPlayer"] = true,
+["showRange"] = true,
+},
+["priority"] = {
+["dispel"] = 0,
 },
 },
 ["raid"] = {
@@ -448,12 +449,7 @@ OmniCDDB = {
 ["layout"] = "horizontal",
 ["growLeft"] = true,
 ["sortDirection"] = "dsc",
-["manualPos"] = {
-["raidBar1"] = {
-["y"] = 246,
-["x"] = 522.6666666666666,
-},
-},
+["columns"] = 20,
 ["scale"] = 1,
 ["spellType"] = {
 ["other"] = false,
@@ -475,22 +471,27 @@ OmniCDDB = {
 ["counterCC"] = false,
 },
 ["sortBy"] = 4,
-["columns"] = 20,
+["manualPos"] = {
+["raidBar1"] = {
+["y"] = 246,
+["x"] = 522.6666666666666,
 },
 },
-["general"] = {
-["showPlayerEx"] = false,
-["showPlayer"] = true,
-["zoneSelected"] = "party",
-["showRange"] = true,
+},
+},
+["manualPos"] = {
+["raidCDBar2"] = {
+["y"] = 276,
+["x"] = 276.6666666666666,
+},
 },
 ["icons"] = {
 ["counterScale"] = 0.7,
-["showForbearanceCounter"] = false,
+["chargeScale"] = 0.9,
 ["scale"] = 0.96,
 ["desaturateActive"] = true,
 ["markEnhanced"] = false,
-["chargeScale"] = 0.9,
+["showForbearanceCounter"] = false,
 },
 ["raidCDS"] = {
 },
@@ -501,14 +502,14 @@ OmniCDDB = {
 ["offensive"] = 9,
 ["immunity"] = 12,
 },
+["general"] = {
+["zoneSelected"] = "party",
+["showPlayer"] = true,
+["showPlayerEx"] = false,
+["showRange"] = true,
+},
 ["highlight"] = {
 ["glowBuffs"] = false,
-},
-["manualPos"] = {
-["raidCDBar2"] = {
-["y"] = 276,
-["x"] = 276.6666666666666,
-},
 },
 },
 ["visibility"] = {
@@ -517,12 +518,6 @@ OmniCDDB = {
 },
 },
 ["General"] = {
-["textures"] = {
-["statusBar"] = {
-["BG"] = "- ToxiUI",
-["bar"] = "- ToxiUI",
-},
-},
 ["fonts"] = {
 ["statusBar"] = {
 ["font"] = "- ToxiUI",
@@ -537,6 +532,12 @@ OmniCDDB = {
 ["font"] = "- ToxiUI",
 ["flag"] = "OUTLINE",
 ["size"] = 16,
+},
+},
+["textures"] = {
+["statusBar"] = {
+["BG"] = "- ToxiUI",
+["bar"] = "- ToxiUI",
 },
 },
 },
