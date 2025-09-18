@@ -31,9 +31,9 @@ _detalhes_database = {
 ["width"] = 120,
 ["ignored_cooldowns"] = {
 },
-["framme_locked"] = false,
 ["cooldowns"] = {
 },
+["height"] = 18,
 ["own_frame"] = {
 ["defensive-raid"] = false,
 ["ofensive"] = false,
@@ -41,7 +41,7 @@ _detalhes_database = {
 ["utility"] = false,
 ["defensive-personal"] = false,
 },
-["height"] = 18,
+["framme_locked"] = false,
 ["show_conditions"] = {
 ["only_inside_instance"] = true,
 ["only_in_group"] = true,
@@ -59,11 +59,11 @@ _detalhes_database = {
 ["utility"] = false,
 },
 },
-["combat_counter"] = 4,
+["combat_counter"] = 8,
 ["player_stats"] = {
 },
 ["character_data"] = {
-["logons"] = 2,
+["logons"] = 4,
 },
 ["tabela_instancias"] = {
 },
@@ -119,9 +119,13 @@ _detalhes_database = {
 ["frame"] = {
 },
 },
-["ignore_nicktag"] = false,
-["data_harvested_for_charts"] = {
+["coach"] = {
+["enabled"] = false,
+["welcome_panel_pos"] = {
 },
+["last_coach_name"] = false,
+},
+["last_version"] = "11.2.0 13705",
 ["combat_log"] = {
 ["inverse_deathlog_overalldata"] = false,
 ["merge_gemstones_1007"] = false,
@@ -138,112 +142,40 @@ _detalhes_database = {
 },
 ["mythic_plus_log"] = {
 },
-["local_instances_config"] = {
-{
-["modo"] = 2,
-["sub_attribute"] = 1,
-["horizontalSnap"] = false,
-["verticalSnap"] = true,
-["isLocked"] = true,
-["is_open"] = true,
-["sub_atributo_last"] = {
-1,
-1,
-1,
-1,
-1,
-},
-["snap"] = {
-[4] = 2,
-},
-["segment"] = 0,
-["mode"] = 2,
-["attribute"] = 1,
-["pos"] = {
-["normal"] = {
-["y"] = -585.9995880126953,
-["x"] = 1510.748779296875,
-["w"] = 380.4989624023438,
-["h"] = 184.0003509521484,
-},
-["solo"] = {
-["y"] = 2,
-["x"] = 1,
-["w"] = 300,
-["h"] = 200,
-},
-},
-},
-{
-["modo"] = 2,
-["sub_attribute"] = 1,
-["horizontalSnap"] = false,
-["verticalSnap"] = true,
-["isLocked"] = true,
-["is_open"] = true,
-["sub_atributo_last"] = {
-1,
-1,
-1,
-1,
-1,
-},
-["snap"] = {
-[2] = 1,
-},
-["segment"] = 0,
-["mode"] = 2,
-["attribute"] = 1,
-["pos"] = {
-["normal"] = {
-["y"] = -414.4992065429688,
-["x"] = 1510.748779296875,
-["w"] = 380.4989624023438,
-["h"] = 119.000358581543,
-},
-["solo"] = {
-["y"] = 2,
-["x"] = 1,
-["w"] = 300,
-["h"] = 200,
-},
-},
-},
+["ignore_nicktag"] = false,
+["data_harvested_for_charts"] = {
 },
 ["announce_firsthit"] = {
 ["enabled"] = true,
 ["channel"] = "SELF",
 },
-["SoloTablesSaved"] = {
-["Mode"] = 1,
-},
+["force_font_outline"] = "",
 ["nick_tag_cache"] = {
 ["nextreset"] = 1759191175,
 ["last_version"] = 16,
 },
-["last_version"] = "11.2.0 13705",
 ["plugin_database"] = {
 ["DETAILS_PLUGIN_TINY_THREAT"] = {
 ["enabled"] = true,
 ["only_my_group"] = false,
 ["animate"] = false,
-["useclasscolors"] = false,
-["hide_pull_bar"] = false,
 ["author"] = "Terciob",
+["hide_pull_bar"] = false,
+["useclasscolors"] = false,
 ["playercolor"] = {
 1,
 1,
 1,
 },
 ["usefocus"] = false,
-["disable_gouge"] = false,
+["updatespeed"] = 1,
 ["playSound"] = false,
 ["showamount"] = false,
 ["useplayercolor"] = false,
 ["absolute_mode"] = false,
 ["show_party_pets"] = false,
 ["playSoundFile"] = "Details Threat Warning Volume 3",
-["updatespeed"] = 1,
+["disable_gouge"] = false,
 },
 ["DETAILS_PLUGIN_COMPARETWO_WINDOW"] = {
 ["enabled"] = true,
@@ -309,7 +241,7 @@ _detalhes_database = {
 1,
 0.5,
 },
-["author"] = "Terciob",
+["arrow_anchor_y"] = 0,
 ["main_frame_size"] = {
 299.9999694824219,
 500.0000610351563,
@@ -321,20 +253,20 @@ _detalhes_database = {
 },
 ["main_frame_locked"] = false,
 ["arrow_anchor_x"] = 0,
-["font_size"] = 10,
+["use_spark"] = true,
 ["row_texture"] = "Details Serenity",
 ["square_grow_direction"] = "right",
-["arrow_anchor_y"] = 0,
-["use_spark"] = true,
-["square_amount"] = 5,
-["enabled"] = false,
-["arrow_size"] = 10,
 ["row_color"] = {
 0.1,
 0.1,
 0.1,
 0.4,
 },
+["author"] = "Terciob",
+["square_amount"] = 5,
+["enabled"] = false,
+["arrow_size"] = 10,
+["y"] = 1.52587890625e-05,
 ["row_spacement"] = 21,
 ["main_frame_color"] = {
 0,
@@ -344,6 +276,7 @@ _detalhes_database = {
 },
 ["main_frame_strata"] = "LOW",
 ["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
+["font_size"] = 10,
 ["per_second"] = {
 ["enabled"] = false,
 ["point"] = "CENTER",
@@ -355,7 +288,6 @@ _detalhes_database = {
 ["update_speed"] = 0.05,
 ["size"] = 32,
 },
-["y"] = 1.52587890625e-05,
 ["x"] = -0.000244140625,
 ["font_face"] = "Friz Quadrata TT",
 ["square_size"] = 32,
@@ -370,7 +302,7 @@ _detalhes_database = {
 ["scale"] = 1,
 },
 },
-["last_day"] = "14",
+["last_day"] = "15",
 ["combat_id"] = 0,
 ["savedStyles"] = {
 },
@@ -410,7 +342,7 @@ _detalhes_database = {
 },
 ["raid_roster"] = {
 },
-["tempo_start"] = 114820.374,
+["tempo_start"] = 201.94,
 ["last_events_tables"] = {
 },
 ["alternate_power"] = {
@@ -506,17 +438,85 @@ _detalhes_database = {
 ["start_time"] = 0,
 ["TimeData"] = {
 },
-["combat_counter"] = 3,
+["combat_counter"] = 7,
 },
-["coach"] = {
-["enabled"] = false,
-["welcome_panel_pos"] = {
-},
-["last_coach_name"] = false,
+["SoloTablesSaved"] = {
+["Mode"] = 1,
 },
 ["arena_data_headers"] = {
 },
-["force_font_outline"] = "",
+["local_instances_config"] = {
+{
+["modo"] = 2,
+["sub_attribute"] = 1,
+["horizontalSnap"] = false,
+["verticalSnap"] = true,
+["isLocked"] = true,
+["is_open"] = true,
+["sub_atributo_last"] = {
+1,
+1,
+1,
+1,
+1,
+},
+["snap"] = {
+[4] = 2,
+},
+["segment"] = 0,
+["mode"] = 2,
+["attribute"] = 1,
+["pos"] = {
+["normal"] = {
+["y"] = -585.9995880126953,
+["x"] = 1510.748779296875,
+["w"] = 380.4989624023438,
+["h"] = 184.0003509521484,
+},
+["solo"] = {
+["y"] = 2,
+["x"] = 1,
+["w"] = 300,
+["h"] = 200,
+},
+},
+},
+{
+["modo"] = 2,
+["sub_attribute"] = 1,
+["horizontalSnap"] = false,
+["verticalSnap"] = true,
+["isLocked"] = true,
+["is_open"] = true,
+["sub_atributo_last"] = {
+1,
+1,
+1,
+1,
+1,
+},
+["snap"] = {
+[2] = 1,
+},
+["segment"] = 0,
+["mode"] = 2,
+["attribute"] = 1,
+["pos"] = {
+["normal"] = {
+["y"] = -414.4992065429688,
+["x"] = 1510.748779296875,
+["w"] = 380.4989624023438,
+["h"] = 119.000358581543,
+},
+["solo"] = {
+["y"] = 2,
+["x"] = 1,
+["w"] = 300,
+["h"] = 200,
+},
+},
+},
+},
 ["announce_cooldowns"] = {
 ["ignored_cooldowns"] = {
 },

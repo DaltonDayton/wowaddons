@@ -31,8 +31,9 @@ _detalhes_database = {
 ["show_options"] = false,
 ["ignored_cooldowns"] = {
 },
-["height"] = 18,
 ["framme_locked"] = false,
+["cooldowns"] = {
+},
 ["own_frame"] = {
 ["defensive-raid"] = false,
 ["ofensive"] = false,
@@ -40,8 +41,7 @@ _detalhes_database = {
 ["utility"] = false,
 ["defensive-personal"] = false,
 },
-["cooldowns"] = {
-},
+["height"] = 18,
 ["show_conditions"] = {
 ["only_inside_instance"] = true,
 ["only_in_group"] = true,
@@ -59,11 +59,11 @@ _detalhes_database = {
 ["utility"] = false,
 },
 },
-["combat_counter"] = 6,
+["combat_counter"] = 10,
 ["player_stats"] = {
 },
 ["character_data"] = {
-["logons"] = 3,
+["logons"] = 5,
 },
 ["tabela_instancias"] = {
 },
@@ -119,8 +119,16 @@ _detalhes_database = {
 ["frame"] = {
 },
 },
-["last_version"] = "11.2.0 13705",
-["ignore_nicktag"] = false,
+["nick_tag_cache"] = {
+["nextreset"] = 1759191175,
+["last_version"] = 16,
+},
+["coach"] = {
+["enabled"] = false,
+["welcome_panel_pos"] = {
+},
+["last_coach_name"] = false,
+},
 ["combat_log"] = {
 ["inverse_deathlog_overalldata"] = false,
 ["track_hunter_frenzy"] = false,
@@ -135,8 +143,8 @@ _detalhes_database = {
 },
 ["mythic_plus_log"] = {
 },
-["data_harvested_for_charts"] = {
-},
+["last_version"] = "11.2.0 13705",
+["ignore_nicktag"] = false,
 ["local_instances_config"] = {
 {
 ["modo"] = 2,
@@ -209,38 +217,35 @@ _detalhes_database = {
 },
 },
 },
-["force_font_outline"] = "",
+["announce_firsthit"] = {
+["enabled"] = true,
+["channel"] = "SELF",
+},
 ["SoloTablesSaved"] = {
 ["Mode"] = 1,
-},
-["coach"] = {
-["enabled"] = false,
-["welcome_panel_pos"] = {
-},
-["last_coach_name"] = false,
 },
 ["plugin_database"] = {
 ["DETAILS_PLUGIN_TINY_THREAT"] = {
 ["enabled"] = true,
 ["only_my_group"] = false,
 ["animate"] = false,
-["updatespeed"] = 1,
+["disable_gouge"] = false,
 ["hide_pull_bar"] = false,
-["useclasscolors"] = false,
+["author"] = "Terciob",
 ["playercolor"] = {
 1,
 1,
 1,
 },
 ["usefocus"] = false,
-["disable_gouge"] = false,
+["updatespeed"] = 1,
 ["playSound"] = false,
 ["showamount"] = false,
 ["useplayercolor"] = false,
 ["absolute_mode"] = false,
 ["show_party_pets"] = false,
 ["playSoundFile"] = "Details Threat Warning Volume 3",
-["author"] = "Terciob",
+["useclasscolors"] = false,
 },
 ["DETAILS_PLUGIN_COMPARETWO_WINDOW"] = {
 ["enabled"] = true,
@@ -307,10 +312,7 @@ _detalhes_database = {
 0.5,
 },
 ["scale"] = 1,
-["main_frame_size"] = {
-299.9999694824219,
-500.0000610351563,
-},
+["arrow_anchor_y"] = 0,
 ["minimap"] = {
 ["minimapPos"] = 160,
 ["radius"] = 160,
@@ -331,6 +333,21 @@ _detalhes_database = {
 ["square_amount"] = 5,
 ["enabled"] = false,
 ["arrow_size"] = 10,
+["font_size"] = 10,
+["row_spacement"] = 21,
+["main_frame_color"] = {
+0,
+0,
+0,
+0.2,
+},
+["row_color"] = {
+0.1,
+0.1,
+0.1,
+0.4,
+},
+["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
 ["per_second"] = {
 ["enabled"] = false,
 ["point"] = "CENTER",
@@ -342,29 +359,17 @@ _detalhes_database = {
 ["update_speed"] = 0.05,
 ["attribute_type"] = 1,
 },
-["row_spacement"] = 21,
-["main_frame_color"] = {
-0,
-0,
-0,
-0.2,
-},
-["author"] = "Terciob",
-["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
-["y"] = 1.52587890625e-05,
-["font_size"] = 10,
+["use_spark"] = true,
 ["x"] = -0.000244140625,
 ["font_face"] = "Friz Quadrata TT",
 ["square_size"] = 32,
-["row_color"] = {
-0.1,
-0.1,
-0.1,
-0.4,
-},
-["use_spark"] = true,
+["y"] = 1.52587890625e-05,
+["author"] = "Terciob",
 ["main_frame_locked"] = false,
-["arrow_anchor_y"] = 0,
+["main_frame_size"] = {
+299.9999694824219,
+500.0000610351563,
+},
 },
 },
 ["last_realversion"] = 165,
@@ -372,7 +377,7 @@ _detalhes_database = {
 ["savedStyles"] = {
 },
 ["last_instance_time"] = 0,
-["last_day"] = "14",
+["last_day"] = "17",
 ["announce_deaths"] = {
 ["enabled"] = false,
 ["last_hits"] = 1,
@@ -407,7 +412,7 @@ _detalhes_database = {
 },
 ["raid_roster"] = {
 },
-["tempo_start"] = 114867.034,
+["tempo_start"] = 28897.298,
 ["last_events_tables"] = {
 },
 ["alternate_power"] = {
@@ -503,17 +508,12 @@ _detalhes_database = {
 ["start_time"] = 0,
 ["TimeData"] = {
 },
-["combat_counter"] = 5,
+["combat_counter"] = 9,
 },
-["nick_tag_cache"] = {
-["nextreset"] = 1759191175,
-["last_version"] = 16,
-},
+["force_font_outline"] = "",
 ["arena_data_headers"] = {
 },
-["announce_firsthit"] = {
-["enabled"] = true,
-["channel"] = "SELF",
+["data_harvested_for_charts"] = {
 },
 ["announce_cooldowns"] = {
 ["enabled"] = false,

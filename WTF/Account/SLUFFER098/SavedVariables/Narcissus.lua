@@ -23,6 +23,7 @@ NarcissusDB = {
 ["OutfitSortMethod"] = "name",
 ["SearchRelatives"] = false,
 ["DressingRoomIncludeItemID"] = false,
+["ClassSetTheme_DF_1"] = 2,
 ["PaperDollWidget_Remix"] = true,
 ["FadeButton"] = false,
 ["ShowMinimapButton"] = true,
@@ -70,7 +71,6 @@ NarcissusDB = {
 },
 ["TalentTreeForEquipmentManager"] = true,
 ["IndependentMinimapButton"] = false,
-["NamePlateNameOffset"] = 0,
 ["PerksProgramDB"] = {
 ["MonthNames"] = {
 {
@@ -85,12 +85,12 @@ NarcissusDB = {
 [570] = "::description::A lightweight helm used by Wildhammer scouts.::price::200::transmogSetID::0::quality::3::perksVendorCategoryID::1::invType::INVTYPE_HEAD::mountID::0::itemModifiedAppearanceID::194077::speciesID::0::name::Wildhammer Scout's Headgear::itemID::211258::addedDate::2025/33::",
 [1171] = "::description::An act of destruction can spark great creations.::price::230::transmogSetID::0::quality::3::perksVendorCategoryID::1::invType::INVTYPE_2HWEAPON::mountID::0::itemModifiedAppearanceID::293190::speciesID::0::name::Bronzebeard's Ancient Crusher::itemID::246781::addedDate::2025/33::",
 [1172] = "::description::Rain or shine, you're looking fine.::price::375::transmogSetID::4521::quality::1::perksVendorCategoryID::8::invType::INVTYPE_NON_EQUIP_IGNORE::mountID::0::itemModifiedAppearanceID::0::speciesID::0::name::Ensemble: Rainy Day Attire::itemID::242346::addedDate::2025/33::",
-[1190] = "::description::According to Wildhammer legend, the orange plumage found on gryphons is believed to be a hereditary trait passed down from their elemental ancestry.::price::650::transmogSetID::0::mountTypeName::Flying::quality::4::perksVendorCategoryID::2::invType::INVTYPE_NON_EQUIP_IGNORE::mountID::2628::itemModifiedAppearanceID::0::speciesID::0::name::Cinder-Plumed Highland Gryphon::itemID::247793::addedDate::2025/33::",
+[1159] = "::description::Battle-tested to allow for maximum maneuverability::price::40::transmogSetID::0::quality::1::perksVendorCategoryID::1::invType::INVTYPE_LEGS::mountID::0::itemModifiedAppearanceID::230749::speciesID::0::name::Long Aquatic War Skirt::itemID::233110::addedDate::2025/33::",
 [1161] = "::description::The ideal outfit for a hard workout.::price::100::transmogSetID::4539::quality::2::perksVendorCategoryID::8::invType::INVTYPE_NON_EQUIP_IGNORE::mountID::0::itemModifiedAppearanceID::0::speciesID::0::name::Ensemble: Aquatic Sweatsuit::itemID::242485::addedDate::2025/33::",
 [1198] = "::description::It bears the weight of centuries and the pride of a people who never yield.::price::575::transmogSetID::5166::quality::3::perksVendorCategoryID::8::invType::INVTYPE_NON_EQUIP_IGNORE::mountID::0::itemModifiedAppearanceID::0::speciesID::0::name::Ensemble: Bronzebeard's Ceremonial Collection::itemID::248299::addedDate::2025/33::",
 [1197] = "::description::After wearing it for a while, you're not quite sure where you end and the crystals begin.::price::575::transmogSetID::5167::quality::3::perksVendorCategoryID::8::invType::INVTYPE_NON_EQUIP_IGNORE::mountID::0::itemModifiedAppearanceID::0::speciesID::0::name::Ensemble: The Speaker's Ceremonial Collection::itemID::248309::addedDate::2025/33::",
 [800] = "::description::Claudius is known for being brutally honest as well as a great singer. He knows your jewels would look better on him.::price::330::transmogSetID::0::quality::3::perksVendorCategoryID::3::invType::INVTYPE_NON_EQUIP_IGNORE::mountID::0::itemModifiedAppearanceID::0::speciesID::4602::name::Claudius::itemID::226104::addedDate::2025/33::",
-[1159] = "::description::Battle-tested to allow for maximum maneuverability::price::40::transmogSetID::0::quality::1::perksVendorCategoryID::1::invType::INVTYPE_LEGS::mountID::0::itemModifiedAppearanceID::230749::speciesID::0::name::Long Aquatic War Skirt::itemID::233110::addedDate::2025/33::",
+[1190] = "::description::According to Wildhammer legend, the orange plumage found on gryphons is believed to be a hereditary trait passed down from their elemental ancestry.::price::650::transmogSetID::0::mountTypeName::Flying::quality::4::perksVendorCategoryID::2::invType::INVTYPE_NON_EQUIP_IGNORE::mountID::2628::itemModifiedAppearanceID::0::speciesID::0::name::Cinder-Plumed Highland Gryphon::itemID::247793::addedDate::2025/33::",
 [1160] = "::description::Battle-tested to allow for maximum maneuverability and muscle support.::price::50::transmogSetID::0::quality::1::perksVendorCategoryID::1::invType::INVTYPE_LEGS::mountID::0::itemModifiedAppearanceID::230766::speciesID::0::name::Short Aquatic War Skirt and Leg Wraps::itemID::233132::addedDate::2025/33::",
 [798] = "::description::The pirate captain later known as Keg Leg knew the risks when he rode a hungry crocolisk into battle.::price::600::transmogSetID::0::mountTypeName::Ground::quality::4::perksVendorCategoryID::2::invType::INVTYPE_NON_EQUIP_IGNORE::mountID::2239::itemModifiedAppearanceID::0::speciesID::0::name::Keg Leg's Radiant Crocolisk::itemID::226041::addedDate::2025/33::",
 [1154] = "::description::Includes a hood and mask.::price::100::transmogSetID::3928::quality::2::perksVendorCategoryID::8::invType::INVTYPE_NON_EQUIP_IGNORE::mountID::0::itemModifiedAppearanceID::0::speciesID::0::name::Ensemble: Prowler's Aquatic Headgear::itemID::230181::addedDate::2025/33::",
@@ -144,6 +144,7 @@ NarcissusDB = {
 ["month"] = 33,
 },
 },
+["NamePlateNameOffset"] = 0,
 ["AnchorToMinimap"] = true,
 ["TooltipLanguages"] = {
 },
@@ -219,7 +220,7 @@ NarciCharacterProfiles = {
 ["name"] = "Xamuul",
 ["birth"] = 1756680668,
 ["serverID"] = "1168",
-["lastVisit"] = 1757895483,
+["lastVisit"] = 1758150539,
 ["outfits"] = {
 {
 ["s"] = "36724,36727,45116,36655,20511,0,41771,36642,66904,36701,36666,12036:0:1898,67870",
@@ -309,7 +310,7 @@ NarciCharacterProfiles = {
 ["name"] = "Xambank",
 ["birth"] = 1757895185,
 ["serverID"] = "1168",
-["lastVisit"] = 1757895263,
+["lastVisit"] = 1758150387,
 ["outfits"] = {
 },
 ["class"] = 11,

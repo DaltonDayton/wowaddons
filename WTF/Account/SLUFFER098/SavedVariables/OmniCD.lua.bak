@@ -68,9 +68,9 @@ OmniCDDB = {
 ["cc"] = false,
 ["disarm"] = false,
 ["offensive"] = false,
-["raidMovement"] = false,
-["counterCC"] = false,
 ["immunity"] = false,
+["counterCC"] = false,
+["raidMovement"] = false,
 },
 ["columns"] = 21,
 },
@@ -155,23 +155,23 @@ OmniCDDB = {
 ["glowBuffs"] = false,
 ["glow"] = false,
 },
-["frame"] = {
-["aoeCC"] = 3,
-["externalDefensive"] = 0,
-["cc"] = 3,
-["counterCC"] = 3,
-["disarm"] = 3,
-["immunity"] = 4,
-["defensive"] = 2,
-["raidDefensive"] = 0,
+["priority"] = {
+["dispel"] = 0,
 },
 ["icons"] = {
 ["scale"] = 0.85,
 ["markEnhanced"] = false,
 ["desaturateActive"] = true,
 },
-["priority"] = {
-["dispel"] = 0,
+["frame"] = {
+["externalDefensive"] = 0,
+["aoeCC"] = 3,
+["cc"] = 3,
+["counterCC"] = 3,
+["disarm"] = 3,
+["raidDefensive"] = 0,
+["defensive"] = 2,
+["immunity"] = 4,
 },
 },
 ["visibility"] = {
@@ -375,9 +375,9 @@ OmniCDDB = {
 ["covenant"] = false,
 ["consumable"] = false,
 ["cc"] = false,
-["immunity"] = false,
-["offensive"] = false,
 ["raidMovement"] = false,
+["offensive"] = false,
+["immunity"] = false,
 ["counterCC"] = false,
 ["disarm"] = false,
 },
@@ -423,14 +423,14 @@ OmniCDDB = {
 ["dispel"] = 0,
 },
 ["frame"] = {
-["raidDefensive"] = 0,
-["defensive"] = 2,
-["cc"] = 3,
 ["immunity"] = 4,
+["raidDefensive"] = 0,
+["cc"] = 3,
+["defensive"] = 2,
 ["disarm"] = 3,
 ["counterCC"] = 3,
-["aoeCC"] = 3,
 ["externalDefensive"] = 0,
+["aoeCC"] = 3,
 },
 ["icons"] = {
 ["scale"] = 0.85,
@@ -477,13 +477,13 @@ OmniCDDB = {
 ["layout"] = "horizontal",
 ["progressBar"] = false,
 ["columns"] = 20,
+["sortDirection"] = "dsc",
 ["manualPos"] = {
 ["raidBar1"] = {
 ["y"] = 246,
 ["x"] = 522.6666666666666,
 },
 },
-["sortDirection"] = "dsc",
 ["spellType"] = {
 ["other"] = false,
 ["racial"] = false,
@@ -509,20 +509,17 @@ OmniCDDB = {
 ["paddingY"] = 2,
 },
 },
+["highlight"] = {
+["glowBuffs"] = false,
+},
+["position"] = {
+["offsetX"] = 2,
+},
 ["general"] = {
 ["showPlayerEx"] = false,
 ["showPlayer"] = true,
 ["zoneSelected"] = "party",
 ["showRange"] = true,
-},
-["position"] = {
-["offsetX"] = 2,
-},
-["manualPos"] = {
-["raidCDBar2"] = {
-["y"] = 276,
-["x"] = 276.6666666666666,
-},
 },
 ["priority"] = {
 ["offensive"] = 9,
@@ -536,8 +533,11 @@ OmniCDDB = {
 ["markEnhanced"] = false,
 ["desaturateActive"] = true,
 },
-["highlight"] = {
-["glowBuffs"] = false,
+["manualPos"] = {
+["raidCDBar2"] = {
+["y"] = 276,
+["x"] = 276.6666666666666,
+},
 },
 },
 },

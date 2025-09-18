@@ -60,6 +60,8 @@ BigWigs3DB = {
 ["barStyle"] = "ElvUI",
 ["growup"] = true,
 ["fontSizeEmph"] = 16,
+["normalHeight"] = 26,
+["alignText"] = "RIGHT",
 ["expPosition"] = {
 "BOTTOMLEFT",
 "TOPLEFT",
@@ -67,8 +69,6 @@ nil,
 130,
 "ElvUF_Target",
 },
-["alignText"] = "RIGHT",
-["normalHeight"] = 26,
 ["spacing"] = 5,
 ["visibleBarLimitEmph"] = 4,
 ["texture"] = "- Tx Left",
@@ -130,14 +130,6 @@ nil,
 },
 },
 ["myKeystones"] = {
-["Player-1168-09F927BE"] = {
-["playerRating"] = 0,
-["specId"] = 256,
-["keyMap"] = 0,
-["name"] = "Xavaat",
-["keyLevel"] = 0,
-["realm"] = "Ner'zhul",
-},
 ["Player-1168-09F208D4"] = {
 ["playerRating"] = 0,
 ["specId"] = 105,
@@ -147,7 +139,7 @@ nil,
 ["realm"] = "Ner'zhul",
 },
 },
-["prevWeeklyReset"] = 1757430000,
+["prevWeeklyReset"] = 1758034800,
 ["profiles"] = {
 ["Default"] = {
 },
@@ -175,6 +167,13 @@ BigWigsStatsDB = {
 ["best"] = 190.9900000000016,
 ["bestDate"] = "2025/09/13",
 ["fkDate"] = "2025/09/13",
+},
+},
+},
+[2951] = {
+[-3326] = {
+["solotier8"] = {
+["wipes"] = 7,
 },
 },
 },
